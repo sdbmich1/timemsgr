@@ -1,5 +1,14 @@
 Timemsgr::Application.routes.draw do
 
+#  get "member/new"
+
+  devise_for :users
+  
+  devise_scope :user do
+  	get "/signup" => "devise/registrations#new"
+   	get "/login" => "devise/sessions#new" 	
+  end
+  
 #  get "pages/home"
 #  get "pages/contact"
 #  get "pages/privacy"
@@ -55,6 +64,7 @@ Timemsgr::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+ # match '/signup', :to => 'member#new'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/company', :to => 'pages#company'

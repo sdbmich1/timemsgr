@@ -3,17 +3,24 @@
 }
 
 body {
+/*
   background: #cff;
+*/  
+  background: #222222;
+
 }
 
 header {
   padding-top: 20px;
+  height: 80px;
 }
 
+/*
 header img {
   padding: 1em;
   background: #fff;
 }
+*/
 
 section {
   margin-top: 1em;
@@ -102,9 +109,12 @@ a.signup_button {
 }
 
 footer {
-  text-align: center;
   margin-top: 10px;
-  width: 710px;
+/*  width: 710px; 
+  text-align: center;
+  background-color: #222222;
+  height: 200px;
+  */
   margin-left: auto;
   margin-right: auto;
 }

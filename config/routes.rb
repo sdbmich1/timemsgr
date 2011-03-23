@@ -1,14 +1,21 @@
 Timemsgr::Application.routes.draw do
 
+#  get "sessions/new"
 #  get "member/new"
 
   devise_for :users
-  
+
+  # specify routes for devise user
   devise_scope :user do
   	get "/signup" => "devise/registrations#new"
    	get "/login" => "devise/sessions#new" 	
+#   	get "/logout" => "devise/sessions#destroy" 	  	
   end
-  
+
+  # change default user route
+  match 'member' => 'member#index', :as => 'user_root'  
+  match '/logout', :to => 'member#destroy'
+
 #  get "pages/home"
 #  get "pages/contact"
 #  get "pages/privacy"
@@ -69,7 +76,7 @@ Timemsgr::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/company', :to => 'pages#company'
   match '/privacy',   :to => 'pages#privacy'
-  
+
   root :to => 'pages#home'
 
   # root :to => "welcome#index"

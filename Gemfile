@@ -11,12 +11,19 @@ gem 'mysql2'
 gem 'will_paginate', '3.0.pre2'
 gem 'devise'
 
+# add gravatar
+gem 'gravatar_image_tag', '1.0.0.pre2'
+
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
+end
+
+group :test do
+  gem 'factory_girl_rails', '1.0'
 end
 
 # Use unicorn as the web server

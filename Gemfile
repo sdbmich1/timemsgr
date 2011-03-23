@@ -20,6 +20,7 @@ group :development, :test do
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
+  gem 'faker', '0.3.1'
 end
 
 group :test do

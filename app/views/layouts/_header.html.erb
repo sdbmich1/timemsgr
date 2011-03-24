@@ -1,10 +1,10 @@
 <header>
   <% logo = image_tag("rails.png", :alt => "TimeMsgr", :class => "round") %>
   <%= link_to logo, root_path %>
-  <nav class="round">
+  <nav class="round"> 
     <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <% if user_signed_in? %>
+       <% if user_signed_in? %>
+     		<li><%= link_to "Home", root_path %></li>
     		<%= link_to "Sign Out", destroy_user_session_path %>
   	  <% else %>
 			<%= link_to "Sign In", new_user_session_path %>      		

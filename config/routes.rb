@@ -1,5 +1,7 @@
 Timemsgr::Application.routes.draw do
 
+#  get "subscriptions/new"
+
 #  get "sessions/new"
 #  get "member/new"
 
@@ -7,7 +9,7 @@ Timemsgr::Application.routes.draw do
 
   # specify routes for devise user
   devise_scope :user do
-  	get "/signup" => "devise/registrations#new"
+  	get "/signup" =>  "devise/registrations#new"   #"subscriptions#new"
    	get "/login" => "devise/sessions#new" 	
 #   	get "/logout" => "devise/sessions#destroy" 	  	
   end

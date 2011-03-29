@@ -6,14 +6,15 @@ class MemberController < ApplicationController
   end
   
   def index
-  	@user = current_user
-  	@title = "Welcome " + @user.first_name
+  	@member = current_user
+  	@title = "Welcome " + @member.first_name
   	
   	# check for new users
-  	if @user.sign_in_count <= 1
+  	if @member.sign_in_count <= 1
+ # 		@prefs = UserPrefs.new
   		render 'new'
-  	else
-  		render 'index'
+ # 	else
+ # 		render 'index'
   	end
   end
   

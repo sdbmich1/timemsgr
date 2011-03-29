@@ -181,30 +181,40 @@ footer nav {
     }  
       
     .simple_form input[type='submit'] {  
-      margin-left: 150px;  
+      margin-left: 120px;  
       width: 100px;
   	  color: #ffffff;
   	  font-weight: bold;
   	  background: #0c6fcb;
       padding: 5px;
+      margin-top: 10px;  
+      margin-bottom: 10px;  
    }  
-  
+ 
+ /* 
     .simple_form div.boolean {  
-  	  margin-right:  25px;  
+   	  margin-left: 5px;
+ 	  margin-right:  10px;  
       margin-bottom: 10px;  
  	}      
 	
     .simple_form div.boolean label {  
       float: left;  
  	  font-weight: normal;
+  	  margin-left: 5px;
       text-align: right;  
     }  
 
-.simple_form label.collection_radio {
-  margin-right: 10px;
-  margin-left: 2px;
-}
-
+	.simple_form label.collection_radio {
+  	  margin-right: 5px;
+      text-align: left;  
+	}
+	
+	.simple_form div.collection_radio {
+   	  margin-right:  10px;  
+      margin-bottom: 10px;  
+ 	}  
+*/
 .simple_form .error {
   clear: left;
   margin-left: 120px;
@@ -220,7 +230,48 @@ footer nav {
   color: #555;
   display: block;
   }
-  
+
+/*  
+.simple_form label {
+  float: left;
+  width: 100px;
+  text-align: right;
+  margin: 2px 10px;
+}
+
+.simple_form div.input {
+  margin-bottom: 10px;
+}
+
+.simple_form div.boolean, .simple_form input[type='submit'] {
+  margin-left: 120px;
+}
+*/
+.simple_form div.boolean label, .simple_form label.collection_radio, .simple_form label.collection_check_boxes{
+  float: none;
+  margin: 10px;
+  padding-top: 10px;  
+}
+
+/*
+.simple_form .error {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #D00;
+  display: block;
+}
+
+.simple_form .hint {
+  clear: left;
+  margin-left: 120px;
+  font-size: 12px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}
+*/
+
 /*    
 label.boolean {
   float: left;

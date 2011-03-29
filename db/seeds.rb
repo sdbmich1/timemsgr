@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+# remove all interests 
+Interests.destroy_all
+
+# import sample set of interests
+int_list = "#(file.dirname(__FILE__))/../db/interests.yml"
+
+YAML.load_file(int_list).each_value do |seed|
+	ints = Interests.create(:name => seed["name"])
+	
+	puts "Added interest category #{ints.id}: #{ints.name}"
+end 
+

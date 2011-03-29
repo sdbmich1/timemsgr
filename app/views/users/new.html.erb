@@ -1,0 +1,17 @@
+<h1>Interests</h1>
+Select the topics you are interested in being kept aware of. <br/>
+
+<%= form_for @user do |f| %>
+	<% for interest in Interest.find(:all) %>
+	  <div>
+ 		<%= check_box_tag "user[interest_ids][]", interest.id, @selected_ids.include?(interest) %>
+  		<%= label_tag "user[interest_ids][]", interest.name, :for => "user[interest_ids][]" %>
+	  </div>
+	<% end %>
+	<p>
+		<%= f.submit 'Submit' %>
+	</p>
+
+<% end %>
+
+<%= link_to "Next: Friends", friends_path(@user), :class => 'signup_button round' %>

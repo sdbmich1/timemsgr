@@ -14,6 +14,9 @@ gem 'devise'
 # add simple forms
 gem 'simple_form'
 
+# add jquery
+gem "jquery-rails"
+
 # add gravatar
 gem 'gravatar_image_tag', '1.0.0.pre2'
 

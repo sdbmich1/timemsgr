@@ -1,0 +1,46 @@
+Entertainment:
+    name: "Entertainment"
+Recreation:
+    name: "Recreation" 
+Business:
+    name: "Business"
+Gaming:
+    name: "Gaming"
+Technology:
+    name: "Technology"
+Parades:
+    name: "Parades/Fairs/Festivals"
+Youth:
+    name: "Youth"
+Seniors:
+    name: "Seniors"
+Sports:
+    name: "Sports"
+Education:
+    name: "Education"
+Civic:
+    name: "Civic/Government"    
+Community:
+    name: "Community"
+Music:
+    name: "Music"
+PerformingArts:
+    name: "Performing Arts"
+Arts:
+    name: "Arts & Crafts"
+Food:
+    name: "Food & Dining"
+Religion:
+    name: "Religion"
+Travel:
+    name: "Travel/Tourism"
+Health:
+    name: "Health & Fitness"
+SocialClubs:
+    name: "Social Clubs"
+Shows:
+    name: "Shows" 
+Shopping:
+    name: "Shopping"
+Tryouts:
+    name: "Tryouts/Signups"

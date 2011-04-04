@@ -1,0 +1,9 @@
+	<% @category.each do |category| %>
+	  <%= label_tag category.name %>
+	  <div>
+	  <% category.interests.each do |sub| %>
+ 		<%= check_box_tag "user[interest_ids][]", sub.id, @selected_ids.include?(sub) %>
+  		<%= label_tag "user[interest_ids][]", sub.name, :for => "user[interest_ids][]", :class => 'cb_label' %>
+	  <% end %>
+	  </div>	  
+	<% end %>

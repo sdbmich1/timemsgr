@@ -88,6 +88,9 @@ Timemsgr::Application.routes.draw do
 
   root :to => 'pages#home'
 
+  # catch any routing errors
+#  match "*path" => 'error#handle404'
+
   # root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"

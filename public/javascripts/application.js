@@ -9,5 +9,16 @@ $('.submittable').live('change', function() {
   return false;
 });
 
+$(".password_test").passStrength({
+  password: "#password"
+});
+
+$(document).ready(function(){  
+$('#alert').live('click', (function () {  
+alert('Hello, world!');  
+return false;  
+})) ; 
+});  
+
 
 

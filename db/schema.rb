@@ -10,7 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110329012534) do
+ActiveRecord::Schema.define(:version => 20110402233359) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "channels", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "type"
+    t.string   "class"
+    t.integer  "location_id"
+    t.integer  "interest_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cities", :force => true do |t|
     t.string   "city"
@@ -19,8 +38,44 @@ ActiveRecord::Schema.define(:version => 20110329012534) do
     t.datetime "updated_at"
   end
 
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "description"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.string   "type"
+    t.string   "frequency"
+    t.string   "location"
+    t.integer  "start_time_zone_id"
+    t.integer  "end_time_zone_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "interest_categories", :id => false, :force => true do |t|
+    t.integer  "interest_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "interest_categories", ["interest_id", "category_id"], :name => "index_interest_categories_on_interest_id_and_category_id"
+
   create_table "interests", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+    t.integer  "user_id"
+  end
+
+  create_table "interests_categories_users", :id => false, :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "interest_id"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +86,13 @@ ActiveRecord::Schema.define(:version => 20110329012534) do
   end
 
   add_index "interests_users", ["user_id", "interest_id"], :name => "int_user_index", :unique => true
+
+  create_table "subcategories", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "user_prefs", :force => true do |t|
     t.integer  "user_id"
@@ -62,12 +124,5 @@ ActiveRecord::Schema.define(:version => 20110329012534) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
-
-  create_table "users_interests", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "interest_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

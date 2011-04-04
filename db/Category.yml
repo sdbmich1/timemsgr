@@ -14,8 +14,12 @@ Youth:
     name: "Youth"
 Seniors:
     name: "Seniors"
-Sports:
-    name: "Sports"
+ProSports:
+    name: "Pro Sports"
+CollegeSports:
+    name: "College Sports"    
+AmateurSports:
+    name: "Amateur Sports"
 Education:
     name: "Education"
 Civic:

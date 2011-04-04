@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model - :password_confirmation,
   attr_accessible :email, :password,  :remember_me,
   				  :first_name, :last_name, :city, :birth_date, :gender,
-  				  :interest_ids 
+  				  :interest_ids, :category_ids 
   				  
   # cities consist of many users  				  
 #  belongs_to :city			
@@ -22,5 +22,13 @@ class User < ActiveRecord::Base
   validates :birth_date,  :presence => true  
   validates :gender,  :presence => true
   
-  has_and_belongs_to_many :interests                                   
+  # define interest relationships
+  has_and_belongs_to_many :interests 
+  has_many :categories, :through => :interests
+  
+ #  accepts_nested_attributes_for :interests
+ 
+ 
+#  has_many :channels, :through => :categories
+#  has_many :events                              
 end

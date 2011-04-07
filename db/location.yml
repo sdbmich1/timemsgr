@@ -1,0 +1,40 @@
+Chicago:
+    city:       "Chicago"
+    state:      "IL"
+    country:    "US"
+    timezone:   "Central Time (US & Canada)"
+NY:
+    city:       "New York"       
+    state:      "NY"
+    country:    "US"
+    timezone:   "Eastern Time (US & Canada)"
+LA:
+    city:       "Los Angeles"       
+    state:      "CA"
+    country:    "US"
+    timezone:   "Pacific Time (US & Canada)"
+SF:
+    city:       "San Francisco"       
+    state:      "CA"
+    country:    "US"
+    timezone:   "Pacific Time (US & Canada)"
+Det:
+    city:       "Detroit"       
+    state:      "MI"
+    country:    "US"
+    timezone:   "Eastern Time (US & Canada)"
+Miami:
+    city:       "Miami"       
+    state:      "FL"
+    country:    "US"
+    timezone:   "Eastern Time (US & Canada)"    
+PaloAlto:
+    city:       "Palo Alto"       
+    state:      "CA"
+    country:    "US"
+    timezone:   "Pacific Time (US & Canada)"    
+SanJose:
+    city:       "San Jose"       
+    state:      "CA"
+    country:    "US"
+    timezone:   "Pacific Time (US & Canada)"    

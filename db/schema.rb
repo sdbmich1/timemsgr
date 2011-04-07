@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110402233359) do
+ActiveRecord::Schema.define(:version => 20110406050033) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -20,16 +20,38 @@ ActiveRecord::Schema.define(:version => 20110402233359) do
     t.datetime "updated_at"
   end
 
-  create_table "channels", :force => true do |t|
-    t.string   "name"
-    t.string   "title"
-    t.string   "type"
-    t.string   "class"
-    t.integer  "location_id"
+  create_table "channel_interests", :force => true do |t|
+    t.integer  "channel_id"
     t.integer  "interest_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "channel_interests", ["channel_id", "interest_id"], :name => "index_channel_interests_on_channel_id_and_interest_id", :unique => true
+
+  create_table "channels", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "channel_type"
+    t.string   "channel_class"
+    t.integer  "location_id"
+    t.integer  "interest_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.date     "post_date"
+    t.date     "expiration_date"
+    t.string   "author"
+    t.string   "topic"
+    t.integer  "calender_id"
+    t.string   "channel_status"
+    t.string   "channel_scope"
+  end
+
+  add_index "channels", ["location_id"], :name => "index_channels_on_location_id"
 
   create_table "cities", :force => true do |t|
     t.string   "city"
@@ -69,7 +91,10 @@ ActiveRecord::Schema.define(:version => 20110402233359) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
-    t.integer  "user_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "interests_categories_users", :id => false, :force => true do |t|
@@ -87,6 +112,15 @@ ActiveRecord::Schema.define(:version => 20110402233359) do
 
   add_index "interests_users", ["user_id", "interest_id"], :name => "int_user_index", :unique => true
 
+  create_table "locations", :force => true do |t|
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.string   "time_zone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "subcategories", :force => true do |t|
     t.integer  "category_id"
     t.string   "name"
@@ -94,12 +128,14 @@ ActiveRecord::Schema.define(:version => 20110402233359) do
     t.datetime "updated_at"
   end
 
-  create_table "user_prefs", :force => true do |t|
+  create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
-    t.string   "pref"
+    t.integer  "channel_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "subscriptions", ["user_id", "channel_id"], :name => "index_subscriptions_on_user_id_and_channel_id", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

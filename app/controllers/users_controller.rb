@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
 
   def home
   	@user = current_user
@@ -7,7 +8,6 @@ class UsersController < ApplicationController
   	if @user.sign_in_count <= 1	
   		redirect_to welcome_path
   	else
-#  		redirect_to home_path
  		redirect_to home_path 
     end 		
   end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
    end
 
   def new
-  	@user = current_user # User.find(current_user)  
+  	@user = current_user  
   	@title = "Welcome " + @user.first_name
 
     # check interest ids
@@ -42,11 +42,11 @@ class UsersController < ApplicationController
  
 	#update database
 	if @user.update_attributes params[:user]
-       redirect_to friends_path(@user), :notice => "Settings have been saved."
+       redirect_to new_subscription_path(@user), :notice => "Interests have been saved."
     else
        flash.now[:error] = @user.errors
        respond_to do |format|
-          format.html { render :action => :index}
+          format.html { render :action => :index }
        end
     end
   end
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   	 
   end
   
-  def friends
+  def select_friends
 
-  end    	
+  end 
 end

@@ -72,6 +72,9 @@ GEM
     mime-types (1.16)
     mysql2 (0.2.6-x86-mingw32)
     nokogiri (1.4.4.1-x86-mingw32)
+    paperclip (2.3.8)
+      activerecord
+      activesupport
     polyglot (0.3.1)
     rack (1.2.2)
     rack-mount (0.6.13)
@@ -139,6 +142,7 @@ DEPENDENCIES
   hpricot
   jquery-rails
   mysql2
+  paperclip
   rails (= 3.0.5)
   rspec-rails
   ruby_parser

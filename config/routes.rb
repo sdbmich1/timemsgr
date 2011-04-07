@@ -11,6 +11,7 @@ Timemsgr::Application.routes.draw do
   
   resources :users  #, :only => [:index, :show] 
   resources :member
+  resources :subscriptions
 
   # specify routes for devise user after sign-in
   namespace :user do
@@ -82,14 +83,21 @@ Timemsgr::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/company', :to => 'pages#company'
   match '/privacy', :to => 'pages#privacy'
+  
+  # set up user routes
+#  match '/channels', :to => 'subscriptions#channels'
   match '/friends', :to => 'users#friends'
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'users#index'
+  
+  # set up subscription routes
+  match '/channels', :to => 'subscriptions#channels'
+# match '/subscriptions/new', :to => 'subscriptions#new'
 
   root :to => 'pages#home'
 
   # catch any routing errors
-#  match "*path" => 'error#handle404'
+  match "*path" => 'error#handle404'
 
   # root :to => "welcome#index"
 

@@ -20,6 +20,9 @@ gem "jquery-rails"
 # add gravatar
 gem 'gravatar_image_tag', '1.0.0.pre2'
 
+# add paperclip for photos
+gem 'paperclip'
+
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'

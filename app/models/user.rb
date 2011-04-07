@@ -26,8 +26,12 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :interests 
   has_many :categories, :through => :interests
   
+  # define channel relationships
+  has_many :subscriptions
+  has_many :channels, :through => :subscriptions, 
+  				:conditions => { :channel_status => 'active'}
+  
  #  accepts_nested_attributes_for :interests
- 
  
 #  has_many :channels, :through => :categories
 #  has_many :events                              

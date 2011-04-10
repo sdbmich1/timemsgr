@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model - :password_confirmation,
   attr_accessible :email, :password,  :remember_me,
   				  :first_name, :last_name, :city, :birth_date, :gender,
-  				  :interest_ids, :category_ids 
+  				  :interest_ids, :category_ids, :channel_ids 
   				  
   # cities consist of many users  				  
 #  belongs_to :city			
@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :channel_status => 'active'}
   
+  has_many :associates
  #  accepts_nested_attributes_for :interests
  
 #  has_many :channels, :through => :categories

@@ -12,6 +12,8 @@ Timemsgr::Application.routes.draw do
   resources :users  #, :only => [:index, :show] 
   resources :member
   resources :subscriptions
+  resources :interests
+  resources :associates
 
   # specify routes for devise user after sign-in
   namespace :user do
@@ -91,7 +93,7 @@ Timemsgr::Application.routes.draw do
   match '/home', 	:to => 'users#index'
   
   # set up subscription routes
-  match '/channels', :to => 'subscriptions#channels'
+#  match '/channels', :to => 'subscriptions#channels'
 # match '/subscriptions/new', :to => 'subscriptions#new'
 
   root :to => 'pages#home'

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <style type="text/css"></style>
+  </head>
+  <body>
+  <% logo = image_tag( attachments["rails.png"], :alt => "TimeMsgr", :class => "round") %>
+  <%= link_to logo, @url %>
+
+    <h2>TimeMsgr</h2>
+    
+    <p><%= "#{@user.first_name} #{@user.last_name}" %> is inviting you to
+    	join TimeMsgr.</p>
+
+    <p>Once you join, you'll be able to see upcoming local activities, and track activities from <%= @user.first_name %> and all your other friends... and share your own!!</p>
+    
+	<%= link_to "Join TimeMsgr",@url, :class => "signup_button round" %>
+
+  </body>
+</html>

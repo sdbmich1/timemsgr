@@ -1,6 +1,6 @@
 class MemberController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create]
- 
+  before_filter :authenticate_user!
+  
   def new
   	    
   end

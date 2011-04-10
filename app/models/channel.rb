@@ -9,4 +9,12 @@ class Channel < ActiveRecord::Base
 	has_many :interests, :through => :channel_interests
 	
 	has_many :events
+	
+	scope :active, :conditions => { :channel_status => 'active' }
+	scope :local, lambda { |loc| { 
+				:conditions => { :location_id => loc }} }
+	scope :intlist, lambda { | f |
+   				{ :joins => [:channel_interests], :conditions => 
+   				{ :channel_interests => { :interest_id => f }}} }
+   	scope :uniquelist, :select => 'DISTINCT channels.id, channels.title'
 end

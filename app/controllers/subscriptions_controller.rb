@@ -4,13 +4,14 @@ class SubscriptionsController < ApplicationController
 #  respond_to :html, :json, :xml
 
   def new
-  	# used to display & select channels for users
-  	@loc_id = 1
-  	
+ 	
   	# set user
   	@user = current_user 
   	
-  	#set subscriptions
+  	# used to display & select channels for users
+  	@loc_id = @user.location_id
+  	
+   	#set subscriptions
   	@subscription = Subscription.new
   	
   	# check channel ids

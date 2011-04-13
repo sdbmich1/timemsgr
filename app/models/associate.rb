@@ -7,5 +7,11 @@ class Associate < ActiveRecord::Base
 
 #  validates :email, :presence => true,
 #                    :format   => { :with => email_regex }
-  validates :email, :presence => true, :email_format => true                    
+  validates :email, :email_format => true     
+  
+  after_create :send_invites
+  
+  def send_invites
+   	 UserMailer.invite_friends(self).deliver  
+  end               
 end

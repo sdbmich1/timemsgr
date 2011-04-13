@@ -1,0 +1,8 @@
+ <p class="fields">
+ 	<%= f.label :name, "Name" %>  
+  	<%= f.text_field :name %>  
+   	<%= f.label :affiliation_type, "Type" %> 
+   	<%= f.collection_select :affiliation_type, AffiliationType.all, :name, :name, :prompt => true  %> 	
+    <%= link_to_remove_fields "Remove", f %>  
+ </p>
+

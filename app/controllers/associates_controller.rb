@@ -1,11 +1,15 @@
 class AssociatesController < ApplicationController
-    before_filter :authenticate_user!
+    before_filter :authenticate_user!, :load_user
     	
 #	respond_to :html, :json, :xml
 
-	def new
+	def load_user
+		
 		#set current user
   		@user = current_user  
+	end
+
+	def new
   		
   		# initialize model
   		@associate = @user.associates.new
@@ -14,11 +18,6 @@ class AssociatesController < ApplicationController
 	end
 	
 	def create
-		#set current user
-  		@user = current_user  
-
-		# set new associate data
-  		@associate = @user.associates.new(params[:associate]) 
   		
   		# get email address 
  		@emails = params[:associate][:email].split(',')
@@ -26,48 +25,30 @@ class AssociatesController < ApplicationController
 		@emails.count.times do |n|
 		  	@user.associates.build(:email => "#{@emails[n].strip}")  	
 		end
-		
-   		# check for valid emails
- # 		validate_email(@user, @associate)
-  		
-  		respond_to do |format|  
-    		if @user.save
-      			UserMailer.invite_friends(@user).deliver  
-      			format.html { redirect_to(@user, :notice => 'Associate was successfully created.') }  
+		  		
+  		respond_to do |format| 
+    		if @user.save 
+ #     			format.html { redirect_to(@user, :notice => 'Invitation(s)were successfully sent.') }  
+     			format.html { redirect_to new_affiliation_path(@user) }  
       			format.xml  { render :xml => @user, :status => :created, :location => @user }  
     		else  
-     			format.html { render :action => "new" }  
-      			format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }  
+    			flash[:alert] = 'One or more email addresses were invalid.  Please re-enter.'
+       			format.html { redirect_to new_associate_path(@user)  }  
+ #   			format.html  { render :action => 'index' }  
+ #    			format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }  
     		end  
   		end  			
 	end
 	
-	def update
+	def edit
 		
 	end
 	
-	def validate_email(*args)
-		#set user
-		@user = args.first
+	def index
 		
-		#set associate
-		@associate = args[1]
+	end
+	
+	def update
 		
-		# get email list
-		@emails = @associate.email
-				
-		if !@emails.nil?
-			
-			# split emails
-			@addresses = @emails.split(',')
-			
-			# set email address for each associate
-			@addresses.count.times do |n|
-#				@associate.email = address
-				
-				# add new associate
-  				@associate = @user.associates.new(:email => @addresses[n])  
-			end		
-		end
 	end
 end

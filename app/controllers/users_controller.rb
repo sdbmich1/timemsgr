@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   def update
   	# get current user
  	@user = User.find(current_user)
- 	
+ 		
  	#update database
 	if @user.update_attributes params[:user]
        redirect_to home_path(@user), :notice => "User has been saved."

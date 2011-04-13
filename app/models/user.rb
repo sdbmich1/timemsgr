@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model - :password_confirmation,
   attr_accessible :email, :password,  :remember_me,
-  				  :first_name, :last_name, :city, :birth_date, :gender,
-  				  :interest_ids, :category_ids, :channel_ids 
+  				  :first_name, :last_name, :birth_date, :gender, :location_id,
+  				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes 
   				  
   # cities consist of many users  				  
 #  belongs_to :city			
@@ -17,8 +17,9 @@ class User < ActiveRecord::Base
                     :length   => { :maximum => 30 }  
   validates :last_name,  :presence => true,
                     :length   => { :maximum => 30 }
-  validates :city,  :presence => true,
-                    :length   => { :maximum => 30 }  
+#  validates :city,  :presence => true,
+#                    :length   => { :maximum => 30 }  
+  validates :location_id, :presence => true
   validates :birth_date,  :presence => true  
   validates :gender,  :presence => true
   
@@ -32,8 +33,11 @@ class User < ActiveRecord::Base
   				:conditions => { :channel_status => 'active'}
   
   has_many :associates
- #  accepts_nested_attributes_for :interests
+  has_many :affiliations
+  
+  accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
 #  has_many :channels, :through => :categories
-#  has_many :events                              
+#  has_many :events 
+
 end

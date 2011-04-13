@@ -1,6 +1,6 @@
 class InterestsController < ApplicationController
     before_filter :authenticate_user!	
-	respond_to :html, :json, :xml
+	respond_to :html, :json, :xml, :js
 
 	def new
 		#set current user

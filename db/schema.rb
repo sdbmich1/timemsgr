@@ -10,7 +10,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110410050426) do
+ActiveRecord::Schema.define(:version => 20110412063414) do
+
+  create_table "affiliation_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "affiliations", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "affiliation_type"
+  end
+
+  add_index "affiliations", ["user_id"], :name => "index_affiliations_on_user_id"
 
   create_table "associates", :force => true do |t|
     t.string   "name"
@@ -170,9 +186,11 @@ ActiveRecord::Schema.define(:version => 20110410050426) do
     t.string   "city"
     t.date     "birth_date"
     t.string   "gender"
+    t.integer  "location_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["location_id"], :name => "index_users_on_location_id"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

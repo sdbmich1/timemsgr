@@ -1,5 +1,7 @@
 Timemsgr::Application.routes.draw do
 
+  resources :affiliations
+
 #  get "users/index"
 #  get "users/show"
 #  get "subscriptions/new"
@@ -10,7 +12,7 @@ Timemsgr::Application.routes.draw do
   devise_for :users
   
   resources :users  #, :only => [:index, :show] 
-  resources :member
+  resources :members
   resources :subscriptions
   resources :interests
   resources :associates

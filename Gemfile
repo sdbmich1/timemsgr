@@ -11,6 +11,12 @@ gem 'mysql2'
 gem 'will_paginate', '3.0.pre2'
 gem 'devise'
 
+# install oauth
+gem 'omniauth' 
+
+# add nifty
+gem "nifty-generators", :group => :development
+
 # add simple forms
 gem 'simple_form'
 
@@ -27,6 +33,8 @@ group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
   gem 'hpricot'
+  gem 'mocha'
+  gem 'ruby-debug19'
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
   gem 'faker', '0.3.1'
@@ -58,3 +66,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test

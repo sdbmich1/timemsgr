@@ -1,6 +1,12 @@
-<h2>Invite Friends</h2> Enter email addresses of people to invite and connect. Separate each address by a comma.
+<h1>Invite Friends</h1> 
+Enter email addresses of people to invite and connect. Separate each address by a comma.
 
- <%= simple_form_for @associate do |f| %>
+
+<%= simple_form_for @associate do |f| %>
+ 	<br />  
     <%= f.input :email, :as => :text %>
     <%= f.submit 'Send Invites' %>
- <% end %>
+ <nav class="round"> 
+	<%= submit_tag "Continue >>", :name => "commit" %>
+</nav>   
+<% end %>   	

@@ -67,4 +67,35 @@ describe User do
       end
     end
   end
+  describe "affiliations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+    end
+
+    it "should have a affiliations attribute" do
+      @user.should respond_to(:affiliations)
+    end
+  end
+  describe "associates" do
+
+    before(:each) do
+      @user = User.create(@attr)
+    end
+
+    it "should have a associates attribute" do
+      @user.should respond_to(:associates)
+    end
+  end
+  describe "channels" do
+
+    before(:each) do
+      @user = User.create(@attr)
+    end
+
+    it "should have a channels attribute" do
+      @user.should respond_to(:channels)
+    end
+  end
+  
 end

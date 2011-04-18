@@ -9,17 +9,6 @@ $('.submittable').live('change', function() {
   return false;
 });
 
-$(".password_test").passStrength({
-  password: "#password"
-});
-
-$(document).ready(function(){  
-$('#alert').live('click', (function () {  
-alert('Hello, world!');  
-return false;  
-})) ; 
-});  
-
 	// remove_fields:  Used to delete fields from a given form
 	function remove_fields(link) {  
         $(link).prev("input[type=hidden]").val("1");  
@@ -32,4 +21,3 @@ return false;
         var regexp = new RegExp("new_" + association, "g");  
         $(link).before(content.replace(regexp, new_id));  
     }  
-

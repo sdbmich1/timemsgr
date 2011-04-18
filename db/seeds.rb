@@ -19,17 +19,39 @@
 #end 
 
 # remove all locations
-Location.destroy_all
+#Location.destroy_all
 
 # import sample set of Category
-loc_list = "#(file.dirname(__FILE__))/../db/location.yml"
+#loc_list = "#(file.dirname(__FILE__))/../db/city.yml"
 
-YAML.load_file(loc_list).each_value do |seed|
-	loc = Location.create(:city => seed["city"],
-						  :state => seed["state"],
-						  :country => seed["country"],
-						  :time_zone => seed["timezone"] )
+#YAML.load_file(loc_list).each_value do |seed|
+#	loc = Location.create(:city => seed["city"],
+#						  :state => seed["state"],
+#						  :country => seed["country"],
+#						  :time_zone => seed["timezone"] )
 	
-	puts "Added location #{loc.id}: #{loc.city}"
-end 
+#	puts "Added location #{loc.id}: #{loc.city}"
+#end 
 
+# remove all events
+Event.destroy_all
+
+# import sample set of events
+ev_list = "#(file.dirname(__FILE__))/../db/event.yml"
+
+YAML.load_file(ev_list).each_value do |seed|
+	event = Event.create( :event_name => seed["name"],
+					   :title => seed["title"],
+  					   :event_type => seed["etype"],
+  					   :start_date => seed["startdt"],
+ 					   :end_date => seed["enddt"],
+ 					   :start_time => seed["starttime"],
+  					   :end_time => seed["endtime"],
+  					   :frequency => seed["frequency"],
+ 					   :cversion => seed["cversion"],
+ 					   :status => seed["status"],
+ 					   :hide => seed["hide"],				   
+ 					   :post_date => seed["postdt"] )
+	
+	puts "Added event #{event.id}: #{event.title}"
+end 

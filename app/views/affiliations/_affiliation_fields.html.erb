@@ -1,6 +1,6 @@
- <p class="fields">
+<p class="fields">
  	<%= f.label :name, "Name" %>  
-  	<%= f.text_field :name %>  
+    <%= f.autocomplete_field :name, autocomplete_affiliation_name_affiliations_path %>
    	<%= f.label :affiliation_type, "Type" %> 
    	<%= f.collection_select :affiliation_type, AffiliationType.all, :name, :name, :prompt => true  %> 	
     <%= link_to_remove_fields "Remove", f %>  

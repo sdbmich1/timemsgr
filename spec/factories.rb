@@ -5,6 +5,7 @@ Factory.define :user do |user|
   user.email                 "jblow@test.com"
   user.password              "foobar"
   user.city            		 "Detroit"
+  user.location_id			 1
   user.gender            	 "Male"
   user.birth_date            "1967-04-23"
 end

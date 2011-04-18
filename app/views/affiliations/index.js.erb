@@ -1,0 +1,1 @@
+ $('#name').html("<%= escape_javascript( raw render(:text => @affiliations.map(&:name)) ) %>");

@@ -4,6 +4,6 @@ class InterestsUser < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :interest
 	
-	has_many :interests_categories_users
+#	has_many :interests_categories_users
 
 end

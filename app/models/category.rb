@@ -4,7 +4,7 @@ class Category < ActiveRecord::Base
  # define relationships
   has_many :subcategories
   has_many :interests
-  has_many :users, :through => :interests
+#  has_many :users, :through => :interests
   
   validates :name, :presence => true  #, :length => { :maximum => 15 }
   

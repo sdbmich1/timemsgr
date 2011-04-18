@@ -30,14 +30,16 @@ class UsersController < ApplicationController
   def update
   	# get current user
  	@user = User.find(current_user)
- 		
+ 	
+ 	debugger	
  	#update database
 	if @user.update_attributes params[:user]
-       redirect_to home_path(@user), :notice => "User has been saved."
+       redirect_to home_path(@user), :notice => "User changes has been saved."
     else
        flash.now[:error] = @user.errors
        respond_to do |format|
           format.html { render :action => :index }
+          format.js
        end
     end
   end

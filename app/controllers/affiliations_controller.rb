@@ -1,12 +1,24 @@
 class AffiliationsController < ApplicationController
+  before_filter :authenticate_user!	
+  
+  # add autocomplete on affiliation name 
+  autocomplete :affiliation, :name
+  
   def new
   	#set current user
   	@user = current_user  
   		
   	# initialize model
-    @user.affiliations.build #5.times {}
+    @user.affiliations.build 
+
   end
   
+  # lookup affiliation names
+  def get_items(parameters)
+	Affiliation.group("name").where(['name LIKE ?', "#{parameters[:term]}%"]).limit(10)
+  end
+
+ 	
   def edit
     @affiliation = Affiliation.find(params[:id])
   end
@@ -16,13 +28,16 @@ class AffiliationsController < ApplicationController
  	@user = current_user  
 
 	# set new affiliation data
-    @affiliation = @user.affiliations.new(params[:affiliation])
+    @affiliation = @user.affiliations.build(params[:affiliation])
     
-    if @affiliation.save
-      redirect_to user_url, :notice => "Successfully created affiliation."
-    else
-      render :action => 'new'
-    end
+	respond_to do |format| 
+    	if @affiliation.save
+      		format.html {redirect_to home_path(@user)} #, :notice => "Successfully created affiliation."
+    	else
+    		format.html { redirect_to new_affiliation_path(@user) }  
+#     		render :action => 'new'
+    	end		
+	end
   end
 
   def update
@@ -34,4 +49,5 @@ class AffiliationsController < ApplicationController
       render :action => 'edit'
     end
   end
+  
 end

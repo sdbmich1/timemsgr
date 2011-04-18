@@ -25,7 +25,9 @@ class User < ActiveRecord::Base
   
   # define interest relationships
   has_and_belongs_to_many :interests 
-  has_many :categories, :through => :interests
+
+  
+ # has_many :categories, :through => :interests
   
   # define channel relationships
   has_many :subscriptions
@@ -33,11 +35,13 @@ class User < ActiveRecord::Base
   				:conditions => { :channel_status => 'active'}
   
   has_many :associates
-  has_many :affiliations
   
+  has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
 #  has_many :channels, :through => :categories
-#  has_many :events 
+
+  has_many :user_events
+  has_many :events, :through => :user_events #, :source => 'user_id'
 
 end

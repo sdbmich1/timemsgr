@@ -29,11 +29,11 @@ class AssociatesController < ApplicationController
   		respond_to do |format| 
     		if @user.save 
  #     			format.html { redirect_to(@user, :notice => 'Invitation(s)were successfully sent.') }  
-     			format.html { redirect_to new_affiliation_path(@user) }  
+     			format.html { redirect_to new_affiliation_path }  
       			format.xml  { render :xml => @user, :status => :created, :location => @user }  
     		else  
     			flash[:alert] = 'One or more email addresses were invalid.  Please re-enter.'
-       			format.html { redirect_to new_associate_path(@user)  }  
+       			format.html { redirect_to new_associate_path  }  
  #   			format.html  { render :action => 'index' }  
  #    			format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }  
     		end  

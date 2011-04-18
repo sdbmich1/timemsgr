@@ -1,0 +1,10 @@
+PaloAlto:
+    city:       "Palo Alto"       
+    state:      "CA"
+    country:    "US"
+    timezone:   "Pacific Time (US & Canada)"    
+SanJose:
+    city:       "San Jose"       
+    state:      "CA"
+    country:    "US"
+    timezone:   "Pacific Time (US & Canada)"    

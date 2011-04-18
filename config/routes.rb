@@ -1,7 +1,6 @@
 Timemsgr::Application.routes.draw do
 
-  resources :affiliations
-
+ 
 #  get "users/index"
 #  get "users/show"
 #  get "subscriptions/new"
@@ -11,11 +10,16 @@ Timemsgr::Application.routes.draw do
 
   devise_for :users
   
-  resources :users  #, :only => [:index, :show] 
   resources :members
-  resources :subscriptions
-  resources :interests
-  resources :associates
+  resources :users 
+  resources :events, :interests, :associates, :subscriptions
+  
+  # match "affiliations/list" => "affiliations#list"
+
+  resources :affiliations do
+  	get :autocomplete_affiliation_name, :on => :collection
+  end
+  
 
   # specify routes for devise user after sign-in
   namespace :user do
@@ -26,12 +30,6 @@ Timemsgr::Application.routes.draw do
 #  match 'member' => 'member#new', :as => 'user_path'  
 #  match 'member' => 'member#index', :as => 'user_root'  
 #  match '/logout', :to => 'member#destroy'
-
-#  get "pages/home"
-#  get "pages/contact"
-#  get "pages/privacy"
-#  get "pages/company"
-#  get "pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -89,19 +87,19 @@ Timemsgr::Application.routes.draw do
   match '/privacy', :to => 'pages#privacy'
   
   # set up user routes
-#  match '/channels', :to => 'subscriptions#channels'
-  match '/friends', :to => 'users#friends'
+#  match '/friends', :to => 'users#friends'
   match '/welcome', :to => 'users#new'
-  match '/home', 	:to => 'users#index'
+  match '/home', 	:to => 'events#index'
   
   # set up subscription routes
 #  match '/channels', :to => 'subscriptions#channels'
 # match '/subscriptions/new', :to => 'subscriptions#new'
 
-  root :to => 'pages#home'
-
   # catch any routing errors
   match "*path" => 'error#handle404'
+
+  root :to => 'pages#home'
+
 
   # root :to => "welcome#index"
 

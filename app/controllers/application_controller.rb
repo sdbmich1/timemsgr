@@ -15,9 +15,9 @@ class ApplicationController < ActionController::Base
 		
 		# determine route based on string value
 		if select_ids == 'channel_ids' 
-        	redirect_to new_associate_path(@user), :notice => "Channels have been saved."
+        	redirect_to new_associate_path, :notice => "Channels have been saved."
         else
-     	    redirect_to new_subscription_path(@user), :notice => "Interests have been saved."
+     	    redirect_to new_subscription_path, :notice => "Interests have been saved."
 		end
     else
        flash.now[:error] = @user.errors

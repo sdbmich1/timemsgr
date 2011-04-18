@@ -11,6 +11,13 @@ gem 'mysql2'
 gem 'will_paginate', '3.0.pre2'
 gem 'devise'
 
+# => add autocomplete search capability
+gem 'rails3-jquery-autocomplete'
+
+# install meta-where & search to extend named scopes
+gem 'meta_where'
+gem 'meta_search'
+
 # install oauth
 gem 'omniauth' 
 

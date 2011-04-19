@@ -21,6 +21,9 @@ gem 'meta_search'
 # install oauth
 gem 'omniauth' 
 
+# add breadcrumbs
+ gem 'breadcrumbs_on_rails'
+
 # add nifty
 gem "nifty-generators", :group => :development
 
@@ -73,4 +76,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "mocha", :group => :test
+#gem "mocha", :group => :test

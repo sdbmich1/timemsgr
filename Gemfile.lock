@@ -32,6 +32,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (2.0.9)
     bcrypt-ruby (2.1.4-x86-mingw32)
+    breadcrumbs_on_rails (1.0.1)
     builder (2.1.2)
     capybara (0.4.1.2)
       celerity (>= 0.7.9)
@@ -219,6 +220,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  breadcrumbs_on_rails
   capybara
   devise
   factory_girl_rails (= 1.0)

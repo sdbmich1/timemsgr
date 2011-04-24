@@ -1,0 +1,70 @@
+#eventlist {
+	width: 1200px;
+	background: #ffffff;
+  	overflow:hidden;
+}
+
+#eventlist label {
+	display:block;
+	float:left;
+	width:100px;
+	text-align:right;
+	font-weight:normal;
+    line-height:18px;
+	vertical-align: middle;
+	margin:7px 5px 0px 0px;
+}
+
+#eventlist body {
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	
+}
+
+#eventlist li {
+    list-style-type:none;
+    padding-left:10px;
+	display:inline-block;
+	vertical-align:middle;
+	float:left;
+	margin-left: 10px;
+	font-size: small;
+	 	clear: right;
+}
+
+.left-sidebar {
+ 	float: left;
+ 	margin-left: 100px;
+	max-width: 150px;
+	margin-top: 10px;
+	height: 400px;
+	padding: 10px;
+	background-color:  #555555;
+}
+
+.right-sidebar {
+ 	float: left;
+ 	max-width: 150px;
+ 	margin-top: 10px;
+	height: 400px;
+	padding: 10px;
+	background-color:  #555555;
+ 	clear:right;
+}
+
+.main-container {
+ 	float: left;
+	max-width: 750px;
+	margin-top: 10px;
+	height: 400px;
+	padding: 10px;
+	background-color:  #555555;
+
+}
+
+.item-header {
+  float: right;
+  font-size: 10px;
+}
+

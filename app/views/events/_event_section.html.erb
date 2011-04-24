@@ -1,0 +1,3 @@
+ <%# display list of events by type grouped into sections %>        <% @sections.each do |section| -%> 	<div class="span-24 last append-bottom landing-bg" id="content">  		<%= showtitle(section.event_type, section.title) %>		<%= render :partial => 'event', :as => :event,				:collection => @events.select{|event| event.event_type == section.event_type } %>	</div> 	<% end %>
+ 
+		

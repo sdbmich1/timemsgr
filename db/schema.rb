@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110415001603) do
+ActiveRecord::Schema.define(:version => 20110422182926) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -118,6 +118,17 @@ ActiveRecord::Schema.define(:version => 20110415001603) do
     t.datetime "updated_at"
   end
 
+  create_table "event_page_sections", :force => true do |t|
+    t.string   "event_type"
+    t.string   "title"
+    t.integer  "rank"
+    t.string   "visible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "event_page_sections", ["event_type"], :name => "event_type_idx", :unique => true
+
   create_table "event_types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -143,6 +154,10 @@ ActiveRecord::Schema.define(:version => 20110415001603) do
     t.string   "hide"
     t.string   "cversion"
     t.date     "post_date"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "events", ["cversion"], :name => "index_events_on_cversion"
@@ -221,10 +236,12 @@ ActiveRecord::Schema.define(:version => 20110415001603) do
     t.date     "birth_date"
     t.string   "gender"
     t.integer  "location_id"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["location_id"], :name => "index_users_on_location_id"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["username"], :name => "index_users_on_username"
 
 end

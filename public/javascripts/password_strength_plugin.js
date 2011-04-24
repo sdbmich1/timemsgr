@@ -81,7 +81,7 @@
 		 			    if (password.length < 4 ) { this.resultStyle =  option.shortPass;return $(this).shortPass; }
 		 			    
 		 			    //password == user name
-		 			    if (password.toLowerCase()==username.toLowerCase()){this.resultStyle = option.badPass;return $(this).samePassword;}
+		 			   // if (password.toLowerCase()==username.toLowerCase()){this.resultStyle = option.badPass;return $(this).samePassword;}
 		 			    
 		 			    //password length
 		 			    score += password.length * 4;

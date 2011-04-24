@@ -9,16 +9,18 @@ class EventsController < ApplicationController
  		# get event data
 		@event = Event.all #@user.includes(:user_events)	
 		
-		@time = Time.now
+#		@time = Time.now
 		
 #		debugger
 	end
 	
 	def index
 		#set current user
-  		@user = current_user # User.find(177) 
+  	@user = current_user 
+  	
+  	# get list of events 
 	 	@events = Event.active.is_visible? #.current_events(Time.now, Time.now+7.days) 
-	 	
+	 	@sections = EventPageSection.all
 	 	@time = Time.now
 	 	
 #	 	respond_to do |format|
@@ -45,8 +47,4 @@ class EventsController < ApplicationController
 		
 	end
 	
-	def showtime
-		 render_text "The current time is #{Time.now.to_s}"
-		 @time = Time.now
-	end
 end

@@ -1,0 +1,132 @@
+/* CSS Settings for sign-in and sign-up screens  */
+input[type='submit'] {  
+  	  font-weight: bold;
+  	  background: #0c6fcb;
+      width: 100px;
+  	  color: #ffffff;
+  	  margin-left: 105px;
+ /*    padding: 5px;
+      margin-top: 10px;  
+      margin-bottom: 10px;  
+      background:#acb4cb; color:#fff; */
+    cursor:pointer;
+    padding:5px 10px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px
+   }  
+   
+a.cb_label {
+  	  font-weight: normal;
+}
+
+#newform {
+	width : 300px; 
+}
+
+#newform label{
+  width: 200px;
+  float: left;
+  text-align: right;
+  font-weight:normal;
+  margin-right: 0.5em;
+  display: block
+}
+
+.password {
+	font-size : 12px;
+/*	border : 1px solid #cc9933; */
+	width : 200px; 
+	font-family : arial, sans-serif;
+	clear: right;
+}
+
+.pstrength-minchar {
+/*	font-size : 10px; */
+  clear: left;
+  margin-left: 105px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  color: #555;
+  display: block;
+  font-style: italic;
+}
+
+.pstrength-bar {
+ 	margin-left: 105px;	
+	max-width: 200px;
+}
+
+.pstrength-info {
+ 	margin-left: 105px;
+ 	  font-size: 10px;
+}
+
+.signin-header {
+  float: right;
+  font-size: 10px;
+}
+
+#newreg {
+}
+
+#newreg label {
+	display:block;
+	float:left;
+	width:100px;
+	text-align:right;
+	font-weight:normal;
+    line-height:18px;
+	vertical-align: middle;
+	margin:7px 5px 0px 0px;
+}
+
+
+.sign-in-label {
+ 	margin-left: 105px;
+ 	  font-size: 11px;
+}
+
+.sign-in-cbox {
+	vertical-align: middle; 
+    margin: 22px;
+	clear: right;
+}
+
+div.boolean {
+  margin-top: 10px;  
+  height: 12px;
+  vertical-align:middle;
+}
+
+.login-radio {
+	vertical-align: middle; 
+	margin: 26px 5px 0px 0px;
+	font-weight:normal;
+}
+
+.boldlink {
+	font-weight: bold;
+}
+
+.terms-info {
+ 	margin-left: 105px;
+ 	  font-size: 10px;
+}
+
+.big-container {
+  width: 1280px;
+
+}
+
+#landing {
+  margin-top: 1em;
+  background: #fff;
+}
+
+.centeritem {
+	vertical-align: middle;
+}
+
+#event-list {
+	line-height: .25em;
+}

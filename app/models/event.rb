@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
 	attr_accessible :event_name, :title, :start_date, :end_date, :start_time,
-				:end_time, :frequency
+				:end_time, :frequency, :event_type
 	
 	has_many :calendar_events
 	has_many :calendars, :through => :calendar_events
@@ -11,6 +11,11 @@ class Event < ActiveRecord::Base
 	validates :title, :presence => true
 	validates :start_date, :presence => true
 	validates :end_date, :presence => true
+	
+ # belongs_to :event_type, :foreign_key => "event_type"
+ # belongs_to :event_page_section, :foreign_key => "event_type"
+	
+  default_scope :order => 'events.start_date, events.start_time ASC'
 	
 	scope :active, :conditions => { :status.downcase => 'active' }
 	scope :is_visible?, :conditions => { :hide.downcase => 'no' }

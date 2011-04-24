@@ -1,5 +1,5 @@
 	<% @category.each do |category| %>
-	  <%= logo(category.photo_file_name) %>
+	  <%= getlogo(category.photo_file_name) %>
 	  <%= label_tag category.name %>
 	  <div>
 	  <% category.interests.each do |sub| %>

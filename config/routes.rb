@@ -100,7 +100,6 @@ Timemsgr::Application.routes.draw do
 
   root :to => 'pages#home'
 
-
   # root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"

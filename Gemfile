@@ -22,8 +22,11 @@ gem 'meta_search'
 gem 'omniauth' 
 
 # add breadcrumbs
- gem 'breadcrumbs_on_rails'
+gem 'breadcrumbs_on_rails'
 
+# add forms helper
+gem 'formtastic', '~> 1.2.3'
+ 
 # add nifty
 gem "nifty-generators", :group => :development
 

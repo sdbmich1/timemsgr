@@ -1,0 +1,30 @@
+Observances:
+    type:       "obsrv"       
+    title:      "Observances & Milestones"
+    rank:       "1"
+    visible:    "yes"    
+Vocation:
+    type:       "voc"       
+    title:      "Vocation, Special Interests, Fun & Entertainment"
+    rank:       "6"
+    visible:    "yes"
+Personal:
+    type:       "ue"       
+    title:      "Your Preference Activities"
+    rank:       "5"
+    visible:    "yes"
+Reminders:
+    type:       "remind"       
+    title:      "Your Reminders"
+    rank:       "3"
+    visible:    "yes"
+Appointments:
+    type:       "mtg"       
+    title:      "Your Appointments"
+    rank:       "2"
+    visible:    "yes"
+Notices:
+    type:       "te"       
+    title:      "Your Notices"
+    rank:       "4"
+    visible:    "yes"

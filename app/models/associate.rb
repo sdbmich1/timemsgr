@@ -7,7 +7,7 @@ class Associate < ActiveRecord::Base
 
 #  validates :email, :presence => true,
 #                    :format   => { :with => email_regex }
-  validates :email, :email_format => true     
+  validates :email, :email_format => true, :message => "Email must have valid format"     
   
   after_create :send_invites
   

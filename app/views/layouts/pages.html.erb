@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render 'shared/initialize' %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+
+    <nav class="round"> 
+    	<ul>
+			<li><%= link_to "Sign In", new_user_session_path %></li>
+		</ul>  
+	</nav>   
+  <%= render 'layouts/header' %>  		
+</head>
+	<body>
+		<div class="container">
+	   		<section class="round">
+          		<%= yield %>
+       		</section>
+       	</div>
+	</body>
+</html>

@@ -1,6 +1,6 @@
 module InterestsHelper
 	
-  def logo(fname)
+  def getlogo(fname)
   	if fname.nil?
   		image_tag("rails.png", :alt => "TimeMsgr", :size => "40x40")
 	else

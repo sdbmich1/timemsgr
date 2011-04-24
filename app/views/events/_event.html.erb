@@ -1,11 +1,29 @@
-<%= render 'showtime' %>
-<table>
-	<% @events.each do |event| %>
-	  <tr>
-    	 <td><%= event.start_date.strftime("%D") %> - <%= event.end_date.strftime("%D") %><br /> 
-     	  	 <%= event.start_time.strftime("%I:%M %p") %> - <%= event.end_time.strftime("%I:%M %p") %></td>
-   	 	 <td><%= link_to event.title, edit_event_path(event) %></td>
-   		 <td><%= link_to 'Share', event %></td>
-  	 </tr>
-    <% end %>
- </table>     
+<%# display event time if not an observance event %>
+<div class="span-4"> 
+	<% if event.event_type != "obsrv" %> 
+    	<%= " #{event.start_date.strftime("%D")} - #{event.end_date.strftime("%D")}" %><br /> 
+	 	<%= " #{event.start_time.strftime("%I:%M %p")} - #{event.end_time.strftime("%I:%M %p")}" %>			
+	<% end %>
+</div>
+
+<div class="span-12">
+	<% if event.event_type != "obsrv" %> 
+ 	 	<p><%= link_to event.title, event_path(event) %></p> 
+	<% else %>
+	<div class="span-24 last">
+ 	 	<center><%= event.title %><%= " (#{event.start_date.strftime("%D")})" %></center>
+	</div>
+	<% end %>
+</div>
+
+<div class="span-4">
+	<% if event.event_type != "obsrv" %> 
+ 		<p><%= link_to 'Share', event %></p>
+	<% end %>
+</div>
+
+<div class="span-4 last">
+	<% if event.event_type != "obsrv" %> 
+ 		Remind
+	<% end %><br />
+</div> 

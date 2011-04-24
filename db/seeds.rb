@@ -33,6 +33,7 @@
 #	puts "Added location #{loc.id}: #{loc.city}"
 #end 
 
+
 # remove all events
 Event.destroy_all
 
@@ -55,3 +56,19 @@ YAML.load_file(ev_list).each_value do |seed|
 	
 	puts "Added event #{event.id}: #{event.title}"
 end 
+
+# remove all events
+EventPageSection.destroy_all
+
+# import sample set of events
+ev_list = "#(file.dirname(__FILE__))/../db/event_page_section.yml"
+
+YAML.load_file(ev_list).each_value do |seed|
+  event = EventPageSection.create( :event_type => seed["type"],
+             :title => seed["title"],
+               :rank => seed["rank"],
+               :visible => seed["visible"])
+               
+  puts "Added event section #{event.id}: #{event.title}"
+
+end

@@ -1,0 +1,21 @@
+<ul id="menu">
+  <li><%= link_to "Home", home_path %></li>
+  <li><a href="">Plan</a></li>
+  <li><a href="">My Schedule</a></li>
+  <li><a href="">Manage</a>
+    <ul>
+    <li><a href="">Activities</a></li>
+    <li><a href="">Interests</a></li>
+    <li><a href="">Channels</a></li>
+    <li><a href="">Appointments</a></li>
+    </ul>
+  </li>
+  <li><a href="">Account</a>
+    <ul>
+    <li><a href="">Privacy Settings</a></li>
+    <li><a href="">Account Settings</a></li>
+    <li><a href="">Edit Profile</a></li>
+   	<li><%= link_to "Sign Out", destroy_user_session_path %></li>
+    </ul>
+  </li>
+</ul>

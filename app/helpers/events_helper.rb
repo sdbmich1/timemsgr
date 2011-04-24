@@ -3,6 +3,10 @@ module EventsHelper
 		 @time = Time.now
 	end
 	
+	def gettitle
+	  @title = "ScheduleCast"
+	end
+	
 	def showtitle(type, title)
 	  @elist = []
 	  

@@ -1,11 +1,12 @@
 body {
-	 background: #0C6FCB;
+     background-color:#ffffff;
 }
 
 /* Event page settings */
 
 .landing-bg {
 	background: #FFFFFF;
+	border-color:#0000a0;
 }
 
 .left-sidebar {
@@ -13,9 +14,13 @@ body {
  	position:relative;
 	width: 150px;
 	margin-left: 20px;
-	height: 400px;
 	padding: 10px;
-	background-color:  #555555;
+/*	background-color:  #555555;
+	height: 400px;  */
+}
+
+.clock {
+	padding-top: 8px;
 }
 
 .right-sidebar {
@@ -23,9 +28,9 @@ body {
  	position:relative;
   	margin-right: 20px;
 	width: 150px;
-	height: 400px;
 	padding: 10px;
-	background-color:  #555555;
+/*	background-color:  #555555;
+	height: 400px;  */
 
 }
 
@@ -34,8 +39,8 @@ body {
 }
 
 .sectionhead {
-	background-color: #0C6FCB;
-	color: #FFFFFF;
+	background-color: #C2E1EF;
+	color: #000000;
 }
 
 /* Links */
@@ -104,4 +109,11 @@ footer {
 
 footer nav {
   float: none;
+}
+
+.titlebar {
+  font-weight:bold;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #ffffff;
 }

@@ -1,0 +1,15 @@
+<title><%= gettitle %></title>
+
+<div class="menu-bkgd">
+  <div class="span-24 last" id="menu">
+	<div class="span-7 titlebar menu-offset">
+		<%= gettitle %>
+	</div>
+	<div class="span-7">
+		<%= text_field_tag 'search', nil, :placeholder => 'Enter search term...' %>
+	</div>
+	<div class="span-10 last">
+		<%= render 'shared/menu_item' %>
+	</div>
+  </div>
+</div>

@@ -19,9 +19,10 @@ class AssociatesController < ApplicationController
 	
 	def create
   		
-  		# get email address 
+  	# get email address 
  		@emails = params[:associate][:email].split(',')
 		
+    # parse each email address
 		@emails.count.times do |n|
 		  	@user.associates.build(:email => "#{@emails[n].strip}")  	
 		end
@@ -30,12 +31,11 @@ class AssociatesController < ApplicationController
     		if @user.save 
  #     			format.html { redirect_to(@user, :notice => 'Invitation(s)were successfully sent.') }  
      			format.html { redirect_to new_affiliation_path }  
-      			format.xml  { render :xml => @user, :status => :created, :location => @user }  
+      		format.xml  { render :xml => @user, :status => :created, :location => @user }  
     		else  
     			flash[:alert] = 'One or more email addresses were invalid.  Please re-enter.'
-       			format.html { redirect_to new_associate_path  }  
- #   			format.html  { render :action => 'index' }  
- #    			format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }  
+       		format.html { render :action => :new } 
+     			format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }  
     		end  
   		end  			
 	end

@@ -1,0 +1,25 @@
+<!-- main form for events -->
+	<% content_for :head do -%>
+    	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "User" } %>
+	<% end -%>
+
+	<% content_for :left_sidebar do -%>
+ 		<div id="user_panel"><%= render :partial => 'user_panel' %></div> 
+	<% end -%>
+
+	<% content_for :content do -%>
+      	<div class="span-24 last" id="events">  
+			<% if @form == "event_section" %>
+
+				<!-- iniitiate clock --> 
+				<%= render 'getclock' %>
+            	<%= render 'showtime' %>
+			<% end %>
+			<div id="event_form"><%= render :partial => @form %></div> 	
+		</div>
+	<% end -%>
+   
+	<% content_for :right_sidebar do -%>
+ 		<div id="ad_panel"><%= render :partial => 'ad_panel' %></div> 
+	<% end -%>
+

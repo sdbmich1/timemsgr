@@ -1,7 +1,9 @@
- <h1>TimeBarker</h1>
-    <p>
-      Stay informed about what's going on in your area. Share, discover and track upcoming activities  
-      and events you are interested in automatically.       
-    </p>
+<% content_for :head do -%>
+    <%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Home" } %>
+<% end -%>
+
+<% content_for :content do -%>
+    <%= render :partial => 'home_page' %>
+<% end -%>
+
  
- <%= link_to "Sign Up!",new_user_registration_path, :class => "signup_button round" %>

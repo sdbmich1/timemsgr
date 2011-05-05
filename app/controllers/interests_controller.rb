@@ -1,15 +1,15 @@
 class InterestsController < ApplicationController
-    before_filter :authenticate_user!	
+  before_filter :authenticate_user!	
 	respond_to :html, :json, :xml, :js
 
 	def new
 		#set current user
-  		@user = current_user  
-  		
-  		# initialize model
-  		@interest = Interest.new
+  	@user = current_user  
+  	 		
+  	# initialize model
+  	@interest = Interest.new
  
-    	# check interest ids
+    # check interest ids
 		@selected_ids = @user.interest_ids
 	
 		# get category data
@@ -19,6 +19,7 @@ class InterestsController < ApplicationController
 	end
 	
 	def create
+	  # save user interest & channel selections
 		set_channels('interest_ids')
 	end
 	

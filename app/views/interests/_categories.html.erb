@@ -1,9 +1,10 @@
-	<% @category.each do |category| %>
-	  <%= getlogo(category.photo_file_name) %>
-	  <%= label_tag category.name %>
-	  <div>
+<!-- list all categories and related interests -->
+<% @category.each do |category| %>
+	<%= getlogo(category.photo_file_name) %>
+	<%= label_tag category.name %>
+	<div>
 	  <% category.interests.each do |sub| %>
  		<%= check_box_tag "user[interest_ids][]", sub.id, @selected_ids.include?(sub) %> <%= sub.name %>
 	  <% end %>
-	  </div>	  
-	<% end %>
+	</div>	  
+<% end %>

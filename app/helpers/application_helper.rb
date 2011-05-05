@@ -1,8 +1,13 @@
 module ApplicationHelper
-
+ 
+  # returns logo or name
+  def get_name_or_logo
+    @name = "Kitster"
+  end
+  
   # Return a title on a per-page basis.
-  def title
-    base_title = "TimeBarker"
+  def get_title
+    base_title = get_name_or_logo
     if @title.nil?
       base_title
     else
@@ -10,8 +15,14 @@ module ApplicationHelper
     end
   end
   
+  # returns company logo
   def logo
-    image_tag("rails.png", :alt => "TimeMsgr", :class => "round")
+    image_tag("rails.png", :alt => get_name_or_logo, :class => "round")
+  end
+  
+  # used to toggle breadcrumb images based on current registration step
+  def bc_image(bcrumb, val, file1, file2)
+    bcrumb >= val ? file1 : file2     
   end
   
   # used to dynamic add fields to a given form

@@ -1,6 +1,6 @@
 <%- if controller_name != 'sessions' %>
   <div class="signin-header">
-    <p>Already on TimeBarker? <%= link_to "Sign in", new_session_path(resource_name) %></p>
+    <p><%= "Already on #{get_name_or_logo}? "%><%= link_to "Sign in", new_session_path(resource_name) %></p>
   </div>
 <% end -%>
 

@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+ 
+  has_many :authentications
+  
   # Include default devise modules. Others available are:
   # :token_authenticatable,  :lockable and :timeoutable
   devise :database_authenticatable, :registerable,  #:confirmable,
@@ -11,7 +14,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model - :password_confirmation,
   attr_accessible :email, :password,  :remember_me, :username, :login, :accept_terms,
   				  :first_name, :last_name, :birth_date, :gender, :location_id,
-  				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes 
+  				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
+  				  :events_attributes 
   				  
   # cities consist of many users  				  
 #  belongs_to :city		
@@ -27,7 +31,7 @@ class User < ActiveRecord::Base
                     :length   => { :maximum => 30 },
           			:format => { :with => name_regex }
   validates :username, :uniqueness => true,
-          			:length => { :within => 6..12 },
+          			:length => { :within => 6..30 },
           			:format => { :with => uname_regex }
   validates :location_id, :presence => true
   validates :birth_date,  :presence => true  
@@ -52,7 +56,7 @@ class User < ActiveRecord::Base
 
   has_many :user_events
   has_many :events, :through => :user_events #, :source => 'user_id'
-
+ 
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address
   def self.find_for_authentication(conditions)

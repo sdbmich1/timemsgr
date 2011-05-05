@@ -1,10 +1,17 @@
-<%= render 'shared/bc_channel' %>
-<h1>Channels</h1>
+<% content_for :head do %>
+  <%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Register" } %>
+<% end %>
+
+<% content_for :subhead do %>
+  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 2 } %>
+<% end %>
+
+<h2 class="strong">Channels</h2>
 <p>Based on your selections we found the following channels for you.</p>
 
 <%= form_for @subscription do |f| %>
 	<%= render 'channel_lists' %>
-	<p>
-		<%= f.submit 'Continue >>' %>
-	</p>
+	<br />
+	<%= f.submit 'Continue >>', :class => "nav-right" %>
+	<br />
 <% end %>

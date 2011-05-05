@@ -1,0 +1,17 @@
+<div id="add_event">
+<center><h3><%= "#{@activity_title}"%></h3></center>
+<hr /> 
+  
+<%= form_for @event, :html => { :multipart => true } do |f| %>
+  	<div id="event_errors" style="display:none" class="error"></div>
+	<%= render :partial => 'event_info', :locals => { :f => f } %>
+	<%= render :partial => 'event_times', :locals => { :f => f } %>
+	<%= render :partial => 'event_location', :locals => { :f => f } %>
+	<%= render :partial => 'event_details', :locals => { :f => f } %>
+	<%= render :partial => 'event_contact', :locals => { :f => f } %>
+	<%= render :partial => 'event_notify', :locals => { :f => f } %>
+	<%= f.hidden_field :user_id, :value => @user.id %>
+
+	<center><%= f.submit "Save Event" %></center>
+<% end -%>
+</div>

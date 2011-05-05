@@ -1,2 +1,9 @@
-<%= render 'showtime' %>
+<!-- display form --> 
+<%= render 'form' %>
 
+<!-- display google map --> 
+<% content_for :scripts do -%>
+   	<div class="span-24 last" id="modal">  
+		<%= gmaps4rails(@json) %>
+	</div>
+<% end -%> 

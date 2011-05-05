@@ -1,3 +1,7 @@
+<% content_for :head do -%>
+   	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Sign Up" } %>
+<% end -%>
+
 <%= render :partial => "shared/checkpwd" %>
 <%= render :partial => "devise/shared/links" %>
 <h3><strong>Keep Informed.</strong></h3>
@@ -10,11 +14,11 @@
 		<p><%= f.label :username %>   <%= f.text_field :username %></p>
 		<p><%= f.label :password %><%= f.password_field :password, :class => "password" %></p>
    		<p><%= f.label :email %><%= f.text_field :email %></p>
- 		<p><%= f.label :location %><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => true %></p>
+ 		<p><%= f.label :location %><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => false %></p>
 		<p><%= f.label :gender %>			
 		<div class="login-radio">
-			<%= f.radio_button :gender, false %> Male
-			<%= f.radio_button :gender, false %> Female</div></p>
+			<%= f.radio_button :gender, "Male" %> Male
+			<%= f.radio_button :gender, "Female" %> Female</div></p>
    		<p><%= f.label :birth_date %>
     		<%= f.date_select :birth_date, :as => :date, :start_year => Date.today.year - 90,
                                 :end_year => Date.today.year - 12, 

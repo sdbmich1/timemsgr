@@ -1,29 +1,6 @@
-<%# display event time if not an observance event %>
-<div class="span-4"> 
-	<% if event.event_type != "obsrv" %> 
-    	<%= " #{event.start_date.strftime("%D")} - #{event.end_date.strftime("%D")}" %><br /> 
-	 	<%= " #{event.start_time.strftime("%I:%M %p")} - #{event.end_time.strftime("%I:%M %p")}" %>			
-	<% end %>
-</div>
-
-<div class="span-12">
-	<% if event.event_type != "obsrv" %> 
- 	 	<p><%= link_to event.title, event_path(event) %></p> 
-	<% else %>
-	<div class="span-24 last">
- 	 	<center><%= event.title %><%= " (#{event.start_date.strftime("%D")})" %></center>
-	</div>
-	<% end %>
-</div>
-
-<div class="span-4">
-	<% if event.event_type != "obsrv" %> 
- 		<p><%= link_to 'Share', event %></p>
-	<% end %>
-</div>
-
-<div class="span-4 last">
-	<% if event.event_type != "obsrv" %> 
- 		Remind
-	<% end %><br />
-</div> 
+<!-- display event time if not an observance event -->
+<% if event.event_type == "obsrv" %> 
+	<%= render :partial => 'observance_event', :locals => { :event => event } %>
+<% else %>
+	<%= render :partial => 'general_event', :locals => { :event => event } %>
+<% end %>

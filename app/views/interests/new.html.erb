@@ -1,13 +1,18 @@
-<% content_for :subhead do %>
-  <%= render 'shared/bc_interest' %>
+<!-- -->
+<% content_for :head do %>
+  <%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Register" } %>
 <% end %>
 
-<h2><strong>Select Your Interests</strong></h2>
+<% content_for :subhead do %>
+  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 1 } %>
+<% end %>
+
+<h2 class="strong">Select Your Interests</h2>
 <p>Personalize your content by selecting the topics you are interested in being kept aware of.</p>
 
 <%= form_for @interest do |f| %>
 	<%= render 'categories' %>
-	<p>
-		<%= f.submit 'Continue >>' %>
-	</p>
+	<br />
+	<%= f.submit 'Continue >>', :class => "nav-right" %>
+	<br />
 <% end %>

@@ -1,5 +1,4 @@
 body {
-	font: 14px Arial, Helvetica, sans-serif;   
 }
 
 #breadcrumb {
@@ -25,7 +24,7 @@ body {
 	float:left;
 }
 
-
+  
 .textmiddle {
 	vertical-align:middle;
 } 
@@ -59,4 +58,20 @@ body {
 
 #breadcrumb a:hover {
 	color:#35acc5;
+}
+
+#breadcrumb a:current {
+	background-position:0px 0px;
+}
+
+#breadcrumb a:hover.current {
+	background-position:0px -70px;
+}
+
+#breadcrumb a:none {
+	background-position:0px -280px;
+}
+
+#breadcrumb a:hover.none {
+	background-position:0px -350px;
 }

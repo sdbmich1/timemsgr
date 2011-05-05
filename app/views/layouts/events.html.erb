@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>	   		
-   		<%= stylesheet_link_tag 'custom', :media => 'screen' %>   
+  <head>	
+		<%= stylesheet_link_tag 'jquery.fancybox-1.3.4', :media => 'screen' %>  
+   		<%= stylesheet_link_tag 'custom', :media => 'screen' %>     		
  	  	<%= render 'shared/initialize' %>
-  		<%= stylesheet_link_tag 'layout', :media => 'screen' %>   
-  		<%= stylesheet_link_tag 'menu', :media => 'screen' %>   
-
-	  	<%= yield :head %>
+		<%= stylesheet_link_tag 'layout', :media => 'screen' %>
+  
+ 	  	<%= yield :head %>
   </head>
   <body>
 		<%= yield %>
 	  	<%= yield :left_sidebar %>
 	  	<%= yield :right_sidebar %>
-	  	<%= yield :content %>
+ 		<div class="container round landing-bg" id="landing">  
+ 	  		<div id="flash_notice" class="success" style="display:none"></div>
+ 	  		<%= yield :content %>
+			<%= yield :scripts %>
+		</div>
    		<%= render 'layouts/footer' %>
   </body>
 </html>

@@ -15,7 +15,7 @@ class AffiliationsController < ApplicationController
   
   # lookup affiliation names
   def get_items(parameters)
-	Affiliation.group("name").where(['name LIKE ?', "#{parameters[:term]}%"]).limit(10)
+	   Affiliation.select("DISTINCT(name)").where(['name LIKE ?', "#{parameters[:term]}%"]).limit(10)
   end
 
  	
@@ -24,20 +24,19 @@ class AffiliationsController < ApplicationController
   end
 
   def create
- 	#set current user
- 	@user = current_user  
+ 	  #set current user
+ 	  @user = current_user  
 
-	# set new affiliation data
+	  # set new affiliation data
     @affiliation = @user.affiliations.build(params[:affiliation])
     
-	respond_to do |format| 
+	  respond_to do |format| 
     	if @affiliation.save
       		format.html {redirect_to home_path(@user)} #, :notice => "Successfully created affiliation."
     	else
     		format.html { redirect_to new_affiliation_path(@user) }  
-#     		render :action => 'new'
     	end		
-	end
+	  end
   end
 
   def update

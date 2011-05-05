@@ -1,15 +1,30 @@
-<title><%= gettitle %></title>
-
+<%# display user menu bar %>
 <div class="menu-bkgd">
   <div class="span-24 last" id="menu">
 	<div class="span-7 titlebar menu-offset">
-		<%= gettitle %>
+		<%= get_name_or_logo %>
 	</div>
-	<div class="span-7">
-		<%= text_field_tag 'search', nil, :placeholder => 'Enter search term...' %>
-	</div>
-	<div class="span-10 last">
-		<%= render 'shared/menu_item' %>
-	</div>
+
+	<% case main_menu %>
+		<% when "Register" %>
+			<div class="span-17 last">
+				<% current_user.username %>
+ 			</div> 
+		<% when "Home" %>
+			<div class="span-17 last">
+ 				<%= link_to "Sign In",new_user_session_path, :class => "signin_button round" %>
+ 			</div> 
+		<% when "User" %>
+			<div class="span-7">
+				<%= text_field_tag 'search', nil, :placeholder => 'Enter search term...' %>
+			</div>
+			<div class="span-10 last">
+				<%= render 'shared/menu_item' %>
+			</div>
+		<% else %>
+			<div class="span-17 last">
+				<% main_menu %>
+ 			</div> 
+	<% end %>
   </div>
 </div>

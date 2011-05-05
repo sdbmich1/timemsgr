@@ -1,24 +1,4 @@
-<%= render 'getclock' %>	
- 
-	<% content_for :head do -%>
- 		<%= render :partial => 'shared/main_menu' %>
-	<% end -%>
-
-	<% content_for :left_sidebar do -%>
- 		<%= render :partial => 'user_panel' %>
-	<% end -%>
-
-	<% content_for :content do -%>
-  		<div class="container round landing-bg" id="landing">  
-        	<div class="span-24 last" id="events">  
-              <%= render 'showtime' %>
-			</div>
-			<%= render :partial => 'event_section' %>	
-		</div> 
-	<% end -%>
-   
-	<% content_for :right_sidebar do -%>
- 		<%= render :partial => 'ad_panel' %>
-	<% end -%>
- 
- 
+<!-- display form --> 
+<div id="main">
+	<%= render :partial => 'form' %>
+</div>

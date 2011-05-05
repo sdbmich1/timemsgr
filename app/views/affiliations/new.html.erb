@@ -1,5 +1,13 @@
-<%= render 'shared/bc_affiliation' %>
-<h1>Affiliations</h1><p>Entering your work and social affiliations helps 
-keep you informed of their upcoming events and activities.</p> 
+<!-- -->
+<% content_for :head do %>
+  <%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Register" } %>
+<% end %>
+
+<% content_for :subhead do %>
+  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 4 } %>
+<% end %>
+
+<h2 class="strong">Affiliations</h2><p>Entering your work and social affiliations helps 
+keep you informed of their event and activity schedules.</p> 
 
 <%= render 'form' %>

@@ -6,9 +6,9 @@ class UsersController < ApplicationController
 
 	# check for new users
   	if @user.sign_in_count <= 1	
-  		redirect_to new_interest_path # welcome_path
+      redirect_to new_interest_path # welcome_path
   	else
- 		redirect_to home_path 
+      redirect_to home_path 
     end 		
   end
   
@@ -28,12 +28,13 @@ class UsersController < ApplicationController
   end
   
   def update
-  	# get current user
- 	@user = User.find(current_user)
+    
+    # get current user
+ 	  @user = User.find(current_user)
  	
- 	debugger	
- 	#update database
-	if @user.update_attributes params[:user]
+ 	  debugger	
+ 	  #update database
+	  if @user.update_attributes params[:user]
        redirect_to home_path(@user), :notice => "User changes has been saved."
     else
        flash.now[:error] = @user.errors

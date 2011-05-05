@@ -1,16 +1,1 @@
-<title>TimeBarker</title>
-
-  <nav class="round"> 
-    <ul>
-       <% if user_signed_in? %>
-     		<li><%= link_to "Home", root_path %></li>
-    		<li><%= link_to "Sign Out", destroy_user_session_path %></li>
-       <% end %>
-    </ul>
-  </nav>
-
-  <div class="container">
-        <div id="header" class="span-24 last">
-        	<%= link_to logo, root_path %>
-        </div>
-   </div>
+<title><%= get_title %></title>

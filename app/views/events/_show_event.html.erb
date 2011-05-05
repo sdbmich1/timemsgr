@@ -1,0 +1,61 @@
+<% debugger %>
+
+ 	<p><center><h3><%= @event.title %></h3></center></p>
+	<div class="span-4">
+		<% if @event.photo_file_name.nil? %>
+			<%= image_tag "wine.png", :alt => "none", :size => "125x125" %>
+		<% else %>
+			<%= image_tag @event.photo.url(), :alt => "none", :size => "125x125" %>
+		<% end %>
+	</div>
+	<div class="span-2"><%= 'Date:' %></div>
+	<div class="span-18 last">
+		<% if @event.start_date == @event.end_date %>
+			<%= "#{@event.start_date.strftime("%A, %B %e, %Y")}" %>
+		<% else %>
+			<%= "#{@event.start_date.strftime("%D")} - #{@event.end_date.strftime("%D")}" %><br /> 
+		<% end %>
+	</div>	
+	<div class="span-2"><%= 'Time:'%></div>
+	<div class="span-18 last">
+	   <%= " #{@event.start_time.strftime("%l:%M %p")} - #{@event.end_time.strftime("%l:%M %p")}" %>
+	</div>
+
+	<div class="span-2"><%= 'Where:' %></div>
+	<div class="span-18 last"><%= @event.location %></div>	
+	<div class="span-18 last"><span class="prepend-2"><%= @event.address %></span> </div>
+		<% if !@event.city.nil? %>
+			<div class="span-18 last"><span class="prepend-2">
+				<%= "#{@event.city}, #{@event.state} #{@event.postalcode}  " %></span>
+			</div>
+		  <% if !@event.address.nil? && !@event.city.nil? %>
+			<div class="span-18"><span class="prepend-2"> <a href="#" class="events"> Map </a></span>
+		  <% end %>	
+		<% else %>
+			<br />
+		<% end %>
+	</div>
+	<% if !@event.description.nil? %>
+		<div class="span-2"><%= 'Details:' %></div>
+		<div class="span-18 last"><%= @event.description %></div>
+	<% end %>
+	<% if !@event.contact_name.nil? %>
+		<div class="span-2"><%= "Contact:" %></div>
+		<div class="span-18 last"><span class="append-2"> 
+			<%= @event.contact_name %></span></div>
+	<% end %>
+	<% if !@event.website.nil? %>
+		<div class="span-6">
+			<span class="prepend-4"><%= "Website:" %></span> </div>
+		<div class="span-18 last"><%= link_to "#{@event.website}", "#{@event.website}" %></div> 
+	<% end %>
+	<% if !@event.email.nil? %>
+		<div class="span-6">
+			<span class="prepend-4"><%= "Email:" %></span></div>
+		<div class="span-18 last"><%= @event.email %></div> 
+	<% end %>
+	<% if !@event.phone.nil? %>
+		<div class="span-6">
+			<span class="prepend-4"><%= "Phone:" %></span></div>
+		<div class="span-18 last"><%= @event.phone %></div> 
+	<% end %>

@@ -1,5 +1,6 @@
 .container {
-  width: 710px;
+  width: 710px;  
+  padding-top: 40px; 
 }
 
 body {
@@ -7,7 +8,7 @@ body {
   background: #cff;
   background: #222222;
 */  
-  background: #0C6FCB;
+  background: #C2E1EF;
 
 }
 
@@ -101,6 +102,23 @@ a.signup_button {
   padding: 10px;
 }
 
+/* Sign in button */
+
+a.signin_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  margin-left: 600px;
+  margin-top: 5px;
+  width: 50px;
+  height: 18px;
+  font-size: 10px;
+  color: #0c6fcb;
+  background: #ffffff;
+  font-weight: bold;
+}
+ 
 /* Round corners */
 
 .round {
@@ -168,4 +186,9 @@ footer nav {
   list-style: square;
 }
 
-
+.titlebar {
+  font-weight:bold;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}

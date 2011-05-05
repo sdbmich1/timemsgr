@@ -1,6 +1,5 @@
 Timemsgr::Application.routes.draw do
 
- 
 #  get "users/index"
 #  get "users/show"
 #  get "subscriptions/new"
@@ -12,8 +11,10 @@ Timemsgr::Application.routes.draw do
   
   resources :members
   resources :users 
-  resources :events, :interests, :associates, :subscriptions
-  
+  resources :events
+  resources :interests, :associates, :subscriptions
+  resources :authentications
+
   # match "affiliations/list" => "affiliations#list"
 
   resources :affiliations do
@@ -90,8 +91,11 @@ Timemsgr::Application.routes.draw do
 #  match '/friends', :to => 'users#friends'
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
+  match '/manage', :to => 'events#manage'
+#  match '/clone', :to => 'events#clone'
+#  match "events/clone/:id", :as => "clone"
+  match "/events/clone/:id", :to => "events#clone", :as => "clone"
   
-  # set up subscription routes
 #  match '/channels', :to => 'subscriptions#channels'
 # match '/subscriptions/new', :to => 'subscriptions#new'
 
@@ -106,5 +110,5 @@ Timemsgr::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+#  match ':controller(/:action(/:id(.:format)))'
 end

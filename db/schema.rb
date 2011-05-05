@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110422182926) do
+ActiveRecord::Schema.define(:version => 20110505070916) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -37,6 +37,14 @@ ActiveRecord::Schema.define(:version => 20110422182926) do
   end
 
   add_index "associates", ["user_id"], :name => "index_associates_on_user_id"
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "calendar_events", :force => true do |t|
     t.integer  "calendar_id"
@@ -129,10 +137,21 @@ ActiveRecord::Schema.define(:version => 20110422182926) do
 
   add_index "event_page_sections", ["event_type"], :name => "event_type_idx", :unique => true
 
+  create_table "event_photos", :force => true do |t|
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
   create_table "event_types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type_code"
   end
 
   create_table "events", :force => true do |t|
@@ -158,9 +177,36 @@ ActiveRecord::Schema.define(:version => 20110422182926) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "start_time_zone",    :default => "UTC"
+    t.string   "end_time_zone",      :default => "UTC"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "postalcode"
+    t.string   "other_details"
+    t.string   "overview"
+    t.string   "country"
+    t.integer  "user_id"
+    t.string   "contact_name"
+    t.string   "website"
+    t.string   "email"
+    t.string   "phone"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.boolean  "gmaps"
+    t.boolean  "family_flg"
+    t.boolean  "friends_flg"
+    t.boolean  "world_flg"
   end
 
   add_index "events", ["cversion"], :name => "index_events_on_cversion"
+  add_index "events", ["user_id"], :name => "index_events_on_user_id"
+
+  create_table "frequencies", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "interests", :force => true do |t|
     t.string   "name"
@@ -188,6 +234,16 @@ ActiveRecord::Schema.define(:version => 20110422182926) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "subcategories", :force => true do |t|
     t.integer  "category_id"

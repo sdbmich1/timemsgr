@@ -130,3 +130,11 @@ div.boolean {
 #event-list {
 	line-height: .25em;
 }
+
+.nav-right {
+  float: right;
+}
+
+.strong {
+	font-weight: bold;
+}

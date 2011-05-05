@@ -1,4 +1,4 @@
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <br /><center>New to TimeBarker? 
+  <br /><center><%= "New to #{get_name_or_logo}? "%>
   	<%= link_to "Join today!", new_registration_path(resource_name), :class => "boldlink" %></center>
 <% end -%>

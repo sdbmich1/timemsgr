@@ -43,57 +43,6 @@ body {
 	color: #000000;
 }
 
-/* Links */
-
-a {
-  color: #09c;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #069;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #069;
-}
-
-/* Navigation */
-
-nav {
-  float: right;
-}
-
-nav { 
-  background-color: white;
-  padding: 0 0.7em;
-  white-space: nowrap;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
-}
-
-nav ul li a {
-  padding: 0 5px;
-  font-weight: bold;
-}
-
-nav ul li a:visited {
-  color: #09c;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
 
 footer {
   margin-top: 10px;
@@ -111,9 +60,77 @@ footer nav {
   float: none;
 }
 
-.titlebar {
-  font-weight:bold;
-  font-size: 18px;
-  font-family:Arial, Helvetica, sans-serif;
-  color: #ffffff;
+#new-event {
+	vertical-align: middle;	
+	display:inline-block;
+ }
+
+#new-event label {
+	display:block;
+	float:left;
+	width:100px;
+	text-align:right;
+	font-weight:normal;
+    line-height:18px;
+	margin:7px 5px 0px 0px;
+}
+
+#new-event textarea {
+	padding:0px;
+	float:left;
+	width:300px;
+	height:100px;
+	}
+
+#new-event p {
+	line-height:0.55em;
+}
+
+#new-event h2 {
+	font-size:1.125em;
+	line-height:2em;
+}
+
+.event-label {
+	margin:7px 5px 0px 0px;
+}
+
+#new-event input[type='submit'] {  
+  	  font-weight: bold;
+  	  background: #0c6fcb;
+      width: 100px;
+  	  color: #ffffff;
+  	  margin-left: 105px;
+ /*    padding: 5px;
+      margin-top: 10px;  
+      margin-bottom: 10px;  
+      background:#acb4cb; color:#fff; */
+    cursor:pointer;
+    padding:5px 10px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px
+   }  
+   
+.boxed {
+  border: 1px solid gray ;
+}
+
+.event-item {
+	float: left;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+
+#question li {
+    list-style-type:none;
+    padding-top:10px;
+    padding-left:10px;
+	display:inline-block;
+	vertical-align:middle;
+	float:left;
 }

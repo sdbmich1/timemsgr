@@ -8,12 +8,14 @@
 	<% end -%>
 
 	<% content_for :content do -%>
-      	<div class="span-24 last" id="events">  
+      	<div class="span-24 last" id="event_content">  
 			<% if @form == "event_section" %>
 
 				<!-- iniitiate clock --> 
-				<%= render 'getclock' %>
-            	<%= render 'showtime' %>
+				<div id="events">
+					<%= render 'getclock' %>
+            		<%= render 'showtime' %>
+				</div>
 			<% end %>
 			<div id="event_form"><%= render :partial => @form %></div> 	
 		</div>

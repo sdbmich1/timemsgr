@@ -4,7 +4,7 @@
 
 <% @events.each do |event| %>
 	<div class="span-4"> 
-   		<%= " #{event.start_date.strftime("%D")} - #{event.end_date.strftime("%D")}" %><br /> 
+		<%= get_start_date(event.start_date, event.end_date, "List") %><br />
  		<%= " #{event.start_time.strftime("%l:%M %p")} - #{event.end_time.strftime("%l:%M %p")}" %>			
 	</div>
 	<div class="span-2" id="new-event">

@@ -45,15 +45,34 @@ var dateFormat = "mm/dd/yy";
 
     }                       
   }); 
+  
+ // toggle divs for adding type of event	
+ $(":radio[name='activity_type']").change(function(){
+  var newVal = $(":radio[name='activity_type']:checked").val(); 
+  var url = '/get_drop_down_options?radio_val=' + newVal;
+  
+//  $("#event_event_type option").remove();
+   $.get(url, function(data) {
+	$("#eventtype").html(data);
+   });
+   
+   if (newVal == "Activity") {
+     	$("#life_event").hide();
+     }
+   else {
+     	$("#life_event").show("slow");
+     }
+     
+  });
+
+	// toggle google map
+	$('.showmap').click(function() {
+		$('#contentbox').toggle(400);
+		return false;
+	});
 
 });
-
-$("#question :radio[name=question_1]").change(function() {
-    $("div.show_answer").hide();
-    $("#q1_" + $(this).val()).show(100);
-});​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-
-
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 // remove_fields:  Used to delete fields from a given form
 function remove_fields(link) {  
         $(link).prev("input[type=hidden]").val("1");  
@@ -67,7 +86,10 @@ function add_fields(link, association, content) {
         $(link).before(content.replace(regexp, new_id));  
 }  
 
-
+function updateEvents() {  
+      var num_days = $('#select-date').attr('data-numdays');  
+      $.getScript('/events.js?end_date=' + num_days );  
+}  
         
 // add fancy box
 $(document).ready(function() {
@@ -107,9 +129,9 @@ $(document).ready(function() {
 				'transitionOut'	:	'elastic'
            });
 	  });
-
-   
+  
 	$('.show_event').bind('ajax:success', function() {
 		$("#modalGroup").trigger('click');
 	});
-  });
+
+ });

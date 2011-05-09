@@ -4,12 +4,17 @@
   
 <%= form_for @event, :html => { :multipart => true } do |f| %>
   	<div id="event_errors" style="display:none" class="error"></div>
+
+	<%= render :partial => 'event_type', :locals => { :event_type => chk_activity_type(@event), :f => f } %>
 	<%= render :partial => 'event_info', :locals => { :f => f } %>
 	<%= render :partial => 'event_times', :locals => { :f => f } %>
 	<%= render :partial => 'event_location', :locals => { :f => f } %>
 	<%= render :partial => 'event_details', :locals => { :f => f } %>
 	<%= render :partial => 'event_contact', :locals => { :f => f } %>
 	<%= render :partial => 'event_notify', :locals => { :f => f } %>
+	<div id="life_event" style="display:none;">
+		<%= render :partial => 'event_show', :locals => { :f => f } %>
+	</div>	
 	<%= f.hidden_field :user_id, :value => @user.id %>
 
 	<center><%= f.submit "Save Event" %></center>

@@ -10,8 +10,10 @@ Timemsgr::Application.routes.draw do
   devise_for :users
   
   resources :members
-  resources :users 
-  resources :events
+  resources :users
+   
+  resources :events 
+  
   resources :interests, :associates, :subscriptions
   resources :authentications
 
@@ -92,9 +94,11 @@ Timemsgr::Application.routes.draw do
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
   match '/manage', :to => 'events#manage'
+  match '/images' => 'public/images'
 #  match '/clone', :to => 'events#clone'
 #  match "events/clone/:id", :as => "clone"
   match "/events/clone/:id", :to => "events#clone", :as => "clone"
+  match "/get_drop_down_options", :to => "events#get_drop_down_options"
   
 #  match '/channels', :to => 'subscriptions#channels'
 # match '/subscriptions/new', :to => 'subscriptions#new'

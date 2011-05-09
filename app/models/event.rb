@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
 				:end_time, :frequency, :event_type, :start_time_zone, :end_time_zone,
 				:address, :city, :state, :postalcode, :country, :overview, :description, :location, 
 				:photo, :user_id, :contact_name, :website, :phone, :email, :longitude, :latitude,
-				:other_details, :gmaps
+				:other_details, :gmaps, :activity_type
 	
 	has_many :calendar_events
 	has_many :calendars, :through => :calendar_events

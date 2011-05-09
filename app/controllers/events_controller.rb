@@ -11,6 +11,9 @@ class EventsController < ApplicationController
     # get list of events 
     @events = Event.active.is_visible?.current(Time.now, Time.now+21.days) 
 
+    # create new event
+    @event = Event.new 
+ 
     # get list of sections for displaying events
     @sections = EventPageSection.all
  
@@ -33,43 +36,42 @@ class EventsController < ApplicationController
 	end
 	
 	def manage
-	  # get event data
-	  @events = Event.owned(@user.id)
-	  
-	  # set form type
-	  @form = 'event_list'
+		  
+	  # list user-specific events
+    redirect_to home_path(@events, {:param_1 => 'manage'})
 	end
 	
 	def index
  	
-    # load event data
-    load_event
-    
     # set form type
-	 	@form = "event_section"
+	 	@form = "event_section" 
+	 	
+	 	# list all or user-specific events 
+    if !params[:param_1].nil? 
+      if params[:param_1] == "manage"
+        # get user event data
+        @events = Event.owned(@user.id)
+        
+        # set form type
+        @form = 'event_list'
+      end
+    else
+      debugger
+      if !params[:numdays].nil? 
+        @events = Event.active.is_visible?.current(Time.now, Time.now+params[:numdays].to_i) 
+     end
+    end
 	 	
 #		respond_with(@events)	
 	end
 	
 	def clone
-	  
-	  # get event data
-    @event = Event.find(params[:id]).clone
+	     
+    # get id
+    @id = params[:id]
     
-    # reset date/time fields
-    @event.created_at = nil
-    @event.updated_at = nil
-    @event.start_date = nil
-    @event.end_date = nil
-    @event.start_time = nil
-    @event.end_time = nil
-    
-    # set form type
-    @form = "add_event" 
-    
-    # set page title
-    @activity_title = 'New Activity'  
-    
+    # display event
+    redirect_to new_event_path(@event, {:param_1 => 'clone', :param_2 => @id})
 	end
 	
 	def edit
@@ -80,6 +82,12 @@ class EventsController < ApplicationController
 	  # set form type
     @form = "add_event"	
     
+    # get dropdown options
+    @options = get_options(@event.activity_type)  
+    
+    # get event type
+    @event_type = @event.event_type  
+   
     # set page title
     @activity_title = 'Edit Activity'
     
@@ -97,9 +105,7 @@ class EventsController < ApplicationController
     if !params[:event].empty?
       chk_params(params[:event])
     end
-       
-    debugger
-    
+           
     if @event.update_attributes(params[:event])  
        redirect_to home_path, :notice  => "Successfully updated event."
     else
@@ -109,15 +115,16 @@ class EventsController < ApplicationController
 	end
 	
 	def new
-     
-    # create new event
-    @event = Event.new
- 		
-		# set form type
-	  @form = "add_event"
-	  
-	  # set page title
-    @activity_title = 'Add Activity'
+     			  
+	  # create new event or clone
+	  if !params[:param_1].nil? 
+	    if params[:param_1] == "clone"
+	       set_clone(params[:param_2])
+	    end
+	  end
+
+    # load initial variables
+    load_vars
 	end
 	
 	def create
@@ -127,13 +134,21 @@ class EventsController < ApplicationController
      
     # set new event data
     @event = Event.new(params[:event]) #@user.events.build
-   
+    
+    @event.activity_type = params[:activity_type]
+    @event.event_type = params[:event_type]
+    
+    debugger
+      
     respond_to do |format| 
       if @event.update_attributes params[:event]
-          format.html { redirect_to home_path(@user), :notice => "Successfully created event." } #
+          format.html { redirect_to home_path, :notice => "Successfully created event." } #
       else
+          load_vars
+          
+          debugger
           flash.now[:error] = @event.errors
-          format.html { render :action => :new  }  
+          format.html { render :action => :new }  
       end   
     end		
 	end
@@ -149,8 +164,15 @@ class EventsController < ApplicationController
       respond_with(@events, :location => manage_url)
     else
       flash.now[:error] = @event.errors
-      render :action => :manage 
+      render :action => :index 
     end
+  end
+  
+  def get_drop_down_options
+    val = params[:radio_val]
+ 
+    # get dropdown options 
+    render :partial => "typelist", :locals => { :typelist => get_options(val) }
   end
 	
 	protected
@@ -159,8 +181,19 @@ class EventsController < ApplicationController
     @new_time = old_time.strftime("%l:%M %P")
   end
   
+  def load_vars
+    
+    # set form type
+    @form = "add_event"    
+    
+    # get dropdown options
+    @options = get_options('Activity')    
+
+    # set page title
+    @activity_title = 'Add Activity'   
+  end
+  
 	def chk_params(item)
-	  debugger
 	  item[:start_date] = parse_date(item[:start_date])  
     item[:end_date] = parse_date(item[:end_date])
 	end
@@ -170,6 +203,16 @@ class EventsController < ApplicationController
       @new_dt = Date.parse(sdate.last + '-' + sdate.first + '-' + sdate.second)    
   end     
   
+  def get_options(val)
+    val ||= 'Activity'
+    
+    if val == 'Activity'
+      options = EventType.all #.collect{|x| "'#{x.Code}', '#{x.Description}'"} 
+    else
+      options = LifeEventType.all #.collect{|x| "'#{x.Code}', '#{x.Description}'"}      
+    end
+  end
+  
   def reset_dates
     params[:event] ||= {}
     
@@ -177,5 +220,21 @@ class EventsController < ApplicationController
       chk_params(params[:event])
     end
   end
-	
+  
+  def set_clone(id)
+ 
+    # clone event   
+    @event = Event.find(id).clone   
+    
+    # set event type   
+    @event_type = @event.event_type
+    
+    # reset date/time fields
+    @event.created_at = nil
+    @event.updated_at = nil
+    @event.start_date = nil
+    @event.end_date = nil
+    @event.start_time = nil
+    @event.end_time = nil
+  end	
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110505070916) do
+ActiveRecord::Schema.define(:version => 20110508185939) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -148,10 +148,10 @@ ActiveRecord::Schema.define(:version => 20110505070916) do
   end
 
   create_table "event_types", :force => true do |t|
-    t.string   "name"
+    t.string   "Description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type_code"
+    t.string   "Code"
   end
 
   create_table "events", :force => true do |t|
@@ -197,6 +197,7 @@ ActiveRecord::Schema.define(:version => 20110505070916) do
     t.boolean  "family_flg"
     t.boolean  "friends_flg"
     t.boolean  "world_flg"
+    t.string   "activity_type"
   end
 
   add_index "events", ["cversion"], :name => "index_events_on_cversion"
@@ -226,6 +227,19 @@ ActiveRecord::Schema.define(:version => 20110505070916) do
 
   add_index "interests_users", ["user_id", "interest_id"], :name => "int_user_index", :unique => true
 
+  create_table "lifeeventtype", :primary_key => "ID", :force => true do |t|
+    t.string   "Code"
+    t.string   "Description"
+    t.string   "status"
+    t.float    "sortkey"
+    t.string   "hide"
+    t.datetime "CreateDateTime"
+    t.datetime "LastModifyDateTime"
+    t.string   "LastModifyBy"
+  end
+
+  add_index "lifeeventtype", ["Code"], :name => "code_idx"
+
   create_table "locations", :force => true do |t|
     t.string   "city"
     t.string   "state"
@@ -244,6 +258,18 @@ ActiveRecord::Schema.define(:version => 20110505070916) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "statecode", :id => false, :force => true do |t|
+    t.float  "ID"
+    t.string "StateAbbr"
+    t.string "State"
+    t.float  "SortKey"
+    t.string "hide"
+    t.string "status"
+    t.string "CreateDateTime"
+    t.string "LastModifyDateTime"
+    t.string "LastModifyBy"
+  end
 
   create_table "subcategories", :force => true do |t|
     t.integer  "category_id"

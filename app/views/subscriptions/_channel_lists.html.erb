@@ -1,6 +1,5 @@
 <% @channels.each do |channel| %>
 	  <div>
- 		<%= check_box_tag "user[channel_ids][]", channel.id, @selected_ids.include?(channel) %>
-  		<%= label_tag "user[channel_ids][]", "#{channel.title} - #{channel.id}", :for => "user[channel_ids][]" %>
+ 		<%= check_box_tag "user[channel_ids][]", channel.id, true %><%= channel.name %>
 	  </div>	  
 <% end %>

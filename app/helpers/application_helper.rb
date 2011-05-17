@@ -2,7 +2,7 @@ module ApplicationHelper
  
   # returns logo or name
   def get_name_or_logo
-    @name = "Kitster"
+    @name = "TimeYield"
   end
   
   # Return a title on a per-page basis.

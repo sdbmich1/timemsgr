@@ -6,12 +6,14 @@
   <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 2 } %>
 <% end %>
 
-<h2 class="strong">Channels</h2>
-<p>Based on your selections we found the following channels for you.</p>
+<% content_for :content do %>
+	<h3 class="strong">Select Your Channels</h3>
+	<p>Based on your selections we found the following channels for you.</p>
 
-<%= form_for @subscription do |f| %>
-	<%= render 'channel_lists' %>
-	<br />
-	<%= f.submit 'Continue >>', :class => "nav-right" %>
-	<br />
+	<%= form_for @subscription do |f| %>
+		<%= render 'channel_lists' %>
+		<br />
+		<%= f.submit 'Continue >>', :class => "nav-right" %>
+		<br />
+	<% end %>
 <% end %>

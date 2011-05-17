@@ -15,10 +15,10 @@ class SubscriptionsController < ApplicationController
   	@subscription = Subscription.new
   	
   	# check channel ids
-	@selected_ids = @user.channel_ids
+	  @selected_ids = @user.channel_ids
 	
-	# get channels for user based on location
-	@channels = Channel.uniquelist.active.local(@loc_id).intlist(@user.interest_ids)
+	  # get channels for user based on location
+	  @channels = Channel.active.unhidden.local(@loc_id).intlist(@user.interest_ids)
 	
 #	respond_with(@subscription)
   end  
@@ -32,7 +32,7 @@ class SubscriptionsController < ApplicationController
   end
   
   def create
-  	set_channels('channel_ids')
+  	set_channels('channel_ids', 'index')
   end
   
   def edit

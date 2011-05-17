@@ -4,10 +4,13 @@ class Interest < ActiveRecord::Base
 	
 	has_many :channel_interests
 	has_many :channels, :through => :channel_interests, 
-				:conditions => { :channel_status => 'active'}
+				:conditions => { :status => 'active'}
 	
 	has_attached_file :photo, :styles => { :small => "25x25>" }  
 
+  scope :active, :conditions => { :status => 'active' }
+  scope :unhidden, :conditions => { :hide => 'no' }
+
 	# sort ascending	
-	default_scope :order => 'name ASC'
+	default_scope :order => 'sortkey ASC'
 end

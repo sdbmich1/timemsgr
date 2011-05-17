@@ -14,7 +14,8 @@
 	  	<%= yield :right_sidebar %>
  		<div class="container round landing-bg" id="landing">  
  	  		<div id="flash_notice" class="success" style="display:none"></div>
- 	  		<%= yield :content %>
+			<%= render "shared/ajaxload" %> 
+	  		<%= yield :content %>
 			<%= yield :scripts %>
 		</div>
    		<%= render 'layouts/footer' %>

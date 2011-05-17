@@ -2,14 +2,16 @@ class AffiliationsController < ApplicationController
   before_filter :authenticate_user!	
   
   # add autocomplete on affiliation name 
-  autocomplete :affiliation, :name
+  autocomplete :organization, :name
   
   def new
   	#set current user
   	@user = current_user  
   		
   	# initialize model
-    @user.affiliations.build 
+  	5.times do
+  	  @user.affiliations.build 
+  	end
 
   end
   
@@ -27,16 +29,17 @@ class AffiliationsController < ApplicationController
  	  #set current user
  	  @user = current_user  
 
+    debugger
 	  # set new affiliation data
     @affiliation = @user.affiliations.build(params[:affiliation])
     
-	  respond_to do |format| 
-    	if @affiliation.save
-      		format.html {redirect_to home_path(@user)} #, :notice => "Successfully created affiliation."
-    	else
-    		format.html { redirect_to new_affiliation_path(@user) }  
-    	end		
-	  end
+#	  respond_to do |format| 
+ #   	if @affiliation.save
+ #     		format.html {redirect_to home_path(@user)} #, :notice => "Successfully created affiliation."
+ #   	else
+ #   		format.html { redirect_to new_affiliation_path(@user) }  
+ #   	end		
+#	  end
   end
 
   def update

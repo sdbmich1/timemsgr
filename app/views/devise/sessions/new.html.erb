@@ -2,10 +2,12 @@
    	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Sign In" } %>
 <% end -%>
 
-<%= render :partial => "devise/shared/forgot" %>
-<h3><strong><%= "Sign in to #{get_name_or_logo} "%></strong></h3>
-<br />
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+<% content_for :content do -%>
+  <%= render :partial => "devise/shared/forgot" %>
+  <h3><strong><%= "Sign in to #{get_name_or_logo} "%></strong></h3>
+  <br />
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<div id="newreg" class="sign-in-label">
 		<p><%= f.label "Username or email" %></p>
 		<p><%= f.text_field :login, :size => 40 %></p> 		
@@ -18,6 +20,7 @@
     		<% end -%>
    		<%= f.submit 'Sign In'%> 
     </div>
-<% end %>
+  <% end %>
 
-<%= render :partial => "devise/shared/signup" %>
+  <%= render :partial => "devise/shared/signup" %>
+<% end -%>

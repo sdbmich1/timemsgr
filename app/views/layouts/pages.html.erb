@@ -8,12 +8,9 @@
   <%= yield :head %>		
 </head>
 	<body>
-		<div class="container">
-	   		<section class="round">
-				<%= yield %>
-          		<%= yield :content %>
-       		</section>
+		<div class="span-24 last">
+      		<%= yield :content %>
        		<%= render 'layouts/footer' %>
-       	</div>
-	</body>
+		</div>
+ 	</body>
 </html>

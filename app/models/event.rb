@@ -61,6 +61,14 @@ class Event < ActiveRecord::Base
     def prevent_geocoding
       address.blank? || (!latitude.blank? && !longitude.blank?) 
     end
+    
+    define_index do
+      indexes :title, :sortable => true
+      indexes :event_name, :sortable => true
+      indexes :end_date, :sortable => true
+   
+      has :id, :event_type
+     end
       
   protected
   

@@ -7,8 +7,8 @@
 
 	<% case main_menu %>
 		<% when "Register" %>
-			<div class="span-17 last">
-				<% current_user.username %>
+			<div class="span-17 last welcomebar">
+				<span><%= "Welcome to #{get_name_or_logo} #{current_user.username}!" %></span> 
  			</div> 
 		<% when "Home" %>
 			<div class="span-17 last">

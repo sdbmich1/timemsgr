@@ -39,7 +39,7 @@
   white-space: nowrap;
 }
 
-#menu ul li a:hover { background: #0c6fcb; }
+#menu ul li a:hover { background: #0000A0; }
 
 #menu li:hover ul {
   display: block;
@@ -53,4 +53,4 @@
 
 #menu li:hover a { background: #0c6fcb; }
 
-#menu li:hover li a:hover { background: #95A9B1; }
+#menu li:hover li a:hover { background: #0000A0; }

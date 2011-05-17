@@ -7,14 +7,17 @@
   <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 3 } %>
 <% end %>
 
-<h2 class="strong">Invite Friends</h2> 
-Enter email addresses of people to invite and share schedules with. Separate each address by a comma.<br>
+<% content_for :content do %>
 
-<%= form_for @associate do |f| %>
- 	<br /> 
-	<%= f.text_area :email, :size => "25x15" %> 
-	<br />
-    <%= f.submit 'Send Invites' %>
-	<%= f.submit 'Skip >>', :class => "nav-right" %>
-	<br />  
-<% end %>   	
+	<h2 class="strong">Invite Friends</h2> 
+	Enter email addresses of people to invite and share schedules with. Separate each address by a comma.<br>
+
+	<%= form_for @associate do |f| %>
+ 		<br /> 
+		<%= f.text_area :email, :size => "40x6" %> 
+		<br />
+    	<%= f.submit 'Send Invites' %>
+		<%= f.submit 'Skip >>', :class => "nav-right" %>
+		<br />  
+	<% end %> 
+<% end %>  	

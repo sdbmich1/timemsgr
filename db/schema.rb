@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110508185939) do
+ActiveRecord::Schema.define(:version => 20110516211536) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.string   "affiliation_type"
   end
 
+  add_index "affiliations", ["user_id", "name"], :name => "index_affiliations_on_user_id_and_name", :unique => true
   add_index "affiliations", ["user_id"], :name => "index_affiliations_on_user_id"
 
   create_table "associates", :force => true do |t|
@@ -84,6 +85,9 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "hide"
+    t.string   "status"
+    t.integer  "sortkey"
   end
 
   create_table "channel_interests", :force => true do |t|
@@ -94,6 +98,16 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
   end
 
   add_index "channel_interests", ["channel_id", "interest_id"], :name => "index_channel_interests_on_channel_id_and_interest_id", :unique => true
+
+  create_table "channel_locations", :force => true do |t|
+    t.integer  "location_id"
+    t.integer  "channel_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "channel_locations", ["channel_id"], :name => "index_channel_locations_on_channel_id"
+  add_index "channel_locations", ["location_id"], :name => "index_channel_locations_on_location_id"
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -115,6 +129,10 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.integer  "calender_id"
     t.string   "channel_status"
     t.string   "channel_scope"
+    t.string   "hide"
+    t.string   "status"
+    t.integer  "sortkey"
+    t.string   "code"
   end
 
   add_index "channels", ["location_id"], :name => "index_channels_on_location_id"
@@ -201,6 +219,8 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
   end
 
   add_index "events", ["cversion"], :name => "index_events_on_cversion"
+  add_index "events", ["end_date"], :name => "index_events_on_end_date"
+  add_index "events", ["start_date"], :name => "index_events_on_start_date"
   add_index "events", ["user_id"], :name => "index_events_on_user_id"
 
   create_table "frequencies", :force => true do |t|
@@ -208,6 +228,30 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "host_profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "postalcode"
+    t.string   "home_phone"
+    t.string   "work_phone"
+    t.string   "cell_phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "country"
+    t.string   "company"
+    t.string   "title"
+    t.string   "hide"
+    t.string   "status"
+    t.string   "ethnicity"
+    t.string   "nationality"
+    t.string   "industry"
+  end
+
+  add_index "host_profiles", ["user_id"], :name => "index_host_profiles_on_user_id"
 
   create_table "interests", :force => true do |t|
     t.string   "name"
@@ -218,6 +262,9 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "sortkey"
+    t.string   "status"
+    t.string   "hide"
   end
 
   create_table "interests_users", :id => false, :force => true do |t|
@@ -249,6 +296,21 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.datetime "updated_at"
   end
 
+  create_table "organizations", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "org_type"
+  end
+
+  add_index "organizations", ["name"], :name => "index_organizations_on_name"
+
+  create_table "session_prefs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
     t.text     "data"
@@ -258,6 +320,16 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "settings", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "session_pref_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "settings", ["session_pref_id"], :name => "index_settings_on_session_pref_id"
+  add_index "settings", ["user_id"], :name => "index_settings_on_user_id"
 
   create_table "statecode", :id => false, :force => true do |t|
     t.float  "ID"
@@ -269,6 +341,24 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.string "CreateDateTime"
     t.string "LastModifyDateTime"
     t.string "LastModifyBy"
+  end
+
+  create_table "stdjurisdictionchannelnames", :id => false, :force => true do |t|
+    t.float    "ID"
+    t.string   "code"
+    t.string   "description"
+    t.string   "description2"
+    t.string   "interest1"
+    t.string   "interest2"
+    t.string   "interest3"
+    t.string   "interest4"
+    t.string   "interest5"
+    t.string   "status"
+    t.float    "sortkey"
+    t.string   "hide"
+    t.datetime "CreateDateTime"
+    t.datetime "LastModifyDateTime"
+    t.string   "LastModifyBy"
   end
 
   create_table "subcategories", :force => true do |t|
@@ -287,6 +377,12 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
 
   add_index "subscriptions", ["user_id", "channel_id"], :name => "index_subscriptions_on_user_id_and_channel_id", :unique => true
 
+  create_table "tempinterests", :id => false, :force => true do |t|
+    t.string "Category"
+    t.string "Interest"
+    t.float  "Sortkey"
+  end
+
   create_table "user_events", :force => true do |t|
     t.integer  "user_id"
     t.integer  "event_id"
@@ -297,6 +393,19 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
   add_index "user_events", ["event_id"], :name => "index_user_events_on_event_id"
   add_index "user_events", ["user_id", "event_id"], :name => "index_user_events_on_user_id_and_event_id", :unique => true
   add_index "user_events", ["user_id"], :name => "index_user_events_on_user_id"
+
+  create_table "user_photos", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+  end
+
+  add_index "user_photos", ["user_id"], :name => "index_user_photos_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -319,6 +428,7 @@ ActiveRecord::Schema.define(:version => 20110508185939) do
     t.string   "gender"
     t.integer  "location_id"
     t.string   "username"
+    t.string   "time_zone"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

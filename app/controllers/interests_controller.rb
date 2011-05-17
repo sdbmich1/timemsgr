@@ -20,7 +20,7 @@ class InterestsController < ApplicationController
 	
 	def create
 	  # save user interest & channel selections
-		set_channels('interest_ids')
+		set_channels('interest_ids', 'index')
 	end
 	
 	def edit

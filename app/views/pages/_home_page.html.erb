@@ -1,10 +1,17 @@
-<h1>Know what's happening</h1>
-
-    <p>Stay informed about what's going on in your area. Share, discover and track upcoming activities  
-      and events you are interested in automatically.       
-    </p>
- 
+<div class="span-12">
+	<br />
+	<span class="prepend-5">
+		<%= image_tag("clockbkgd1.jpg", :alt => get_name_or_logo, :size => "240x240") %>
+	</span>
+</div>
+<div class="span-12 last">
+	<br />
+	<h3><strong>Know what's happening</strong></h3>  
+	<span> 
+	<%= "#{get_name_or_logo}" %> brings all your schedules together online, automatically 
+	notifies you of upcoming relevant activities & saving you time and money. 
+	</span><br />  
 	<center>
  		<%= link_to "Sign Up!",new_user_registration_path, :class => "signup_button round" %>
-	</center>
-
+	</center> 
+</div>

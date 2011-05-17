@@ -6,6 +6,7 @@ Timemsgr::Application.routes.draw do
 
 #  get "sessions/new"
 #  get "member/new"
+#  get "affiliations/autocomplete"
 
   devise_for :users
   
@@ -20,7 +21,8 @@ Timemsgr::Application.routes.draw do
   # match "affiliations/list" => "affiliations#list"
 
   resources :affiliations do
-  	get :autocomplete_affiliation_name, :on => :collection
+    get :autocomplete_affiliation_name, :on => :collection
+    get :autocomplete_organization_name, :on => :collection
   end
   
 
@@ -94,9 +96,6 @@ Timemsgr::Application.routes.draw do
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
   match '/manage', :to => 'events#manage'
-  match '/images' => 'public/images'
-#  match '/clone', :to => 'events#clone'
-#  match "events/clone/:id", :as => "clone"
   match "/events/clone/:id", :to => "events#clone", :as => "clone"
   match "/get_drop_down_options", :to => "events#get_drop_down_options"
   

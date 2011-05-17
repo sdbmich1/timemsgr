@@ -42,6 +42,9 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 # add paperclip for photos
 gem 'paperclip'
 
+# add thinking sphinx
+gem 'thinking-sphinx', '2.0.3'
+
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'

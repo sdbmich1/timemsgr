@@ -7,12 +7,14 @@
   <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 1 } %>
 <% end %>
 
-<h2 class="strong">Select Your Interests</h2>
-<p>Personalize your content by selecting the topics you are interested in being kept aware of.</p>
+<% content_for :content do %>
+	<h3 class="strong">Select Your Interests</h3>
+	Personalize your content by selecting the topics you are interested in being kept aware of.
 
-<%= form_for @interest do |f| %>
-	<%= render 'categories' %>
-	<br />
-	<%= f.submit 'Continue >>', :class => "nav-right" %>
-	<br />
+	<%= form_for @interest do |f| %>
+		<%= render 'categories' %>
+		<br />
+		<%= f.submit 'Continue >>', :class => "nav-right" %>
+		<br />
+  	<% end %>
 <% end %>

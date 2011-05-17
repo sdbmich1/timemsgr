@@ -38,7 +38,7 @@ class EventsController < ApplicationController
 	def manage
 		  
 	  # list user-specific events
-    redirect_to home_path(@events, {:param_1 => 'manage'})
+    redirect_to home_path(@events, {:p1 => 'manage'})
 	end
 	
 	def index
@@ -47,8 +47,8 @@ class EventsController < ApplicationController
 	 	@form = "event_section" 
 	 	
 	 	# list all or user-specific events 
-    if !params[:param_1].nil? 
-      if params[:param_1] == "manage"
+    if !params[:p1].nil? 
+      if params[:p1] == "manage"
         # get user event data
         @events = Event.owned(@user.id)
         
@@ -71,7 +71,7 @@ class EventsController < ApplicationController
     @id = params[:id]
     
     # display event
-    redirect_to new_event_path(@event, {:param_1 => 'clone', :param_2 => @id})
+    redirect_to new_event_path(@event, {:p1 => 'clone', :p2 => @id})
 	end
 	
 	def edit
@@ -117,9 +117,9 @@ class EventsController < ApplicationController
 	def new
      			  
 	  # create new event or clone
-	  if !params[:param_1].nil? 
-	    if params[:param_1] == "clone"
-	       set_clone(params[:param_2])
+	  if !params[:p1].nil? 
+	    if params[:p1] == "clone"
+	       set_clone(params[:p2])
 	    end
 	  end
 

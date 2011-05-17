@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :load_data
+  layout "users"
+  
+  def load_data
+  	@user = current_user   	
+  end
   
   def home
-  	@user = current_user
-
+ 
 	# check for new users
   	if @user.sign_in_count <= 1	
       redirect_to new_interest_path # welcome_path
@@ -13,40 +17,39 @@ class UsersController < ApplicationController
   end
   
   def index
-  	@user = current_user
   	@title = "Welcome back " + @user.first_name
    	
    end
 
   def new
-  	@user = current_user  
-  	@title = "Welcome " + @user.first_name
+   	@title = "Welcome " + @user.first_name
 
   end
   
   def show
   end
   
-  def update
-    
-    # get current user
- 	  @user = User.find(current_user)
- 	
- 	  debugger	
- 	  #update database
-	  if @user.update_attributes params[:user]
-       redirect_to home_path(@user), :notice => "User changes has been saved."
-    else
-       flash.now[:error] = @user.errors
-       respond_to do |format|
-          format.html { render :action => :index }
-          format.js
-       end
-    end
-  end
-  
   def edit
-  	 
+    
+    debugger
+    
+    #get user & profile data
+    @user = User.includes(:host_profiles).find(params[:id])
+          
+    # determine which profile area to edit
+    @area = params[:p]
+    
+    # get session prefs
+    @prefs = SessionPref.all
+       
+    # check channel ids
+    @selected_ids = @user.session_pref_ids
+      
   end
-  
+   
+  def update
+       
+    # save user interest & channel selections
+    set_channels('session_pref_ids', 'edit')
+  end   
 end

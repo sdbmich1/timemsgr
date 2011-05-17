@@ -10,7 +10,13 @@ namespace :db do
  #	make_categories
  	
  	# add channels by location
- 	make_channels
+# 	make_channels
+
+    # add organizations  
+ #   make_orgs
+ 
+    # add channel locations
+    set_channel_locations
   end
 end  
  
@@ -45,6 +51,16 @@ def make_channels
      make_channel_interests 
 end
 
+def set_channel_locations
+  
+    Location.find_each do |f|
+      Channel.find_each do |c|
+        ChannelLocation.create!(:location_id => f.id, :channel_id => c.id)
+      end
+    end
+
+end
+
 def make_channel_interests
 	 ChannelInterest.delete_all 
 
@@ -54,5 +70,12 @@ def make_channel_interests
       	end
       end
 end
- 
+
+def make_orgs
+  @orgs = Affiliation.select("DISTINCT name, affiliation_type")
+  
+  @orgs.each do |m|
+      Organization.create!(:name => m.name, :org_type => m.affiliation_type)        
+  end
+end 
     

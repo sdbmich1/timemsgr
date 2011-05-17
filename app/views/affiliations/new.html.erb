@@ -4,10 +4,13 @@
 <% end %>
 
 <% content_for :subhead do %>
-  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 4 } %>
+  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 3 } %>
 <% end %>
 
-<h2 class="strong">Affiliations</h2><p>Entering your work and social affiliations helps 
-keep you informed of their event and activity schedules.</p> 
+<% content_for :content do %>
 
-<%= render 'form' %>
+	<h3 class="strong">Enter Your Affiliations</h3><p>Entering your work and social affiliations helps 
+	keep you informed of their upcoming events and activities.</p> 
+
+	<%= render 'form' %>
+<% end %>

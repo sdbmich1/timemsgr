@@ -1,0 +1,7 @@
+<p><h3 class="strong">View Preferences</h3></p>
+<% @prefs.each do |pref| %>
+ 	<p><%= label_tag pref.name %><div class="prefs-cbox">
+ 	<%= check_box_tag :session_pref_ids, pref.id, @user.session_prefs.include?(pref), 
+		:name => 'user[session_pref_ids][]', :class => "check_bx" -%>
+	</div></p> 
+<% end %>

@@ -1,10 +1,14 @@
 <!-- list all categories and related interests -->
 <% @category.each do |category| %>
-	<%= getlogo(category.photo_file_name) %>
-	<%= label_tag category.name %>
+	<div class="interest">
+		<%= getlogo(category.photo_file_name) %>
+		<%= label_tag category.name.titleize %>
+	</div>
 	<div>
-	  <% category.interests.each do |sub| %>
- 		<%= check_box_tag "user[interest_ids][]", sub.id, @selected_ids.include?(sub) %> <%= sub.name %>
-	  <% end %>
-	</div>	  
+		<% category.interests.active.unhidden.each do |sub| %>		
+ 			<div class="prefs-cbox">
+				<%= check_box_tag "user[interest_ids][]", sub.id, @selected_ids.include?(sub) %><%= sub.name %>			
+			</div>		
+		<% end %>
+	</div>
 <% end %>

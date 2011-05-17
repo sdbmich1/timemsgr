@@ -12,7 +12,12 @@ $('.submittable').live('change', function() {
 // add time picker
 $(document).ready(function (){ 
 
-	$('.activity_time').timepicker({
+	$('#start-time').timepicker({
+		ampm: true,
+		stepMinute: 15
+	});
+	
+	$('#end-time').timepicker({
 		ampm: true,
 		stepMinute: 15
 	});
@@ -21,7 +26,7 @@ $(document).ready(function (){
 // add date picker code and synch start & end dates
 $(document).ready(function (){ 
 
-var dateFormat = "mm/dd/yy";
+  var dateFormat = "mm/dd/yy";
 
   $('#start-date').datepicker({ 
  	  minDate:'-0d',
@@ -34,7 +39,9 @@ var dateFormat = "mm/dd/yy";
           $('#end-date').datepicker("option", 'minDate', nyd );
       }, 
       onClose: function () { $(this).focus(); } 
-  }); 
+  	}).change(function () {  
+  	 	$('#end-date').val($(this).val())
+    }); 
   
   $('#end-date').datepicker({ showOn: 'button', 
       buttonImage: '../images/calendar_icon.jpg', 
@@ -46,12 +53,13 @@ var dateFormat = "mm/dd/yy";
     }                       
   }); 
   
- // toggle divs for adding type of event	
- $(":radio[name='activity_type']").change(function(){
-  var newVal = $(":radio[name='activity_type']:checked").val(); 
-  var url = '/get_drop_down_options?radio_val=' + newVal;
+  	
+  // toggle divs for adding type of event	
+  $(":radio[name='activity_type']").change(function(){
+  	var newVal = $(":radio[name='activity_type']:checked").val(); 
+  	var url = '/get_drop_down_options?radio_val=' + newVal;
   
-//  $("#event_event_type option").remove();
+	//  $("#event_event_type option").remove();
    $.get(url, function(data) {
 	$("#eventtype").html(data);
    });
@@ -60,17 +68,26 @@ var dateFormat = "mm/dd/yy";
      	$("#life_event").hide();
      }
    else {
-     	$("#life_event").show("slow");
+     	$("#life_event").show("fast");
      }
      
   });
 
 	// toggle google map
 	$('.showmap').click(function() {
-		$('#contentbox').toggle(400);
+		$('#gmaps').show();
 		return false;
 	});
 
+});
+
+$(document).ready(function (){
+	$.ajaxStart(function(){
+    	$("#ajaxSpinnerImage").show();
+	})
+	$.ajaxStop(function(){
+    	$("#ajaxSpinnerImage").hide();
+	});
 });
 ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 // remove_fields:  Used to delete fields from a given form
@@ -88,7 +105,14 @@ function add_fields(link, association, content) {
 
 function updateEvents() {  
       var num_days = $('#select-date').attr('data-numdays');  
-      $.getScript('/events.js?end_date=' + num_days );  
+      $.getScript('/events.js?end_date=' + num_days )
+      .ajaxStart(function() {
+        $("#ajaxSpinnerImage").show();
+    })
+    .ajaxStop(function() {
+        $("#ajaxSpinnerImage").hide();
+    });
+
 }  
         
 // add fancy box

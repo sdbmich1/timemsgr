@@ -1,5 +1,5 @@
 <div class="span-4"> 	<%= get_start_date(event.start_date, event.end_date, "List") %><br /> 	<%= " #{event.start_time.strftime("%l:%M %P")} - #{event.end_time.strftime("%l:%M %P")}" %>			</div>
-<div class="span-2" id="new-event">	<%= image_tag event.photo.url(), :alt => "none", :size => "30x30" %></div>
+<div class="span-2" id="new-event">	<% if event.photo.exists? %>	<%= image_tag event.photo.url(), :alt => "none", :size => "30x30" %>	<% else %>	<%= image_tag "#{set_image(event.event_type)}", :alt => "none", :size => "30x30" %>	<% end %></div>
 <div class="span-10" id="new-event"> 	<%= link_to event.title, event %></div>
 <div class="span-4"> 	<p><%= link_to 'Share', event %></p></div>
 <div class="span-4 last"> 	Remind</div> 

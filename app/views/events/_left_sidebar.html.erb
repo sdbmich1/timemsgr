@@ -1,0 +1,4 @@
+<% content_for :left_sidebar do -%>
+	<% if @form == "add_event" %>
+		<div id="user_panel"><%= render :partial => 'photo_panel' %></div> 
+	<% else %>				<div id="user_panel"><%= render :partial => 'shared/user_panel' %></div> 	<% end %><% end -%>

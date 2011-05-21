@@ -1,8 +1,9 @@
 <h3 class="clock"><center><%= @time.strftime("%A, %B %e, %Y") %><br />
 <%= @time.strftime("%l:%M %p") %></center></h3>
+
 <%= link_to "KITS Today", :remote => true, :id => "select-date", :numdays => 21.days %>
-<%= link_to "Today Only", :remote => true, :id => "select-date", :numdays => 0.days %>
-<%= link_to "Next 7 Days", :remote => true, :id => "select-date", :numdays => 7.days %>
-<%= link_to "Next 14 Days", :remote => true, :id => "select-date", :numdays => 14.days %>
-<%= link_to "Next 30 Days", :remote => true, :id => "select-date", :numdays => 30.days %>
-<%= link_to "Next 365 Days", :remote => true, :id => "select-date", :numdays => 365.days %>
+| <%= link_to "Today Only", :remote => true, :id => "select-date", :numdays => 0.days %>
+| <%= link_to "Next 7 Days", :remote => true, :id => "select-date", :numdays => 7.days %>
+| <%= link_to "Next 14 Days", :remote => true, :id => "select-date", :numdays => 14.days %>
+| <%= link_to "Next 30 Days", :remote => true, :id => "select-date", :numdays => 30.days %>
+| <%= link_to "Next 365 Days", :remote => true, :id => "select-date", :numdays => 365.days %>

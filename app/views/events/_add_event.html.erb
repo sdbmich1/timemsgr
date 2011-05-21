@@ -1,9 +1,18 @@
 <center><h3><%= "#{@activity_title}"%></h3></center>
 <hr /> 
-  
-<%= form_for @event, :html => { :multipart => true } do |f| %>
+
+<div class="files"> 
+<%= form_for @event, :html => { :class => "upload", :multipart => true }  do |f| %>
   	<div id="event_errors" style="display:none" class="error"></div>
 	<%= render "shared/error_messages", :target => @event %>  
+
+	<div style="display:none">
+		<div id='modal'>
+			<div class="modal-title">
+			<span>Add Photo</span></div><br />
+			<p><%= label_tag "Select photo: " %><%= f.file_field :photo %></p>
+			<p><%= "(must be 1MB or less)" %></p>
+	</div></div>
 
 	<%= render :partial => 'event_type', :locals => { :event_type => chk_activity_type(@event), :f => f } %>
 	<%= render :partial => 'event_info', :locals => { :f => f } %>
@@ -19,6 +28,8 @@
 	<%= f.hidden_field :user_id, :value => @user.id %>
 
 	<div class="span-24 last" id="new-event">
-		<center"><%= f.submit "Save Event" %></center>
+		<center><%= f.submit "Save Event" %></center>
 	</div>
 <% end -%>
+
+</div>

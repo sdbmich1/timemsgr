@@ -78,7 +78,7 @@ footer nav {
 #new-event textarea {
 	padding:0px;
 	float:left;
-	width:300px;
+	width:400px;
 	height:100px;
 	}
 
@@ -156,22 +156,6 @@ footer nav {
 	float:left;
 }
 
-/* Links */
-
-a {
-  color: #09c;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #069;
-  text-decoration: underline;
-}
-
-a:visited {
-  color: #069;
-}
-
 #user_sidebar {
   padding-top: 10px;
 }
@@ -204,6 +188,8 @@ a:visited {
 
 #user_sidebar ul li a:hover { background: #C2E1EF; }
 
+#user_sidebar ul li a:active {background: #C2E1EF;}  /* selected link */
+
 .user_bkgd {
 	background: #C2E1EF;
 }
@@ -227,3 +213,19 @@ a:visited {
     -moz-border-radius:4px;
     -webkit-border-radius:4px
    }  
+
+.modal-title {
+	background-color: #0C6FCB;
+	color: #FFFFFF;
+	font-size:14px;
+	vertical-align: middle;
+	font-weight:bold;
+   	width: 100%;
+    height:28px;
+    padding:0px;
+	
+}
+
+.nav-right {
+  float: right;
+}

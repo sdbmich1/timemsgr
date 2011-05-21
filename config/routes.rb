@@ -25,7 +25,6 @@ Timemsgr::Application.routes.draw do
     get :autocomplete_organization_name, :on => :collection
   end
   
-
   # specify routes for devise user after sign-in
   namespace :user do
   	root :to => "users#home"
@@ -95,7 +94,9 @@ Timemsgr::Application.routes.draw do
 #  match '/friends', :to => 'users#friends'
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
-  match '/manage', :to => 'events#manage'
+  
+ # match "/manage" => redirect {|params| "/events/#{params[:name].pluralize}" }
+  match '/manage', :to => 'events#manage', :as => "manage"
   match "/events/clone/:id", :to => "events#clone", :as => "clone"
   match "/get_drop_down_options", :to => "events#get_drop_down_options"
   

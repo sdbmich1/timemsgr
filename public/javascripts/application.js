@@ -32,11 +32,11 @@ $(document).ready(function (){
  	  minDate:'-0d',
   	  showOn: 'button', 
       buttonImage: '../images/calendar_icon.jpg', 
-      buttonImageOnly: true, 
+      buttonImageOnly: false, 
       dateFormat:dateFormat,
       onSelect: function (dateText, inst) { 
           var nyd = $.datepicker.parseDate(dateFormat,dateText);
-          $('#end-date').datepicker("option", 'minDate', nyd );
+          $('#end-date').datepicker("option", 'minDate', nyd ).val($(this).val());
       }, 
       onClose: function () { $(this).focus(); } 
   	}).change(function () {  
@@ -45,15 +45,14 @@ $(document).ready(function (){
   
   $('#end-date').datepicker({ showOn: 'button', 
       buttonImage: '../images/calendar_icon.jpg', 
-      buttonImageOnly: true, 
+      buttonImageOnly: false, 
       onClose: function () { $(this).focus(); }, 
       dateFormat:dateFormat,
       onSelect: function(dateText, inst){
 
     }                       
   }); 
-  
-  	
+    	
   // toggle divs for adding type of event	
   $(":radio[name='activity_type']").change(function(){
   	var newVal = $(":radio[name='activity_type']:checked").val(); 
@@ -70,7 +69,7 @@ $(document).ready(function (){
    else {
      	$("#life_event").show("fast");
      }
-     
+    
   });
 
 	// toggle google map
@@ -79,15 +78,6 @@ $(document).ready(function (){
 		return false;
 	});
 
-});
-
-$(document).ready(function (){
-	$.ajaxStart(function(){
-    	$("#ajaxSpinnerImage").show();
-	})
-	$.ajaxStop(function(){
-    	$("#ajaxSpinnerImage").hide();
-	});
 });
 ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 // remove_fields:  Used to delete fields from a given form
@@ -131,12 +121,12 @@ $(document).ready(function() {
 	/* Apply fancybox to multiple items */
 	
 	$("a#modalGroup").fancybox({
-    	'width'			:   '200',
-    	'height'		: 	'200',
+    	'width'			:   '560',
+    	'height'		: 	'340',
 		'transitionIn'	:	'elastic',
 		'transitionOut'	:	'elastic',
 		'speedIn'		:	600, 
-		'speedOut'		:	400, 
+		'speedOut'		:	600, 
 		'overlayShow'	:	true
 	});	
 });
@@ -157,5 +147,5 @@ $(document).ready(function() {
 	$('.show_event').bind('ajax:success', function() {
 		$("#modalGroup").trigger('click');
 	});
-
+	
  });

@@ -38,7 +38,8 @@ class EventsController < ApplicationController
 	def manage
 		  
 	  # list user-specific events
-    redirect_to home_path(@events, {:p1 => 'manage'})
+#    redirect_to home_url(@events, {:p1 => 'manage'})
+    redirect_to :controller => 'events', :action => 'index', :p1 => 'manage'
 	end
 	
 	def index
@@ -89,7 +90,7 @@ class EventsController < ApplicationController
     @event_type = @event.event_type  
    
     # set page title
-    @activity_title = 'Edit Activity'
+    @activity_title = 'Edit Event'
     
     #reset time format
     @event.start_time = set_time_format(@event.start_time)
@@ -125,6 +126,10 @@ class EventsController < ApplicationController
 
     # load initial variables
     load_vars
+    
+    # set time zone
+    @event.start_time_zone = @user.time_zone
+    @event.end_time_zone = @user.time_zone
 	end
 	
 	def create
@@ -141,7 +146,7 @@ class EventsController < ApplicationController
     debugger
       
     respond_to do |format| 
-      if @event.update_attributes params[:event]
+      if @event.update_attributes params[:event]    
           format.html { redirect_to home_path, :notice => "Successfully created event." } #
       else
           load_vars
@@ -190,7 +195,7 @@ class EventsController < ApplicationController
     @options = get_options('Activity')    
 
     # set page title
-    @activity_title = 'Add Activity'   
+    @activity_title = 'Add Event'   
   end
   
 	def chk_params(item)

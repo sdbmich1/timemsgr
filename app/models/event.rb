@@ -14,7 +14,7 @@ class Event < ActiveRecord::Base
 	
 #	accepts_nested_attributes_for :user_events
 
-	has_attached_file :photo, :default_url => "/images/missing.png" #, :styles => { :small => "25x25>", :medium => "50x50>" }   
+	has_attached_file :photo, :default_url => "/images/missing.png" #, :styles => { :thumb => "35x35>", :medium => "100x100>" }
 	
 	validates :title, :presence => true
 	validates :event_type, :presence => true

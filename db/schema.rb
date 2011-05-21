@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516211536) do
+ActiveRecord::Schema.define(:version => 20110520075434) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -163,6 +163,7 @@ ActiveRecord::Schema.define(:version => 20110516211536) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "user_id"
   end
 
   create_table "event_types", :force => true do |t|
@@ -381,6 +382,15 @@ ActiveRecord::Schema.define(:version => 20110516211536) do
     t.string "Category"
     t.string "Interest"
     t.float  "Sortkey"
+  end
+
+  create_table "time_ranges", :force => true do |t|
+    t.string   "description"
+    t.string   "hide"
+    t.integer  "numdays"
+    t.integer  "sortkey"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "user_events", :force => true do |t|

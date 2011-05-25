@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!, :load_data
   layout "users"
   
+  # add autocomplete on affiliation name 
+  autocomplete :organization, :name
+  
   def load_data
   	@user = current_user   	
   end
@@ -31,7 +34,7 @@ class UsersController < ApplicationController
   
   def edit
     
-    debugger
+#    debugger
     
     #get user & profile data
     @user = User.includes(:host_profiles).find(params[:id])
@@ -39,17 +42,35 @@ class UsersController < ApplicationController
     # determine which profile area to edit
     @area = params[:p]
     
-    # get session prefs
-    @prefs = SessionPref.all
-       
-    # check channel ids
-    @selected_ids = @user.session_pref_ids
-      
+    case @area
+    when "Interests"
+      get_interests
+    when "Prefs"
+      # get session prefs
+      @prefs = SessionPref.all
+  
+    else
+    end
+         
   end
    
   def update
        
     # save user interest & channel selections
-    set_channels('session_pref_ids', 'edit')
+    case @area
+    when 'Prefs'
+      set_channels('session_pref_ids', 'edit')
+    when 'Interests'
+      set_channels('interest_ids', 'edit')
+    else
+      set_channels('other', 'index')
+    end
   end   
+  
+  protected
+  
+  # get category & interest data
+  def get_interests     
+     @category = Category.includes(:interests)
+  end
 end

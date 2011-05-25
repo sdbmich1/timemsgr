@@ -1,12 +1,17 @@
 class AffiliationsController < ApplicationController
-  before_filter :authenticate_user!	
+  before_filter :authenticate_user!, :load_data	
+  layout :page_layout
   
   # add autocomplete on affiliation name 
   autocomplete :organization, :name
   
-  def new
-  	#set current user
+  def load_data
+    
+    #set current user
   	@user = current_user  
+  end
+  
+  def new
   		
   	# initialize model
   	5.times do
@@ -22,14 +27,12 @@ class AffiliationsController < ApplicationController
 
  	
   def edit
-    @affiliation = Affiliation.find(params[:id])
+    @user = User.find(params[:id])
+ #   @affiliation = Affiliation.find(params[:id])
   end
 
   def create
- 	  #set current user
- 	  @user = current_user  
 
-    debugger
 	  # set new affiliation data
     @affiliation = @user.affiliations.build(params[:affiliation])
     
@@ -52,4 +55,12 @@ class AffiliationsController < ApplicationController
     end
   end
   
+  def page_layout  
+    if !params[:p].blank?  
+      "users"  
+    else  
+      "application"  
+    end  
+  end
+    
 end

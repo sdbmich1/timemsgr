@@ -1,12 +1,9 @@
 Timemsgr::Application.routes.draw do
 
-#  get "users/index"
-#  get "users/show"
-#  get "subscriptions/new"
-
-#  get "sessions/new"
-#  get "member/new"
-#  get "affiliations/autocomplete"
+  # add authentication route callback
+  match "/auth/failure", :to => "authentications#failure"
+  match '/auth/:provider', :to => 'authentications#blank'
+  match '/auth/:provider/callback', :to => 'authentications#create' 
 
   devise_for :users
   
@@ -18,7 +15,7 @@ Timemsgr::Application.routes.draw do
   resources :interests, :associates, :subscriptions
   resources :authentications
 
-  # match "affiliations/list" => "affiliations#list"
+ # match "affiliations/list" => "affiliations#list"
 
   resources :affiliations do
     get :autocomplete_affiliation_name, :on => :collection
@@ -91,13 +88,19 @@ Timemsgr::Application.routes.draw do
   match '/privacy', :to => 'pages#privacy'
   
   # set up user routes
-#  match '/friends', :to => 'users#friends'
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
   
  # match "/manage" => redirect {|params| "/events/#{params[:name].pluralize}" }
+   
+  # route custom event actions
+  match '/outlook', :to => 'events#outlook', :as => "outlook"
+  match '/gcal_import', :to => 'events#gcal_import', :as => "gcal_import"
+  match '/import', :to => 'events#import', :as => "import"
   match '/manage', :to => 'events#manage', :as => "manage"
   match "/events/clone/:id", :to => "events#clone", :as => "clone"
+  
+  # add route for dynamically changing event types
   match "/get_drop_down_options", :to => "events#get_drop_down_options"
   
 #  match '/channels', :to => 'subscriptions#channels'

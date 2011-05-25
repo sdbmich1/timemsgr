@@ -58,9 +58,9 @@ class Event < ActiveRecord::Base
       "<h3>#{title}</h3>" << "<h4>#{address}</h4>" << "#{city}, #{state}, #{postalcode}"
     end
  
-    def prevent_geocoding
-      address.blank? || (!latitude.blank? && !longitude.blank?) 
-    end
+ #   def prevent_geocoding
+ #     address.blank? || (!latitude.blank? && !longitude.blank?) 
+ #   end
     
     define_index do
       indexes :title, :sortable => true

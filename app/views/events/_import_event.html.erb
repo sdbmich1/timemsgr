@@ -1,0 +1,15 @@
+<br />
+<p><h3>Import Events</h3></p><p>Import your events from Google & Outlook.  Click on 
+a button below to begin</p>
+<a href="/auth/google_apps" class="auth_provider">  
+  <%= image_tag "google.jpg", :size => "48x48", :alt => "Google" %>Google</a> 
+<a href="/auth/open_id" class="auth_provider">  
+  <%= image_tag "google.jpg", :size => "48x48", :alt => "Google" %>OpenID</a>
+<%= form_for([@event, @user], :url => { :action => "gcal_import" }) do |f| %>
+  	<p><%= f.label :email %><%= f.text_field :email %></p>
+	<p><%= f.label :password %><%= f.password_field :password, :class => "password" %></p>
+	<%= button_to "Import", :action => "gcal_import", :disable_with => "Loading..." %>
+	<%= button_to "Outlook", :action => "outlook", :disable_with => "Loading..." %>
+<% end %>  
+
+ 

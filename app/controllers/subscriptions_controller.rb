@@ -18,7 +18,7 @@ class SubscriptionsController < ApplicationController
 	  @selected_ids = @user.channel_ids
 	
 	  # get channels for user based on location
-	  @channels = Channel.active.unhidden.local(@loc_id).intlist(@user.interest_ids)
+	  @channels = Channel.uniquelist.active.unhidden.local(@loc_id).intlist(@user.interest_ids)
 	
 #	respond_with(@subscription)
   end  

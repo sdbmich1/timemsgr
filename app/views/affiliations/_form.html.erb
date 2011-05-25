@@ -1,9 +1,8 @@
 <div class="fields">
 <%= form_for @user do |f| %>
-  <%= f.fields_for :affiliations do |builder| %>  
-    <%= render 'affiliation_fields', :f => builder %>  
-  <% end %> 
-  	<%= link_to_add_fields "Add Affiliation", f, :affiliations %> 
-    <%= f.submit 'Finish', :class => "nav-right" %>
+	<%= render "shared/error_messages", :target => @user %>  
+	<%= render :partial => 'affiliations', :locals => { :f => f } %>
+
+	<%= f.submit 'Finish', :class => "nav-right" %>
 <% end %>
 </div> 

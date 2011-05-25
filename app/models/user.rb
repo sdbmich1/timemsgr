@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   before_create :set_timezone
+  after_save :add_settings
   has_many :authentications
   
   # Include default devise modules. Others available are:
@@ -67,16 +68,36 @@ class User < ActiveRecord::Base
   has_many :settings
   has_many :session_prefs, :through => :settings 
 
- 
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address
   def self.find_for_authentication(conditions)
     login = conditions.delete(:login)
     where(conditions).where(["username = :value OR email = :value", { :value => login }]).first
   end
+  
+  # add default settings for user session preferences
+  def add_settings
+    @prefs = SessionPref.all
+    @id = self.id
+    
+    @prefs.each do |p|
+      Setting.create(:user_id => @id, :session_pref_id => p.id)
+    end
+  end
 
+  # set default time zone for new users
   def set_timezone
     locale = self.location_id
     self.time_zone = Location.where(["id = :value", { :value => locale }]).first.time_zone
   end
+  
+  # set user hash for omniauth
+  def self.create_from_hash!(hash)
+    create(:name => hash['user_info']['name'])
+  end
+  
+  def apply_omniauth(omniauth)  
+      self.email = omniauth['user_info']['email'] #if email.blank?  
+      authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
+  end  
 end

@@ -1,0 +1,4 @@
+<% @events.each do |e| %>
+	<p><%= e.title %>: <%= e.start_time %> - <%= e.end_time %> </p> 
+	<p>Details: <%= e.where %> </p>
+<% end %>

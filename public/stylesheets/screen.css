@@ -156,3 +156,7 @@ div.boolean {
  	clear:left;
 	
 }
+
+.interest label {
+	font-weight: bold;
+}

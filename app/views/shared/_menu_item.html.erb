@@ -15,6 +15,7 @@
   <li><a href="">Account</a>
     <ul>
     	<li><a href="">Privacy Settings</a></li>
+   		<li><%= link_to "Import Events", import_url %></li>
     	<li><a href="">Account Settings</a></li>
    		<li><%= link_to "Edit Profile", edit_user_path(@user, {:p => "Profile"}) %></li>
    		<li><%= link_to "Sign Out", destroy_user_session_path %></li>

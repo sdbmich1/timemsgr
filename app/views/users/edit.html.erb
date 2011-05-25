@@ -1,26 +1,2 @@
 <!-- main form -->
-<% content_for :head do -%>
-   	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "User" } %>
-<% end -%>
-
-<% content_for :subhead do -%>
-	<div class="span-24 last" id="new-event">
-		<h3 class="prepend-4"><strong><%= "#{@user.first_name} #{@user.last_name} | Edit Profile"%></strong></h3>
-	</div>
-<% end %>
-
-<% content_for :left_sidebar do -%>
-	<%= render :partial => 'nav_panel' %>
-<% end %>
-
-<% content_for :content do -%>
-  <div class="span-18 last boxed" id="user-prefs">  
-	<%= form_for setup_user(@user) do |f| %>
-  		<div class="span-18 last" id="new-event">  
-			<%= render "shared/error_messages", :target => @user %>  
-			<%= render :partial => set_area, :locals => { :f => f } %>
- 		</div>
-		<p><%= f.submit "Save Changes" %></p>
-	<% end %>
-  </div> 
-<% end %>
+<%= render "shared/edit_user_form" %>

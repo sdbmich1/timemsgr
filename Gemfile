@@ -1,12 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
+gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'mysql2'
+gem 'mysql2', '0.2.6'
 
 gem 'will_paginate', '3.0.pre2'
 gem 'devise'
@@ -44,6 +45,9 @@ gem 'paperclip'
 
 # add thinking sphinx
 gem 'thinking-sphinx', '2.0.3'
+
+# add google calendar
+gem "gcal4ruby"
 
 group :development, :test do
   gem 'capybara'

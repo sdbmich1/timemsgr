@@ -13,7 +13,8 @@ class ApplicationController < ActionController::Base
  	  @user = current_user
  	
  	  # reset if no selections are made
- 	  if select_ids != 'session_pref_ids'
+ 	  case select_ids
+ 	  when "channel_ids", "interest_ids"
       @user.attributes = {select_ids => []}.merge(params[:user] || {})
     end	
  
@@ -27,7 +28,11 @@ class ApplicationController < ActionController::Base
 		  when 'channel_ids' 
         	redirect_to new_affiliation_path
       when 'interest_ids'
+        if action_name == 'index'
      	    redirect_to new_subscription_path
+     	  else
+          redirect_to(home_path(@user))
+        end     	    
      	else
      	    redirect_to(home_path(@user))
 		  end

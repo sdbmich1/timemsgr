@@ -14,12 +14,10 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model - :password_confirmation,
   attr_accessible :email, :password,  :remember_me, :username, :login, :accept_terms,
-  				  :first_name, :last_name, :birth_date, :gender, :location_id,
+  				  :first_name, :last_name, :birth_date, :gender, :location_id, :time_zone,
   				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
   				  :events_attributes, :host_profiles_attributes, :session_pref_ids 
   				  
-  # cities consist of many users  				  
-#  belongs_to :city		
   # name format validators
   uname_regex = /^[-\w\._@]+$/i
   name_regex = 	/\A[a-z]/i

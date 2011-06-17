@@ -1,10 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!, :load_data
   layout "users"
-  
-  # add autocomplete on affiliation name 
-  autocomplete :organization, :name
-  
+   
   def load_data
   	@user = current_user   	
   end
@@ -20,9 +17,8 @@ class UsersController < ApplicationController
   end
   
   def index
-  	@title = "Welcome back " + @user.first_name
-   	
-   end
+  	@title = "Welcome back " + @user.first_name  	
+  end
 
   def new
    	@title = "Welcome " + @user.first_name

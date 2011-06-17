@@ -52,5 +52,13 @@ describe UsersController do
       response.should be_success
     end
   end
+  
+  describe "layout" do
+     it "should use user layout" do
+      controller.should_receive(:render).with(:layout => "/layouts/user")
+      controller.should_receive(:render).with(:no_args)
+      get 'index'
+    end   
+  end
 
 end

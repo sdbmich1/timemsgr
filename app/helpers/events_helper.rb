@@ -4,77 +4,69 @@ module EventsHelper
 		 @time = Time.now
 	end
 	
+	def set_panel
+	  @form == "add_event" ? 'photo_panel' : 'shared/user_panel'
+	end
+	
 	def get_nice_date(edate)  
 	  edate.nil? ? '' : edate.strftime('%m-%d-%Y') 
+	end
+	
+	def set_header(form)
+	  case form
+	  when "add_event"
+	    "Add Event"
+	  when "edit_event"
+	    @form = "add_event"
+	    'Edit Event' 
+	  when "event_list"   
+	    'Manage Events'
+	  when "show_event"
+	    'Event Details'
+	  end
+	end
+	
+	def get_image
+	  @event.photo_file_name.nil? ? "schedule1.jpg" : @event.photo.url()
+	end
+	
+	def get_event_type
+	  @event.event_type if !@event.blank?
 	end
 	
 	def chk_activity_type(event)
 	  event.nil? ? '' : event.activity_type
 	end
 	
-	def set_image(etype)
-	  case etype
-	  when "ue"
-	    fname = "prefs.png"
-	  when "te"
-      fname = "ticket1.png"	    
-	  when "remind"
-	    fname = "remind2.png"
-	  else
-	    fname = "clock1.png"
-	  end
+	def chk_start_dt(start_dt)
+	  start_dt < Date.today ? false : true
 	end
 	
+	def show_date(start_dt)  
+	  start_dt <= Date.today ? Date.today : start_dt
+	end
+	
+	# parse date ranges
 	def get_start_date(start_dt, end_dt, dtype)
-
+	  
     if start_dt == end_dt
       if start_dt == Date.today
         @date_s = "Today" 
       else
-        if dtype == "List"
-          @date_s = " #{start_dt.strftime("%D")}"
-        else
-          @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
-        end
+        dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
       end
-     else
+    else
       @date_s = "#{start_dt.strftime("%D")} - #{end_dt.strftime("%D")}" 
     end     
 	end
 	
-	def showphoto(gender)
-	  	  
-	  if gender == "Male"
-	    @photo = "headshot_male.jpg"
-	  else
-	    @photo = "headshot_female.jpg"
-	  end
+	# set blank user photo based on gender
+	def showphoto(gender)	  	  
+	  gender == "Male" ? @photo = "headshot_male.jpg" : @photo = "headshot_female.jpg"
 	end
 	
+	# check if event photo file exists
 	def eventphoto(fname)
-	  if fname.empty? 
-	     fname = "camera.jpg" 
-	  else
-	     fname
-	  end 
-	end
-	
-	def showtitle(type, title)
-	  @elist = []
-	  
-    # check if event type has any listings
-	  @events.each do |e|
-	    if e.event_type == type
-	      @elist << e
-	      break
-	    end	    
-	  end	  
-	
-	  # check if any events were found if so display section title  
-	  if !@elist.empty?
-	     @etitle = true
-	  else
-	     @etitle = false
-    end  
+	  fname.empty? ? fname = "camera.jpg" : fname
 	end
 end

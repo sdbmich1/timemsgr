@@ -38,8 +38,18 @@ a.signup_button {
   margin-top: 25px;
   width: 200px;
   color: #ffffff;
-  background: #FFD324;
+  background: #f08103;
   font-size: 150%;
   font-weight: bold;
   padding: 10px;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }

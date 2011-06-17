@@ -1,0 +1,14 @@
+<div class="span-1">
+	<span class="grphead">Observances</span>
+</div>
+<div class="span-2 slider-nav">
+	<%= image_tag "rsz_left_arrow_nav.png", :class => "prev-btn adj-left", :alt => "" %> 
+</div>
+<div class="span-19">
+	<ul class="obsrv-slider">
+		<%= render :partial => 'event', :collection => @events.select(&:observance?)  %>
+	</ul>
+</div>
+<div class="span-2 last">
+	<%= image_tag "rsz_right_arrow_nav.png", :class => "next-btn", :alt => "" %>
+</div>

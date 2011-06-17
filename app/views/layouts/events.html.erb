@@ -6,8 +6,9 @@
  	  	<%= render 'shared/initialize' %>
 		<%= stylesheet_link_tag 'layout', :media => 'screen' %>
 		<%= stylesheet_link_tag 'links', :media => 'screen' %>
-		<%= stylesheet_link_tag 'authentication', :media => 'screen' %>	
-  
+		<%= stylesheet_link_tag 'slider', :media => 'screen' %>	
+		<%= stylesheet_link_tag 'dropdown', :media => 'screen' %>
+ 	
  	  	<%= yield :head %>
   </head>
   <body>
@@ -15,8 +16,7 @@
 	  	<%= yield :left_sidebar %>
 	  	<%= yield :right_sidebar %>
  		<div class="container round landing-bg" id="landing">  
- 	  		<div id="flash_notice" class="success" style="display:none"></div>
-			<%= render "shared/ajaxload" %> 
+ 			<div id="spinner" style="display:none"></div>
 	  		<%= yield :content %>
 			<%= yield :scripts %>
 		</div>

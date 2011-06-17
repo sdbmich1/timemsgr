@@ -9,10 +9,6 @@ class Affiliation < ActiveRecord::Base
   validates :affiliation_type, :presence => true 
   
   def add_orgs
-    org = Organization.where("name = ?", self.name)
-    
-    if org.empty?
-      Organization.create!(:name => self.name, :org_type => self.affiliation_type)        
-    end
+    Organization.find_or_create_by_name(self.name, :org_type => self.affiliation_type)
   end
 end

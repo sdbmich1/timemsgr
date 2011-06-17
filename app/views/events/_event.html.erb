@@ -1,6 +1,19 @@
-<!-- display event time if not an observance event -->
-<% if event.event_type == "obsrv" %> 
-	<%= render :partial => 'observance_event', :locals => { :event => event } %>
-<% else %>
-	<%= render :partial => 'general_event', :locals => { :event => event } %>
-<% end %>
+<li>
+  <section class="round shadow">
+  	<div id="elist">
+		<div class="calendar"> 
+    		<span class="month"><%= show_date(event.start_date).strftime("%b") %></span>
+    		<span class="day"><%= show_date(event.start_date).strftime("%e") %></span>
+		</div>
+ 		<div class="slider-time"><%= "#{event.end_time.strftime("%l:%M %p")}" %></div>
+		<div class="slider-time"><%= "#{event.start_time.strftime("%l:%M %p")}" %></div>
+ 		<div class="slider-title">
+			<h1><%= link_to event.title, event, :remote => true %></h1><br />
+		</div>
+		<div class="slider-descr">
+			<%= truncate(event.description, :length => 160, :omission =>"…") %><br />
+		</div>
+		<%= render :partial => 'event_action_items', :locals => { :event => event } %>		
+	</div>
+  </section>
+</li>

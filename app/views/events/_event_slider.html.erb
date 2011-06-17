@@ -1,0 +1,17 @@
+<%= render 'event_obsrv' %>
+<hr />
+<div class="span-1">
+	<span class="grphead">Opportunities</span>
+</div>
+<div class="span-2 slider-nav">
+	<%= image_tag "rsz_left_arrow_nav.png", :class => "prev adj-left", :alt => "" %> 
+</div>
+
+<div class="span-19">
+	<div class="tmp-slider">
+		<ul class="eslide"><%= render @events %></ul>
+	</div>
+</div>
+<div class="span-2 last">
+	<%= image_tag "rsz_right_arrow_nav.png", :class => "next slider-nav", :alt => "" %>
+</div>

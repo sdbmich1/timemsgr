@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
-	attr_accessible :event_name, :title, :start_date, :end_date, :start_time,
+  before_save :set_flag
+ 	attr_accessible :event_name, :title, :start_date, :end_date, :start_time,
 				:end_time, :frequency, :event_type, :start_time_zone, :end_time_zone,
 				:address, :city, :state, :postalcode, :country, :overview, :description, :location, 
 				:photo, :user_id, :contact_name, :website, :phone, :email, :longitude, :latitude,
@@ -10,11 +11,10 @@ class Event < ActiveRecord::Base
 	
 #	belongs_to :user, :foreign_key => :user_id
 	has_many :user_events
-#	has_many :users, :through => :user_events
-	
+#	has_many :users, :through => :user_events	
 #	accepts_nested_attributes_for :user_events
 
-	has_attached_file :photo, :default_url => "/images/missing.png" #, :styles => { :thumb => "35x35>", :medium => "100x100>" }
+	has_attached_file :photo, :default_url => "/images/clock_grey.png" #, :styles => { :thumb => "35x35>", :medium => "100x100>" }
 	
 	validates :title, :presence => true
 	validates :event_type, :presence => true
@@ -41,12 +41,15 @@ class Event < ActiveRecord::Base
 	scope :posted, lambda { | post_dt |
    				  { :conditions => { :post_date.lte => post_dt }} }	  
    				  
-  scope :current, lambda { | start_dt, end_dt | where("start_date >= date(?) and end_date <= date(?)", start_dt, end_dt)}               
+  scope :upcoming, lambda { | start_dt, end_dt, sdt, edt | where("(start_date >= date(?) and end_date <= date(?)) or (start_date <= date(?) and end_date >= date(?))", start_dt, end_dt, sdt, edt)}               
+  scope :current, lambda { | start_dt, end_dt | where("start_date <= date(?) and end_date >= date(?)", start_dt, end_dt)}               
   scope :current_time, lambda { | start_tm, end_tm | where("start_time >= time(?) and end_time <= time(?)", start_tm, end_tm)}
   scope :owned, lambda { | uid |
             { :conditions => { :user_id => uid }} } 
   
-  before_save :set_flag 
+  def observance?
+    event_type == "obsrv"
+  end
   
   acts_as_gmappable 
   
@@ -65,18 +68,26 @@ class Event < ActiveRecord::Base
     define_index do
       indexes :title, :sortable => true
       indexes :event_name, :sortable => true
+      indexes :start_date, :sortable => true
       indexes :end_date, :sortable => true
-   
+    
       has :id, :event_type
-     end
+    end
       
   protected
+  
+    def initialize(tz)
+      super
+      self.start_time_zone ||= tz
+      self.end_time_zone ||= tz
+    end
   
     def set_flag
       if status.nil?
         self.status = "active" 
         self.hide = "no"
         self.cversion = "ue"
-      end
+       end
     end
+       
 end

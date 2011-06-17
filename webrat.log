@@ -1,0 +1,25 @@
+# Logfile created on 2011-05-30 02:14:50 -0700 by logger.rb/25413
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"\xE2\x9C\x93", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"", "password"=>"", "email"=>"", "location_id"=>"", "gender"=>"", "birth_date(2i)"=>"", "birth_date(3i)"=>"", "birth_date(1i)"=>""}, "commit"=>"Sign Up"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_up"}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"\xE2\x9C\x93", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"", "password"=>"", "email"=>"", "location_id"=>"", "gender"=>"", "birth_date(2i)"=>"", "birth_date(3i)"=>"", "birth_date(1i)"=>""}, "commit"=>"Sign Up"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_up"}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"\xE2\x9C\x93", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"", "password"=>"", "email"=>"", "location_id"=>"", "gender"=>"", "birth_date(2i)"=>"", "birth_date(3i)"=>"", "birth_date(1i)"=>""}, "commit"=>"Sign Up"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_up"}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_in with {} and HTTP headers {}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"\xE2\x9C\x93", "user"=>{"first_name"=>"", "last_name"=>"", "username"=>"", "password"=>"", "email"=>"", "location_id"=>"", "gender"=>"", "birth_date(2i)"=>"", "birth_date(3i)"=>"", "birth_date(1i)"=>""}, "commit"=>"Sign Up"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_up"}

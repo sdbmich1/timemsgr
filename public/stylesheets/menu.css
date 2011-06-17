@@ -4,6 +4,7 @@
     height:30px;
     display:inline-block;
     padding:0px;
+    color: #ffffff;
 }
 
 #menu img {
@@ -38,6 +39,19 @@
   float: left;
 }
 
+#titlebar {
+  font-weight:bold;
+  font-size: 18px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+#titlebar a { 
+	color: #ffffff; 
+	text-decoration: none;
+	}
+
+
 #menu li ul { display: none; }
 
 #menu ul li a {
@@ -51,11 +65,16 @@
   white-space: nowrap;
 }
 
-#menu ul li a:hover { background: #0000A0; }
+.menu-dropdown {
+	background:#0c6fcb url('../images/down.gif') no-repeat scroll right center;
+}
+
+#menu ul li a:hover { background: #f08103 ; }
 
 #menu li:hover ul {
   display: block;
   position: absolute;
+  z-index: 5;
 }
 
 #menu li:hover li {
@@ -65,4 +84,4 @@
 
 #menu li:hover a { background: #0c6fcb; }
 
-#menu li:hover li a:hover { background: #0000A0; }
+#menu li:hover li a:hover { background: #f08103; }

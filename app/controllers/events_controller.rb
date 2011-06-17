@@ -1,305 +1,113 @@
 class EventsController < ApplicationController
-   before_filter :authenticate_user!, :load_user, :load_event	
+   before_filter :authenticate_user!, :load_user
    respond_to :html, :xml, :js
 	
-  def load_user
-    @user = current_user
-  end
-  
-  def load_event
-    
-    # get list of events 
-    @events = Event.active.is_visible?.current(Time.now, Time.now+21.days) 
-
-    # create new event
-    @event = Event.new 
- 
-    # get list of sections for displaying events
-    @sections = EventPageSection.all
- 
-    # get current time
-    @time = Time.now
-  end
-
 	def show
-     
- 		# get event data
+    @form = 'show_event'  			
     @event = Event.find(params[:id])
-    
-    # get google map data			
- 		@json = Event.find(params[:id]).to_gmaps4rails
-
-    # set form type
-    @form = 'show_event'
-
-	#	respond_with(@event)
+ 		@json = @event.to_gmaps4rails # get google map data
+ 		respond_with(@event)
 	end
 	
-	def manage
-		  
-	  # list user-specific events
-#    redirect_to home_url(@events, {:p1 => 'manage'})
-    redirect_to :controller => 'events', :action => 'index', :p1 => 'manage'
+	# list user-specific events
+	def manage	
+    @form = 'event_list'	  
+	  respond_with(@events = Event.owned(@user.id))
 	end
 	
 	def index
- 	
-    # set form type
-	 	@form = "event_section" 
-	 	
-	 	# list all or user-specific events 
-    if !params[:p1].nil? 
-      if params[:p1] == "manage"
-        # get user event data
-        @events = Event.owned(@user.id)
-        
-        # set form type
-        @form = 'event_list'
-      end
-    else
-#      debugger
-      if !params[:numdays].nil? 
-        @events = Event.active.is_visible?.current(Time.now, Time.now+params[:numdays].to_i) 
-     end
-    end
-	 	
-#		respond_with(@events)	
-	end
+	 	@form = "event_slider"  # 'test'
+    !params[:end_date].blank? ? enddate = Time.now+params[:end_date].to_i.days : enddate = Time.now+60.days   
+    @events = Event.active.is_visible?.upcoming(Time.now, enddate, Time.now, enddate)     		
+    respond_with(@events)
+ 	end
 	
-	def clone
-	     
-    # get id
-    @id = params[:id]
-    
-    # display event
-    redirect_to new_event_path(@event, {:p1 => 'clone', :p2 => @id})
+	def clone  
+    redirect_to new_event_path(@event, {:p1 => 'clone', :p2 => params[:id]})
 	end
 	
 	def edit
-	  
-    # get event data
+    @form = "edit_event"	
     @event = Event.find(params[:id])
-	  
-	  # set form type
-    @form = "add_event"	
-    
-    # get dropdown options
-    @options = get_options(@event.activity_type)  
-    
-    # get event type
-    @event_type = @event.event_type  
-   
-    # set page title
-    @activity_title = 'Edit Event'
-    
-    #reset time format
-    @event.start_time = set_time_format(@event.start_time)
-    @event.end_time = set_time_format(@event.end_time)
+    @options = get_options(@event.activity_type) # get dropdown options 
+    respond_with(@event)
 	end
 	
 	def update
-    @event = Event.find(params[:id])
-  
-    # check dates
-    params[:event] ||= {}
-    
-    if !params[:event].empty?
-      chk_params(params[:event])
-    end
-           
-    if @event.update_attributes(params[:event])  
-       redirect_to home_path, :notice  => "Successfully updated event."
-    else
-      flash.now[:error] =  error_messages_for(@event) # @event.errors
-      render :action => 'edit'
-    end		
+	  reset_vars
+    @event = Event.find(params[:id])                 
+    flash[:notice] = "Successfully updated event." if @event.update_attributes(params[:event])       
+    respond_with(@event, :location => home_url)
 	end
 	
-	def new
-     			  
-	  # create new event or clone
-	  if !params[:p1].nil? 
-	    if params[:p1] == "clone"
-	       set_clone(params[:p2])
-	    end
-	  end
-
-    # load initial variables
+	def new  			  
+    @event = Event.new(@user.time_zone)   
+    set_clone(params[:p2]) if params[:p1] == "clone"
     load_vars
-    
-    # set time zone
-    @event.start_time_zone = @user.time_zone
-    @event.end_time_zone = @user.time_zone
+    respond_with(@event)
 	end
 	
 	def create
-        
-    # check dates
-    reset_dates 
-     
-    # set new event data
-    @event = Event.new(params[:event]) #@user.events.build
-    
-    @event.activity_type = params[:activity_type]
-    @event.event_type = params[:event_type]
-    
-    debugger
-      
-    respond_to do |format| 
-      if @event.update_attributes params[:event]    
-          format.html { redirect_to home_path, :notice => "Successfully created event." } #
-      else
-          load_vars
-          
-          debugger
-          flash.now[:error] = @event.errors
-          format.html { render :action => :new }  
-      end   
-    end		
-	end
+    reset_vars 
+    @event = Event.new(params[:event])          
+    flash[:notice] = "Successfully created event." if @event.save            
+    respond_with(@event, :location => home_url)
+ 	end
 	
 	def destroy
-    @event = Event.find(params[:id])   
-    if @event.destroy
-      flash[:notice] = "Successfully deleted event." 
-      
-      #load events
-      @events = Event.owned(@user.id)
-   
-      respond_with(@events, :location => manage_url)
-    else
-      flash.now[:error] = @event.errors
-      render :action => :index 
-    end
+    @event = Event.find(params[:id])      
+    flash[:notice] = "Successfully deleted event." if @event.destroy  
+    respond_with(@event, :location => manage_url)
   end
   
+  # get event type dropdown options  
   def get_drop_down_options
-    val = params[:radio_val]
- 
-    # get dropdown options 
-    render :partial => "typelist", :locals => { :typelist => get_options(val) }
+    render :partial => "typelist", :locals => { :typelist => get_options(params[:radio_val]) }
   end
-	
-	def import
-	  @form = "import_event"
-#	  render :partial => "form"
-	end
-	
-	# import events from google calendar for user
-	def gcal_import
-	  # initialize service
-	  gservice = GCal4Ruby::Service.new
-	  
-    # grab login parameters & authenticate
-	  @email = params[:user][:email]
-	  @pwd = params[:user][:password]
-
-    gservice.authenticate(@email, @pwd)
-    
-    # grab events
-    @events = GCal4Ruby::Event.find(gservice, "")
-	
-	  # add import events to db
-	  add_import_events
-	  
-	  # redisplay events
-	  redirect_to events_url
-	  
-	end
-	
-	def outlook
-
-    require 'win32ole'
-
-    require 'win32ole.rb'
-    outlook = WIN32OLE.new('Outlook.Application')	  
-
-    debugger	    
-	  # get MAPI namespace
-	  mapi = outlook.GetNameSpace('MAPI')
-	  	  
-	  # get default mapi calendar folder
-	  @calendar = mapi.GetDefaultFolder(9)
-	  
-	  @form = "outlook_import"
-	end
-	
+		
 	protected
-	
-	def set_time_format(old_time)
-    @new_time = old_time.strftime("%l:%M %P")
-  end
-  
-  def add_import_events
-    @events.each do |e|
-      if !e.title.blank? && e.start_time >= Time.now 
-        
-        @start = e.start_time.strftime("%I:%M%p")
-        @end = e.end_time.strftime("%I:%M%p")
-        
-        debugger
-        
-        Event.create!(:title => e.title, :event_type => 'ue', :start_date => e.start_time, 
-          :start_time => @start, :state => 'IL', :end_date => e.end_time, :end_time => @end, :address => e.where,
-          :location => e.where, :user_id => @user.id)
-      end
-    end
-  end
-  
-  def load_vars
-    
-    # set form type
-    @form = "add_event"    
-    
-    # get dropdown options
-    @options = get_options('Activity')    
 
-    # set page title
-    @activity_title = 'Add Event'   
+  def load_user
+    @user = current_user
+  end
+	  
+  def load_vars
+    @form = "add_event"    
+    @event.start_time_zone = @user.time_zone
+    @event.end_time_zone = @user.time_zone 
+    @options = get_options('Activity') # get dropdown options
   end
   
 	def chk_params(item)
 	  item[:start_date] = parse_date(item[:start_date])  
     item[:end_date] = parse_date(item[:end_date])
+    item[:event_type] = params[:event_type] if !params[:event_type].blank?
+    item[:activity_type] = params[:activity_type] if !params[:activity_type].blank?
 	end
 	
 	def parse_date(old_dt)
-      sdate = old_dt.to_s.split('/')
-      @new_dt = Date.parse(sdate.last + '-' + sdate.first + '-' + sdate.second)    
+    sdate = old_dt.to_s.split('/')
+    @new_dt = Date.parse(sdate.last + '-' + sdate.first + '-' + sdate.second)    
   end     
   
-  def get_options(val)
-    val ||= 'Activity'
-    
-    if val == 'Activity'
-      options = EventType.all #.collect{|x| "'#{x.Code}', '#{x.Description}'"} 
-    else
-      options = LifeEventType.all #.collect{|x| "'#{x.Code}', '#{x.Description}'"}      
-    end
+  def get_options(val='Activity')
+    val == 'Activity' ? options = EventType.all : options = LifeEventType.all       
   end
   
-  def reset_dates
-    params[:event] ||= {}
-    
-    if !params[:event].empty?
-      chk_params(params[:event])
-    end
+  def reset_vars
+    @form = "add_event"    
+    params[:event] ||= {}       
+    chk_params(params[:event]) if !params[:event].empty?
   end
   
+  # clone event   
   def set_clone(id)
- 
-    # clone event   
-    @event = Event.find(id).clone   
-    
-    # set event type   
-    @event_type = @event.event_type
+    @event = Event.find(id).clone      
     
     # reset date/time fields
     @event.created_at = nil
     @event.updated_at = nil
     @event.start_date = nil
     @event.end_date = nil
-    @event.start_time = nil
-    @event.end_time = nil
   end	
 end

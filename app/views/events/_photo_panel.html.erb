@@ -2,10 +2,10 @@
 	 <div class="box">   
      	<center> 
 		 	<% if @event.photo.exists? then %>
-				<%= image_tag @event.photo.url(), :id => "my_image", :size => "100x100" %>
+				<%= image_tag @event.photo.url(), :id => "my_image", :size => "100x100" %><br />
  				<%= link_to "Change Photo", "#modal", :id => "modalGroup" %>
 			<% else %>
-				<%= image_tag("camera.png", :alt => "photo", :size => "60x60", :id => "my_image") %> 
+				<%= image_tag("camera.png", :alt => "photo", :size => "60x60", :id => "my_image") %><br /> 
 				<%= link_to "Add Photo", "#modal", :id => "modalGroup" %>
       		<% end %>
 			<br />

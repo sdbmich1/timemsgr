@@ -1,13 +1,14 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 jQuery.ajaxSetup({  
-    'beforeSend': function (xhr) {xhr.setRequestHeader("Accept", "text/javascript")}  
+    'beforeSend': function (xhr) {xhr.setRequestHeader("Accept", "text/javascript");
+    	$('#spinner').show()
+    },
+  	'complete': function(){
+     $('#spinner').hide()
+  },
+  	'success': function() {}  
 }); 
-
-$('.submittable').live('change', function() {
-  $(this).parents('form:first').submit();
-  return false;
-});
 
 // add time picker
 $(document).ready(function (){ 
@@ -30,9 +31,6 @@ $(document).ready(function (){
 
   $('#start-date').datepicker({ 
  	  minDate:'-0d',
-  	  showOn: 'button', 
-      buttonImage: '../images/calendar_icon.jpg', 
-      buttonImageOnly: false, 
       dateFormat:dateFormat,
       onSelect: function (dateText, inst) { 
           var nyd = $.datepicker.parseDate(dateFormat,dateText);
@@ -43,9 +41,7 @@ $(document).ready(function (){
   	 	$('#end-date').val($(this).val())
     }); 
   
-  $('#end-date').datepicker({ showOn: 'button', 
-      buttonImage: '../images/calendar_icon.jpg', 
-      buttonImageOnly: false, 
+  $('#end-date').datepicker({ 
       onClose: function () { $(this).focus(); }, 
       dateFormat:dateFormat,
       onSelect: function(dateText, inst){
@@ -60,7 +56,7 @@ $(document).ready(function (){
   
 	//  $("#event_event_type option").remove();
    $.get(url, function(data) {
-	$("#eventtype").html(data);
+		$("#eventtype").html(data);
    });
    
    if (newVal == "Activity") {
@@ -74,13 +70,21 @@ $(document).ready(function (){
 
 	// toggle google map
 	$('.showmap').click(function() {
-		$('#gmaps').show();
+		$('#gmaps').toggle();
 		return false;
+	});
+	
+	// Used to change list of events to display by date range
+	$('.select-date').click(function() { 		
+		alert(this.getAttribute("data-numdays"));
+		var enddate = this.getAttribute("data-numdays");
+		$.getScript('/events.js?end_date=' + enddate);
+		return false;  
 	});
 
 });
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-// remove_fields:  Used to delete fields from a given form
+
+​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​// remove_fields:  Used to delete fields from a given form
 function remove_fields(link) {  
         $(link).prev("input[type=hidden]").val("1");  
         $(link).closest(".fields").hide();  
@@ -91,18 +95,6 @@ function add_fields(link, association, content) {
         var new_id = new Date().getTime();  
         var regexp = new RegExp("new_" + association, "g");  
         $(link).before(content.replace(regexp, new_id));  
-}  
-
-function updateEvents() {  
-      var num_days = $('#select-date').attr('data-numdays');  
-      $.getScript('/events.js?end_date=' + num_days )
-      .ajaxStart(function() {
-        $("#ajaxSpinnerImage").show();
-    })
-    .ajaxStop(function() {
-        $("#ajaxSpinnerImage").hide();
-    });
-
 }  
         
 // add fancy box
@@ -129,6 +121,7 @@ $(document).ready(function() {
 		'speedOut'		:	600, 
 		'overlayShow'	:	true
 	});	
+	
 });
 
 $(document).ready(function() {

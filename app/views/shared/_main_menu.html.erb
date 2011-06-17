@@ -1,8 +1,8 @@
 <%# display user menu bar %>
 <div class="menu-bkgd">
   <div class="span-24 last" id="menu">
-	<div class="span-7 titlebar menu-offset">
-		<%= get_name_or_logo %>
+	<div class="span-7 menu-offset" id="titlebar">
+		<%= link_to get_name_or_logo, root_url %>
 	</div>
 
 	<% case main_menu %>
@@ -12,7 +12,7 @@
  			</div> 
 		<% when "Home" %>
 			<div class="span-17 last">
- 				<%= link_to "Sign In",new_user_session_path, :class => "signin_button round" %>
+ 				<span><%= link_to "Sign In", new_user_session_path, :class => "signin_button round" %></span> 
  			</div> 
 		<% when "User" %>
 			<div class="span-7">

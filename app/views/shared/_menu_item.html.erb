@@ -1,10 +1,10 @@
 <ul id="menu">
   <li><%= link_to "Home", home_path %></li>
-  <li><a href="">Plan</a></li>
+  <li><a href="#">Plan</a></li>
   <li><%= link_to "Add", new_event_path %></li>
-  <li><a href="">Manage</a>
+  <li><%= link_to "Manage", manage_events_url, :remote => true %>
     <ul>
-    	<li><%= link_to "Activities", manage_path %></li>
+    	<li><%= link_to "Activities", manage_events_url, :remote => true %></li>
     	<li><a href="">Appointments</a></li>
     	<li><a href="">Channels</a></li>
     	<li><a href="">Interests</a></li>
@@ -15,7 +15,7 @@
   <li><a href="">Account</a>
     <ul>
     	<li><a href="">Privacy Settings</a></li>
-   		<li><%= link_to "Import Events", import_url %></li>
+   		<li><%= link_to "Import Events", import_events_url %></li>
     	<li><a href="">Account Settings</a></li>
    		<li><%= link_to "Edit Profile", edit_user_path(@user, {:p => "Profile"}) %></li>
    		<li><%= link_to "Sign Out", destroy_user_session_path %></li>

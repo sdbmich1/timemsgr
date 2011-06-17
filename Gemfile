@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '3.0.7'
 gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
@@ -43,6 +43,9 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 # add paperclip for photos
 gem 'paperclip'
 
+# add rmagick to resize images
+#gem "rmagick", "~> 2.13.1"
+
 # add thinking sphinx
 gem 'thinking-sphinx', '2.0.3'
 
@@ -52,12 +55,13 @@ gem "gcal4ruby"
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
-  gem 'hpricot'
+  gem "hpricot", "0.8.3", :platform => :mswin
   gem 'mocha'
   gem 'ruby-debug19'
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
   gem 'faker', '0.3.1'
+  gem 'webrat'
 end
 
 group :test do

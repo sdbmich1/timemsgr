@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520075434) do
+ActiveRecord::Schema.define(:version => 20110523033342) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -217,6 +217,8 @@ ActiveRecord::Schema.define(:version => 20110520075434) do
     t.boolean  "friends_flg"
     t.boolean  "world_flg"
     t.string   "activity_type"
+    t.integer  "reminder"
+    t.string   "remind_method"
   end
 
   add_index "events", ["cversion"], :name => "index_events_on_cversion"

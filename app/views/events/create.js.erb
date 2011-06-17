@@ -3,7 +3,7 @@
   $("#flash_notice").hide(300);
  
   /*Update the html of the div event_errors with the new one*/
-  $("#event_errors").html("<%= escape_javascript(error_messages_for(@event))%>");
+  $("#event_errors").html("<%= escape_javascript((@event.errors))%>");
  
   /*Show the div event_errors*/
   $("#event_errors").show(300);
@@ -21,5 +21,5 @@
   $(":input:not(input[type=submit])").val("");
  
   /*Replace the html of the div event_lists with the updated new one*/
-  $("#event_content").html("<%= escape_javascript( render(:partial => "event_section") ) %>");
+  $("#event_content").html("<%= escape_javascript( raw render(:partial => "test") ) %>");
 <% end -%>

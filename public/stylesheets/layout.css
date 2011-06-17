@@ -20,7 +20,7 @@ body {
 }
 
 .clock {
-	padding-top: 8px;
+	padding-top: 2px;
 }
 
 .right-sidebar {
@@ -229,3 +229,5 @@ footer nav {
 .nav-right {
   float: right;
 }
+
+.edit-event { color: #cccccc; }

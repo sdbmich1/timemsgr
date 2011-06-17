@@ -1,9 +1,5 @@
-<center><h3><%= "#{@activity_title}"%></h3></center>
-<hr /> 
-
 <div class="files"> 
 <%= form_for @event, :html => { :class => "upload", :multipart => true }  do |f| %>
-  	<div id="event_errors" style="display:none" class="error"></div>
 	<%= render "shared/error_messages", :target => @event %>  
 
 	<div style="display:none">

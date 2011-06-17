@@ -35,8 +35,6 @@ section h1 {
   font-size: 200%;
 }
 
-
-
 /* Sign in button */
 
 a.signin_button {
@@ -121,13 +119,6 @@ footer nav {
   list-style: square;
 }
 
-.titlebar {
-  font-weight:bold;
-  font-size: 18px;
-  font-family:Arial, Helvetica, sans-serif;
-  color: #ffffff;
-}
-
 .welcomebar {
   font-size: 14px;
   padding-top: 4px;
@@ -136,3 +127,20 @@ footer nav {
   font-family:Arial, Helvetica, sans-serif;
   color: #ffffff;
 }
+
+#ajaxSpinnerImage {display:none;}
+
+#spinner {
+            z-index: 2000;
+            padding:6px;
+            padding-left:40px;
+            margin: 200px 0px 0px 200px;
+            background:#000000 url("../images/ajax-loader.gif") no-repeat center center;
+            width:80px;
+            height:80px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+             font-weight:bold;
+        }
+
+

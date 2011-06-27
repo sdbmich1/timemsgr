@@ -8,10 +8,10 @@
  		<div class="slider-time"><%= "#{event.end_time.strftime("%l:%M %p")}" %></div>
 		<div class="slider-time"><%= "#{event.start_time.strftime("%l:%M %p")}" %></div>
  		<div class="slider-title">
-			<h1><%= link_to event.title, event, :remote => true %></h1><br />
+			<h1><%= link_to event.title, event, :class => "show-item", :remote => true %></h1><br />
 		</div>
 		<div class="slider-descr">
-			<%= truncate(event.description, :length => 160, :omission =>"…") %><br />
+			<%= truncate(event.description, :length => 80, :omission =>"…") %><br />
 		</div>
 		<%= render :partial => 'event_action_items', :locals => { :event => event } %>		
 	</div>

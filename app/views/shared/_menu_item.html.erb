@@ -2,9 +2,9 @@
   <li><%= link_to "Home", home_path %></li>
   <li><a href="#">Plan</a></li>
   <li><%= link_to "Add", new_event_path %></li>
-  <li><%= link_to "Manage", manage_events_url, :remote => true %>
+  <li><a href="#">Manage</a>
     <ul>
-    	<li><%= link_to "Activities", manage_events_url, :remote => true %></li>
+    	<li><%= link_to "Activities", manage_events_url, :class => "manage-item", :remote => true %></li>
     	<li><a href="">Appointments</a></li>
     	<li><a href="">Channels</a></li>
     	<li><a href="">Interests</a></li>

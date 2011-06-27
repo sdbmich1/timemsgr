@@ -11,6 +11,10 @@ $(document).ready(function() {
         btnNext: ".next-btn",
         btnPrev: ".prev-btn"
     });
+    $(".sch-slider").jCarouselLite({
+        btnNext: ".sch-next-btn",
+        btnPrev: ".sch-prev-btn"
+    });
 });
 
 // add dropdown menu functionality

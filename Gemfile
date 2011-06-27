@@ -54,6 +54,7 @@ gem "gcal4ruby"
 
 group :development, :test do
   gem 'capybara'
+  gem 'spork', '~> 0.9.0.rc'
   gem 'rspec-rails'
   gem "hpricot", "0.8.3", :platform => :mswin
   gem 'mocha'
@@ -61,11 +62,11 @@ group :development, :test do
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
   gem 'faker', '0.3.1'
-  gem 'webrat'
 end
 
 group :test do
   gem 'factory_girl_rails', '1.0'
+  gem 'webrat'
 end
 
 # Use unicorn as the web server

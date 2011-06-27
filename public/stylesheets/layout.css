@@ -231,3 +231,5 @@ footer nav {
 }
 
 .edit-event { color: #cccccc; }
+
+.event-title { font-variant: small-caps; font-size: 1.75em; font-weight: bold; }

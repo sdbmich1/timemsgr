@@ -9,7 +9,9 @@ describe EventsController do
   end
 
   def mock_event(stubs={})
-    @mock_event ||= mock_model(Event, stubs).as_null_object
+    (@mock_event ||= mock_model(Event, stubs).as_null_object).tap do |event|
+          event.stub(stubs) unless stubs.empty?
+    end
   end
 
   def log_in_test_user
@@ -25,31 +27,45 @@ describe EventsController do
   end
 
   describe "GET 'new'" do
-
-    before(:each) do
-      @event = Event.new
-    end
     
-    it "should be successful" do
-      controller.stub!(:new).and_return(@event)
-    end
-    
-    it "should have the right title" do
-      get 'new'
-      response.should have_selector("title", :content => "Add Activity")
+    before :each do
+      EventType.stub!(:all).and_return(@options)
+      @event = stub_model(Event, :id=>1, :title=>"test")
+      Event.stub!(:new).and_return( @event )
     end
 
-    it "should have a title field" do
-      get :new
-      response.should have_selector("input[name='event[title]'][type='text']")
-    end 
+    context "when creating new event" do
+       
+      it "should create a new event" do
+        Event.should_receive(:new).and_return(@event)
+        get :new
+      end
+
+      it "should assign @event" do
+        get :new
+        assigns[:event].should == @event
+      end
+  
+      it "should render the new template" do
+        get :new
+        response.should render_template(:new)
+      end
+    
+      it "should load vars" do
+        get :new
+        assigns[:form].should == "add_event"
+      end   
+    end
     
     context "when cloning event" do
-      
+
+      it "should be successful" do
+        Event.stub!(:clone).and_return(@event)
+      end      
     end
   end
     
-  describe "GET 'clone/:id'" do
+  describe "GET 'clone'" do
     
     before(:each) do
        @event = Event.new
@@ -57,10 +73,44 @@ describe EventsController do
        @params = {:p1 => 'clone', :p2 => @id}
     end
     
-    it "should be successful" do
-    
+    it "should be successful" do   
       get :clone, :id => @id
       response.should redirect_to(new_event_path(@event, @params))
+    end
+  end
+  
+  describe "GET 'manage'" do
+    
+    before :each do
+      @user = [mock(User)]
+      @event = mock(Event)
+ #     @event = stub_model(Event, :id=>1, :title=>"test")
+      @event.stub!(:owned).with(@user).and_return(@event)
+    end
+ 
+    it "should render manage template" do
+      get :manage
+      response.should render_template('manage')
+    end
+           
+    it "should load a list of all owned events" do
+      get :manage
+    end
+
+    it "should load owned events" do
+      get :manage     
+      response.code.should eq ("200")
+    end    
+    
+    it "should assign @events" do
+      Event.stub!(:owned).and_return( @events )
+      get :manage 
+      assigns[:events].should == @events
+    end
+    
+    it "should assign the show form for view" do
+      get :manage
+      assigns[:form].should == "event_list"
     end
   end
 
@@ -68,142 +118,285 @@ describe EventsController do
   describe "GET 'show'" do
     
     before :each do
-      Event.stub!(:find).and_return(@event)
-      @id = 15
+      Event.stub!(:find).and_return( @event = mock_event )
+    end
+    
+    def do_get
+      get :show, :id => @event.id
     end
     
     it "should load the requested event" do
-#      Event.should_receive(:find).with('15').and_return(@event)
-      Event.stub_chain(:find, (:to_gmaps4rails=)).with(@id).and_return(@events = [mock(Event)])
-
-      get :show, :id => @id
+      do_get
       response.should be_success
     end
+    
+    it "retrieve the google map" do
+      Event.stub!(:to_gmaps4rails).and_return(true)
+      do_get
+      response.should be_success
+    end 
+    
+    it "should render show template" do
+      do_get
+      response.should render_template('show')
+    end
 
+    it "should assign @event" do
+      Event.stub!(:find).and_return(@event)
+      do_get
+      assigns(:event).should == @event
+    end
+    
+    it "should assign @json" do
+      @event.stub!(:to_gmaps4rails).and_return(@json)
+      do_get
+      assigns(:json).should == @json
+    end 
+   
+    it "should assign the form type for view" do
+      do_get
+      assigns[:form].should == "show_event"
+    end    
   end
   
   describe "GET 'index'" do
+
+    before :each do
+      @params = { :end_date => "12/05/2011" }
+      @event = mock(Event)
+      @event.stub_chain(:active, :is_visible?, :upcoming).and_return(true)
+    end
+          
+    it "should load a list of all events" do
+      get :index     
+      response.code.should eq ("200")
+    end
+
+    it "should assign @events" do
+      @event = []
+      get :index 
+      assigns[:events].should == @event
+    end
     
-    it "should render index template w/ params" do
-      get :index, { :numdays => 14, :p1 => "manage" }
+    it "should assign the form for index view" do
+      get :index
+      assigns[:form].should == "event_slider"
+    end
+    
+    it "should change list of events using Ajax" do
+      xhr :get, :index, :end_date => @params[:end_date]
+      response.should be_success
+    end
+    
+    it "should render show template" do
+      get :index
       response.should render_template('index')
     end
-       
-    it "should load a list of all events" do
-      Event.stub_chain(:active, :is_visible?, :current).and_return(@events = [mock(Event)])
-      get :index, { :numdays => 14 }      
-      response.code.should eq ("200")
-    end
-    
-    it "should load owned events" do
-      @user = [mock(User)]
-      Event.stub(:owned).with(@user).and_return(@events = [mock(Event)])
-      get :index, { :numdays => 14 }       
-      response.code.should eq ("200")
-    end
-    
-    it "should assign @events" do
-      Event.stub_chain(:active, :is_visible?, :current) { [mock_event] }
-      get :index, { :numdays => 14 } 
-      assigns[:events].should eq([mock_event])  
-    end
-    
   end
   
   describe "GET 'edit'" do
  
-     describe "success" do
-         
-        it "should get edit" do
-       
-          @event = Factory(:event)
-          get :edit, :id=>@event   
-          response.should be_success
-        end
-      end
-         
+    before :each do
+      @event = stub_model(Event, :id=>1, :title=>"test")
+      Event.stub!(:find).and_return( @event )
+    end
+    
+    def do_get
+      get :edit, :id => @event.id
+    end
+  
+    it "should load the requested event" do
+      Event.should_receive(:find).with(@event.id).and_return(@event)
+      do_get
+    end
+
+    it "should assign @event" do
+      do_get
+      assigns[:event].should == @event
+    end
+          
+    it "should get edit" do     
+      do_get  
+      response.should be_success
+    end
+        
+    it "should render the edit template" do
+      do_get
+      response.should render_template(:edit)
+    end        
   end
 
   describe "POST 'create'" do
     
-    describe "success" do
+    before :each do
+      @event = stub_model(Event, :id=>1, :title=>"test")
+      Event.stub!(:new).and_return(@event)
+    end
+    
+    context "success" do
 
-       before(:each) do
-        @attr = { :name => "Test", :event_type => "ue", :title => "Test", 
-              :start_date => Date.today, :end_date => Date.today, :state => 'CA',
-              :start_time => "11:00PM", :end_time => "11:30PM" }
-        @params = {:event => {}, :activity_type => "Activity", :event_type => "ue",
-                    :start_date => "06/05/2011", :end_date => "06/05/2011"}
-        Event.stub(:update_attributes => true)  #{ @event }
-       end
-
-      it "should create an event" do
-                             
-        post :create, :event => {}
-        response.should be_success
+      before(:each) do
+        @event.stub!(:save).and_return(true)
       end
 
-      it "should redirect to home path" do
-        Event.stub(:new) { mock_event(:save => true) }
-
+      it "should create event and redirect to home path" do
         post :create, :event => {}
-        response.should redirect_to(home_path)
+        response.should redirect_to(home_url)
       end
 
       it "should change event count" do
         lambda do
-          @event = Factory(:event)
-          
-          post :create, :event => @attr
-        end.should change(Event, :count)
-      end    
+          post :create, :event => {} 
+          should change(Event, :count).by(1)
+        end
+      end  
+      
+      it "should put a message in flash[:notice]" do
+        post :create, :event => {} 
+        flash[:notice].should =~ /created event/i
+      end  
     end
     
-    describe "failure" do
+    context "failure" do
       
-      before(:each) do
-        @attr = { :name => "", :event_type => "", :title => "", :start_date => "" }
-        @event = Factory.stub(:event)
+      before :each do
+        @event.stub!(:save).and_return(false)
       end
       
       it "should not create an event" do
         lambda do
           post :create, :event => @event
-        end.should_not change(Event, :count)
+          should_not change(Event, :count)
+        end
       end
       
       it "should render the 'new' page" do
-        post :create, :event => @event
-        response.should render_template('new')
+        post :create
+        response.should redirect_to(home_url) #render_template('new')
       end
       
-      it "should put a message in flash[:error]" do
-        post :create, :event => @event
-        flash[:error].should == "There was a problem!"
+      it "should assign form" do
+        post :create, :event => {}
+        assigns[:form] == "new_event"
       end
     end
  
   end
   
   describe "PUT /:id" do
-    describe "with valid params" do
 
+    def do_put
+       put :update, :id => @event.id, :params => {:event => @event}
+    end
+
+    context "with valid params" do
+    
+      before :each do
+        Event.stub!(:find).and_return(@event = stub_model(Event, :id=>1, :title=>"test") )
+        @event.stub! :update_attributes => true
+      end
+    
+      it "should load the requested event" do
+        Event.should_receive(:find).with(@event.id).and_return(@event)
+        do_put
+      end
+           
+      it "should update the event object's attributes" do
+        do_put
+        assigns[:event].should == @event 
+      end
+    
+      it "should put a message in flash[:notice]" do
+        put :update, :id => @event.id, :params => {} #do_put
+        flash[:notice].should =~ /updated event/i
+      end
+    
+      it "should redirect to the index action" do
+        do_put
+        response.should redirect_to(home_url)
+      end
     end
    
-    describe "failure" do
-               
-        it "re-renders the 'edit' template" do
-          mock_event(:update_attributes => false)
-          Event.stub(:find).with("15") { @mock_event }
-          put :update, :id => "15"
-          response.should render_template("edit")
-        end
-        
+    context "with invalid params" do
+                     
+      before :each do
+        Event.stub!(:find).and_return(@event = stub_model(Event, :id=>1, :title=>"test") )
+        @event.stub! :update_attribute => false
+      end
+      
+      it "updates the requested event" do
+        params = {}
+        @event.should_receive(:update_attributes).with(params)
+        put :update, :id => "37", :params => {}
+      end
+
+      it "should assign @event" do
+        put :update, :id => @event.id
+        assigns[:event].should == @event
+      end
+           
+      it "should render the edit template" do
+        put :update, :id => @event.id, :params => {:these => 'params'} #do_put
+        response.should render_template(:edit)
+      end      
     end
 
   end
 
   describe "DELETE 'destroy'" do
     
+    before :each do
+      Event.stub!(:find).and_return(@event = mock_event, 
+            :errors => { :anything => "Delete failed." })
+    end
+    
+    def do_delete
+      delete :destroy, :id => @event.id
+    end
+
+    context "when successful" do
+      before :each do
+        @event.stub!(:destroy).and_return(true)
+      end   
+      
+      it "should destroy an event using Ajax" do
+        lambda do
+          xhr :delete, :destroy, :id => @event.id
+          response.should be_success
+          should change(Event, :count).by(-1)
+        end
+      end
+    
+      it "destroys the requested event" do
+        @event.should_receive(:destroy)
+        do_delete 
+      end
+ 
+      it "redirects to the manage events list" do
+        do_delete 
+        response.should redirect_to(manage_events_url)
+      end
+      
+      it "should put a message in flash[:notice]" do
+        do_delete
+        flash[:notice].should =~ /deleted event/i
+      end
+    end
+    
+    context "when unsuccessful" do
+      before :each do
+        @event.stub!(:destroy).and_return(false)
+      end
+    
+      it "should assign @event" do
+        do_delete
+        assigns[:event].should == @event
+      end
+        
+      it "should redirect to the managed event" do
+        do_delete
+        response.should redirect_to(manage_events_url)
+      end      
+    end
   end
 end

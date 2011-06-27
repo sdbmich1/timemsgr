@@ -64,8 +64,7 @@ $(document).ready(function (){
      }
    else {
      	$("#life_event").show("fast");
-     }
-    
+     }   
   });
 
 	// toggle google map
@@ -81,8 +80,33 @@ $(document).ready(function (){
 		$.getScript('/events.js?end_date=' + enddate);
 		return false;  
 	});
-
+	
 });
+
+$(function () {  
+  	var timerId = 0;
+
+	$('#events').each(function() {
+    	timerId = setInterval(function(){
+      		$.ajax({ url: "/events/clock", type: "GET", dataType: "script"
+    		});
+  		}, 60000 );
+	});	
+			
+//	$('#manage-items, #edit-item, #show-item').click(function () {  
+	$('.show-item, .manage-item').click(function () {  
+ 		clearInterval(timerId);
+    	history.pushState(null, "", this.href);  
+//    	return false;  
+  	});    	
+});
+
+$(function () {  
+  $(window).bind("popstate", function () {  
+    $.getScript(location.href);  
+  });  
+});
+
 
 ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​// remove_fields:  Used to delete fields from a given form
 function remove_fields(link) {  
@@ -122,23 +146,7 @@ $(document).ready(function() {
 		'overlayShow'	:	true
 	});	
 	
-});
-
-$(document).ready(function() {
-	$('a#popopen').live('click', function(e) {
- 		$("#modalGroup").trigger('click'); 
- 
-  	}); 
-  
-  	$('a#popstart').bind("ajax:success", function(data, status, xhr) {
-	      $().fancybox({
- 				'transitionIn'	:	'elastic',
-				'transitionOut'	:	'elastic'
-           });
-	  });
-  
 	$('.show_event').bind('ajax:success', function() {
 		$("#modalGroup").trigger('click');
 	});
-	
- });
+});

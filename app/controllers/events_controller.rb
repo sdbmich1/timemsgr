@@ -16,8 +16,8 @@ class EventsController < ApplicationController
 	end
 	
 	def index
-	 	@form = "event_slider"  # 'test'
-    !params[:end_date].blank? ? enddate = Time.now+params[:end_date].to_i.days : enddate = Time.now+60.days   
+	 	@form = "event_slider"  
+    !params[:end_date].blank? ? enddate = Time.now+params[:end_date].to_i.days : enddate = Time.now+180.days   
     @events = Event.active.is_visible?.upcoming(Time.now, enddate, Time.now, enddate)     		
     respond_with(@events)
  	end
@@ -57,7 +57,7 @@ class EventsController < ApplicationController
 	def destroy
     @event = Event.find(params[:id])      
     flash[:notice] = "Successfully deleted event." if @event.destroy  
-    respond_with(@event, :location => manage_url)
+    respond_with(@event, :location => manage_events_url)
   end
   
   # get event type dropdown options  
@@ -81,8 +81,8 @@ class EventsController < ApplicationController
 	def chk_params(item)
 	  item[:start_date] = parse_date(item[:start_date])  
     item[:end_date] = parse_date(item[:end_date])
-    item[:event_type] = params[:event_type] if !params[:event_type].blank?
-    item[:activity_type] = params[:activity_type] if !params[:activity_type].blank?
+    item[:event_type] = params[:event_type] unless params[:event_type].blank?
+    item[:activity_type] = params[:activity_type] unless params[:activity_type].blank?
 	end
 	
 	def parse_date(old_dt)
@@ -97,17 +97,12 @@ class EventsController < ApplicationController
   def reset_vars
     @form = "add_event"    
     params[:event] ||= {}       
-    chk_params(params[:event]) if !params[:event].empty?
+    chk_params(params[:event]) unless params[:event].empty?
   end
   
   # clone event   
   def set_clone(id)
-    @event = Event.find(id).clone      
-    
-    # reset date/time fields
-    @event.created_at = nil
-    @event.updated_at = nil
-    @event.start_date = nil
-    @event.end_date = nil
+    @event = Event.find(id).clone       
+    @event.reset_attr # reset date/time fields
   end	
 end

@@ -7,11 +7,12 @@ Timemsgr::Application.routes.draw do
    
   resources :events do
     member do
-      get 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
+      get 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 
+          'purchase'
     end
     
     collection do
-      get 'manage', 'import'
+      get 'manage', 'import', 'clock'
     end
   end
   

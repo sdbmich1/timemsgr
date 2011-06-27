@@ -1,1 +1,2 @@
-$("#event_content").html("<%= escape_javascript(render(:partial => "add_event"))%>");
+$("#event_content").html("<%= escape_javascript(raw render(:partial => "content"))%>");
+$("#user_panel").html("<%= escape_javascript(raw render(:partial => "photo_panel"))%>");

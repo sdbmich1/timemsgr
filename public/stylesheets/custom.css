@@ -58,6 +58,7 @@ a.signin_button {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         10px;
+  
 }
 
 footer {
@@ -131,16 +132,24 @@ footer nav {
 #ajaxSpinnerImage {display:none;}
 
 #spinner {
-            z-index: 2000;
-            padding:6px;
-            padding-left:40px;
-            margin: 200px 0px 0px 200px;
-            background:#000000 url("../images/ajax-loader.gif") no-repeat center center;
-            width:80px;
-            height:80px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-             font-weight:bold;
-        }
+    margin:0px 0px 0px 0px;
+    position:fixed;
+    height: 100%;
+    z-index:9999;
+    padding-top:200px;
+    padding-left:50px;
+    width:70%;
+    clear:none;
+    opacity: .4;
+    background:#000000 url("../images/ajax-loader.gif") no-repeat center center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-weight:bold;
+    
+  }
 
-
+/*IE 'adjustment'*/
+* html #spinner {
+     position: absolute;
+     height: expression(document.body.scrollHeight &gt; document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+    }

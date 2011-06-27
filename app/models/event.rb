@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
   before_save :set_flag
+  attr_accessor :current_user
  	attr_accessible :event_name, :title, :start_date, :end_date, :start_time,
 				:end_time, :frequency, :event_type, :start_time_zone, :end_time_zone,
 				:address, :city, :state, :postalcode, :country, :overview, :description, :location, 
@@ -26,10 +27,7 @@ class Event < ActiveRecord::Base
       
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png'] 
 	validates_attachment_size :photo, :less_than => 1.megabyte
-	
-  #belongs_to :event_type, :foreign_key => "event_type"
- # belongs_to :event_page_section, :foreign_key => "event_type"
-	
+		
   default_scope :order => 'events.start_date, events.start_time ASC'
 	
 	scope :active, :conditions => { :status.downcase => 'active' }
@@ -51,6 +49,26 @@ class Event < ActiveRecord::Base
     event_type == "obsrv"
   end
   
+  def scheduled?(uid)
+    user_id == uid
+  end
+  
+  def unscheduled?(uid)
+    user_id != uid
+  end
+  
+  def set_time_zone
+    self.start_time_zone = current_user.time_zone unless current_user.nil?
+    self.end_time_zone = current_user.time_zone unless current_user.nil?
+  end
+  
+  def reset_attr
+    self.created_at = nil
+    self.updated_at = nil
+    self.start_date = nil
+    self.end_date = nil
+  end
+ 
   acts_as_gmappable 
   
     def gmaps4rails_address 
@@ -76,7 +94,7 @@ class Event < ActiveRecord::Base
       
   protected
   
-    def initialize(tz)
+    def initialize(tz="UTC")
       super
       self.start_time_zone ||= tz
       self.end_time_zone ||= tz

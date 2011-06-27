@@ -1,0 +1,4 @@
+<div class="span-2"><%= 'Where:' %></div><div class="span-18 last"><%= @event.location %></div><div class="span-18 last">	<span class="<%= !@event.location.blank? ? 'prepend-2' : 'none' %>"><%= @event.address %></span></div>
+<% if !@event.city.blank? %>	<div class="span-18 last">		<span class="prepend-2"><%= "#{@event.city}, #{@event.state} #{@event.postalcode}  " %></span>	</div>
+	<% if !@event.address.blank? && !@event.city.blank? %>		<div class="span-18">			<span class="prepend-2"><%= link_to "Show/Hide Map", :remote => true, :class => "showmap" %></span><br />			<span class="prepend-2"><%= @event.other_details %></span> 		</div>	<% end %>	<% end %>
+<% if !@event.description.blank? %>	<div class="span-2"><%= 'Details:' %></div>	<div class="span-18 last"><%= @event.description %></div><br /><% end %>

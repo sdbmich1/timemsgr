@@ -57,14 +57,14 @@ section h1 {
 
 .opp-slider { margin: 0; padding: 0; height: 200px; width:760px; min-width: 760px;}
 
-.timeframe { margin-left: 80%; width: 100%; line-height: 14px; }
+.timeframe { margin-left: 80%; width: 100%; margin-top: -45px; }
 .slider-title {
 	margin-top: -40px;
 	margin-left: 50px;
 	float: left;
 }
 
-.slider-title h1 { position:absolute; top: 1em; left: 5em; font-weight: bold; 
+.slider-title h1 { position:absolute; top: 1em; left: 4.25em; font-weight: bold; 
 	font-size: 1.025em; height: 40px; width: 65%; }
 
 .slider-descr { position:absolute; top: 2em; left: 5em; min-height:100%;
@@ -93,6 +93,7 @@ section h1 {
 	box-shadow: inner 0 0 5px #888;
 }
 
+/* calendar styling */
 .calendar { left: 1em; margin: 2px 0px 0px 0.25em; }
 .calendar { height: 42px; width:40px; font-size: 1em; 
 			background: #eee; border: 1px solid; margin: 1px 1px 1px 1px; }
@@ -146,7 +147,7 @@ section h1 {
 	width: 240px;
 }
 
-.grphead {font-variant: small-caps; font-size: 1.25em; font-weight: bold; }
+.grphead {font-variant: small-caps; font-size: 1.05em; font-weight: bold; }
 
 .img-btm { position:absolute; bottom: -7em; width: 100%;  left: 4em; }
 .action-img {position: absolute; right: 1em; top: 1em;  }
@@ -154,20 +155,18 @@ section h1 {
 
 .rsz-img {  height: 16px; width: 16px; margin-left: 4px; }
 
-a.info{
-    position:relative; /*this is the key*/
-    z-index:24; background-color:#ccc;
-    color:#000;
-    text-decoration:none}
+/* tooltip styling. by default the element to be styled is .tooltip  */
+.tooltip {
+	background-color:#000;
+	border:1px solid #fff;
+	padding:10px 15px;
+	width:200px;
+	display:none;
+	color:#fff;
+	text-align:left;
+	font-size:12px;
 
-a.info:hover{z-index:25; background-color:#ff0}
-
-a.info span{display: none}
-
-a.info:hover span{ /*the span will display just on :hover state*/
-    display:block;
-    position:absolute;
-    top:2em; left:2em; width:15em;
-    border:1px solid #0cf;
-    background-color:#cff; color:#000;
-    text-align: center}
+	/* outline radius for mozilla/firefox only */
+	-moz-box-shadow:0 0 10px #000;
+	-webkit-box-shadow:0 0 10px #000;
+}

@@ -4,8 +4,23 @@ module EventsHelper
 		 @time = Time.now
 	end
 	
+	def set_slider_class(area)
+	  case area
+	  when "Observances"
+	    sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "obsv-slider" } 
+ 	  when "Opportunities"
+      sclass = {:lnav => 'prev', :rnav => "next", :stype => "tmp-slider" } 
+	  else
+      sclass = {:lnav => 'sch-prev-btn', :rnav => "sch-next-btn", :stype => "sch-slider" } 
+    end
+	end
+	
+	def chk_time(val)	  
+	  val.blank? ? '' : val.strftime('%l:%M %P')
+	end
+	
 	def set_panel
-	  @form == "add_event" ? 'photo_panel' : 'shared/user_panel'
+	  @form == "add_event" || @form == "edit_event" ? 'photo_panel' : 'shared/user_panel'
 	end
 	
 	def get_nice_date(edate)  
@@ -14,15 +29,10 @@ module EventsHelper
 	
 	def set_header(form)
 	  case form
-	  when "add_event"
-	    "Add Event"
-	  when "edit_event"
-	    @form = "add_event"
-	    'Edit Event' 
-	  when "event_list"   
-	    'Manage Events'
-	  when "show_event"
-	    'Event Details'
+	  when "add_event";  "Add Event"
+	  when "edit_event"; @form = "add_event"; 'Edit Event' 
+	  when "event_list"; 'Manage Events'
+	  when "show_event"; 'Event Details'
 	  end
 	end
 	

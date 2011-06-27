@@ -1,63 +1,14 @@
-	<p><span class="prepend-6 event-title"><%= @event.title %></span></p>
-	<div class="span-4">
-		<%= image_tag get_image, :alt => "none", :size => "125x125" %>
-	</div>
-	<div class="span-2"><%= 'Date:' %></div>
-	<div class="span-18 last">
-		<%= get_start_date(@event.start_date, @event.end_date, "Show") %><br />
-	</div>	
-	<div class="span-2"><%= 'Time:'%></div>
-	<div class="span-18 last">
-	   <%= " #{@event.start_time.strftime("%l:%M %p")} - #{@event.end_time.strftime("%l:%M %p")}" %>
-	</div>
+<p><span class="prepend-6 event-title"><%= @event.title %></span></p>
+<div class="span-4"><%= image_tag "#{get_image()}", :alt => "none", :size => "125x125" %></div>
+<div class="span-2"><%= 'Date:' %></div>
+<div class="span-18 last">	<%= get_start_date(@event.start_date, @event.end_date, "Show") %><br /></div>	
+<div class="span-2"><%= 'Time:'%></div>
+<div class="span-18 last"><%= " #{@event.start_time.strftime("%l:%M %p")} - #{@event.end_time.strftime("%l:%M %p")}" %></div>
 
-	<div class="span-2"><%= 'Where:' %></div>
-	<div class="span-18 last"><%= @event.location %></div>	
-	<div class="span-18 last"><span class="prepend-2"><%= @event.address %></span> </div>
-		<% if !@event.city.blank? %>
-			<div class="span-18 last"><span class="prepend-2">
-				<%= "#{@event.city}, #{@event.state} #{@event.postalcode}  " %></span>
-			</div>
-		  <% if !@event.address.blank? && !@event.city.blank? %>
-			<div class="span-18">
-				<span class="prepend-2"><%= link_to "Show/Hide Map", :remote => true, :class => "showmap" %></span><br />
-				<span class="prepend-2"><%= @event.other_details %></span> 
-			</div>
-		  <% end %>	
-		<% else %>
-			<br />
-		<% end %>
-
-	<% if !@event.description.blank? %>
-		<div class="span-2"><%= 'Details:' %></div>
-		<div class="span-18 last"><%= @event.description %></div><br />
-	<% end %>
-	<% if !@event.contact_name.blank? %>
-		<div class="span-6"><%= "Contact:" %></div>
-		<div class="span-18 last"><span class="append-2"> 
-			<%= @event.contact_name %></span>
-		</div>
-	<% end %>
-	<% if !@event.website.blank? %>
-		<div class="span-6">
-			<span class="prepend-4"><%= "Website:" %></span>
-		</div>
-		<div class="span-18 last"><%= link_to "#{@event.website}", "http://#{@event.website}" %></div> 
-	<% end %>
-	<% if !@event.email.blank? %>
-		<div class="span-6">
-			<span class="prepend-4"><%= "Email:" %></span></div>
-		<div class="span-18 last"><%= @event.email %></div> 
-	<% end %>
-	<% if !@event.phone.blank? %>
-		<div class="span-6">
-			<span class="prepend-4"><%= "Phone:" %></span></div>
-		<div class="span-18 last"><%= @event.phone %></div> 
-	<% end %>
+<%= render :partial => 'show_event_location' %>
+<%= render :partial => 'show_event_contact' %>
 	
 <!-- display google map --> 
 <% content_for :scripts do -%>
-   	<div class="span-24 last " id="gmaps" style="display:none">  
-		<%= gmaps4rails(@json) %>
-	</div>
+   	<div class="span-24 last " id="gmaps" style="display:none"><%= gmaps4rails(@json) %></div>
 <% end -%> 

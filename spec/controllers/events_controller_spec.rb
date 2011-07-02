@@ -60,8 +60,9 @@ describe EventsController do
     context "when cloning event" do
 
       it "should be successful" do
-        Event.stub!(:clone).and_return(@event)
-      end      
+        Event.stub_chain(:find, :clone).and_return(@event)
+        get :new
+     end      
     end
   end
     
@@ -73,11 +74,29 @@ describe EventsController do
        @params = {:p1 => 'clone', :p2 => @id}
     end
     
-    it "should be successful" do   
+    it "should redirect to new event" do   
       get :clone, :id => @id
       response.should redirect_to(new_event_path(@event, @params))
     end
   end
+  
+  describe "GET 'get_drop_down_options'" do
+
+    before :each do
+      params = { :radio_val => "Activity" }
+    end
+    
+    it "assign radio val" do   
+      assigns[:radio_val].should == 'Activity'
+    end
+    
+    it "should render typelist" do 
+      get :get_drop_down_options, :params => {}
+      controller.should_receive(:render).with(hash_including(:partial => "typelist"))  
+    end
+    
+  end
+
   
   describe "GET 'manage'" do
     

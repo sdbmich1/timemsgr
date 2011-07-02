@@ -41,7 +41,7 @@ module EventsHelper
 	end
 	
 	def get_event_type
-	  @event.event_type if !@event.blank?
+	  @event.event_type unless @event.blank?
 	end
 	
 	def chk_activity_type(event)

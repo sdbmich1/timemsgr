@@ -53,7 +53,7 @@ gem 'thinking-sphinx', '2.0.3'
 gem "gcal4ruby"
 
 group :development, :test do
-  gem 'capybara'
+#  gem 'capybara'
   gem 'spork', '~> 0.9.0.rc'
   gem 'rspec-rails'
   gem "hpricot", "0.8.3", :platform => :mswin

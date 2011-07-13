@@ -1,7 +1,19 @@
 module EventsHelper
 
 	def showtime
-		 @time = Time.now
+		@time = Time.zone.now
+	end
+	
+	def show_credits
+	  @credits
+	end
+	
+	def nav_btn_img(direction)
+	  direction == "left"? "rsz_left_arrow_nav.png" : "rsz_right_arrow_nav.png"
+	end
+	
+	def user_events?
+	  @events.select {|event| event.user_id == @user.id }.count > 0 ? true : false
 	end
 	
 	def set_slider_class(area)
@@ -57,8 +69,7 @@ module EventsHelper
 	end
 	
 	# parse date ranges
-	def get_start_date(start_dt, end_dt, dtype)
-	  
+	def get_start_date(start_dt, end_dt, dtype)	  
     if start_dt == end_dt
       if start_dt == Date.today
         @date_s = "Today" 

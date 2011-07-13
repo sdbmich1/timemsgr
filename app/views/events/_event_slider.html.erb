@@ -1,3 +1,5 @@
-<%= render :partial => 'slider', :locals => { :slider => 'Observances' } %><hr />
-<%= render :partial => 'slider', :locals => { :slider => 'Your Schedule' } %><hr />
-<%= render :partial => 'slider', :locals => { :slider => 'Opportunities' } %>
+<%= render :partial => 'slider', :locals => { :slider => "Observances" } %>
+<% if user_events? %>
+	<%= render :partial => 'slider', :locals => { :slider => "My Schedule" } %>
+<% end %>
+<%= render :partial => 'slider', :locals => { :slider => "Opportunities" } %>

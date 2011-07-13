@@ -1,66 +1,55 @@
 class AffiliationsController < ApplicationController
   before_filter :authenticate_user!, :load_data	
   layout :page_layout
+  respond_to :html, :json, :xml, :js
   
   # add autocomplete on affiliation name 
   autocomplete :organization, :name
   
-  def load_data
-    
-    #set current user
-  	@user = current_user  
+  def load_data 
+  	@user = current_user  #set current user
+  	@credits = UserCredit.where('user_id = ?',@user.id).sum(:credits)
   end
   
   def new
-  		
-  	# initialize model
-  	5.times do
-  	  @user.affiliations.build 
+  	5.times do 
+  	  @affiliations = @user.affiliations.build 
   	end
-
+  	respond_with(@affiliations)
   end
-  
-  # lookup affiliation names
-  def get_items(parameters)
-	   Affiliation.select("DISTINCT(name)").where(['name LIKE ?', "#{parameters[:term]}%"]).limit(10)
-  end
-
- 	
+	
   def edit
     @user = User.find(params[:id])
- #   @affiliation = Affiliation.find(params[:id])
+    @affiliations = @user.affiliations
+    respond_with(@affiliations)
   end
 
   def create
-
-	  # set new affiliation data
-    @affiliation = @user.affiliations.build(params[:affiliation])
-    
-#	  respond_to do |format| 
- #   	if @affiliation.save
- #     		format.html {redirect_to home_path(@user)} #, :notice => "Successfully created affiliation."
- #   	else
- #   		format.html { redirect_to new_affiliation_path(@user) }  
- #   	end		
-#	  end
+    @user = User.find(params[:id])
+    @affiliation = @user.affiliations.build #(params[:affiliation]) 
+    flash[:notice] = "Successfully created affiliation." if @affiliation.save   
+    respond_with(@user, :location => home_path)
   end
 
   def update
-    @affiliation = Affiliation.find(params[:affiliation])
-    
-    if @affiliation.update_attributes(params[:affiliation])
-      redirect_to user_path, :notice  => "Successfully updated affiliation."
-    else
-      render :action => 'edit'
-    end
+    @user = User.find(params[:id])
+    @affiliation = @user.affiliations   
+    flash[:notice] = "Successfully updated affiliation." if @affiliation.save
+    respond_with(@user, :location => user_path)
   end
   
+  def destroy
+  end
+   
+  protected
+  
   def page_layout  
-    if !params[:p].blank?  
-      "users"  
-    else  
-      "application"  
-    end  
+    params[:p].blank? ? "application" : "users"  
+  end  
+  
+  # lookup affiliation names
+  def get_items(parameters)
+     Affiliation.select("DISTINCT(name)").where(['name LIKE ?', "#{parameters[:term]}%"]).limit(10)
   end
     
 end

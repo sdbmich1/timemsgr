@@ -1,6 +1,10 @@
+require 'rewards'
 class User < ActiveRecord::Base
+  include Rewards   
   before_create :set_timezone
-  after_save :add_settings
+  after_create :add_settings
+  before_save :add_rewards
+  after_save :save_rewards
   has_many :authentications
   
   # Include default devise modules. Others available are:
@@ -39,9 +43,7 @@ class User < ActiveRecord::Base
   
   # define interest relationships
   has_and_belongs_to_many :interests 
- 
- # has_many :categories, :through => :interests
-  
+   
   # define channel relationships
   has_many :subscriptions
   has_many :channels, :through => :subscriptions, 
@@ -52,7 +54,6 @@ class User < ActiveRecord::Base
   has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
-#  has_many :channels, :through => :categories
   has_many :host_profiles
   accepts_nested_attributes_for :host_profiles, :reject_if => :all_blank 
  
@@ -62,7 +63,6 @@ class User < ActiveRecord::Base
   has_many :user_events
   has_many :events, :through => :user_events #, :source => 'user_id'
   
-  # define session prefs
   has_many :settings
   has_many :session_prefs, :through => :settings 
 
@@ -75,18 +75,22 @@ class User < ActiveRecord::Base
   
   # add default settings for user session preferences
   def add_settings
-    @prefs = SessionPref.all
-    @id = self.id
-    
-    @prefs.each do |p|
-      Setting.create(:user_id => @id, :session_pref_id => p.id)
+    SessionPref.all.each do |p|
+      Setting.create(:user_id => self.id, :session_pref_id => p.id)
     end
+  end
+  
+  def add_rewards  
+    @reward_amt = add_credits(self.changes) if self.changed?
+  end
+  
+  def save_rewards    
+    save_credits(self.id, 'Profile', @reward_amt) unless @reward_amt.blank? || @reward_amt == 0
   end
 
   # set default time zone for new users
   def set_timezone
-    locale = self.location_id
-    self.time_zone = Location.where(["id = :value", { :value => locale }]).first.time_zone
+    self.time_zone = Location.where(["id = :value", { :value => self.location_id }]).first.time_zone
   end
   
   # set user hash for omniauth

@@ -1,14 +1,11 @@
 Timemsgr::Application.routes.draw do
 
   devise_for :users
-  
-  resources :members, :users, :interests, :associates, :subscriptions
-  resources :authentications
+  resources :members, :interests, :subscriptions, :authentications
    
   resources :events do
     member do
-      get 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 
-          'purchase'
+      get 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
     end
     
     collection do
@@ -17,10 +14,13 @@ Timemsgr::Application.routes.draw do
   end
   
   resources :affiliations do
-    get :autocomplete_affiliation_name, :on => :collection
     get :autocomplete_organization_name, :on => :collection
-  end
+  end  
   
+  resources :users do   
+    resources :associates 
+  end
+ 
   # specify routes for devise user after sign-in
   namespace :user do
   	root :to => "users#home"

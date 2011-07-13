@@ -13,20 +13,17 @@
 </head>
   <body>
     <div class="container">
-     <%= yield :subhead %>
-     
-  	   <!-- add for devise -->
-  	   <% if !notice.nil? %>
+     	<%= yield :subhead %>   
+  	   	<% if !notice.nil? %>
   	   		<p class="notice"><%= notice %></p>
-  	   <% end %>
-       <% if !alert.nil? %>
+  	   	<% end %>
+       	<% if !alert.nil? %>
             <p class="alert"><%= alert %></p>     
-       <% end %>
-      <section class="round">
-        <%= yield :content %>
-
-      </section>
-       <%= render 'layouts/footer' %>
+       	<% end %>
+      	<section class="round">
+        	<%= yield :content %>
+      	</section>
+       	<%= render 'layouts/footer' %>
    </div>  
   </body>
 </html>

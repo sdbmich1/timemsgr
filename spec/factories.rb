@@ -27,6 +27,13 @@ Factory.define :event do |event|
   event.hide            "no"
 end
 
+Factory.define :interest do |interest|
+  interest.name            "Camping"
+  interest.category_id     "119" 
+  interest.status          "active"
+  interest.hide            "no"
+ end
+
 Factory.define :channel do |c|
   c.title           "Test title"
   c.status          "active"
@@ -38,7 +45,7 @@ Factory.define :affiliation do |aff|
   aff.association :user
 end
 
-Factory.define :interest do |interest|
+Factory.define :interest_user do |interest|
   interest.name "Foo bar"
   interest.association :user
 end

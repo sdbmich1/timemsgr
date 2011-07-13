@@ -2,8 +2,25 @@
  * @author Sean Brown
  */
 // add slider to display list of upcoming events
-$(document).ready(function() {
-    $(".tmp-slider").jCarouselLite({
+$(function() {
+	event_slider();
+	
+    // Used to change list of events to display by date range
+	$('.select-date').click(function() { 		
+		var enddate = this.getAttribute("data-numdays");
+		$.ajax({
+  			url: '/events.js?end_date=' + enddate,
+  			dataType: 'script',
+  			success:  function() {
+  				event_slider(); 
+    		}
+		});
+		return false;  
+	});	
+});
+
+function event_slider () {
+    $(".opp-slider").jCarouselLite({
         btnNext: ".next",
         btnPrev: ".prev"
     });
@@ -14,30 +31,5 @@ $(document).ready(function() {
     $(".sch-slider").jCarouselLite({
         btnNext: ".sch-next-btn",
         btnPrev: ".sch-prev-btn"
-    });
-});
-
-// add dropdown menu functionality
-$(function() {
-	$(".dropdown dt a").click(function() {
-    	$(".dropdown dd ul").toggle();
-	});
-});
-
-$(function() {
-	$(".dropdown dd ul li a").click(function() {
-    	var text = $(this).html();
-    	$(".dropdown dt a span").html(text);
-    	$(".dropdown dd ul").hide();
-	}); 
-});
-
-$(document).bind('click', function(e) {
-    var $clicked = $(e.target);
-    if (! $clicked.parents().hasClass("dropdown"))
-        $(".dropdown dd ul").hide();
-});
-
-function getSelectedValue(id) {
-    return $("#" + id).find("dt a span.value").html();
+    });	
 }

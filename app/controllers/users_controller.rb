@@ -1,16 +1,17 @@
+require 'rewards'
 class UsersController < ApplicationController
   before_filter :authenticate_user!, :load_data
   layout "users"
+  respond_to :html, :json, :xml, :js
+  include Rewards
    
   def load_data
   	@user = current_user   	
   end
   
   def home
- 
-	# check for new users
-  	if @user.sign_in_count <= 1	
-      redirect_to new_interest_path # welcome_path
+  	if @user.sign_in_count <= 1	# check for new users
+      redirect_to new_interest_path, :notice => "#{get_msg(@user,'Welcome')}"
   	else
       redirect_to home_path 
     end 		
@@ -21,52 +22,28 @@ class UsersController < ApplicationController
   end
 
   def new
-   	@title = "Welcome " + @user.first_name
-
   end
   
   def show
   end
   
-  def edit
-    
-#    debugger
-    
-    #get user & profile data
-    @user = User.includes(:host_profiles).find(params[:id])
-          
-    # determine which profile area to edit
-    @area = params[:p]
+  def edit   
+    @user = User.includes(:host_profiles).find(params[:id]) #get user & profile data  
+    @area = params[:p]  # determine which profile area to edit
     
     case @area
     when "Interests"
-      get_interests
-    when "Prefs"
-      # get session prefs
-      @prefs = SessionPref.all
-  
-    else
-    end
-         
+      @category = Category.includes(:interests)
+    when "Prefs"     
+      @prefs = SessionPref.all  # get session prefs
+    end        
   end
    
-  def update
-       
-    # save user interest & channel selections
-    case @area
-    when 'Prefs'
-      set_channels('session_pref_ids', 'edit')
-    when 'Interests'
-      set_channels('interest_ids', 'edit')
-    else
-      set_channels('other', 'index')
-    end
-  end   
-  
-  protected
-  
-  # get category & interest data
-  def get_interests     
-     @category = Category.includes(:interests)
-  end
+  def update       
+#    set_channels('session_pref_ids', 'edit') if @area == 'Prefs'
+    @user = User.find(params[:id])                 
+    flash[:notice] = "#{get_msg(@user, 'Profile')}" if @user.update_attributes(params[:user])
+    respond_with(@user, :location => home_path)
+  end  
+    
 end

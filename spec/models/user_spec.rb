@@ -32,6 +32,17 @@ describe User do
     User.new(@attr.merge(:location_id => "")).should_not be_valid
   end
   
+  describe "user interests" do
+
+    before(:each) do
+      @user = Factory.stub(:user)  # @user = User.create(@attr)
+    end
+
+    it "should have an interest users attribute" do
+      @user.should respond_to(:interest_users)
+    end
+  end
+ 
   describe "affiliations" do
 
     before(:each) do
@@ -42,6 +53,7 @@ describe User do
       @user.should respond_to(:affiliations)
     end
   end
+  
   describe "associates" do
 
     before(:each) do
@@ -95,10 +107,25 @@ describe User do
     user.save!
   end
   
-  it "should update settings on save!" do
+  it "should update settings on save" do
     user = User.new(@attr)
     user.expects(:add_settings)
     user.stub :save => true
+  end
+  
+  context 'rewards' do
+        
+    it "should add user rewards on save" do
+      user = User.new(@attr)
+      user.expects(:add_rewards)
+      user.stub :save => true
+    end
+  
+    it "should save user rewards on save" do
+      user = User.new(@attr)
+      user.expects(:save_rewards)
+      user.stub :save => true
+    end  
   end
 
 end

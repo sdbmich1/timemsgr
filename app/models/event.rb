@@ -1,5 +1,8 @@
+require 'rewards'
 class Event < ActiveRecord::Base
-  before_save :set_flag
+  include Rewards # include rewards to add credits for user where appropriate
+  before_save :set_flag, :add_rewards
+  after_save :save_rewards
   attr_accessor :current_user
  	attr_accessible :event_name, :title, :start_date, :end_date, :start_time,
 				:end_time, :frequency, :event_type, :start_time_zone, :end_time_zone,
@@ -10,7 +13,6 @@ class Event < ActiveRecord::Base
 	has_many :calendar_events
 	has_many :calendars, :through => :calendar_events
 	
-#	belongs_to :user, :foreign_key => :user_id
 	has_many :user_events
 #	has_many :users, :through => :user_events	
 #	accepts_nested_attributes_for :user_events
@@ -44,17 +46,21 @@ class Event < ActiveRecord::Base
   scope :current_time, lambda { | start_tm, end_tm | where("start_time >= time(?) and end_time <= time(?)", start_tm, end_tm)}
   scope :owned, lambda { | uid |
             { :conditions => { :user_id => uid }} } 
+   
+  def add_rewards
+    @reward_amt = add_credits(self.changes)
+  end
+  
+  def save_rewards
+    save_credits(self.user_id, 'Event', @reward_amt)
+  end
   
   def observance?
     event_type == "obsrv"
   end
   
-  def scheduled?(uid)
-    user_id == uid
-  end
-  
-  def unscheduled?(uid)
-    user_id != uid
+  def owned?(user)
+    self.user_id == user.id
   end
   
   def set_time_zone
@@ -79,9 +85,9 @@ class Event < ActiveRecord::Base
       "<h3>#{title}</h3>" << "<h4>#{address}</h4>" << "#{city}, #{state}, #{postalcode}"
     end
  
- #   def prevent_geocoding
- #     address.blank? || (!latitude.blank? && !longitude.blank?) 
- #   end
+    def prevent_geocoding
+      address.blank? || (!latitude.blank? && !longitude.blank?) 
+    end
     
     define_index do
       indexes :title, :sortable => true

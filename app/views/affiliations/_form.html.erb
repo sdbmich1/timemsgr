@@ -1,10 +1,8 @@
 <div class="fields">
-<%= form_for @user do |f| %>
+<%= form_for @user, @affiliations do |f| %>
  	<div id="event_errors" style="display:none" class="error"></div>
-
-	<%= render "shared/error_messages", :target => @user %>  
+	<%= render "shared/error_messages", :target => @affiliations %>  
 	<%= render :partial => 'affiliations', :locals => { :f => f } %>
-
 	<%= f.submit 'Finish', :class => "nav-right" %>
 <% end %>
 </div> 

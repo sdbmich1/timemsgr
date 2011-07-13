@@ -137,6 +137,7 @@ section h1 {
 	height:140px;
     line-height:140px;
     position: relative;
+    width: 100%;
 }
 
 .eslide li {
@@ -154,6 +155,11 @@ section h1 {
 .etype-img {position: absolute; right: 1em; top: 3em;  }
 
 .rsz-img {  height: 16px; width: 16px; margin-left: 4px; }
+
+.slider-round {	    
+        -webkit-border-radius: 5px; -moz-border-radius: 5px; 
+        border-radius: 5px 5px 0 0 / 5px 5px 0 0;;  
+}
 
 /* tooltip styling. by default the element to be styled is .tooltip  */
 .tooltip {

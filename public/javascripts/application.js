@@ -22,6 +22,7 @@ $(document).ready(function (){
 		ampm: true,
 		stepMinute: 15
 	});
+	
 }); 
 
 // add date picker code and synch start & end dates
@@ -36,17 +37,15 @@ $(document).ready(function (){
           var nyd = $.datepicker.parseDate(dateFormat,dateText);
           $('#end-date').datepicker("option", 'minDate', nyd ).val($(this).val());
       }, 
-      onClose: function () { $(this).focus(); } 
-  	}).change(function () {  
+      onClose: function () { $(this).focus() } 
+  	 }).change(function () {  
   	 	$('#end-date').val($(this).val())
-    }); 
+     }); 
   
   $('#end-date').datepicker({ 
       onClose: function () { $(this).focus(); }, 
       dateFormat:dateFormat,
-      onSelect: function(dateText, inst){
-
-    }                       
+      onSelect: function(dateText, inst){ }                       
   }); 
     	
   // toggle divs for adding type of event	
@@ -71,14 +70,6 @@ $(document).ready(function (){
 	$('.showmap').click(function() {
 		$('#gmaps').toggle();
 		return false;
-	});
-	
-	// Used to change list of events to display by date range
-	$('.select-date').click(function() { 		
-		alert(this.getAttribute("data-numdays"));
-		var enddate = this.getAttribute("data-numdays");
-		$.getScript('/events.js?end_date=' + enddate);
-		return false;  
 	});
 	
 });
@@ -124,18 +115,15 @@ function add_fields(link, association, content) {
 // add fancy box
 $(document).ready(function() {
 
-	/* This is basic - uses default settings */
-	
+	/* This is basic - uses default settings */	
 	$("a#single_image").fancybox();
 	
-	/* Using custom settings */
-	
+	/* Using custom settings */	
 	$("a#inline").fancybox({
 		'hideOnContentClick': true
 	});
 
 	/* Apply fancybox to multiple items */
-	
 	$("a#modalGroup").fancybox({
     	'width'			:   '560',
     	'height'		: 	'340',
@@ -150,3 +138,28 @@ $(document).ready(function() {
 		$("#modalGroup").trigger('click');
 	});
 });
+
+// add dropdown menu functionality
+$(function() {
+	$(".dropdown dt a").click(function() {
+    	$(".dropdown dd ul").toggle();
+	});
+});
+
+$(function() {
+	$(".dropdown dd ul li a").click(function() {
+    	var text = $(this).html();
+    	$(".dropdown dt a span").html(text);
+    	$(".dropdown dd ul").hide();
+	}); 
+});
+
+$(document).bind('click', function(e) {
+    var $clicked = $(e.target);
+    if (! $clicked.parents().hasClass("dropdown"))
+        $(".dropdown dd ul").hide();
+});
+
+function getSelectedValue(id) {
+    return $("#" + id).find("dt a span.value").html();
+}

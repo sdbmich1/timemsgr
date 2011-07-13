@@ -53,12 +53,13 @@ gem 'thinking-sphinx', '2.0.3'
 gem "gcal4ruby"
 
 group :development, :test do
-#  gem 'capybara'
+  gem 'capybara'
   gem 'spork', '~> 0.9.0.rc'
   gem 'rspec-rails'
   gem "hpricot", "0.8.3", :platform => :mswin
   gem 'mocha'
   gem 'ruby-debug19'
+  gem 'nokogiri', ">= 1.4.4.1", "<=1.5.0.beta.2" 
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
   gem 'faker', '0.3.1'

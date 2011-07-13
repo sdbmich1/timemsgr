@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110523033342) do
+ActiveRecord::Schema.define(:version => 20110704080644) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -219,6 +219,7 @@ ActiveRecord::Schema.define(:version => 20110523033342) do
     t.string   "activity_type"
     t.integer  "reminder"
     t.string   "remind_method"
+    t.integer  "credits"
   end
 
   add_index "events", ["cversion"], :name => "index_events_on_cversion"
@@ -308,6 +309,14 @@ ActiveRecord::Schema.define(:version => 20110523033342) do
 
   add_index "organizations", ["name"], :name => "index_organizations_on_name"
 
+  create_table "reward_credits", :force => true do |t|
+    t.string   "name"
+    t.string   "model_name"
+    t.integer  "credits"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "session_prefs", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -394,6 +403,17 @@ ActiveRecord::Schema.define(:version => 20110523033342) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_credits", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.string   "context"
+    t.integer  "credits"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_credits", ["user_id"], :name => "index_user_credits_on_user_id"
 
   create_table "user_events", :force => true do |t|
     t.integer  "user_id"

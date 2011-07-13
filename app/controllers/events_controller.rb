@@ -1,6 +1,8 @@
+require 'rewards'
 class EventsController < ApplicationController
-   before_filter :authenticate_user!, :load_user
+   before_filter :authenticate_user!, :load_data
    respond_to :html, :xml, :js
+   include Rewards
 	
 	def show
     @form = 'show_event'  			
@@ -17,7 +19,7 @@ class EventsController < ApplicationController
 	
 	def index
 	 	@form = "event_slider"  
-    !params[:end_date].blank? ? enddate = Time.now+params[:end_date].to_i.days : enddate = Time.now+180.days   
+    params[:end_date].blank? ? enddate = Time.now+30.days : enddate = Time.now+params[:end_date].to_i.days   
     @events = Event.active.is_visible?.upcoming(Time.now, enddate, Time.now, enddate)     		
     respond_with(@events)
  	end
@@ -36,8 +38,8 @@ class EventsController < ApplicationController
 	def update
 	  reset_vars
     @event = Event.find(params[:id])                 
-    flash[:notice] = "Successfully updated event." if @event.update_attributes(params[:event])       
-    respond_with(@event, :location => home_url)
+    flash[:notice] = "#{get_msg(@user, 'Event')}" if @event.update_attributes(params[:event])       
+    respond_with(@event)
 	end
 	
 	def new  			  
@@ -49,8 +51,8 @@ class EventsController < ApplicationController
 	
 	def create
     reset_vars 
-    @event = Event.new(params[:event])          
-    flash[:notice] = "Successfully created event." if @event.save            
+    @event = Event.new(params[:event])
+    flash[:notice] = "#{get_msg(@user, 'Event')}" if @event.save          
     respond_with(@event, :location => home_url)
  	end
 	
@@ -67,8 +69,9 @@ class EventsController < ApplicationController
 		
 	protected
 
-  def load_user
+  def load_data
     @user = current_user
+    @credits = get_credits(@user.id)
   end
 	  
   def load_vars

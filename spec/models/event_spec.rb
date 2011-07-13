@@ -77,8 +77,23 @@ describe Event do
     end
   end
 
-describe Type, "description" do
+  describe :add_credits do
+    before :each do
+      @event = Event.new(:city => 'SF', :event_type => 'ue', :start_time_zone => 'UTC')     
+#      @credits = Event.add_credits 
+    end
+    
+    it "should add credits for creditworthy fields" do
+      @event.changes.each do |key, item|
+        @credits += RewardCredit.find_by_name(key).credits unless RewardCredit.find_by_name(key).nil?
+      end
+      @event.credits should == @credits
+    end
+    
+    it "should not add credits for invalid fields" do
+      
+    end
   
-end
+  end
   
 end

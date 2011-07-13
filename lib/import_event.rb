@@ -1,4 +1,3 @@
-require 'win32ole'
 module ImportEvent
   
   def import
@@ -7,34 +6,16 @@ module ImportEvent
   end
   
   # import events from google calendar for user
-  def gcal_import
-    # initialize service
-    gservice = GCal4Ruby::Service.new
-    
-    # grab login parameters & authenticate
-    @email = params[:user][:email]
+  def gcal_import  
+    @email = params[:user][:email] # grab login parameters & authenticate
     @pwd = params[:user][:password]
 
+    gservice = GCal4Ruby::Service.new # initialize service
     gservice.authenticate(@email, @pwd)
-    
-    # grab events
-    @events = GCal4Ruby::Event.find(gservice, "")
-  
-    # add import events to db
-    add_import_events
-    
-    # redisplay events
-    redirect_to events_url   
-  end
-  
-  def outlook
-    outlook = WIN32OLE.new('Outlook.Application')   
-    mapi = outlook.GetNameSpace('MAPI') # get MAPI namespace
-        
-    # get default mapi calendar folder
-    @calendar = mapi.GetDefaultFolder(9)
-    
-    @form = "outlook_import"
+    @events = GCal4Ruby::Event.find(gservice, "") # grab events
+      
+    add_import_events # add import events to db
+    redirect_to events_url  # redisplay events
   end
   
   def add_import_events

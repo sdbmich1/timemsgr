@@ -1,4 +1,4 @@
-require 'Rewards'
+require 'rewards'
 class InterestsController < ApplicationController
   before_filter :authenticate_user!, :load_data	
 	respond_to :html, :json, :xml, :js

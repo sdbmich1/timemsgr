@@ -15,6 +15,10 @@ module EventsHelper
 	def user_events?
 	  @events.select {|event| event.user_id == @user.id }.count > 0 ? true : false
 	end
+
+  def observances?
+    @events.select {|event| event.event_type == 'obsrv' }.count > 0 ? true : false
+  end
 	
 	def set_slider_class(area)
 	  case area

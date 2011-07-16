@@ -55,7 +55,7 @@ section h1 {
 	clear: right;
 }
 
-.opp-slider { margin: 0; padding: 0; height: 200px; width:760px; min-width: 760px;}
+.opp-slider, .obsrv-slider, .sch-slider { margin: 0; padding: 0; height: 160px; width:750px; }
 
 .timeframe { margin-left: 80%; width: 100%; margin-top: -45px; }
 .slider-title {
@@ -144,7 +144,8 @@ section h1 {
     list-style-type:none;
 	display:inline-block;
 	vertical-align:middle;
-	margin: 0px 10px 10px 0px;
+	margin-bottom: 5px;
+	margin-right: 10px;
 	width: 240px;
 }
 

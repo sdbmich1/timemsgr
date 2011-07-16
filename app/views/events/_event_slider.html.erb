@@ -1,4 +1,6 @@
-<%= render :partial => 'slider', :locals => { :slider => "Observances" } %>
+<% if observances? %>
+	<%= render :partial => 'slider', :locals => { :slider => "Observances" } %>
+<% end %>
 <% if user_events? %>
 	<%= render :partial => 'slider', :locals => { :slider => "My Schedule" } %>
 <% end %>

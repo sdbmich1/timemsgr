@@ -2,7 +2,7 @@
 <% @category.each do |category| %>
 	<div class="interest">
 		<%= getlogo(category.photo_file_name) %>
-		<%= label_tag category.name.titleize %>
+		<span style="font-weight: bold;"><%= "#{category.name.titleize}" %></span>
 	</div>
 	<div>
 		<% category.interests.active.unhidden.each do |sub| %>		

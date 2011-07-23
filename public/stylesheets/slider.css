@@ -24,16 +24,14 @@ section {
 .adate { position:absolute; top: -4em; left: 1em; }
 
 #elist {
-  height: 96px;
+  height: 120px;
   width: 100%;
   position: relative;
-  clear:none;
 }
 
 #alist {  line-height: 18px;
   width: 100%;
   position: relative;
-
 }
 
 section h1 {
@@ -55,7 +53,7 @@ section h1 {
 	clear: right;
 }
 
-.opp-slider, .obsrv-slider, .sch-slider { margin: 0; padding: 0; height: 160px; width:750px; }
+.opp-slider, .obsrv-slider, .sch-slider { margin: 0 auto 20px; padding: 0; height: 160px; width:760px; visibility: hidden;}
 
 .timeframe { margin-left: 80%; width: 100%; margin-top: -45px; }
 .slider-title {
@@ -71,12 +69,21 @@ section h1 {
 	margin-top: 28px; font-size: 0.875em; line-height: 0.925em; width: 65%; }
 	
 .slider-time {
-	margin-top: -50px; 
 	font-size: 0.75em;
 	margin-left: 0.15em;
 	text-align:right;
 	height: 40px;
 	width: 45px;
+	margin-top: -70px;
+}
+
+.slider-stime {
+	font-size: 0.75em;
+	margin-left: 0.15em;
+	text-align:right;
+	height: 40px;
+	width: 45px;
+	margin-top: -50px;
 }
 
 .slider-nav {
@@ -91,6 +98,11 @@ section h1 {
 	-moz-box-shadow: inset 0 0 5px #888;
 	-webkit-box-shadow: inset 0 0 5px #888;
 	box-shadow: inner 0 0 5px #888;
+}
+
+.sborder {
+	border: 1px solid #CCCCCC;
+	padding: 5px;
 }
 
 /* calendar styling */
@@ -134,10 +146,10 @@ section h1 {
 
 .eslide {
 	overflow:hidden;
-	height:140px;
-    line-height:140px;
+	height:180px;
+    line-height:180px;
     position: relative;
-    width: 100%;
+    width: 100%; 
 }
 
 .eslide li {
@@ -146,14 +158,14 @@ section h1 {
 	vertical-align:middle;
 	margin-bottom: 5px;
 	margin-right: 10px;
-	width: 240px;
+ 
 }
 
 .grphead {font-variant: small-caps; font-size: 1.05em; font-weight: bold; }
 
 .img-btm { position:absolute; bottom: -7em; width: 100%;  left: 4em; }
-.action-img {position: absolute; right: 1em; top: 1em;  }
-.etype-img {position: absolute; right: 1em; top: 3em;  }
+.action-img {position: absolute; right: 0.5em; top: 1em;  }
+.etype-img {position: absolute; right: 0.5em; top: 3em;  }
 
 .rsz-img {  height: 16px; width: 16px; margin-left: 4px; }
 

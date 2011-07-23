@@ -1,14 +1,10 @@
 /* use to manage dropdown menus  */
-body {
-}
-
 .dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
 .dropdown dd { position:relative; }
 /* DT styles for sliding doors */
 .dropdown dt a {background:#0c6fcb url('../images/down.gif') no-repeat scroll right center;
     display:block; padding-right:20px; color: #ffffff; width:100px; text-decoration: none; 
-	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
-    }
+	border: 1px solid #CCCCCC;    }
 .dropdown dt a span {cursor:pointer; display:block; padding:5px;}
 /* UL styles */
 .dropdown dd ul { background:#0c6fcb none repeat scroll 0 0; display:none;

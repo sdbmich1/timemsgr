@@ -1,11 +1,11 @@
-<%= image_tag("rsz_alarm2_blk.png", :class => "action-img rsz-img")%>   	
-<%= image_tag("rsz_dining_blk.png", :class => "etype-img rsz-img") %>   	
+<%= image_tag("face-plain.png", :class => "action-img rsz-img")%>   	
+<%= image_tag("#{get_etype_icon(@etypes, event.Code)}", :class => "etype-img rsz-img") %>   	
 <div class="img-btm">
-	<%= link_to image_tag("rsz_move_blk2.png", :class => " rsz-img"), move_event_url(event), :title => "Move", :remote => true %> 
-	<%= link_to image_tag("rsz_share_blk.png", :class => " rsz-img"), share_event_url(event), :title => "Share", :remote => true %> 
-	<%= link_to image_tag("rsz_shout_blk.png", :class => " rsz-img"), notify_event_url(event), :title => "Notify", :remote => true %> 
-	<%= link_to image_tag("rsz_like_blk.png", :class => " rsz-img"), like_event_url(event), :title => "Recommend", :remote => true %> 
-	<%= link_to image_tag("rsz_sale_blk.png", :class => " rsz-img"), offer_event_url(event), :title => "Offer", :remote => true %> 
-	<%= link_to image_tag("rsz_cash_blk.png", :class => " rsz-img"), purchase_event_url(event),:title => "Buy Now",  :remote => true %> 
-	<%= link_to image_tag("rsz_rsvp_blk.png", :class => " rsz-img"), rsvp_event_url(event), :title => "RSVP", :remote => true %> 
+	<%= link_to image_tag("ev-move.png", :class => " rsz-img"), move_event_url(event), :title => "Move", :remote => true %> 
+	<%= link_to image_tag("ev-notify.png", :class => " rsz-img"), notify_event_url(event), :title => "Notify", :remote => true %> 
+	<%= link_to image_tag("ev-share.png", :class => " rsz-img"), share_event_url(event), :title => "Share", :remote => true %> 
+	<%= link_to image_tag("ev-like.png", :class => " rsz-img"), like_event_url(event), :title => "Recommend", :remote => true %> 
+	<%= link_to image_tag("ev-coupon.png", :class => " rsz-img"), offer_event_url(event), :title => "Offer", :remote => true %> 
+	<%= link_to image_tag("ev-shop.png", :class => " rsz-img"), purchase_event_url(event),:title => "Buy Now",  :remote => true %> 
+	<%= link_to image_tag("ev-rsvp.png", :class => " rsz-img"), rsvp_event_url(event), :title => "RSVP", :remote => true %> 
 </div>

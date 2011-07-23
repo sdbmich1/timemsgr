@@ -2,7 +2,7 @@ require 'rewards'
 class User < ActiveRecord::Base
   include Rewards   
   before_create :set_timezone
-  after_create :add_settings
+  after_create :add_settings, :send_welcome_msg
   before_save :add_rewards
   after_save :save_rewards
   has_many :authentications
@@ -87,6 +87,10 @@ class User < ActiveRecord::Base
   def save_rewards    
     save_credits(self.id, 'Profile', @reward_amt) unless @reward_amt.blank? || @reward_amt == 0
   end
+   
+  def send_welcome_msg
+     UserMailer.welcome_email(self).deliver  
+  end    
 
   # set default time zone for new users
   def set_timezone

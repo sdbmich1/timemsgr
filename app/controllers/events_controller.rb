@@ -20,7 +20,7 @@ class EventsController < ApplicationController
 	def index
 	 	@form = "event_slider"  
     params[:end_date].blank? ? enddate = Time.now+30.days : enddate = Time.now+params[:end_date].to_i.days   
-    @events = Event.active.is_visible?.upcoming(Time.now, enddate, Time.now, enddate)     		
+    @events = Event.upcoming(Time.now, enddate)     		
     respond_with(@events)
  	end
 	
@@ -72,25 +72,25 @@ class EventsController < ApplicationController
   def load_data
     @user = current_user
     @credits = get_credits(@user.id)
+    @etypes = EventType.all
   end
 	  
   def load_vars
     @form = "add_event"    
-    @event.start_time_zone = @user.time_zone
-    @event.end_time_zone = @user.time_zone 
+    @event.start_time_zone, @event.end_time_zone = @user.time_zone, @user.time_zone 
     @options = get_options('Activity') # get dropdown options
   end
   
 	def chk_params(item)
 	  item[:start_date] = parse_date(item[:start_date])  
     item[:end_date] = parse_date(item[:end_date])
-    item[:event_type] = params[:event_type] unless params[:event_type].blank?
+    item[:Code] = params[:Code] unless params[:Code].blank?
     item[:activity_type] = params[:activity_type] unless params[:activity_type].blank?
 	end
 	
 	def parse_date(old_dt)
     sdate = old_dt.to_s.split('/')
-    @new_dt = Date.parse(sdate.last + '-' + sdate.first + '-' + sdate.second)    
+    new_dt = Date.parse(sdate.last + '-' + sdate.first + '-' + sdate.second)    
   end     
   
   def get_options(val='Activity')

@@ -84,7 +84,6 @@ $(function () {
   		}, 60000 );
 	});	
 			
-//	$('#manage-items, #edit-item, #show-item').click(function () {  
 	$('.show-item, .manage-item').click(function () {  
  		clearInterval(timerId);
     	history.pushState(null, "", this.href);  
@@ -98,20 +97,6 @@ $(function () {
   });  
 });
 
-
-​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​// remove_fields:  Used to delete fields from a given form
-function remove_fields(link) {  
-        $(link).prev("input[type=hidden]").val("1");  
-        $(link).closest(".fields").hide();  
-}  
-     
-// add_fields:  Used to add fields to a given form  
-function add_fields(link, association, content) {  
-        var new_id = new Date().getTime();  
-        var regexp = new RegExp("new_" + association, "g");  
-        $(link).before(content.replace(regexp, new_id));  
-}  
-        
 // add fancy box
 $(document).ready(function() {
 

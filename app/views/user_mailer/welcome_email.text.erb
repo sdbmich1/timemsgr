@@ -1,9 +1,20 @@
-Welcome to TimeMsgr, <%= @user.first_name %>
-===============================================
- 
-You have successfully signed up to timemsgr.com,
 
- 
-To login to the site, just follow this link: <%= @url %>.
- 
-Thanks for joining and have a great day!
+Welcome to <%= @title %>, <%= @user.first_name %>
+===============================================
+
+Hi <%= @user.first_name %>,
+
+Your account has been created — now it will be easier than ever to plan, share, and discover activities for your schedule.
+To login to the site, just follow this link: <%= new_session_url(@user) %>.
+
+Your sign-in details: 
+
+Username:  <%= @user.username %>
+E-mail:    <%= @user.email %>
+Password:  <%= @user.password %>
+
+Please keep your sign-in details somewhere safe. Thanks for joining and have a great day!
+
+
+You are receiving this because your e-mail address was used to register at kits.rbca.net
+&copy; 2004-11 KITS, Inc. PO Box 3900 Palo Alto, CA 94306 USA. All rights reserved.

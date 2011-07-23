@@ -23,11 +23,11 @@ Factory.define :event do |event|
   event.state           "CA"
   event.postalcode      "90201"
   event.status          "active"
-  event.event_type      "ue"
+  event.event_type            "meeting"
   event.hide            "no"
 end
 
-Factory.define :interest do |interest|
+Factory.define :cat_interest do |interest|
   interest.name            "Camping"
   interest.category_id     "119" 
   interest.status          "active"
@@ -45,7 +45,7 @@ Factory.define :affiliation do |aff|
   aff.association :user
 end
 
-Factory.define :interest_user do |interest|
+Factory.define :interest do |interest|
   interest.name "Foo bar"
   interest.association :user
 end

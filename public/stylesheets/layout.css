@@ -230,6 +230,11 @@ footer nav {
   float: right;
 }
 
+hr { height:0.25em; margin-top: 0;}
+
+.timeframe { }
+.event-add { margin-left: 10px; }
+
 .edit-event { color: #cccccc; }
 
 .event-title { font-variant: small-caps; font-size: 1.75em; font-weight: bold; }

@@ -1,7 +1,6 @@
 class Category < ActiveRecord::Base
   attr_accessible :name, :photo
   
- # define relationships
   has_many :subcategories
   has_many :interests
 #  has_many :users, :through => :interests

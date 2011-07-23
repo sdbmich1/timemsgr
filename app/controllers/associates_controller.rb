@@ -1,54 +1,24 @@
+require 'rewards'
 class AssociatesController < ApplicationController
-    before_filter :authenticate_user!, :load_user
-    	
-#	respond_to :html, :json, :xml
+  before_filter :authenticate_user!, :load_user    	
+	respond_to :html, :json, :xml
+	include 'Rewards'
 
 	def load_user
-		
-		#set current user
-  		@user = current_user  
+  	@user = current_user  #set current user
 	end
 
 	def new
-  		
-  		# initialize model
-  		@associate = @user.associates.new
- 		
-#		respond_with(@associate)	
+		respond_with(@associate = @user.associates.new)	
 	end
 	
 	def create
-  		
-  	# get email address 
- 		@emails = params[:associate][:email].split(',')
-		
-    # parse each email address
+ 		@emails = params[:associate][:email].split(',') # get email address
 		@emails.count.times do |n|
-		  	@user.associates.build(:email => "#{@emails[n].strip}")  	
+		  	@user.associates.build(:email => "#{@emails[n].strip}") # parse each email address
 		end
 		  		
-  		respond_to do |format| 
-    		if @user.save 
- #     			format.html { redirect_to(@user, :notice => 'Invitation(s)were successfully sent.') }  
-     			format.html { redirect_to new_affiliation_path }  
-      		format.xml  { render :xml => @user, :status => :created, :location => @user }  
-    		else  
-    			flash[:alert] = 'One or more email addresses were invalid.  Please re-enter.'
-       		format.html { render :action => :new } 
-     			format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }  
-    		end  
-  		end  			
-	end
-	
-	def edit
-		
-	end
-	
-	def index
-		
-	end
-	
-	def update
-		
+		flash[:notice] = "#{get_msg(@user, 'Event')}" if @user.save          
+    respond_with(@user, :location => home_url)		
 	end
 end

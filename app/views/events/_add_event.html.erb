@@ -2,12 +2,10 @@
 <%= form_for @event, :html => { :class => "upload", :multipart => true }  do |f| %>
 	<%= render "shared/error_messages", :target => @event %>  
 
-	<div style="display:none">
-		<div id='modal'>
-			<div class="modal-title">
-			<span>Add Photo</span></div><br />
-			<p><%= label_tag "Select photo: " %><%= f.file_field :photo %></p>
-			<p><%= "(must be 1MB or less)" %></p>
+	<div style="display:none"><div id='modal'>
+		<div class="modal-title"><span>Add Photo</span></div><br />			
+		<p><%= label_tag "Select photo: " %><%= f.file_field :photo %></p>
+		<p><%= "(must be 1MB or less)" %></p>
 	</div></div>
 
 	<%= render :partial => 'event_type', :locals => { :event_type => chk_activity_type(@event), :f => f } %>

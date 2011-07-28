@@ -17,16 +17,6 @@ class UsersController < ApplicationController
     end 		
   end
   
-  def index
-  	@title = "Welcome back " + @user.first_name  	
-  end
-
-  def new
-  end
-  
-  def show
-  end
-  
   def edit   
     @user = User.includes(:host_profiles).find(params[:id]) #get user & profile data  
     @area = params[:p]  # determine which profile area to edit

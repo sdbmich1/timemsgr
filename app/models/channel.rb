@@ -8,8 +8,7 @@ class Channel < ActiveRecord::Base
 	has_many :channel_interests, :dependent => :destroy
 	has_many :interests, :through => :channel_interests
 	
-	has_many :events
-	
+	has_many :events	
 	has_many :channel_locations
 	
 	scope :active, :conditions => { :status => 'active' }

@@ -6,6 +6,7 @@ describe User do
     @attr = { :first_name => "Example", :last_name => "User", :email => "user@example.com",
     	 :gender => 'Male', :username => "test01", :birth_date => Time.parse('1980-11-11'),
     	 :location_id => 1, :password => 'setup123'}
+    @user = Factory.stub(:user)  # @user = User.create(@attr)
   end
  
   it "should require a first name" do
@@ -32,22 +33,14 @@ describe User do
     User.new(@attr.merge(:location_id => "")).should_not be_valid
   end
   
-  describe "user interests" do
-
-    before(:each) do
-      @user = Factory.stub(:user)  # @user = User.create(@attr)
-    end
+  describe "interests user" do
 
     it "should have an interest users attribute" do
-      @user.should respond_to(:interest_users)
+      @user.should respond_to(:interests)
     end
   end
  
   describe "affiliations" do
-
-    before(:each) do
-      @user = Factory.stub(:user)  # @user = User.create(@attr)
-    end
 
     it "should have a affiliations attribute" do
       @user.should respond_to(:affiliations)
@@ -55,10 +48,6 @@ describe User do
   end
   
   describe "associates" do
-
-    before(:each) do
-      @user = Factory.stub(:user)  # @user = User.create(@attr)
-    end
 
     it "should have a associates attribute" do
       @user.should respond_to(:associates)
@@ -68,7 +57,6 @@ describe User do
   describe "channels" do
 
     before(:each) do
-      @user = Factory.stub(:user)  # @user = User.create(@attr)
       @sub = Factory(:subscription, :user => @user) 
     end
 
@@ -80,7 +68,6 @@ describe User do
   describe "host profiles" do
 
     before(:each) do
-      @user = Factory.stub(:user)  # @user = User.create(@attr)
       @sub = Factory(:host_profile, :user => @user) 
     end
 
@@ -92,7 +79,6 @@ describe User do
   describe "settings" do
 
     before(:each) do
-      @user = Factory.stub(:user)  # @user = User.create(@attr)
       @sub = Factory(:setting, :user => @user) 
     end
 
@@ -115,16 +101,18 @@ describe User do
   
   context 'rewards' do
         
+    before :each do
+      @user = Factory.build(:user)      
+    end
+    
     it "should add user rewards on save" do
-      user = User.new(@attr)
-      user.expects(:add_rewards)
-      user.stub :save => true
+      @user.expects(:add_rewards)
+      @user.stub :save => true
     end
   
     it "should save user rewards on save" do
-      user = User.new(@attr)
-      user.expects(:save_rewards)
-      user.stub :save => true
+      @user.expects(:save_rewards)
+      @user.stub :save => true
     end  
   end
 

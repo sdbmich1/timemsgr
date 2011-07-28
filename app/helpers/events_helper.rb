@@ -8,8 +8,13 @@ module EventsHelper
 	  @credits
 	end
 	
+	def get_etype_icon(elist, ecode)
+	  etype = elist.detect { |e| e.Code == ecode } 
+	  etype.blank? ? 'star_icon.png' : etype.photo_file_name
+	end
+	
 	def nav_btn_img(direction)
-	  direction == "left"? "rsz_left_arrow_nav.png" : "rsz_right_arrow_nav.png"
+	  direction == "left" ? "Arrow-Left-Gray.png" : "Arrow-Right-Gray.png"
 	end
 	
 	def user_events?
@@ -17,7 +22,7 @@ module EventsHelper
 	end
 
   def observances?
-    @events.select {|event| event.event_type == 'obsrv' }.count > 0 ? true : false
+    @events.select {|event| event.Code == 'obsrv' }.count > 0 ? true : false
   end
 	
 	def set_slider_class(area)
@@ -40,7 +45,7 @@ module EventsHelper
 	end
 	
 	def get_nice_date(edate)  
-	  edate.nil? ? '' : edate.strftime('%m-%d-%Y') 
+	  edate.blank? ? '' : edate.strftime('%m-%d-%Y') 
 	end
 	
 	def set_header(form)
@@ -53,15 +58,15 @@ module EventsHelper
 	end
 	
 	def get_image
-	  @event.photo_file_name.nil? ? "schedule1.jpg" : @event.photo.url()
+	  @event.photo_file_name.blank? ? "schedule1.jpg" : @event.photo.url()
 	end
 	
 	def get_event_type
-	  @event.event_type unless @event.blank?
+	  @event.Code unless @event.blank?
 	end
 	
 	def chk_activity_type(event)
-	  event.nil? ? '' : event.activity_type
+	  event.blank? ? '' : event.activity_type
 	end
 	
 	def chk_start_dt(start_dt)

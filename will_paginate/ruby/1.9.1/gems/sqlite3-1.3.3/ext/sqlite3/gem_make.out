@@ -1,0 +1,28 @@
+/opt/bitnami/ruby/bin/ruby extconf.rb 
+checking for sqlite3.h... no
+sqlite3.h is missing. Try 'port install sqlite3 +universal'
+or 'yum install sqlite3-devel' and check your shared library search path (the
+location where your sqlite3 shared library is located).
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/opt/bitnami/ruby/bin/ruby
+	--with-sqlite3-dir
+	--without-sqlite3-dir
+	--with-sqlite3-include
+	--without-sqlite3-include=${sqlite3-dir}/include
+	--with-sqlite3-lib
+	--without-sqlite3-lib=${sqlite3-dir}/lib

@@ -1,0 +1,22 @@
+find_header: checking for sqlite3.h... -------------------- no
+
+"gcc -o conftest -I/opt/bitnami/ruby/include/ruby-1.9.1/i686-linux -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby/backward -I/opt/bitnami/ruby/include/ruby-1.9.1 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -D_FILE_OFFSET_BITS=64 -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -I/opt/bitnami/common/include conftest.c  -L. -L/opt/bitnami/ruby/lib -Wl,-R/opt/bitnami/ruby/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/opt/local/lib -Wl,-R/opt/local/lib -L/sw/local/lib -Wl,-R/sw/local/lib -L/usr/lib -Wl,-R/usr/lib -L. -L/opt/bitnami/common/lib -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/opt/bitnami/ruby/lib -L/opt/bitnami/ruby/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -E -I/opt/bitnami/ruby/include/ruby-1.9.1/i686-linux -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby/backward -I/opt/bitnami/ruby/include/ruby-1.9.1 -I. -I/usr/local/include -I/opt/local/include -I/sw/local/include -I/usr/include -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -D_FILE_OFFSET_BITS=64 -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -I/opt/bitnami/common/include  conftest.c -o conftest.i"
+conftest.c:3: fatal error: sqlite3.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <sqlite3.h>
+/* end */
+
+--------------------
+

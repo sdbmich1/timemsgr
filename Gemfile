@@ -1,12 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails' #, '3.0.7'
 gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'passenger'
+
+#gem 'sqlite3'
 gem 'mysql2', '0.2.6'
 
 gem 'will_paginate', '3.0.pre2'
@@ -20,7 +22,7 @@ gem 'meta_where'
 gem 'meta_search'
 
 # install oauth
-gem 'omniauth' 
+gem 'omniauth', '0.2.6'
 
 # add form validations 
 gem 'client_side_validations'  
@@ -56,7 +58,7 @@ gem 'thinking-sphinx', '2.0.3'
 gem "gcal4ruby"
 
 group :development, :test do
-  gem 'capybara'
+#  gem 'capybara'
   gem 'spork', '~> 0.9.0.rc'
   gem 'rspec-rails'
   gem "hpricot", "0.8.3", :platform => :mswin

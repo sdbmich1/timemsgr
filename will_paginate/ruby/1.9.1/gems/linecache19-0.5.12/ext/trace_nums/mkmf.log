@@ -1,0 +1,46 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -o conftest -I/opt/bitnami/ruby/include/ruby-1.9.1/i686-linux -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby/backward -I/opt/bitnami/ruby/include/ruby-1.9.1 -I. -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -D_FILE_OFFSET_BITS=64 -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -I/opt/bitnami/common/include conftest.c  -L. -L/opt/bitnami/ruby/lib -Wl,-R/opt/bitnami/ruby/lib -L. -L/opt/bitnami/common/lib -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/opt/bitnami/ruby/lib -L/opt/bitnami/ruby/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -E -I/opt/bitnami/ruby/include/ruby-1.9.1/i686-linux -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby/backward -I/opt/bitnami/ruby/include/ruby-1.9.1 -I. -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -D_FILE_OFFSET_BITS=64 -DAI_ADDRCONFIG=0 -I/opt/bitnami/common/include  -I/opt/bitnami/common/include  conftest.c -o conftest.i"
+conftest.c:3: fatal error: vm_core.h: No such file or directory
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/opt/bitnami/ruby/include/ruby-1.9.1/i686-linux -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby/backward -I/opt/bitnami/ruby/include/ruby-1.9.1 -I. -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby-1.9.2-p136 -I/opt/bitnami/common/include  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for version.h... -------------------- yes
+
+"gcc -E -I/opt/bitnami/ruby/include/ruby-1.9.1/i686-linux -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby/backward -I/opt/bitnami/ruby/include/ruby-1.9.1 -I. -I/opt/bitnami/ruby/include/ruby-1.9.1/ruby-1.9.2-p136 -I/opt/bitnami/common/include  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <version.h>
+/* end */
+
+--------------------
+

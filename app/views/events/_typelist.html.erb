@@ -1,1 +1,1 @@
-<%= label_tag "Event Type" %>	<% if !typelist.blank? %>		<%= select_tag 'Code', options_for_select(typelist.collect{ |c|[c.Description, c.Code] }, get_event_type()), :include_blank => true %><% end %>
+<span>Event Type </span><% if !typelist.blank? %>		<%= select_tag 'event_type', options_for_select(typelist.collect{ |c|[c.Description, c.Code] }, get_event_type()), :include_blank => true %><% end %>

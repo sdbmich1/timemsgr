@@ -20,7 +20,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password,  :remember_me, :username, :login, :accept_terms,
   				  :first_name, :last_name, :birth_date, :gender, :location_id, :time_zone,
   				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
-  				  :events_attributes, :host_profiles_attributes, :session_pref_ids 
+  				  :events_attributes, :host_profiles_attributes, :session_pref_ids
+  				  :localGMToffset 
   				  
   # name format validators
   uname_regex = /^[-\w\._@]+$/i
@@ -94,7 +95,8 @@ class User < ActiveRecord::Base
 
   # set default time zone for new users
   def set_timezone
-    self.time_zone = Location.where(["id = :value", { :value => self.location_id }]).first.time_zone
+    loc = Location.where(["id = :value", { :value => self.location_id }]).first
+    self.time_zone, self.localGMToffset = loc.time_zone, loc.localGMToffset
   end
   
   # set user hash for omniauth

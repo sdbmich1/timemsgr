@@ -9,7 +9,7 @@ module UsersHelper
   
   # sets partial name to navigation to corresponding user profile areas
   def set_area
-    if !@area.nil? 
+    if !@area.empty? 
       case @area
       when "Photo"
         @area = "user_photo"
@@ -21,9 +21,9 @@ module UsersHelper
         @area = "shared/categories"
       when "Hobbies"
         @area = "user_hobbies"
-       when "Affiliations"
+      when "Affiliations"
         @area = "shared/affiliations"
-     else
+      else
         @area = "user_profile"
       end
     else

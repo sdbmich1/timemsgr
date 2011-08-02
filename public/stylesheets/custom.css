@@ -3,14 +3,7 @@
   padding-top: 40px; 
 }
 
-body {
-/*
-  background: #cff;
-  background: #222222;
-*/  
-  background: #C2E1EF;
-
-}
+body { background: #C2E1EF; }
 
 header {
   padding-top: 20px;
@@ -78,19 +71,6 @@ footer nav {
   float: none;
 }
 
-/* error handling 
-.field_with_errors {
-  margin-top: 10px;
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-.field_with_errors label {
-  color: #fff;
-}
-
-*/
 #error_explanation {
   width: 400px;
   border: 2px solid red;
@@ -153,3 +133,37 @@ footer nav {
      position: absolute;
      height: expression(document.body.scrollHeight &gt; document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
     }
+    
+.field_with_errors { display: inline; }  
+      
+.field_with_errors .message {  
+      color: #D00;  
+      padding-left: 5px;  
+      font-size: 12px;  
+    }  
+
+#credit-gauge {
+	width: 240px; height: 120px; margin-left: 10px;
+}    
+
+.right-sidebar {
+ 	float:right;
+ 	position:relative;
+ 	width: 150px;
+ 	padding: 10px;
+ 	margin-right: 10px;
+/*	background-color:  #555555;
+	height: 400px;  */
+}
+
+.rsidebar {
+ 	float:right;
+ 	position:relative;
+  	margin-right: 30px;
+ 	margin-top: 40px;
+	width: 180px;
+	height: 300px;	
+}
+
+.rating { font-size:small; font-weight:bold; color: #0C6FCB; }
+.rating-hdr { font-size:small; color: #CCCCCC; }

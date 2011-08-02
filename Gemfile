@@ -22,6 +22,9 @@ gem 'meta_search'
 # install oauth
 gem 'omniauth' 
 
+# add form validations 
+gem 'client_side_validations'  
+
 # add google maps
 gem 'gmaps4rails'
 

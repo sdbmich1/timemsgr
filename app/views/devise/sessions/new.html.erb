@@ -9,14 +9,16 @@
 
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<div id="newreg" class="sign-in-label">
-		<p><%= f.label "Username or email" %></p>
+		<p><span>Username or email</span></p>
 		<p><%= f.text_field :login, :size => 40 %></p> 		
-		<p><%= f.label :password %></p>
+		<p><span>Password</span></p>
 		<p><%= f.password_field :password, :size => 40 %></p>
  			
     		<% if devise_mapping.rememberable? -%>
-  				<p><%= f.label :remember_me %><div class="sign-in-cbox">  					  							
-  					<%= f.check_box :remember_me %></div></p>
+  				<p><span>Remember Me</span>  					  							
+  					<div class="sign-in-cbox">
+  						<%= f.check_box :remember_me %>
+  					</div></p>
     		<% end -%>
    		<%= f.submit 'Sign In'%> 
     </div>

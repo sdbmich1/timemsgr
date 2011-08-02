@@ -14,9 +14,9 @@
  		<div id="event_errors" style="display:none" class="error"></div>
 		<%= render "shared/error_messages", :target => @subscription %>  
 
-		<%= render 'channel_lists' %>
-		<br />
-		<%= f.submit 'Continue >>', :class => "nav-right" %>
-		<br />
+		<%= render 'channel_lists' %><br />
+		<%= f.submit 'Continue >>', :class => "nav-right" %><br />
 	<% end %>
 <% end %>
+
+<%= render 'shared/right_gauge_sidebar' %>

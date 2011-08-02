@@ -3,14 +3,10 @@ module EventsHelper
 	def showtime
 		@time = Time.zone.now
 	end
-	
-	def show_credits
-	  @credits
-	end
-	
+		
 	def get_etype_icon(elist, ecode)
-	  etype = elist.detect { |e| e.Code == ecode } 
-	  etype.blank? ? 'star_icon.png' : etype.photo_file_name
+	  etype = elist.detect { |e| e.event_type == ecode } 
+	  etype.blank? ? 'star_icon.png' : etype.image_file
 	end
 	
 	def nav_btn_img(direction)
@@ -18,30 +14,39 @@ module EventsHelper
 	end
 	
 	def user_events?
-	  @events.select {|event| event.user_id == @user.id }.count > 0 ? true : false
+	  @events.select {|event| event.contentsourceID == @user.id.to_s }.count > 0 ? true : false
 	end
 
   def observances?
-    @events.select {|event| event.Code == 'obsrv' }.count > 0 ? true : false
+    @events.select {|event| event.event_type == 'h' || event.event_type == 'm' }.count > 0 ? true : false
   end
 	
 	def set_slider_class(area)
-	  case area
-	  when "Observances"
-	    sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "obsv-slider" } 
- 	  when "Opportunities"
-      sclass = {:lnav => 'prev', :rnav => "next", :stype => "tmp-slider" } 
+	  case 
+	  when !(area =~ /Observances/i).nil?
+	    sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "obsrv-slider" } 
+ 	  when !(area =~ /Opportunities/i).nil?
+      sclass = {:lnav => 'prev', :rnav => "next", :stype => "opp-slider" } 
 	  else
       sclass = {:lnav => 'sch-prev-btn', :rnav => "sch-next-btn", :stype => "sch-slider" } 
     end
 	end
 	
+  def chk_offset(tm, offset)
+    if !offset.blank? && !@user.localGMToffset.blank?
+      tm = tm.advance(:hours => (0 - offset).to_i)
+#     offset == @user.localGMToffset ? tm : tm = tm.advance(:hours => (@user.localGMToffset - offset).to_i)
+    end
+    return tm.strftime("%l:%M %p")
+  end	
+  
 	def chk_time(val)	  
 	  val.blank? ? '' : val.strftime('%l:%M %P')
 	end
 	
 	def set_panel
-	  @form == "add_event" || @form == "edit_event" ? 'photo_panel' : 'shared/user_panel'
+#	  @form == "add_event" || @form == "edit_event" ? 'photo_panel' : 'shared/user_panel'
+    'shared/user_panel'
 	end
 	
 	def get_nice_date(edate)  
@@ -61,12 +66,35 @@ module EventsHelper
 	  @event.photo_file_name.blank? ? "schedule1.jpg" : @event.photo.url()
 	end
 	
+  def holiday?(etype)
+    etype == 'h' ? true : false
+  end
+
 	def get_event_type
-	  @event.Code unless @event.blank?
+	  @event.event_type unless @event.blank?
 	end
 	
 	def chk_activity_type(event)
 	  event.blank? ? '' : event.activity_type
+	end
+	
+	def chk_event_type(etype, egrp)
+	  case egrp
+	  when 'Shop'
+	    case etype 
+	    when 'perform', 'match', 'sale', 'fund', 'ue', 'ce' 
+	      true
+	    else
+	      false
+	    end
+    when 'RSVP'
+      case etype
+      when 'perform', 'match', 'ue', 'cs' 
+        true 
+      else
+        false
+      end
+    end
 	end
 	
 	def chk_start_dt(start_dt)
@@ -76,6 +104,12 @@ module EventsHelper
 	def show_date(start_dt)  
 	  start_dt <= Date.today ? Date.today : start_dt
 	end
+	
+	def is_past?(ev)
+	  return false if ev.endGMToffset.blank?
+    etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
+    ev.eventstartdate <= Date.today && Time.now > etm ? true : false    
+  end
 	
 	# parse date ranges
 	def get_start_date(start_dt, end_dt, dtype)	  
@@ -98,5 +132,9 @@ module EventsHelper
 	# check if event photo file exists
 	def eventphoto(fname)
 	  fname.empty? ? fname = "camera.jpg" : fname
+	end
+	
+	def get_opp_events
+	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || is_past?(e) || e.contentsourceID == @user.id.to_s }
 	end
 end

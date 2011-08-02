@@ -1,14 +1,11 @@
-require 'rewards'
 class EventsController < ApplicationController
    before_filter :authenticate_user!, :load_data
    respond_to :html, :xml, :js
-   include Rewards
 	
 	def show
     @form = 'show_event'  			
-    @event = Event.find(params[:id])
- 		@json = @event.to_gmaps4rails # get google map data
- 		respond_with(@event)
+# 		@json = @event.to_gmaps4rails unless @event.mapstreet.blank? # get google map data
+ 		respond_with(@event = Event.find_event(params[:id]).first)
 	end
 	
 	# list user-specific events
@@ -20,8 +17,7 @@ class EventsController < ApplicationController
 	def index
 	 	@form = "event_slider"  
     params[:end_date].blank? ? enddate = Time.now+30.days : enddate = Time.now+params[:end_date].to_i.days   
-    @events = Event.upcoming(Time.now, enddate)     		
-    respond_with(@events)
+    respond_with(@events = Event.current(enddate, @user.id))
  	end
 	
 	def clone  
@@ -30,9 +26,8 @@ class EventsController < ApplicationController
 	
 	def edit
     @form = "edit_event"	
-    @event = Event.find(params[:id])
-    @options = get_options(@event.activity_type) # get dropdown options 
-    respond_with(@event)
+    @options = get_options # @event.activity_type get dropdown options 
+    respond_with(@event = Event.find(params[:id]))
 	end
 	
 	def update
@@ -43,7 +38,7 @@ class EventsController < ApplicationController
 	end
 	
 	def new  			  
-    @event = Event.new(@user.time_zone)   
+    @event = Event.new   
     set_clone(params[:p2]) if params[:p1] == "clone"
     load_vars
     respond_with(@event)
@@ -71,20 +66,21 @@ class EventsController < ApplicationController
 
   def load_data
     @user = current_user
-    @credits = get_credits(@user.id)
-    @etypes = EventType.all
+    @quote = Promo.random
+    @etypes = EventTypeImage.all
   end
 	  
   def load_vars
     @form = "add_event"    
-    @event.start_time_zone, @event.end_time_zone = @user.time_zone, @user.time_zone 
+    @event.localGMToffset = @event.endGMToffset = @user.localGMToffset 
+    @event.contentsourceID = @user.id
     @options = get_options('Activity') # get dropdown options
   end
   
 	def chk_params(item)
-	  item[:start_date] = parse_date(item[:start_date])  
-    item[:end_date] = parse_date(item[:end_date])
-    item[:Code] = params[:Code] unless params[:Code].blank?
+	  item[:eventstartdate] = parse_date(item[:eventstartdate])  
+    item[:eventenddate] = parse_date(item[:eventenddate])
+    item[:event_type] = params[:event_type] unless params[:event_type].blank?
     item[:activity_type] = params[:activity_type] unless params[:activity_type].blank?
 	end
 	

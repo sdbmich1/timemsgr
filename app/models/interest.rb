@@ -8,8 +8,11 @@ class Interest < ActiveRecord::Base
 	
 	has_attached_file :photo, :styles => { :small => "25x25>" }  
 
-  scope :active, :conditions => { :status => 'active' }
   scope :unhidden, :conditions => { :hide => 'no' }
+  
+  def self.active
+    unhidden.where(:status => 'active')
+  end
 
 	# sort ascending	
 	default_scope :order => 'sortkey ASC'

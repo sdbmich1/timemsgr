@@ -21,18 +21,7 @@ module Rewards
   end
   
   def get_msg(usr, tag)
-    msg = "#{usr.first_name}, you just earned #{get_last_credits(usr.id)} credits." 
-    case tag
-    when 'Welcome'
-      msg += " You can earn up to 2,000 more credits by selecting your interests now."
-    when 'Event'
-      msg += " Earn more credits any time you add, update, or share an event."
-    when 'Profile'
-      msg += " You can earn more credits by adding events, adding friends, and much more." 
-    when 'Subscription'
-      msg += ' You can earn up to 500 more credits by entering your affiliations now.'
-    when 'Interest'
-      msg += ' Earn more credits by selecting your channels now.'
-    end
+    msg = "#{usr.first_name}, you now have #{get_credits(usr.id)} credits. " 
+    msg += RewardMsg.find_by_msg_type(tag).description
   end
 end

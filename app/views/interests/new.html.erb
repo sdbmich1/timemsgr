@@ -14,9 +14,11 @@
 	<%= form_for @interest do |f| %>
  		<div id="event_errors" style="display:none" class="error"></div>
 		<%= render "shared/error_messages", :target => @interest %>  
-		<%= render 'shared/categories' %>
+		<%= render :partial => 'categories', :as => :category, :collection => @categories %>
 		<br />
 		<%= f.submit 'Continue >>', :class => "nav-right" %>
 		<br />
   	<% end %>
 <% end %>
+
+<%= render 'shared/right_gauge_sidebar' %>

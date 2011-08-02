@@ -2,10 +2,10 @@
 <% @category.each do |category| %>
 	<div class="interest">
 		<%= getlogo(category.photo_file_name) %>
-		<span style="font-weight: bold;"><%= "#{category.name.titleize}" %></span>
+		<span class="int-label"><%= "#{category.name.titleize}" %></span>
 	</div>
 	<div>
-		<% category.interests.active.unhidden.each do |sub| %>		
+		<% category.interests.active.each do |sub| %>		
  			<div class="prefs-cbox">
 				<%= check_box_tag "user[interest_ids][]", sub.id, @user.interests.include?(sub) %><%= sub.name %>			
 			</div>		

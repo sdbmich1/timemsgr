@@ -2,18 +2,20 @@
   <section class="sborder">
   	<div id="elist">
 		<div class="calendar"> 
-    		<span class="month"><%= show_date(event.start_date).strftime("%b") %></span>
-    		<span class="day"><%= show_date(event.start_date).strftime("%e") %></span>
+    		<span class="month"><%= show_date(event.eventstartdate).strftime("%b") %></span>
+    		<span class="day"><%= show_date(event.eventstartdate).strftime("%e") %></span>
 		</div>
- 		<div class="slider-time"><%= "#{event.end_time.strftime("%l:%M %p")}" %></div>
-		<div class="slider-stime"><%= "#{event.start_time.strftime("%l:%M %p")}" %></div>
+		<% if !holiday?(event.event_type) %>
+ 			<div class="slider-time"><%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
+			<div class="slider-stime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %></div>
+		<% end %>
  		<div class="slider-title">
-			<h1><%= link_to event.title, event, :class => "show-item" %></h1><br />
+			<h1><%= link_to event.event_title, event_url(event), :class => "show-item" %></h1><br />
 		</div>
 		<div class="slider-descr">
-			<%= truncate(event.description, :length => 80, :omission =>"…") %><br />
+			<%= raw truncate(event.bbody, :length => 120, :omission =>"…") %><br />
 		</div>
-		<%= render :partial => 'event_action_items', :locals => { :event => event } %>		
+		<%= render :partial => 'event_action_items', :locals => { :event => event, :slider => slider } %>		
 	</div>
   </section>
 </li>

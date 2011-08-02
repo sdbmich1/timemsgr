@@ -5,3 +5,6 @@ en:
   date:
     formats:
       default: "%m/%d/%Y"
+  errors:  
+    messages:  
+      email_format: "is not formatted properly."        

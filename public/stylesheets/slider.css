@@ -53,7 +53,7 @@ section h1 {
 	clear: right;
 }
 
-.opp-slider, .obsrv-slider, .sch-slider { margin: 0 auto 20px; padding: 0; height: 160px; width:760px; visibility: hidden;}
+.opp-slider, .obsrv-slider, .sch-slider { margin: 0 auto 10px; padding: 0; height: 160px; width:760px; visibility: hidden;}
 
 .timeframe { margin-left: 80%; width: 100%; margin-top: -45px; }
 .slider-title {
@@ -62,8 +62,8 @@ section h1 {
 	float: left;
 }
 
-.slider-title h1 { position:absolute; top: 1em; left: 4.25em; font-weight: bold; 
-	font-size: 1.025em; height: 40px; width: 65%; }
+.slider-title h1 { position:absolute; top: 0.1em; left: 4.25em; font-weight: bold; 
+	font-size: 1.0em; height: 40px; width: 65%; }
 
 .slider-descr { position:absolute; top: 2em; left: 5em; min-height:100%;
 	margin-top: 28px; font-size: 0.875em; line-height: 0.925em; width: 65%; }
@@ -161,11 +161,11 @@ section h1 {
  
 }
 
-.grphead {font-variant: small-caps; font-size: 1.05em; font-weight: bold; }
+.grphead {font-variant: small-caps; color:#0C6FCB; font-size: 1.05em; font-weight: bold; margin-left: auto; margin-right: auto;}
 
 .img-btm { position:absolute; bottom: -7em; width: 100%;  left: 4em; }
-.action-img {position: absolute; right: 0.5em; top: 1em;  }
-.etype-img {position: absolute; right: 0.5em; top: 3em;  }
+.action-img {position: absolute; right: 0.5em; top: 0.1em;  }
+.etype-img {position: absolute; right: 0.5em; top: 1.75em;  }
 
 .rsz-img {  height: 16px; width: 16px; margin-left: 4px; }
 

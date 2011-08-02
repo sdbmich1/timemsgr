@@ -9,7 +9,7 @@ Timemsgr::Application.routes.draw do
     end
     
     collection do
-      get 'manage', 'import', 'clock'
+      get 'manage', 'import', 'clock', 'getquote'
     end
   end
   

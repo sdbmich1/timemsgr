@@ -1,9 +1,7 @@
-require 'rewards'
 class UsersController < ApplicationController
   before_filter :authenticate_user!, :load_data
   layout "users"
   respond_to :html, :json, :xml, :js
-  include Rewards
    
   def load_data
   	@user = current_user   	
@@ -30,7 +28,6 @@ class UsersController < ApplicationController
   end
    
   def update       
-#    set_channels('session_pref_ids', 'edit') if @area == 'Prefs'
     @user = User.find(params[:id])                 
     flash[:notice] = "#{get_msg(@user, 'Profile')}" if @user.update_attributes(params[:user])
     respond_with(@user, :location => home_path)

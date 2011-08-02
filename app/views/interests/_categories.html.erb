@@ -1,14 +1,12 @@
 <!-- list all categories and related interests -->
-<% @category.each do |category| %>
-	<div class="interest">
-		<%= getlogo(category.photo_file_name) %>
-		<%= label_tag category.name.titleize %>
-	</div>
-	<div>
-		<% category.interests.active.unhidden.each do |sub| %>		
- 			<div class="prefs-cbox">
-				<%= check_box_tag "user[interest_ids][]", sub.id, @selected_ids.include?(sub) %><%= sub.name %>			
-			</div>		
-		<% end %>
-	</div>
-<% end %>
+<div class="interest">
+	<%= getlogo(category.photo_file_name) %>
+	<span class="int-label"><%= "#{category.name.titleize}" %></span>
+</div>
+<div>
+	<% category.interests.active.each do |sub| %>		
+		<div class="prefs-cbox">
+			<%= check_box_tag "user[interest_ids][]", sub.id, @user.interests.include?(sub) %><%= sub.name %>			
+		</div>		
+	<% end %>
+</div>

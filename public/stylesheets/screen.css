@@ -66,10 +66,18 @@ a.cb_label {
   font-size: 10px;
 }
 
-#newreg {
+#newreg span {
+	display:block;
+	float:left;
+	width:100px;
+	text-align:right;
+	font-weight:normal;
+    line-height:18px;
+	vertical-align: middle;
+	margin:7px 5px 0px 0px;
 }
 
-#newreg label {
+.new-reg {
 	display:block;
 	float:left;
 	width:100px;
@@ -157,6 +165,8 @@ div.boolean {
 	
 }
 
-.interest label {
-	font-weight: bold;
-}
+.interest label { font-weight: bold; }
+
+.int-label { font-weight: bold; }
+
+.menu-bkgd {position: absolute; top: 0; width: 100%; }

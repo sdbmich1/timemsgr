@@ -2,17 +2,32 @@ module ApplicationHelper
  
   # returns logo or name
   def get_name_or_logo
-    @name = "TimeBrowzer"
+    @name = "Koncierge"
+  end
+      
+  def getcredits
+    @credits
+  end
+  
+  def get_rating
+    case @credits
+    when 0..2000
+      'POOR'
+    when 2000..4000
+      'LOW'
+    when 4000..6000
+      'AVERAGE'
+    when 6000..8000
+      'GOOD'
+    else
+      'GREAT'
+    end
   end
   
   # Return a title on a per-page basis.
   def get_title
     base_title = get_name_or_logo
-    if @title.nil?
-      base_title
-    else
-      "#{base_title} | #{@title}"
-    end
+    @title.nil? ? base_title : "#{base_title} | #{@title}"
   end
   
   # returns company logo

@@ -7,17 +7,17 @@
   <%= render :partial => "devise/shared/links" %>
   <h3><strong>Keep Informed.</strong></h3>
 
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :validate => true) do |f| %>
  	<%= devise_error_messages! %>
  	<div id="newreg">
- 		<p><%= f.label :first_name %> <%= f.text_field :first_name %></p> 
- 		<p><%= f.label :last_name %> <%= f.text_field :last_name %></p>
-		<p><%= f.label :username %>   <%= f.text_field :username %></p>
-		<p><%= f.label :password %><%= f.password_field :password, :class => "password" %></p>
-   		<p><%= f.label :email %><%= f.text_field :email %></p>
- 		<p><%= f.label :location %><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => 'Select' %></p>
-		<p><%= f.label :gender %><%= f.select :gender, options_for_select( ['Male', 'Female'] ), :prompt => 'Select' %></p>
-   		<p><%= f.label :birth_date %>
+ 		<p><span>First Name</span> <%= f.text_field :first_name %></p> 
+ 		<p><span>Last Name</span>  <%= f.text_field :last_name %></p>
+		<p><span>Username</span>  <%= f.text_field :username %></p>
+		<p><span>Password</span><%= f.password_field :password, :class => "password" %></p>
+   		<p><span>Email</span><%= f.text_field :email %></p>
+ 		<p><span>Location</span><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => 'Select' %></p>
+		<p><span>Gender</span><%= f.select :gender, options_for_select( ['Male', 'Female'] ), :prompt => 'Select' %></p>
+   		<p><span>Birth Date</span>
     		<%= f.date_select :birth_date, :as => :date, :start_year => Date.today.year - 90,
                                 :end_year => Date.today.year - 12, 
                                 :order => [:month, :day, :year], :required => true, 

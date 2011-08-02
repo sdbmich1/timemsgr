@@ -12,8 +12,9 @@
 		'fancybox/jquery.fancybox-1.3.4.js',
 		'fancybox/jquery.mousewheel-3.0.4.pack.js',
 		'fancybox/jquery.mousewheel-3.0.4.pack.js',
-		'slider.js',
-		 :cache => true %>
+		'rails.validations.js', 
+		'slider.js',  :cache => true %>
+  <!--[if IE]><%= javascript_include_tag "excanvas.js" %><![endif]-->	 
   <%= csrf_meta_tag %>  	
   <%= render 'layouts/stylesheets' %>
   <%= render 'layouts/header' %>   

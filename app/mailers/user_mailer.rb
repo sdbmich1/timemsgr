@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   
   def welcome_email(user)
     @user = user
-    @title = 'TimeMsgr'
+    @title = 'Koncierge'
     @url  = "http://localhost:3000/sign_in"
     mail(:to => "#{user.first_name} #{user.last_name} <#{user.email}>",
          :subject => "Welcome to #{@title}, #{user.username}!") 
@@ -23,6 +23,6 @@ class UserMailer < ActionMailer::Base
     
     # send email to each associate
 	  mail(:to => @associate.email,
-        	 	 :subject => "Check out my schedule on TimeMsgr")   
+        	 	 :subject => "Check out my schedule on Koncierge")   
   end
 end

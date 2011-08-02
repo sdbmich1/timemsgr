@@ -1,0 +1,13 @@
+<%= render :partial => 'shared/edit_form' %>
+
+<% content_for :content do -%>
+  <div class="span-18 last boxed" id="user-prefs">  
+	<%= form_for setup_user(@user), :validate => true do |f| %>
+  		<div class="span-18 last" id="new-event">  
+			<%= render "shared/error_messages", :target => @user %>  
+			<%= render :partial => set_area, :locals => { :f => f } %>
+ 		</div>
+		<p><%= f.submit "Save" %></p>
+	<% end %>
+  </div> 
+<% end %>

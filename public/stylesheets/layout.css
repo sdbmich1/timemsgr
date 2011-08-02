@@ -23,16 +23,6 @@ body {
 	padding-top: 2px;
 }
 
-.right-sidebar {
- 	float:right;
- 	position:relative;
-  	margin-right: 20px;
-	width: 150px;
-	padding: 10px;
-/*	background-color:  #555555;
-	height: 400px;  */
-
-}
 
 .leftpad {
 	padding-left: 1px;
@@ -65,7 +55,7 @@ footer nav {
 	display:inline-block;
  }
 
-#new-event label {
+#new-event span {
 	display:block;
 	float:left;
 	width:100px;
@@ -237,4 +227,9 @@ hr { height:0.25em; margin-top: 0;}
 
 .edit-event { color: #cccccc; }
 
-.event-title { font-variant: small-caps; font-size: 1.75em; font-weight: bold; }
+.event-title {  font-size: 1.25em; font-weight: bold; }
+
+.q-msg { font-size: 0.75em; font-style: italic; min-height:100%; line-height: 0.875em; width: 65%; }
+.q-spkr { font-size: 0.75em; font-weight: bold; float: right; }
+
+#quotes { padding:2px;  margin-bottom: 20px; }

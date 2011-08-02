@@ -7,7 +7,7 @@ describe Event do
   end
   
   it "should require an event code" do
-    Event.new(:Code => "").should_not be_valid
+    Event.new(:event_type => "").should_not be_valid
   end
   
   describe "date validations" do

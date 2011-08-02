@@ -1,8 +1,6 @@
-require 'rewards'
 class InterestsController < ApplicationController
   before_filter :authenticate_user!, :load_data	
 	respond_to :html, :json, :xml, :js
-	include Rewards
 
   def load_data
   	@user = current_user  #set current user
@@ -10,7 +8,7 @@ class InterestsController < ApplicationController
   end
   
 	def new
-		@category = Category.includes(:interests)  # get category data
+		@categories = Category.active  # get category data
 		respond_with(@interest = @user.interests.build)	
 	end
 	

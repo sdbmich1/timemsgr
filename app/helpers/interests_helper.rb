@@ -5,6 +5,7 @@ module InterestsHelper
   end
    
   def set_fname(fname)  	 
-	   fname = "#(file.dirname(__FILE__))/../public/images/" + fname # set file name
+	  fname = "#(file.dirname(__FILE__))/../public/images/" + fname # set file name
   end
+
 end

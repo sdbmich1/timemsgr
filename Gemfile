@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails' #, '3.0.7'
+gem 'rails', '3.0.9'
 gem 'rake', '0.8.7'
 
 # Bundle edge Rails instead:
@@ -71,7 +71,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'factory_girl_rails', '1.0'
+  gem 'factory_girl_rails' #, '1.0'
   gem 'webrat'
 end
 

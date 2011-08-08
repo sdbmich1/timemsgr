@@ -1,8 +1,6 @@
-require 'rewards'
 class AssociatesController < ApplicationController
   before_filter :authenticate_user!, :load_user    	
 	respond_to :html, :json, :xml
-	include 'Rewards'
 
 	def load_user
   	@user = current_user  #set current user

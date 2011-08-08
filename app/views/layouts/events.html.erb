@@ -6,7 +6,7 @@
  	  	<%= render 'shared/initialize' %>
  	  	
    		<% if user_signed_in? %>
-   			<%= javascript_include_tag 'timer.js', 'jquery.gauge.min.js', 'credit-gauge.js', 'gauge.min.js', :cache => true %>
+   			<%= javascript_include_tag 'timer.js', 'jquery.progressbar.min.js', 'progress_meter.js', :cache => true %>
   			<%= stylesheet_link_tag 'breadcrumb', :media => 'screen' %>  
    		<% end %> 
 
@@ -20,7 +20,7 @@
   <body>
 	  	<%= yield :left_sidebar %>
 	  	<%= yield :right_sidebar %>
- 		<div class="container round landing-bg" id="landing">  
+ 		<div class="container landing-bg" id="landing">  
  			<div id="spinner" style="display:none"></div>
 	  		<%= yield :content %>
 			<%= yield :scripts %>

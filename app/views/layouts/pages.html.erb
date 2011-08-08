@@ -9,9 +9,9 @@
   <%= yield :head %>		
 </head>
 	<body>
-		<div class="span-24 last">
+    	<div class="container">
       		<%= yield :content %>
-       		<%= render 'layouts/footer' %>
-		</div>
- 	</body>
+       	</div>
+        <%= render 'layouts/footer' %>
+	</body>
 </html>

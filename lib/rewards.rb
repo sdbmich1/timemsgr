@@ -24,4 +24,8 @@ module Rewards
     msg = "#{usr.first_name}, you now have #{get_credits(usr.id)} credits. " 
     msg += RewardMsg.find_by_msg_type(tag).description
   end
+  
+  def get_meter_info
+    ProgressMeter.active
+  end
 end

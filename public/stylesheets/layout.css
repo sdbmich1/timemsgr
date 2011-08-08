@@ -15,6 +15,7 @@ body {
 	width: 150px;
 	margin-left: 20px;
 	padding: 10px;
+	margin-top: 20px;
 /*	background-color:  #555555;
 	height: 400px;  */
 }
@@ -46,9 +47,7 @@ footer {
   padding-top: 10px;
 }
 
-footer nav {
-  float: none;
-}
+footer nav {  float: none; }
 
 #new-event {
 	vertical-align: middle;	
@@ -72,17 +71,11 @@ footer nav {
 	height:100px;
 	}
 
-#new-event p {
-	line-height:0.55em;
-}
+#new-event p { line-height:0.55em; }
 
-#new-event h2 {
+#new-event h2 {}
 
-}
-
-.event-label {
-	margin:7px 5px 0px 0px;
-}
+.event-label { 	margin:7px 5px 0px 0px; }
 
 #new-event input[type='submit'] {  
 	  font-family: Verdana, Arial;
@@ -229,7 +222,7 @@ hr { height:0.25em; margin-top: 0;}
 
 .event-title {  font-size: 1.25em; font-weight: bold; }
 
-.q-msg { font-size: 0.75em; font-style: italic; min-height:100%; line-height: 0.875em; width: 65%; }
+.q-msg { font-size: 0.75em; font-style: italic; width: 65%; margin: 0; padding:0; }
 .q-spkr { font-size: 0.75em; font-weight: bold; float: right; }
 
-#quotes { padding:2px;  margin-bottom: 20px; }
+#quotes { padding:2px;  margin-bottom: 20px; line-height: 0.875em; }

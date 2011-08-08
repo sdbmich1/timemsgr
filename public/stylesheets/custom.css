@@ -112,13 +112,12 @@ footer nav {
 #ajaxSpinnerImage {display:none;}
 
 #spinner {
-    margin:0px 0px 0px 0px;
+    margin-top: 300px;
+    margin-left: 400px;
     position:fixed;
-    height: 100%;
+    height: 10%;
     z-index:9999;
-    padding-top:200px;
-    padding-left:50px;
-    width:70%;
+    width:10%;
     clear:none;
     opacity: .4;
     background:#000000 url("../images/ajax-loader.gif") no-repeat center center;
@@ -150,8 +149,9 @@ footer nav {
  	float:right;
  	position:relative;
  	width: 150px;
- 	padding: 10px;
+ 	padding: 5px;
  	margin-right: 10px;
+ 	margin-top: 20px;
 /*	background-color:  #555555;
 	height: 400px;  */
 }
@@ -159,11 +159,16 @@ footer nav {
 .rsidebar {
  	float:right;
  	position:relative;
-  	margin-right: 30px;
+  	margin-right: 40px;
  	margin-top: 40px;
 	width: 180px;
 	height: 300px;	
 }
 
 .rating { font-size:small; font-weight:bold; color: #0C6FCB; }
-.rating-hdr { font-size:small; color: #CCCCCC; }
+.rating-hdr, .pb-label { font-size:small; color: #CCCCCC; margin-left: auto; margin-right: auto; margin-bottom: 15px; width: 300px; }
+
+.progressBar { font-size: 9px; }
+.pb-offset { font-size: 10px; margin-top: 5px; }
+/* .pb-qo1, .pb-qo2, .pb-qo3, .pb-qo4 { position: absolute; left: 9.5em; margin-top: 5px; }
+*/

@@ -20,7 +20,8 @@ footer nav {
 }
 
 #homepage {
-	font-size: 14px;	
+	font-size: 14px;
+	margin-top: 20px;	
 }
 
 #homepage h3 {
@@ -53,3 +54,5 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+.page-bkgd { width: 100%; }

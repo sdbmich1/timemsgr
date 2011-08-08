@@ -1,17 +1,14 @@
-<div class="span-12">
-	<br />
-	<span class="prepend-5">
+
+<div class="span-7" id="homepage">
 		<%= image_tag("clockbkgd1.jpg", :alt => get_name_or_logo, :size => "240x240") %>
-	</span>
 </div>
-<div class="span-12 last" id="homepage">
-	<br />
+<div class="span-17 last" id="homepage">
 	<h3>Know What's Happening</h3>  
-	<span> 
-	<%= "#{get_name_or_logo}" %> brings all your schedules together online & automatically 
-	notifies you of upcoming relevant activities saving you time and money. 
-	</span><br />  
+	<span><%= "#{get_name_or_logo}" %> is a cloud-based scheduling and communications service. 
+		<%= "#{get_name_or_logo}" %> brings all your schedules together online & automatically 
+		notifies you of upcoming relevant activities saving you time and money. </span><br />	  
 	<center>
  		<%= link_to "Sign Up!",new_user_registration_path, :class => "signup_button round" %>
 	</center> 
 </div>
+

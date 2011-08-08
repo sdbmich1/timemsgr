@@ -1,10 +1,9 @@
 class EventsController < ApplicationController
-   before_filter :authenticate_user!, :load_data
+   before_filter :authenticate_user!, :load_data, :except => [:get_drop_down_options]
    respond_to :html, :xml, :js
 	
 	def show
     @form = 'show_event'  			
-# 		@json = @event.to_gmaps4rails unless @event.mapstreet.blank? # get google map data
  		respond_with(@event = Event.find_event(params[:id]).first)
 	end
 	

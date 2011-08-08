@@ -1,14 +1,15 @@
 require 'rewards'
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :set_user_time_zone, :load_credits #, :except => [:home, :contact]
+  before_filter :load_settings
   include Rewards
 
-  def set_user_time_zone
-    Time.zone = current_user.time_zone if user_signed_in?
+  def load_settings
+    if user_signed_in?
+      Time.zone = current_user.time_zone
+      @credits = get_credits(current_user.id)
+      @meters = get_meter_info
+    end 
   end
-  
-  def load_credits
-    @credits = get_credits(current_user.id) if user_signed_in?
-  end
+ 
 end

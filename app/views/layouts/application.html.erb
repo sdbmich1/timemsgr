@@ -6,7 +6,7 @@
    <%= stylesheet_link_tag 'screen', :media => 'screen' %>   
  
    <% if user_signed_in? %>
-   		<%= javascript_include_tag 'formfield.js', 'jquery.gauge.min.js', 'credit-gauge.js', 'gauge.min.js' %>
+   		<%= javascript_include_tag 'formfield.js', 'jquery.progressbar.min.js', 'progress_meter.js', :cache => true %>
   		<%= stylesheet_link_tag 'breadcrumb', :media => 'screen' %>  
    <% end %> 
 

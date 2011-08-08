@@ -20,7 +20,8 @@
 
 .menu-offset {
    background-color: #0c6fcb;
-    margin-left:200px; 
+    margin-left:15%;
+    margin-bottom: 20px; 
 }
 
 #menu ul {
@@ -85,3 +86,5 @@
 #menu li:hover a { background: #0c6fcb; }
 
 #menu li:hover li a:hover { background: #f08103; }
+
+.menu-bkgd {position: absolute; top: 0; width: 100%; }

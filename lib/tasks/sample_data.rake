@@ -53,7 +53,7 @@ end
 
 def set_channel_locations
   
-    Location.find_each do |f|
+    Location.where('id > 8').each do |f|
       Channel.find_each do |c|
         ChannelLocation.create!(:location_id => f.id, :channel_id => c.id)
       end

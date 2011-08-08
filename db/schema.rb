@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110802000357) do
+ActiveRecord::Schema.define(:version => 20110807014648) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -498,6 +498,16 @@ ActiveRecord::Schema.define(:version => 20110802000357) do
   end
 
   add_index "organizations", ["name"], :name => "index_organizations_on_name"
+
+  create_table "progress_meters", :force => true do |t|
+    t.string   "title"
+    t.integer  "maxval"
+    t.integer  "sortkey"
+    t.string   "hide"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "promos", :force => true do |t|
     t.string   "speaker"

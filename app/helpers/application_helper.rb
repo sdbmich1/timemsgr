@@ -9,6 +9,10 @@ module ApplicationHelper
     @credits
   end
   
+  def load_meters
+    @meters
+  end
+  
   def get_rating
     case @credits
     when 0..2000

@@ -32,16 +32,20 @@ module EventsHelper
     end
 	end
 	
-  def chk_offset(tm, offset)
-    if !offset.blank? && !@user.localGMToffset.blank?
+  def chk_offset(tm, offset, eid)
+    if !offset.blank? && !@user.localGMToffset.blank? && !eid.blank?
       tm = tm.advance(:hours => (0 - offset).to_i)
-#     offset == @user.localGMToffset ? tm : tm = tm.advance(:hours => (@user.localGMToffset - offset).to_i)
     end
     return tm.strftime("%l:%M %p")
   end	
   
 	def chk_time(val)	  
 	  val.blank? ? '' : val.strftime('%l:%M %P')
+	end
+	
+	def rsvp?(val)
+	  return false if val.blank? 
+	  val.downcase == 'yes' ? true : false
 	end
 	
 	def set_panel
@@ -82,18 +86,12 @@ module EventsHelper
 	  case egrp
 	  when 'Shop'
 	    case etype 
-	    when 'perform', 'match', 'sale', 'fund', 'ue', 'ce' 
-	      true
+	    when 'perform', 'match', 'sale', 'fund', 'ue', 'ce'; true
 	    else
 	      false
 	    end
-    when 'RSVP'
-      case etype
-      when 'perform', 'match', 'ue', 'cs' 
-        true 
-      else
-        false
-      end
+	  else
+	    false
     end
 	end
 	
@@ -136,5 +134,9 @@ module EventsHelper
 	
 	def get_opp_events
 	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || is_past?(e) || e.contentsourceID == @user.id.to_s }
+	end
+	
+	def getquote
+	  @quote
 	end
 end

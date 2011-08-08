@@ -1,17 +1,16 @@
 module TestEventUnion
-  def get_events(edt)
-    @sql = "SELECT ID as id, event_name, 
-        event_type, eventstartdate, eventenddate, eventstarttime, 
+  def get_events(edt, cid)
+    @sql = "(SELECT ID as id, event_name, 
+        event_type, eventstartdate, eventenddate, eventstarttime, eventid, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
-        mapstreet, mapcity, mapstate, mapzip, mapcountry, location"
-    @where = "where (status = 'active' and hide = 'No') 
-       and ((eventstartdate >= curdate() and eventenddate <= ?) 
-        or (eventstartdate <= curdate() and eventenddate >= ?)))"
-#       and (eventstarttime >= curtime() and eventendtime > curtime()))"
-         
-    @events = Event.find_by_sql(["(#{@sql}, contentsourceID FROM `kitsnetdb`.eventspriv  
-        #{@where} UNION (#{@sql}, contentsourceID FROM `kitscentraldb`.events 
-        #{@where} ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt])        
+        mapstreet, mapcity, mapstate, mapzip, mapcountry, location, contentsourceID"
+    where_dt = "where (status = 'active' and hide = 'No') 
+                and (eventstartdate >= curdate() and eventstartdate <= ?) 
+                or (eventstartdate <= curdate() and eventenddate >= ?) "
+    where_cid = where_dt + " and (contentsourceID = ?)"
+
+    @events = Event.find_by_sql(["#{@sql} FROM `kits_development`.eventspriv #{where_cid} ) 
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid]) 
   end
   
   def find_event(eid)

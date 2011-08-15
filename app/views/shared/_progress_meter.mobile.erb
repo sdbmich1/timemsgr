@@ -1,0 +1,14 @@
+<script type="text/javascript">
+$(function() {
+	$(".pb-green").progressBar({  barImage: '/images/progressbg_green.gif' });
+	$(".pb-red").progressBar({  barImage: '/images/progressbg_red.gif'});
+	$(".pb-yellow").progressBar({  barImage: '/images/progressbg_yellow.gif'});
+	$(".pb-orange").progressBar({  barImage: '/images/progressbg_orange.gif'});
+});
+</script>
+<div>
+  <% load_meters.each do |meter| %>
+	<p><span class="pb-offset"><%= "#{meter.title} " %></span><br />
+	<span class='progressBar pb-<%= "#{meter.meter_type}"%>'><%= 100*getcredits/meter.maxval %></span></p> 
+  <% end %>
+</div>

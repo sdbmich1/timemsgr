@@ -53,7 +53,7 @@ section h1 {
 	clear: right;
 }
 
-.opp-slider, .obsrv-slider, .sch-slider { margin: 5px 0 5px 0; padding: 0; height: 150px; width: 800px; visibility: hidden; }
+.opp-slider, .obsrv-slider, .sch-slider, .mobile-slider { margin: 5px 0 5px 0; padding: 0; height: 150px; width: 800px; visibility: hidden; }
 
 .timeframe { margin-left: 80%; width: 100%; margin-top: -45px; }
 .slider-title {
@@ -63,7 +63,7 @@ section h1 {
 }
 
 .slider-title h1 { position:absolute; top: 0.1em; left: 4.25em; font-weight: bold; 
-	font-size: 1.0em; height: 40px; width: 75%; }
+	font-size: 1.0em; height: 40px; width: 70%; }
 
 .slider-descr { position:absolute; top: 2em; left: 5em; min-height: 100%;
 	margin-top: 28px; font-size: 0.875em; line-height: 0.925em; width: 70%; }
@@ -105,35 +105,6 @@ section h1 {
 	padding: 5px;
 }
 
-/* calendar styling */
-.calendar { left: 1em; margin: 2px 0px 0px 0.25em; }
-.calendar { height: 42px; width:40px; font-size: 1em; 
-			background: #eee; border: 1px solid; margin: 1px 1px 1px 1px; }
-        .calendar > span { display: block; }
-        .calendar > .month { text-align: center; padding: 2px 4px 2px 0px; }
-        .calendar > .day { line-height: 20px; text-align: center; font-weight: bold; font-size: 1.25em; }
-
-.calendar > .month { line-height: 18px; background: #f08103; color: #ffffff; font-weight: bold; }
-    .calendar > .day {  background: #fff no-repeat; }
-    
-.calendar { 
-        box-shadow: 0 0 5px #05587e; -moz-box-shadow: 0 0 5px #05587e; 
-        -webkit-box-shadow: 0 0 5px #05587e;
-        }
-
-.calendar { 
-        -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; 
-    }
-    
-.calendar > .month { 
-        -webkit-border-top-left-radius: 5px; -moz-border-radius-topleft: 5px;
-        -webkit-border-top-right-radius: 5px; -moz-border-radius-topright: 5px;
-        border-top-left-radius: 5px; border-top-right-radius: 5px;
-        }
-.calendar > .day {
-        -webkit-border-bottom-left-radius:  5px; -moz-border-radius-bottomleft: 5px;
-        -webkit-border-bottom-right-radius: 5px; -moz-border-radius-bottomright: 5px;
-        }
 
 #action-item {
 }
@@ -158,7 +129,6 @@ section h1 {
 	vertical-align:middle;
 	margin-bottom: 5px;
 	margin-right: 10px;
- 
 }
 
 .grphead {font-variant: small-caps; color:#0C6FCB; font-size: 1.05em; font-weight: bold; margin-left: auto; margin-right: auto;}

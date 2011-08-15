@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
   layout :user_layout	
+  respond_to :html, :xml, :js, :mobile
   
   def home
   	@title = "Plan, Discover, Track, and Share Activities"
+  	respond_with(@title)
   end
 
   def contact
@@ -21,13 +23,9 @@ class PagesController < ApplicationController
   	@title = "About"
   end
 
-  protected  
+  private  
   
-  def user_layout  
-    if current_user.nil?  
-      "pages"  
-    else  
-      "application"  
-    end  
+  def user_layout 
+    mobile_device? || current_user ? "application" : "pages"
   end  
 end

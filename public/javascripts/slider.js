@@ -45,4 +45,12 @@ function event_slider () {
         btnNext: ".sch-next-btn",
         btnPrev: ".sch-prev-btn"
     });
+    $(".mobile-slider").jCarouselLite({
+		visible: count_items(".mobile-slider"),
+		vertical: true,
+   		auto: 800,
+    	speed: 1000,
+        btnNext: ".next",
+        btnPrev: ".prev"
+    });    
 }

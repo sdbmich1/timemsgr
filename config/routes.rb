@@ -1,7 +1,8 @@
 Timemsgr::Application.routes.draw do
 
-  devise_for :users
-  resources :members, :interests, :subscriptions, :authentications
+  devise_for :users  
+  
+  resources :members, :interests, :subscriptions, :authentications, :associates
    
   resources :events do
     member do
@@ -17,10 +18,8 @@ Timemsgr::Application.routes.draw do
     get :autocomplete_organization_name, :on => :collection
   end  
   
-  resources :users do   
-    resources :associates 
-  end
- 
+  resources :users, :except => [:show] 
+  
   # specify routes for devise user after sign-in
   namespace :user do
   	root :to => "users#home"
@@ -38,6 +37,8 @@ Timemsgr::Application.routes.draw do
   match '/privacy', :to => 'pages#privacy'  
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
+  match '/home/user', :to => 'users#home' 
+  match '/metrics', :to => 'users#show' 
     
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"

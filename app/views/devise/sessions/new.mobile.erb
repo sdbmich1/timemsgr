@@ -1,0 +1,23 @@
+<% content_for :title do %>
+  	<title><%= "#{get_name_or_logo}" %></title>
+<% end %>
+
+<% content_for :head do %>
+    <%= link_to 'Sign Up', new_user_registration_path, "class" => "ui-btn-right" %>
+<% end %>
+
+<% content_for :content do %>
+  <h3 class="center-wrapper"><%= "Sign In" %></h3> 
+
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <p>Username or email<br />
+    <%= f.text_field :login %></p>
+
+    <p>Password<br />
+    <%= f.password_field :password %></p>
+
+     <p><%= f.submit "Sign In", "data-theme"=>"b" %></p>
+  <% end %>
+
+  <%= render :partial => "devise/shared/links" %>
+<% end %>

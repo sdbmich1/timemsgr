@@ -1,8 +1,14 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require File.dirname(__FILE__) + '/../login_user_spec'
 
 describe AffiliationsController do
-  fixtures :all
   render_views
+  include LoginTestUser
+  
+  before(:each) do
+    log_in_test_user
+  end
+
+#  describe "GET 'new'" do
 
   it "new action should render new template" do
     get :new

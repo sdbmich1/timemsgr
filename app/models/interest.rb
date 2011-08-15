@@ -4,16 +4,15 @@ class Interest < ActiveRecord::Base
 	
 	has_many :channel_interests
 	has_many :channels, :through => :channel_interests, 
-				:conditions => { :status => 'active'}
+				:conditions => { :status.downcase => 'active'}
 	
 	has_attached_file :photo, :styles => { :small => "25x25>" }  
 
-  scope :unhidden, :conditions => { :hide => 'no' }
+  scope :unhidden, where(:hide.downcase => 'no')
   
   def self.active
-    unhidden.where(:status => 'active')
+    unhidden.where(:status.downcase => 'active')
   end
 
-	# sort ascending	
 	default_scope :order => 'sortkey ASC'
 end

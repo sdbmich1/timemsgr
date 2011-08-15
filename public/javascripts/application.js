@@ -125,3 +125,8 @@ $(document).bind('click', function(e) {
 function getSelectedValue(id) {
     return $("#" + id).find("dt a span.value").html();
 }
+
+// Used to check password strength
+$(function(){
+	$('.password').pstrength();
+});

@@ -9,8 +9,8 @@
 	<div class="span-18 last"><%= "All Day" %></div>
   <% else %>
 	<div class="span-18 last">
-		<%= " #{chk_offset(@event.eventstarttime, @event.localGMToffset)} 
-			- #{chk_offset(@event.eventendtime, @event.endGMToffset)}" %>
+		<%= " #{chk_offset(@event.eventstarttime, @event.localGMToffset, @event.eventid)} 
+			- #{chk_offset(@event.eventendtime, @event.endGMToffset, @event.eventid)}" %>
 	</div>
   <% end %>
   

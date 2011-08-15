@@ -1,0 +1,17 @@
+<% content_for :head do %>
+	<div data-role="header">
+        <%= link_to 'Sign In', new_user_session_path, "class" => "ui-btn-right" %>
+  	</div>
+<% end -%>
+
+<% content_for :content do -%>
+<div data-role="content">
+  <center><strong>Forgot your password?</strong></center>
+
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  		<p><span>Email </span><%= f.text_field :email  %></p>
+  		<p><%= f.submit "Send", "data-theme"=>"b" %></p>
+  <% end %>
+  <%= render :partial => "devise/shared/links" %>
+</div>
+<% end %>

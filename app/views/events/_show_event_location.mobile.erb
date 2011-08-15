@@ -1,0 +1,3 @@
+<label><%= 'Where:' %></label> <span class="item-detail"><%= @event.mapplacename %></span><br /><span class="<%= !@event.mapplacename.blank? ? 'item-detail' : 'none' %>"><%= @event.mapstreet %></span><br />
+<% if !@event.mapcity.blank? %>	<span class="item-detail"><%= "#{@event.mapcity}, #{@event.mapstate} #{@event.mapzip}  " %></span><br /><% end %>
+<% if !@event.cbody.blank? %>	<label><%= 'Details:' %></label>	<span class="item-detail"><%= @event.cbody.html_safe %></span><br /><% end %>

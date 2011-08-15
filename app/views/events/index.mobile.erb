@@ -1,0 +1,11 @@
+<% content_for :head do %>
+  	<%= link_to 'Home', home_user_path, "class"=>"ui-btn-left" %>
+<% end -%>
+
+<% content_for :content do %>
+	<h3 class="center-wrapper"><%= "#{@slider}" %></h3>
+	<div class="mobile-slider" id="mslide">
+		<ul><%= render :partial => 'event', :collection => get_slider_events(@slider), 
+				:as => :event, :locals => {:slider => @slider } %></ul>
+	</div>
+<% end -%>

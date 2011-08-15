@@ -1,12 +1,8 @@
-require 'spec_helper'
+require 'login_user_spec'
 
 describe EventsController do 
   render_views
-  include Devise::TestHelpers # to give your spec access to helpers
-
-  def mock_user(stubs={})
-    @mock_user ||= mock_model(User, stubs).as_null_object
-  end
+  include LoginTestUser
 
   def mock_event(stubs={})
     (@mock_event ||= mock_model(Event, stubs).as_null_object).tap do |event|
@@ -14,14 +10,6 @@ describe EventsController do
     end
   end
 
-  def log_in_test_user
-    attr = { :username => "Foobar", :email => "doineedit@foobar.com" }
-    #mock up an authentication in warden as per http://www.michaelharrison.ws/weblog/?p=349
-    request.env['warden'] = mock(Warden, :authenticate => mock_user(attr),
-                                         :authenticate! => mock_user(attr),
-                                         :authenticate? => mock_user(attr))
-  end
-     
   before(:each) do
     log_in_test_user
   end
@@ -93,10 +81,8 @@ describe EventsController do
     it "should render typelist" do 
       get :get_drop_down_options, :params => {}
       controller.should_receive(:render).with(hash_including(:partial => "typelist"))  
-    end
-    
+    end   
   end
-
   
   describe "GET 'manage'" do
     
@@ -183,7 +169,7 @@ describe EventsController do
     before :each do
       @params = { :end_date => "12/05/2011" }
       @event = mock(Event)
-      @event.stub_chain(:active, :is_visible?, :upcoming).and_return(true)
+      @event.stub(:current).and_return(true)
     end
           
     it "should load a list of all events" do

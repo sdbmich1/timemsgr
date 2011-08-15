@@ -13,19 +13,35 @@ module EventsHelper
 	  direction == "left" ? "Arrow-Left-Gray.png" : "Arrow-Right-Gray.png"
 	end
 	
+	def get_user_events
+	  @events.select {|event| event.contentsourceID == @user.id.to_s }
+	end
+	
+	def get_observances
+	  @events.select {|event| event.event_type == 'h' || event.event_type == 'm' }
+	end
+	
 	def user_events?
-	  @events.select {|event| event.contentsourceID == @user.id.to_s }.count > 0 ? true : false
+	  get_user_events.count > 0 ? true : false
 	end
 
   def observances?
-    @events.select {|event| event.event_type == 'h' || event.event_type == 'm' }.count > 0 ? true : false
+    get_observances.count > 0 ? true : false
   end
-	
+  
+  def get_slider_events(area)
+    case 
+    when !(area =~ /Observances/i).nil?; get_observances 
+    when !(area =~ /Upcoming/i).nil?; get_opp_events
+    else get_user_events
+    end
+  end
+
 	def set_slider_class(area)
 	  case 
 	  when !(area =~ /Observances/i).nil?
 	    sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "obsrv-slider" } 
- 	  when !(area =~ /Opportunities/i).nil?
+ 	  when !(area =~ /Upcoming/i).nil?
       sclass = {:lnav => 'prev', :rnav => "next", :stype => "opp-slider" } 
 	  else
       sclass = {:lnav => 'sch-prev-btn', :rnav => "sch-next-btn", :stype => "sch-slider" } 
@@ -33,7 +49,7 @@ module EventsHelper
 	end
 	
   def chk_offset(tm, offset, eid)
-    if !offset.blank? && !@user.localGMToffset.blank? && !eid.blank?
+    unless offset.blank? && @user.localGMToffset.blank? && eid.blank?
       tm = tm.advance(:hours => (0 - offset).to_i)
     end
     return tm.strftime("%l:%M %p")
@@ -49,7 +65,6 @@ module EventsHelper
 	end
 	
 	def set_panel
-#	  @form == "add_event" || @form == "edit_event" ? 'photo_panel' : 'shared/user_panel'
     'shared/user_panel'
 	end
 	
@@ -75,7 +90,7 @@ module EventsHelper
   end
 
 	def get_event_type
-	  @event.event_type unless @event.blank?
+	  @event.event_type if @event
 	end
 	
 	def chk_activity_type(event)

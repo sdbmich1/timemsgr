@@ -1,0 +1,21 @@
+<% content_for :head do %>
+  	<%= link_to 'Home', home_user_path, "class"=>"ui-btn-left" %>
+<% end -%>
+
+<% content_for :content do %>
+<div id="show-item">
+  <h3 class="center-wrapper"><%= @event.event_title %></h3>
+  <label>Date: </label><span class="item-detail"><%= get_start_date(@event.eventstartdate, @event.eventenddate, "Show") %></span><br />	
+  <label>Time: </label> 
+ 
+  <span class="item-detail"><% if holiday?(@event.event_type) %>
+	<%= "All Day" %>
+  <% else %>
+		<%= " #{chk_offset(@event.eventstarttime, @event.localGMToffset, @event.eventid)} 
+			- #{chk_offset(@event.eventendtime, @event.endGMToffset, @event.eventid)}" %>
+  <% end %></span><br />
+	  
+  <%= render :partial => 'show_event_contact' %>
+  <%= render :partial => 'show_event_location' %> 
+</div>
+<% end %>

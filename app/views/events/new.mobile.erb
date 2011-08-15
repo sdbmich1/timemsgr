@@ -20,6 +20,8 @@
 	<span>State </span><br /> <%= f.collection_select :mapstate, StateCode.all, :StateAbbr, :State, :prompt => 'Select' %>
 	<span>Zip </span><br /> <%= f.text_field :mapzip, :size => 10 %>
 	<span>Country </span><br /> <%= f.country_select :mapcountry, ["United States"] %>
+	<%= f.hidden_field :contentsourceID, :value => @user.id %>
+	<%= f.hidden_field :LastModifyBy, :value => @user.last_name + ', ' + @user.first_name %>
 
 	<%= f.submit "Save Event", "data-theme"=>"b" %>
   <% end %>

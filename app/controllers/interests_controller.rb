@@ -14,8 +14,7 @@ class InterestsController < ApplicationController
 	
 	def create
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {})
-    save_credits(@user.id, 'Interests', RewardCredit.find_by_name('interest_id').credits * params[:user][:interest_ids].count) unless params[:user][:interest_ids].blank?
-    flash[:notice] = "#{get_msg(@user, 'Interest')}" if @user.update_attributes(params[:user])
+    add_credits if @user.update_attributes(params[:user])
     respond_with(@user, :location => new_subscription_path) 
 	end
 	
@@ -27,5 +26,12 @@ class InterestsController < ApplicationController
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {}) 
     flash[:notice] = "#{get_msg(@user, 'Interest')}" if @user.update_attributes(params[:user])
     respond_with(@user, :location => home_path) 
+	end
+	
+	private
+	
+	def add_credits
+	  save_credits(@user.id, 'Interests', RewardCredit.find_by_name('interest_id').credits * params[:user][:interest_ids].count) if params[:user][:interest_ids]
+    flash[:notice] = "#{get_msg(@user, 'Interest')}"
 	end
 end

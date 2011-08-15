@@ -1,0 +1,22 @@
+<li>
+  	<div class="sborder round">
+  		<div class="calendar">
+    		<span class="month"><%= show_date(event.eventstartdate).strftime("%b") %></span>
+    		<span class="day"><%= show_date(event.eventstartdate).strftime("%e") %></span>
+		</div>
+		<% unless holiday?(event.event_type) %>
+		<div class="slider-etime">
+			<div class="stime"><%= chk_offset(event.eventstarttime, event.localGMToffset, event.eventid) %></div>
+ 			<div class="stime"><%= chk_offset(event.eventendtime, event.endGMToffset, event.eventid) %></div>
+ 		</div>
+		<% end %>
+ 		<div class="slider-title">
+			<h5><%= link_to event.event_title, event_url(event) %></h5><br />
+		</div>
+		<div class="sl-descr">
+			 <span class="sdescr"><%= raw truncate(event.bbody, :length => 120, :omission =>"…") %></span><br />
+		</div>
+		<%= render :partial => 'event_action_items', :locals => { :event => event, :slider => slider } %>		
+	</div>
+</li>
+

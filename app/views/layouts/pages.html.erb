@@ -3,8 +3,8 @@
 <head>
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>   
   <%= render 'shared/initialize' %>
-  <%= stylesheet_link_tag 'home', :media => 'screen' %>   	
-  <%= stylesheet_link_tag 'menu', :media => 'screen' %>   	
+  <%= stylesheet_link_tag 'home','menu', :media => 'screen', :cache => true %>   	
+  <%= stylesheet_link_tag 'mobile' if mobile_device? %>  
 
   <%= yield :head %>		
 </head>

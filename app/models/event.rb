@@ -13,10 +13,6 @@ class Event < ActiveRecord::Base
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
 	
-#	has_attached_file :imagelink, :default_url => "/images/clock_grey.png" #, :styles => { :thumb => "35x35>", :medium => "100x100>" }
-#  validates_attachment_content_type :imagelink, :content_type => ['image/jpeg', 'image/png'] 
-#	validates_attachment_size :imagelink, :less_than => 1.megabyte
-	
 	validates :event_title, :presence => true
 	validates :event_type, :presence => true
 	validates_presence_of :eventstartdate, :if => "eventstartdate.nil?"

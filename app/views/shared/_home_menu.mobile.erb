@@ -1,0 +1,8 @@
+
+<% content_for :content do %>	<h3 class="center-wrapper"><%= "Welcome back #{current_user.first_name}"%></h3><br />	<ul data-role="listview">		<li data-role="list-divider">View</li>
+		<li><%= link_to "Observances", events_url(@user, {:slider => 'Observances'}), "data-icon" => "arrow-r", "class"=>"ui-btn-right" %>		</li>		<li><%= link_to "My Schedule", events_url(@user, {:slider => 'My Schedule'}), "data-icon" => "arrow-r", "class"=>"ui-btn-right" %>		</li>		<li><%= link_to "Upcoming Events", events_url(@user, {:slider => 'Upcoming Events'}), "data-icon" => "arrow-r", "class"=>"ui-btn-right" %>		</li>	 	<li><%= link_to "My Metrics", metrics_url(@user), "data-icon" => "arrow-r", "class"=>"ui-btn-right" %>
+		</li>
+		<li data-role="list-divider">Manage</li>
+		<li><%= link_to "Add Event", new_event_url, "data-icon" => "arrow-r", "class"=>"ui-btn-right" %>
+		</li>
+	</ul><% end -%>

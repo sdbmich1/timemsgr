@@ -100,15 +100,6 @@ footer nav {
   list-style: square;
 }
 
-.welcomebar {
-  font-size: 14px;
-  padding-top: 4px;
-  text-align:right;
-  vertical-align: middle;
-  font-family:Arial, Helvetica, sans-serif;
-  color: #ffffff;
-}
-
 #ajaxSpinnerImage {display:none;}
 
 #spinner {
@@ -123,8 +114,7 @@ footer nav {
     background:#000000 url("../images/ajax-loader.gif") no-repeat center center;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    font-weight:bold;
-    
+    font-weight:bold; 
   }
 
 /*IE 'adjustment'*/
@@ -159,16 +149,11 @@ footer nav {
 .rsidebar {
  	float:right;
  	position:relative;
-  	margin-right: 40px;
- 	margin-top: 40px;
+  	margin-right: 10%;
+ 	margin-top: 5%;
 	width: 180px;
 	height: 300px;	
 }
 
-.rating { font-size:small; font-weight:bold; color: #0C6FCB; }
-.rating-hdr, .pb-label { font-size:small; color: #CCCCCC; margin-left: auto; margin-right: auto; margin-bottom: 15px; width: 300px; }
-
-.progressBar { font-size: 9px; }
-.pb-offset { font-size: 10px; margin-top: 5px; }
 /* .pb-qo1, .pb-qo2, .pb-qo3, .pb-qo4 { position: absolute; left: 9.5em; margin-top: 5px; }
 */

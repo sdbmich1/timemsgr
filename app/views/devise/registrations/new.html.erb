@@ -3,8 +3,7 @@
 <% end -%>
 
 <% content_for :content do -%>
-  <%= render :partial => "shared/checkpwd" %>
-  <%= render :partial => "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
   <h3><strong>Keep Informed.</strong></h3>
 
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :validate => true) do |f| %>

@@ -9,8 +9,9 @@ class Affiliation < ActiveRecord::Base
   
   belongs_to :user, :foreign_key => :user_id
   
-  validates :name, :presence => true #, :allow_blank => true  
-  validates_presence_of :affiliation_type, :unless => 'name.blank?'  
+  validates :name, :presence => true  
+  validates :affiliation_type, :presence => true, :unless => Proc.new { |a| a.name.blank? }  
+  validates_uniqueness_of :name, :scope => :user_id
   
   def add_orgs
     Organization.find_or_create_by_name(self.name, :org_type => self.affiliation_type)

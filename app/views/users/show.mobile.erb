@@ -1,0 +1,8 @@
+<% content_for :head do %>
+  	<%= link_to 'Home', home_user_path, "class"=>"ui-btn-left" %>
+<% end -%>
+
+<% content_for :content do %>
+	<h3 class="center-wrapper">Time Saving Metrics</h3>
+    <%= render 'shared/progress_meter' %>
+<% end %>

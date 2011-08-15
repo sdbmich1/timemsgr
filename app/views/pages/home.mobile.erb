@@ -1,0 +1,15 @@
+<% content_for :title do %>
+  	<title><%= "#{get_name_or_logo}" %></title>
+<% end -%>
+
+<% content_for :head do %>
+    <%= link_to 'Sign In', new_user_session_path, "class" => "ui-btn-right" %>
+<% end -%>
+
+<% content_for :content do %>
+  	<center><h3>Know What's Happening</h3>
+  			<p>Easy event scheduling.</p>
+  	</center>  
+  	<%= link_to "Sign Up!", new_user_registration_path, "data-role"=>"button", "data-theme"=>"b", "data-icon" => "arrow-r", "data-iconpos"=>"right" %>
+<% end -%>
+

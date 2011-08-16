@@ -1,7 +1,7 @@
 /*------------------------------------*\
 	IPHONE
 \*------------------------------------*/
-/* Portrait */
+/* Portrait 
 @media screen and (max-width: 320px)
 {
  body {
@@ -11,7 +11,6 @@
  }
 }
  
-/* Landscape */
 @media screen and (max-device-width: 480px){
  body {
   -webkit-text-size-adjust:none;
@@ -28,7 +27,11 @@
   padding:0!important;
  }
 }
-      
+ .ui-page {
+        background: transparent url('/images/mb-blue.jpg');
+    } 
+   */  
+    
 .mobile_container {  
       width: 100%;  
       margin: 0 auto;  
@@ -50,9 +53,7 @@
 }
 
 .info { color: #FFFFFF; }
-.ui-page {
-        background: transparent url('/images/mb-blue.jpg');
-    }
+
 
 .slider-etime { position: absolute; top: 4em!important; margin: 0; height: 2.5em; }
 

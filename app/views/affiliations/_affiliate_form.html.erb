@@ -1,0 +1,5 @@
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Profile' } %>
+<% content_for :content do %>
+ 	<%= render :partial => 'shared/edit_form' %>
+ 	<div class="span-20 last round outer-shadow" id="user-prefs">  
+	   <div class="fields pad-10" id="edit-aff">  		  <%= form_for @user, :as => :user, :url => affiliation_path(@user) do |f| %>			<%= render :partial => 'form', :locals => { :f => f } %>			<p><%= f.submit "Save" %></p>		  <% end %>	   </div>	</div><% end %>

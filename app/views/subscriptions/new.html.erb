@@ -1,6 +1,4 @@
-<% content_for :head do %>
-  <%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Register" } %>
-<% end %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Register' } %>
 
 <% content_for :subhead do %>
   <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 2 } %>
@@ -13,10 +11,11 @@
 	<%= form_for @subscription do |f| %>
  		<div id="event_errors" style="display:none" class="error"></div>
 		<%= render "shared/error_messages", :target => @subscription %>  
-
 		<%= render 'channel_lists' %><br />
 		<%= f.submit 'Continue >>', :class => "nav-right" %><br />
 	<% end %>
 <% end %>
 
-<%= render 'shared/right_gauge_sidebar' %>
+<% content_for :right_sidebar do %>
+	<%= render 'shared/right_gauge_sidebar' %>
+<% end %>

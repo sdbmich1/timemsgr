@@ -15,7 +15,7 @@
 }
 
 section {
-  width: 270px;
+  width: 200px;
   height: 120px;
   background: #fff;
 }
@@ -53,24 +53,26 @@ section h1 {
 	clear: right;
 }
 
-.opp-slider, .obsrv-slider, .sch-slider, .mobile-slider { margin: 5px 0 5px 0; padding: 0; height: 150px; width: 800px; visibility: hidden; }
-
-.timeframe { margin-left: 80%; width: 100%; margin-top: -45px; }
+.opp-slider, .obsrv-slider, .sch-slider, .mobile-slider { margin: 5px 0 5px 0; padding: 0; height: 0; width: 640px; visibility: hidden; }
+.obsrv-slider { display:inline-block; }
 .slider-title {
 	margin-top: -40px;
 	margin-left: 50px;
 	float: left;
 }
 
-.slider-title h1 { position:absolute; top: 0.1em; left: 4.25em; font-weight: bold; 
-	font-size: 1.0em; height: 40px; width: 70%; }
+.event_form { position: relative; display: inline; }
+.left-nav { position: absolute; padding: 0; margin-left: 3px; margin-right: 3px; }
+.right-nav { position: absolute; padding: 0; }
+.slider-title h1 { position:absolute; top: 0.1em; left: 5em; font-weight: bold; 
+	font-size: 0.85em; height: 40px; width: 60%; }
 
-.slider-descr { position:absolute; top: 2em; left: 5em; min-height: 100%;
-	margin-top: 28px; font-size: 0.875em; line-height: 0.925em; width: 70%; }
+.slider-descr { position:absolute; top: 2em; left: 5.75em; min-height: 100%;
+	margin-top: 32px; font-size: 0.75em; line-height: 1em; width: 60%; }
 	
 .slider-time {
 	font-size: 0.75em;
-	margin-left: 0.15em;
+	margin-left: 0.125em;
 	text-align:right;
 	height: 40px;
 	width: 45px;
@@ -94,17 +96,10 @@ section h1 {
 	margin-left: 20px;
 }
 
-.shadow {
-	-moz-box-shadow: inset 0 0 5px #888;
-	-webkit-box-shadow: inset 0 0 5px #888;
-	box-shadow: inner 0 0 5px #888;
-}
-
 .sborder {
 	border: 1px solid #CCCCCC;
 	padding: 5px;
 }
-
 
 #action-item {
 }
@@ -131,7 +126,7 @@ section h1 {
 	margin-right: 10px;
 }
 
-.grphead {font-variant: small-caps; color:#0C6FCB; font-size: 1.05em; font-weight: bold; margin-left: auto; margin-right: auto;}
+.grphead {font-variant: small-caps; color:#0C6FCB; font-size: 1.25em; font-weight: bold; margin-left: auto; margin-right: auto;}
 
 .img-btm { position:absolute; bottom: -7em; width: 100%;  left: 4em; }
 .action-img {position: absolute; right: 0.25em; top: 0.1em;  }
@@ -142,20 +137,4 @@ section h1 {
 .slider-round {	    
         -webkit-border-radius: 5px; -moz-border-radius: 5px; 
         border-radius: 5px 5px 0 0 / 5px 5px 0 0;;  
-}
-
-/* tooltip styling. by default the element to be styled is .tooltip  */
-.tooltip {
-	background-color:#000;
-	border:1px solid #fff;
-	padding:10px 15px;
-	width:200px;
-	display:none;
-	color:#fff;
-	text-align:left;
-	font-size:12px;
-
-	/* outline radius for mozilla/firefox only */
-	-moz-box-shadow:0 0 10px #000;
-	-webkit-box-shadow:0 0 10px #000;
 }

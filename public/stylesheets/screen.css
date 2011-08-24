@@ -1,4 +1,8 @@
 /* CSS Settings for sign-in and sign-up screens  */
+body {
+	  background-color: #C2E1EF;	
+}
+
 input[type='submit'] {  
   	  font-weight: bold;
   	  background: #0c6fcb;

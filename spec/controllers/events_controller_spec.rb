@@ -1,7 +1,7 @@
 require 'login_user_spec'
 
 describe EventsController do 
-  render_views
+#  render_views
   include LoginTestUser
 
   def mock_event(stubs={})
@@ -67,23 +67,7 @@ describe EventsController do
       response.should redirect_to(new_event_path(@event, @params))
     end
   end
-  
-  describe "GET 'get_drop_down_options'" do
-
-    before :each do
-      params = { :radio_val => "Activity" }
-    end
     
-    it "assign radio val" do   
-      assigns[:radio_val].should == 'Activity'
-    end
-    
-    it "should render typelist" do 
-      get :get_drop_down_options, :params => {}
-      controller.should_receive(:render).with(hash_including(:partial => "typelist"))  
-    end   
-  end
-  
   describe "GET 'manage'" do
     
     before :each do

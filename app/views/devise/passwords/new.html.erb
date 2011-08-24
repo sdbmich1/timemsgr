@@ -1,8 +1,6 @@
-<% content_for :head do -%>
-   	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Sign Up" } %>
-<% end -%>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Sign Up' } %>
 
-<% content_for :content do -%>
+<% content_for :content do %>
   <%= render :partial => "devise/shared/links" %>
   <h3><strong>Forgot your password?</strong></h3>
 

@@ -1,7 +1,7 @@
 module InterestsHelper
 	
   def getlogo(fname)  	
-  	image_tag("#{fname.nil? ? 'rails.png' : fname}", :size => "32x32")
+  	image_tag("#{fname.nil? ? 'rails.png' : fname}", :size => "32x32", :class => "int-pic")
   end
    
   def set_fname(fname)  	 

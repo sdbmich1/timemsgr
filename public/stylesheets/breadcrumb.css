@@ -1,6 +1,10 @@
 body {
 }
 
+.container {
+	position: relative;
+}
+
 #breadcrumb {
     font: 12px Arial, Helvetica, sans-serif;
     font-weight:bold;

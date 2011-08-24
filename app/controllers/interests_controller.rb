@@ -1,11 +1,7 @@
 class InterestsController < ApplicationController
   before_filter :authenticate_user!, :load_data	
+  layout :page_layout
 	respond_to :html, :json, :xml, :js
-
-  def load_data
-  	@user = current_user  #set current user
-		@selected_ids = @user.interest_ids  # check interest ids
-  end
   
 	def new
 		@categories = Category.active  # get category data
@@ -20,6 +16,8 @@ class InterestsController < ApplicationController
 	
 	def edit
     @area = params[:p] # determine which user profile area to edit
+    @categories = Category.active  # get category data
+    respond_with(@interest = @user.interests) 
 	end
 	
 	def update
@@ -28,10 +26,20 @@ class InterestsController < ApplicationController
     respond_with(@user, :location => home_path) 
 	end
 	
-	private
+	protected
+	
+	def load_data
+    @user = current_user  #set current user
+    @selected_ids = @user.interest_ids  # check interest ids
+  end
 	
 	def add_credits
 	  save_credits(@user.id, 'Interests', RewardCredit.find_by_name('interest_id').credits * params[:user][:interest_ids].count) if params[:user][:interest_ids]
     flash[:notice] = "#{get_msg(@user, 'Interest')}"
 	end
+	
+	def page_layout  
+    params[:p].blank? ? "application" : "users"  
+  end  
+
 end

@@ -56,12 +56,7 @@ class EventsController < ApplicationController
     flash[:notice] = "Successfully deleted event." if @event.destroy  
     respond_with(@event, :location => manage_events_url)
   end
-  
-  # get event type dropdown options  
-  def get_drop_down_options
-    render :partial => "typelist", :locals => { :typelist => get_options(params[:radio_val]) }
-  end
-		
+  		
 	protected
 
   def load_data

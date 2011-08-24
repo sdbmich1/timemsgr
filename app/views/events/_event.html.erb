@@ -10,10 +10,10 @@
 			<div class="slider-stime"><%= chk_offset(event.eventstarttime, event.localGMToffset, event.eventid) %></div>
 		<% end %>
  		<div class="slider-title">
-			<h1><%= link_to event.event_title, event_url(event), :class => "show-item" %></h1><br />
+			<h1><%= link_to event.event_name, event_url(event), :class => "show-item" %></h1><br />
 		</div>
 		<div class="slider-descr">
-			<%= raw truncate(event.bbody, :length => 120, :omission =>"…") %><br />
+			<%= raw truncate(event.bbody, :length => 100, :omission =>"…") %><br />
 		</div>
 		<%= render :partial => 'event_action_items', :locals => { :event => event, :slider => slider } %>		
 	</div>

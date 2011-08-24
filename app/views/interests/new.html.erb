@@ -1,7 +1,4 @@
-<!-- -->
-<% content_for :head do %>
-  <%= render :partial => 'shared/main_menu', :locals => { :main_menu => "Register" } %>
-<% end %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Register' } %>
 
 <% content_for :subhead do %>
   <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 1 } %>
@@ -12,13 +9,11 @@
 	Personalize your content by selecting the topics you are interested in being kept aware of.
 
 	<%= form_for @interest do |f| %>
- 		<div id="event_errors" style="display:none" class="error"></div>
-		<%= render "shared/error_messages", :target => @interest %>  
-		<%= render :partial => 'categories', :as => :category, :collection => @categories %>
-		<br />
-		<%= f.submit 'Continue >>', :class => "nav-right" %>
-		<br />
+		<%= render :partial => 'form' %>
+		<%= f.submit 'Continue >>', :class => "nav-right" %><br />
   	<% end %>
 <% end %>
 
-<%= render 'shared/right_gauge_sidebar' %>
+<% content_for :right_sidebar do %>
+		<%= render 'shared/right_gauge_sidebar' %>
+<% end %>

@@ -3,7 +3,7 @@ class AffiliationsController < ApplicationController
   layout :page_layout
   respond_to :html, :json, :xml, :js
   
-  # add autocomplete on affiliation name 
+  # add auto-complete on affiliation name 
   autocomplete :organization, :name
     
   def new
@@ -12,6 +12,7 @@ class AffiliationsController < ApplicationController
   end
 	
   def edit
+    @area = params[:p]  # determine which profile area to edit
     @user = User.find(params[:id])
     respond_with(@affiliations = @user.affiliations)
   end
@@ -46,6 +47,5 @@ class AffiliationsController < ApplicationController
   def load_data 
     @user = current_user  #set current user
   end
-
      
 end

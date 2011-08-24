@@ -3,7 +3,7 @@
 	<%= getlogo(category.photo_file_name) %>
 	<span class="int-label"><%= "#{category.name.titleize}" %></span>
 </div>
-<div>
+<div class="interest">
 	<% category.interests.active.each do |sub| %>		
 		<div class="prefs-cbox">
 			<%= check_box_tag "user[interest_ids][]", sub.id, @user.interests.include?(sub) %><%= sub.name %>			

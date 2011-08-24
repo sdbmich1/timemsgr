@@ -1,1 +1,5 @@
-<%= render :partial => 'event_item', :collection => @events, :as => :event %>
+<% if @events.count > 1 %>
+	<%= render :partial => 'event_item', :collection => @events, :as => :event %>
+<% else %>
+	<center><h4>No events found.</h4> </center>
+<% end %>

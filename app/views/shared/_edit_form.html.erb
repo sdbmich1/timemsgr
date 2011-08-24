@@ -1,10 +1,6 @@
-<% content_for :head do -%>
-   	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "User" } %>
-<% end -%>
-
 <% content_for :subhead do -%>
 	<div class="span-24 last" id="new-event">
-		<h3 class="prepend-4"><strong><%= "#{@user.first_name} #{@user.last_name} | Edit Profile"%></strong></h3>
+		<h2 class="prepend-4"><%= "#{@user.first_name} #{@user.last_name} | Edit #{@area}"%></h2>
 	</div>
 <% end %>
 

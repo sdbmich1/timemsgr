@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= stylesheet_link_tag 'custom', :media => 'screen' %>   
+  <%= stylesheet_link_tag 'custom', :media => 'screen', :cache => true %>   
   <%= render 'shared/initialize' %>
-  <%= stylesheet_link_tag 'home','menu', :media => 'screen', :cache => true %>   	
+  <%= stylesheet_link_tag 'home', :media => 'screen', :cache => true %>   	
   <%= stylesheet_link_tag 'mobile' if mobile_device? %>  
 
   <%= yield :head %>		
 </head>
 	<body>
-    	<div class="container">
-      		<%= yield :content %>
-       	</div>
-        <%= render 'layouts/footer' %>
+      	<%= yield :content %>
+     	<%= yield :footer %>
 	</body>
 </html>

@@ -49,7 +49,7 @@ module EventsHelper
 	end
 	
   def chk_offset(tm, offset, eid)
-    unless offset.blank? && @user.localGMToffset.blank? && eid.blank?
+    unless offset.blank? && @user.localGMToffset.blank? && !eid.blank?
       tm = tm.advance(:hours => (0 - offset).to_i)
     end
     return tm.strftime("%l:%M %p")
@@ -65,8 +65,8 @@ module EventsHelper
 	end
 	
 	def set_panel
-    'shared/user_panel'
-	end
+    'shared/user_panel' if @form == "event_slider"
+  end
 	
 	def get_nice_date(edate)  
 	  edate.blank? ? '' : edate.strftime('%m-%d-%Y') 
@@ -102,11 +102,9 @@ module EventsHelper
 	  when 'Shop'
 	    case etype 
 	    when 'perform', 'match', 'sale', 'fund', 'ue', 'ce'; true
-	    else
-	      false
+	    else false
 	    end
-	  else
-	    false
+	  else false
     end
 	end
 	

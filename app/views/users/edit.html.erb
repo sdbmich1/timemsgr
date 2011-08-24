@@ -1,2 +1,15 @@
-<!-- main form -->
-<%= render "edit_user_form" %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Profile' } %>
+
+<% content_for :content do -%>
+  <%= render 'shared/edit_form' %>
+  <div class="span-18 last round outer-shadow" id="user-prefs">  
+	<%= form_for setup_user(@user), :validate => true do |f| %>
+  		<div class="span-18 last" id="new-event">  
+			<%= render "shared/error_messages", :target => @user %>  
+			<%= render :partial => set_area, :locals => { :f => f } %>
+ 		</div>
+		<p><%= f.submit "Save" %></p>
+	<% end %>
+  </div> 
+<% end %>
+

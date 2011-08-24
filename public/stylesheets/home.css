@@ -1,22 +1,9 @@
+
 body {
-  background: #ffffff;	
+  background-color: #C2E1EF;	
 }
 
-footer {
-  margin-top: 10px;
-  width:960px; 
- /* text-align: center;
-  background-color: #222222;
-  height: 200px;
-  */
-  margin-left: 200px;
-  margin-right: auto;
-  padding-top: 10px;
-   clear:both;
-}
-
-footer nav {
-  float: none;
+.div-footer {  background-color: #808080; width: 100%; height: 4em;
 }
 
 #homepage {
@@ -30,7 +17,6 @@ footer nav {
 }
 
 /* Sign up button */
-
 a.signup_button {
   margin-left: auto;
   margin-right: auto;
@@ -39,14 +25,13 @@ a.signup_button {
   margin-top: 25px;
   width: 200px;
   color: #ffffff;
-  background: #f08103;
+  background: blue;
   font-size: 150%;
   font-weight: bold;
   padding: 10px;
 }
 
 /* Links */
-
 a {
   text-decoration: none;
 }
@@ -56,3 +41,14 @@ a:hover {
 }
 
 .page-bkgd { width: 100%; }
+.main-page { height: 280px; }
+.home-bkgd { background-color: #C7D8D8; height: 400px; width: 100%; }
+
+.caption { width: 25%; height: 280px; background-color:#FFFFFF; padding: 10px; margin-left: 40px; margin-top: 20px; }
+.sec-title { font-weight: bold; font-size: 2em; color: #0C6FCB; margin-bottom: 10px; }
+.inset { text-shadow:#fff 0px 1px 0, #000 0 -1px 0;}
+.headline { font-size:2.5em; font-weight:bold; color:#808080;} 
+.top-headline {  font-size:2.5em; font-weight:bold; } 
+.caption-list {margin-left: 10px;  }
+.caption-list li { margin-left: 20px; }
+.head-descr { font-size: 1em; }

@@ -6,8 +6,5 @@
 <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
 
 <!-- Import fancy-type plugin. -->  
-<%= stylesheet_link_tag 'jquery-ui-1.8.11.custom', :media => 'screen' %>   
 <%= stylesheet_link_tag 'blueprint/plugins/fancy-type/screen', :media => 'screen, projection' %>
-<%= stylesheet_link_tag 'menu', :media => 'screen' %>   
-<%= stylesheet_link_tag 'links', :media => 'screen' %> 
-<%= stylesheet_link_tag 'meter', :media => 'screen' %> 
+<%= stylesheet_link_tag 'jquery-ui-1.8.11.custom','menu','links','meter', :media => 'screen', :cache => true %>   

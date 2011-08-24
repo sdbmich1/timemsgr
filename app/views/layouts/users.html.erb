@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>	
-		<%= stylesheet_link_tag 'jquery.fancybox-1.3.4', :media => 'screen' %>  
-   		<%= stylesheet_link_tag 'custom', :media => 'screen' %>     		
+   		<%= stylesheet_link_tag 'custom', :media => 'screen', :cache => true %>     		
  	  	<%= render 'shared/initialize' %>
 
    		<% if user_signed_in? %>
    			<%= javascript_include_tag 'formfield.js' %>
    		<% end %>
-		<%= stylesheet_link_tag 'layout', :media => 'screen' %>
-   		<%= stylesheet_link_tag 'screen', :media => 'screen' %>   
-  
+		<%= stylesheet_link_tag 'layout','screen','users', :media => 'screen', :cache => true %> 
  	  	<%= yield :head %>
   </head>
   <body>
-	<div class="container round landing-bg" id="landing">  
+	<div class="container landing-bg" id="landing">  
 		<%= yield :subhead %>
  	  	<div id="flash_notice" style="display:none"></div>
  	  	<%= yield :left_sidebar %>
-	  	<%= yield :content %>
+	  	<%= yield :content %>	  	
 	</div> 
 	<%= render 'layouts/footer' %>		
-  </body>
+ </body>
 </html>

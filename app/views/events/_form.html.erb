@@ -1,10 +1,10 @@
 <!-- main form for events -->
-<% content_for :head do -%>
-   	<%= render :partial => 'shared/main_menu', :locals => { :main_menu => "User" } %>
-<% end -%>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
 
 <% content_for :left_sidebar do -%>
-	<div id="user_panel"><%= render set_panel %></div>
+	<% if set_panel %>
+		<div id="user_panel"><%= render set_panel %></div>
+	<% end %>
 <% end -%>
 
 <% content_for :content do -%>
@@ -14,3 +14,7 @@
 <% content_for :right_sidebar do -%>
 	<div id="ad_panel"><%= render 'shared/ad_panel' %></div> 
 <% end -%>
+
+<% content_for :footer do %>
+	<%= render 'layouts/footer' %>
+<% end %>

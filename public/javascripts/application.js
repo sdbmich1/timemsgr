@@ -48,58 +48,8 @@ $(document).ready(function (){
       onSelect: function(dateText, inst){ }                       
   }); 
     	
-  // toggle divs for adding type of event	
-  $(":radio[name='activity_type']").change(function(){
-  	var newVal = $(":radio[name='activity_type']:checked").val(); 
-  	var url = '/get_drop_down_options?radio_val=' + newVal;
-  
-	//  $("#event_event_type option").remove();
-   $.get(url, function(data) {
-		$("#eventtype").html(data);
-   });
-   
-   if (newVal == "Activity") {
-     	$("#life_event").hide();
-     }
-   else {
-     	$("#life_event").show("fast");
-     }   
-  });
-
-	// toggle google map
-	$('.showmap').click(function() {
-		$('#gmaps').toggle();
-		return false;
-	});
-	
 });
 
-// add fancy box
-$(document).ready(function() {
-
-	/* This is basic - uses default settings */	
-	$("a#single_image").fancybox();
-	
-	/* Using custom settings */	
-	$("a#inline").fancybox({
-		'hideOnContentClick': true
-	});
-
-	/* Apply fancybox to multiple items */
-	$("a#modalGroup").fancybox({
-    	'width'			:   '560',
-    	'height'		: 	'340',
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	600, 
-		'overlayShow'	:	true
-	});	
-	
-	$('.show_event').bind('ajax:success', function() {
-		$("#modalGroup").trigger('click');
-	});
-});
 
 // add dropdown menu functionality
 $(function() {
@@ -130,3 +80,18 @@ function getSelectedValue(id) {
 $(function(){
 	$('.password').pstrength();
 });
+
+jQuery.event.add(window, "load", resizeFrame);
+jQuery.event.add(window, "resize", resizeFrame);
+
+function resizeFrame() 
+{
+    var h = $(window).height();
+    var w = $(window).width();
+        $(".left-nav").css('left',(w < 1024 || h < 768) ? 150 : 350 );
+        $(".right-nav").css('right',(w < 1024 || h < 768) ? 50 : 200 );
+		$(".push").css('margin-top', function() {
+	  		   var c = $(".container").height();
+			   return c + 20;
+		});
+}

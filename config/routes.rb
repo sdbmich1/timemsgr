@@ -46,7 +46,7 @@ Timemsgr::Application.routes.draw do
   
   # add route for dynamically changing event types
   match "/get_drop_down_options", :to => "events#get_drop_down_options"
-  match "*path" => 'error#handle404' # catch any routing errors
+#  match "*path" => 'error#handle404' # catch any routing errors
 
   root :to => 'pages#home'
 end

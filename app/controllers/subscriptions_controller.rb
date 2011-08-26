@@ -18,5 +18,9 @@ class SubscriptionsController < ApplicationController
     flash[:notice] = "#{get_msg(@user, 'Subscription')}" if @user.update_attributes(params[:user])   
     respond_with(@user, :location => new_affiliation_path) 
   end
+  
+  def index
+    redirect_to new_affiliation_path
+  end
 
 end

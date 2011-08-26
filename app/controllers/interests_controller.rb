@@ -25,7 +25,11 @@ class InterestsController < ApplicationController
     flash[:notice] = "#{get_msg(@user, 'Interest')}" if @user.update_attributes(params[:user])
     respond_with(@user, :location => home_path) 
 	end
-	
+
+  def index
+    redirect_to new_subscription_path
+  end	
+  
 	protected
 	
 	def load_data

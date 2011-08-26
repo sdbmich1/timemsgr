@@ -4,6 +4,7 @@
   	<%= yield :title %> 
 	<%= stylesheet_link_tag 'jquery-ui-1.8.11.custom', 'jquery.ui.datepicker.mobile','meter', :cache => true %>
   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+    <%= stylesheet_link_tag "screen", "mobile", "calendar", :cache => true %>  
   	<%= javascript_include_tag :defaults, :cache => true %>
   	
   	<script>
@@ -15,13 +16,11 @@
 
  	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
  	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
-  	<%= javascript_include_tag 'jQuery.ui.datepicker.js','jquery.ui.datepicker.mobile.js','jquery.progressbar.min.js', :cache => true %>
-
-    <%= stylesheet_link_tag "screen", "mobile", "calendar", :cache => true %>  
+	<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div data-role="page"> 
+  <div id="app" data-role="page"> 
     <div data-role="header">
   	  <h1><%= "#{get_name_or_logo}" %></h1>
       <%= yield :head %>
@@ -39,10 +38,15 @@
       </div>  
     <% end %>  
     
-	<div data-role="content">		
+	<div class="app-content" data-role="content">		
       <%= yield :content %>
+    </div>
+    
+    <div data-role="footer">		
+      <%= yield :footer %>
     </div>
 
    </div>         
+  	<%= javascript_include_tag 'jQuery.ui.datepicker.js','jquery.ui.datepicker.mobile.js','jquery.progressbar.min.js', :cache => true %>
   </body> 
 </html>

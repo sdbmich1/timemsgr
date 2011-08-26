@@ -10,8 +10,24 @@ jQuery.ajaxSetup({
   	'success': function() {}  
 }); 
 
-// add time picker
+// add iphone orientation change handler
+$(function (){ 
+
+    if (navigator.userAgent.match(/iPhone/i)) {
+        $(window).bind('orientationchange', function(event) {
+            if (window.orientation == 90 || window.orientation == -90 || window.orientation == 270) {
+                $('meta[name="viewport"]').attr('content', 'height=device-width,width=device-height,initial-scale=1.0,maximum-scale=1.0');
+            } else {
+                $('meta[name="viewport"]').attr('content', 'height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0');
+            }
+        }).trigger('orientationchange');
+    }	
+}); 
+
 $(document).ready(function (){ 
+
+  // add date picker code and synch start & end dates
+  var dateFormat = "mm/dd/yy";
 
 	$('#start-time').timepicker({
 		ampm: true,
@@ -21,16 +37,9 @@ $(document).ready(function (){
 	$('#end-time').timepicker({
 		ampm: true,
 		stepMinute: 15
-	});
+	});  
 	
-}); 
-
-$(document).ready(function (){ 
-
-  // add date picker code and synch start & end dates
-  var dateFormat = "mm/dd/yy";
-
-  $('#start-date').datepicker({ 
+	$('#start-date').datepicker({ 
  	  minDate:'-0d',
       dateFormat:dateFormat,
       onSelect: function (dateText, inst) { 

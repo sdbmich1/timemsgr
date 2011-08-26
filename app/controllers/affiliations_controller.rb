@@ -37,6 +37,10 @@ class AffiliationsController < ApplicationController
       end
     end
   end
+  
+  def show
+    redirect_to home_path
+  end
      
   protected
   

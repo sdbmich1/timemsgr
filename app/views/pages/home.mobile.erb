@@ -7,9 +7,13 @@
 <% end -%>
 
 <% content_for :content do %>
-  	<center><h3>Know What's Happening</h3>
-  			<p>Easy event scheduling.</p>
+  	<center><h3>Scheduling. At Your Service.</h3>
+  			<p>Easy event scheduling with automated notifications to your desired recipients.</p>
   	</center>  
   	<%= link_to "Sign Up!", new_user_registration_path, "data-role"=>"button", "data-theme"=>"b", "data-icon" => "arrow-r", "data-iconpos"=>"right" %>
 <% end -%>
+
+<% content_for :footer do %>
+	<%= render 'layouts/footer' %>
+<% end %>
 

@@ -23,7 +23,11 @@ class UsersController < ApplicationController
   end  
   
   def show
-    respond_with(@user = User.find(params[:id]))
+    respond_with(@user = current_user)
+  end
+  
+  def index
+    redirect_to home_user_path
   end
   
   private

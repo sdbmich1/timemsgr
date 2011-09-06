@@ -4,28 +4,24 @@
   	<%= yield :title %> 
 	<%= stylesheet_link_tag 'jquery-ui-1.8.11.custom', 'jquery.ui.datepicker.mobile','meter', :cache => true %>
   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" /> 
+
     <%= stylesheet_link_tag "screen", "mobile", "calendar", :cache => true %>  
   	<%= javascript_include_tag :defaults, :cache => true %>
+	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
   	
-  	<script>
-  		//reset type=date inputs to text
-  		$( document ).bind( "mobileinit", function(){
-    		$.mobile.page.prototype.options.degradeInputs.date = true;
-  		});	
-	</script>
-
- 	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
- 	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
-	<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
+ 	<%= yield :pre_mobile_load %>
+  	<script src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.js"></script>		<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
   <div id="app" data-role="page"> 
     <div data-role="header">
-  	  <h1><%= "#{get_name_or_logo}" %></h1>
       <%= yield :head %>
- 
+  
       <% if user_signed_in? %>
+ 	  	<h1><%= "#{get_name_or_logo}" %></h1>
         <%= link_to 'Sign Out', destroy_user_session_path, "class" => "ui-btn-right" %>
       <% end %>
     </div>
@@ -42,11 +38,11 @@
       <%= yield :content %>
     </div>
     
-    <div data-role="footer">		
+    <div data-role="footer" class="nav-glyphish">		
       <%= yield :footer %>
     </div>
-
-   </div>         
+   </div>   
+     
   	<%= javascript_include_tag 'jQuery.ui.datepicker.js','jquery.ui.datepicker.mobile.js','jquery.progressbar.min.js', :cache => true %>
   </body> 
 </html>

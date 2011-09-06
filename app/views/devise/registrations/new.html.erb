@@ -15,8 +15,8 @@
  		<p><span>Location</span><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => 'Select' %></p>
 		<p><span>Gender</span><%= f.select :gender, options_for_select( ['Male', 'Female'] ), :prompt => 'Select' %></p>
    		<p><span>Birth Date</span>
-    		<%= f.date_select :birth_date, :as => :date, :start_year => Date.today.year - 90,
-                                :end_year => Date.today.year - 12, 
+    		<%= f.date_select :birth_date, :as => :date, :start_year => Date.today.year - 13,
+                                :end_year => Date.today.year - 90, 
                                 :order => [:month, :day, :year], :required => true, 
                                 :prompt => true,
                                 :hint => "This helps find content for you."  %></p>

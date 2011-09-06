@@ -6,7 +6,8 @@ Timemsgr::Application.routes.draw do
    
   resources :events do
     member do
-      get 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
+      get 'clone', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
+      post 'move'
     end
     
     collection do

@@ -12,7 +12,6 @@ jQuery.ajaxSetup({
 
 // add iphone orientation change handler
 $(function (){ 
-
     if (navigator.userAgent.match(/iPhone/i)) {
         $(window).bind('orientationchange', function(event) {
             if (window.orientation == 90 || window.orientation == -90 || window.orientation == 270) {
@@ -51,11 +50,11 @@ $(document).ready(function (){
   	 	$('#end-date').val($(this).val())
      }); 
   
-  $('#end-date').datepicker({ 
+    $('#end-date').datepicker({ 
       onClose: function () { $(this).focus(); }, 
       dateFormat:dateFormat,
       onSelect: function(dateText, inst){ }                       
-  }); 
+    }); 
     	
 });
 
@@ -90,17 +89,3 @@ $(function(){
 	$('.password').pstrength();
 });
 
-jQuery.event.add(window, "load", resizeFrame);
-jQuery.event.add(window, "resize", resizeFrame);
-
-function resizeFrame() 
-{
-    var h = $(window).height();
-    var w = $(window).width();
-        $(".left-nav").css('left',(w < 1024 || h < 768) ? 150 : 350 );
-        $(".right-nav").css('right',(w < 1024 || h < 768) ? 50 : 200 );
-		$(".push").css('margin-top', function() {
-	  		   var c = $(".container").height();
-			   return c + 20;
-		});
-}

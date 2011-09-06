@@ -7,13 +7,7 @@ class ApplicationController < ActionController::Base
 
   protected
   
-  def rescue_with_handler(exception)
-    redirect_to '/500.html'
-  end
 
-  def method_missing(id, *args)
-    redirect_to '/404.html'
-  end
 
   def load_settings
     if user_signed_in?
@@ -29,7 +23,7 @@ class ApplicationController < ActionController::Base
     if session[:mobile_param]  
       session[:mobile_param] == "1"  
     else  
-      request.user_agent =~ /iPhone;|Android/  
+      request.user_agent =~ /iPhone;|Android|Windows Phone/  
     end  
   end
    

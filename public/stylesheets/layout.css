@@ -196,6 +196,8 @@ body {
   float: right;
 }
 
+.notice { width: 80%; }
+
 hr { height:0.25em; margin-top: 10px;}
 
 .timeframe { position:absolute; right: 0; top: -3.5em; line-height: 18px; }
@@ -208,4 +210,4 @@ hr { height:0.25em; margin-top: 10px;}
 .q-msg { font-size: 0.75em; font-style: italic; width: 65%; margin: 0; padding:0; }
 .q-spkr { font-size: 0.75em; font-weight: bold; float: right; }
 
-#quotes { padding:2px;  margin-bottom: 20px; line-height: 0.875em; }
+#quotes { padding:2px;  margin-bottom: 20px; line-height: 0.875em; min-height: 30px; }

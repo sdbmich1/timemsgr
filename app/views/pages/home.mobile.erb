@@ -1,19 +1,25 @@
-<% content_for :title do %>
+<%= content_for :pre_mobile_load do %>
+	<%= render 'shared/pre_load' %>
+<% end %>
+
+<%= content_for :title do %>
   	<title><%= "#{get_name_or_logo}" %></title>
 <% end -%>
 
-<% content_for :head do %>
-    <%= link_to 'Sign In', new_user_session_path, "class" => "ui-btn-right" %>
+<%= content_for :head do %>
 <% end -%>
 
-<% content_for :content do %>
-  	<center><h3>Scheduling. At Your Service.</h3>
-  			<p>Easy event scheduling with automated notifications to your desired recipients.</p>
-  	</center>  
-  	<%= link_to "Sign Up!", new_user_registration_path, "data-role"=>"button", "data-theme"=>"b", "data-icon" => "arrow-r", "data-iconpos"=>"right" %>
+<%= content_for :content do %>
+  <div class="center-wrapper">
+	<p><%= image_tag("koncierge.png", :class =>"logo") %></p><br />
+  	<h3>Scheduling. At Your Service.</h3>
+  	<p>A smarter way to plan, discover and schedule events near you.</p><br />
+ 
+  	<%= link_to 'Sign In', new_user_session_path, "data-role"=>"button", "data-theme"=>"b" %>
+  </div>
 <% end -%>
 
-<% content_for :footer do %>
+<%= content_for :footer do %>
 	<%= render 'layouts/footer' %>
 <% end %>
 

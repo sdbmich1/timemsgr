@@ -3,11 +3,13 @@ class Event < ActiveRecord::Base
   set_table_name 'eventspriv'
   set_primary_key 'ID'
   include Rewards # include rewards to add credits for user where appropriate
+
   before_save :set_flds, :add_rewards
   after_save :save_rewards
+#  after_initialize :reset_attr
   attr_accessor :current_user, :activity_type
  	attr_accessible :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
-				:eventendtime, :event_type, :reoccurrencetype, 
+				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
@@ -20,6 +22,7 @@ class Event < ActiveRecord::Base
   validates_presence_of :eventendtime, :if => "eventendtime.nil?"
   validates :eventenddate, :presence => true
   validates :RSVPemail, :email_format => true, :unless => Proc.new { |a| a.RSVPemail.blank? } 
+  validates_uniqueness_of :event_title, :scope => [:contentsourceID,:eventstartdate, :eventstarttime]
       		
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 	
@@ -48,19 +51,15 @@ class Event < ActiveRecord::Base
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt]) 
   end
   
-  def self.find_event(eid)
+  def self.get_event(eid)
     where_id = "where (id = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid])        
   end
-
-  def add_rewards
-    @reward_amt = add_credits(self.changes)
-  end
   
-  def save_rewards
-    save_credits(self.contentsourceID, 'Event', @reward_amt)
-  end
+  def self.find_event(eid)
+    get_event(eid).first
+  end    
   
   def self.observance?
     where("event_type in ('h', 'm')")
@@ -69,11 +68,7 @@ class Event < ActiveRecord::Base
   def owned?(user)
     self.contentsourceID == user.id
   end
-    
-  def reset_attr
-    self.eventstartdate=self.eventenddate = nil
-  end
-     
+
   define_index do
       indexes :event_title, :sortable => true
       indexes :event_name, :sortable => true
@@ -85,23 +80,37 @@ class Event < ActiveRecord::Base
       
   protected
    
-    def self.getSQL
+   def reset_attr
+     self.eventstartdate=self.eventenddate = nil
+   end
+
+   def add_rewards
+     @reward_amt = add_credits(self.changes)
+   end
+  
+   def save_rewards
+     save_credits(self.contentsourceID, 'Event', @reward_amt)
+   end
+   
+   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID,
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID"     
-    end
+   end
     
-    def set_flds
+   def set_flds
       if status.nil?
         self.status = "active" 
         self.hide = "No"
         self.event_name = self.event_title
         self.postdate = Date.today
         self.cformat = "html"
+        self.eventstarttime = self.eventstarttime.advance(:hours => self.localGMToffset)
+        self.eventendtime = self.eventendtime.advance(:hours => self.endGMToffset)
         self.CreateDateTime = Time.now
-        self.ID = Event.count + 10000
+        self.ID = Event.count + 10001
       end
-    end
+   end
        
 end

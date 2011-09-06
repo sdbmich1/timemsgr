@@ -130,6 +130,12 @@ div.boolean {
 
 }
 
+.subscription {
+	min-height: 280px;
+}
+
+.set-btm { margin-top: 90px; }
+
 #landing {
   margin-top: 1em;
   background: #fff;

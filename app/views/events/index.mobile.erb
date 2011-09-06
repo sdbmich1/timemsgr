@@ -4,8 +4,8 @@
 
 <% content_for :content do %>
 	<h3 class="center-wrapper"><%= "#{@slider}" %></h3>
-	<div class="mobile-slider" id="mslide">
-		<ul><%= render :partial => 'event', :collection => get_slider_events(@slider), 
-				:as => :event, :locals => {:slider => @slider } %></ul>
-	</div>
+	<ul data-role="listview" data-inset="true">
+		<%= render :partial => 'mlist', :collection => get_slider_events(@slider), 
+				:as => :event, :locals => {:slider => @slider } %>	
+	</ul>
 <% end -%>

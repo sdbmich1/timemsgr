@@ -3,6 +3,10 @@ module EventsHelper
 	def showtime
 		@time = Time.zone.now
 	end
+	
+	def set_form_type(fname)
+	  @form = fname
+	end
 		
 	def get_etype_icon(elist, ecode)
 	  etype = elist.detect { |e| e.event_type == ecode } 
@@ -33,8 +37,21 @@ module EventsHelper
     case 
     when !(area =~ /Observances/i).nil?; get_observances 
     when !(area =~ /Upcoming/i).nil?; get_opp_events
+    when !(area =~ /Opportunities/i).nil?; get_opportunities
     else get_user_events
     end
+  end
+  
+  # load default schedule if one doesnt exists
+  def get_opportunities
+    events = []
+    t = Time.now
+    3.times do |i|
+      start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 1)
+      end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 2)
+      events << {:start_date => Date.today, :start_time => start_time, :end_time => end_time}
+    end
+    return events
   end
 
 	def set_slider_class(area)
@@ -48,15 +65,17 @@ module EventsHelper
     end
 	end
 	
-  def chk_offset(tm, offset, eid)
-    unless offset.blank? && @user.localGMToffset.blank? && !eid.blank?
-      tm = tm.advance(:hours => (0 - offset).to_i)
-    end
-    return tm.strftime("%l:%M %p")
+  def chk_offset(*tm)
+    tm[0] = tm[0].advance(:hours => (0 - tm[1]).to_i) if tm[1]
+    tm[0].blank? ? '' : tm[0].strftime("%l:%M %p")
   end	
   
 	def chk_time(val)	  
-	  val.blank? ? '' : val.strftime('%l:%M %P')
+	  val.blank? ? '' : val.strftime('%l:%M %p')
+	end
+	
+	def set_offset(val)
+	  val.blank? ? @user.localGMToffset : val  
 	end
 	
 	def rsvp?(val)
@@ -68,8 +87,8 @@ module EventsHelper
     'shared/user_panel' if @form == "event_slider"
   end
 	
-	def get_nice_date(edate)  
-	  edate.blank? ? '' : edate.strftime('%m-%d-%Y') 
+	def get_nice_date(*args) 
+	  args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m-%d-%Y') 
 	end
 	
 	def set_header(form)
@@ -116,10 +135,17 @@ module EventsHelper
 	  start_dt <= Date.today ? Date.today : start_dt
 	end
 	
+	def compare_times(cur_tm, end_tm)
+	  ['hour', 'min'].each { |method|
+        return true if cur_tm.send(method) > end_tm.send(method)
+    }
+    false
+	end
+	
 	def is_past?(ev)
 	  return false if ev.endGMToffset.blank?
     etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
-    ev.eventstartdate <= Date.today && Time.now > etm ? true : false    
+    ev.eventstartdate <= Date.today && compare_times(Time.now, etm) ? true : false    
   end
 	
 	# parse date ranges
@@ -146,7 +172,7 @@ module EventsHelper
 	end
 	
 	def get_opp_events
-	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || is_past?(e) || e.contentsourceID == @user.id.to_s }
+	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || e.eventid.blank? || e.contentsourceID == @user.id.to_s }
 	end
 	
 	def getquote

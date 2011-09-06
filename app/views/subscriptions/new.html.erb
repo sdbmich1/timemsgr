@@ -5,15 +5,17 @@
 <% end %>
 
 <% content_for :content do %>
+  <div class="subscription">
 	<h3 class="strong">Select Your Channels</h3>
 	<p>Based on your selections we found the following channels for you.</p>
 
 	<%= form_for @subscription do |f| %>
  		<div id="event_errors" style="display:none" class="error"></div>
 		<%= render "shared/error_messages", :target => @subscription %>  
-		<%= render 'channel_lists' %><br />
-		<%= f.submit 'Continue >>', :class => "nav-right" %><br />
+		<%= render :partial => 'channel', :collection => @channels %><br />
+		<%= f.submit 'Continue >>', :class => set_class %><br />
 	<% end %>
+  </div>
 <% end %>
 
 <% content_for :right_sidebar do %>

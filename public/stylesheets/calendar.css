@@ -6,7 +6,7 @@
         .calendar > .month { text-align: center; padding: 2px 0px 2px 0px; }
         .calendar > .day { line-height: 20px; text-align: center; font-weight: bold; }
 
-.calendar > .month { line-height: 18px; background: #f08103; color: #ffffff;  }
+.calendar > .month { line-height: 18px; background: #f08103; color: #ffffff; font-weight: normal!important;  }
     .calendar > .day {  background: #fff no-repeat; }
     
 .calendar { 

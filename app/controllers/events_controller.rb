@@ -44,24 +44,16 @@ class EventsController < ApplicationController
 	
 	def destroy
     @event = Event.find(params[:id])      
-    if @event.destroy  
-      flash[:notice] = "Successfully deleted event." 
-      respond_with(@event) do |format|
-        format.mobile { render 'shared/home_menu' }
-      end      
-    else
-      respond_with(@event.errors, :status => :unprocessable_entity) do |format|
-        format.mobile { render :action => :show }
-      end
-    end
+    flash[:notice] = "Successfully deleted event." if @event.destroy     
+    respond_with(@event) 
   end
   
   def move
     @selected_event = Event.find_event(params[:id])
     @selected_event.contentsourceID = @user.id
     @event = Event.new(@selected_event.attributes)
-    flash[:notice] = "#{get_msg(@user, 'Event')}" if @event.save
-    respond_with(@events = Event.current(params[:end_date], @user.id.to_s))
+    flash[:notice] = "#{get_msg(@user, 'Event')}" if @event.save 
+    respond_with(@events = Event.current(params[:end_date], @user.id.to_s)) 
   end
     		
 	protected

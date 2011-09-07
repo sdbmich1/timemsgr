@@ -95,21 +95,25 @@ class Event < ActiveRecord::Base
    def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
-        mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID,
+        mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID"     
    end
     
    def set_flds
       if status.nil?
-        self.status = "active" 
         self.hide = "No"
         self.event_name = self.event_title
         self.postdate = Date.today
         self.cformat = "html"
-        self.eventstarttime = self.eventstarttime.advance(:hours => self.localGMToffset)
-        self.eventendtime = self.eventendtime.advance(:hours => self.endGMToffset)
+        self.status = "active" 
         self.CreateDateTime = Time.now
-        self.ID = Event.count + 10001
+        self.ID = Event.maximum('ID') + 1
+        if self.eventid.blank?
+          self.eventstarttime = self.eventstarttime.advance(:hours => self.localGMToffset)
+          self.eventendtime = self.eventendtime.advance(:hours => self.endGMToffset)         
+        else
+          self.eventid = nil
+        end
       end
    end
        

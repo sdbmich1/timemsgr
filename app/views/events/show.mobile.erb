@@ -31,11 +31,11 @@
 	<div data-role="navbar" class="nav-glyphish" data-grid="d">
 	<ul>
 		<% if !(@slider =~ /Upcoming/i).nil? %>
-			<li><%= link_to "Move", move_event_url(@event, {:end_date => @enddate}), "data-icon"=>"custom", 'data-method' => 'post', :id => "move", :remote => true %> </li>
+			<li><%= link_to "Move", move_event_url(@event, {:end_date => @enddate}), "data-icon"=>"custom", :id => "move" %> </li>
 			<li><%= link_to "Like", like_event_url(@event), "data-icon"=>"custom", :id => "like", :remote => true %> </li>
 		<% else %>
 			<li><%= link_to "Edit", edit_event_url(@event), "data-icon"=>"custom", :id => "edit" %> </li>
-			<li><%= link_to "Delete", @event, "data-icon"=>"custom", 'data-method' => 'delete', :id => "delete" %> </li>
+			<li><%= link_to "Delete", @event, "data-icon"=>"custom", :method => 'delete', :id => "delete" %> </li>
 		<% end %>
 		<li><%= link_to "Notify", notify_event_url(@event), "data-icon"=>"custom", :id => "notify", :remote => true %> </li>
 		<li><%= link_to "Share", share_event_url(@event), "data-icon"=>"custom", :id => "share", :remote => true %> </li>

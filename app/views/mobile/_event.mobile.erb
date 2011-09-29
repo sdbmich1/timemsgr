@@ -1,0 +1,18 @@
+<% if (slider =~ /Observances/i).nil? %>
+	<div class="calendar">
+   		<span class="month"><%= show_date(event.eventstartdate).strftime("%b") %></span>
+    	<span class="day"><%= show_date(event.eventstartdate).strftime("%e") %></span>
+	</div>
+	<div class="stime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> - <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
+ 	<div class="slider-title">
+		<h6><%= event.event_name %></h6>
+	</div>
+<% else %>
+ 	<div class="stitle">
+		<h6><%= event.event_name %><%= " ( #{get_nice_date(event.eventstartdate)} )" %></h6>
+	</div>
+<% end %>
+
+<div class="sl-descr">
+	<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>100, :omission=>'...') %></div>
+</div>

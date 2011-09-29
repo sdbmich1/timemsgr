@@ -2,14 +2,23 @@ require 'rewards'
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :load_settings, :prepare_for_mobile, :except => :destroy
+  before_filter :chk_request
   include Rewards
   helper_method :mobile_device?
 
+   
+  def authenticate_user!
+    session[:return_to] = request.fullpath
+    super
+  end
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || session[:return_to]
+    session[:return_to] = nil
+  end
+  
   protected
   
-  def rescue_with_handler(exception)
-    redirect_to '/500.html'
-  end
 
   def method_missing(id, *args)
     redirect_to '/404.html'
@@ -17,9 +26,16 @@ class ApplicationController < ActionController::Base
 
   def load_settings
     if user_signed_in?
-      Time.zone = current_user.time_zone
+ #     Time.zone = current_user.time_zone
       @credits = get_credits(current_user.id)
       @meters = get_meter_info
+    end 
+  end
+  
+  def chk_request
+    if @user
+      debugger
+      redirect_to events_url unless session[:return_to] && request.referer && @user.sign_in_count > 1
     end 
   end
   
@@ -29,7 +45,7 @@ class ApplicationController < ActionController::Base
     if session[:mobile_param]  
       session[:mobile_param] == "1"  
     else  
-      request.user_agent =~ /iPhone;|Android|Windows Phone/  
+      request.user_agent =~ /iPhone;|Android|Blackberry|Windows Phone/  
     end  
   end
    

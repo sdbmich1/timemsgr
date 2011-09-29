@@ -4,8 +4,9 @@ class UsersController < ApplicationController
   respond_to :html, :json, :xml, :js, :mobile
      
   def home
+ #   debugger
   	if @user.sign_in_count <= 1	# check for new users
-      redirect_to new_interest_path, :notice => "#{get_msg(@user,'Welcome')}"
+      redirect_to new_interest_path, :notice => "#{get_msg(@user,'Welcome')}" unless mobile_device?
   	else
       redirect_to home_path unless mobile_device?
     end 

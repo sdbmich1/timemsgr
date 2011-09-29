@@ -1,0 +1,2 @@
+module MajorEventsHelper
+end

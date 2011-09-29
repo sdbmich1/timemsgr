@@ -3,10 +3,18 @@ class PagesController < ApplicationController
   respond_to :html, :xml, :js, :mobile
   
   def home
-  	@title = "Plan, Discover, Track, and Share Activities"
-  	respond_with(@title)
+  	@title = "Plan, Discover, Schedule and Share Activities"
+ 	  @menu = BrowseMenu.findmenu('Home') if mobile_device?
+  	respond_with(@menu)
   end
 
+  def browse
+    @title = "Browse" 
+    #@menu = BrowseMenu.findmenu('Browse') if mobile_device?
+    @menu = Category.get_active_list
+    respond_with(@menu)
+  end
+  
   def contact
   	@title = "Contact"
   end

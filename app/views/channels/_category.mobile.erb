@@ -1,0 +1,23 @@
+<ul data-role="listview">
+  <% @categories.each do |category| %>
+	<li><%= link_to category.name, "#" %>
+		<ul>
+			<% category.interests.each do |i| %>
+				<li><%= link_to i.name, '#' %>
+					<ul>
+						<% i.channels.each do |c| %>
+							<li><%= link_to c.channel_name, '#' %>
+								<ul>
+									<%= render :partial => 'mobile/event_list', :collection => get_event_list(c.events), 
+										 	:as => :event, :locals => {:slider => 'Channel Events' } %>	
+								</ul>
+							</li>
+						<% end %>
+					</ul>
+				</li>
+			<% end %>
+		</ul>
+	</li>
+  <% end %>
+</ul>
+	

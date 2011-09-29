@@ -1,0 +1,36 @@
+<% title "Session" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @session.name %>
+</p>
+<p>
+  <strong>Topic:</strong>
+  <%= @session.topic %>
+</p>
+<p>
+  <strong>Startdate:</strong>
+  <%= @session.startdate %>
+</p>
+<p>
+  <strong>Enddate:</strong>
+  <%= @session.enddate %>
+</p>
+<p>
+  <strong>Starttime:</strong>
+  <%= @session.starttime %>
+</p>
+<p>
+  <strong>Endtime:</strong>
+  <%= @session.endtime %>
+</p>
+<p>
+  <strong>Event:</strong>
+  <%= @session.event_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_session_path(@session) %> |
+  <%= link_to "Destroy", @session, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sessions_path %>
+</p>

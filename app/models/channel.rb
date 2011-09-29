@@ -1,19 +1,25 @@
-class Channel < ActiveRecord::Base
+class Channel < KitsTsdModel
 	attr_accessible :title, :start_date, :location_id, :channel_status
 	
 	# define user & subscriptions
-	has_many :subscriptions, :dependent => :destroy
-	has_many :users, :through => :subscriptions
+#	has_many :subscriptions, :dependent => :destroy
+#	has_many :users, :through => :subscriptions
 	
+	belongs_to :host_profile
+  has_many :events,
+           :finder_sql => proc { "SELECT e.* FROM kitstsddb.events e " +
+           "INNER JOIN channels c ON c.channelID=e.subscriptionsourceID " +
+           "WHERE c.id=#{id}" }
+  
 	has_many :channel_interests, :dependent => :destroy
 	has_many :interests, :through => :channel_interests
-	
-	has_many :events	
-	has_many :channel_locations
+  has_many :categories, :through => :interests
+
+#	has_many :channel_locations
 	
   scope :active, where(:status.downcase => 'active')
   scope :unhidden, where(:hide.downcase => 'no')
-  scope :uniquelist, :select => 'DISTINCT channels.id, channels.name'
+#  scope :uniquelist, :select => 'DISTINCT channels.id, channels.name'
   
   default_scope :order => 'sortkey ASC'
   

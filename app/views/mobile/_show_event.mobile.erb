@@ -1,0 +1,36 @@
+<h3 class="center-wrapper"><%= event.event_name %></h3>
+<label>Date: </label><span class="item-detail"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %></span><br />	
+<label>Time: </label> 
+ 
+<span class="item-detail">
+	<%= " #{chk_offset(event.eventstarttime, event.localGMToffset, event.contentsourceID)} 
+		- #{chk_offset(event.eventendtime, event.endGMToffset, event.contentsourceID)}" %>
+</span><br />
+
+<%= render :partial => 'mobile/show_event_contact', :locals => {:event => event} %>
+<%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
+
+<% unless (session_flg =~ /Yes/i).nil? %>	
+	<div class="plist">
+	<label>Presenter(s):</label>	
+	<%= render 'mobile/presenter_list' %></div>
+<% end %>
+
+<%= content_for :footer do %>
+	<div data-role="navbar" data-grid="d">
+	  <ul>
+		<% if (@slider =~ /Upcoming/i).nil? %>
+			<li><%= link_to "Add", move_event_url(event, {:end_date => @enddate}), "data-icon"=>"custom", :id => "move" %> </li>
+			<li><%= link_to "Like", like_event_url(event), "data-icon"=>"custom", :id => "like", :remote => true %> </li>
+		<% else %>
+			<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
+			<li><%= link_to "Delete", private_event_url(event), "data-icon"=>"custom", :method => 'delete', :id => "delete" %> </li>
+		<% end %>
+		<li><%= link_to "Notify", notify_event_url(event), "data-icon"=>"custom", :id => "notify", :remote => true %> </li>
+		<li><%= link_to "Share", share_event_url(event), "data-icon"=>"custom", :id => "share", :remote => true %> </li>
+		<li><%= link_to "RSVP", rsvp_event_url(event), "data-icon"=>"custom", :id => "rsvp", :remote => true %> </li>
+	  </ul>
+	</div>
+<% end %>
+
+

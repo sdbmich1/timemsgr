@@ -1,0 +1,24 @@
+<% if is_break?(event.session_type) %>
+	<li data-role="list-divider">
+		<div class="etime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
+ 		<div class="center-wrapper">
+			<%= truncate(event.event_name, :length=>30, :omission=>'...') %>
+		</div>
+	</li>
+<% else %>
+  <li>
+	<%= link_to event_session_url(event) do %>
+		<div class="etime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> - <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
+		<div class="list-hdr">
+ 			<h6><%= event.event_name %></h6>
+ 		</div>
+		<p><div class="loc">
+		<% unless event.track.blank? %>
+	  		<%= event.location %><%= " (#{event.track})"%>
+	  	<% else %>
+	 	 	<%= event.location %>
+	 	<% end %></div><br /></p>
+	<% end %>
+  </li>	
+<% end %>
+

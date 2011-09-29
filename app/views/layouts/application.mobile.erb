@@ -17,22 +17,14 @@
   </head>
   <body>  
   <div id="app" data-role="page"> 
-    <div data-role="header">
+    <div data-role="header" data-theme="b">
       <%= yield :head %>
-  
-      <% if user_signed_in? %>
- 	  	<h1><%= "#{get_name_or_logo}" %></h1>
-        <%= link_to 'Sign Out', destroy_user_session_path, "class" => "ui-btn-right" %>
-      <% end %>
+   	  	<h1><%= "#{get_name_or_logo}" %></h1>
+
+      	<% if user_signed_in? %>
+        	<%= link_to 'Account', home_user_path(current_user), "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
+      	<% end %>
     </div>
-    
-    <% unless flash.empty? %>  
-      <div class="info">  
-        <% flash.each do |name, msg| -%>  
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>  
-        <% end -%>  
-      </div>  
-    <% end %>  
     
 	<div class="app-content" data-role="content">		
       <%= yield :content %>

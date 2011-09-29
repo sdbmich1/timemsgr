@@ -1,0 +1,44 @@
+<% title "Promotion" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @promotion.name %>
+</p>
+<p>
+  <strong>Promo Type:</strong>
+  <%= @promotion.promo_type %>
+</p>
+<p>
+  <strong>Start Date:</strong>
+  <%= @promotion.start_date %>
+</p>
+<p>
+  <strong>Start Time:</strong>
+  <%= @promotion.start_time %>
+</p>
+<p>
+  <strong>End Date:</strong>
+  <%= @promotion.end_date %>
+</p>
+<p>
+  <strong>End Time:</strong>
+  <%= @promotion.end_time %>
+</p>
+<p>
+  <strong>Sponsor:</strong>
+  <%= @promotion.sponsor_id %>
+</p>
+<p>
+  <strong>Promo Fee:</strong>
+  <%= @promotion.promo_fee %>
+</p>
+<p>
+  <strong>Promo Descr:</strong>
+  <%= @promotion.promo_descr %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_promotion_path(@promotion) %> |
+  <%= link_to "Destroy", @promotion, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", promotions_path %>
+</p>

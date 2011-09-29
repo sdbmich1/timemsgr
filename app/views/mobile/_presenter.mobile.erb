@@ -1,0 +1,56 @@
+  <div class="mtop">
+    <div class="center-wrapper"> 
+  		<% for pic in @presenter.pictures %>
+    		<%= image_tag pic.photo.url, :class=>'ppic' %>
+  		<% end %>
+		<h3><%= @presenter.name %></h3>
+    </div>
+  </div>
+<p>  
+  <p>
+  <% unless @presenter.title.blank? %>
+	<label><%= "Title: " %></label> 
+	<span class="item-detail"><%= @presenter.title %></span> 
+  <% end %>
+  </p>
+  <p>
+  <% unless @presenter.org_name.blank? %>
+	<label><%= "Company: " %></label> 
+	<span class="item-detail"><%= @presenter.org_name %></span>
+  <% end %>
+  </p>
+  <% for contact in @presenter.contact_details %>
+     <% unless contact.work_phone.blank? %>
+		<label><%= "Work Phone: " %></label> 
+	 	<span class="item-detail"><%= contact.work_phone %></span><br /> 
+      <% end %>
+     <% unless contact.work_email.blank? %>
+		<label><%= "Email: " %></label> 
+	 	<span class="item-detail"><%= contact.work_email %></span><br /> 
+      <% end %>
+     <% unless contact.work_phone.blank? %>
+		<label><%= "Website: " %></label> 
+	 	<span class="item-detail"><%= contact.website %></span><br /> 
+      <% end %>
+      <% unless contact.facebook_name.blank? %>
+		<label><%= "Facebook: " %></label> 
+	 	<span class="item-detail"><%= contact.facebook_name %></span><br /> 
+      <% end %>     
+     <% unless contact.twitter_name.blank? %>
+		<label><%= "Twitter: " %></label> 
+	 	<span class="item-detail"><%= contact.twitter_name %></span><br /> 
+      <% end %>      
+     <% unless contact.linkedin_name.blank? %>
+		<label><%= "LinkedIn: " %></label> 
+	 	<span class="item-detail"><%= contact.linkedin_name %></span><br /> 
+      <% end %>      
+     <% unless contact.skype_name.blank? %>
+		<label><%= "Skype: " %></label> 
+	 	<span class="item-detail"><%= contact.skype_name %></span><br /> 
+      <% end %>      
+    <% end %>
+</p>     
+  <% unless @presenter.bio.blank? %>
+	<label><%= "Bio: " %></label> 
+	<span class="item-detail"><%= @presenter.bio %></span><br /> 
+  <% end %>

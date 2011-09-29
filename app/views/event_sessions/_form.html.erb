@@ -1,0 +1,32 @@
+<%= form_for @session do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :topic %><br />
+    <%= f.text_field :topic %>
+  </p>
+  <p>
+    <%= f.label :startdate %><br />
+    <%= f.date_select :startdate %>
+  </p>
+  <p>
+    <%= f.label :enddate %><br />
+    <%= f.date_select :enddate %>
+  </p>
+  <p>
+    <%= f.label :starttime %><br />
+    <%= f.time_select :starttime %>
+  </p>
+  <p>
+    <%= f.label :endtime %><br />
+    <%= f.time_select :endtime %>
+  </p>
+  <p>
+    <%= f.label :event_id %><br />
+    <%= f.text_field :event_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

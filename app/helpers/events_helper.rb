@@ -22,7 +22,11 @@ module EventsHelper
 	end
 	
 	def get_observances
-	  @events.select {|event| event.event_type == 'h' || event.event_type == 'm' }
+	  @events.select {|e| (e.event_type == 'h' || e.event_type == 'm') && view_obs?(e.location)  }
+	end
+	
+	def view_obs?(loc)
+	  loc.blank? ? true : !(loc =~ /United States/i).nil?
 	end
 	
 	def user_events?
@@ -65,11 +69,6 @@ module EventsHelper
     end
 	end
 	
-  def chk_offset(*tm)
-    tm[0] = tm[0].advance(:hours => (0 - tm[1]).to_i) if tm[1]
-    tm[0].blank? ? '' : tm[0].strftime("%l:%M %p")
-  end	
-  
 	def chk_time(val)	  
 	  val.blank? ? '' : val.strftime('%l:%M %p')
 	end
@@ -87,10 +86,6 @@ module EventsHelper
     'shared/user_panel' if @form == "event_slider"
   end
 	
-	def get_nice_date(*args) 
-	  args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m-%d-%Y') 
-	end
-	
 	def set_header(form)
 	  case form
 	  when "add_event";  "Add Event"
@@ -107,7 +102,11 @@ module EventsHelper
   def holiday?(etype)
     etype == 'h' ? true : false
   end
-
+  
+  def major_event?(etype)
+    (%w(conf fest conv fund gath).detect {|x| x == etype }).blank?
+  end
+  
 	def get_event_type
 	  @event.event_type if @event
 	end
@@ -129,10 +128,6 @@ module EventsHelper
 	
 	def chk_start_dt(start_dt)
 	  start_dt < Date.today ? false : true
-	end
-	
-	def show_date(start_dt)  
-	  start_dt <= Date.today ? Date.today : start_dt
 	end
 	
 	def compare_times(cur_tm, end_tm)
@@ -172,7 +167,8 @@ module EventsHelper
 	end
 	
 	def get_opp_events
-	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || e.eventid.blank? || e.contentsourceID == @user.id.to_s }
+    @user.blank? ? uid = " " : uid = @user.to_s
+	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || e.eventid.blank? || e.contentsourceID == uid }
 	end
 	
 	def getquote

@@ -1,0 +1,33 @@
+<% title "Promotions" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Promo Type</th>
+    <th>Start Date</th>
+    <th>Start Time</th>
+    <th>End Date</th>
+    <th>End Time</th>
+    <th>Sponsor</th>
+    <th>Promo Fee</th>
+    <th>Promo Descr</th>
+  </tr>
+  <% for promotion in @promotions %>
+    <tr>
+      <td><%= promotion.name %></td>
+      <td><%= promotion.promo_type %></td>
+      <td><%= promotion.start_date %></td>
+      <td><%= promotion.start_time %></td>
+      <td><%= promotion.end_date %></td>
+      <td><%= promotion.end_time %></td>
+      <td><%= promotion.sponsor_id %></td>
+      <td><%= promotion.promo_fee %></td>
+      <td><%= promotion.promo_descr %></td>
+      <td><%= link_to "Show", promotion %></td>
+      <td><%= link_to "Edit", edit_promotion_path(promotion) %></td>
+      <td><%= link_to "Destroy", promotion, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Promotion", new_promotion_path %></p>

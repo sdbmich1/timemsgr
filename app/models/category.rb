@@ -4,6 +4,9 @@ class Category < ActiveRecord::Base
   has_many :subcategories
   has_many :interests
 #  has_many :users, :through => :interests
+
+  has_many :channels, :through => :channel_interests
+  has_many :events, :through => :channels
   
   validates :name, :presence => true  #, :length => { :maximum => 15 }
   
@@ -14,8 +17,8 @@ class Category < ActiveRecord::Base
   scope :unhidden, :conditions => { :hide => 'no' }
   default_scope :order => 'sortkey ASC'
   
-  def self.active
-    unhidden.where(:status => 'active').includes(:interests)
+  def self.get_active_list
+    unhidden.where(:status => 'active').includes(:interests, :channels, :events)
   end
   
 end

@@ -1,0 +1,3 @@
+<% if !event.speaker.blank? %>	<label><%= "Speaker:" %></label>	<span class="item-detail"><%= event.speaker %></span><br /><% end %>
+<% if !event.speakertopic.blank? %>	<p><label><%= "Topic:" %></label> 	<span class="item-detail"><%= event.speakertopic %></span><br /></p><% end %>
+<% if !event.host.blank? %>	<label><%= "Host:" %></label>	<span class="item-detail"><%= event.host %></span><br /><% end %><% if !event.RSVPemail.blank? %>	<label><%= "RSVP Email:" %></label> 	<span class="item-detail"><%= event.RSVPemail %></span><br /> <% end %>

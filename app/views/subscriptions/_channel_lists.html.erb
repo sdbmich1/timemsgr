@@ -1,5 +1,0 @@
-<% @channels.each do |channel| %>
-	  <div>
- 		<%= check_box_tag "user[channel_ids][]", channel.id, true %><%= channel.name %>
-	  </div>	  
-<% end %>

@@ -1,12 +1,28 @@
 module ApplicationHelper
  
   # returns logo or name
-  def get_name_or_logo
-    @name = "Koncierge"
+  def get_name_or_logo(*args)
+    args[0] ? @name = "koncierge.png" : @name = "Koncierge"
   end
       
   def getcredits
     @credits
+  end
+  
+  def chk_offset(*tm)
+    unless @user.blank?
+      offset = tm[1] - @user.localGMToffset if tm[1]
+      @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
+    end 
+    @tm.blank? ? tm[0].strftime("%l:%M %p") : @tm.strftime("%l:%M %p")
+  end 
+  
+  def show_date(start_dt)  
+    start_dt <= Date.today ? Date.today : start_dt
+  end
+    
+  def get_nice_date(*args) 
+    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m-%d-%Y') 
   end
   
   def load_meters

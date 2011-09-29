@@ -1,0 +1,29 @@
+<div class="files"> 
+<%= form_for @event, :html => { :class => "upload", :multipart => true }, :validate => true  do |f| %>
+	<%= render "shared/error_messages", :target => @event %>  
+
+	<div style="display:none"><div id='modal'>
+		<div class="modal-title"><span>Add Photo</span></div><br />			
+		<p><%= label_tag "Select photo: " %><%= f.file_field :imagelink %></p>
+		<p><%= "(must be 1MB or less)" %></p>
+	</div></div>
+
+	<%= render :partial => 'event_info', :locals => { :f => f } %>
+	<%= render :partial => 'event_times', :locals => { :f => f } %>
+	<%= render :partial => 'event_location', :locals => { :f => f } %>
+	<%= render :partial => 'event_details', :locals => { :f => f } %>
+	<%= render :partial => 'event_contact', :locals => { :f => f } %>
+	<%= render :partial => 'event_notify', :locals => { :f => f } %>
+
+	<div id="life_event" style="display:none;">
+		<%= render :partial => 'event_show', :locals => { :f => f } %>
+	</div>	
+	<%= f.hidden_field :contentsourceID, :value => @user.id %>
+	<%= f.hidden_field :LastModifyBy, :value => @user.last_name + ', ' + @user.first_name %>
+
+	<div class="span-24 last" id="new-event">
+		<center><%= f.submit "Save Event" %></center>
+	</div>
+<% end -%>
+
+</div>

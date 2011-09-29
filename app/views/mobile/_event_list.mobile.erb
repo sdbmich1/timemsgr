@@ -1,0 +1,5 @@
+<li>
+  <%= link_to event_url(event, {:slider => slider}) do %>
+	<%= render :partial => 'mobile/event', :locals => { :event => event, :slider => slider  } %>
+  <% end %>
+</li>

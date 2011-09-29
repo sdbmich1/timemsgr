@@ -1,0 +1,29 @@
+<% title "Sessions" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Topic</th>
+    <th>Startdate</th>
+    <th>Enddate</th>
+    <th>Starttime</th>
+    <th>Endtime</th>
+    <th>Event</th>
+  </tr>
+  <% for session in @sessions %>
+    <tr>
+      <td><%= session.name %></td>
+      <td><%= session.topic %></td>
+      <td><%= session.startdate %></td>
+      <td><%= session.enddate %></td>
+      <td><%= session.starttime %></td>
+      <td><%= session.endtime %></td>
+      <td><%= session.event_id %></td>
+      <td><%= link_to "Show", session %></td>
+      <td><%= link_to "Edit", edit_session_path(session) %></td>
+      <td><%= link_to "Destroy", session, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Session", new_session_path %></p>

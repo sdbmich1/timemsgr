@@ -1,0 +1,44 @@
+<% title "Presenter" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @presenter.name %>
+</p>
+<p>
+  <strong>Bio:</strong>
+  <%= @presenter.bio %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @presenter.email %>
+</p>
+<p>
+  <strong>Fb Address:</strong>
+  <%= @presenter.fb_address %>
+</p>
+<p>
+  <strong>Tw Address:</strong>
+  <%= @presenter.tw_address %>
+</p>
+<p>
+  <strong>Work Phone:</strong>
+  <%= @presenter.work_phone %>
+</p>
+<p>
+  <strong>Mobile Phone:</strong>
+  <%= @presenter.mobile_phone %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @presenter.title %>
+</p>
+<p>
+  <strong>Company:</strong>
+  <%= @presenter.company %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_presenter_path(@presenter) %> |
+  <%= link_to "Destroy", @presenter, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", presenters_path %>
+</p>

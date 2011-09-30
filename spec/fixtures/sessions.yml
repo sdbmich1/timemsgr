@@ -1,0 +1,17 @@
+one:
+  name: MyString
+  topic: MyString
+  startdate: 2011-09-07
+  enddate: 2011-09-07
+  starttime: 2011-09-07 00:03:30
+  endtime: 2011-09-07 00:03:30
+  event_id: 1
+
+two:
+  name: MyString
+  topic: MyString
+  startdate: 2011-09-07
+  enddate: 2011-09-07
+  starttime: 2011-09-07 00:03:30
+  endtime: 2011-09-07 00:03:30
+  event_id: 1

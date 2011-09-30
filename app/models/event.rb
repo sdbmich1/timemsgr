@@ -9,7 +9,7 @@ class Event < KitsTsdModel
   has_many :presenters, :through => :event_presenters, :dependent => :destroy
 
   has_many :event_sites, :dependent => :destroy
-#  has_many :event_tracks, :dependent => :destroy
+  has_many :event_tracks, :dependent => :destroy
   has_many :pictures, :as => :imageable, :dependent => :destroy
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'

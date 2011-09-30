@@ -1,13 +1,9 @@
 class Channel < KitsTsdModel
 	attr_accessible :title, :start_date, :location_id, :channel_status
 	
-	# define user & subscriptions
-#	has_many :subscriptions, :dependent => :destroy
-#	has_many :users, :through => :subscriptions
-	
 	belongs_to :host_profile
   has_many :events,
-           :finder_sql => proc { "SELECT e.* FROM kitstsddb.events e " +
+           :finder_sql => proc { "SELECT e.* FROM events e " +
            "INNER JOIN channels c ON c.channelID=e.subscriptionsourceID " +
            "WHERE c.id=#{id}" }
   
@@ -15,6 +11,10 @@ class Channel < KitsTsdModel
 	has_many :interests, :through => :channel_interests
   has_many :categories, :through => :interests
 
+  # define user & subscriptions
+  has_many :subscriptions, :dependent => :destroy
+  has_many :users, :through => :subscriptions
+  
 #	has_many :channel_locations
 	
   scope :active, where(:status.downcase => 'active')

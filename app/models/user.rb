@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
   after_create :add_settings, :send_welcome_msg
   before_save :add_rewards
   after_save :save_rewards
-  has_many :authentications
-  
+    
   # Include default devise modules. Others available are:
   # :token_authenticatable,  :lockable and :timeoutable
   devise :database_authenticatable, :registerable,  #:confirmable,
@@ -48,7 +47,7 @@ class User < ActiveRecord::Base
   # define channel relationships
   has_many :subscriptions
   has_many :channels, :through => :subscriptions, 
-  				:conditions => { :channel_status => 'active'}
+  				:conditions => { :status => 'active'}
   
   has_many :associates
   
@@ -66,6 +65,8 @@ class User < ActiveRecord::Base
   
   has_many :settings
   has_many :session_prefs, :through => :settings 
+  
+  has_many :authentications
 
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address

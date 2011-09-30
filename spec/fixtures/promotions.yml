@@ -1,0 +1,21 @@
+one:
+  name: MyString
+  promo_type: MyString
+  start_date: 2011-09-07
+  start_time: 2011-09-07 13:21:56
+  end_date: 2011-09-07
+  end_time: 2011-09-07 13:21:56
+  sponsor_id: 1
+  promo_fee: 
+  promo_descr: MyText
+
+two:
+  name: MyString
+  promo_type: MyString
+  start_date: 2011-09-07
+  start_time: 2011-09-07 13:21:56
+  end_date: 2011-09-07
+  end_time: 2011-09-07 13:21:56
+  sponsor_id: 1
+  promo_fee: 
+  promo_descr: MyText

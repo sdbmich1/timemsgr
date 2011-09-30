@@ -1,0 +1,21 @@
+one:
+  name: MyString
+  bio: MyText
+  email: MyString
+  fb_address: MyString
+  tw_address: MyString
+  work_phone: MyString
+  mobile_phone: MyString
+  title: MyString
+  company: MyString
+
+two:
+  name: MyString
+  bio: MyText
+  email: MyString
+  fb_address: MyString
+  tw_address: MyString
+  work_phone: MyString
+  mobile_phone: MyString
+  title: MyString
+  company: MyString

@@ -1,0 +1,5 @@
+one:
+  event_name: MyString
+
+two:
+  event_name: MyString

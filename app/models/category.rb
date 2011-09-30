@@ -18,7 +18,7 @@ class Category < ActiveRecord::Base
   default_scope :order => 'sortkey ASC'
   
   def self.get_active_list
-    unhidden.where(:status => 'active').includes(:interests, :channels, :events)
+    unhidden.where(:status => 'active')
   end
   
 end

@@ -37,7 +37,7 @@ module EventsHelper
     get_observances.count > 0 ? true : false
   end
   
-  def get_slider_events(area)
+  def get_events(area)
     case 
     when !(area =~ /Observances/i).nil?; get_observances 
     when !(area =~ /Upcoming/i).nil?; get_opp_events
@@ -103,8 +103,9 @@ module EventsHelper
     etype == 'h' ? true : false
   end
   
-  def major_event?(etype)
-    (%w(conf fest conv fund gath).detect {|x| x == etype }).blank?
+  def tsd_event?(etype)
+    etlist = EventType.get_tsd_event_types
+    (etlist.detect {|x| x.event_type == etype }).blank?
   end
   
 	def get_event_type
@@ -169,6 +170,7 @@ module EventsHelper
 	def get_opp_events
     @user.blank? ? uid = " " : uid = @user.to_s
 	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || e.eventid.blank? || e.contentsourceID == uid }
+    debugger
 	end
 	
 	def getquote

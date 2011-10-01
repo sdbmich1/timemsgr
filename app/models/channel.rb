@@ -1,10 +1,6 @@
 class Channel < KitsTsdModel
 	attr_accessible :title, :start_date, :location_id, :channel_status
-	
-	# define user & subscriptions
-#	has_many :subscriptions, :dependent => :destroy
-#	has_many :users, :through => :subscriptions
-	
+		
 	belongs_to :host_profile
   has_many :events,
            :finder_sql => proc { "SELECT e.* FROM kitstsddb.events e " +
@@ -15,7 +11,12 @@ class Channel < KitsTsdModel
 	has_many :interests, :through => :channel_interests
   has_many :categories, :through => :interests
 
-#	has_many :channel_locations
+	has_many :channel_locations, :dependent => :destroy
+	has_many :locations, :through => :channel_locations
+	
+	# define subscriptions
+  has_many :subscriptions, :dependent => :destroy
+  has_many :users, :through => :subscriptions
 	
   scope :active, where(:status.downcase => 'active')
   scope :unhidden, where(:hide.downcase => 'no')

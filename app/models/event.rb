@@ -1,6 +1,7 @@
-class Event < KitsTsdModel   
+class Event < KitsTsdModel  
+  set_primary_key 'ID' 
   belongs_to :channel
-
+  
   has_many :session_relationships, :dependent => :destroy
   has_many :sessions, :through => :session_relationships, 
           :dependent => :destroy
@@ -9,7 +10,7 @@ class Event < KitsTsdModel
   has_many :presenters, :through => :event_presenters, :dependent => :destroy
 
   has_many :event_sites, :dependent => :destroy
-#  has_many :event_tracks, :dependent => :destroy
+  has_many :event_tracks, :dependent => :destroy
   has_many :pictures, :as => :imageable, :dependent => :destroy
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'

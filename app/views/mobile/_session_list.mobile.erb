@@ -8,7 +8,7 @@
 <% else %>
   <li>
 	<%= link_to event_session_url(event) do %>
-		<div class="etime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> - <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
+		<div class="sess-time"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> - <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
 		<div class="list-hdr">
  			<h6><%= event.event_name %></h6>
  		</div>
@@ -17,7 +17,7 @@
 	  		<%= event.location %><%= " (#{event.track})"%>
 	  	<% else %>
 	 	 	<%= event.location %>
-	 	<% end %></div><br /></p>
+	 	<% end %></div></p>
 	<% end %>
   </li>	
 <% end %>

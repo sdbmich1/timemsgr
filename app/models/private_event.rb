@@ -6,7 +6,7 @@ class PrivateEvent < ActiveRecord::Base
 
   before_save :set_flds, :add_rewards
   after_save :save_rewards
-  attr_accessor :current_user, :activity_type
+  attr_accessor :current_user
  	attr_accessible :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
 				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
@@ -54,6 +54,10 @@ class PrivateEvent < ActiveRecord::Base
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid])        
   end
+ 
+  def self.find_event(eid)
+    get_event(eid).first
+  end 
 
   define_index do
       indexes :event_title, :sortable => true
@@ -102,5 +106,18 @@ class PrivateEvent < ActiveRecord::Base
         end
       end
    end
+   
+  def self.getSQL
+      "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
+        eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
+        mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
+        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID"     
+   end
+   
+   def self.where_dt
+      "where (status = 'active' and hide = 'No') 
+                and (eventstartdate >= curdate() and eventstartdate <= ?) 
+                or (eventstartdate <= curdate() and eventenddate >= ?) "
+   end   
        
 end

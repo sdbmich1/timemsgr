@@ -4,12 +4,7 @@ class EventsController < ApplicationController
    respond_to :html, :xml, :js, :mobile
 	
 	def show
-	  if @slider
-	    (@slider =~ /Channel/i).nil? ? @event = Event.find_event(params[:id]) : @event = Event.find(params[:id])
-	  else
-	    @event = Event.find_event(params[:id])
-	  end 
- 		respond_with(@event)
+ 		respond_with(@event = Event.find_event(params[:id]))
 	end
 	
 	def index

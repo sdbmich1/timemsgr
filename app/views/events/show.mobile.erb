@@ -8,7 +8,7 @@
 
 <%= content_for :content do %>
   <div id="show-item">
-  	<% if major_event?(@event.event_type) %>
+  	<% if tsd_event?(@event.event_type) %>
 		<%= render :partial => 'mobile/show_major_event', :locals => {:event => @event} %>
   	<% else %>  
 		<%= render :partial => 'mobile/show_event', :locals => {:event => @event, :session_flg => 'No'} %>

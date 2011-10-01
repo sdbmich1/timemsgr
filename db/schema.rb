@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110807014648) do
+ActiveRecord::Schema.define(:version => 20111001073003) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -45,6 +45,18 @@ ActiveRecord::Schema.define(:version => 20110807014648) do
     t.string   "uid"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "browse_menus", :force => true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "status"
+    t.string   "hide"
+    t.integer  "sortkey"
+    t.string   "menutype"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "photo_file_name"
   end
 
   create_table "calendar_events", :force => true do |t|
@@ -106,8 +118,7 @@ ActiveRecord::Schema.define(:version => 20110807014648) do
     t.datetime "updated_at"
   end
 
-  add_index "channel_locations", ["channel_id"], :name => "index_channel_locations_on_channel_id"
-  add_index "channel_locations", ["location_id"], :name => "index_channel_locations_on_location_id"
+  add_index "channel_locations", ["location_id", "channel_id"], :name => "index_channel_locations_on_location_id"
 
   create_table "channels", :force => true do |t|
     t.string   "name"
@@ -164,6 +175,24 @@ ActiveRecord::Schema.define(:version => 20110807014648) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "user_id"
+  end
+
+  create_table "event_sessions", :force => true do |t|
+    t.string   "name"
+    t.string   "topic"
+    t.date     "startdate"
+    t.date     "enddate"
+    t.time     "starttime"
+    t.time     "endtime"
+    t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_tsds", :force => true do |t|
+    t.string   "event_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "event_type_images", :force => true do |t|
@@ -488,6 +517,18 @@ ActiveRecord::Schema.define(:version => 20110807014648) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "localGMToffset"
+    t.string   "status"
+    t.string   "hide"
+    t.integer  "sortkey"
+    t.integer  "country_id"
+  end
+
+  add_index "locations", ["country_id"], :name => "cnty_fkey_idx"
+
+  create_table "observance_events", :force => true do |t|
+    t.string   "event_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "organizations", :force => true do |t|
@@ -499,6 +540,35 @@ ActiveRecord::Schema.define(:version => 20110807014648) do
 
   add_index "organizations", ["name"], :name => "index_organizations_on_name"
 
+  create_table "pictures", :force => true do |t|
+    t.string   "name"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "presenters", :force => true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.string   "email"
+    t.string   "fb_address"
+    t.string   "tw_address"
+    t.string   "work_phone"
+    t.string   "mobile_phone"
+    t.string   "title"
+    t.string   "company"
+    t.integer  "session_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "private_events", :force => true do |t|
+    t.string   "event_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "progress_meters", :force => true do |t|
     t.string   "title"
     t.integer  "maxval"
@@ -507,11 +577,26 @@ ActiveRecord::Schema.define(:version => 20110807014648) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "meter_type"
   end
 
   create_table "promos", :force => true do |t|
     t.string   "speaker"
     t.string   "bbody"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "promotions", :force => true do |t|
+    t.string   "name"
+    t.string   "promo_type"
+    t.date     "start_date"
+    t.time     "start_time"
+    t.date     "end_date"
+    t.time     "end_time"
+    t.integer  "sponsor_id"
+    t.float    "promo_fee"
+    t.string   "promo_descr"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

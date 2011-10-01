@@ -5,6 +5,7 @@ class Category < ActiveRecord::Base
   has_many :interests
 #  has_many :users, :through => :interests
 
+  has_many :channel_interests, :through => :interests
   has_many :channels, :through => :channel_interests
   has_many :events, :through => :channels
   
@@ -18,7 +19,7 @@ class Category < ActiveRecord::Base
   default_scope :order => 'sortkey ASC'
   
   def self.get_active_list
-    unhidden.where(:status => 'active').includes(:interests, :channels, :events)
+    unhidden.where(:status => 'active')
   end
   
 end

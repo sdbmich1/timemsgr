@@ -1,5 +1,5 @@
 class PrivateEventsController < ApplicationController
-   before_filter :authenticate_user!
+   before_filter :authenticate_user!, :except => [:index]
    before_filter :load_data
    respond_to :html, :xml, :js, :mobile
 
@@ -8,7 +8,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def show
-    @event = PrivateEvent.find(params[:id])
+    @event = PrivateEvent.find_event(params[:id])
   end
 
   def new

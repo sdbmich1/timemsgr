@@ -1,6 +1,7 @@
-class Event < KitsTsdModel   
+class Event < KitsTsdModel  
+  set_primary_key 'ID' 
   belongs_to :channel
-
+  
   has_many :session_relationships, :dependent => :destroy
   has_many :sessions, :through => :session_relationships, 
           :dependent => :destroy

@@ -1,5 +1,10 @@
 <%= content_for :pre_mobile_load do %>
 	<%= render 'mobile/pre_load' %>
+	<script>
+			$("#app").live('pageshow', function(event) {
+            $.mobile.fixedToolbars.hide(true)
+	});
+	</script>
 <% end %>
 
 <%= content_for :title do %>

@@ -1,0 +1,2 @@
+class ObservanceEventsController < ApplicationController
+end

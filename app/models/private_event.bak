@@ -1,3 +1,0 @@
-class PrivateEvent < ActiveRecord::Base
-  attr_accessible :event_name
-end

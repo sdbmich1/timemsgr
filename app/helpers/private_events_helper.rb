@@ -103,7 +103,7 @@ module PrivateEventsHelper
     etype == 'h' ? true : false
   end
   
-  def major_event?(etype)
+  def tsd_event?(etype)
     case etype
     when 'conf', 'fest', 'conv', 'fund', 'gath'
       true

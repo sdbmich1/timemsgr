@@ -77,5 +77,11 @@ def make_orgs
   @orgs.each do |m|
       Organization.create!(:name => m.name, :org_type => m.affiliation_type)        
   end
+end
+
+def add_host_profile
+  User.all.each do |u|
+    u.host_profile.create()    
+  end
 end 
     

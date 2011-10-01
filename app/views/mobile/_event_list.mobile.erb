@@ -1,5 +1,11 @@
 <li>
-  <%= link_to event_url(event, {:slider => slider}) do %>
-	<%= render :partial => 'mobile/event', :locals => { :event => event, :slider => slider  } %>
+  <% if tsd_event?(event.event_type) %>
+    <%= link_to tsd_event?url(event, {:slider => slider}) do %>
+	  <%= render :partial => 'mobile/event', :locals => { :event => event, :slider => slider  } %>
+    <% end %>  
+  <% else %>
+    <%= link_to event_url(event, {:slider => slider}) do %>
+	  <%= render :partial => 'mobile/event', :locals => { :event => event, :slider => slider  } %>
+    <% end %>
   <% end %>
 </li>

@@ -13,7 +13,7 @@
       height: 25%;
     }
  
- .logo { margin-top: 40px;}   
+.logo { margin-top: 40px;}   
 .sborder {
 	border: 1px solid #CCCCCC;
 	padding: 0;
@@ -29,27 +29,57 @@
 
 .slider-etime { position: absolute; top: 4em!important; margin: 0; height: 2.5em; }
 
-.stime {
-	font-size: 0.75em;
-	margin-left: 0.1em;
-	text-align:right;
-	line-height: 1.0em;
-	width: 48px;	
+.ui-li-thumb, .ui-li-icon {
+    left: 1px;
+    max-height: 80px; 
+    max-width: 80px; 
+    position: absolute;
+    top: 0;
 }
 
+.mtop { margin-top: 12px;}
+
+/* major event image settings */
+.e-pic {width:100%; height:auto; position:relative;}
+
+/*   session list settings */
+.etime { position: absolute; top: 0.25em; left: 1.5em; width: 50px;
+		font-size: 0.75em; font-weight: bold; }
+
+.sess-time, .stime {position: absolute; top: 0.25em; right: 1em; font-size: 0.65em; font-weight: bold;  }
+.list-hdr h6 {font-size:0.875em; }
+.loc, .sdescr {font-weight: normal; font-size: 0.75em; margin: 0; }
+
+/*  session presenter list */
+.plist { position: absolute; bottom: -30em; width: 100%; }
+
+.ppic {    
+	left: 1px;
+    height: 80px; 
+    width: 80px; 
+    border: 1px solid #000000;
+    }
+    
+.ptitle { margin: 0; font-weight: bold }    
+
+/*  event list items */
 .slider-stime { position:absolute; top: 7em; }
 .show-time { font-weight: bold; color: red; margin-top: 5px; }
 
-.slider-title h5 {  position:absolute; top: 0.75em; margin: 0; left: 4.75em;  
-	 font-size:1em; line-height: 1.05em; height: 50px; width: 70%; }
+.slider-title h6 {  position:absolute; top: 1.25em; margin: 0; left: 5.35em;  
+	 font-size:0.8em; line-height: 1.05em; height: 50px; width: 70%; }
 
-.sl-descr { position:absolute; top: 2em; left: 4.75em; margin: 0;
-	   width: 70%; }
+.sl-descr { position:absolute; top: 2.0em; left: 4.35em; width: 80%;
+			margin-bottom: 10px; }
+	   
+.ui-li-desc {text-overflow: normal; overflow: visible; 
+			white-space: pre-wrap; font-size: 0.625em;}
 
 .stitle {font-size: 0.4em; }
 .sgrp { line-height: 1em; }
-.sdescr { font-size: 0.825em; width: 75%; font-weight: normal; }
+.sdescr { font-size: 0.7em; width: 80%; font-weight: normal; height: 30px; }
 
+/* old slider markup */
 #mslide { width: 100%; }	 
 #mslide ul { padding: 0!important; margin: 0!important; list-style-type:none;  }
 #mslide li {
@@ -89,7 +119,7 @@ h3 { margin-top: 0px; }
 footer { height: 1.5em; }
 #show-item { position: relative; width: 100%; }
 #show-item label { font-weight: bold; font-size: 0.75em; }
-.item-detail { position: absolute; left: 4.5em; font-size: 0.75em; margin-top: 0.25em; }
+.item-detail { position: absolute; left: 5.25em; font-size: 0.75em; margin-top: 0.25em; }
 
 .nav-glyphish .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 .nav-glyphish .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }

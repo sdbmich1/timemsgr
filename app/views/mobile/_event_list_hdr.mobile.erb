@@ -1,0 +1,7 @@
+<li data-role="list-divider" data-theme="b" class="center-wrapper">
+   <% if edate == Date.today %>
+     <%= 'Today' %>
+   <% else %>
+   	 <%= edate.strftime("%A, %B %e, %Y") %>
+   <% end %>
+</li>

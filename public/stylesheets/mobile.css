@@ -41,17 +41,19 @@
 
 /* major event image settings */
 .e-pic {width:100%; height:auto; position:relative;}
+.show-pic {width:120px; height:auto; }
 
 /*   session list settings */
 .etime { position: absolute; top: 0.25em; left: 1.5em; width: 50px;
 		font-size: 0.75em; font-weight: bold; }
 
 .sess-time, .stime {position: absolute; top: 0.25em; right: 1em; font-size: 0.65em; font-weight: bold;  }
-.list-hdr h6 {font-size:0.875em; }
+.list-hdr h6 {font-size:0.875em; color: blue; }
 .loc, .sdescr {font-weight: normal; font-size: 0.75em; margin: 0; }
 
 /*  session presenter list */
 .plist { position: absolute; bottom: -30em; width: 100%; }
+.pstr { font-size: 0.875em; color: blue; }
 
 .ppic {    
 	left: 1px;
@@ -67,7 +69,7 @@
 .show-time { font-weight: bold; color: red; margin-top: 5px; }
 
 .slider-title h6 {  position:absolute; top: 1.25em; margin: 0; left: 5.35em;  
-	 font-size:0.8em; line-height: 1.05em; height: 50px; width: 70%; }
+	 font-size:0.8em; line-height: 1.05em; height: 50px; width: 70%; color: blue;}
 
 .sl-descr { position:absolute; top: 2.0em; left: 4.35em; width: 80%;
 			margin-bottom: 10px; }
@@ -75,7 +77,7 @@
 .ui-li-desc {text-overflow: normal; overflow: visible; 
 			white-space: pre-wrap; font-size: 0.625em;}
 
-.stitle {font-size: 0.4em; }
+.stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
 .sdescr { font-size: 0.7em; width: 80%; font-weight: normal; height: 30px; }
 

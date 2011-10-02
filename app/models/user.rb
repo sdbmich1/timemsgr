@@ -54,7 +54,11 @@ class User < ActiveRecord::Base
   has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
-  has_many :host_profiles
+  has_many :host_profiles, 
+           :finder_sql => proc { "SELECT hp.* FROM `kitstsddb`.hostprofiles hp " +
+           "INNER JOIN `kits_development`.users u ON hp.ProfileID=u.id " +
+           "WHERE u.id=#{id}" }
+
   accepts_nested_attributes_for :host_profiles, :reject_if => :all_blank 
  
   has_many :user_photos

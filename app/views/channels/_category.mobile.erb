@@ -9,7 +9,7 @@
 							<li><%= link_to c.channel_name, '#' %>
 								<ul>
 									<%= render :partial => 'mobile/event_list', :collection => get_event_list(c.events), 
-										 	:as => :event, :locals => {:slider => 'Channel Events' } %>	
+										 	:as => :event %>	
 								</ul>
 							</li>
 						<% end %>

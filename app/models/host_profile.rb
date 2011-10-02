@@ -1,4 +1,9 @@
 class HostProfile < KitsTsdModel
+  set_table_name 'hostprofiles'
+  set_primary_key 'ID'
+
+  attr_accessible :ProfileID, :HostChannelID, :ProfileType, :EntityType, :status,
+        :hide, :sortkey, :channelID, :subscriptionsourceID, :subscriptionsourceURL
   
   belongs_to :user
   has_many :channels,

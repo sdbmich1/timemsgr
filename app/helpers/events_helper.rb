@@ -100,12 +100,11 @@ module EventsHelper
 	end
 	
   def holiday?(etype)
-    etype == 'h' ? true : false
+    etype == 'h' 
   end
   
-  def tsd_event?(etype)
-    etlist = EventType.get_tsd_event_types
-    (etlist.detect {|x| x.event_type == etype }).blank?
+  def observance?(etype)
+    etype == 'h' || etype == 'm'
   end
   
 	def get_event_type
@@ -114,18 +113,7 @@ module EventsHelper
 	
 	def chk_activity_type(event)
 	  event.blank? ? '' : event.activity_type
-	end
-	
-	def chk_event_type(etype, egrp)
-	  case egrp
-	  when 'Shop'
-	    case etype 
-	    when 'perform', 'match', 'sale', 'fund', 'ue', 'ce'; true
-	    else false
-	    end
-	  else false
-    end
-	end
+	end	
 	
 	def chk_start_dt(start_dt)
 	  start_dt < Date.today ? false : true
@@ -133,8 +121,7 @@ module EventsHelper
 	
 	def compare_times(cur_tm, end_tm)
 	  ['hour', 'min'].each { |method|
-        return true if cur_tm.send(method) > end_tm.send(method)
-    }
+        return true if cur_tm.send(method) > end_tm.send(method) }
     false
 	end
 	

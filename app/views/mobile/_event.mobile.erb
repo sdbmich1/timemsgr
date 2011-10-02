@@ -1,4 +1,4 @@
-<% if (slider =~ /Observances/i).nil? %>
+<% unless holiday?(event.event_type) || observance?(event.event_type) %>
 	<div class="calendar">
    		<span class="month"><%= show_date(event.eventstartdate).strftime("%b") %></span>
     	<span class="day"><%= show_date(event.eventstartdate).strftime("%e") %></span>
@@ -14,5 +14,5 @@
 <% end %>
 
 <div class="sl-descr">
-	<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>85, :omission=>'...') %></div>
+	<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>80, :omission=>'...') %></div>
 </div>

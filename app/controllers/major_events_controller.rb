@@ -3,8 +3,7 @@ class MajorEventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
+    @presenters = @event.presenters
   end
-  
-  def index
-  end
+
 end

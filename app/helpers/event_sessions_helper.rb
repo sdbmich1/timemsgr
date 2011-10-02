@@ -4,7 +4,7 @@ module EventSessionsHelper
     (%w(wkshp cls mtg key brkout panel).detect { |x| x == session_type }).blank?
   end
   
-  def get_sessions(elist, start_date)
+  def list_events(elist, start_date)
     elist.select {|event| event.eventstartdate.to_date == start_date }
   end
   
@@ -13,4 +13,5 @@ module EventSessionsHelper
     edate = event.eventenddate.to_date
     drange = (sdate..edate).collect { |x| x }
   end
+  
 end

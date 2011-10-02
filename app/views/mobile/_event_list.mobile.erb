@@ -1,11 +1,11 @@
 <li>
-  <% if tsd_event?(event.event_type) %>
-    <%= link_to tsd_event?url(event, {:slider => slider}) do %>
-	  <%= render :partial => 'mobile/event', :locals => { :event => event, :slider => slider  } %>
+  <% unless major_event?(event.event_type) %>
+    <%= link_to major_event_url(event) do %>
+	  	<%= render :partial => 'mobile/event', :locals => { :event => event } %>
     <% end %>  
   <% else %>
-    <%= link_to event_url(event, {:slider => slider}) do %>
-	  <%= render :partial => 'mobile/event', :locals => { :event => event, :slider => slider  } %>
+    <%= link_to event_url(event) do %>
+	  	<%= render :partial => 'mobile/event', :locals => { :event => event  } %>
     <% end %>
   <% end %>
 </li>

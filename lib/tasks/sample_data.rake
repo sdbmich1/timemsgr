@@ -18,8 +18,38 @@ namespace :db do
     # add channel locations
     set_channel_locations
   end
+  
+  task :set_host_profiles => :environment do
+    build_profiles  
+  end
+  
+  task :set_channels => :environment do
+    build_channels
+  end
 end  
  
+def build_profiles
+  User.all.each do |u|
+    cid = 'HP0000' + u.id.to_s
+    u.host_profiles.create( :ProfileID=>u.id, :HostChannelID => cid, 
+      :EntityType => 'G', :ProfileType => 'Social', :subscriptionsourceID => cid,
+      :status => 'active', :hide => 'no')
+      
+  end  
+end
+
+def build_channels
+  User.all.each do |u|
+    u.host_profiles.each do |h|
+      cid = 'WS0000' + h.id.to_s
+      h.channels.create(:channelID => cid, :subscriptionsourceID => cid,
+        :status => 'active', :hide => 'no', :channel_name => "#{u.first_name} #{u.last_name}",
+        :channel_title => "#{u.first_name} #{u.last_name}" )
+     end
+  end
+  
+end
+
 def make_categories
      Category.all.each do |f|
       5.times do |n|

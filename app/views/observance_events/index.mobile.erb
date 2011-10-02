@@ -1,0 +1,23 @@
+<%= content_for :head do %>
+ 	<%= link_to 'Home', root_path, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
+<% end -%>
+
+<%= content_for :content do %>
+  <div class="mtop">
+	<ul data-role="listview">
+		<li data-role="list-divider" class="center-wrapper">Observances</li>
+		<div class="center-wrapper">
+		<%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), 
+				:as => :event, :locals => {:slider => 'Observances' } %>
+		</div>			
+		<% if user_signed_in? %>
+			<li data-role="list-divider" class="center-wrapper">My Schedule</li>
+			<%= render :partial => 'mobile/event_list', :collection => get_events('My Schedule'), 
+				:as => :event, :locals => {:slider => 'My Schedule' } %>
+		<% end %>	
+		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
+		<%= render :partial => 'mobile/event_list', :collection => get_events('Upcoming Events'), 
+				:as => :event, :locals => {:slider => 'Upcoming Events' } %>	
+	</ul>
+  </div>
+<% end -%>

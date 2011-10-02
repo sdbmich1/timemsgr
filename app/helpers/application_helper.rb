@@ -17,6 +17,24 @@ module ApplicationHelper
     @tm.blank? ? tm[0].strftime("%l:%M %p") : @tm.strftime("%l:%M %p")
   end 
   
+  def tsd_event?(etype)
+    etlist = EventType.get_tsd_event_types
+    (etlist.detect {|x| x.code == etype }).blank?
+  end
+  
+  def is_session?(etype)
+    etype == 'es'
+  end
+  
+  def major_event?(etype)
+    (%w(conf conv fest conc trmt fr).detect { |x| x == etype}).blank?
+  end
+  
+  def life_event?(etype)
+    etlist = EventType.get_life_event_types
+    (etlist.detect {|x| x.code == etype }).blank?
+  end
+  
   def show_date(start_dt)  
     start_dt <= Date.today ? Date.today : start_dt
   end

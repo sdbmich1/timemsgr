@@ -8,10 +8,10 @@
 
 <% content_for :content do %>
 	<div class="mtop">
-		<ul data-role="listview">
+		<ul data-role="listview" data-filter="true">
 			<% get_date_range(@event).each do |edate| %>
-				<li data-role="list-divider" data-theme="b" class="center-wrapper"><%= edate.strftime("%D") %></li>
-				<%= render :partial => 'mobile/session_list', :collection => get_sessions(@event), :as => :event %>	
+		  		<%= render :partial => 'mobile/event_list_hdr', :locals => {:edate => edate } %> 
+				<%= render :partial => 'mobile/session_list', :collection => list_events(@event), :as => :event %>	
 			<% end %>
 		</ul>	
 	</div>

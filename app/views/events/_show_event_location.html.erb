@@ -1,3 +1,0 @@
-<div class="span-2"><%= 'Where:' %></div><div class="span-18 last"><%= @event.mapplacename %></div><div class="span-18 last">	<span class="<%= !@event.mapplacename.blank? ? 'prepend-2' : 'none' %>"><%= @event.mapstreet %></span></div>
-<% if !@event.mapcity.blank? %>	<div class="span-20 last">		<span class="prepend-2"><%= "#{@event.mapcity}, #{@event.mapstate} #{@event.mapzip}  " %></span>	</div><br /><% end %>
-<% if !@event.cbody.blank? %>	<div class="<%= !@event.speaker.blank? ? 'span-6' : 'span-2' %>"><span class="<%= !@event.speaker.blank? ? 'prepend-4' : 'none' %>"><%= 'Details:' %></span></div>	<div class="span-18 last"><%= @event.cbody.html_safe %></div><br /><% end %>

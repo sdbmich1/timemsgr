@@ -38,6 +38,11 @@ class Event < KitsTsdModel
     get_event(eid).first
   end 
   
+  def self.find_events(edate, user) 
+    edate.blank? ? edate = Date.today+14.days : edate  
+    user.blank? ? current_events(edate) : current(edate, user.id.to_s)    
+  end
+  
   def self.get_event_details(eid)
     joins(:sessions, :presenters).find(eid)
   end

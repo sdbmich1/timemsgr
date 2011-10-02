@@ -103,15 +103,7 @@ module PrivateEventsHelper
     etype == 'h' ? true : false
   end
   
-  def tsd_event?(etype)
-    case etype
-    when 'conf', 'fest', 'conv', 'fund', 'gath'
-      true
-    else false
-    end
-  end
-
-	def get_event_type
+ 	def get_event_type
 	  @event.event_type if @event
 	end
 	
@@ -122,10 +114,7 @@ module PrivateEventsHelper
 	def chk_event_type(etype, egrp)
 	  case egrp
 	  when 'Shop'
-	    case etype 
-	    when 'perform', 'match', 'sale', 'fund', 'ue', 'ce'; true
-	    else false
-	    end
+	    (['perform', 'match', 'sale', 'fund', 'ue', 'ce'].detect {|x| x == etype}).blank?
 	  else false
     end
 	end

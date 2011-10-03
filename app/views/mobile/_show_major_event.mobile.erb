@@ -8,7 +8,7 @@
 
 <div class="mtop">
   <ul data-role="listview" data-theme="b">
-	<li><%= link_to "About", event_session_url(event) %></li>
+	<li><%= link_to "About", about_major_event_url(event) %></li>
 	<li><%= link_to "Schedule", event_sessions_url(:event_id => event) %></li>
 	<li><%= link_to "Speakers", presenters_url(:event_id => event) %></li>	
  	<li><%= link_to "Register", promotions_url(@user) %> </li>

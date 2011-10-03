@@ -17,7 +17,7 @@
 <%= render :partial => 'mobile/show_event_contact', :locals => {:event => event} %>
 <%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
 
-<% unless tsd_event?(event.event_type) %>	
+<% if is_session?(event.event_type) %>	
 	<div class="plist">
 	<label>Presenter(s):</label>	
 	<%= render 'mobile/presenter_list' %></div>

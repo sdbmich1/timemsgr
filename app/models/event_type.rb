@@ -5,7 +5,4 @@ class EventType < ActiveRecord::Base
     find_by_sql(["SELECT code FROM `kitstsddb`.event_types"])
   end
     
-  def self.get_life_event_types
-    LifeEventType.all
-  end  
 end

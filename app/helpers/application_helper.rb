@@ -10,6 +10,7 @@ module ApplicationHelper
   end
   
   def chk_offset(*tm)
+    return Time.now unless tm[0]
     unless @user.blank?
       offset = tm[1] - @user.localGMToffset if tm[1]
       @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
@@ -24,6 +25,10 @@ module ApplicationHelper
   
   def is_session?(etype)
     etype == 'es'
+  end
+  
+  def set_case(val)
+    val.titleize
   end
   
   def major_event?(etype)

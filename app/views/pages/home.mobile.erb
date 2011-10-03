@@ -1,9 +1,11 @@
 <%= content_for :pre_mobile_load do %>
 	<%= render 'mobile/pre_load' %>
 	<script>
-			$("#app").live('pageshow', function(event) {
+	  $(document).bind("mobileinit", function(){
+		$("#app").live('pageshow', function(event) {
             $.mobile.fixedToolbars.hide(true)
-	});
+		});
+	  });
 	</script>
 <% end %>
 
@@ -12,6 +14,12 @@
 <% end -%>
 
 <%= content_for :head do %>
+
+	<% if user_signed_in? %>
+   		<h1><%= "#{get_name_or_logo}" %></h1>
+       	<%= link_to 'Account', home_user_path(current_user), "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
+    <% end %>
+
 <% end -%>
 
 <%= content_for :content do %>

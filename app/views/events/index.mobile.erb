@@ -1,6 +1,4 @@
-<%= content_for :head do %>
- 	<%= link_to 'Home', root_path, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
-<% end -%>
+<%= render 'mobile/index_form' %>
 
 <%= content_for :content do %>
 	<%= render 'mobile/index' %>

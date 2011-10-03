@@ -1,6 +1,7 @@
  
 #app {width: 100%; height: 100% !important;}  
 .app-content {width: 100%; height: 100%; padding: 0}
+
 .ui-body-c {
 	background: #FFFFFF!important;
 }  
@@ -80,6 +81,15 @@
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
 .sdescr { font-size: 0.7em; width: 80%; font-weight: normal; height: 30px; }
+
+/* add event styling */
+#start-time hour { color: blue}
+#freq {width: 100px; }
+.fc-width {width: 320px; }
+.eform input {
+  text-transform: capitalize;
+}
+.eform label { font-weight: bold; font-size: 0.75em; }
 
 /* old slider markup */
 #mslide { width: 100%; }	 

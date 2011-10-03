@@ -5,10 +5,12 @@ Timemsgr::Application.routes.draw do
   # controllers for event related content
   resources :members, :promotions, :presenters, :event_sessions
   
-  resources :channels
+  resources :channels, :observance_events
    
   resources :major_events do
-    get 'register', :on => :member
+    member do 
+      get 'register', 'about'
+    end
     get 'list', :on => :collection
   end
   
@@ -30,7 +32,7 @@ Timemsgr::Application.routes.draw do
       get 'manage', 'import', 'clock', 'getquote'
     end
   end
-  
+    
   resources :affiliations do
     get :autocomplete_organization_name, :on => :collection
   end  

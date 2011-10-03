@@ -1,12 +1,6 @@
-<% content_for :pre_mobile_load do %>
-  	<%= render 'mobile/pre_load' %>
-<% end %>
-
-<% content_for :head do %>
- 	<%= link_to 'Home', root_path, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
-<% end %>
+<%= render 'mobile/index_form' %>
 
 <% content_for :content do %>
-	<h3 class="center-wrapper">Add Event</h3>
-	<%= render 'mobile/form' %>
+	<h3 class="center-wrapper">Add Life Event</h3>
+	<%= render 'form' %>
 <% end %>

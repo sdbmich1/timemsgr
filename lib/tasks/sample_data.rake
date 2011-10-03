@@ -40,8 +40,8 @@ end
 
 def build_channels
   User.all.each do |u|
-    u.host_profiles.each do |h|
-      cid = 'WS0000' + h.id.to_s
+   cid = 'HP0000' + u.id.to_s
+   u.host_profiles.each do |h|
       h.channels.create(:channelID => cid, :subscriptionsourceID => cid,
         :status => 'active', :hide => 'no', :channel_name => "#{u.first_name} #{u.last_name}",
         :channel_title => "#{u.first_name} #{u.last_name}" )

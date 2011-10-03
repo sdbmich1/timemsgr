@@ -5,5 +5,10 @@ class MajorEventsController < ApplicationController
     @event = Event.find(params[:id])
     @presenters = @event.presenters
   end
+  
+  def about
+    @event = Event.find(params[:id])
+    @presenters = @event.presenters
+  end
 
 end

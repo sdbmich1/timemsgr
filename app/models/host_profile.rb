@@ -8,7 +8,7 @@ class HostProfile < KitsTsdModel
   belongs_to :user
   has_many :channels,
            :finder_sql => proc { "SELECT c.* FROM channels c " +
-           "INNER JOIN host_profiles hp ON c.subscriptionsourceID=hp.subscriptionsourceID " +
+           "INNER JOIN hostprofiles hp ON c.channelID=hp.subscriptionsourceID " +
            "WHERE hp.id=#{id}" }
   
   has_many :events, :through => :channels 

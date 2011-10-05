@@ -23,18 +23,18 @@
 <% end -%>
 
 <%= content_for :content do %>
-  <div class="center-wrapper">
+  <div class="mtop center-wrapper">
 	<p><%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %></p><br />
   	<h3>Scheduling. At Your Service.</h3>
   	<p>A smarter way to plan, discover and schedule events near you.</p><br />
   	<div class="mtop">
 	<ul data-role="listview" data-theme="b">
 		<li><%= link_to "Browse Channels", channels_url %></li>
-		<li><%= link_to "My Schedule", private_events_url(@user) %></li>
-		<li><%= link_to "Upcoming Events", events_url(@user, {:slider => 'Upcoming Events'}) %></li>
-	 	<li><%= link_to "Hot Deals", promotions_url(@user) %> </li>
-	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
-	 	<li><%= link_to "About #{get_name_or_logo}", about_url(@user) %> </li>
+		<li><%= link_to "My Schedule", private_events_url %></li>
+		<li><%= link_to "Upcoming Events", events_url %></li>
+	 	<li><%= link_to "Hot Deals", promotions_url %> </li>
+	 	<li><%= link_to "QOL Score", metrics_url %> </li>
+	 	<li><%= link_to "About #{get_name_or_logo}", about_url %> </li>
 	</ul>
 	</div>
   </div>

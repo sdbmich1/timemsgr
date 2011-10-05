@@ -1,4 +1,4 @@
-<% unless holiday?(event.event_type) || observance?(event.event_type) %>
+<% unless observance?(event.event_type) %>
 	<div class="calendar">
    		<span class="month"><%= show_date(event.eventstartdate).strftime("%b") %></span>
     	<span class="day"><%= show_date(event.eventstartdate).strftime("%e") %></span>
@@ -7,12 +7,11 @@
  	<div class="slider-title">
 		<h6><%= event.event_name %></h6>
 	</div>
+	<div class="sl-descr">
+		<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>80, :omission=>'...') %></div>
+	</div>
 <% else %>
  	<div class="stitle">
 		<h6><%= event.event_name %><%= " ( #{get_nice_date(event.eventstartdate)} )" %></h6>
 	</div>
 <% end %>
-
-<div class="sl-descr">
-	<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>80, :omission=>'...') %></div>
-</div>

@@ -2,7 +2,7 @@ class ObservanceEventsController < ApplicationController
    before_filter :authenticate_user!, :load_data
 
   def show
-    @event = ObservanceEvent.find_event(params[:id])
+    @event = ObservanceEvent.find(params[:id])
   end
 
   def new
@@ -12,7 +12,7 @@ class ObservanceEventsController < ApplicationController
   def create
     @event = ObservanceEvent.new(params[:observance_event])
     if @event.save
-      redirect_to private_events_url, :notice => "#{get_msg(@user, 'Event')}"
+      redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
       render :action => 'new'
     end
@@ -25,7 +25,7 @@ class ObservanceEventsController < ApplicationController
   def update
     @event = ObservanceEvent.find(params[:id])
     if @event.update_attributes(params[:observance_event])
-      redirect_to @event, :notice  =>  "#{get_msg(@user, 'Event')}"
+      redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
       render :action => 'edit'
     end
@@ -34,7 +34,7 @@ class ObservanceEventsController < ApplicationController
   def destroy
     @event = ObservanceEvent.find(params[:id])
     @event.destroy
-    redirect_to observance_events_url, :notice => "Successfully destroyed Observance event."
+    redirect_to events_url, :notice => "Successfully destroyed observance event."
   end
     
   def clone  
@@ -45,7 +45,7 @@ class ObservanceEventsController < ApplicationController
     
   def load_data
     @user = current_user
-    @host_profile = @user.host_profiles.first
+    @host_profile = @user.host_profiles.first if @user
   end
 
 end

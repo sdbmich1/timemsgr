@@ -8,9 +8,15 @@ module EventSessionsHelper
     elist.select {|event| event.eventstartdate.to_date == start_date }
   end
   
-  def get_date_range(event)
-    sdate = event.eventstartdate.to_date
-    edate = event.eventenddate.to_date
+  def get_date_range(*args)
+    event = args[0]    
+    if args[1] 
+      sdate = event.first.eventstartdate.to_date
+      args[1] ? edate = args[1] : edate = sdate
+    else
+      sdate = event.first.eventstartdate.to_date
+      edate = event.first.eventenddate.to_date
+    end
     drange = (sdate..edate).collect { |x| x }
   end
   

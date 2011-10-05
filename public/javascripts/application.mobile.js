@@ -32,26 +32,6 @@ $(document).bind("mobileinit", function(){
     		}
   	});
   	
-  $('#dialoglink').live('vclick', function() {
-    $(this).simpledialog({
-    'mode' : 'bool',
-    'prompt' : 'Got Here?',
-    'buttons' : {
-      'Yes': {
-        click: function () {
-          $('#dialogoutput').text('Yep');
-        }
-      },
-      'No': {
-        click: function () {
-          $('#dialogoutput').text('Nah');
-        },
-        icon: "delete",
-        theme: "c"
-      }
-    }
-   })
- })
   	    	 	 
 });
 	 

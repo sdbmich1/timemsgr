@@ -1,9 +1,11 @@
 <div class="event-image center-wrapper">
+  <% unless life_event?(event.event_type) || private_event?(event.event_type) %>
 	<% for pic in event.pictures %>
 		<% if pic %>
     		<%= image_tag pic.photo.url, :class => "show-pic" %>
     	<% end %>		
    	<% end %>
+  <% end %>
 </div>
 <h3 class="center-wrapper"><%= event.event_name %></h3>
 <label>Date: </label><span class="item-detail"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %></span><br />	
@@ -26,13 +28,21 @@
 <%= content_for :footer do %>
 	<div data-role="navbar" data-grid="d">
 	  <ul>
-		<% unless tsd_event?(event.event_type) %>
-			<li><%= link_to "Add", move_private_event_url(event, {:end_date => @enddate}), "data-icon"=>"custom", :id => "move" %> </li>
+		<% if tsd_event?(event.event_type) %>
+			<li><%= link_to "Add", move_private_event_url(event), :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move" %> </li>
 			<li><%= link_to "Like", like_event_url(event), "data-icon"=>"custom", :id => "like", :remote => true %> </li>
-		<% else %>
-			<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
-			<li><%= link_to "Delete", private_event_url(event), "data-icon"=>"custom", :method => 'delete', :id => "delete" %> </li>
+		<% elsif private_event?(event.event_type) %>
+			<% if event.eventenddate < Date.today %>
+				<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
+			<% end %>
+			<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Are you sure?',  :id => "delete" %> </li>
+		<% elsif life_event?(event.event_type) %>
+			<% if event.eventenddate < Date.today %>
+				<li><%= link_to "Edit", edit_observance_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
+			<% end %>
+			<li><%= link_to "Delete", event, :method => 'delete', :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
 		<% end %>
+		
 		<li><%= link_to "Notify", notify_event_url(event), "data-icon"=>"custom", :id => "notify", :remote => true %> </li>
 		<li><%= link_to "Share", share_event_url(event), "data-icon"=>"custom", :id => "share", :remote => true %> </li>
 		<li><%= link_to "RSVP", rsvp_event_url(event), "data-icon"=>"custom", :id => "rsvp", :remote => true %> </li>

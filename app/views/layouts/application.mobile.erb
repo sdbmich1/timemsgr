@@ -3,19 +3,20 @@
   <head>  
   	<%= yield :title %> 
 	<%= stylesheet_link_tag 'jquery-ui-1.8.11.custom', 'jquery.ui.datepicker.mobile','meter', :cache => true %>
-  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
 	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.css" /> 
 
+	<%= yield :pre_mobile_load %>
+	<%= javascript_include_tag :defaults %>
     <%= stylesheet_link_tag "screen", "mobile", "calendar", :cache => true %>  
-  	<%= javascript_include_tag 'application.mobile.js', :cache => true %>
 	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
   	
-  	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
+ 	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/simpledialog/latest/jquery.mobile.simpledialog.min.js"></script>		<meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0">
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div id="app" data-role="page" data-fullscreen="true" > 
+  <div id="app" data-role="page" > 
     <div data-role="header" data-theme="b">
       <%= yield :head %>
     </div>
@@ -24,7 +25,7 @@
       <%= yield :content %>
     </div>
     
-    <div data-role="footer" class="nav-glyphish">		
+    <div data-role="footer" data-position="fixed">		
       <%= yield :footer %>
     </div>
    </div>   

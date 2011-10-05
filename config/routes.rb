@@ -25,7 +25,7 @@ Timemsgr::Application.routes.draw do
    
   resources :private_events do
     member do
-      get 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
+      get 'add', 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
     end
     
     collection do

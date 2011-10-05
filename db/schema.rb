@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111001073003) do
+ActiveRecord::Schema.define(:version => 20111004070441) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -205,14 +205,17 @@ ActiveRecord::Schema.define(:version => 20111001073003) do
   add_index "event_type_images", ["event_type"], :name => "etype_idx", :unique => true
 
   create_table "event_types", :force => true do |t|
-    t.string   "Description"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "Code"
+    t.string   "code"
     t.string   "photo_file_name"
+    t.integer  "sortkey"
+    t.string   "status"
+    t.string   "hide"
   end
 
-  add_index "event_types", ["Code"], :name => "index_event_types_on_Code"
+  add_index "event_types", ["code"], :name => "index_event_types_on_Code"
 
   create_table "events", :force => true do |t|
     t.string   "event_name"
@@ -559,6 +562,12 @@ ActiveRecord::Schema.define(:version => 20111001073003) do
     t.string   "title"
     t.string   "company"
     t.integer  "session_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "private_event_types", :force => true do |t|
+    t.string   "code"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

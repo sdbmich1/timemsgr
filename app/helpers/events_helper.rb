@@ -17,58 +17,58 @@ module EventsHelper
 	  direction == "left" ? "Arrow-Left-Gray.png" : "Arrow-Right-Gray.png"
 	end
 	
-	def get_user_events
-	  @events.select {|event| event.contentsourceID == @user.id.to_s }
-	end
-	
-	def get_observances
-	  @events.select {|e| (e.event_type == 'h' || e.event_type == 'm') && view_obs?(e.location)  }
-	end
-	
 	def view_obs?(loc)
-	  loc.blank? ? true : !(loc =~ /United States/i).nil?
-	end
-	
-	def user_events?
-	  get_user_events.count > 0 ? true : false
-	end
+    loc.blank? ? true : !(loc =~ /United States/i).nil?
+  end
+  
+  def user_events?
+    get_user_events.count > 0 ? true : false
+  end
 
   def observances?
     get_observances.count > 0 ? true : false
   end
+	
+	def life_observance?(etype)
+	  (%w(birthday anniversary).detect { |x| x == etype})
+	end
+	
+	def appt?(etype)
+    ['appointment', 'medical appointment', 'reminder'].detect { |x| x == etype}
+  end
+	
+	def get_user_events
+	  @events.select {|event| event.contentsourceID == @host_profile.subscriptionsourceID && !observance?(event.event_type)}
+	end
+	
+	def get_appointments
+    @events.select {|event| appt?(event.event_type)}
+  end
+	
+	def current?(sdt)
+	  dt = DateTime.parse(Date.today.year.to_s + '-' + sdt.month.to_s + '-' + sdt.day.to_s)
+	  dt >= Date.today ? true : false 
+	end
+	  	
+	def get_observances
+	  @events.select {|e| observance?(e.event_type) && view_obs?(e.location) && current?(e.eventstartdate) }
+	end
   
+  def get_opp_events
+    @host_profile.blank? ? ssid = " " : ssid = @host_profile.subscriptionsourceID
+    @events.reject {|e| observance?(e.event_type) || e.contentsourceID == ssid || is_session?(e.event_type) }
+  end
+    
   def get_events(area)
     case 
     when !(area =~ /Observances/i).nil?; get_observances 
     when !(area =~ /Upcoming/i).nil?; get_opp_events
     when !(area =~ /Opportunities/i).nil?; get_opportunities
+    when !(area =~ /Appointment/i).nil?; get_appointments
     else get_user_events
     end
   end
-  
-  # load default schedule if one doesnt exists
-  def get_opportunities
-    events = []
-    t = Time.now
-    3.times do |i|
-      start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 1)
-      end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 2)
-      events << {:start_date => Date.today, :start_time => start_time, :end_time => end_time}
-    end
-    return events
-  end
-
-	def set_slider_class(area)
-	  case 
-	  when !(area =~ /Observances/i).nil?
-	    sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "obsrv-slider" } 
- 	  when !(area =~ /Upcoming/i).nil?
-      sclass = {:lnav => 'prev', :rnav => "next", :stype => "opp-slider" } 
-	  else
-      sclass = {:lnav => 'sch-prev-btn', :rnav => "sch-next-btn", :stype => "sch-slider" } 
-    end
-	end
-	
+ 
 	def chk_time(val)	  
 	  val.blank? ? '' : val.strftime('%l:%M %p')
 	end
@@ -77,23 +77,9 @@ module EventsHelper
 	  val.blank? ? @user.localGMToffset : val  
 	end
 	
-	def rsvp?(val)
-	  return false if val.blank? 
-	  val.downcase == 'yes' ? true : false
-	end
-	
 	def set_panel
     'shared/user_panel' if @form == "event_slider"
   end
-	
-	def set_header(form)
-	  case form
-	  when "add_event";  "Add Event"
-	  when "edit_event"; @form = "add_event"; 'Edit Event' 
-	  when "event_list"; 'Manage Events'
-	  when "show_event"; 'Event Details'
-	  end
-	end
 	
 	def get_image
 	  @event.photo_file_name.blank? ? "schedule1.jpg" : @event.photo.url()
@@ -104,16 +90,12 @@ module EventsHelper
   end
   
   def observance?(etype)
-    etype == 'h' || etype == 'm'
+     life_observance?(etype) || etype == 'm' || etype == 'h'
   end
   
 	def get_event_type
 	  @event.event_type if @event
 	end
-	
-	def chk_activity_type(event)
-	  event.blank? ? '' : event.activity_type
-	end	
 	
 	def chk_start_dt(start_dt)
 	  start_dt < Date.today ? false : true
@@ -148,18 +130,7 @@ module EventsHelper
 	def showphoto(gender)	  	  
 	  gender == "Male" ? @photo = "headshot_male.jpg" : @photo = "headshot_female.jpg"
 	end
-	
-	# check if event photo file exists
-	def eventphoto(fname)
-	  fname.empty? ? fname = "camera.jpg" : fname
-	end
-	
-	def get_opp_events
-    @user.blank? ? uid = " " : uid = @user.to_s
-	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || e.eventid.blank? || e.contentsourceID == uid }
-    debugger
-	end
-	
+
 	def getquote
 	  @quote
 	end

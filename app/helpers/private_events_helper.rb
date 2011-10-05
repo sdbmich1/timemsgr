@@ -16,35 +16,6 @@ module PrivateEventsHelper
 	def nav_btn_img(direction)
 	  direction == "left" ? "Arrow-Left-Gray.png" : "Arrow-Right-Gray.png"
 	end
-	
-	def get_user_events
-	  @events.select {|event| event.contentsourceID == @user.id.to_s }
-	end
-	
-	def get_observances
-	  @events.select {|e| (e.event_type == 'h' || e.event_type == 'm') && view_obs?(e.location)  }
-	end
-	
-	def view_obs?(loc)
-	  loc.blank? ? true : !(loc =~ /United States/i).nil?
-	end
-	
-	def user_events?
-	  get_user_events.count > 0 ? true : false
-	end
-
-  def observances?
-    get_observances.count > 0 ? true : false
-  end
-  
-  def get_slider_events(area)
-    case 
-    when !(area =~ /Observances/i).nil?; get_observances 
-    when !(area =~ /Upcoming/i).nil?; get_opp_events
-    when !(area =~ /Opportunities/i).nil?; get_opportunities
-    else get_user_events
-    end
-  end
   
   # load default schedule if one doesnt exists
   def get_opportunities
@@ -98,17 +69,9 @@ module PrivateEventsHelper
 	def get_image
 	  @event.photo_file_name.blank? ? "schedule1.jpg" : @event.photo.url()
 	end
-	
-  def holiday?(etype)
-    etype == 'h' ? true : false
-  end
   
  	def get_event_type
 	  @event.event_type if @event
-	end
-	
-	def chk_activity_type(event)
-	  event.blank? ? '' : event.activity_type
 	end
 	
 	def chk_event_type(etype, egrp)
@@ -158,12 +121,7 @@ module PrivateEventsHelper
 	def eventphoto(fname)
 	  fname.empty? ? fname = "camera.jpg" : fname
 	end
-	
-	def get_opp_events
-    @user.blank? ? uid = " " : uid = @user.to_s
-	  @events.reject {|e| e.event_type == 'h' || e.event_type == 'm' || e.eventid.blank? || e.contentsourceID == uid }
-	end
-	
+
 	def getquote
 	  @quote
 	end

@@ -1,34 +1,8 @@
-<% content_for :pre_load_mobile do %>
-<script>
-$(document).bind("mobileinit", function() {
-   	// hides the date time as soon as the DOM is ready
-    $('#timebox').hide();
-    
- 	// shows the date & time fields on clicking the checkbox  
-  	$('#freq').click(function() {
-	
-		// If checked
-		if ($("#freq").is(":checked"))
-			{
-    			$('#timebox').show('slow');
-    			return false;
-    		}
-    	else
-    		{
-    			$('#timebox').hide('fast');
-    			return false;
-    		}
-  	});
-
-});		
-</script>
 <%= render 'mobile/index_form' %>
-<% end %>
-
 
 <% content_for :content do %>	<h3 class="mtop center-wrapper"><%= "#{current_user.first_name} #{current_user.last_name}"%></h3><br />	<ul data-role="listview">		<li data-role="list-divider">View</li>
-		<li><%= link_to "Scheduled Events", private_events_url(@user, {:slider => 'My Schedule'}) %></li>		<li><%= link_to "Recommended Events", private_events_url(@user, {:slider => 'Upcoming Events'}) %></li>	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
+		<li><%= link_to "Scheduled Events", private_events_url(@user) %></li>		<li><%= link_to "Recommended Events", private_events_url(@user) %></li>	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
 		<li data-role="list-divider">Manage</li>
-		<li><%= link_to "Add Event", observance_events_url, :id=>"dialoglink" %> </li>
+		<li><%= link_to "Add Event", add_private_event_url(@user), :id=>"dialoglink", "data-rel"=>"dialog", "data-transition"=>"pop" %> </li>
 		<li><%= link_to "Sign Out", destroy_user_session_path %></li>
 	</ul><% end -%>

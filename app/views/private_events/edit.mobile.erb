@@ -8,5 +8,5 @@
 
 <% content_for :content do %>
 	<h3 class="center-wrapper">Edit Event</h3>
-	<%= render 'mobile/form' %>
+	<%= render :partial => 'mobile/event_form', :locals => { :etype => 'event' } %>
 <% end %>

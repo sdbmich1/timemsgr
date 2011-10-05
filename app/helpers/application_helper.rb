@@ -20,7 +20,7 @@ module ApplicationHelper
   
   def tsd_event?(etype)
     etlist = EventType.get_tsd_event_types
-    (etlist.detect {|x| x.code == etype }).blank?
+    (etlist.detect {|x| x.code == etype })
   end
   
   def is_session?(etype)
@@ -28,18 +28,23 @@ module ApplicationHelper
   end
   
   def set_case(val)
-    val.titleize
+    val.capitalize
   end
   
   def major_event?(etype)
-    (%w(conf conv fest conc trmt fr).detect { |x| x == etype}).blank?
+    (%w(conf conv fest conc trmt fr).detect { |x| x == etype})
   end
   
   def life_event?(etype)
-    etlist = EventType.get_life_event_types
-    (etlist.detect {|x| x.code == etype }).blank?
+    etlist = LifeEventType.all
+    (etlist.detect {|x| x.Code == etype })
   end
-  
+
+  def private_event?(etype)
+    etlist = PrivateEventType.all
+    (etlist.detect {|x| x.code == etype })
+  end
+   
   def show_date(start_dt)  
     start_dt <= Date.today ? Date.today : start_dt
   end

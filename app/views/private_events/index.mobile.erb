@@ -1,7 +1,19 @@
 <%= render 'mobile/index_form' %>
 
-<%= content_for :content do %>
-	<li data-role="list-divider" class="center-wrapper">My Schedule</li>
-	<%= render :partial => 'mobile/event_list', :collection => get_events('My Schedule'), 
-				:as => :event %>
-<% end -%>
+<% content_for :content do %>
+	<div class="mtop">
+		<% if @event.count > 0 %>
+		  <ul data-role="listview" data-dividertheme="a" data-filter="true">
+			<li data-role="list-divider" class="center-wrapper">My Schedule</li>
+			<% get_date_range(@event, @enddate).each do |edate| %>
+				<% if list_events(@event, edate).count > 0 %>
+		  			<%= render :partial => 'mobile/event_list_hdr', :locals => {:edate => edate } %> 
+					<%= render :partial => 'mobile/event_list', :collection => list_events(@event, edate), :as => :event %>	
+				<% end %>
+			<% end %>
+		  </ul>	
+		<% else %>
+			No events scheduled.
+		<% end %>
+	</div>
+<% end %>

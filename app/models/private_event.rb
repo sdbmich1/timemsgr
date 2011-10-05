@@ -14,15 +14,15 @@ class PrivateEvent < ActiveRecord::Base
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
 	
-	validates :event_title, :presence => true
-	validates :event_type, :presence => true
-	validates_presence_of :eventstartdate, :if => "eventstartdate.nil?"
-  validates_presence_of :eventstarttime, :if => "eventstarttime.nil?"
-  validates_presence_of :eventendtime, :if => "eventendtime.nil?"
-  validates :eventenddate, :presence => true
-  validates :RSVPemail, :email_format => true, :unless => Proc.new { |a| a.RSVPemail.blank? } 
-  validates_uniqueness_of :event_title, :scope => [:contentsourceID,:eventstartdate, :eventstarttime]
-      		
+  validates :event_name, :presence => true, :length => { :maximum => 100 },
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
+  validates :event_type, :presence => true
+  validates_date :eventstartdate, :presence => true, :date => {:after_or_equal_to => Date.today}
+  validates_date :eventenddate, :presence => true, :allow_blank => false, :date => {:after_or_equal_to => :eventstartdate}
+  validates :eventstarttime, :presence => true
+  validates_time :eventendtime, :presence => true, :after => :eventstarttime, :if => :same_day?
+  validates :bbody, :length => { :maximum => 255 }  
+  
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 	
 	scope :active, where(:status.downcase => 'active')
@@ -40,19 +40,8 @@ class PrivateEvent < ActiveRecord::Base
     where("event_type in ('h', 'm')")
   end
   
-  def owned?(user)
-    self.contentsourceID == user.id
-  end
-  
-  def self.get_current_events
-    where('(eventstartdate >= curdate() and eventstartdate <= curdate()) 
-            or (eventstartdate <= curdate() and eventenddate >= curdate())')
-  end
-  
-  def self.get_event(eid)
-    where_id = "where (ID = ?))"
-    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid])        
+  def owned?(ssid)
+    self.contentsourceID == ssid
   end
  
   def self.find_event(eid)
@@ -69,6 +58,10 @@ class PrivateEvent < ActiveRecord::Base
   end
       
   protected
+  
+   def same_day?
+     eventstartdate == eventenddate
+   end
    
    def reset_attr
      self.eventstartdate=self.eventenddate = nil
@@ -81,33 +74,27 @@ class PrivateEvent < ActiveRecord::Base
    def save_rewards
      save_credits(self.contentsourceID, 'Event', @reward_amt)
    end
-   
-   def self.current(edt, cid)
-     where_cid = where_dt + " and (contentsourceID = ?)"    
-     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_dt} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt]) 
-   end
-  
+     
    def set_flds
       if status.nil?
-        self.hide = "No"
-        self.event_name = self.event_title
+        self.hide = "no"
+        self.event_title = self.event_name
         self.postdate = Date.today
         self.cformat = "html"
         self.status = "active" 
         self.CreateDateTime = Time.now
-        self.ID = Event.maximum('ID') + 1
-        if self.eventid.blank?
-          self.eventstarttime = self.eventstarttime.advance(:hours => self.localGMToffset)
-          self.eventendtime = self.eventendtime.advance(:hours => self.endGMToffset)         
-        else
-          self.eventid = nil
-        end
       end
    end
+
+   def self.current(edt, cid)
+     edt.blank? ? edt = Date.today+14.days : edt  
+     where_cid = where_dt + " and (contentsourceID = ?)"    
+     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid]) 
+   end
    
-  def self.getSQL
+   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
@@ -115,9 +102,20 @@ class PrivateEvent < ActiveRecord::Base
    end
    
    def self.where_dt
-      "where (status = 'active' and hide = 'No') 
-                and (eventstartdate >= curdate() and eventstartdate <= ?) 
-                or (eventstartdate <= curdate() and eventenddate >= ?) "
+      "where (LOWER(status) = 'active' and LOWER(hide) = 'no') 
+                and ((eventstartdate >= curdate() and eventstartdate <= ?) 
+                or (eventstartdate <= curdate() and eventenddate >= ?))"
    end   
+       
+  def self.get_current_events
+    where('((eventstartdate >= curdate() and eventstartdate <= curdate()) 
+            or (eventstartdate <= curdate() and eventenddate >= curdate()))')
+  end
+  
+  def self.get_event(eid)
+    where_id = "where (ID = ?))"
+    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}", eid, eid])        
+  end
        
 end

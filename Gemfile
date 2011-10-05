@@ -27,6 +27,9 @@ gem 'omniauth', '0.2.6'
 # add form validations 
 gem 'client_side_validations'  
 
+# add date validation
+gem 'validates_timeliness', '~> 3.0.2'
+
 # add google maps
 gem 'gmaps4rails'
 

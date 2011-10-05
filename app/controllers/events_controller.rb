@@ -8,14 +8,21 @@ class EventsController < ApplicationController
 	end
 	
 	def index
-    respond_with(@events = Event.find_events(params[:end_date], @user))
+    respond_with(@events = Event.find_events(params[:end_date], @host_profile))
  	end
 	
+	def destroy
+    @event = Event.find_event(params[:id])    
+    @event.destroy
+    redirect_to events_url, :notice => "Successfully destroyed event."
+  end
+  
 	protected
 
   def load_data
     @user = current_user
-    @slider = params[:slider] if params[:slider] # used to define sliders for mobile app
+    @host_profile = @user.host_profiles.first if @user
+ #   @slider = params[:slider] if params[:slider] # used to define sliders for mobile app
   end
 
 end

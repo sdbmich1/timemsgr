@@ -1,8 +1,16 @@
 <li>
-  <% unless major_event?(event.event_type) %>
+  <% if major_event?(event.event_type) %>
     <%= link_to major_event_url(event) do %>
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event } %>
     <% end %>  
+  <% elsif life_event?(event.event_type) %>
+    <%= link_to observance_event_url(event) do %>
+	  	<%= render :partial => 'mobile/event', :locals => { :event => event  } %>
+    <% end %>
+  <% elsif private_event?(event.event_type) %>  
+    <%= link_to private_event_url(event) do %>
+	  	<%= render :partial => 'mobile/event', :locals => { :event => event  } %>
+    <% end %>
   <% else %>
     <%= link_to event_url(event) do %>
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event  } %>

@@ -7,35 +7,40 @@ class ObservanceEvent < ActiveRecord::Base
   belongs_to :channel
   
   before_save :set_flds, :add_rewards
-  after_save :save_rewards
+  after_save :save_rewards 
+#  after_create :set_eventid
+  
   attr_accessor :current_user
   attr_accessible :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
         :eventendtime, :event_type, :eventid, :subscriptionsourceID,
         :contentsourceID, :localGMToffset, :endGMToffset,
         :allowSocCircle, :allowPrivCircle, :allowWorldCircle,
-        :showSocCircle, :showPrivCircle, :showWorldCircle, :mapplacename,
+        :ShowSocCircle, :ShowPrivCircle, :ShowWorldCircle, :mapplacename,
         :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
         :eventday, :eventmonth, :eventgday, :eventgmonth,:obscaltype,
         :annualsamedate, :speaker, :speakertopic, :rsvp,
+        :postdate, :status, :hide,
         :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
   
-  validates :event_name, :presence => true
+  validates :event_name, :presence => true, :length => { :maximum => 100 },
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
   validates :event_type, :presence => true
-  validates_presence_of :eventstartdate, :if => "eventstartdate.nil?"
-  validates_presence_of :eventstarttime, :if => "eventstarttime.nil?"
-  validates_presence_of :eventendtime, :if => "eventendtime.nil?"
-  validates :eventenddate, :presence => true
-  validates :RSVPemail, :email_format => true, :unless => Proc.new { |a| a.RSVPemail.blank? } 
-  validates_uniqueness_of :event_name, :scope => [:contentsourceID,:eventstartdate, :eventstarttime]
+  validates_date :eventstartdate, :presence => true, :date => {:after_or_equal_to => Date.today}
+  validates_date :eventenddate, :presence => true, :allow_blank => false, :date => {:after_or_equal_to => :eventstartdate}
+  validates :eventstarttime, :presence => true
+  validates_time :eventendtime, :presence => true, :after => :eventstarttime, :if => :same_day?
+  validates :bbody, :length => { :maximum => 255 }  
             
   default_scope :order => 'eventstartdate, eventstarttime ASC'
   
   scope :active, where(:status.downcase => 'active')
   scope :is_visible?, where(:hide.downcase => 'no')
 
-
-  
   protected
+  
+   def same_day?
+     eventstartdate == eventenddate
+   end
   
    def add_rewards
      @reward_amt = add_credits(self.changes)
@@ -46,7 +51,7 @@ class ObservanceEvent < ActiveRecord::Base
    end
    
    def set_flds
-     if self.annualsamedate.blank?
+     if self.annualsamedate == 'no'
        self.eventmonth = self.eventstartdate.month
        self.eventday = self.eventstartdate.day
      else
@@ -59,6 +64,10 @@ class ObservanceEvent < ActiveRecord::Base
      
      self.event_title = self.event_name
      self.obscaltype = 'Gregorian'
-   end
+     self.status = 'active'
+     self.hide = 'no'
+     self.postdate = Time.now
+     self.eventid = self.event_type[0..1] + Time.now.to_i.to_s  
+  end
     
 end

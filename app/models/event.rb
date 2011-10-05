@@ -24,23 +24,27 @@ class Event < KitsTsdModel
   def self.current(edt, cid)
     where_cid = where_dt + " and (contentsourceID = ?)"    
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_dt} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt]) 
+         UNION #{getSQL} FROM `kitstsddb`.events #{where_dt} )
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, edt, edt]) 
   end
   
   def self.get_event(eid)
     where_id = "where (ID = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid])        
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id} 
+         UNION #{getSQL} FROM `kitstsddb`.events #{where_id} 
+         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid, eid, eid])        
   end
   
   def self.find_event(eid)
     get_event(eid).first
   end 
   
-  def self.find_events(edate, user) 
+  def self.find_events(edate, hprofile) 
     edate.blank? ? edate = Date.today+14.days : edate  
-    user.blank? ? current_events(edate) : current(edate, user.id.to_s)    
+    hprofile.blank? ? current_events(edate) : current(edate, hprofile.subscriptionsourceID)    
   end
   
   def self.get_event_details(eid)
@@ -56,8 +60,8 @@ class Event < KitsTsdModel
    
    def self.where_dt
       "where (status = 'active' and hide = 'No') 
-                and (eventstartdate >= curdate() and eventstartdate <= ?) 
-                or (eventstartdate <= curdate() and eventenddate >= ?) "
+                and ((eventstartdate >= curdate() and eventstartdate <= ?) 
+                or (eventstartdate <= curdate() and eventenddate >= ?)) "
    end
     
 end

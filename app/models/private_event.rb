@@ -6,8 +6,8 @@ class PrivateEvent < ActiveRecord::Base
 
   before_save :set_flds, :add_rewards
   after_save :save_rewards
-  attr_accessor :current_user
- 	attr_accessible :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
+  attr_accessor :allday
+ 	attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
 				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset,
@@ -83,7 +83,8 @@ class PrivateEvent < ActiveRecord::Base
         self.cformat = "html"
         self.status = "active" 
         self.CreateDateTime = Time.now
-      end
+        self.eventid = self.event_type[0..1] + Time.now.to_i.to_s  
+     end
    end
 
    def self.current(edt, cid)
@@ -102,10 +103,10 @@ class PrivateEvent < ActiveRecord::Base
    end
    
    def self.where_dt
-      "where (LOWER(status) = 'active' and LOWER(hide) = 'no') 
+      "where (status = 'active' and LOWER(hide) = 'no') 
                 and ((eventstartdate >= curdate() and eventstartdate <= ?) 
-                or (eventstartdate <= curdate() and eventenddate >= ?))"
-   end   
+                or (eventstartdate <= curdate() and eventenddate >= ?)) "
+   end 
        
   def self.get_current_events
     where('((eventstartdate >= curdate() and eventstartdate <= curdate()) 

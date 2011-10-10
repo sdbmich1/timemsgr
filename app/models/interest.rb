@@ -1,4 +1,5 @@
 class Interest < ActiveRecord::Base
+  attr_accessible :name
 	belongs_to :category
 #	has_and_belongs_to_many :user
 	
@@ -6,13 +7,13 @@ class Interest < ActiveRecord::Base
 	has_many :channels, :through => :channel_interests, 
 				:conditions => { :status.downcase => 'active'}
 	
-	has_attached_file :photo, :styles => { :small => "25x25>" }  
-
+#	has_attached_file :photo, :styles => { :small => "25x25>" }  
+  has_many :events, :through => :channels
+    
   scope :unhidden, where(:hide.downcase => 'no')
+	default_scope :order => 'sortkey ASC'
   
-  def self.active
+  def self.get_active_list
     unhidden.where(:status.downcase => 'active')
   end
-
-	default_scope :order => 'sortkey ASC'
 end

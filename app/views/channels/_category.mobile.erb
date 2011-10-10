@@ -2,16 +2,11 @@
   <% @categories.each do |category| %>
 	<li><%= link_to category.name, "#" %>
 		<ul>
-			<% category.interests.each do |i| %>
-				<li><%= link_to i.name, '#' %>
+			<% category.interests.each do |interest| %>
+				<li><%= link_to interest.name, '#' %>
 					<ul>
-						<% i.channels.each do |c| %>
-							<li><%= link_to c.channel_name, '#' %>
-								<ul>
-									<%= render :partial => 'mobile/event_list', :collection => get_event_list(c.events), 
-										 	:as => :event %>	
-								</ul>
-							</li>
+						<% interest.channels.each do |channel| %>
+							<li><%= link_to channel.channel_name, channel_url(channel) %></li>
 						<% end %>
 					</ul>
 				</li>

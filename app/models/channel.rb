@@ -1,7 +1,9 @@
 class Channel < KitsTsdModel
 	attr_accessible :channelID, :status, :hide, :subscriptionsourceID,
-	     :channel_name, :channel_title
-	belongs_to :host_profile
+	     :channel_name, :channel_title, :HostProfileID, :channel_class,
+	     :channel_type
+	     
+	belongs_to :host_profile, :foreign_key => :HostProfileID
   has_many :events,
            :finder_sql => proc { "SELECT e.* FROM events e " +
            "INNER JOIN channels c ON c.channelID=e.subscriptionsourceID " +
@@ -12,16 +14,14 @@ class Channel < KitsTsdModel
   has_many :categories, :through => :interests
 
   # define user & subscriptions
-  has_many :subscriptions, :dependent => :destroy
+  has_many :subscriptions, :foreign_key => :channelID
   has_many :users, :through => :subscriptions
   
 	has_many :channel_locations, :dependent => :destroy
 	has_many :locations, :through => :channel_locations
 	
-	# define subscriptions
-  has_many :subscriptions, :dependent => :destroy
-  has_many :users, :through => :subscriptions
-
+  has_many :pictures, :as => :imageable, :dependent => :destroy
+	
   scope :active, where(:status.downcase => 'active')
   scope :unhidden, where(:hide.downcase => 'no')
 #  scope :uniquelist, :select => 'DISTINCT channels.id, channels.name'
@@ -29,7 +29,7 @@ class Channel < KitsTsdModel
   default_scope :order => 'sortkey ASC'
   
   def self.local(loc)
-    uniquelist.active.unhidden.joins(:channel_locations).where('channel_locations.location_id = ?', loc)
+    active.unhidden.joins(:channel_locations).where('channel_locations.location_id = ?', loc)
   end
   
   def self.intlist(loc, int_id)

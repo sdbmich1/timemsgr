@@ -1,5 +1,5 @@
 class ObservanceEventsController < ApplicationController
-   before_filter :authenticate_user!, :load_data
+  before_filter :authenticate_user!
 
   def show
     @event = ObservanceEvent.find(params[:id])
@@ -39,13 +39,6 @@ class ObservanceEventsController < ApplicationController
     
   def clone  
     @event = ObservanceEvent.find(params[:id]).clone
-  end
- 
-  private
-    
-  def load_data
-    @user = current_user
-    @host_profile = @user.host_profiles.first if @user
   end
 
 end

@@ -1,0 +1,13 @@
+<%= render 'mobile/index_form' %>
+
+<%= content_for :content do %>
+  <ul data-role="listview">
+
+	<li><%= link_to "About #{@channel.channel_name}", about_channel_url(@channel), "data-icon"=>"custom", :id => "about" %> </li>
+	<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
+	<%= render :partial => 'mobile/event_list', :collection => get_event_list(@channel.events), 
+										 	:as => :event %>	
+  </ul>
+<% end %>
+
+<%= render :partial => 'mobile/channel_footer', :locals => { :channel => @channel } %>

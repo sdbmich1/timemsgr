@@ -1,9 +1,8 @@
-require 'rewards'
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :load_settings, :prepare_for_mobile, :except => :destroy
-  before_filter :chk_request
-  include Rewards
+  include Rewards 
+  include Schedule
   helper_method :mobile_device?
 
    
@@ -19,7 +18,6 @@ class ApplicationController < ActionController::Base
   
   protected
   
-
   def method_missing(id, *args)
     redirect_to '/404.html'
   end
@@ -28,14 +26,9 @@ class ApplicationController < ActionController::Base
     if user_signed_in?
  #     Time.zone = current_user.time_zone
       @credits = get_credits(current_user.id)
-      @meters = get_meter_info
-    end 
-  end
-  
-  def chk_request
-    if @user
-      debugger
-      redirect_to events_url unless session[:return_to] && request.referer && @user.sign_in_count > 1
+      @meters = get_meter_info     
+      @user = current_user
+      @host_profile = @user.host_profiles.first
     end 
   end
   

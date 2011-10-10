@@ -1,12 +1,9 @@
 <div class="event-image center-wrapper">
   <% unless life_event?(event.event_type) || private_event?(event.event_type) %>
-	<% for pic in event.pictures %>
-		<% if pic %>
-    		<%= image_tag pic.photo.url, :class => "show-pic" %>
-    	<% end %>		
-   	<% end %>
+	<%= render :partial => 'mobile/show_photo', :locals => {:model => event}%>
   <% end %>
 </div>
+
 <h3 class="center-wrapper"><%= event.event_name %></h3>
 <label>Date: </label><span class="item-detail"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %></span><br />	
 <label>Time: </label> 
@@ -14,32 +11,34 @@
 <span class="item-detail">
 	<%= " #{chk_offset(event.eventstarttime, event.localGMToffset, event.contentsourceID)} 
 		- #{chk_offset(event.eventendtime, event.endGMToffset, event.contentsourceID)}" %>
-</span><br />
+</span>
 
 <%= render :partial => 'mobile/show_event_contact', :locals => {:event => event} %>
 <%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
 
-<% if is_session?(event.event_type) %>	
-	<div class="plist">
-	<label>Presenter(s):</label>	
-	<%= render 'mobile/presenter_list' %></div>
-<% end %>
-
 <%= content_for :footer do %>
-	<div data-role="navbar" data-grid="d">
+
+   <% if is_session?(event.event_type) %>
+		<div class="mtop center-wrapper"><label>Presenter(s)</label></div> 	
+		<%= render 'mobile/presenter_list' %>
+  <% end %>	
+
+  <div data-role="navbar" data-grid="d">
 	  <ul>
-		<% if tsd_event?(event.event_type) %>
-			<li><%= link_to "Add", move_private_event_url(event), :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move" %> </li>
+		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
+			<li><%= link_to "Add", move_private_event_url(event), :method => 'post', :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move" %> </li>
 			<li><%= link_to "Like", like_event_url(event), "data-icon"=>"custom", :id => "like", :remote => true %> </li>
 		<% elsif private_event?(event.event_type) %>
-			<% if event.eventenddate < Date.today %>
+			<% if event.eventenddate >= Date.today %>
 				<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 			<% end %>
+			<li><%= link_to "Clone", clone_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 			<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Are you sure?',  :id => "delete" %> </li>
 		<% elsif life_event?(event.event_type) %>
-			<% if event.eventenddate < Date.today %>
+			<% if event.eventenddate >= Date.today %>
 				<li><%= link_to "Edit", edit_observance_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 			<% end %>
+			<li><%= link_to "Clone", clone_observance_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 			<li><%= link_to "Delete", event, :method => 'delete', :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
 		<% end %>
 		

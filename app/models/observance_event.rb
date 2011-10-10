@@ -8,10 +8,9 @@ class ObservanceEvent < ActiveRecord::Base
   
   before_save :set_flds, :add_rewards
   after_save :save_rewards 
-#  after_create :set_eventid
   
-  attr_accessor :current_user
-  attr_accessible :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
+  attr_accessor :allday
+  attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
         :eventendtime, :event_type, :eventid, :subscriptionsourceID,
         :contentsourceID, :localGMToffset, :endGMToffset,
         :allowSocCircle, :allowPrivCircle, :allowWorldCircle,
@@ -51,23 +50,25 @@ class ObservanceEvent < ActiveRecord::Base
    end
    
    def set_flds
-     if self.annualsamedate == 'no'
+     if status.nil?
+      if self.annualsamedate == 'no'
        self.eventmonth = self.eventstartdate.month
        self.eventday = self.eventstartdate.day
-     else
+      else
        self.eventgmonth = self.eventstartdate.month
        self.eventgday = self.eventstartdate.day
        self.eventenddate = self.eventstartdate+120.years
        self.eventstarttime = Time.parse('00:00')
        self.eventendtime = Time.parse('11:59')
-     end
+      end
      
-     self.event_title = self.event_name
-     self.obscaltype = 'Gregorian'
-     self.status = 'active'
-     self.hide = 'no'
-     self.postdate = Time.now
-     self.eventid = self.event_type[0..1] + Time.now.to_i.to_s  
+      self.event_title = self.event_name
+      self.obscaltype = 'Gregorian'
+      self.status = 'active'
+      self.hide = 'no'
+      self.postdate = Time.now
+      self.eventid = self.event_type[0..1] + Time.now.to_i.to_s 
+    end 
   end
     
 end

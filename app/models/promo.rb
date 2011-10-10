@@ -1,4 +1,3 @@
-require 'kits_central'
 class Promo < KitsCentralModel
   set_primary_key 'ID'
   

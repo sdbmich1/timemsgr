@@ -9,49 +9,9 @@ module ApplicationHelper
     @credits
   end
   
-  def chk_offset(*tm)
-    return Time.now unless tm[0]
-    unless @user.blank?
-      offset = tm[1] - @user.localGMToffset if tm[1]
-      @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
-    end 
-    @tm.blank? ? tm[0].strftime("%l:%M %p") : @tm.strftime("%l:%M %p")
-  end 
-  
-  def tsd_event?(etype)
-    etlist = EventType.get_tsd_event_types
-    (etlist.detect {|x| x.code == etype })
-  end
-  
-  def is_session?(etype)
-    etype == 'es'
-  end
-  
   def set_case(val)
     val.capitalize
-  end
-  
-  def major_event?(etype)
-    (%w(conf conv fest conc trmt fr).detect { |x| x == etype})
-  end
-  
-  def life_event?(etype)
-    etlist = LifeEventType.all
-    (etlist.detect {|x| x.Code == etype })
-  end
-
-  def private_event?(etype)
-    etlist = PrivateEventType.all
-    (etlist.detect {|x| x.code == etype })
-  end
-   
-  def show_date(start_dt)  
-    start_dt <= Date.today ? Date.today : start_dt
-  end
-    
-  def get_nice_date(*args) 
-    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m-%d-%Y') 
-  end
+  end  
   
   def load_meters
     @meters
@@ -100,5 +60,18 @@ module ApplicationHelper
   # used to dynamically remove field from a given form
   def link_to_remove_fields(name, f)  
     f.hidden_field(:_destroy) + link_to_function(name, "remove_fields(this)")  
+  end  
+  
+  #devise settings
+  def resource_name
+    :user
+  end
+         
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
   end  
 end

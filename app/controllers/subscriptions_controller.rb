@@ -1,26 +1,19 @@
 class SubscriptionsController < ApplicationController
-  before_filter :authenticate_user!, :load_data   
+  before_filter :authenticate_user!   
   respond_to :html, :json, :xml, :js
-  
-  def load_data
-    @user = current_user 
-  	@loc_id = @user.location_id # used to display & select channels for users
-  end
-
-  def new  	
-	  @selected_ids = @user.channel_ids
-	  @channels = Channel.intlist(@loc_id, @user.interest_ids)
-	  respond_with(@subscription = @user.subscriptions.build)
-  end  
-   
-  def create
-    @user.attributes = {'channel_ids' => []}.merge(params[:user] || {})
-    flash[:notice] = "#{get_msg(@user, 'Subscription')}" if @user.update_attributes(params[:user])   
-    respond_with(@user, :location => new_affiliation_path) 
+     
+  def new
+    @channel = Channel.find(params[:channel_id])
+    @subscription = @user.subscriptions.build(:channelID => @channel.channelID, :contentsourceID => @host_profile.subscriptionsourceID)
+    if @subscription.save
+      redirect_to channels_url, :notice => "#{get_msg(@user, 'Subscription')}" 
+    else
+      redirect_to channel_url(@channel)
+    end        
   end
   
   def index
-    redirect_to new_affiliation_path
+    @subscription = Subscription.find_by_user_id(@user)
   end
 
 end

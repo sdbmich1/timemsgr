@@ -46,11 +46,13 @@ class PrivateEventsController < ApplicationController
   end
   
   def move
-    @current_event = Event.find_event(params[:id])
-    @event = PrivateEvent.new(@current_event.attributes)
+    @selected_event = Event.find_event(params[:id])
+    @selected_event.contentsourceID = @host_profile.subscriptionsourceID
+    @event = PrivateEvent.new(@selected_event.attributes)
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
+     # render :action => 'show'
       redirect_to :back
     end
   end
@@ -58,9 +60,7 @@ class PrivateEventsController < ApplicationController
   private
     
   def load_data
-    @user = current_user
-    @host_profile = @user.host_profiles.first
- #   @enddate = Date.today+14.days
+    @enddate = Date.today+14.days
   end
 
 end

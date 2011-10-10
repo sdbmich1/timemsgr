@@ -1,11 +1,14 @@
 Timemsgr::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => "registrations" }  
+    
+  resources :channels do
+    get 'about', :on => :member
+  end
   
-  # controllers for event related content
-  resources :members, :promotions, :presenters, :event_sessions
-  
-  resources :channels, :observance_events
+  resources :observance_events do
+    get 'clone', :on => :member
+  end
    
   resources :major_events do
     member do 
@@ -15,7 +18,7 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :interests, :subscriptions, :authentications, :associates
+  resources :interests,  :authentications, :associates
   
   resources :events do 
     member do
@@ -25,19 +28,27 @@ Timemsgr::Application.routes.draw do
    
   resources :private_events do
     member do
-      get 'add', 'clone', 'move', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
+      get 'add', 'clone', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
+      post 'move'
     end
     
     collection do
       get 'manage', 'import', 'clock', 'getquote'
     end
   end
-    
+ 
+  # controllers for event related content
+  resources :members, :promotions, :presenters, :event_sessions
+   
   resources :affiliations do
     get :autocomplete_organization_name, :on => :collection
   end  
+    
+  resources :subscriptions do
+    post 'add', :on => :collection
+  end
   
-  resources :users, :except => [:show] 
+  resources :users 
   
   # specify routes for devise user after sign-in
   namespace :user do
@@ -58,7 +69,7 @@ Timemsgr::Application.routes.draw do
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
   match '/home/user', :to => 'users#home' 
-  match '/metrics', :to => 'users#show' 
+  match '/metrics', :to => 'users#metrics' 
     
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"

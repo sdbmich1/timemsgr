@@ -1,0 +1,12 @@
+<%= render 'mobile/index_form' %>
+
+<%= content_for :content do %>
+  <%= render :partial => 'mobile/show_photo', :locals => {:model => @channel }%>
+  <h3 class="center-wrapper"><%= @channel.channel_name %></h3>
+
+  <div id="show-item">
+	<%= render :partial => 'mobile/show_event_location', :locals => {:event => @channel} %> 
+  </div>
+<% end %>
+
+<%= render :partial => 'mobile/channel_footer', :locals => { :channel => @channel } %>

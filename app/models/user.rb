@@ -2,7 +2,6 @@ require 'rewards'
 class User < ActiveRecord::Base
   include Rewards   
   before_create :set_timezone
-  after_create :add_settings, :send_welcome_msg
   before_save :add_rewards
   after_save :save_rewards
     
@@ -19,8 +18,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password,  :remember_me, :username, :login, :accept_terms,
   				  :first_name, :last_name, :birth_date, :gender, :location_id, :time_zone,
   				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
-  				  :events_attributes, :host_profiles_attributes, :session_pref_ids
-  				  :localGMToffset 
+  				  :host_profiles_attributes, :localGMToffset
+  				   #:session_pref_ids, :events_attributes,
   				  
   # name format validators
   uname_regex = /^[-\w\._@]+$/i
@@ -54,18 +53,13 @@ class User < ActiveRecord::Base
   has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
-  has_many :host_profiles, 
-           :finder_sql => proc { "SELECT hp.* FROM `kitstsddb`.hostprofiles hp " +
-           "INNER JOIN `kits_development`.users u ON hp.ProfileID=u.id " +
-           "WHERE u.id=#{id}" }
-
+  has_many :host_profiles, :foreign_key => :ProfileID
   accepts_nested_attributes_for :host_profiles, :reject_if => :all_blank 
- 
+
+  has_many :events, :through => :channels
+   
   has_many :user_photos
   accepts_nested_attributes_for :user_photos, :reject_if => lambda { |a| a[:photo_file_name].blank? }
-
-  has_many :user_events
-  has_many :events, :through => :user_events #, :source => 'user_id'
   
   has_many :settings
   has_many :session_prefs, :through => :settings 
@@ -79,13 +73,6 @@ class User < ActiveRecord::Base
     where(conditions).where(["username = :value OR email = :value", { :value => login }]).first
   end
   
-  # add default settings for user session preferences
-  def add_settings
-    SessionPref.all.each do |p|
-      Setting.create(:user_id => self.id, :session_pref_id => p.id)
-    end
-  end
-  
   def add_rewards  
     @reward_amt = add_credits(self.changes) if self.changed?
   end
@@ -94,10 +81,6 @@ class User < ActiveRecord::Base
     save_credits(self.id, 'Profile', @reward_amt) unless @reward_amt.blank? || @reward_amt == 0
   end
    
-  def send_welcome_msg
-     UserMailer.welcome_email(self).deliver  
-  end    
-
   # set default time zone for new users
   def set_timezone
     loc = Location.where(["id = :value", { :value => self.location_id }]).first

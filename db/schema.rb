@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111004070441) do
+ActiveRecord::Schema.define(:version => 20111009162017) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -185,6 +185,12 @@ ActiveRecord::Schema.define(:version => 20111004070441) do
     t.time     "starttime"
     t.time     "endtime"
     t.integer  "event_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_tracks", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

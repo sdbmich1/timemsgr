@@ -1,8 +1,10 @@
 <%= render 'mobile/index_form' %>
 
 <% content_for :content do %>	<h3 class="mtop center-wrapper"><%= "#{current_user.first_name} #{current_user.last_name}"%></h3><br />	<ul data-role="listview">		<li data-role="list-divider">View</li>
-		<li><%= link_to "Scheduled Events", private_events_url(@user) %></li>		<li><%= link_to "Recommended Events", private_events_url(@user) %></li>	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
+		<li><%= link_to "My Schedule", private_events_url(@user) %></li>		<li><%= link_to "Recommended Events", private_events_url(@user) %></li>	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
 		<li data-role="list-divider">Manage</li>
+		<li><%= link_to "Add Subscription", channels_url(@user) %> </li>
+		<li><%= link_to "Manage Subscriptions", subscriptions_url(@user) %> </li>
 		<li><%= link_to "Add Event", add_private_event_url(@user), :id=>"dialoglink", "data-rel"=>"dialog", "data-transition"=>"pop" %> </li>
 		<li><%= link_to "Sign Out", destroy_user_session_path %></li>
 	</ul><% end -%>

@@ -1,6 +1,6 @@
 class PresentersController < ApplicationController
   def index
-    @presenters = Presenter.get_event_list(params[:event_id])
+    @presenters = Event.get_event_details(params[:event_id]).presenters
   end
 
   def show

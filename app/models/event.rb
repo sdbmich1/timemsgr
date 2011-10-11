@@ -17,7 +17,7 @@ class Event < KitsTsdModel
 
   def self.current_events(edt)
     find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_dt} )
-         UNION #{getSQL} FROM `kitstsddb`.events WHERE #{where_dt} )
+         UNION #{getSQL} FROM `kitsknndb`.events WHERE #{where_dt} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
   
@@ -27,7 +27,7 @@ class Event < KitsTsdModel
     find_by_sql(["#{getSQLe} FROM `kits_development`.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM `kits_development`.eventsobs e WHERE #{where_cid} )
          UNION #{getSQLe} FROM `kitscentraldb`.events e WHERE #{where_dte} )
-         UNION #{getSQLe} FROM `kitstsddb`.events #{where_sid} )
+         UNION #{getSQLe} FROM `kitsknndb`.events #{where_sid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, cid, edt, edt]) 
   end
   
@@ -35,7 +35,7 @@ class Event < KitsTsdModel
     where_id = "where (ID = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id} 
-         UNION #{getSQL} FROM `kitstsddb`.events #{where_id} 
+         UNION #{getSQL} FROM `kitsknndb`.events #{where_id} 
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid, eid, eid])        
   end
   
@@ -80,7 +80,7 @@ class Event < KitsTsdModel
   end
    
   def self.where_subscriber_id 
-     "e,`kitstsddb`.subscriptions s 
+     "e,`kitsknndb`.subscriptions s 
         WHERE s.contentsourceID = ?
         AND s.channelID = e.subscriptionsourceID "
   end    

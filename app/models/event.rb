@@ -49,7 +49,8 @@ class Event < KitsTsdModel
   end
   
   def self.get_event_details(eid)
-    joins(:sessions, :presenters).find(eid)
+      joins(:sessions, :presenters).find(eid) unless find(eid).try(:sessions).blank?
+      joins(:presenters).find(eid) if find(eid).try(:sessions).blank?
   end
   
   def self.getSQL

@@ -3,12 +3,12 @@ class MajorEventsController < ApplicationController
   
   def show
     @event = Event.find(params[:id])
-    @presenters = @event.presenters
+    @presenters = @event.try(:presenters)
   end
   
   def about
     @event = Event.find(params[:id])
-    @presenters = @event.presenters
+    @presenters = @event.try(:presenters)
   end
 
 end

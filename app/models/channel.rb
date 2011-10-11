@@ -4,17 +4,14 @@ class Channel < KitsTsdModel
 	     :channel_type
 	     
 	belongs_to :host_profile, :foreign_key => :HostProfileID
-  has_many :events,
-           :finder_sql => proc { "SELECT e.* FROM events e " +
-           "INNER JOIN channels c ON c.channelID=e.subscriptionsourceID " +
-           "WHERE c.id=#{id}" }
+  has_many :events, :foreign_key => :subscriptionsourceID, :primary_key => :channelID
   
 	has_many :channel_interests, :dependent => :destroy
 	has_many :interests, :through => :channel_interests
   has_many :categories, :through => :interests
 
   # define user & subscriptions
-  has_many :subscriptions, :foreign_key => :channelID
+  has_many :subscriptions, :foreign_key => :channelID, :primary_key => :channelID
   has_many :users, :through => :subscriptions
   
 	has_many :channel_locations, :dependent => :destroy

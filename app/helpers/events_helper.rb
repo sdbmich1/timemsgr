@@ -32,8 +32,7 @@ module EventsHelper
   end
 
   def current?(sdt)
-    dt = DateTime.parse(Date.today.year.to_s + '-' + sdt.month.to_s + '-' + sdt.day.to_s)
-    dt >= Date.today ? true : false 
+    sdt >= DateTime.now ? true : false 
   end
   
   def holiday?(etype)
@@ -49,7 +48,8 @@ module EventsHelper
   end  
   
   def time_left?(event)
-    event.eventstartdate <= Date.today && event.eventenddate >= Date.today && event.eventendtime > Time.now   
+   return true if event.eventenddate > Date.today 
+   event.eventenddate = Date.today && event.eventendtime > Time.now ? true : false   
   end
 
   def rsvp?(val)
@@ -120,6 +120,10 @@ module EventsHelper
   def user_events?
     get_user_events.count > 0 ? true : false
   end
+  
+  def subscribed?(ssid)
+    @user.subscriptions.detect {|u| u.channelID == ssid }
+  end
 
   def observances?
     get_observances.count > 0 ? true : false
@@ -131,6 +135,10 @@ module EventsHelper
   
   def get_appointments
     @events.select {|event| appt?(event.event_type) && time_left?(event)}
+  end
+  
+  def get_subscriptions
+    @events.select {|e| subscribed?(e.subscriptionsourceID) && current?(e.eventstartdate) && time_left?(e) && !is_session?(e.event_type) }
   end
            
   def get_observances
@@ -153,6 +161,7 @@ module EventsHelper
     end
     return events
   end
+  
   # determine which events to display
   def get_events(area)
     case 
@@ -160,6 +169,7 @@ module EventsHelper
     when !(area =~ /Upcoming/i).nil?; get_opp_events
     when !(area =~ /Opportunities/i).nil?; get_opportunities
     when !(area =~ /Appointment/i).nil?; get_appointments
+    when !(area =~ /Subscription/i).nil?; get_subscriptions
     else get_user_events
     end
   end    

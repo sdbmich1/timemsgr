@@ -1,12 +1,4 @@
-<%= content_for :pre_mobile_load do %>
-	<script>
-		$(document).bind("mobileinit", function(){
-			$("#app").css('height', 200 );
-			$("#app").css('width', 200 );
-		});
-	</script>
-  	<%= render 'mobile/pre_load' %>
-<% end %>
+<%= render 'mobile/pre_load' %>
 
 <%= content_for :head do %>
 	<h3>Add Event</h3>
@@ -16,7 +8,7 @@
 	<div class="mtop">
 		<p>Is this a life event(i.e. birthday, graduation)?</p>
 		<div class="center-wrapper">
-			<%= link_to "Yes", new_observance_event_url, "data-role"=>"button", "data-inline"=>"true", "data-theme"=>"b" %>
+			<%= link_to "Yes", new_life_event_url, "data-role"=>"button", "data-inline"=>"true", "data-theme"=>"b" %>
 			<%= link_to "No", new_private_event_url, "data-role"=>"button", "data-inline"=>"true" %>
 		</div>
 	</div>

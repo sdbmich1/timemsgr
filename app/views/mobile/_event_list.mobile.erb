@@ -4,7 +4,7 @@
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event } %>
     <% end %>  
   <% elsif life_event?(event.event_type) %>
-    <%= link_to observance_event_url(event) do %>
+    <%= link_to life_event_url(event) do %>
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event  } %>
     <% end %>
   <% elsif private_event?(event.event_type) %>  

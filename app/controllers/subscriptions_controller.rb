@@ -12,8 +12,18 @@ class SubscriptionsController < ApplicationController
     end        
   end
   
-  def index
-    @subscription = Subscription.find_by_user_id(@user)
+  def edit
+    @user = User.find(params[:id])
+    @subscriptions = @user.subscriptions
+  end
+  
+  def update
+    @user.attributes = {'subscription_ids' => []}.merge(params[:user] || {}) 
+    if @user.update_attributes(params[:user])
+      redirect_to home_url, :notice  =>  "#{get_msg(@user, 'Subscription')}"
+    else
+      render :action => 'edit'
+    end
   end
 
 end

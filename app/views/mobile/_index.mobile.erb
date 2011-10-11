@@ -9,6 +9,8 @@
 			<%= render :partial => 'mobile/event_list', :collection => get_events('Appointment'), :as => :event %>
 			<li data-role="list-divider" class="center-wrapper">Scheduled Activities</li>
 			<%= render :partial => 'mobile/event_list', :collection => get_events('Schedule'), :as => :event %>
+			<li data-role="list-divider" class="center-wrapper">Tracked Activities</li>
+			<%= render :partial => 'mobile/event_list', :collection => get_events('Subscription'), :as => :event %>
 		<% end %>	
 		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
 		<%= render :partial => 'mobile/event_list', :collection => get_events('Upcoming Events'), :as => :event %>	

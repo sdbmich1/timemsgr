@@ -6,7 +6,7 @@ Timemsgr::Application.routes.draw do
     get 'about', :on => :member
   end
   
-  resources :observance_events do
+  resources :life_events do
     get 'clone', :on => :member
   end
    

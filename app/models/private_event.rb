@@ -17,28 +17,25 @@ class PrivateEvent < ActiveRecord::Base
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
   validates :event_type, :presence => true
-  validates_date :eventstartdate, :presence => true, :date => {:after_or_equal_to => Date.today}
-  validates_date :eventenddate, :presence => true, :allow_blank => false, :date => {:after_or_equal_to => :eventstartdate}
-  validates :eventstarttime, :presence => true
-  validates_time :eventendtime, :presence => true, :after => :eventstarttime, :if => :same_day?
+  validates_date :eventstartdate, :presence => true, :on_or_after => :today 
+  validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
+  validates :eventstarttime, :presence => true, :allow_blank => false
+  validates :eventendtime, :presence => true, :allow_blank => false
+  validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
   validates :bbody, :length => { :maximum => 255 }  
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 	
 	scope :active, where(:status.downcase => 'active')
-	scope :is_visible?, where(:hide.downcase => 'no')
-  scope :current_time, lambda { | start_tm, end_tm | where("eventstarttime >= time(?) and eventendtime <= time(?)", start_tm, end_tm)}
-  scope :owned, lambda { | uid |
-            { :conditions => { :contentsourceID => uid }} } 
+	scope :unhidden, where(:hide.downcase => 'no')
+#  scope :current_time, lambda { | start_tm, end_tm | where("eventstarttime >= time(?) and eventendtime <= time(?)", start_tm, end_tm)}
+#  scope :owned, lambda { | uid |
+#            { :conditions => { :contentsourceID => uid }} } 
 #  scope :etype, joins('JOIN event_types ON event_types.event_type = events.event_type')
   
   def self.upcoming(start_dt, end_dt)
-    active.is_visible?.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
+    active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
   end   
-  
-  def self.observance?
-    where("event_type in ('h', 'm')")
-  end
   
   def owned?(ssid)
     self.contentsourceID == ssid
@@ -56,13 +53,14 @@ class PrivateEvent < ActiveRecord::Base
    
       has :id, :event_type
   end
-      
+  
+  def same_day?
+    eventstartdate == eventenddate
+  end
+        
   protected
   
-   def same_day?
-     eventstartdate == eventenddate
-   end
-   
+
    def reset_attr
      self.eventstartdate=self.eventenddate = nil
    end

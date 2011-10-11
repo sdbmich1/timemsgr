@@ -1,15 +1,22 @@
 class Subscription < KitsTsdModel
 	belongs_to :user
-	belongs_to :channel
+	belongs_to :channel, :foreign_key => :channelID, :primary_key => :channelID
 	
 	before_create :set_flds
 	
   validates :user_id, :presence => true
   validates :channelID, :presence => true, :uniqueness => { :scope => :user_id }  
   validates :contentsourceID, :presence => true
+  
+  scope :active, where(:status.downcase => 'active')
+  scope :unhidden, where(:hide.downcase => 'no')
 
   def set_flds
     self.status = 'active'
     self.hide = 'no'
+  end
+  
+  def self.active_list(uid)
+    Channel.joins(:subscriptions).where('subscriptions.user_id = ? and subscriptions.status = ?', uid, 'active')
   end
 end

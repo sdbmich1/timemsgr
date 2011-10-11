@@ -15,9 +15,9 @@ end
 Factory.define :event do |event|
   event.event_title           "Test title"
   event.event_name           "Test title"
-  event.eventstartdate      Date.today
+  event.eventstartdate      Date.today+2.days
   event.eventstarttime      Time.now
-  event.eventenddate        Date.today+1.day
+  event.eventenddate        Date.today+3.days
   event.eventendtime        Time.now.advance(:hours => 2)
   event.mapstreet          "123 Elm"
   event.mapcity            "LA"
@@ -30,6 +30,44 @@ Factory.define :event do |event|
   event.endGMToffset        -8.0
   event.contentsourceID     "123"
   event.session_type         ""
+end  
+
+Factory.define :private_event do |event|
+  event.event_title           "Test title"
+  event.event_name           "Test title"
+  event.eventstartdate      Date.today+2.days
+  event.eventstarttime      Time.now
+  event.eventenddate        Date.today+3.days
+  event.eventendtime        Time.now.advance(:hours => 2)
+  event.mapstreet          "123 Elm"
+  event.mapcity            "LA"
+  event.mapstate           "CA"
+  event.mapzip             "90201"
+  event.status              "active"
+  event.event_type          "ue"
+  event.hide                "no"
+  event.localGMToffset      -8.0
+  event.endGMToffset        -8.0
+  event.contentsourceID     "123"
+end  
+
+Factory.define :life_event do |event|
+  event.event_title           "Test title"
+  event.event_name           "Test title"
+  event.eventstartdate      Date.today+2.days
+  event.eventstarttime      Time.now
+  event.eventenddate        Date.today+3.days
+  event.eventendtime        Time.now.advance(:hours => 2)
+  event.mapstreet          "123 Elm"
+  event.mapcity            "LA"
+  event.mapstate           "CA"
+  event.mapzip             "90201"
+  event.status              "active"
+  event.event_type          "ue"
+  event.hide                "no"
+  event.localGMToffset      -8.0
+  event.endGMToffset        -8.0
+  event.contentsourceID     "123"
 end  
 
 Factory.sequence :event_name do |n|

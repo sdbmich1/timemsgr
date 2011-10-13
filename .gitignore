@@ -5,3 +5,4 @@ log/*.log
 config/database.yml
 tmp/
 vendor/cache/
+vendor/bundle/

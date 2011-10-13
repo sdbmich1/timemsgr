@@ -1,6 +1,6 @@
  
 #app {width: auto; height: 100%!important;}  
-.app-content {min-width:95%; height: auto; padding: 0}
+.app-content {min-width:320px; height: 100%; padding: 0}
 #app-footer {position:absolute; bottom:1em; width: 100%; }
 
 .ui-page, .ui-body-c, .ui-content {

@@ -6,4 +6,9 @@ module SubscriptionsHelper
   def get_channel_name(val)
     Channel.find_by_channelID(val).try(:channel_name)
   end
+  
+  def get_page_title(val)
+    val ||= get_name_or_logo
+  end
+  
 end

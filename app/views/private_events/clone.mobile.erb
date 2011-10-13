@@ -1,6 +1,5 @@
-<%= render "mobile/index_form" %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Clone Event'} %>
 
 <% content_for :content do %>
-	<h3 class="center-wrapper">Add Event</h3>
-	<%= render 'form' %>
+	<%= render :partial => 'mobile/event_form', :locals => { :etype => 'event' } %>
 <% end %>

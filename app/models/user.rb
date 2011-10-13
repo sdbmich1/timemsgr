@@ -48,19 +48,18 @@ class User < ActiveRecord::Base
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :status => 'active'}
   
-  has_many :associates
+  has_many :events, :through => :channels
   
+  has_many :associates  
   has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
   has_many :host_profiles, :foreign_key => :ProfileID
   accepts_nested_attributes_for :host_profiles, :reject_if => :all_blank 
-
-  has_many :events, :through => :channels
-   
-  has_many :user_photos
-  accepts_nested_attributes_for :user_photos, :reject_if => lambda { |a| a[:photo_file_name].blank? }
   
+  has_many :pictures, :as => :imageable, :dependent => :destroy
+  accepts_nested_attributes_for :pictures, :allow_destroy => true
+    
   has_many :settings
   has_many :session_prefs, :through => :settings 
   

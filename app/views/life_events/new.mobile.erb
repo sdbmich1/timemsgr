@@ -1,6 +1,5 @@
-<%= render 'mobile/index_form' %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Add Life Event'} %>
 
 <% content_for :content do %>
-	<h3 class="center-wrapper">Add Life Event</h3>
 	<%= render :partial => 'mobile/event_form', :locals => { :etype => 'life' } %>
 <% end %>

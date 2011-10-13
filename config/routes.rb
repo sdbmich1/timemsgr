@@ -38,7 +38,7 @@ Timemsgr::Application.routes.draw do
   end
  
   # controllers for event related content
-  resources :members, :promotions, :presenters, :event_sessions
+  resources :members, :promotions, :presenters, :event_sessions, :transactions
    
   resources :affiliations do
     get :autocomplete_organization_name, :on => :collection

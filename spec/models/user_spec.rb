@@ -54,17 +54,38 @@ describe User do
     end
   end
   
+  describe "pictures" do
+
+    it "should have a pictures attribute" do
+      @user.should respond_to(:pictures)
+    end
+  end
+  
   describe "channels" do
 
     before(:each) do
       @sub = Factory(:subscription, :user => @user) 
     end
 
-    it "should have a channels attribute" do
+    it "should have a subscriptions attribute" do
       @user.should respond_to(:subscriptions)
     end
   end
 
+  describe "events" do
+
+    it "should have a events attribute" do
+      @user.should respond_to(:events)
+    end
+  end
+  
+  describe "channels" do
+
+    it "should have a channels attribute" do
+      @user.should respond_to(:channels)
+    end
+  end
+  
   describe "host profiles" do
 
     before(:each) do
@@ -78,12 +99,12 @@ describe User do
   
   describe "settings" do
 
-    before(:each) do
-      @sub = Factory(:setting, :user => @user) 
-    end
-
     it "should have a setting attribute" do
       @user.should respond_to(:settings)
+    end
+
+    it "should have a session_pref attribute" do
+      @user.should respond_to(:session_prefs)
     end
   end  
   

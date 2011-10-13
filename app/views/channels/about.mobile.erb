@@ -1,4 +1,4 @@
-<%= render 'mobile/index_form' %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Channel Details'} %>
 
 <%= content_for :content do %>
   <%= render :partial => 'mobile/show_photo', :locals => {:model => @channel }%>

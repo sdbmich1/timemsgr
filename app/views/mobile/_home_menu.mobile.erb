@@ -1,4 +1,4 @@
-<%= render 'mobile/index_form' %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Manage Account'} %>
 
 <% content_for :content do %>	<h3 class="mtop center-wrapper"><%= "#{current_user.first_name} #{current_user.last_name}"%></h3><br />	<ul data-role="listview">		<li data-role="list-divider">View</li>
 		<li><%= link_to "My Events", private_events_url(@user) %></li>		<li><%= link_to "Upcoming Events", events_url(@user) %></li>	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>

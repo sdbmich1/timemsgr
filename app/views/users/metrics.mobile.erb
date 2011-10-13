@@ -1,6 +1,6 @@
-<%= render 'mobile/index_form' %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Time Savings'} %>
 
 <%= content_for :content do %>
-	<h3 class="center-wrapper">Time Saving Metrics</h3>
+	<h3 class="center-wrapper">QOL Score</h3>
     <%= render 'shared/progress_meter' %>
 <% end %>

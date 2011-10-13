@@ -43,14 +43,13 @@ class Event < KitsTsdModel
     get_event(eid).try(:first)
   end 
   
-  def self.find_events(edate, hprofile) 
+  def self.find_events(edate, ssid) 
     edate.blank? ? edate = Date.today+14.days : edate  
-    hprofile.blank? ? current_events(edate) : current(edate, hprofile.subscriptionsourceID)    
+    ssid.blank? ? current_events(edate) : current(edate, ssid)    
   end
   
   def self.get_event_details(eid)
-      joins(:sessions, :presenters).find(eid) unless find(eid).try(:sessions).blank?
-      joins(:presenters).find(eid) if find(eid).try(:sessions).blank?
+    joins(:sessions, :presenters).find(eid) 
   end
   
   def self.getSQL

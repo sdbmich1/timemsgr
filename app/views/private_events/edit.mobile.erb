@@ -1,12 +1,5 @@
-<% content_for :pre_mobile_load do %>
-  	<%= render 'mobile/pre_load' %>
-<% end %>
-
-<% content_for :head do %>
-	<%= link_to 'Home', root_path, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
-<% end %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Edit Event'} %>
 
 <% content_for :content do %>
-	<h3 class="center-wrapper">Edit Event</h3>
 	<%= render :partial => 'mobile/event_form', :locals => { :etype => 'event' } %>
 <% end %>

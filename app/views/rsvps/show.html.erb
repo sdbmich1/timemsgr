@@ -1,0 +1,16 @@
+<% title "Rsvp" %>
+
+<p>
+  <strong>Eventid:</strong>
+  <%= @rsvp.eventid %>
+</p>
+<p>
+  <strong>Subscriptionsourceid:</strong>
+  <%= @rsvp.subscriptionsourceID %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_rsvp_path(@rsvp) %> |
+  <%= link_to "Destroy", @rsvp, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", rsvps_path %>
+</p>

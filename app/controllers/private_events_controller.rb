@@ -2,7 +2,7 @@ class PrivateEventsController < ApplicationController
    before_filter :authenticate_user!, :load_data
 
   def index
-    @event = PrivateEvent.current(params[:end_date], @host_profile.subscriptionsourceID)
+    @events = PrivateEvent.get_events(@host_profile.subscriptionsourceID)
   end
 
   def show
@@ -42,13 +42,11 @@ class PrivateEventsController < ApplicationController
   end
     
   def clone  
-    @event = PrivateEvent.find(params[:id]).clone
+    @event = PrivateEvent.find(params[:id]).clone_event
   end
   
   def move
-    @selected_event = Event.find_event(params[:id])
-    @selected_event.contentsourceID = @host_profile.subscriptionsourceID
-    @event = PrivateEvent.new(@selected_event.attributes)
+    @event = PrivateEvent.move_event(params[:id],@host_profile.subscriptionsourceID )
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
@@ -60,6 +58,8 @@ class PrivateEventsController < ApplicationController
   private
     
   def load_data
+    @user = current_user
+    @host_profile = @user.host_profiles.first
     @enddate = Date.today+14.days
   end
 

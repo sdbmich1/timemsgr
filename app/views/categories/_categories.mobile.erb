@@ -1,0 +1,6 @@
+<ul data-role="listview">
+  <% @categories.each do |category| %>
+	<li><%= link_to category.name, interests_url(:category_id => category) %></li>
+  <% end %>
+</ul>
+	

@@ -1,11 +1,15 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Channel Details'} %>
 
 <%= content_for :content do %>
-  <%= render :partial => 'mobile/show_photo', :locals => {:model => @channel }%>
-  <h3 class="center-wrapper"><%= @channel.channel_name %></h3>
+  <div id="wrapper">
+	<div id="scroller">
+  		<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel }%>
+  		<h3 class="center-wrapper"><%= @channel.channel_name %></h3>
 
-  <div id="show-item">
-	<%= render :partial => 'mobile/show_event_location', :locals => {:event => @channel} %> 
+  		<div id="show-item">
+			<%= render :partial => 'mobile/show_event_location', :locals => {:event => @channel} %> 
+  		</div>
+    </div>
   </div>
 <% end %>
 

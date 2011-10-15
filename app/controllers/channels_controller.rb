@@ -2,7 +2,8 @@ class ChannelsController < ApplicationController
   respond_to :html, :xml, :js, :mobile
   
   def index
-    @categories = Category.get_active_list
+    loc = 4
+    @channels = Channel.get_list(loc, params[:interest_id])
   end
   
   def show

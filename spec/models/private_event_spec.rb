@@ -211,7 +211,6 @@ describe PrivateEvent do
 
     it "should include correct event" do
       event = Factory(:private_event, :event_name => Factory.next(:event_name))
-      event.event_type = 'conf'
       PrivateEvent.get_event(event.id).should_not be_blank
     end
 
@@ -269,6 +268,24 @@ describe PrivateEvent do
     end
   end
 
+  context '.get_events' do
+   
+    it "should respond to get_events method" do
+      PrivateEvent.should respond_to(:get_events)
+    end
+
+    it "should include events for given host profile" do
+      event = Factory(:private_event, :event_name => Factory.next(:event_name), :subscriptionsourceID => "ABCD123")
+      hprofile = Factory(:host_profile, :subscriptionsourceID => "ABCD123")
+      PrivateEvent.get_events(hprofile.subscriptionsourceID).should_not be_empty
+    end
+
+    it "should reject incorrect host profile" do
+      @event.save
+      hprofile = Factory(:host_profile, :subscriptionsourceID => "123")
+      PrivateEvent.get_events(hprofile.subscriptionsourceID).should_not include(@event)
+    end
+  end
   describe 'getSQL' do
 
     it "should have a getSQL method" do
@@ -367,6 +384,39 @@ describe PrivateEvent do
       sdate = nil
       edate = Date.today+14.days
       PrivateEvent.upcoming(sdate,edate).should_not include(@event)
+    end
+  end
+
+  describe '.clone_event' do
+    before(:each) do
+      @clone = @newevent.clone
+    end
+
+    it "should respond to clone_event method" do
+      @event.should respond_to(:clone_event)
+    end
+
+    it "should clone event" do
+      @clone.should be_valid
+    end
+  end
+
+  context '.move_event' do
+   
+    it "should respond to move_event method" do
+      @event.should respond_to(:move_event)
+    end
+
+    it "should include correct end date and host profile" do
+      event = Factory.build(:private_event, :id => 1, :event_name => Factory.next(:event_name), :subscriptionsourceID => "ABCD123")
+      hprofile = Factory(:host_profile, :subscriptionsourceID => "ABCD123")
+      @event.move_event('1', hprofile.subscriptionsourceID).should be_empty
+    end
+
+    it "should reject incorrect end date" do
+      @event.save
+      hprofile = Factory(:host_profile, :subscriptionsourceID => "123")
+      @event.move_event('1', hprofile.subscriptionsourceID).should_not include(@event)
     end
   end
 

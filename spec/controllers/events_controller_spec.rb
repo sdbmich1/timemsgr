@@ -10,18 +10,17 @@ describe EventsController do
     end
   end
 
-  def mock_user(stubs={})
-    (@mock_user ||= mock_model(HostProfile, stubs).as_null_object).tap do |user|
-          user.stub(stubs) unless stubs.empty?
-    end
-  end
-
   before(:each) do
     log_in_test_user
     @event = stub_model(Event, :id=>1, :subscriptionsourceID=>"ABC123")
   end
 
   describe 'GET index' do
+
+    before(:each) do
+      @events = mock("events")
+      Event.stub!(:find_events).and_return(@events)
+    end
 
     def do_get
       get :index, :end_date => Date.today+21.days
@@ -33,9 +32,7 @@ describe EventsController do
     end
 
     it "should assign @events" do
-      @events = @event #[@event, @event]
-      edate = Date.today+21.days
-      Event.should_receive(:find_events).with(edate,'ABC123').and_return(@events)
+      Event.should_receive(:find_events).and_return(@events)
       do_get 
       assigns(:events).should_not be_nil
     end

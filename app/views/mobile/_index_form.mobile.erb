@@ -1,5 +1,6 @@
 <% content_for :pre_mobile_load do %>
   	<%= render 'mobile/pre_load' %>
+	<%= render 'mobile/scrollbar'%>
 <% end %>
 <% content_for :head do %>	<h3><%= "#{get_page_title(title)}" %></h3>	<%= link_to 'Home', root_path, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
 	<% if user_signed_in? %>

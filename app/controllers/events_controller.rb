@@ -7,8 +7,7 @@ class EventsController < ApplicationController
 	end
 	
 	def index
-	  ssid = @host_profile.try(:subscriptionsourceID)
-    @events = Event.find_events(params[:end_date], ssid)
+    respond_with(@events = Event.find_events(params[:end_date], @host_profile))
  	end
 
 end

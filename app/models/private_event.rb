@@ -57,9 +57,22 @@ class PrivateEvent < ActiveRecord::Base
   def same_day?
     eventstartdate == eventenddate
   end
+  
+  def move_event(eid, ssid)
+    selected_event = Event.find_event(eid)
+    selected_event.contentsourceID = ssid
+    new_event = PrivateEvent.new(selected_event.attributes)
+    new_event
+  end
         
   protected
   
+   def clone_event
+     new_event = self.clone
+
+     new_event.eventstartdate = new_event.eventenddate = Date.today
+     new_event
+   end
 
    def reset_attr
      self.eventstartdate=self.eventenddate = nil
@@ -92,6 +105,14 @@ class PrivateEvent < ActiveRecord::Base
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid]) 
    end
+   
+   def self.get_events(cid)
+     where_cid = " WHERE (contentsourceID = ?)"    
+     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", cid, cid]) 
+   end
+
    
    def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 

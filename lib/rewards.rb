@@ -22,7 +22,8 @@ module Rewards
   
   def get_msg(usr, tag)
     msg = "#{usr.first_name}, you now have #{get_credits(usr.id)} credits. " 
-    msg += RewardMsg.find_by_msg_type(tag).description
+    desc = RewardMsg.find_by_msg_type(tag).try(:description)
+    msg += desc if desc
   end
   
   def get_meter_info

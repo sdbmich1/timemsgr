@@ -16,4 +16,8 @@ class Interest < ActiveRecord::Base
   def self.get_active_list
     unhidden.where(:status.downcase => 'active')
   end
+  
+  def self.find_interests(cid)
+    get_active_list.where(:category_id => cid)
+  end
 end

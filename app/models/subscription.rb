@@ -16,7 +16,7 @@ class Subscription < KitsTsdModel
     self.hide = 'no'
   end
   
-  def self.active_list(uid)
+  def self.get_active_list(uid)
     Channel.joins(:subscriptions).where('subscriptions.user_id = ? and subscriptions.status = ?', uid, 'active')
   end
 end

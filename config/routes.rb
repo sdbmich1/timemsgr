@@ -1,5 +1,7 @@
 Timemsgr::Application.routes.draw do
 
+  resources :rsvps
+
   devise_for :users, :controllers => { :registrations => "registrations" }  
     
   resources :channels do
@@ -18,7 +20,7 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :interests,  :authentications, :associates
+  resources :categories, :interests,  :authentications, :associates
   
   resources :events do 
     member do

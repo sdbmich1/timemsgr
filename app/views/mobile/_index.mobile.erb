@@ -1,5 +1,7 @@
-  <div class="mtop">
-	<ul data-role="listview" data-filter="true">
+<div class="mtop">
+  <div id="wrapper">
+	<div id="scroller">
+	  <ul data-role="listview" data-filter="true">
 		<li data-role="list-divider" class="center-wrapper">Observances & Reminders</li>
 		<div class="center-wrapper">
 		  	<%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event %>
@@ -14,5 +16,7 @@
 		<% end %>	
 		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
 		<%= render :partial => 'mobile/event_list', :collection => get_events('Upcoming Events'), :as => :event %>	
-	</ul>
+	  </ul>
+    </div>
   </div>
+</div>

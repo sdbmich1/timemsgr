@@ -1,7 +1,7 @@
 <%= content_for :footer do %>
 	<div data-role="navbar">
 	  <ul>
-		<li><%= link_to "Join", new_subscription_url(:channel_id => @channel), "data-icon"=>"custom", :id => "add", :remote => true %> </li>
+		<li><%= link_to "Join", add_subscription_url(:user_id=>@user, :channel_id => @channel), "data-icon"=>"custom", :id => "add", :method => "post", :remote => true %> </li>
 		<li><%= link_to "Like", channel_url(@channel), "data-icon"=>"custom", :id => "like", :remote => true %> </li>
 	  </ul>
 	</div>

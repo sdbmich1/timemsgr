@@ -1,4 +1,4 @@
-class ChannelLocation < ActiveRecord::Base
+class ChannelLocation < KitsTsdModel
   belongs_to :channel
   belongs_to :location
   

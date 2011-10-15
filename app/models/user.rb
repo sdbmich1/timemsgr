@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   				  
   # name format validators
   uname_regex = /^[-\w\._@]+$/i
-  name_regex = 	/\A[a-z]/i
+  name_regex = 	/^[A-Z]'?['-., a-zA-Z]+$/i
 
   # validate added fields  				  
   validates :first_name,  :presence => true,

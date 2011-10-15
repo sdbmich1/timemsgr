@@ -1,5 +1,5 @@
 class InterestsController < ApplicationController
-  before_filter :authenticate_user!, :load_data	
+  before_filter :load_data	
   layout :page_layout
 	respond_to :html, :json, :xml, :js
   
@@ -27,14 +27,15 @@ class InterestsController < ApplicationController
 	end
 
   def index
-    redirect_to new_subscription_path
+    @interests = Interest.find_interests(params[:category_id])
   end	
   
 	protected
 	
 	def load_data
-    @user = current_user  #set current user
-    @selected_ids = @user.interest_ids  # check interest ids
+	  if user_signed_in?
+      @selected_ids = @user.interest_ids  # check interest ids
+    end
   end
 	
 	def add_credits

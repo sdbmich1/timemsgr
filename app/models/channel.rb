@@ -29,7 +29,7 @@ class Channel < KitsTsdModel
     active.unhidden.joins(:channel_locations).where('channel_locations.location_id = ?', loc)
   end
   
-  def self.intlist(loc, int_id)
+  def self.get_list(loc, int_id)
     local(loc).joins(:channel_interests).where('channel_interests.interest_id in (?)', int_id)
   end
 end

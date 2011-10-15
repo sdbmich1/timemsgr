@@ -1,0 +1,43 @@
+    <%= stylesheet_link_tag "scrollbar", :cache => true %>  
+
+  	<script type="text/javascript">
+	$(document).bind("mobileinit", function(){
+
+		var myScroll;
+		function loaded() {
+			myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+	}
+
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		document.addEventListener('DOMContentLoaded', loaded, false);
+
+	$(window).bind('load', function () {
+    $.mobile.activePage.css({
+        height       : (window.innerHeight + 100) + 'px',
+        'min-height' : (window.innerHeight + 100) + 'px',
+        width       : (window.innerWidth) + 'px',
+        'min-width' : (window.innerWidth) + 'px'
+    }).find('[data-role="footer"]').css({
+        bottom : '100px'
+    });
+    
+    $.mobile.silentScroll(0);
+    setTimeout(function () {
+        $.mobile.activePage.css({
+            height       : '100%',
+            'min-height' : '100%'
+        }).find('[data-role="footer"]').css({
+            bottom : '0px'
+        });
+        if ($.mobile.activePage[0].id in myScroll) {
+            myScroll[$.mobile.activePage[0].id].refresh();
+        }
+    }, 750);
+});
+
+$(window).bind('orientationchange', function () {
+    $(window).trigger('load');
+});
+
+	});	
+	</script>

@@ -1,0 +1,6 @@
+<ul data-role="listview">
+  <% @interests.each do |interest| %>
+	<li><%= link_to interest.name, channels_url(:interest_id => interest) %></li>
+  <% end %>
+</ul>
+	

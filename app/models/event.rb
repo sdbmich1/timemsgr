@@ -43,9 +43,9 @@ class Event < KitsTsdModel
     get_event(eid).try(:first)
   end 
   
-  def self.find_events(edate, ssid) 
+  def self.find_events(edate, hp) 
     edate.blank? ? edate = Date.today+14.days : edate  
-    ssid.blank? ? current_events(edate) : current(edate, ssid)    
+    hp.blank? ? current_events(edate) : current(edate, hp.subscriptionsourceID)    
   end
   
   def self.get_event_details(eid)

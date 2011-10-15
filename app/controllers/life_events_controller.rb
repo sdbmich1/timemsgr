@@ -38,7 +38,7 @@ class LifeEventsController < ApplicationController
   end
     
   def clone  
-    @event = LifeEvent.find(params[:id]).clone
+    @event = LifeEvent.find(params[:id]).clone_event
   end
 
 end

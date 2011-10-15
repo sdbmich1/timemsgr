@@ -1,5 +1,9 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Browse Channels'} %>
 
 <% content_for :content do %>
-		<%= render 'category' %>
+  <div id="wrapper">
+	<div id="scroller">
+		<%= render 'channels' %>
+	</div>
+  </div>
 <% end %>

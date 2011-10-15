@@ -1,8 +1,9 @@
  
-#app {width: auto; height: 100%!important;}  
-.app-content {min-width:320px; height: 100%; padding: 0}
-#app-footer {position:absolute; bottom:1em; width: 100%; }
-
+#app {width: auto; height: 100%;}  
+.app-content {min-width:95%; height: 100%; padding: 0}
+/*
+#app-footer {position:absolute; bottom:0; }
+*/
 .ui-page, .ui-body-c, .ui-content {
 	background: #FFFFFF!important;
 }  
@@ -75,17 +76,17 @@
 .show-time { font-weight: bold; color: red; margin-top: 5px; }
 
 .slider-title h6 {  position:absolute; top: 1.25em; margin: 0; left: 5.35em;  
-	 font-size:0.8em; line-height: 1.05em; height: 50px; width: 70%; color: blue;}
+	 font-size:0.8em; line-height: 1.05em; height: 50px; width: 65%; color: blue;}
 
 .sl-descr { position:absolute; top: 2.25em; left: 4.35em; width: 80%;
 			margin-bottom: 10px; }
 	   
 .ui-li-desc {text-overflow: normal; overflow: visible; 
-			white-space: pre-wrap; font-size: 0.625em;}
+			white-space: pre-wrap; font-size: 0.5em;}
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
-.sdescr { font-size: 0.7em; width: 80%; font-weight: normal; height: 30px; }
+.sdescr { font-size: 0.625em; width: 80%; font-weight: normal; height: 30px; }
 
 /* add event styling */
 #start-time hour { color: blue}

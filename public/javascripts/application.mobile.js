@@ -16,7 +16,7 @@ $(document).bind("mobileinit", function(){
    	// hides the date time as soon as the DOM is ready
     $('#timebox').hide();
     
- 	// shows the date & time fields on clicking the checkbox  
+ 	// shows the date & time fields on clicking the check box  
   	$('#freq').click(function() {
 	
 		// If checked
@@ -31,7 +31,14 @@ $(document).bind("mobileinit", function(){
     			return false;
     		}
   	});
-  	
+  	 	
+  	var myScroll;
+	function loaded() {
+		myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+	}
+
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('DOMContentLoaded', loaded, false); 	
   	    	 	 
 });
 	 

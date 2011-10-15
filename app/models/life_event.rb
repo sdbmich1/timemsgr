@@ -41,6 +41,13 @@ class LifeEvent < ActiveRecord::Base
   end
   
   protected
+  
+  def clone_event
+    new_event = self.clone
+
+    new_event.eventstartdate = new_event.eventenddate = Date.today
+    new_event
+  end
     
    def add_rewards
      @reward_amt = add_credits(self.changes)
@@ -51,24 +58,26 @@ class LifeEvent < ActiveRecord::Base
    end
    
    def set_flds
-     if status.nil?
-      if self.annualsamedate == 'no'
-       self.eventmonth = self.eventstartdate.month
-       self.eventday = self.eventstartdate.day
-      else
-       self.eventgmonth = self.eventstartdate.month
-       self.eventgday = self.eventstartdate.day
-       self.eventenddate = self.eventstartdate+120.years
-       self.eventstarttime = Time.parse('00:00')
-       self.eventendtime = Time.parse('11:59')
-      end
      
-      self.event_title = self.event_name
+    if self.annualsamedate == 'no'
+      self.eventmonth = self.eventstartdate.month
+      self.eventday = self.eventstartdate.day
+    else
+      self.eventgmonth = self.eventstartdate.month
+      self.eventgday = self.eventstartdate.day
+      self.eventenddate = self.eventstartdate+120.years
+      self.eventstarttime = Time.parse('00:00')
+      self.eventendtime = Time.parse('11:59')
+    end
+     
+    self.postdate = Time.now
+    self.eventid = self.event_type[0..1] + Time.now.to_i.to_s 
+    self.event_title = self.event_name
+ 
+    if status.nil?     
       self.obscaltype = 'Gregorian'
       self.status = 'active'
       self.hide = 'no'
-      self.postdate = Time.now
-      self.eventid = self.event_type[0..1] + Time.now.to_i.to_s 
     end 
   end
     

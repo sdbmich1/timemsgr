@@ -2,7 +2,7 @@ class SubscriptionsController < ApplicationController
   before_filter :authenticate_user!   
   respond_to :html, :json, :xml, :js
      
-  def add
+  def new
     @channel = Channel.find(params[:channel_id])
     @user = User.find(params[:user_id])
     @subscription = Subscription.new(:user_id=>@user, :channelID => @channel.channelID, :contentsourceID => @host_profile.subscriptionsourceID)

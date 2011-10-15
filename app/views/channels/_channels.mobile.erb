@@ -1,4 +1,4 @@
-<ul data-role="listview">
+<ul data-role="listview" data-filter="true">
   <% @channels.each do |channel| %>
 	<li><%= link_to channel.channel_name, channel_url(channel) %></li>
   <% end %>

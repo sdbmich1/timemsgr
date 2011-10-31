@@ -50,8 +50,8 @@
 	box-sizing:border-box;
 	
 	border-width:3px;
-	-webkit-border-image:url(scrollbar.png) 6 6 6 6;
-	-moz-border-image:url(scrollbar.png) 6 6 6 6;
-	-o-border-image:url(scrollbar.png) 6 6 6 6;
-	border-image:url(scrollbar.png) 6 6 6 6;
+	-webkit-border-image:url("../images/scrollbar.png") 6 6 6 6;
+	-moz-border-image:url("../images/scrollbar.png") 6 6 6 6;
+	-o-border-image:url("../images/scrollbar.png") 6 6 6 6;
+	border-image:url("../images/scrollbar.png") 6 6 6 6;
 }

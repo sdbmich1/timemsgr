@@ -1,0 +1,10 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Edit Profile'} %>
+
+<% content_for :content do %>
+  	<%= form_for @user, :id=> "usr_form", :validate => true do |f| %>
+		<%= render "mobile/error_messages", :target => @user %>  
+			<%= render :partial => 'mobile/user_profile', :locals => { :f => f } %>
+			<%= render :partial => 'mobile/user_contact', :locals => { :f => f } %>
+		<p><%= f.submit "Save", "data-theme"=>"b" %></p>
+	<% end %>
+<% end %>

@@ -2,11 +2,8 @@
   	<% for presenter in @presenters %>
 	<li>
 		<%= link_to presenter_url(presenter) do %>
-		  <% for pic in presenter.pictures %>
-			<% if pic %>
-    			<%= image_tag pic.photo.url, :class=>'ppic' %>
-    		<% end %>		
-   		  <% end %>
+		  <%= render :partial => 'mobile/show_photo', :locals => {:model => presenter, :vtype => 'ppic' }%>
+
    		  <div class="pstr">
 		  	<h6><%= presenter.name %></h6>
 		  </div>

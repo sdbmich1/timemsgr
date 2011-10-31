@@ -9,7 +9,7 @@ module EventsHelper
   end
     
   def is_break?(session_type)
-    (%w(wkshp cls mtg key brkout panel).detect { |x| x == session_type }).blank?
+    (%w(wkshp cls ue mtg key brkout panel).detect { |x| x == session_type }).blank?
   end
   
   def major_event?(etype)
@@ -44,12 +44,15 @@ module EventsHelper
   end
       
   def is_session?(etype)
-    etype == 'es'
+    etype == 'es' || etype == 'se' || etype == 'sm'
   end  
   
   def time_left?(event)
-   return true if event.eventenddate > Date.today 
-   event.eventenddate = Date.today && event.eventendtime > Time.now ? true : false   
+    if event.eventenddate > Date.today 
+      return true 
+    else
+      event.eventenddate <= Date.today && event.eventendtime > Time.now ? true : false
+    end    
   end
 
   def rsvp?(val)
@@ -122,7 +125,8 @@ module EventsHelper
   end
   
   def subscribed?(ssid)
-    @user.subscriptions.detect {|u| u.channelID == ssid }
+    slist =  @user.try(:subscriptions)
+    slist.detect {|u| u.channelID == ssid } if slist
   end
 
   def observances?
@@ -130,7 +134,8 @@ module EventsHelper
   end
   
   def get_user_events
-    @events.select {|event| event.contentsourceID == @host_profile.subscriptionsourceID && !observance?(event.event_type) && !appt?(event.event_type) && time_left?(event)}
+    ssid = @host_profile.try(:subscriptionsourceID)
+    @events.select {|e| e.contentsourceID == ssid && !observance?(e.event_type) && !appt?(e.event_type) && time_left?(e)}
   end
   
   def get_appointments
@@ -138,16 +143,35 @@ module EventsHelper
   end
   
   def get_subscriptions
-    @events.select {|e| subscribed?(e.subscriptionsourceID) && current?(e.eventstartdate) && time_left?(e) && !is_session?(e.event_type) }
+    @events.select {|e| subscribed?(e.subscriptionsourceID) && time_left?(e) && !is_session?(e.event_type) }
   end
            
   def get_observances
-    @events.select {|e| observance?(e.event_type) && view_obs?(e.location) && current?(e.eventstartdate) }
+    @events.select {|e| observance?(e.event_type) && view_obs?(e.location) }
   end
   
   def get_opp_events
+    @user_events = get_user_events
+    @trk_events = get_subscriptions
     @host_profile.blank? ? ssid = " " : ssid = @host_profile.subscriptionsourceID
-    @events.reject {|e| observance?(e.event_type) || e.contentsourceID == ssid || is_session?(e.event_type) || !time_left?(e)}
+    @events.reject {|e| observance?(e.event_type) || e.contentsourceID == ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || chk_user_events(@trk_events, e) || !time_left?(e)}
+  end
+  
+  def chk_user_events(elist, event)
+    elist.detect{|x| x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name}
+  end
+  
+  def get_sponsor_type(ary)
+    ary.uniq{|x| x.sponsor_type}
+  end
+  
+  def get_sponsors(ary, logo, stype)
+    ary.select {|x| x.logo_type == logo && x.sponsor_type == stype} 
+  end
+  
+  def get_logo_size(val)
+    list = LogoType.all.select {|x| x.code == val }
+    list.first.logo_size
   end
     
   # build default schedule for new web-based users 
@@ -175,15 +199,15 @@ module EventsHelper
   end    
 
 	def showtime
-		@time = Time.zone.now
+		@time = Time.now
 	end
 	
 	def set_form_type(fname)
 	  @form = fname
 	end
 		
-	def get_etype_icon(elist, ecode)
-	  etype = elist.detect { |e| e.event_type == ecode } 
+	def get_etype_icon(ecode)
+	  etype = EventTypeImage.all.detect { |e| e.event_type == ecode } 
 	  etype.blank? ? 'star_icon.png' : etype.image_file
 	end
 	

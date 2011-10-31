@@ -22,16 +22,12 @@ class PrivateEvent < ActiveRecord::Base
   validates :eventstarttime, :presence => true, :allow_blank => false
   validates :eventendtime, :presence => true, :allow_blank => false
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
-  validates :bbody, :length => { :maximum => 255 }  
+#  validates :bbody, :length => { :maximum => 255 }  
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 	
 	scope :active, where(:status.downcase => 'active')
 	scope :unhidden, where(:hide.downcase => 'no')
-#  scope :current_time, lambda { | start_tm, end_tm | where("eventstarttime >= time(?) and eventendtime <= time(?)", start_tm, end_tm)}
-#  scope :owned, lambda { | uid |
-#            { :conditions => { :contentsourceID => uid }} } 
-#  scope :etype, joins('JOIN event_types ON event_types.event_type = events.event_type')
   
   def self.upcoming(start_dt, end_dt)
     active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
@@ -58,9 +54,10 @@ class PrivateEvent < ActiveRecord::Base
     eventstartdate == eventenddate
   end
   
-  def move_event(eid, ssid)
-    selected_event = Event.find_event(eid)
+  def self.move_event(eid, etype, ssid)
+    selected_event = Event.find_event(eid, etype)
     selected_event.contentsourceID = ssid
+    selected_event.ID = nil
     new_event = PrivateEvent.new(selected_event.attributes)
     new_event
   end

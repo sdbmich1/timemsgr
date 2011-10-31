@@ -1,0 +1,5 @@
+<% if observances? %>
+	<%= render :partial => 'slider', :locals => { :slider => "Observances & Milestones" } %>
+<% end %>
+<div id="sch-slider"><%= render 'schedule' %></div>
+<%= render :partial => 'slider', :locals => { :slider => "Upcoming Events" } %>

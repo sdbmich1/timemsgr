@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password,  :remember_me, :username, :login, :accept_terms,
   				  :first_name, :last_name, :birth_date, :gender, :location_id, :time_zone,
   				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
-  				  :host_profiles_attributes, :localGMToffset
+  				  :host_profiles_attributes, :localGMToffset, :subscription_ids
   				   #:session_pref_ids, :events_attributes,
   				  
   # name format validators
@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :interests 
    
   # define channel relationships
-  has_many :subscriptions
+  has_many :subscriptions, :conditions => { :status => 'active'}
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :status => 'active'}
   
@@ -64,6 +64,14 @@ class User < ActiveRecord::Base
   has_many :session_prefs, :through => :settings 
   
   has_many :authentications
+
+  has_many :relationships
+  has_many :family_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'family' AND status = 'accepted'"
+  has_many :social_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
+  has_many :trackers, :through => :relationships, :conditions => "status = 'accepted'"
+  has_many :requested_trackers, :through => :relationships, :source => :tracker, :conditions => "status = 'requested'", :order => :created_at
+  has_many :requested_family_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'family' AND status = 'requested'"
+  has_many :requested_social_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'requested'"
 
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address

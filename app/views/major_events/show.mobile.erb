@@ -1,1 +1,6 @@
-<%= render 'mobile/show' %>
+<% unless @sponsor_pages.blank? %>
+  <%= render 'mobile/sponsor_page' %>
+<% end %>
+<div id="event-pg">
+	<%= render 'mobile/show' %>
+</div>

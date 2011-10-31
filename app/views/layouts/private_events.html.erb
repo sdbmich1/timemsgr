@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>	
+   		<%= stylesheet_link_tag 'custom', :media => 'screen', :cache => true %>     		
+ 	  	<%= render 'shared/initialize' %>
+ 	  	
+   		<% if user_signed_in? %>
+   			<%= javascript_include_tag 'timer.js', :cache => true %>
+   		<% end %> 
+
+		<%= stylesheet_link_tag 'layout', 'links','slider','calendar','dropdown','jquery.fancybox-1.3.4', :media => 'screen', :cache => true %>	
+ 	  	<%= yield :head %>
+  </head>
+  <body>
+ 	<div class="container landing-bg" id="landing">  
+ 		<div id="spinner" style="display:none"></div>
+ 		<%= yield :left_sidebar %>
+	  	<%= yield :content %>
+		<%= yield :scripts %>
+	</div>
+	<%= yield :footer %>
+	<%= render 'shared/jsheets'%>
+  </body>
+</html>

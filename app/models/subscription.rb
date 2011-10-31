@@ -4,6 +4,8 @@ class Subscription < KitsTsdModel
 	
 	before_create :set_flds
 	
+	attr_accessible :status, :user_id, :channelID, :contentsourceID, :hide, :channel_id
+	
   validates :user_id, :presence => true
   validates :channelID, :presence => true, :uniqueness => { :scope => :user_id }  
   validates :contentsourceID, :presence => true

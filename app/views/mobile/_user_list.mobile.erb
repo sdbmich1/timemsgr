@@ -1,0 +1,13 @@
+  <ul data-role="listview">
+  	<% for usr in users %>
+	<li>
+		<%= link_to user_url(usr) do %>
+		  <%= render :partial => 'mobile/show_photo', :locals => {:model => usr, :vtype => 'ppic' }%>
+
+   		  <div class="pstr">
+		  	<h6><%= "#{usr.first_name} #{usr.last_name}" %></h6>
+		  </div>
+		<% end %>
+	</li>
+	<% end %>
+  </ul>

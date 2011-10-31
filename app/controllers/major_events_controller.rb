@@ -4,6 +4,7 @@ class MajorEventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @presenters = @event.try(:presenters)
+    @sponsor_pages = @event.try(:sponsor_pages)
   end
   
   def about

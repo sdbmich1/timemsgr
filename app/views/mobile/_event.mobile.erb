@@ -8,7 +8,7 @@
 		<h6><%= event.event_name %></h6>
 	</div>
 	<div class="sl-descr">
-		<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>80, :omission=>'...') %></div>
+		<div class="ui-li-desc sdescr"><%= truncate(event.bbody, :length=>65, :omission=>'...') %></div>
 	</div>
 <% else %>
  	<div class="stitle">

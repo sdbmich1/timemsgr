@@ -12,9 +12,16 @@ class Event < KitsTsdModel
   has_many :event_sites, :dependent => :destroy
   has_many :event_tracks, :dependent => :destroy
   has_many :pictures, :as => :imageable, :dependent => :destroy
+  has_many :sponsor_pages, :dependent => :destroy, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
+  def self.channel_events(edt, ssid)
+    where_ssid = where_dt + " AND (subscriptionsourceID = ?)" 
+    find_by_sql(["#{getSQL} FROM `kitsknndb`.events WHERE #{where_ssid}) 
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, ssid]) 
+  end 
+  
   def self.current_events(edt)
     find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_dt} )
          UNION #{getSQL} FROM `kitsknndb`.events WHERE #{where_dt} )
@@ -26,21 +33,22 @@ class Event < KitsTsdModel
     where_sid = where_subscriber_id + ' AND ' + where_dte   
     find_by_sql(["#{getSQLe} FROM `kits_development`.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM `kits_development`.eventsobs e WHERE #{where_cid} )
+         UNION #{getSQLe} FROM `kitsknndb`.events e WHERE #{where_dte} )
          UNION #{getSQLe} FROM `kitscentraldb`.events e WHERE #{where_dte} )
          UNION #{getSQLe} FROM `kitsknndb`.events #{where_sid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, cid, edt, edt]) 
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, edt, edt, cid, edt, edt, cid, edt, edt]) 
   end
   
-  def self.get_event(eid)
-    where_id = "where (ID = ?))"
+  def self.get_event(eid, etype)
+    where_id = "where (ID = ? AND event_type = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id} 
          UNION #{getSQL} FROM `kitsknndb`.events #{where_id} 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, eid, eid, eid])        
+         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype])        
   end
   
-  def self.find_event(eid)
-    get_event(eid).try(:first)
+  def self.find_event(eid, etype)
+    get_event(eid, etype).try(:first)
   end 
   
   def self.find_events(edate, hp) 
@@ -49,7 +57,7 @@ class Event < KitsTsdModel
   end
   
   def self.get_event_details(eid)
-    joins(:sessions, :presenters).find(eid) 
+    joins(:sessions).find(eid) 
   end
   
   def self.getSQL
@@ -69,13 +77,13 @@ class Event < KitsTsdModel
   def self.where_dt
       "(status = 'active' AND hide = 'No') 
                 AND ((eventstartdate >= curdate() and eventstartdate <= ?) 
-                OR (eventstartdate <= curdate() and eventenddate >= ?)) "
+                OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)) "
   end
   
   def self.where_dte
       "( e.status = 'active' AND e.hide = 'No') 
                 AND ((e.eventstartdate >= curdate() and e.eventstartdate <= ?) 
-                OR (e.eventstartdate <= curdate() and e.eventenddate >= ?)) "
+                OR (e.eventstartdate <= curdate() and e.eventenddate BETWEEN curdate() and ?)) "
   end
    
   def self.where_subscriber_id 

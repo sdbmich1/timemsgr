@@ -4,8 +4,14 @@ class HostProfile < KitsTsdModel
 
   attr_accessible :ProfileID, :HostChannelID, :ProfileType, :EntityType, :status,
         :hide, :sortkey, :channelID, :subscriptionsourceID, :subscriptionsourceURL,
-        :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory
-  
+        :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory, 
+        :Address1, :Address2, :City, :State, :PostalCode, :Phone_Home, :Phone_Work,
+        :Phone_cell, :wirelessservice, :Country
+        
+  text_regex = /^[-\w\,. _\/&@]+$/i
+        
+#  validates :Company, :allow_blank => true, :length => { :maximum => 100 }, :format => { :with => text_regex }
+   
   belongs_to :user
   has_many :channels, :foreign_key => :HostProfileID
   

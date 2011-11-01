@@ -4,12 +4,7 @@
 $(document).bind("mobileinit", function(){
 	// set ajax to false
 	$.extend(  $.mobile, { ajaxFormsEnabled: false });
-		
-	// keeps my page transitions from "jumping" 
-	$.extend($.mobile, {
-		metaViewportContent: "width=device-width, minimum-scale=1, maximum-scale=1"
-	});
-		
+				
 	//reset type=date inputs to text
    	$.mobile.page.prototype.options.degradeInputs.date = true;
    	
@@ -31,14 +26,6 @@ $(document).bind("mobileinit", function(){
     			return false;
     		}
   	});
-  	 	
-  	var myScroll;
-	function loaded() {
-		myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
-	}
-
-	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-	document.addEventListener('DOMContentLoaded', loaded, false); 	
-  	    	 	 
+ 	 
 });
 	 

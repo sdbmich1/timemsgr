@@ -20,18 +20,21 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :categories, :interests,  :authentications, :associates
+  resources :categories, :interests,  :authentications, :associates, :host_profiles
   
   resources :events do 
     member do
       get 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
     end
+    
+    collection do
+      get 'clock', 'getquote'
+    end
   end
    
   resources :private_events do
     member do
-      get 'add', 'clone', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
-      post 'move'
+      get 'add', 'move', 'clone', 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
     end
     
     collection do
@@ -40,14 +43,15 @@ Timemsgr::Application.routes.draw do
   end
  
   # controllers for event related content
-  resources :members, :promotions, :presenters, :event_sessions, :transactions
+  resources :members, :promotions, :presenters, :event_sessions, :transactions, :relationships
    
   resources :affiliations do
     get :autocomplete_organization_name, :on => :collection
   end  
     
   resources :subscriptions do
-    post 'add', :on => :collection
+    put 'cancel', :on => :collection
+    post 'add', :on => :member
   end
   
   resources :users 
@@ -81,4 +85,5 @@ Timemsgr::Application.routes.draw do
   #match "/get_drop_down_options", :to => "events#get_drop_down_options"
 
   root :to => 'pages#home'
+#  root :to => 'events#index'
 end

@@ -33,7 +33,7 @@ class InterestsController < ApplicationController
 	protected
 	
 	def load_data
-	  if user_signed_in?
+	  if user_signed_in? && !mobile_device?
       @selected_ids = @user.interest_ids  # check interest ids
     end
   end

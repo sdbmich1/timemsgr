@@ -1,0 +1,33 @@
+
+<%= content_for :pre_mobile_load do %>
+<script>
+  
+$(document).bind("pageinit", function() {  
+	 $("#close-btn").live('click', function() {
+    	$("#sponsor-pg").hide();
+    	$("#event-pg").show();
+	 });
+	 
+  });
+
+</script>
+<% end %>
+
+<%= content_for :content do %>
+  <div id="sponsor-pg">	
+	<%= link_to "Close", '#', :id=>"close-btn", :class=>"close-lnk nav-right" %><br />
+  	
+  	<div class="center-wrapper">
+	<h3>Event Sponsors</h3>
+	<% @sponsor_pages.each do |sp| %>
+		<div class="sponsor-msg"><%= sp.message %></div><br />
+			<% sp.sponsors.each do |sponsor| %>
+				<p class="sponsor-type"><%= sponsor.sponsor_type %></p>
+				<% for pic in sponsor.pictures %>
+        			<%= link_to image_tag(pic.photo.url, :size=>"#{get_logo_size(sponsor.logo_type)}"), sponsor.sponsorURL %><br />
+        		<% end %>  
+        	<% end %>     		
+	<% end %>
+	</div>
+  </div>
+<% end %>

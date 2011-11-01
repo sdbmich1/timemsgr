@@ -4,5 +4,8 @@ class EventType < ActiveRecord::Base
   def self.get_tsd_event_types
     find_by_sql(["SELECT code FROM `kitstsddb`.event_types"])
   end
-    
+
+  def descr_title
+    description.titleize
+  end    
 end

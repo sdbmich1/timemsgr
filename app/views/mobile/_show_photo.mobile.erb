@@ -1,7 +1,5 @@
-<div class="event-image center-wrapper">
 	<% for pic in model.pictures %>
 		<% if pic %>
-    		<%= image_tag pic.photo.url, :class => "show-pic" %>
+    		<%= image_tag pic.photo.url, :class => vtype %>
     	<% end %>		
    	<% end %>
-</div>

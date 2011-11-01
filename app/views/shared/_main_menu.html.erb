@@ -13,7 +13,7 @@
 		<% when "User" %>
 			<span class="menu-search"><%= text_field_tag 'search', nil, :placeholder => 'Enter search term...' %>
 				<%= image_tag("search1.png", :alt => "search", :size => "24x24") %>
-				<%= link_to image_tag("ev-add-event.png", :size => "24x24", :class => 'event-add'), new_event_url, :title => "Add Event" %>
+				<%= link_to image_tag("ev-add-event.png", :size => "24x24", :class => 'event-add'), new_private_event_url, :title => "Add Event" %>
 			</span>
 			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
 		<% when "Profile" %>

@@ -1,4 +1,4 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'Upcoming Events'} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => "#{get_name_or_logo}"} %>
 
 <%= content_for :content do %>
 	<%= render 'mobile/index' %>

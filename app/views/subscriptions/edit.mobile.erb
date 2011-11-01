@@ -1,8 +1,9 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'Subscriptions'} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'My Subscriptions'} %>
 
 <%= content_for :content do %>	
-	<%= form_for @user do |f| %>
+	<%= form_for @subscription do |f| %>
+		<%= render "mobile/error_messages", :target => @subscription %>  
 		<%= render :partial => 'mobile/subscription_list', :locals => { :f => f } %>
-		<p><%= f.submit "Save" %></p>
+		<p><%= f.submit "Save", "data-theme"=>"b" %></p>
 	<% end %>
 <% end %>

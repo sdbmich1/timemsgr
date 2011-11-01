@@ -1,0 +1,2 @@
+class HostProfilesController < ApplicationController
+end

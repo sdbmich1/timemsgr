@@ -1,5 +1,6 @@
 class LifeEventsController < ApplicationController
   before_filter :authenticate_user!
+  include ResetDate
 
   def show
     @event = LifeEvent.find(params[:id])
@@ -10,7 +11,7 @@ class LifeEventsController < ApplicationController
   end
 
   def create
-    @event = LifeEvent.new(params[:life_event])
+    @event = LifeEvent.new(reset_dates(params[:life_event]))
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
@@ -24,7 +25,7 @@ class LifeEventsController < ApplicationController
 
   def update
     @event = LifeEvent.find(params[:id])
-    if @event.update_attributes(params[:life_event])
+    if @event.update_attributes(reset_dates(params[:life_event]))
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
       render :action => 'edit'

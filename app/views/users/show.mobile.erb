@@ -1,6 +1,23 @@
-<%= render 'mobile/index_form' %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'My Connections'} %>
+
+<%= content_for :head do %>
+	<div data-role="navbar">
+	  	<ul>
+			<li><%= link_to "Private", user_url(:user_id=>@user, :ctype => 'Private'), "data-theme"=>"a" %> </li>
+			<li><%= link_to "Social", user_url(:user_id=>@user, :ctype => 'Social'), "data-theme"=>"a" %> </li>
+			<li><%= link_to "World", user_url(:user_id=>@user, :ctype => 'World') %> </li>	  		
+		</ul>
+	</div>
+<% end %>
 
 <%= content_for :content do %>
-	<h3 class="center-wrapper">Time Saving Metrics</h3>
-    <%= render 'shared/progress_meter' %>
+	<%= render :partial => 'mobile/user_list', :locals => {:users => @user.try(:trackers)}%>
+<% end %>
+
+<%= content_for :footer do %>
+	<div data-role="navbar">
+	  	<ul>
+			<li><%= link_to "Add", users_url(:user_id=>@user), "data-icon"=>"plus" %> </li>
+		</ul>
+	</div>
 <% end %>

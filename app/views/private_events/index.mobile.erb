@@ -1,5 +1,7 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'My Events'} %>
 
 <%= content_for :content do %>
-	<%= render 'mobile/index' %>
+	<ul data-role="listview" data-filter="true">
+		<%= render :partial => 'mobile/event_list', :collection => @events, :as => :event %>	
+	</ul>
 <% end -%>

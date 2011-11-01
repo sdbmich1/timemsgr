@@ -1,10 +1,15 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Manage Account'} %>
 
-<% content_for :content do %>	<h3 class="mtop center-wrapper"><%= "#{current_user.first_name} #{current_user.last_name}"%></h3><br />	<ul data-role="listview">		<li data-role="list-divider">View</li>
-		<li><%= link_to "My Events", private_events_url(@user) %></li>		<li><%= link_to "Upcoming Events", events_url(@user) %></li>	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
-		<li data-role="list-divider">Manage</li>
-		<li><%= link_to "Add Subscription", channels_url(@user) %> </li>
-		<li><%= link_to "Manage Subscriptions", edit_subscription_url(@user) %> </li>
-		<li><%= link_to "Add Event", add_private_event_url(@user), :id=>"dialoglink", "data-rel"=>"dialog", "data-transition"=>"pop" %> </li>
+<% content_for :content do %>	<h3 class="mtop center-wrapper"><%= "#{current_user.first_name} #{current_user.last_name}"%></h3><br />	<ul data-role="listview" data-dividertheme="a">		<li data-role="list-divider" class="center-wrapper">Add</li>
+		<li><%= link_to "Add Activity", new_private_event_url %> </li>
+		<li><%= link_to "Add Life Event", new_life_event_url %> </li>
+		<li><%= link_to "Add Subscription", categories_url %> </li>
+		<li data-role="list-divider" class="center-wrapper">Manage</li>
+		<li><%= link_to "My Activities", private_events_url %></li>		<li><%= link_to "My Affiliations", edit_affiliation_url(:id=>@user) %> </li>
+		<li><%= link_to "My Connections", user_url(@user) %> </li>
+		<li><%= link_to "My Profile", edit_user_url(@user) %> </li>
+		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
+		<li data-role="list-divider" class="center-wrapper">Account</li>
+	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
 		<li><%= link_to "Sign Out", destroy_user_session_path %></li>
 	</ul><% end -%>

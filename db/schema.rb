@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111009162017) do
+ActiveRecord::Schema.define(:version => 20111030235804) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -616,6 +616,19 @@ ActiveRecord::Schema.define(:version => 20111009162017) do
     t.datetime "updated_at"
   end
 
+  create_table "relationships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "tracker_id"
+    t.string   "rel_type"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["tracker_id"], :name => "index_relationships_on_tracker_id"
+  add_index "relationships", ["user_id", "tracker_id"], :name => "index_relationships_on_user_id_and_tracker_id", :unique => true
+  add_index "relationships", ["user_id"], :name => "index_relationships_on_user_id"
+
   create_table "reward_credits", :force => true do |t|
     t.string   "name"
     t.string   "model_name"
@@ -873,6 +886,17 @@ ActiveRecord::Schema.define(:version => 20111009162017) do
   add_index "users", ["location_id"], :name => "index_users_on_location_id"
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["username"], :name => "index_users_on_username"
+
+  create_table "wireless_providers", :force => true do |t|
+    t.string   "code"
+    t.string   "description"
+    t.string   "email"
+    t.string   "status"
+    t.string   "hide"
+    t.integer  "sortkey"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "wsevents", :primary_key => "ID", :force => true do |t|
     t.string   "eventid"

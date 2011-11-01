@@ -1,5 +1,7 @@
 class PrivateEventsController < ApplicationController
-   before_filter :authenticate_user!, :load_data
+  before_filter :authenticate_user!, :load_data
+  layout :page_layout
+  include ResetDate
 
   def index
     @events = PrivateEvent.get_events(@host_profile.subscriptionsourceID)
@@ -14,7 +16,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def create
-    @event = PrivateEvent.new(params[:private_event])
+    @event = PrivateEvent.new(reset_dates(params[:private_event]))
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
@@ -28,7 +30,7 @@ class PrivateEventsController < ApplicationController
 
   def update
     @event = PrivateEvent.find(params[:id])
-    if @event.update_attributes(params[:private_event])
+    if @event.update_attributes(reset_dates(params[:private_event]))
       redirect_to events_url, :notice  =>  "#{get_msg(@user, 'Event')}"
     else
       render :action => 'edit'
@@ -46,16 +48,20 @@ class PrivateEventsController < ApplicationController
   end
   
   def move
-    @event = PrivateEvent.move_event(params[:id],@host_profile.subscriptionsourceID )
+    @event = PrivateEvent.move_event(params[:id],params[:etype],@host_profile.subscriptionsourceID )
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
      # render :action => 'show'
-      redirect_to :back
+      redirect_to events_url
     end
   end
  
   private
+  
+  def page_layout 
+    mobile_device? ? "application" : "private_events"
+  end    
     
   def load_data
     @user = current_user

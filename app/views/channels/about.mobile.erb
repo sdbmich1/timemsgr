@@ -3,11 +3,15 @@
 <%= content_for :content do %>
   <div id="wrapper">
 	<div id="scroller">
-  		<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel, :vtype => 'show-pic' }%>
-  		<h3 class="center-wrapper"><%= @channel.channel_name %></h3>
-
+		<div class="mtop center-wrapper">
+  			<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel, :vtype => 'show-pic' }%>
+  			<h3><%= @channel.channel_name %></h3>
+		</div>
   		<div id="show-item">
-			<%= render :partial => 'mobile/show_event_location', :locals => {:event => @channel} %> 
+			<% unless @channel.cbody.blank? %>
+				<p><label><%= 'Summary:' %></label>
+				<span class="item-detail"><%= @channel.cbody.html_safe %></span></p><br />
+			<% end %>
   		</div>
     </div>
   </div>

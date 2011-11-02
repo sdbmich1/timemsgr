@@ -26,6 +26,10 @@ namespace :db do
   task :set_channels => :environment do
     build_channels
   end
+  
+  task :set_affiliations => :environment do
+    build_affiliations
+  end
 end  
  
 def build_profiles
@@ -48,6 +52,12 @@ def build_channels
      end
   end
   
+end
+
+def build_affiliations
+  Affiliation.all.each do |a|
+    AffiliationUser.create(:affiliation_id=>a.id, :user_id=>a.user_id)
+  end
 end
 
 def make_categories

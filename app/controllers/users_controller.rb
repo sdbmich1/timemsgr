@@ -27,7 +27,8 @@ class UsersController < ApplicationController
   end
   
   def index
-    redirect_to home_user_path
+    @users = User.get_associate_list(params[:uid])
+    # redirect_to home_user_path
   end
   
   private

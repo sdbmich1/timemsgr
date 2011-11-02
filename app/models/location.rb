@@ -6,5 +6,7 @@ class Location < ActiveRecord::Base
   
   has_many :events, :through => :channels
   
+  has_many :users
+  
   default_scope :order => 'sortkey ASC'
 end

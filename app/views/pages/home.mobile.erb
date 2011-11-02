@@ -14,23 +14,19 @@
 <% end -%>
 
 <%= content_for :head do %>
-
 	<% if user_signed_in? %>
    		<h1><%= "#{get_name_or_logo}" %></h1>
        	<%= link_to 'Account', home_user_path(current_user), "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
     <% end %>
-
 <% end -%>
 
 <%= content_for :content do %>
   	<div class="mtop center-wrapper">
 		<p><%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %></p><br />
   		<h3>Scheduling. At Your Service.</h3>
-  		<p>A smarter way to plan, discover and schedule events near you.</p><br />
+  		<p class="hdescr">A smarter way to plan, discover and schedule activities and events near you.</p>
   	</div>
- 	<div class="mtop">
-  		<%= render :partial => "devise/shared/signin" %>
-	</div>
+  	<%= render :partial => "devise/shared/signin" %>
 <% end -%>
 
 <%= content_for :footer do %>

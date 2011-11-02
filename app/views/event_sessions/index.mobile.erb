@@ -1,14 +1,12 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Event Schedule'} %>
 
 <% content_for :content do %>
-	<div class="mtop">
 		<ul data-role="listview" data-dividertheme="a" data-filter="true">
 			<% get_date_range(@event).each do |edate| %>
 		  		<%= render :partial => 'mobile/event_list_hdr', :locals => {:edate => edate } %> 
 				<%= render :partial => 'mobile/session_list', :collection => list_events(@event.sessions, edate), :as => :event %>	
 			<% end %>
 		</ul>	
-	</div>
 <% end %>
 
 

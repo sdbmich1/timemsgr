@@ -48,10 +48,13 @@ class User < ActiveRecord::Base
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :status => 'active'}
   
-  has_many :events, :through => :channels
+#  has_many :events, :through => :host_profiles, :source => "subscriptionsourceID"
   
+  belongs_to :location
   has_many :associates  
-  has_many :affiliations 
+  
+  has_many :affiliation_users
+  has_many :affiliations, :through => :affiliation_users
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
   has_many :host_profiles, :foreign_key => :ProfileID
@@ -66,11 +69,11 @@ class User < ActiveRecord::Base
   has_many :authentications
 
   has_many :relationships
-  has_many :family_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'family' AND status = 'accepted'"
+  has_many :private_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'accepted'"
   has_many :social_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
   has_many :trackers, :through => :relationships, :conditions => "status = 'accepted'"
   has_many :requested_trackers, :through => :relationships, :source => :tracker, :conditions => "status = 'requested'", :order => :created_at
-  has_many :requested_family_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'family' AND status = 'requested'"
+  has_many :requested_private_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'requested'"
   has_many :requested_social_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'requested'"
 
   # Overrides the devise method find_for_authentication
@@ -102,5 +105,9 @@ class User < ActiveRecord::Base
   def apply_omniauth(omniauth)  
       self.email = omniauth['user_info']['email'] #if email.blank?  
       authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
+  end
+  
+  def get_affilations
+    
   end  
 end

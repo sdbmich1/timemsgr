@@ -1,7 +1,7 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Event Details'} %>
 
 <%= content_for :content do %>
-  <div id="show-item">
+  <div id="show-item" class="mtop">
 	<%= render :partial => 'mobile/show_event', :locals => {:event => @event} %>
   </div>
 <% end %>	

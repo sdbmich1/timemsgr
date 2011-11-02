@@ -1,0 +1,5 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'My Connections'} %>
+
+<%= content_for :content do %>
+	<%= render :partial => 'mobile/relationship', :locals => {:trackers => @trackers, :theme =>'baa', :rel_type=>'All'}%>
+<% end %>

@@ -1,10 +1,10 @@
 <% unless event.try(:MemberFee).blank?  %>	
 	<label><%= 'Member:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:MemberFee) %></span><br />
+	<span class="item-detail"><%= number_to_currency(event.try(:MemberFee)) %></span><br />
 <% end %>
 <% unless event.try(:NonMemberFee).blank? %>
 	<label><%= 'General:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:NonMemberFee) %></span><br />
+	<span class="item-detail"><%= number_to_currency(event.try(:NonMemberFee)) %></span><br />
 <% end %>
 <% unless event.try(:AffiliateFee).blank? %>	<label><%= 'Affiliate:' %></label>
 	<span class="item-detail"><%= number_to_currency(event.try(:AffiliateFee)) %></span><br />

@@ -5,6 +5,6 @@ module ChannelsHelper
   end
   
   def subscribed?(slist, cid)
-    slist.detect { |x| x.channelID == cid }   
+    slist.detect { |x| x.channelID == cid && x.status == 'active' }   
   end
 end

@@ -140,7 +140,7 @@ module EventsHelper
   
   def subscribed?(ssid)
     slist =  @user.try(:subscriptions)
-    slist.detect {|u| u.channelID == ssid } if slist
+    slist.detect {|u| u.channelID == ssid && u.status == 'active' } if slist
   end
 
   def observances?

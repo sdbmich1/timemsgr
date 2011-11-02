@@ -1,29 +1,30 @@
-<% unless event.MemberFee.blank?  %>	
+<% unless event.try(:MemberFee).blank?  %>	
 	<label><%= 'Member:' %></label>
-	<span class="item-detail"><%= "$#{event.MemberFee}" %></span><br />
+	<span class="item-detail"><%= number_to_currency(event.try(:MemberFee) %></span><br />
 <% end %>
-<% unless event.NonMemberFee.blank? %>
+<% unless event.try(:NonMemberFee).blank? %>
 	<label><%= 'General:' %></label>
-	<span class="item-detail"><%= "$#{event.NonMemberFee}" %></span><br />
+	<span class="item-detail"><%= number_to_currency(event.try(:NonMemberFee) %></span><br />
 <% end %>
-<% unless event.AffiliateFee.blank? %>	<label><%= 'Affiliate:' %></label>
-	<span class="item-detail"><%= "$#{event.AffiliateFee}" %></span><br />
+<% unless event.try(:AffiliateFee).blank? %>	<label><%= 'Affiliate:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:AffiliateFee)) %></span><br />
 <% end %>
-<% unless event.Other1Fee.blank? %>	<label><%= 'Student:' %></label>
-	<span class="item-detail"><%= "$#{event.Other1Fee}" %></span><br />
+<% unless event.try(:Other1Fee).blank? %>	<label><%= 'Student:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:Other1Fee)) %></span><br />
 <% end %>
-<% unless event.Other2Fee.blank? %>	<label><%= 'Senior:' %></label>
-	<span class="item-detail"><%= "$#{event.Other2Fee}" %></span><br />
+<% unless event.try(:Other2Fee).blank? %>	<label><%= 'Senior:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:Other2Fee)) %></span><br />
 <% end %>
-<% unless event.SpouseFee.blank? %>	<label><%= 'Spouse:' %></label>
-	<span class="item-detail"><%= "$#{event.SpouseFee}" %></span><br />
+<% unless event.try(:SpouseFee).blank? %>	<label><%= 'Spouse:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:SpouseFee)) %></span><br />
 <% end %>
-<% unless event.GroupFee.blank? %>	<label><%= 'Group:' %></label>
-	<span class="item-detail"><%= "$#{event.GroupFee}" %></span><br />
+<% unless event.try(:GroupFee).blank? %>	<label><%= 'Group:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:GroupFee)) %></span><br />
 <% end %>
-<% unless event.Other3Fee.blank? %>	<label><%= 'Prepaid:' %></label>
-	<span class="item-detail"><%= "$#{event.Other3Fee}" %></span><br />
+<% unless event.try(:Other3Fee).blank? %>	<label><%= 'Prepaid:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:Other3Fee)) %></span><br />
 <% end %>
-<% unless event.AtDoorFee.blank? %>	<label><%= 'At Door:' %></label>
-	<span class="item-detail"><%= "$#{event.AtDoorFee}" %></span><br />
+<% unless event.try(:AtDoorFee).blank? %>	<label><%= 'At Door:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:AtDoorFee)) %></span><br />
 <% end %>
+

@@ -1,10 +1,8 @@
 <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'e-pic'}%>
 
-<div class="mtop">
   <ul data-role="listview" data-theme="b">
 	<li><%= link_to "About", about_major_event_url(event) %></li>
 	<li><%= link_to "Schedule", event_sessions_url(:event_id => event) %></li>
 	<li><%= link_to "Speakers", presenters_url(:event_id => event) %></li>	
  	<li><%= link_to "Register", new_transaction_url(:event_id => event) %> </li>
   </ul>
-</div>

@@ -47,14 +47,18 @@ module EventsHelper
     etype == 'es' || etype == 'se' || etype == 'sm'
   end  
   
-  def time_left?(event)
-    if event.eventenddate > Date.today 
-      return true 
+  def time_left?(e)
+    if e.eventenddate.to_date > Date.today 
+      if e.eventstartdate.to_date <= Date.today 
+        compare_time(Time.now, e.eventendtime)
+      else  
+        true
+      end
     else
-      event.eventenddate <= Date.today && event.eventendtime > Time.now ? true : false
+      e.eventenddate.to_date == Date.today && compare_time(Time.now, e.eventendtime) ? true : false
     end    
   end
-
+  
   def rsvp?(val)
     return false if val.blank? 
     val.downcase == 'yes' ? true : false
@@ -63,13 +67,23 @@ module EventsHelper
   def is_past?(ev)
     return false if ev.endGMToffset.blank?
     etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
-    ev.eventstartdate <= Date.today && compare_times(Time.now, etm) ? true : false    
+    ev.eventstartdate <= Date.today && compare_time(Time.now, etm) ? true : false    
+  end
+  
+  def compare_time(ctime, etime)
+    if ctime.hour > etime.hour
+      false
+    elsif ctime.hour == etime.hour && ctime.min > etime.min
+      false
+    else
+      true
+    end
   end
   
   def compare_times(cur_tm, end_tm)
     ['hour', 'min'].each { |method|
-        return true if cur_tm.send(method) > end_tm.send(method) }
-    false
+        return false if cur_tm.send(method) > end_tm.send(method) }
+    true
   end  
   
   def chk_start_dt(start_dt)

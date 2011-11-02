@@ -40,15 +40,6 @@ class PrivateEvent < ActiveRecord::Base
   def self.find_event(eid)
     get_event(eid).first
   end 
-
-  define_index do
-      indexes :event_title, :sortable => true
-      indexes :event_name, :sortable => true
-      indexes :eventstartdate, :sortable => true
-      indexes :eventenddate, :sortable => true
-   
-      has :id, :event_type
-  end
   
   def same_day?
     eventstartdate == eventenddate

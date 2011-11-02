@@ -1,4 +1,3 @@
-<label>Prices:</label><br /> 
 <% unless event.MemberFee.blank?  %>	
 	<label><%= 'Member:' %></label>
 	<span class="item-detail"><%= "$#{event.MemberFee}" %></span><br />
@@ -13,18 +12,18 @@
 <% unless event.Other1Fee.blank? %>	<label><%= 'Student:' %></label>
 	<span class="item-detail"><%= "$#{event.Other1Fee}" %></span><br />
 <% end %>
-<% if event.Other2Fee.blank? %>	<label><%= 'Senior:' %></label>
+<% unless event.Other2Fee.blank? %>	<label><%= 'Senior:' %></label>
 	<span class="item-detail"><%= "$#{event.Other2Fee}" %></span><br />
 <% end %>
-<% if event.SpouseFee.blank? %>	<label><%= 'Spouse:' %></label>
+<% unless event.SpouseFee.blank? %>	<label><%= 'Spouse:' %></label>
 	<span class="item-detail"><%= "$#{event.SpouseFee}" %></span><br />
 <% end %>
-<% if event.GroupFee.blank? %>	<label><%= 'Group:' %></label>
+<% unless event.GroupFee.blank? %>	<label><%= 'Group:' %></label>
 	<span class="item-detail"><%= "$#{event.GroupFee}" %></span><br />
 <% end %>
-<% if event.Other3Fee.blank? %>	<label><%= 'Prepaid:' %></label>
+<% unless event.Other3Fee.blank? %>	<label><%= 'Prepaid:' %></label>
 	<span class="item-detail"><%= "$#{event.Other3Fee}" %></span><br />
 <% end %>
-<% if event.AtDoorFee.blank? %>	<label><%= 'At Door:' %></label>
+<% unless event.AtDoorFee.blank? %>	<label><%= 'At Door:' %></label>
 	<span class="item-detail"><%= "$#{event.AtDoorFee}" %></span><br />
 <% end %>

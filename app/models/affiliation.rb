@@ -7,7 +7,8 @@ class Affiliation < ActiveRecord::Base
 
   attr_accessible :user_id, :name, :affiliation_type
   
-  belongs_to :user, :foreign_key => :user_id
+  has_many :affiliation_users
+  has_many :users, :through => :affiliation_users
   
   validates :name, :presence => true  
   validates :affiliation_type, :presence => true, :unless => Proc.new { |a| a.name.blank? }  

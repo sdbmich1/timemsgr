@@ -3,15 +3,15 @@
 
 .app-content {min-width: 95%; min-height: 420px; padding: 0;}
 
-.ui-footer {position:absolute!important; bottom:0; z-index: 999;}
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 
 .ui-page, .ui-body-c, .ui-content {
 	background: #FFFFFF!important;
 }  
 
-.ui-btn-inner.ui-li {width: 95%!important;}
-.ui-btn-inner, .ui-li {width: 95%!important;}
+.ui-btn-inner.ui-li {width: 100%!important;}
+/*.ui-btn-inner, .ui-li {width: 100%!important;} */
+.ui-br { border-bottom-style:none; }
 
 .mobile_container {  
       width: 100%;  
@@ -50,7 +50,7 @@
 .mtop { margin-top: 12px;}
 
 /* major event image settings */
-.e-pic {width: 100%; height: auto; position:relative; margin-bottom: 10px;}
+.e-pic {width: 100%; height: auto; position:relative;}
 .c-pic {width: 50%; height: 30%; position:relative; margin-bottom: 10px;}
 .show-pic {width: 40%; height:auto; }
 
@@ -86,7 +86,7 @@
 			margin-bottom: 10px; }
 	   
 .ui-li-desc {text-overflow: normal; overflow: visible; 
-			white-space: pre-wrap; font-size: 0.5em;}
+			white-space: pre-wrap; font-size: 0.75em;}
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
@@ -94,7 +94,8 @@
 
 .sponsor-type { font-size: 0.75em;  }
 .sponsor-msg { color: blue; font-weight: bold; }
-.close-lnk { font-size: 0.65em; }
+.close-lnk { font-size: 0.75em; }
+.hdescr { font-size: 0.875em; }
 
 /* add event styling */
 #start-time hour { color: blue}
@@ -152,8 +153,8 @@ a:hover {
   text-decoration: none;
   }
 
-
-footer { height: 1.5em; background-color: #FFFFFF;}
+.ui-bar-a { border: none; text-shadow: none; }
+footer { height: 1.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: normal; font-size: 0.75em;}
 #show-item { position: relative; width: 100%; }
 #show-item label { font-weight: bold; font-size: 0.75em; }
 .item-detail { position: absolute; left: 5.25em; font-size: 0.75em; margin-top: 0.25em; }

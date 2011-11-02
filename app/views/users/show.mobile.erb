@@ -3,9 +3,10 @@
 <%= content_for :head do %>
 	<div data-role="navbar">
 	  	<ul>
-			<li><%= link_to "Private", user_url(:user_id=>@user, :ctype => 'Private'), "data-theme"=>"a" %> </li>
-			<li><%= link_to "Social", user_url(:user_id=>@user, :ctype => 'Social'), "data-theme"=>"a" %> </li>
-			<li><%= link_to "World", user_url(:user_id=>@user, :ctype => 'World') %> </li>	  		
+			<li><%= link_to "All", relationships_url(:user_id=>@user, :ctype => 'Private'), "data-theme"=>"a" %> </li>
+			<li><%= link_to "Private", private_relationships_url(:user_id=>@user, :ctype => 'Private'), "data-theme"=>"a" %> </li>
+			<li><%= link_to "Social", social_relationships_url(:user_id=>@user, :ctype => 'Social'), "data-theme"=>"a" %> </li>
+			<li><%= link_to "World", world_relationships_url(:user_id=>@user, :ctype => 'World') %> </li>	  		
 		</ul>
 	</div>
 <% end %>

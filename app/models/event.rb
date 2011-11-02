@@ -33,7 +33,7 @@ class Event < KitsTsdModel
     where_sid = where_subscriber_id + ' AND ' + where_dte   
     find_by_sql(["#{getSQLe} FROM `kits_development`.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM `kits_development`.eventsobs e WHERE #{where_cid} )
-         UNION #{getSQLe} FROM `kitsknndb`.events e WHERE #{where_dte} )
+         UNION #{getSQLefee} FROM `kitsknndb`.events e WHERE #{where_dte} )
          UNION #{getSQLe} FROM `kitscentraldb`.events e WHERE #{where_dte} )
          UNION #{getSQLe} FROM `kitsknndb`.events #{where_sid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, edt, edt, cid, edt, edt, cid, edt, edt]) 
@@ -43,7 +43,7 @@ class Event < KitsTsdModel
     where_id = "where (ID = ? AND event_type = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id} 
-         UNION #{getSQL} FROM `kitsknndb`.events #{where_id} 
+         UNION #{getSQLfee} FROM `kitsknndb`.events #{where_id} 
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype])        
   end
   
@@ -64,15 +64,40 @@ class Event < KitsTsdModel
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
-        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID"     
+        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, 
+        0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
+        0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 
+        0 as Other5Fee, 0 as Other6Fee "     
+  end
+  
+  def self.getSQLfee
+      "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
+        eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
+        mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
+        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID,
+        MemberFee, NonMemberFee, GroupFee, SpouseFee, AffiliateFee, AtDoorFee,
+        Other1Fee, Other2Fee, Other3Fee, Other4Fee, Other5Fee, Other6Fee"     
   end
  
   def self.getSQLe
       "(SELECT e.ID, e.event_name, e.event_type, e.eventstartdate, e.eventenddate, e.eventstarttime, 
         e.eventendtime, e.event_title, e.cbody, e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
-        e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID"     
+        e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
+        0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
+        0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 
+        0 as Other5Fee, 0 as Other6Fee "     
   end
+   
+  def self.getSQLefee
+      "(SELECT e.ID, e.event_name, e.event_type, e.eventstartdate, e.eventenddate, e.eventstarttime, 
+        e.eventendtime, e.event_title, e.cbody, e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
+        e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
+        e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
+        e.MemberFee, e.NonMemberFee, e.GroupFee, e.SpouseFee, e.AffiliateFee, e.AtDoorFee,
+        e.Other1Fee, e.Other2Fee, e.Other3Fee, e.Other4Fee, e.Other5Fee, e.Other6Fee"     
+  end
+ 
    
   def self.where_dt
       "(status = 'active' AND hide = 'No') 

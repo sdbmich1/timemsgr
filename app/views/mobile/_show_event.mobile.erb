@@ -23,13 +23,12 @@
 <% end %>
 
 <%= content_for :footer do %>
-
-   <% if is_session?(event.event_type) %>
+   <% if is_session?(event.event_type) && !event.try(:presenters).blank? %>
 		<div class="mtop center-wrapper"><label>Presenter(s)</label></div> 	
 		<%= render 'mobile/presenter_list' %>
   <% end %>	
 
-  <div data-role="navbar" data-grid="d">
+  <div data-role="navbar">
 	  <ul>
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
 			<li><%= link_to "Add", move_private_event_url(event, :etype=>event.event_type),  :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move", :remote => true %> </li>

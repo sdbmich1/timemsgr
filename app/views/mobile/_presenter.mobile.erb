@@ -1,8 +1,6 @@
   <div class="mtop">
     <div class="center-wrapper"> 
-  		<% for pic in @presenter.pictures %>
-    		<%= image_tag pic.photo.url, :class=>'ppic' %>
-  		<% end %>
+		<%= render :partial => 'mobile/show_photo', :locals => {:model => @presenter, :vtype => 'ppic' }%>
 		<h3><%= @presenter.name %></h3>
     </div>
   </div>

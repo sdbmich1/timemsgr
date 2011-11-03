@@ -2,7 +2,7 @@
 	<div data-role="navbar">
 	  <ul>
 	  	<% unless subscribed?(channel.channelID)%>
-			<li><%= link_to "Join", add_subscription_url(:user_id=>@user, :channel_id => @channel), "data-icon"=>"custom", :id => "add", "data-method" => "post", :remote => true %> </li>
+			<li><%= link_to "Join", subscriptions_url(:user_id=>@user, :channel_id => @channel), "data-icon"=>"custom", :id => "add", "data-method" => "post", :remote => true %> </li>
 	  	<% end %>
 	  </ul>
 	</div>

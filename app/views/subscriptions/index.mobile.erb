@@ -4,6 +4,6 @@
 	<%= form_tag cancel_subscriptions_path(:id=>@user), :method => :put do %>
 
 		<%= render :partial => 'mobile/subscription_list' %>
-		<p><%= submit_tag "Cancel Selected", "data-theme"=>"b" %></p>
+		<p><%= submit_tag "Unsubscribe", "data-theme"=>"b" %></p>
 	<% end %>
 <% end %>

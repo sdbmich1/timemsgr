@@ -1,4 +1,5 @@
 class ChannelsController < ApplicationController
+  before_filter :authenticate_user!
   respond_to :html, :xml, :js, :mobile
   
   def index

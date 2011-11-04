@@ -1,5 +1,19 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Channel Details'} %>
 
+<%= content_for :head do %>
+<script>
+  $(function() {  
+        var myScroll;
+        function loaded() {
+            myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+    }
+
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        document.addEventListener('DOMContentLoaded', loaded, false);
+  });     
+</script>
+<% end %>
+
 <%= content_for :content do %>
   <div id="wrapper">
 	<div id="scroller">

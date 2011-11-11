@@ -1,10 +1,11 @@
 class EventsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user!
   before_filter :load_data
   respond_to :html, :xml, :js, :mobile
 	
 	def show
  		@event = Event.find_event(params[:id], params[:etype])
+		@presenters = @event.try(:presenters)
  		@sponsor_pages = @event.try(:sponsor_pages)
 	end
 	

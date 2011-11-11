@@ -1,0 +1,6 @@
+<script>
+  $("div[data-role='page']").live("pageshow", function() {
+    var scroller = $(this).find("div.scrollable"); // (or scroller = $(this)
+    scroller.touchScroll();
+  });
+</script>

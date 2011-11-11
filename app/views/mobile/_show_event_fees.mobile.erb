@@ -1,3 +1,6 @@
+<% if any_prices?(event)%>
+	<br /><label><%= 'Prices:' %></label><br />
+<% end %>	
 <% unless event.try(:MemberFee).blank?  %>	
 	<label><%= 'Member:' %></label>
 	<span class="item-detail"><%= number_to_currency(event.try(:MemberFee)) %></span><br />
@@ -24,7 +27,10 @@
 <% unless event.try(:Other3Fee).blank? %>	<label><%= 'Prepaid:' %></label>
 	<span class="item-detail"><%= number_to_currency(event.try(:Other3Fee)) %></span><br />
 <% end %>
-<% unless event.try(:AtDoorFee).blank? %>	<label><%= 'At Door:' %></label>
+<% unless event.try(:Other4Fee).blank? %>
+	<label><%= 'Disabled:' %></label>
+	<span class="item-detail"><%= number_to_currency(event.try(:Other4Fee)) %></span><br />
+<% end %><% unless event.try(:AtDoorFee).blank? %>	<label><%= 'At Door:' %></label>
 	<span class="item-detail"><%= number_to_currency(event.try(:AtDoorFee)) %></span><br />
 <% end %>
 

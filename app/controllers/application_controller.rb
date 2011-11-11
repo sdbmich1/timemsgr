@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
   include Rewards 
   include Schedule
   helper_method :mobile_device?
-
-   
+  
   def authenticate_user!
     session[:return_to] = request.fullpath
     super
@@ -16,6 +15,10 @@ class ApplicationController < ActionController::Base
   end
   
   protected
+  
+  def rescue_with_handler(exception)
+    redirect_to '/500.html'
+  end       
   
   def method_missing(id, *args)
     redirect_to '/404.html'

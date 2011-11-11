@@ -6,7 +6,7 @@ class HostProfile < KitsTsdModel
         :hide, :sortkey, :channelID, :subscriptionsourceID, :subscriptionsourceURL,
         :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory, 
         :Address1, :Address2, :City, :State, :PostalCode, :Phone_Home, :Phone_Work,
-        :Phone_cell, :wirelessservice, :Country
+        :Phone_cell, :wirelessservice, :Country, :promoCode
         
   text_regex = /^[-\w\,. _\/&@]+$/i
         

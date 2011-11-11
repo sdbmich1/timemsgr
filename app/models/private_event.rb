@@ -12,8 +12,8 @@ class PrivateEvent < ActiveRecord::Base
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
-				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
-	
+				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime
+				        
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
   validates :event_type, :presence => true
@@ -23,6 +23,17 @@ class PrivateEvent < ActiveRecord::Base
   validates :eventendtime, :presence => true, :allow_blank => false
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
 #  validates :bbody, :length => { :maximum => 255 }  
+
+#  has_many :rsvps, :dependent => :destroy
+#  accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
+
+  has_many :session_relationships, :dependent => :destroy, :foreign_key => :event_id
+  has_many :sessions, :through => :session_relationships, :dependent => :destroy
+
+  has_many :pictures, :as => :imageable, :dependent => :destroy
+  has_many :event_presenters, :foreign_key => :event_id
+  has_many :presenters, :through => :event_presenters
+  has_many :sponsor_pages, :foreign_key => :event_id
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 	
@@ -50,6 +61,15 @@ class PrivateEvent < ActiveRecord::Base
     selected_event.contentsourceID = ssid
     selected_event.ID = nil
     new_event = PrivateEvent.new(selected_event.attributes)
+    
+    selected_event.pictures.each do |p|
+      new_event.pictures.build(:photo => p.photo)
+    end
+   
+    # reset event type
+    [['ue','other'],['conf','other'],['conc','other'],['fest','other'],['tmnt','other'],['prf','other'],['mtg','meeting'], ['te','match'], ['es','session']].each do |i|
+      new_event.event_type = i[1] if selected_event.event_type == i[0]
+    end
     new_event
   end
         
@@ -61,6 +81,10 @@ class PrivateEvent < ActiveRecord::Base
      new_event.eventstartdate = new_event.eventenddate = Date.today
      new_event
    end
+   
+   def self.find_event(cid)
+     get_event(cid).try(:first)
+   end 
 
    def reset_attr
      self.eventstartdate=self.eventenddate = nil
@@ -82,7 +106,7 @@ class PrivateEvent < ActiveRecord::Base
         self.cformat = "html"
         self.status = "active" 
         self.CreateDateTime = Time.now
-        self.eventid = self.event_type[0..1] + Time.now.to_i.to_s  
+        self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
      end
    end
 
@@ -91,14 +115,16 @@ class PrivateEvent < ActiveRecord::Base
      where_cid = where_dt + " and (contentsourceID = ?)"    
      find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid]) 
+         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, cid]) 
    end
    
    def self.get_events(cid)
      where_cid = " WHERE (contentsourceID = ?)"    
      find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", cid, cid]) 
+         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid]) 
    end
 
    
@@ -123,7 +149,8 @@ class PrivateEvent < ActiveRecord::Base
   def self.get_event(eid)
     where_id = "where (ID = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}", eid, eid])        
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}       
+         UNION #{getSQL} FROM `kits_development`.events #{where_id}", eid, eid, eid])        
   end
        
 end

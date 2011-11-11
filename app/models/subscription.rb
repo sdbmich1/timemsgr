@@ -1,5 +1,5 @@
 class Subscription < KitsTsdModel
-	belongs_to :user
+	belongs_to :user	   	
 	belongs_to :channel, :foreign_key => :channelID, :primary_key => :channelID
 	
 	before_create :set_flds
@@ -7,7 +7,7 @@ class Subscription < KitsTsdModel
 	attr_accessible :status, :user_id, :channelID, :contentsourceID, :hide, :channel_id
 	
   validates :user_id, :presence => true
-  validates :channelID, :presence => true, :uniqueness => { :scope => :user_id }  
+  validates :channelID, :presence => true #, :uniqueness => { :scope => :user_id }  
   validates :contentsourceID, :presence => true
   
   scope :active, where(:status.downcase => 'active')

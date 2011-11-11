@@ -42,6 +42,8 @@ Timemsgr::Application.routes.draw do
     end
   end
  
+  resources :scheduled_events 
+    
   # controllers for event related content
   resources :members, :promotions, :presenters, :event_sessions, :transactions
   
@@ -58,8 +60,9 @@ Timemsgr::Application.routes.draw do
     
   resources :subscriptions do
     put 'cancel', :on => :collection
-    post 'add', :on => :member
+    get 'add','unsubscribe', :on => :member
   end
+  
   
   resources :users 
   
@@ -87,7 +90,8 @@ Timemsgr::Application.routes.draw do
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"
   match '/gcal_import', :to => 'events#gcal_import', :as => "gcal_import"
-  
+  match '/system/photos/:id/:style/:basename.:extension', :to => 'pictures#asset'
+
   # add route for dynamically changing event types
   #match "/get_drop_down_options", :to => "events#get_drop_down_options"
 

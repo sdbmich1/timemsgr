@@ -1,12 +1,15 @@
+<%= render "mobile/infield_form_labels" %>
 
+<div id="mform">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-    <p>Username or email<br />
+	<p><label for="user_login">Email or Username</label>
     <%= f.text_field :login %></p>
 
-    <p>Password<br />
+	<p><label for="user_password">Password</label>
     <%= f.password_field :password %></p>
     
     <p><%= f.submit "Sign In", "data-theme"=>"b" %></p>
   <% end %>
-
   <%= render :partial => "devise/shared/links" %>
+ </div>
+ 

@@ -1,0 +1,9 @@
+<li>	
+	<%= link_to channel_url(channel) do %>
+		  <%= render :partial => 'mobile/show_photo', :locals => {:model => channel, :vtype => 'ppic' }%>
+   		  <div class="pstr">
+		  	<h6><%= channel.channel_name %></h6>
+		  </div>
+	 	  <div class="ui-li-desc sdescr"><%= truncate(channel.bbody, :length=>65, :omission=>'...') %></div>
+	<% end %>
+</li>

@@ -13,26 +13,23 @@ module EventsHelper
   end
   
   def major_event?(etype)
-    (%w(conf conv fest conc trmt fr).detect { |x| x == etype})
+    (%w(cnf cnv fest crs sem prf trmt fr).detect { |x| x == etype})
   end
-  
+    
   def life_event?(etype)
-    etlist = LifeEventType.all
-    (etlist.detect {|x| x.Code == etype })
+    etlist = LifeEventType.all.detect {|x| x.Code == etype }
   end
 
   def private_event?(etype)
-    etlist = PrivateEventType.all
-    (etlist.detect {|x| x.code == etype })
+    etlist = PrivateEventType.all.detect {|x| x.code == etype }
   end
   
   def tsd_event?(etype)
-    etlist = EventType.get_tsd_event_types
-    (etlist.detect {|x| x.code == etype })
+    etlist = EventType.get_tsd_event_types.detect {|x| x.code == etype }
   end
 
   def current?(sdt)
-    sdt >= DateTime.now ? true : false 
+    sdt >= DateTime.now 
   end
   
   def holiday?(etype)
@@ -40,28 +37,23 @@ module EventsHelper
   end
   
   def observance?(etype)
-     life_observance?(etype) || etype == 'm' || etype == 'h'
+    life_observance?(etype) || etype == 'm' || etype == 'h'
   end
       
   def is_session?(etype)
-    etype == 'es' || etype == 'se' || etype == 'sm'
+    (%w(es se sm session).detect { |x| x == etype }) 
   end  
   
   def time_left?(e)
     if e.eventenddate.to_date > Date.today 
-      if e.eventstartdate.to_date <= Date.today 
-        compare_time(Time.now, e.eventendtime)
-      else  
-        true
-      end
+      e.eventstartdate.to_date <= Date.today ? compare_time(Time.now, e.eventendtime) : true
     else
       e.eventenddate.to_date == Date.today && compare_time(Time.now, e.eventendtime) ? true : false
     end    
   end
   
   def rsvp?(val)
-    return false if val.blank? 
-    val.downcase == 'yes' ? true : false
+    val.blank? ? false : val.downcase == 'yes' 
   end  
 
   def is_past?(ev)
@@ -73,21 +65,27 @@ module EventsHelper
   def compare_time(ctime, etime)
     if ctime.hour > etime.hour
       false
-    elsif ctime.hour == etime.hour && ctime.min > etime.min
-      false
     else
-      true
+      ctime.hour == etime.hour && ctime.min > etime.min ? false : true
     end
+  end
+  
+  def any_prices?(event)
+    %w(AffiliateFee GroupFee MemberFee NonMemberFee AtDoorFee SpouseFee Other1Fee
+       Other2Fee Other3Fee Other4Fee Other5Fee Other6Fee).each {
+         |method| return true unless event.send(method).blank?
+       }
+    false
   end
   
   def compare_times(cur_tm, end_tm)
     ['hour', 'min'].each { |method|
-        return false if cur_tm.send(method) > end_tm.send(method) }
+      return false if cur_tm.send(method) > end_tm.send(method) }
     true
   end  
   
   def chk_start_dt(start_dt)
-    start_dt < Date.today ? false : true
+    start_dt >= Date.today
   end
   
   def chk_event_type(etype, egrp)
@@ -97,7 +95,7 @@ module EventsHelper
     else false
     end
   end  
-  
+   
   # used to build each day's schedule of events
   def list_events(elist, start_date)
     elist.select {|event| event.eventstartdate.to_date == start_date && time_left?(event)}   
@@ -135,7 +133,7 @@ module EventsHelper
   end
   
   def user_events?
-    get_user_events.count > 0 ? true : false
+    get_user_events.count > 0
   end
   
   def subscribed?(ssid)
@@ -144,7 +142,7 @@ module EventsHelper
   end
 
   def observances?
-    get_observances.count > 0 ? true : false
+    get_observances.count > 0
   end
   
   def get_user_events
@@ -157,7 +155,9 @@ module EventsHelper
   end
   
   def get_subscriptions
-    @events.select {|e| subscribed?(e.subscriptionsourceID) && time_left?(e) && !is_session?(e.event_type) }
+    @user_events = get_user_events
+    slist = @events.reject {|e| !subscribed?(e.subscriptionsourceID) || chk_user_events(@user_events, e) || !time_left?(e) || is_session?(e.event_type) }
+    slist.uniq if slist
   end
            
   def get_observances

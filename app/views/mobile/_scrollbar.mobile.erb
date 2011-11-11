@@ -1,17 +1,30 @@
-<%= stylesheet_link_tag "scrollbar", "iscroll", :cache => true %>  
 
 <script>
-  $(function() {  
+/*  $(document).bind("pageinit", function(){
 		var myScroll;
 		function loaded() {
 			myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
+			alert('hello');
 	}
 
 		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 		document.addEventListener('DOMContentLoaded', loaded, false);
-  });	
-  
-  $(document).bind('scrollstart', function() {
-  	alert("Scroll baby scroll");
-  });
+  });	 
+*/  
+var myScroll = [];
+$(document).delegate('[data-role="page"]', 'pageshow', function () {
+             myScroll[this.id] = new iScroll('wrapper', {
+                hScroll        : false,
+                vScroll        : true,
+                hScrollbar     : false,
+                vScrollbar     : true,
+                fixedScrollbar : true,
+                fadeScrollbar  : false,
+                hideScrollbar  : false,
+                bounce         : true,
+                momentum       : true,
+                lockDirection  : true
+            });
+ 
+});   
 </script>

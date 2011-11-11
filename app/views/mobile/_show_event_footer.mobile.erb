@@ -1,0 +1,38 @@
+  <% if !event.try(:presenters).blank? %>
+		<div class="ptop center-wrapper"><label>Presenter(s)</label></div> 	
+		<%= render 'mobile/presenter_list' %>
+  <% end %>	
+
+  <div data-role="navbar">
+	  <ul>
+		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
+			<li><%= link_to "Add", new_scheduled_event_url(:id=>event, :etype=>event.event_type),  :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move", :remote => true %> </li>
+			<li><%= link_to "Like", like_event_url(event), "data-icon"=>"custom", :id => "like", :remote => true %> </li>
+		<% elsif private_event?(event.event_type) %>
+		
+			<% if event.eventenddate >= Date.today %>
+				<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
+			<% end %>
+			
+			<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
+		<% elsif life_event?(event.event_type) %>
+		
+			<% if event.eventenddate >= Date.today %>
+				<li><%= link_to "Edit", edit_life_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
+			<% end %>
+			
+			<li><%= link_to "Delete", life_event_url(event), :method => 'delete', :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
+		<% end %>
+		
+		<li><%= link_to "Notify", notify_event_url(event), "data-icon"=>"custom", :id => "notify", :remote => true %> </li>
+		<li><%= link_to "Share", share_event_url(event), "data-icon"=>"custom", :id => "share", :remote => true %> </li>
+
+		<% if rsvp?(event.rsvp) %>
+			<% if private_event?(event.event_type) %>			
+				<li><%= link_to "RSVP", rsvp_url(:id=>event.eventid, :eid=>event, :etype=>event.event_type), "data-icon"=>"custom", :id => "rsvp" %> </li>
+			<% else %>
+				<li><%= link_to "RSVP", new_rsvp_url(:eid=>event, :etype=>event.event_type), "data-icon"=>"custom", :id => "rsvp" %> </li>			
+			<% end %>
+	  	<% end %>
+	  </ul>
+	</div>

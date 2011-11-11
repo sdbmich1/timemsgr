@@ -49,6 +49,7 @@ class User < ActiveRecord::Base
   				:conditions => { :status => 'active'}
   
 #  has_many :events, :through => :host_profiles, :source => "subscriptionsourceID"
+  has_many :transactions
   
   belongs_to :location
   has_many :associates  
@@ -59,10 +60,7 @@ class User < ActiveRecord::Base
  
   has_many :host_profiles, :foreign_key => :ProfileID
   accepts_nested_attributes_for :host_profiles, :reject_if => :all_blank 
-  
-  has_many :pictures, :as => :imageable, :dependent => :destroy
-  accepts_nested_attributes_for :pictures, :allow_destroy => true
-    
+      
   has_many :settings
   has_many :session_prefs, :through => :settings 
   
@@ -105,6 +103,11 @@ class User < ActiveRecord::Base
   def apply_omniauth(omniauth)  
       self.email = omniauth['user_info']['email'] #if email.blank?  
       authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
+  end
+  
+  def with_host_profile
+    self.host_profiles.build if self.host_profiles.empty?
+    self
   end
   
   def get_affilations

@@ -1,0 +1,11 @@
+<% if tsd_event?(event.event_type) %>
+	<%= render :partial => 'mobile/show_event_fees', :locals => {:event => event} %> 
+<% end %>
+<% unless event.try(:bbody).blank? %>
+	<p><label><%= 'Summary:' %></label>
+	<span class="item-detail"><%= event.bbody.html_safe %></span></p><p><br /></p>
+<% end %>
+<% unless event.cbody.blank? %>
+	<p><label><%= 'Details:' %></label>
+	<span class="item-detail"><%= event.cbody.html_safe %></span></p><br />
+<% end %>

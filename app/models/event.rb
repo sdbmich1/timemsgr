@@ -12,7 +12,11 @@ class Event < KitsTsdModel
   has_many :event_sites, :dependent => :destroy
   has_many :event_tracks, :dependent => :destroy
   has_many :pictures, :as => :imageable, :dependent => :destroy
-  has_many :sponsor_pages, :dependent => :destroy, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
+  has_many :rsvps, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :EventID
+  accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
+
+  has_many :sponsor_pages, :dependent => :destroy
+  #, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
@@ -35,16 +39,18 @@ class Event < KitsTsdModel
          UNION #{getSQLe} FROM `kits_development`.eventsobs e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitsknndb`.events e WHERE #{where_dte} )
          UNION #{getSQLe} FROM `kitscentraldb`.events e WHERE #{where_dte} )
-         UNION #{getSQLe} FROM `kitsknndb`.events #{where_sid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, edt, edt, cid, edt, edt, cid, edt, edt]) 
+         UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
+         UNION #{getSQLe} FROM `kits_development`.events e WHERE #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, edt, edt, cid, edt, edt, edt, edt, cid]) 
   end
   
   def self.get_event(eid, etype)
     where_id = "where (ID = ? AND event_type = ?))"
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id} 
+         UNION #{getSQL} FROM `kits_development`.events #{where_id} 
          UNION #{getSQLfee} FROM `kitsknndb`.events #{where_id} 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype])        
+         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype, eid, etype])        
   end
   
   def self.find_event(eid, etype)
@@ -67,7 +73,7 @@ class Event < KitsTsdModel
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, 
         0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
         0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 
-        0 as Other5Fee, 0 as Other6Fee "     
+        0 as Other5Fee, 0 as Other6Fee, contentsourceURL, subscriptionsourceURL "     
   end
   
   def self.getSQLfee
@@ -76,7 +82,7 @@ class Event < KitsTsdModel
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID,
         MemberFee, NonMemberFee, GroupFee, SpouseFee, AffiliateFee, AtDoorFee,
-        Other1Fee, Other2Fee, Other3Fee, Other4Fee, Other5Fee, Other6Fee"     
+        Other1Fee, Other2Fee, Other3Fee, Other4Fee, Other5Fee, Other6Fee, contentsourceURL, subscriptionsourceURL"     
   end
  
   def self.getSQLe
@@ -86,7 +92,7 @@ class Event < KitsTsdModel
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
         0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
         0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 
-        0 as Other5Fee, 0 as Other6Fee "     
+        0 as Other5Fee, 0 as Other6Fee, e.contentsourceURL, e.subscriptionsourceURL "     
   end
    
   def self.getSQLefee
@@ -95,7 +101,7 @@ class Event < KitsTsdModel
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
         e.MemberFee, e.NonMemberFee, e.GroupFee, e.SpouseFee, e.AffiliateFee, e.AtDoorFee,
-        e.Other1Fee, e.Other2Fee, e.Other3Fee, e.Other4Fee, e.Other5Fee, e.Other6Fee"     
+        e.Other1Fee, e.Other2Fee, e.Other3Fee, e.Other4Fee, e.Other5Fee, e.Other6Fee, e.contentsourceURL, e.subscriptionsourceURL"     
   end
  
    

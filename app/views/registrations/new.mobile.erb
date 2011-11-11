@@ -1,5 +1,6 @@
 <% content_for :pre_mobile_load do %>
 	<%= render 'mobile/pre_load' %>
+	<%= render "mobile/infield_form_labels" %>
 <% end %>
 
 <% content_for :head do %>
@@ -9,17 +10,23 @@
 <% content_for :content do %>
   	<div class="center-wrapper">
 		<p><%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %></p>
+		<p><h3>Join. Keep Informed.</h3></p>
   	</div> 
-  	
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  	<div id="mform">	
+    <%= form_for(resource, resource.with_host_profile, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
  	<%= devise_error_messages! %>
- 		<p>First Name <br /><%= f.text_field :first_name %></p> 
- 		<p>Last Name <br /><%= f.text_field :last_name %></p>
-		<p>Username <br /><%= f.text_field :username %></p>
-    	<p>Email <br /> <%= f.text_field :email %></p>
-    	<p>Password <br /><%= f.password_field :password %></p>
- 		<p>Nearest City<br /><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => 'Select' %></p>
-		<p>Gender<br /><%= f.select :gender, options_for_select( ['Male', 'Female'] ), :prompt => 'Select' %></p>
+ 		<p><label for="user_first_name">First Name</label>
+ 		<%= f.text_field :first_name %></p> 
+ 		<p><label for="user_last_name">Last Name</label>
+ 		<%= f.text_field :last_name %></p>
+ 		<p><label for="user_username">Username</label>
+		<%= f.text_field :username %></p>
+  		<p><label for="user_email">Email</label>
+		 <%= f.text_field :email %></p>
+  		<p><label for="user_password">Password</label>
+		<%= f.password_field :password %></p>
+ 		<p><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => 'Select Nearest City' %></p>
+		<p><%= f.select :gender, options_for_select( ['Male', 'Female'] ), :prompt => 'Select Gender' %></p>
    		<p>Birth Date<br />
     		<%= f.date_select :birth_date, :as => :date, :start_year => Date.today.year - 13,
                                 :end_year => Date.today.year - 90, 
@@ -27,7 +34,11 @@
                                 :prompt => true,
                                 :hint => "This helps find content for you."  %></p>
 
+		<%= f.fields_for :host_profiles do |form| %>
+            <%= render :partial => 'mobile/promo_code', :locals => { :f => form } %>
+        <% end %>
     	<p><%= f.submit "Sign Up", "data-theme"=>"b" %></p>
+    	</div>
   <% end %>
 
   <%= render :partial => "devise/shared/links" %>

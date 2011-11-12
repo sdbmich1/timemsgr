@@ -1,19 +1,6 @@
-<script>
-  $(function() {  
-        var myScroll;
-        function loaded() {
-            myScroll = new iScroll('wrapper', { scrollbarClass: 'myScrollbar' });
-    }
-
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        document.addEventListener('DOMContentLoaded', loaded, false);
-  });   
-  
-</script>
-
 <ul data-role="listview" data-filter="true">
   <% @channels.each do |channel| %>
-		<li><%= link_to channel.channel_name, channel_url(channel) %></li>	
+  	<%= render :partial => 'mobile/channel', :locals => {:channel => channel } %>
   <% end %>
 </ul>
 	

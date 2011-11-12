@@ -1,15 +1,20 @@
 <% content_for :head do %>
-	<div data-role="header">
-        <%= link_to 'Sign In', new_user_session_path, "class" => "ui-btn-right" %>
-  	</div>
+	<%= render "mobile/infield_form_labels" %>
 <% end -%>
 
 <% content_for :content do -%>
 <div data-role="content">
+  <div class="center-wrapper">
+	<p><%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %></p><br />
+  </div> 
+
   <center><strong>Forgot your password?</strong></center>
 
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
-  		<p><span>Email </span><%= f.text_field :email  %></p>
+		<div id="mform">
+			<p><label for="user_email">Email</label>
+			<%= f.text_field :email  %></p>
+		</div>
   		<p><%= f.submit "Send", "data-theme"=>"b" %></p>
   <% end %>
   <%= render :partial => "devise/shared/links" %>

@@ -23,20 +23,10 @@ $(function (){
     }	
 }); 
 
-$(document).ready(function (){ 
+$(function (){ 
 
   // add date picker code and synch start & end dates
   var dateFormat = "mm/dd/yy";
-
-	$('#start-time').timepicker({
-		ampm: true,
-		stepMinute: 15
-	});
-	
-	$('#end-time').timepicker({
-		ampm: true,
-		stepMinute: 15
-	});  
 	
 	$('#start-date').datepicker({ 
  	  minDate:'-0d',
@@ -85,7 +75,8 @@ function getSelectedValue(id) {
 }
 
 // Used to check password strength
+/*
 $(function(){
 	$('.password').pstrength();
 });
-
+*/

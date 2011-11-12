@@ -1,0 +1,27 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'RSVP Details'} %>
+
+<%= content_for :content do %>
+  <div id="show-item">
+  	  <%= render :partial => 'mobile/show_event_details', :locals => {:event => @event} %>
+  	  <%= render :partial => 'mobile/show_event_location', :locals => {:event => @event} %>
+
+	  <label><%= 'Name:' %></label>
+	  <span class="item-detail"><%= @rsvp.fullname %></span><br />
+	  <label><%= 'Status:' %></label>
+	  <span class="item-detail"><%= @rsvp.status %></span><br />
+	  
+	  <% unless @rsvp.status == "Not Attending" %>
+	  	<label><%= 'Guests:' %></label>
+	  	<span class="item-detail"><%= @rsvp.guests %></span><br />
+		<% (1..5).each do |i| %>		
+			<% unless @rsvp.send("#{'guest' + i.to_s + 'name'}").blank? %> 
+			 	<span class="item-detail"><%= @rsvp.send("#{'guest' + i.to_s + 'name'}") %></span><br /> 
+			<% end %> 
+		<% end %>
+	  <% end %>
+ 	  <label><%= 'Comment:' %></label>
+	  <span class="item-detail"><%= @rsvp.comment %></span><br />
+ </div>
+<% end %>
+
+

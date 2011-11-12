@@ -1,6 +1,6 @@
-	<label>Place </label> <%= f.text_field :mapplacename, :size => 60 %>
-	<label>Street </label> <%= f.text_field :mapstreet, :size => 60 %>
-	<label>City </label> <%= f.text_field :mapcity, :size => 25 %>
-	<label>State </label> <%= f.collection_select :mapstate, StateCode.all, :StateAbbr, :State, :prompt => 'Select' %>
-	<label>Zip </label> <%= f.text_field :mapzip, :size => 10 %>
-	<label>Country </label> <%= f.country_select :mapcountry, ["United States"] %>
+<p><label for="private_event_mapplacename">Place </label><%= f.text_field :mapplacename, :size => 60 %></p>
+<p><label for="private_event_mapstreet">Street </label> <%= f.text_field :mapstreet, :size => 60 %></p>
+<p><label for="private_event_mapcity">City </label> <%= f.text_field :mapcity, :size => 25 %></p>
+<p><label for="private_event_mapstate">State </label> <%= f.collection_select :mapstate, StateCode.all, :StateAbbr, :State, :prompt => 'Select State' %></p>
+<p><label for="private_event_mapzip">Zip </label> <%= f.text_field :mapzip, :size => 10 %></p>
+<p><label for="private_event_mapcountry">Country </label> <%= f.country_select :mapcountry, ["United States"] %></p>

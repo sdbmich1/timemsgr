@@ -1,0 +1,19 @@
+<% title "Rsvps" %>
+
+<table>
+  <tr>
+    <th>Eventid</th>
+    <th>Subscriptionsourceid</th>
+  </tr>
+  <% for rsvp in @rsvps %>
+    <tr>
+      <td><%= rsvp.eventid %></td>
+      <td><%= rsvp.subscriptionsourceID %></td>
+      <td><%= link_to "Show", rsvp %></td>
+      <td><%= link_to "Edit", edit_rsvp_path(rsvp) %></td>
+      <td><%= link_to "Destroy", rsvp, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Rsvp", new_rsvp_path %></p>

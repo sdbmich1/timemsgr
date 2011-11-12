@@ -1,0 +1,56 @@
+<% content_for :head do %>
+	<%= render "mobile/infield_form_labels" %>
+<% end -%>
+
+<% content_for :content do %>
+  	<div id="mform">	
+  	<%= form_for @transaction, :validate => true do |f| %>
+ 		<%= render "mobile/error_messages", :target => @transaction %>  
+
+		<ul data-role="listview">
+			<li data-role="list-divider">Contact Information</li>
+  		</ul>
+ 		<p><label for="transaction_first_name">First Name</label>
+ 		<%= f.text_field :first_name %></p> 
+ 		<p><label for="transaction_last_name">Last Name</label>
+ 		<%= f.text_field :last_name %></p>
+ 		<p><label for="transaction_Company">Company/Org Name</label>
+ 		<%= f.text_field :Company %></p>
+ 		<p><label for="transaction_email">Email</label>
+		 <%= f.text_field :email %></p>
+  		<p><label for="transaction_Phone_Home">Home Phone</label>
+		<%= f.text_field :Phone_Home %></p>
+		<ul data-role="listview">
+			<li data-role="list-divider">Billing Information</li>
+  		</ul>
+  		<p><label for="transaction_BillingAddr">Billing Address</label>
+		 <%= f.text_field :BillingAddr %></p>
+  		<p><label for="transaction_Address2">Address 2</label>
+		 <%= f.text_field :Address2 %></p>
+ 		<p><label for="transaction_City">City</label>
+		<%= f.text_field :City %></p>
+  		<p><label for="transaction_State">State</label>
+		<%= f.collection_select :State, StateCode.all, :StateAbbr, :State, :prompt => 'Select State' %></p>
+ 		<p><label for="transaction_PostalCode">PostalCode</label>
+		 <%= f.text_field :PostalCode %></p>
+ 		<p><label for="transaction_Country">Country</label>
+ 		<%= f.country_select :Country, ["United States"] %></p>
+ 		<p><label for="transaction_credit_card_no">Credit Card Number</label>
+ 		<%= f.text_field :credit_card_no %></p> 
+ 		<p><label for="transaction_cvv">CVV</label>
+ 		<%= f.text_field :cvv, :class => "cvv" %></p>
+   		<p>Expiration Date<br />
+    		<%= f.date_select :expiration_date, :as => :date, :start_year => Date.today.year,
+    							:end_year => Date.today.year + 5,
+                                :order => [:month, :year], :required => true, 
+                                :prompt => true %></p>
+ 		<p><label for="transaction_description">Memo</label>
+ 		<%= f.text_field :description %></p>
+		<ul data-role="listview">
+			<li data-role="list-divider">Amount: <%= number_to_currency(@transaction.amt) %></p></li>
+  		</ul>
+
+    	<p><%= f.submit "Buy Now", "data-theme"=>"b" %></p>
+    	</div>
+  <% end %>
+<% end %>

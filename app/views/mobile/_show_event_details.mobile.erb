@@ -1,0 +1,16 @@
+<div class="event-image center-wrapper">
+  <% unless life_event?(event.event_type) || private_event?(event.event_type) %>
+	<div class="event-image center-wrapper">
+	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'show-pic' }%>
+  	</div>
+  <% end %>
+</div>
+
+<h3 class="center-wrapper"><%= event.event_name %></h3>
+<label>Date: </label><span class="item-detail"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %></span><br />	
+<label>Time: </label>
+ 
+<span class="item-detail">
+	<%= " #{chk_offset(event.eventstarttime, event.localGMToffset, event.contentsourceID)} 
+		- #{chk_offset(event.eventendtime, event.endGMToffset, event.contentsourceID)}" %>
+</span><br /> 

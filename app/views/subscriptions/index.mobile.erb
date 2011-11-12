@@ -1,9 +1,5 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'My Subscriptions'} %>
 
 <%= content_for :content do %>	
-	<%= form_tag cancel_subscriptions_path(:id=>@user), :method => :put do %>
-
-		<%= render :partial => 'mobile/subscription_list' %>
-		<p><%= submit_tag "Cancel Selected", "data-theme"=>"b" %></p>
-	<% end %>
+	  <%= render :partial => 'mobile/subscriptions' %>
 <% end %>

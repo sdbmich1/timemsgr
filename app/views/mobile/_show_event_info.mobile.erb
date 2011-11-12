@@ -1,0 +1,12 @@
+<% unless event.try(:bbody).blank? %>
+	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider" class="center-wrapper">Summary</li>
+	</ul>
+	<p class="item-descr"><%= event.bbody.html_safe %></p>
+<% end %>
+<% unless event.cbody.blank? %>
+	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider" class="center-wrapper">Details</li>
+	</ul>
+	<p class="item-descr"><%= event.cbody.html_safe %></p>
+<% end %>

@@ -1,8 +1,7 @@
 	<div data-role="fieldcontain"> 
       <fieldset data-role="controlgroup"> 
-		Frequency:
 		<% if etype == 'event' %>
-			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, :prompt => 'Select' %>
+			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, :prompt => 'Select Frequency' %>
 		<% else %>
      		<%= f.check_box :annualsamedate, {:id => "freq"}, "yes", "no" %>
 			<label for="freq">Annual</label>

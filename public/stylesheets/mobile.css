@@ -1,7 +1,7 @@
  
 #app {}  
 
-.app-content {min-width: 95%; min-height: 420px; padding: 0;}
+.app-content {min-width: 95%; padding: 0; min-height: 420px;}
 
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 
@@ -9,7 +9,9 @@
 	background: #FFFFFF!important;
 }  
 
-.ui-btn-inner.ui-li {width: 100%!important;}
+.scrollable {height: 100%;}
+
+.ui-btn-inner.ui-li { max-height: 80px;}
 /*.ui-btn-inner, .ui-li {width: 100%!important;} */
 .ui-br { border-bottom-style:none; }
 
@@ -34,6 +36,8 @@
 	background: #fff;
 }
 
+.cvv { width: 50px!important; clear:right;}
+.cc-date { width: 80px!important; }
 .info { color: #FFFFFF; }
 .nav-right { float: right; }
 
@@ -48,6 +52,12 @@
 }
 
 .mtop { margin-top: 12px;}
+.ptop { margin-top: 8px; }
+
+/* mobile form infield label */
+#mform p { position:relative; margin-bottom: 0}
+#mform label  { position:absolute; top:8px; left:5px; color:#CCCCCC}
+
 
 /* major event image settings */
 .e-pic {width: 100%; height: auto; position:relative;}
@@ -72,7 +82,13 @@
     width: 80px; 
     border: 1px solid #000000;
     }
-    
+
+.cpic {    
+	left: 1px;
+    height: 44px; 
+    width: 44px; 
+    border: 1px solid #000000;
+    }    
 .ptitle { margin-bottom: 0; font-weight: bold }    
 
 /*  event list items */
@@ -86,7 +102,7 @@
 			margin-bottom: 10px; }
 	   
 .ui-li-desc {text-overflow: normal; overflow: visible; 
-			white-space: pre-wrap; font-size: 0.75em;}
+			white-space: pre-wrap; font-size: 0.65em;}
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
@@ -107,6 +123,9 @@
 .eform label { font-weight: bold; font-size: 0.75em; }
 
 .dtop {margin-top: 50px; }
+
+.clear-all { clear:both }
+.clear-right { clear:right }
 
 /* old slider markup */
 #mslide { width: 100%; }	 
@@ -158,6 +177,7 @@ footer { height: 1.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #show-item { position: relative; width: 100%; }
 #show-item label { font-weight: bold; font-size: 0.75em; }
 .item-detail { position: absolute; left: 5.25em; font-size: 0.75em; margin-top: 0.25em; }
+.item-descr {font-size: 0.75em}
 
 .nav-glyphish .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 .nav-glyphish .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }

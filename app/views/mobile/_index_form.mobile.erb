@@ -3,6 +3,10 @@
 <% end %>
 <% content_for :head do %>	<h3><%= "#{title}" %></h3>	<%= link_to 'Home', events_url, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
 	<% if user_signed_in? %>
-       	<%= link_to 'Account', home_user_path, "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
+		<% unless title == 'Manage Account' %>
+       		<%= link_to 'Account', home_user_path, "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
+		<% else %>
+			<%= link_to "Sign Out", destroy_user_session_path, "class" => "ui-btn-right" %>
+		<% end %>
 	<% end %>
 <% end %>

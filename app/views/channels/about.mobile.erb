@@ -1,8 +1,7 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Channel Details'} %>
 
 <%= content_for :content do %>
-  <div id="wrapper">
-	<div id="scroller">
+	<div class="scrollable">
 		<div class="mtop center-wrapper">
   			<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel, :vtype => 'show-pic' }%>
   			<h3><%= @channel.channel_name %></h3>
@@ -13,8 +12,7 @@
 				<span class="item-detail"><%= @channel.cbody.html_safe %></span></p><br />
 			<% end %>
   		</div>
-    </div>
-  </div>
+   </div>
 <% end %>
 
 <%= render :partial => 'mobile/channel_footer', :locals => { :channel => @channel } %>

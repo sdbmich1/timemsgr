@@ -1,9 +1,9 @@
 class ChannelsController < ApplicationController
+  before_filter :authenticate_user!
   respond_to :html, :xml, :js, :mobile
   
   def index
-    loc = 4
-    @channels = Channel.get_list(loc, params[:interest_id])
+    @channels = Channel.get_interests(@user.location_id, params[:interest_id])
   end
   
   def show

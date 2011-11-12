@@ -6,7 +6,7 @@ class PrivateEvent < ActiveRecord::Base
 
   before_save :set_flds, :add_rewards
   after_save :save_rewards
-  attr_accessor :allday
+  attr_accessor :allday, :loc
  	attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
 				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 

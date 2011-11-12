@@ -11,7 +11,7 @@
 
 .scrollable {height: 100%;}
 
-.ui-btn-inner.ui-li {width: 100%!important; max-height: 80px;}
+.ui-btn-inner.ui-li { max-height: 80px;}
 /*.ui-btn-inner, .ui-li {width: 100%!important;} */
 .ui-br { border-bottom-style:none; }
 
@@ -176,8 +176,8 @@ a:hover {
 footer { height: 1.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: normal; font-size: 0.75em;}
 #show-item { position: relative; width: 100%; }
 #show-item label { font-weight: bold; font-size: 0.75em; }
-#show-item p { margin-top: 0}
 .item-detail { position: absolute; left: 5.25em; font-size: 0.75em; margin-top: 0.25em; }
+.item-descr {font-size: 0.75em}
 
 .nav-glyphish .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 .nav-glyphish .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: none !important; border-radius: none !important; }

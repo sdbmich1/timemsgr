@@ -1,8 +1,3 @@
-  <% if !event.try(:presenters).blank? %>
-		<div class="ptop center-wrapper"><label>Presenter(s)</label></div> 	
-		<%= render 'mobile/presenter_list' %>
-  <% end %>	
-
   <div data-role="navbar">
 	  <ul>
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>

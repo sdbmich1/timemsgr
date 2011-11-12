@@ -1,8 +1,16 @@
-		<%= render :partial => 'mobile/show_event_details', :locals => {:event => event} %>
-		<%= render :partial => 'mobile/show_event_contact', :locals => {:event => event} %>
-		<%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
-		<%= render :partial => 'mobile/show_event_info', :locals => {:event => event} %> 
-
+<%= render :partial => 'mobile/show_event_details', :locals => {:event => event} %>
+<%= render :partial => 'mobile/show_event_contact', :locals => {:event => event} %>
+<%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
+<%= render :partial => 'mobile/show_event_info', :locals => {:event => event} %> 
+<% if tsd_event?(event.event_type) %>
+	<%= render :partial => 'mobile/show_event_fees', :locals => {:event => event} %> 
+<% end %>
+<% unless event.try(:presenters).blank? %>
+	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider" class="center-wrapper">Presenter(s)</li>
+		<%= render 'mobile/presenter_list' %>
+	</ul>  
+<% end %>	
 <%= content_for :footer do %>
 	<%= render :partial => 'mobile/show_event_footer', :locals => {:event => event} %> 
 <% end %>

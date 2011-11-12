@@ -1,5 +1,7 @@
 <% if any_prices?(event)%>
-	<br /><label><%= 'Prices:' %></label><br />
+	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider" class="center-wrapper">Prices</li>
+	</ul>
 <% end %>	
 <% unless event.try(:MemberFee).blank?  %>	
 	<label><%= 'Member:' %></label>

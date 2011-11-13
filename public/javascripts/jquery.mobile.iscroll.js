@@ -60,7 +60,16 @@ function fixed(elm) {
 
 	var scroller = elm.find('[data-iscroll="scroller"]').get(0);
 	if (scroller) {
-		var iscroll = new iScroll(scroller, {desktopCompatibility:true});
+		var iscroll = new iScroll(scroller, {desktopCompatibility:true,
+			useTransform: false,
+			onBeforeScrollStart: function (e) {
+				var target = e.target;
+				while (target.nodeType != 1) target = target.parentNode;
+
+				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+					e.preventDefault();
+				}			
+			});
 		setTimeout(function () {
 			iscroll.refresh();
 			}, 0);

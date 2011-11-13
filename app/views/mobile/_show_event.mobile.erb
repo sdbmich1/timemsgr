@@ -5,7 +5,7 @@
 <% if tsd_event?(event.event_type) %>
 	<%= render :partial => 'mobile/show_event_fees', :locals => {:event => event} %> 
 <% end %>
-<% if @presenters %>
+<% unless @presenters.blank? %>
 	<ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Presenter(s)</li>
 	</ul>  

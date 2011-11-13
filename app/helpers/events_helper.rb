@@ -108,7 +108,7 @@ module EventsHelper
     
     if args[1] 
       sdate = event.first.eventstartdate.to_date
-      args[1] ? edate = args[1] : edate = sdate
+      args[1] ? edate = args[1].to_date : edate = sdate
     else
       sdate = event.eventstartdate.to_date
       edate = event.eventenddate.to_date
@@ -157,7 +157,7 @@ module EventsHelper
   def get_subscriptions
     @user_events = get_user_events
     slist = @events.reject {|e| !subscribed?(e.subscriptionsourceID) || chk_user_events(@user_events, e) || !time_left?(e) || is_session?(e.event_type) }
-    slist.uniq if slist
+#    slist.uniq if slist
   end
            
   def get_observances
@@ -168,7 +168,15 @@ module EventsHelper
     @user_events = get_user_events
     @trk_events = get_subscriptions
     @host_profile.blank? ? ssid = " " : ssid = @host_profile.subscriptionsourceID
-    @events.reject {|e| observance?(e.event_type) || e.contentsourceID == ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || chk_user_events(@trk_events, e) || !time_left?(e)}
+    elist = @events.reject {|e| observance?(e.event_type) || e.contentsourceID == ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e) || chk_user_events(@trk_events, e)}
+   end
+  
+  def events_by_day(elist)
+    daylist = []
+    get_date_range(elist, elist.last.eventenddate).each do |edate|
+      daylist << elist.select {|event| event.eventstartdate.to_date <= edate && time_left?(event)}   
+    end
+    daylist
   end
   
   def chk_user_events(elist, event)

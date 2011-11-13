@@ -1,7 +1,6 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Channel Events'} %>
 
 <%= content_for :content do %>
-  <div data-iscroll="scroller" class="scroller">		
  	<div class="event-image center-wrapper">
 		<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel, :vtype => 'e-pic'}%>
 	</div>
@@ -11,7 +10,6 @@
 		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
 		<%= render :partial => 'mobile/event_list', :collection => get_event_list(@events), :as => :event %>	
   	</ul>
-  </div>
 <% end %>
 
 <%= render :partial => 'mobile/channel_footer', :locals => { :channel => @channel } %>

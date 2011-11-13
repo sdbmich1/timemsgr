@@ -8,8 +8,8 @@
 <% if @presenters %>
 	<ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Presenter(s)</li>
-		<%= render 'mobile/presenter_list' %>
 	</ul>  
+	<%= render 'mobile/presenter_list' %>
 <% end %>	
 <%= content_for :footer do %>
 	<%= render :partial => 'mobile/show_event_footer', :locals => {:event => event} %> 

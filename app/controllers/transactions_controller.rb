@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   before_filter :authenticate_user!
+  layout :page_layout
 
   def new
     @event = Event.find_event(params[:eid], params[:etype])
@@ -31,4 +32,13 @@ class TransactionsController < ApplicationController
       render :action => 'edit'
     end
   end
+  
+  def page_layout 
+    if mobile_device?
+      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
+    else
+      "application"
+    end
+  end  
+      
 end

@@ -51,7 +51,11 @@ class PrivateEventsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? "application" : "private_events"
+    if mobile_device?
+      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
+    else
+      "private_events"
+    end
   end    
     
   def load_data

@@ -11,18 +11,17 @@
   	
    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
  	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
- 	<script src="http://cubiq.org/dropbox/iscroll/iscroll.js?v3.7.1"></script>
  
 	<%= yield :pre_mobile_load %>
     <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
     <% if !user_signed_in? %>
     	<%= stylesheet_link_tag "mobile_device" %>
     <% end %>
-  	<%= javascript_include_tag 'jquery.infieldlabel.min.js','jquery.progressbar.min.js', "jquery.mobile.iscroll.js", :cache => true %>
+  	<%= javascript_include_tag 'jquery.infieldlabel.min.js', :cache => true %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div id="app" data-role="page" data-iscroll="enable"> 
+  <div id="app" data-role="page"> 
     <div data-role="header" data-theme="b">
       <%= yield :head %>
     </div>
@@ -34,14 +33,8 @@
     </div>
     
 	<div class="app-content" data-role="content">
-	  <% if user_signed_in? %>
-		<div data-iscroll="scroller" class="scroller">
-	  <% else %>	
-	  	<div>
-	  <% end %>	
-      		<%= yield :content %>
-      	</div>
-     </div>
+      	<%= yield :content %>
+    </div>
     
     <div id="app-footer" data-role="footer">		
       <%= yield :footer %>

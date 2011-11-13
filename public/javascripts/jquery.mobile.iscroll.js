@@ -55,21 +55,18 @@ function fixed(elm) {
 			"z-index": 1
 		});
 		$wrapper.height($(window).height() - barHeight - SafariWindowHeightFix);
-		$wrapper.bind('touchmove', function (e) { e.preventDefault(); });
+		$wrapper.bind('touchmove', function (e) { 
+			var target = e.target;
+			while (target.nodeType != 1) target = target.parentNode;
+
+			if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
+				e.preventDefault();
+			 });
 	}
 
 	var scroller = elm.find('[data-iscroll="scroller"]').get(0);
 	if (scroller) {
-		var iscroll = new iScroll(scroller, {desktopCompatibility:true,
-			useTransform: false,
-			onBeforeScrollStart: function (e) {
-				var target = e.target;
-				while (target.nodeType != 1) target = target.parentNode;
-
-				if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-					e.preventDefault();
-				}			
-			});
+		var iscroll = new iScroll(scroller, {desktopCompatibility:true});
 		setTimeout(function () {
 			iscroll.refresh();
 			}, 0);

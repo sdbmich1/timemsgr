@@ -1,6 +1,7 @@
 class LifeEventsController < ApplicationController
   before_filter :authenticate_user!
   include ResetDate
+  layout :page_layout
 
   def show
     @event = LifeEvent.find(params[:id])
@@ -41,5 +42,16 @@ class LifeEventsController < ApplicationController
   def clone  
     @event = LifeEvent.find(params[:id]).clone_event
   end
+  
+  private
+  
+  def page_layout 
+    if mobile_device?
+      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
+    else
+      "life_events"
+    end
+  end    
+
 
 end

@@ -1,9 +1,6 @@
 class RsvpsController < ApplicationController
   before_filter :authenticate_user!
-  
-  def index
-    @rsvps = Rsvp.all
-  end
+  layout :page_layout
 
   def show
     @event = Event.find_event(params[:eid], params[:etype]) if params[:eid]
@@ -47,8 +44,16 @@ class RsvpsController < ApplicationController
   
   private
   
-    def add_to_schedule
-      @event = ScheduledEvent.add_event(@event,@event.event_type,@host_profile.subscriptionsourceID )
-      @event.save 
+  def page_layout 
+    if mobile_device?
+      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
+    else
+      "application"
     end
+  end  
+    
+  def add_to_schedule
+    @event = ScheduledEvent.add_event(@event,@event.event_type,@host_profile.subscriptionsourceID )
+    @event.save 
+  end
 end

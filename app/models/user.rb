@@ -12,13 +12,13 @@ class User < ActiveRecord::Base
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
-  attr_accessor :login
+  attr_accessor :login, :promo_code
 
   # Setup accessible (or protected) attributes for your model - :password_confirmation,
   attr_accessible :email, :password,  :remember_me, :username, :login, :accept_terms,
   				  :first_name, :last_name, :birth_date, :gender, :location_id, :time_zone,
   				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
-  				  :host_profiles_attributes, :localGMToffset, :subscription_ids
+  				  :host_profiles_attributes, :localGMToffset, :subscription_ids, :promo_code
   				   #:session_pref_ids, :events_attributes,
   				  
   # name format validators
@@ -54,8 +54,8 @@ class User < ActiveRecord::Base
   belongs_to :location
   has_many :associates  
   
-  has_many :affiliation_users
-  has_many :affiliations, :through => :affiliation_users
+#  has_many :affiliation_users
+  has_many :affiliations #, :through => :affiliation_users
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
   has_many :host_profiles, :foreign_key => :ProfileID
@@ -110,7 +110,7 @@ class User < ActiveRecord::Base
     self
   end
   
-  def get_affilations
-    
+  def self.find_subscriber(uid)
+    includes(:subscriptions => [:channel]).find(uid)
   end  
 end

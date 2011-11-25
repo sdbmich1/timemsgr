@@ -16,9 +16,11 @@ class ScheduledEvent < ActiveRecord::Base
         :contentsourceID, :subscriptionsourceID, :contentsourceURL, 
         :subscriptionsourceURL, :AffiliateFee, :Other3Fee, :AtDoorFee, 
         :GroupFee, :Other1Fee, :Other2Fee, :SpouseFee, :MemberFee, :NonMemberFee, 
-        :Other4Fee, :Other5Fee, :Other6Fee
+        :Other4Fee, :Other5Fee, :Other6Fee, :pictures_attributes
 				        
+  belongs_to :host_profile
   has_many :pictures, :as => :imageable, :dependent => :destroy
+  accepts_nested_attributes_for :pictures, :allow_destroy => true
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 	
@@ -41,23 +43,26 @@ class ScheduledEvent < ActiveRecord::Base
     eventstartdate == eventenddate
   end
   
-  def self.add_event(eid, etype, ssid)
+  def self.add_event(eid, etype, ssid, sdt)
     selected_event = Event.find_event(eid, etype)
     new_event = ScheduledEvent.new(selected_event.attributes)
     
     new_event.contentsourceID = ssid
+    new_event.eventstartdate = sdt
+    new_event.ID = nil
+    new_event.eventenddate = new_event.eventstartdate unless new_event.event_type == 'cnf'
 
-    selected_event.pictures.each do |p|
-      new_event.pictures.build(:photo => p.photo)
-    end             
-    
     # reset event type
     [['ue','other'],['cnf','conf'],['prf','perform'],['fst','fest'],['tmnt','tourn'],['cnv','conv'],['mtg','meeting'], 
      ['te','match'], ['es','session'], ['ce', 'other']].each do |i|
       new_event.event_type = i[1] if selected_event.event_type == i[0]
     end
-    
-    new_event.save
+
+    selected_event.pictures.each do |p|
+      new_event.pictures.build(:photo => p.photo)
+    end             
+     
+    new_event
   end
   
   protected

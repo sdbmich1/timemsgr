@@ -42,7 +42,11 @@ Timemsgr::Application.routes.draw do
     end
   end
  
-  resources :scheduled_events 
+  resources :scheduled_events do
+   member do
+      get 'clone'
+    end
+  end 
     
   # controllers for event related content
   resources :members, :promotions, :presenters, :event_sessions, :transactions
@@ -50,19 +54,17 @@ Timemsgr::Application.routes.draw do
   resources :relationships do
     collection do
       get 'private', 'social'
-    end
-    
+    end    
   end
    
   resources :affiliations do
-    get :autocomplete_organization_name, :on => :collection
+    get :autocomplete_organization_OrgName, :on => :collection
   end  
     
   resources :subscriptions do
     put 'cancel', :on => :collection
     get 'add','unsubscribe', :on => :member
   end
-  
   
   resources :users 
   

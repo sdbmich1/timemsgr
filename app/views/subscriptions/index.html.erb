@@ -1,2 +1,7 @@
-<h2>Subscriptions#index</h2>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
+
+<%= content_for :content do -%>
+	<center><h3>My Subscriptions</h3></center><hr />
+	<%= render 'subscriptions' %>
+<% end -%>
 

@@ -1,20 +1,20 @@
 class AffiliationsController < ApplicationController
   before_filter :authenticate_user!, :load_data	
   layout :page_layout
-  respond_to :html, :json, :xml, :js
+  respond_to :html, :json, :xml, :js, :mobile
+  include SetAssn
   
   # add auto-complete on affiliation name 
-  autocomplete :organization, :name
+  autocomplete :organization, :OrgName
     
   def new
-  	5.times { @affiliations = @user.affiliations.build } 
-  	respond_with(@affiliations)
+    @affiliations = set_associations(@user.affiliations, 10)
   end
 	
   def edit
     @area = params[:p]  # determine which profile area to edit
     @user = User.find(params[:id])
-    respond_with(@affiliations = @user.affiliations)
+    @affiliations = set_associations(@user.affiliations, 10)
   end
 
   def create
@@ -27,25 +27,16 @@ class AffiliationsController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      flash[:notice] = "#{get_msg(@user, 'Profile')}" 
-      respond_with(@user, :status => :created) do |format|
-        format.html { redirect_to home_path }
-      end
+      redirect_to home_path, :notice => "#{get_msg(@user, 'Profile')}" 
     else
-      respond_with(@user.errors, :status => :unprocessable_entity) do |format|
-        @user.sign_in_count <= 1 ? format.html { render :action => :new } : format.html { render :action => :edit }
-      end
+      @user.sign_in_count <= 1 ? (render :action => :new) : (render :action => :edit)
     end
-  end
-  
-  def show
-    redirect_to home_path
   end
      
   protected
   
   def page_layout  
-    params[:p].blank? ? "application" : "users"  
+    mobile_device? ? 'form' : params[:p].blank? ? "application" : "users"  
   end  
   
   def load_data 

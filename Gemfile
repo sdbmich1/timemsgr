@@ -11,7 +11,7 @@ gem 'passenger'
 #gem 'sqlite3'
 gem 'mysql2', '0.2.6'
 
-gem 'will_paginate', '3.0.pre2'
+gem 'will_paginate', '~> 3.0'
 gem 'devise'
 
 # => add autocomplete search capability

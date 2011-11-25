@@ -1,14 +1,15 @@
 require 'rewards'
 class Affiliation < ActiveRecord::Base
   include Rewards
-  after_create :add_orgs
+#  after_create :add_orgs
   before_save :add_rewards
   after_save :save_rewards
 
   attr_accessible :user_id, :name, :affiliation_type
   
-  has_many :affiliation_users
-  has_many :users, :through => :affiliation_users
+#  has_many :affiliation_users
+#  has_many :users, :through => :affiliation_users
+  belongs_to :user
   
   validates :name, :presence => true  
   validates :affiliation_type, :presence => true, :unless => Proc.new { |a| a.name.blank? }  

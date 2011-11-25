@@ -23,6 +23,7 @@ class UserObserver < ActiveRecord::Observer
     hp.StartYear = user.created_at.year
     hp.EntityCategory = 'individual' 
     hp.EntityType = 'A' 
+    hp.promoCode = user.promo_code 
     hp.status = 'active'
     hp.hide = 'no'
     hp.HostChannelID = channelID,
@@ -37,7 +38,7 @@ class UserObserver < ActiveRecord::Observer
         :channel_name => hp.HostName,
 	      :channel_title => hp.HostName,
 	      :channel_class => 'basic',
-	      :channel_type => 'wshost')
+	      :channel_type => 'indhost')
 	  
 	  # add subscription if promo code is valid
     unless hp.try(:promoCode).blank?

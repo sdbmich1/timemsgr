@@ -75,8 +75,30 @@ function getSelectedValue(id) {
 }
 
 // Used to check password strength
-/*
 $(function(){
 	$('.password').pstrength();
 });
-*/
+
+$(function (){
+
+  // when the #event type field changes
+  $("select[id*=event_type]").live('change',function() {
+
+     // make a POST call and replace the content
+     var etype = $(this).val().toLowerCase();
+     if(etype == "anniversary" || etype == "birthday")
+        {
+         $('#end-dt').hide('fast');
+         return false;
+        }
+     else
+        {
+         $('#end-dt').show('slow');
+         return false;
+        }
+    });
+});
+
+$(function(){
+    $("#mform label").inFieldLabels();
+  });

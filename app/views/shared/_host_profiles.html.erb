@@ -1,8 +1,9 @@
 <p><span>Company</span> <%= f.text_field :Company %></p> 
 <p><span>Address</span>  <%= f.text_field :Address1 %></p>
+<p><span>Address 2</span>  <%= f.text_field :Address2 %></p>
 <p><span>City</span>  <%= f.text_field :City %></p>
 <p><span>State</span>  <%= f.collection_select :State, StateCode.all, :StateAbbr, :State, :include_blank => true %></p>
-<p><span>Zip</span>  <%= f.text_field :PostalCode %></p>
+<p><span>Zip/Postal</span>  <%= f.text_field :PostalCode %></p>
 <p><span>Entity Type</span><%= f.collection_select :EntityType, EntityType.all, :code, :description, :prompt => 'Select' %></p>
 <% unless user_signed_in? %>
   <p><span>Promo Code</span>  <%= f.text_field :promoCode %></p>

@@ -1,9 +1,14 @@
 class PrivateEventsController < ApplicationController
   before_filter :authenticate_user!, :load_data
+  include ResetDate
   layout :page_layout
 
   def index
-    @events = PrivateEvent.get_events(@host_profile.subscriptionsourceID)
+    if mobile_device?
+      @events = PrivateEvent.get_events(@host_profile.subscriptionsourceID)
+    else
+      @events = PrivateEvent.get_event_pages(params[:page], @host_profile.subscriptionsourceID)
+    end     
   end
 
   def show
@@ -13,11 +18,11 @@ class PrivateEventsController < ApplicationController
   end
 
   def new
-    @event = PrivateEvent.new
+    @event = PrivateEvent.new(:eventstartdate=>Date.today, :eventenddate=>Date.today)
   end
 
   def create
-    @event = PrivateEvent.new(params[:private_event])
+    @event = PrivateEvent.new(reset_dates(params[:private_event]))
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
@@ -30,8 +35,8 @@ class PrivateEventsController < ApplicationController
   end
 
   def update
-    @event = PrivateEvent.find(params[:id])
-    if @event.update_attributes(params[:private_event])
+    @event = PrivateEvent.find_event(params[:id])
+    if @event.update_attributes(reset_dates(params[:private_event]))
       redirect_to events_url, :notice  =>  "#{get_msg(@user, 'Event')}"
     else
       render :action => 'edit'
@@ -52,16 +57,16 @@ class PrivateEventsController < ApplicationController
   
   def page_layout 
     if mobile_device?
-      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
+      (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application'
     else
-      "private_events"
+      "events"
     end
   end    
     
   def load_data
     @user = current_user
     @host_profile = @user.host_profiles.first
-    @enddate = Date.today+14.days
+#    @enddate = Date.today+7.days
   end
 
 end

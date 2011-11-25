@@ -1,0 +1,4 @@
+<%= form.fields_for :pictures, @picture do |p| %>
+	<p><span>Image File: </span>
+	<%= p.file_field :photo, :class=>'check_bx' %></p>
+<% end %>

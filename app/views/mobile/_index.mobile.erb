@@ -1,17 +1,16 @@
-	  <ul data-role="listview" data-filter="true">
-		<li data-role="list-divider" class="center-wrapper">Observances & Milestones</li>
-		<div class="center-wrapper">
-		  	<%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event %>
-		</div>			
-		<% if user_signed_in? %>
-			<li data-role="list-divider" class="center-wrapper">Appointments & Reminders</li>
-			<%= render :partial => 'mobile/event_list', :collection => get_events('Appointment'), :as => :event %>
-			<li data-role="list-divider" class="center-wrapper">Scheduled Activities</li>
-			<%= render :partial => 'mobile/event_list', :collection => get_events('Schedule'), :as => :event %>
-			<li data-role="list-divider" class="center-wrapper">Tracked Activities</li>
-			<%= render :partial => 'mobile/event_list', :collection => get_events('Subscription'), :as => :event %>
-		<% end %>	
-		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
-		<%= render :partial => 'mobile/event_list', :collection => get_events('Upcoming Events'), :as => :event %>	
-	  </ul>
+<ul data-role="listview" data-filter="true">
+	<li data-role="list-divider" class="center-wrapper">Observances & Milestones</li>
+	<div class="center-wrapper">
+	  	<%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event, :locals => {:edate => Date.today} %>
+	</div>			
 
+	<% [['Appointments & Reminders','Appointment'],['Scheduled Activities','Schedule'],['Tracked Activities','Tracked']].each do |etype| %>
+		<li data-role="list-divider" class="center-wrapper"><%= etype[0] %></li>
+		<%= render :partial => 'mobile/event_list', :collection => get_events(etype[1]), :as => :event, :locals => {:edate => Date.today} %>
+    <% end %>
+
+	<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
+	<% get_date_range(@events, @events.last.eventenddate).each do |edate| %>
+		<%= render :partial => 'mobile/event_list', :collection => get_events('Upcoming Events', edate), :as => :event, :locals => {:edate => edate} %>	
+	<% end %>	
+</ul>

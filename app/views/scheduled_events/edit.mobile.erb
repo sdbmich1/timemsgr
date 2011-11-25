@@ -1,0 +1,5 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Edit Event'} %>
+
+<% content_for :content do %>
+	<%= render :partial => 'mobile/event_form', :locals => { :etype => 'scheduled' } %>
+<% end %>

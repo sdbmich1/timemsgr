@@ -21,4 +21,15 @@ class Subscription < KitsTsdModel
   def self.get_active_list(uid)
     Channel.joins(:subscriptions).where('subscriptions.user_id = ? and subscriptions.status = ?', uid, 'active')
   end
+  
+  def self.new_member(usr, channel)
+    sub = Subscription.new(:user_id=>usr.id, :channelID => channel.channelID, :contentsourceID => usr.host_profiles[0].subscriptionsourceID )
+    sub
+  end
+  
+  def self.find_subscription(uid, cid)
+    subscription = Subscription.find_by_user_id_and_channelID(uid, cid)
+    subscription.status = 'inactive'
+    subscription
+  end
 end

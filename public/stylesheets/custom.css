@@ -1,5 +1,9 @@
 html, body {  }
 
+table { border: 1px solid blue!important; }
+
+th { background: #000000; color: #ffffff; font-weight: bold }
+
 .container {
 /*  width: 710px; */  
   min-height: 30px;
@@ -149,3 +153,7 @@ footer nav {  float: none; }
 .pad-5 { padding: 5px; }
 .pad-10 { padding: 10px; }
 .margin-10 { margin-bottom: 10px; }
+
+/* form infield label */
+#mform p { position:relative; margin-bottom: 0}
+#mform label  { position:absolute; top:12px; left:112px; font-weight: normal; color:#CCCCCC}

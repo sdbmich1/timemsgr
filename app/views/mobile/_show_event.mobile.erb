@@ -7,7 +7,7 @@
 <% end %>
 <% unless @presenters.blank? %>
 	<ul data-role="listview" data-dividertheme="a">
-		<li data-role="list-divider">Presenter(s)</li>
+		<li data-role="list-divider"><%= "#{get_label(event.event_type)}"%></li>
 	</ul>  
 	<%= render 'mobile/presenter_list' %>
 <% end %>	

@@ -30,7 +30,7 @@ function reset_slider () {
 }
 
 function reset_css () {
-	$(".opp-slider, .obsrv-slider, .sch-slider, .mobile-slider").css({height: "150px"});	
+	$(".opp-slider, .appt-slider, .sch-slider, .sub-slider").css({height: "150px"});	
 }
 
 function count_items (cname) {
@@ -51,8 +51,13 @@ function event_slider () {
         btnNext: ".next",
         btnPrev: ".prev"
     });
-    $(".obsrv-slider").jCarouselLite({
-		visible: count_items(".obsrv-slider"),
+    $(".appt-slider").jCarouselLite({
+		visible: count_items(".appt-slider"),
+        btnNext: ".next-btn",
+        btnPrev: ".prev-btn"
+    });   
+    $(".sub-slider").jCarouselLite({
+		visible: count_items(".sub-slider"),
         btnNext: ".next-btn",
         btnPrev: ".prev-btn"
     });

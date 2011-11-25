@@ -1,0 +1,27 @@
+<div class="files"> 
+<%= form_for @event, :html => { :class => "upload", :multipart => true }, :validate => true  do |f| %>
+	<%= render "shared/error_messages", :target => @event %>  
+	<%= render :partial => 'shared/event_info', :locals => { :f => f } %>
+	<%= render :partial => 'shared/event_times', :locals => { :f => f } %>
+	<%= render :partial => 'shared/event_details', :locals => { :f => f } %>
+	<%= render :partial => 'shared/event_location', :locals => { :f => f } %>
+	<% if chk_action(action_name, @event) %> 
+		<%= render :partial => 'shared/event_notify', :locals => { :f => f } %>
+	<% end %>
+
+	<% if controller_name == 'life_events' %>
+		<%= render :partial => 'shared/event_show', :locals => { :f => f } %>
+	<% end %>
+
+	<% if action_name == 'new '%>	
+    	<%= f.hidden_field :contentsourceID, :value => @host_profile.subscriptionsourceID %>
+    	<%= f.hidden_field :subscriptionsourceID, :value => @host_profile.subscriptionsourceID %>
+    <% end %>
+	<%= f.hidden_field :LastModifyBy, :value => @user.last_name + ', ' + @user.first_name %>
+
+	<div class="span-24 last" id="new-event">
+		<center><%= f.submit "Save" %> </center><br />
+	</div>
+<% end -%>
+
+</div>

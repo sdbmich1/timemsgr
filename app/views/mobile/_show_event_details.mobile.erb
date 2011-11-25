@@ -1,9 +1,7 @@
 <div class="event-image center-wrapper">
-  <% unless life_event?(event.event_type) || private_event?(event.event_type) %>
 	<div class="event-image center-wrapper">
-	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'show-pic' }%>
+	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'show-pic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
   	</div>
-  <% end %>
 </div>
 
 <h3 class="center-wrapper"><%= event.event_name %></h3>

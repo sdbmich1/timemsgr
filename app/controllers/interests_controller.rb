@@ -4,19 +4,19 @@ class InterestsController < ApplicationController
 	respond_to :html, :json, :xml, :js
   
 	def new
-		@categories = Category.active  # get category data
+		@categories = Category.get_active_list  # get category data
 		respond_with(@interest = @user.interests.build)	
 	end
 	
 	def create
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {})
     add_credits if @user.update_attributes(params[:user])
-    respond_with(@user, :location => new_subscription_path) 
+    respond_with(@user, :location => new_affiliation_path) 
 	end
 	
 	def edit
     @area = params[:p] # determine which user profile area to edit
-    @categories = Category.active  # get category data
+    @categories = Category.get_active_list  # get category data
     respond_with(@interest = @user.interests) 
 	end
 	

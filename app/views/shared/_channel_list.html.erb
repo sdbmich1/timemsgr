@@ -1,0 +1,24 @@
+<div class='nav-left'>
+  <strong>Channels:</strong>
+</div>
+<div class='nav-right'>
+  <%= link_to "Add Channel", new_channel_path, :id=>"link-btn", :class=>"round" %>
+</div>
+<div class="clear-all"><div>
+<br />
+<table>
+  <tr>
+    <th>Channel Name</th>
+    <th>Overview</th>
+    <th>Status</th>
+    <th></th>
+  </tr>
+  <% for channel in @channels %>
+    <tr>
+      <td><%= link_to channel.channel_name, channel %></td>
+      <td><%= channel.bbody %></td>
+      <td><%= channel.status.titleize %></td>
+      <td><%= link_to "Edit", edit_channel_path(channel) %></td>
+    </tr>
+  <% end %>
+</table>

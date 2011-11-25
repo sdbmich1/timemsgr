@@ -2,9 +2,10 @@
       <fieldset data-role="controlgroup"> 
 		<% if etype == 'event' %>
 			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, :prompt => 'Select Frequency' %>
-		<% else %>
+		<% elsif etype == 'life' %>
      		<%= f.check_box :annualsamedate, {:id => "freq"}, "yes", "no" %>
 			<label for="freq">Annual</label>
+		<% else %>
 		<% end %>
       </fieldset> 
       <div class="dtsize">
@@ -18,7 +19,7 @@
 		<label for="allowWorld">World Sphere</label>
       </fieldset>   
 
-      <% if etype == 'life' %> 
+      <% if controller_name == 'life_events' %> 
         <fieldset data-role="controlgroup"> 
 			Show:
      		<%= f.check_box :ShowPrivCircle, {:id => "showPriv"}, "yes", "no" %>

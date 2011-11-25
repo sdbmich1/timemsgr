@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :load_settings, :prepare_for_mobile, :except => :destroy
-  include Rewards 
-  include Schedule
+  include Rewards, Schedule
   helper_method :mobile_device?
   
   def authenticate_user!
@@ -16,9 +15,9 @@ class ApplicationController < ActionController::Base
   
   protected
   
-  def rescue_with_handler(exception)
-    redirect_to '/500.html'
-  end       
+#  def rescue_with_handler(exception)
+#    redirect_to '/500.html'
+#  end       
   
   def method_missing(id, *args)
     redirect_to '/404.html'

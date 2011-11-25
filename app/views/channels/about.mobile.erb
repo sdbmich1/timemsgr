@@ -2,7 +2,7 @@
 
 <%= content_for :content do %>
 		<div class="mtop center-wrapper">
-  			<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel, :vtype => 'show-pic' }%>
+  			<%= render :partial => 'mobile/show_photo', :locals => {:model => @channel, :vtype => 'show-pic', :file_name => 'camera.png', :psize => '80x80' }%>
   			<h3><%= @channel.channel_name %></h3>
 		</div>
 		<%= render :partial => 'mobile/show_event_info', :locals => {:model => @channel} %> 

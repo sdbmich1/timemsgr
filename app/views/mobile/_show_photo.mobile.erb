@@ -1,5 +1,8 @@
-	<% for pic in model.pictures %>
-		<% if pic %>
-    		<%= image_tag pic.photo.url, :class => vtype %>
-    	<% end %>		
-   	<% end %>
+<% for pic in model.pictures %>
+	<% if pic %>
+   		<%= image_tag pic.photo.url, :class => vtype %>
+   	<% end %>		
+<% end %>
+<% if model.try(:pictures).blank? %>
+    <%= image_tag file_name, :alt => "none", :size => psize %>
+<% end %>

@@ -33,6 +33,8 @@ class TransactionsController < ApplicationController
     end
   end
   
+  private
+  
   def page_layout 
     if mobile_device?
       (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'

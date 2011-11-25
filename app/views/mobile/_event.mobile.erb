@@ -1,5 +1,5 @@
 <% unless observance?(event.event_type) %>
-	<%= render :partial => "mobile/event_item", :locals => {:event => event, :privlist => 'No'}%>
+	<%= render :partial => "mobile/event_item", :locals => {:event => event, :privlist => 'No', :edate => edate}%>
 <% else %>
  	<div class="stitle">
 		<h6><%= event.event_name %><%= " ( #{get_nice_date(event.eventstartdate)} )" %></h6>

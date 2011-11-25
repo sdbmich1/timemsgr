@@ -1,11 +1,15 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Manage Account'} %>
 
-<% content_for :content do %>	<p><h3 class="mtop center-wrapper"><%= "#{current_user.first_name} #{current_user.last_name}"%></h3></p>	<ul data-role="listview" data-dividertheme="a">		<li data-role="list-divider">Add</li>
+<% content_for :content do %>
+	<div class="mtop center-wrapper">	<p><%= render :partial => 'mobile/show_photo', :locals => {:model=>@host_profile, :vtype=>"ppic",:file_name => 'headshot2.jpg', :psize => '80x80' }%>
+		<h3><%= "#{current_user.first_name} #{current_user.last_name}"%></h3></p><br />
+	</div>	<ul data-role="listview" data-dividertheme="a">		<li data-role="list-divider">Add</li>
 		<li><%= link_to "Add Activity", new_private_event_url %> </li>
 		<li><%= link_to "Add Life Event", new_life_event_url %> </li>
 		<li><%= link_to "Add Subscription", categories_url %> </li>
 		<li data-role="list-divider">Manage</li>
-		<li><%= link_to "My Activities", private_events_url %></li>		<li><%= link_to "My Profile", edit_user_url(@user) %> </li>
+		<li><%= link_to "My Activities", private_events_url %></li>		<li><%= link_to "My Affiliations", edit_affiliation_path(@user, {:p => "Affiliations"}) %></li>
+		<li><%= link_to "My Profile", edit_user_url(@user) %> </li>
 		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
 		<li data-role="list-divider">Account</li>
 	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>

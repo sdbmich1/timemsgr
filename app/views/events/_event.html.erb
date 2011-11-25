@@ -6,8 +6,8 @@
     		<span class="day"><%= show_date(event.eventstartdate, edate).strftime("%e") %></span>
 		</div>
 		<% if !holiday?(event.event_type) %>
- 			<div class="slider-time"><%= chk_offset(event.eventendtime, event.endGMToffset, event.contentsourceID) %></div>
-			<div class="slider-stime"><%= chk_offset(event.eventstarttime, event.localGMToffset, event.contentsourceID) %></div>
+ 			<div class="slider-time"><%= chk_offset(event.eventendtime, event.endGMToffset, event.subscriptionsourceURL) %></div>
+			<div class="slider-stime"><%= chk_offset(event.eventstarttime, event.localGMToffset, event.subscriptionsourceURL) %></div>
 		<% end %>
  		<div class="slider-title">
 			<h1>

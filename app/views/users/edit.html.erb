@@ -3,7 +3,7 @@
 <% content_for :content do -%>
   <%= render 'shared/edit_form' %>
   <div class="span-18 last round outer-shadow" id="user-prefs">  
-	<%= form_for setup_user(@user), :validate => true do |f| %>
+	<%= form_for setup_user(@user), :html => { :multipart => true }, :validate => true do |f| %>
   		<div class="span-18 last" id="new-event">  
 			<%= render "shared/error_messages", :target => @user %>  
 			<%= render :partial => set_area, :locals => { :f => f } %>

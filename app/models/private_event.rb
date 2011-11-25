@@ -12,7 +12,7 @@ class PrivateEvent < ActiveRecord::Base
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
-				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime
+				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes
 				        
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
@@ -31,6 +31,8 @@ class PrivateEvent < ActiveRecord::Base
   has_many :sessions, :through => :session_relationships, :dependent => :destroy
 
   has_many :pictures, :as => :imageable, :dependent => :destroy
+  accepts_nested_attributes_for :pictures, :allow_destroy => true
+
   has_many :event_presenters, :foreign_key => :event_id
   has_many :presenters, :through => :event_presenters
   has_many :sponsor_pages, :foreign_key => :event_id
@@ -125,6 +127,14 @@ class PrivateEvent < ActiveRecord::Base
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid]) 
+   end
+   
+   def self.get_event_pages(page, cid)
+     where_cid = " WHERE (contentsourceID = ?)"    
+     paginate_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid], :page=>page) 
    end
 
    

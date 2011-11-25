@@ -58,7 +58,7 @@ class Event < KitsTsdModel
   end 
   
   def self.find_events(edate, hp) 
-    edate.blank? ? edate = Date.today+14.days : edate  
+    edate.blank? ? edate = Date.today+7.days : edate  
     hp.blank? ? current_events(edate) : current(edate, hp.subscriptionsourceID)    
   end
   

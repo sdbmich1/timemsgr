@@ -6,7 +6,7 @@ class HostProfile < KitsTsdModel
         :hide, :sortkey, :channelID, :subscriptionsourceID, :subscriptionsourceURL,
         :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory, 
         :Address1, :Address2, :City, :State, :PostalCode, :Phone_Home, :Phone_Work,
-        :Phone_cell, :wirelessservice, :Country, :promoCode
+        :Phone_cell, :wirelessservice, :Country, :promoCode, :pictures_attributes
         
   text_regex = /^[-\w\,. _\/&@]+$/i
         
@@ -16,6 +16,7 @@ class HostProfile < KitsTsdModel
   has_many :channels, :foreign_key => :HostProfileID
   
   has_many :events, :through => :channels 
+  has_many :scheduled_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
   
   # define channel relationships
   has_many :subscriptions, :through => :channels, 

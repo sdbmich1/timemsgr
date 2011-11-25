@@ -1,6 +1,6 @@
 class LifeEventsController < ApplicationController
   before_filter :authenticate_user!
-  include ResetDate
+  include ResetDate, SetAssn
   layout :page_layout
 
   def show
@@ -9,6 +9,7 @@ class LifeEventsController < ApplicationController
 
   def new
     @event = LifeEvent.new(:eventstartdate=>Date.today, :eventenddate=>Date.today)
+    @picture = set_associations(@event.pictures, 1)
   end
 
   def create
@@ -22,6 +23,7 @@ class LifeEventsController < ApplicationController
 
   def edit
     @event = LifeEvent.find(params[:id])
+    @picture = set_associations(@event.pictures, 1)
   end
 
   def update
@@ -49,7 +51,7 @@ class LifeEventsController < ApplicationController
     if mobile_device?
       (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
     else
-      "life_events"
+      "events"
     end
   end    
 

@@ -1,0 +1,12 @@
+<div class="fields">
+  <%= form_for @user, :as => :user, :url => affiliation_path(@user), :validate => true do |f| %>
+ 	<div id="event_errors" style="display:none" class="error"></div>
+	<%= render :partial => 'mobile/affiliations', :locals => { :f => f } %>
+	<% if action_name == 'new' %>
+		<p><%= f.submit 'Finish', "data-theme"=>"b" %></p>
+	<% else %>
+		<p><%= f.submit "Save", "data-theme"=>"b" %></p>
+	<% end %>
+	<%= link_to "Cancel", home_url, "data-role" => "button" %>
+  <% end %>
+</div>

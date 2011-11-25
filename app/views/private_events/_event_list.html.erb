@@ -1,5 +1,39 @@
-<% if @events %>
-	<%= render :partial => 'event_item', :collection => @events, :as => :event %>
-<% else %>
-	<center><h4>No events found.</h4> </center>
-<% end %>
+<table>
+  <tr>
+    <th>Event Name</th>
+    <th>Overview</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Start</th>
+    <th>End</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% for event in @events %>
+    <tr>
+      <td><%= link_to event.event_name, event_url(event, :etype=>event.event_type) %></td>
+      <td><%= truncate(event.bbody, :length => 40, :omission => "...") %></td>
+      <td><%= get_nice_date(event.eventstartdate,'List') %></td>
+      <td><%= get_nice_date(event.eventenddate,'List') %></td>
+      <td><%= chk_offset(event.eventstarttime, event.localGMToffset) %></td>
+      <td><%= chk_offset(event.eventendtime, event.endGMToffset) %></td>
+      <% if life_event?(event.event_type) %>
+    	<td><%= link_to "Edit", edit_life_event_url(event) %></td>
+      	<td><%= link_to "Clone", clone_life_event_path(event), :confirm => 'Clone this event?' %></td>
+      	<td><%= link_to "Remove", life_event_url(event), :confirm => 'Remove this event?',  :method => :delete %></td>
+  	  <% elsif private_event?(event.event_type) && chk_action(action_name, event) %>  
+    	<td><%= link_to "Edit", edit_private_event_path(event) %></td>
+      	<td><%= link_to "Clone", clone_private_event_path(event), :confirm => 'Clone this event?' %></td>
+      	<td><%= link_to "Remove", private_event_url(event), :confirm => 'Remove this event?',  :method => :delete %></td>
+	  <% else %>
+   		<td><%= link_to "Edit", edit_scheduled_event_url(event) %></td>
+      	<td><%= link_to "Clone", clone_scheduled_event_path(event), :confirm => 'Clone this event?' %></td>
+      	<td><%= link_to "Remove", scheduled_event_url(event), :confirm => 'Remove this event?',  :method => :delete %></td>	  	
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+<div class="nav-right">
+  <%= will_paginate @events %>
+</div>

@@ -17,8 +17,8 @@ class LifeEvent < ActiveRecord::Base
         :ShowSocCircle, :ShowPrivCircle, :ShowWorldCircle, :mapplacename,
         :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
         :eventday, :eventmonth, :eventgday, :eventgmonth,:obscaltype,
-        :annualsamedate, :speaker, :speakertopic, :rsvp,
-        :postdate, :status, :hide,
+        :annualsamedate, :speaker, :speakertopic, :rsvp, :contentsourceURL, :subscriptionsourceURL,
+        :postdate, :status, :hide, :pictures_attributes,
         :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
   
   validates :event_name, :presence => true, :length => { :maximum => 100 },
@@ -31,6 +31,9 @@ class LifeEvent < ActiveRecord::Base
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
   validates :bbody, :length => { :maximum => 255 }  
   
+  has_many :pictures, :as => :imageable, :dependent => :destroy
+  accepts_nested_attributes_for :pictures, :allow_destroy => true
+
   default_scope :order => 'eventstartdate, eventstarttime ASC'
   
   scope :active, where(:status.downcase => 'active')

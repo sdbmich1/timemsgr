@@ -1,11 +1,12 @@
   <div class="mtop">
     <div class="center-wrapper"> 
-		<%= render :partial => 'mobile/show_photo', :locals => {:model => @presenter, :vtype => 'ppic' }%>
+		<%= render :partial => 'mobile/show_photo', :locals => {:model => @presenter, :vtype => 'ppic', :file_name => 'headshot2.jpg', :psize=>'80x80' }%>
 		<h3><%= @presenter.name %></h3>
     </div>
   </div>
 <p>  
-  <p>
+<div id="show-item">
+<p>
   <% unless @presenter.title.blank? %>
 	<label><%= "Title: " %></label> 
 	<span class="item-detail"><%= @presenter.title %></span> 
@@ -17,38 +18,27 @@
 	<span class="item-detail"><%= @presenter.org_name %></span>
   <% end %>
   </p>
+  
   <% for contact in @presenter.contact_details %>
-     <% unless contact.work_phone.blank? %>
-		<label><%= "Work Phone: " %></label> 
-	 	<span class="item-detail"><%= contact.work_phone %></span><br /> 
-      <% end %>
-     <% unless contact.work_email.blank? %>
-		<label><%= "Email: " %></label> 
-	 	<span class="item-detail"><%= contact.work_email %></span><br /> 
-      <% end %>
-     <% unless contact.work_phone.blank? %>
-		<label><%= "Website: " %></label> 
-	 	<span class="item-detail"><%= contact.website %></span><br /> 
-      <% end %>
-      <% unless contact.facebook_name.blank? %>
-		<label><%= "Facebook: " %></label> 
-	 	<span class="item-detail"><%= contact.facebook_name %></span><br /> 
-      <% end %>     
-     <% unless contact.twitter_name.blank? %>
-		<label><%= "Twitter: " %></label> 
-	 	<span class="item-detail"><%= contact.twitter_name %></span><br /> 
-      <% end %>      
-     <% unless contact.linkedin_name.blank? %>
-		<label><%= "LinkedIn: " %></label> 
-	 	<span class="item-detail"><%= contact.linkedin_name %></span><br /> 
-      <% end %>      
-     <% unless contact.skype_name.blank? %>
-		<label><%= "Skype: " %></label> 
-	 	<span class="item-detail"><%= contact.skype_name %></span><br /> 
-      <% end %>      
+  	<% if any_details?(contact) %> 	
+  	  <ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider">Contact Details</li>
+	  </ul> 
+ 
+   	  <% [['work_phone', 'Work Phone:'], ['work_email', 'Email:'], ['website', 'Website:'], ['facebook_name', 'Facebook:'],
+      	 ['twitter_name', 'Twitter:'], ['linkedin_name', 'LinkedIn:'], ['skype_name', 'Skype:']].each do |fld| %>	
+  	 	<% unless contact.send(fld[0]).blank? %>	
+  			<label><%= "#{fld[1]}" %></label>
+  			<span class="item-detail"><%= contact.send(fld[0]) %></span>
+  	 	<% end %>
+  	  <% end %>
     <% end %>
-</p>     
-  <% unless @presenter.bio.blank? %>
-	<label><%= "Bio: " %></label> 
-	<span class="item-detail"><%= @presenter.bio %></span><br /> 
   <% end %>
+</p>  
+</div>   
+<% unless @presenter.bio.blank? %>
+  	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider">Bio</li>
+	</ul>
+	<p class="item-descr"><%= @presenter.bio %></p>
+<% end %>

@@ -19,19 +19,18 @@ module ApplicationHelper
   
   def get_rating
     case @credits
-    when 0..2000
-      'POOR'
-    when 2000..4000
-      'LOW'
-    when 4000..6000
-      'AVERAGE'
-    when 6000..8000
-      'GOOD'
-    else
-      'GREAT'
+    when 0..2000;    'POOR'
+    when 2000..4000; 'LOW'
+    when 4000..6000; 'AVERAGE'
+    when 6000..8000; 'GOOD'
+    else 'GREAT'
     end
   end
   
+  def get_cid(usr)
+    usr ? usr.host_profiles[0].subscriptionsourceID : ''
+  end  
+
   # Return a title on a per-page basis.
   def get_title
     base_title = get_name_or_logo

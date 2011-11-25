@@ -1,21 +1,20 @@
 <ul>
   <li><%= link_to "Home", home_path %></li>
+  <li><a href="#">Add</a>
+    <ul>
+    	<li><%= link_to "Add Activity", new_private_event_url %> </li>
+		<li><%= link_to "Add Life Event", new_life_event_url %> </li>
+    </ul>
+  </li>
   <li><a href="#">Manage</a>
     <ul>
-    	<li><%= link_to "Activities", manage_private_events_url, :class => "manage-item" %></li>
-    	<li><a href="">Appointments</a></li>
-    	<li><a href="">Channels</a></li>
-    	<li><a href="">Interests</a></li>
-    	<li><a href="">Notices</a></li>
-    	<li><a href="">Reminders</a></li>
+    	<li><%= link_to "My Activities", private_events_url, :class => "manage-item" %></li>
+		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
     </ul>
   </li>
   <li><a href="">Account</a>
     <ul>
-    	<li><a href="">Privacy Settings</a></li>
-    	<li><a href="">Import Events</a></li>
-    	<li><a href="">Account Settings</a></li>
-   		<li><%= link_to "Edit Profile", edit_host_profile_path(:p => "Profile") %></li>
+   		<li><%= link_to "Edit Profile", edit_user_path(@user, :p => "Profile") %></li>
    		<li><%= link_to "Sign Out", destroy_user_session_path %></li>
     </ul>
   </li>

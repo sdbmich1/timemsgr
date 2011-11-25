@@ -1,38 +1,13 @@
 <% if any_prices?(event)%>
-	<ul data-role="listview" data-dividertheme="a">
+  <ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Prices</li>
-	</ul>
+  </ul>
+  <% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'], ['Other1Fee', 'Student:'],
+      ['Other2Fee', 'Senior:'], ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:'], _
+      ['Other3Fee', 'Prepaid:'], ['Other4Fee', 'Disabled:'], ['Other5Fee', 'Other:'], ['Other6Fee', 'Other:']].each do |fld| %>	
+  	<% if price_exists?(event, fld[0] ) %>	
+  		<label><%= "#{fld[1]}" %></label>
+  		<span class="item-detail"><%= number_to_currency(event.send(fld[0])) %></span>
+  	<% end %>
+  <% end %>
 <% end %>	
-<% unless event.try(:MemberFee).blank?  %>	
-	<label><%= 'Member:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:MemberFee)) %></span><br />
-<% end %>
-<% unless event.try(:NonMemberFee).blank? %>
-	<label><%= 'General:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:NonMemberFee)) %></span><br />
-<% end %>
-<% unless event.try(:AffiliateFee).blank? %>	<label><%= 'Affiliate:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:AffiliateFee)) %></span><br />
-<% end %>
-<% unless event.try(:Other1Fee).blank? %>	<label><%= 'Student:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:Other1Fee)) %></span><br />
-<% end %>
-<% unless event.try(:Other2Fee).blank? %>	<label><%= 'Senior:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:Other2Fee)) %></span><br />
-<% end %>
-<% unless event.try(:SpouseFee).blank? %>	<label><%= 'Spouse:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:SpouseFee)) %></span><br />
-<% end %>
-<% unless event.try(:GroupFee).blank? %>	<label><%= 'Group:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:GroupFee)) %></span><br />
-<% end %>
-<% unless event.try(:Other3Fee).blank? %>	<label><%= 'Prepaid:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:Other3Fee)) %></span><br />
-<% end %>
-<% unless event.try(:Other4Fee).blank? %>
-	<label><%= 'Disabled:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:Other4Fee)) %></span><br />
-<% end %><% unless event.try(:AtDoorFee).blank? %>	<label><%= 'At Door:' %></label>
-	<span class="item-detail"><%= number_to_currency(event.try(:AtDoorFee)) %></span><br />
-<% end %>
-

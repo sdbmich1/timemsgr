@@ -6,4 +6,8 @@ class LogoType < KitsTsdModel
   def self.active
     unhidden.where(:status.downcase => 'active')
   end
+  
+  def self.logo_size(val)
+    active.where('code = ?', val).first
+  end
 end

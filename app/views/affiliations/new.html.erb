@@ -1,19 +1,14 @@
 <%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Register' } %>
 
 <% content_for :subhead do %>
-  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 3 } %>
+  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 2 } %>
 <% end %>
 
 <% content_for :content do %>
 	<h3 class="strong">Enter Your Affiliations</h3><p>Entering your work and social affiliations helps 
 	keep you informed of their upcoming events and activities.</p> 
 
-	<div class="fields">
-  		<%= form_for @user, :as => :user, :url => affiliation_path(@user) do |f| %>
-			<%= render :partial => 'form', :locals => { :f => f } %>
-			<%= f.submit 'Finish', :class => "nav-right" %>
-		<% end %>
-	</div>
+	<%= render :partial => 'form' %>
 <% end %>
 
 <% content_for :right_sidebar do %>

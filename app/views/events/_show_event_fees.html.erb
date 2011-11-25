@@ -1,31 +1,0 @@
-<div class="clear-all"></div>
-<p><div class="span-6"><span class="prepend-4"><strong>Prices:</strong></span></div></p>
-<div class="span-19 last">
-<% if event.member_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Member:' %></div><div class="span-19 last"><%= "$#{event.member_fee}" %></div>
-<% end %>
-<% if event.nonmember_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Non-Member:' %></div><div class="span-19 last"><%= "$#{event.nonmember_fee}" %></div>
-<% end %>
-<% if event.affiliate_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Affiliate:' %></div><div class="span-19 last"><%= "$#{event.affiliate_fee}" %></div>
-<% end %>
-<% if event.student_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Student:' %></div><div class="span-19 last"><%= "$#{event.student_fee}" %></div>
-<% end %>
-<% if event.senior_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Senior:' %></div><div class="span-19 last"><%= "$#{event.senior_fee}" %></div>
-<% end %>
-<% if event.spouse_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Spouse:' %></div><div class="span-19 last"><%= "$#{event.spouse_fee}" %></div>
-<% end %>
-<% if event.group_fee > 0 %>	
-  <div class="span-2 prepend-4"><%= 'Group:' %></div><div class="span-19 last"><%= "$#{event.group_fee}" %></div>
-<% end %>
-<% if event.prepaid_fee > 0 %>	
-  <div class="span-6 prepend-4"><%= 'Prepaid:' %></div><div class="span-19 last"><%= "$#{event.prepaid_fee}" %></div>
-<% end %>
-<% if event.atdoor_fee > 0 %>	
-  <div class="span-6 prepend-4"><%= 'At Door:' %></div><div class="span-19 last"><%= "$#{event.atdoor_fee}" %></div>
-<% end %>
-</div>

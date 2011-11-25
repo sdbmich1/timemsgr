@@ -5,7 +5,7 @@
  	  	<%= render 'shared/initialize' %>
 
    		<% if user_signed_in? %>
-   			<%= javascript_include_tag 'formfield.js' %>
+   			<%= javascript_include_tag 'formfield.js', "autocomplete-rails.js", :cache => true %>
    		<% end %>
 		<%= stylesheet_link_tag 'layout','screen','users', :media => 'screen', :cache => true %> 
  	  	<%= yield :head %>
@@ -16,7 +16,7 @@
  	  	<div id="flash_notice" style="display:none"></div>
  	  	<%= yield :left_sidebar %>
 	  	<%= yield :content %>	  	
+		<%= render 'layouts/footer' %>
 	</div> 
-	<%= render 'layouts/footer' %>		
  </body>
 </html>

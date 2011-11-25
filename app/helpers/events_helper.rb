@@ -1,3 +1,4 @@
+require "simple_time_select"
 module EventsHelper
   
   def life_observance?(etype)
@@ -44,11 +45,24 @@ module EventsHelper
     (%w(es se sm session).detect { |x| x == etype }) 
   end  
   
-  def time_left?(e)
-    if e.eventenddate.to_date > Date.today 
-      e.eventstartdate.to_date <= Date.today ? compare_time(Time.now, e.eventendtime) : true
+  def get_label(etype)
+    case etype
+    when 'te', 'trnt', 'tour', 'match', 'perform', 'prf'; 'Player(s)'
+    when 'course', 'crs'; 'Instructor(s)'
+    when 'conf', 'sem', 'cnf', 'es', 'session','seminar'; 'Speaker(s)'
+    else 'Presenter(s)'    
+    end
+  end
+  
+  def time_left?(*e)
+    if e[0].eventenddate.to_date > Date.today 
+      if e[1].blank? 
+         e[0].eventstartdate.to_date <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
+      else  
+         e[1] <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
+      end
     else
-      e.eventenddate.to_date == Date.today && compare_time(Time.now, e.eventendtime) ? true : false
+      e[0].eventenddate.to_date == Date.today && compare_time(Time.now, e[0].eventendtime) ? true : false
     end    
   end
   
@@ -57,7 +71,7 @@ module EventsHelper
   end  
 
   def is_past?(ev)
-    return false if ev.endGMToffset.blank?
+    return false if ev.blank?
     etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
     ev.eventstartdate <= Date.today && compare_time(Time.now, etm) ? true : false    
   end
@@ -73,9 +87,13 @@ module EventsHelper
   def any_prices?(event)
     %w(AffiliateFee GroupFee MemberFee NonMemberFee AtDoorFee SpouseFee Other1Fee
        Other2Fee Other3Fee Other4Fee Other5Fee Other6Fee).each {
-         |method| return true unless event.send(method).blank?
+         |method| return true if price_exists?(event,method)
        }
     false
+  end
+  
+  def price_exists?(event, method)
+    event.send(method).blank? ? false : event.send(method) > 0 ? true : false
   end
   
   def compare_times(cur_tm, end_tm)
@@ -95,7 +113,7 @@ module EventsHelper
     else false
     end
   end  
-   
+    
   # used to build each day's schedule of events
   def list_events(elist, start_date)
     elist.select {|event| event.eventstartdate.to_date == start_date && time_left?(event)}   
@@ -104,17 +122,8 @@ module EventsHelper
   # determines date range to build schedule view
   def get_date_range(*args)
     return [] unless args[0]
-    event = args[0]   
-    
-    if args[1] 
-      sdate = event.first.eventstartdate.to_date
-      args[1] ? edate = args[1].to_date : edate = sdate
-    else
-      sdate = event.eventstartdate.to_date
-      edate = event.eventenddate.to_date
-    end
-    sdate = Date.today if sdate < Date.today 
-    drange = (sdate..edate).collect { |x| x }
+    args[1] ? edate = args[1].to_date : edate = args[0].first.eventenddate.to_date
+    drange = (Date.today..edate).collect { |x| x }
   end
 
   # adjusts time display by v1.0 time zone offset when appropriate
@@ -136,11 +145,19 @@ module EventsHelper
     get_user_events.count > 0
   end
   
+  def appointments?
+    get_appointments.count > 0
+  end
+  
   def subscribed?(ssid)
-    slist =  @user.try(:subscriptions)
+    slist = @user.try(:subscriptions)
     slist.blank? ? false : slist.detect {|u| u.channelID == ssid && u.status == 'active' }
   end
 
+  def subscriptions?
+    get_subscriptions.count > 0
+  end
+  
   def observances?
     get_observances.count > 0
   end
@@ -155,32 +172,31 @@ module EventsHelper
   end
   
   def get_subscriptions
-    @user_events = get_user_events
-    slist = @events.reject {|e| !subscribed?(e.subscriptionsourceID) || chk_user_events(@user_events, e) || !time_left?(e) || is_session?(e.event_type) }
-#    slist.uniq if slist
+    @events.reject {|e| !subscribed?(e.subscriptionsourceID) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
   end
            
   def get_observances
     @events.select {|e| observance?(e.event_type) && view_obs?(e.location) }
   end
   
-  def get_opp_events
-    @user_events = get_user_events
-    @trk_events = get_subscriptions
+  def get_upcoming_events(sdt)
+    @trk_events ||= get_subscriptions
+    @user_events ||= get_user_events
     @host_profile.blank? ? ssid = " " : ssid = @host_profile.subscriptionsourceID
-    elist = @events.reject {|e| observance?(e.event_type) || e.contentsourceID == ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e) || chk_user_events(@trk_events, e)}
-   end
-  
-  def events_by_day(elist)
-    daylist = []
-    get_date_range(elist, elist.last.eventenddate).each do |edate|
-      daylist << elist.select {|event| event.eventstartdate.to_date <= edate && time_left?(event)}   
-    end
-    daylist
+    @events.reject {|e| observance?(e.event_type) || e.eventstartdate > sdt || e.contentsourceID == ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
   end
   
+  def set_start_date(event, sdt)
+    event.eventstartdate = sdt
+    event
+  end
+   
   def chk_user_events(elist, event)
     elist.detect{|x| x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name}
+  end
+  
+  def chk_action(action, event)
+    action == 'new' ? true : event.contentsourceID == event.subscriptionsourceID ? true : false
   end
   
   def get_sponsor_type(ary)
@@ -192,8 +208,7 @@ module EventsHelper
   end
   
   def get_logo_size(val)
-    list = LogoType.all.select {|x| x.code == val }
-    list.first.logo_size
+    list = LogoType.logo_size(val)
   end
     
   # build default schedule for new web-based users 
@@ -209,13 +224,13 @@ module EventsHelper
   end
   
   # determine which events to display
-  def get_events(area)
+  def get_events(*args)
     case 
-    when !(area =~ /Observances/i).nil?; get_observances 
-    when !(area =~ /Upcoming/i).nil?; get_opp_events
-    when !(area =~ /Opportunities/i).nil?; get_opportunities
-    when !(area =~ /Appointment/i).nil?; get_appointments
-    when !(area =~ /Subscription/i).nil?; get_subscriptions
+    when !(args[0] =~ /Observances/i).nil?; get_observances 
+    when !(args[0] =~ /Upcoming/i).nil?; get_upcoming_events(args[1])
+    when !(args[0] =~ /Opportunities/i).nil?; get_opportunities
+    when !(args[0] =~ /Appointment/i).nil?; get_appointments
+    when !(args[0] =~ /Tracked/i).nil?; get_subscriptions
     else get_user_events
     end
   end    
@@ -229,7 +244,7 @@ module EventsHelper
 	end
 		
 	def get_etype_icon(ecode)
-	  etype = EventTypeImage.all.detect { |e| e.event_type == ecode } 
+	  etype = EventTypeImage.etype(ecode) 
 	  etype.blank? ? 'star_icon.png' : etype.image_file
 	end
 	
@@ -249,18 +264,24 @@ module EventsHelper
     'shared/user_panel' if @form == "event_slider"
   end
   
-  def show_date(start_dt)  
-    start_dt <= Date.today ? Date.today : start_dt
+  def show_date(*args)  
+    args[0].to_date <= args[1] ? args[1] : args[0]
   end
     
   def get_nice_date(*args) 
-    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m-%d-%Y') 
+    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m/%d/%Y') 
   end  
+  
+  def get_nice_time(val)
+    val.blank? ? '' : val.strftime('%l:%M %p')
+  end
 
   def set_slider_class(area)
     case 
-    when !(area =~ /Observances/i).nil?
-      sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "obsrv-slider" } 
+    when !(area =~ /Appointment/i).nil?
+      sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "appt-slider" } 
+    when !(area =~ /Tracked/i).nil?
+      sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "sub-slider" } 
     when !(area =~ /Upcoming/i).nil?
       sclass = {:lnav => 'prev', :rnav => "next", :stype => "opp-slider" } 
     else
@@ -295,11 +316,11 @@ module EventsHelper
 	end
 	
   def set_header(form)
-    case form
-    when "add_event";  "Add Event"
-    when "edit_event"; @form = "add_event"; 'Edit Event' 
-    when "event_list"; 'Manage Events'
-    when "show_event"; 'Event Details'
+    case 
+    when !(form =~ /add_event/i).nil?; "Add Activity"
+    when !(form =~ /edit_event/i).nil?; @form = "shared/add_event"; "Edit Activity"
+    when !(form =~ /event_list/i).nil?; "My Activities"
+    when !(form =~ /show_event/i).nil?; "Event Details"
     end
   end	
 

@@ -1,5 +1,16 @@
 <% if observances? %>
-	<%= render :partial => 'slider', :locals => { :slider => "Observances & Milestones" } %>
+	<center>
+		<span class="grphead"><%= "Observances & Milestones" %></span>
+		<%= render :partial => 'shared/oblist', :collection => get_events("Observances"), :as => :event %>
+	</center><br />
 <% end %>
-<div id="sch-slider"><%= render 'schedule' %></div>
+<% if appointments? %>
+	<%= render :partial => 'slider', :locals => { :slider => "Appointments & Reminders" }  %>
+<% end %>
+<% if user_events? %>
+	<div id="sch-slider"><%= render 'schedule' %></div>
+<% end %>
+<% if subscriptions? %>
+	<%= render :partial => 'slider', :locals => { :slider => "Tracked Activities" }  %>
+<% end %>
 <%= render :partial => 'slider', :locals => { :slider => "Upcoming Events" } %>

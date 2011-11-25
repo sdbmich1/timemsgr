@@ -1,0 +1,6 @@
+  <% for pic in model.pictures %>
+      <%= image_tag pic.photo.url, :size => psize %>
+  <% end %>
+  <% if model.try(:pictures).blank? %>
+    <%= image_tag file_name, :alt => "none", :size => psize %>
+  <% end %>

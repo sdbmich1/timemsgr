@@ -15,9 +15,9 @@ class ApplicationController < ActionController::Base
   
   protected
   
-#  def rescue_with_handler(exception)
-#    redirect_to '/500.html'
-#  end       
+  def rescue_with_handler(exception)
+    redirect_to '/500.html'
+  end       
   
   def method_missing(id, *args)
     redirect_to '/404.html'
@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
 
   def load_settings
     if user_signed_in?
- #     Time.zone = current_user.time_zone
+      Time.zone = current_user.time_zone
       @credits = get_credits(current_user.id)
       @meters = get_meter_info     
       @user = current_user

@@ -3,6 +3,7 @@
     <%= f.autocomplete_field :name, autocomplete_organization_OrgName_affiliations_path, :size => 60 %>
    	<%= f.label :affiliation_type, "Type" %> 
    	<%= f.collection_select :affiliation_type, AffiliationType.all, :name, :name, :prompt => true  %> 
-   	<%= f.check_box :_destroy %>
-   	<%= "Remove" %>
+	<% if action_name == 'edit' %>
+   		<%= f.check_box :_destroy %><%= "Remove" %>
+   	<% end %>
 </div>

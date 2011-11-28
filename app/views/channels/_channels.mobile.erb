@@ -1,4 +1,4 @@
-<ul data-role="listview" data-filter="true">
+<ul data-role="listview">
   <% @channels.each do |channel| %>
   	<%= render :partial => 'mobile/channel', :locals => {:channel => channel } %>
   <% end %>

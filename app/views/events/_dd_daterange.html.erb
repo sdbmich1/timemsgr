@@ -3,13 +3,9 @@
     <dd>
         <ul>
 			<li><%= link_to "Today", events_url, {:class => "select-date", "data-numdays" => "0.days", :remote => true} %></li>
-			<li><%= link_to "KITS Today", events_url, {:class => "select-date", "data-numdays" => "21.days", :remote => true} %></li>
-			<li><%= link_to "Next 7 Days", events_url, {:class => "select-date", "data-numdays" => "7.days", :remote => true} %></li>
+			<li><%= link_to "KITS Today", events_url, {:class => "select-date", "data-numdays" => "7.days", :remote => true} %></li>
 			<li><%= link_to "Next 14 Days", events_url, {:class => "select-date", "data-numdays" => "14.days", :remote => true} %></li>
 			<li><%= link_to "Next 30 Days", events_url, {:class => "select-date", "data-numdays" => "30.days", :remote => true} %></li>
-			<li><%= link_to "Next 60 Days", events_url, {:class => "select-date", "data-numdays" => "60.days", :remote => true} %></li>
-			<li><%= link_to "Next 90 Days", events_url, {:class => "select-date", "data-numdays" => "90.days", :remote => true} %></li>
-			<li><%= link_to "Next 365 Days", events_url, {:class => "select-date", "data-numdays" => "365.days", :remote => true} %></li>
         </ul>
     </dd>
 </dl>

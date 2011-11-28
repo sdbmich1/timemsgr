@@ -4,11 +4,9 @@ class RelationshipsController < ApplicationController
   def create
     @relationship = current_user.relationships.build(:tracker_id => params[:tracker_id], :status=>'pending', :rel_type=> params[:rtype] )
     if @relationship.save
-      flash[:notice] = "Sent connection request."
-      redirect_to relationships_url
+      redirect_to relationships_url, :notice => "Sent connection request."
     else
-      flash[:notice] = "Unable to send connection request."
-      redirect_to relationships_url
+      redirect_to relationships_url, :notice => "Unable to send connection request."
     end
   end
 
@@ -30,8 +28,7 @@ class RelationshipsController < ApplicationController
   def destroy
     @relationship = current_user.friendships.find(params[:id])
     @relationship.destroy
-    flash[:notice] = "Removed relationship."
-    redirect_to current_user
+    redirect_to current_user, :notice => "Removed relationship."
   end
 
 end

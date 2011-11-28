@@ -9,6 +9,7 @@
 	background: #FFFFFF!important;
 }  
 
+.ui-navbar { width: 100%; }
 .scrollable {height: 100%;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
@@ -173,6 +174,11 @@ a {
 a:hover {
   text-decoration: none;
   }
+  
+#search-mform { display: block; }
+
+.search-fld {width: 65%!important; background-color:#FFFFFF!important; display:inline!important;}
+.search_button {width: 24px; height: 24px; }
 
 .ui-bar-a { border: none; text-shadow: none; }
 footer { height: 1.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: normal; font-size: 0.75em;}

@@ -102,3 +102,10 @@ $(function (){
 $(function(){
     $("#mform label").inFieldLabels();
   });
+  
+$(function () {
+   $("#ev-results .pagination a, #event_form .pagination a").live('click', function () {
+         $.getScript(this.href);
+         return false;   
+   });
+});

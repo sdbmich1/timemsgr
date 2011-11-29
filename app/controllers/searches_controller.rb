@@ -9,7 +9,7 @@ class SearchesController < ApplicationController
   end
   
   def page_layout 
-    mobile_device? ? action_name == 'new' ? 'form' : 'application' : "events"
+    mobile_device? ? 'list' : "events"
   end    
 
 end

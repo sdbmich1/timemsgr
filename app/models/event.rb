@@ -1,4 +1,6 @@
+require 'reset_date'
 class Event < KitsTsdModel  
+  include ResetDate
   set_primary_key 'ID' 
   belongs_to :channel
   
@@ -19,6 +21,26 @@ class Event < KitsTsdModel
   #, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
+
+  define_index do
+    indexes :event_name, :sortable => true
+    indexes :bbody, :sortable => true
+    indexes :cbody, :sortable => true
+    indexes :eventstartdate, :sortable => true
+    indexes :eventenddate, :sortable => true
+   
+    has :ID, :as => :event_id
+    has :event_type
+    where "(status = 'active' AND hide = 'no' AND event_type != 'es')
+          AND ((eventstartdate >= curdate() ) 
+                OR (eventstartdate <= curdate() and eventenddate >= curdate()) ) "
+  end
+  
+  sphinx_scope(:datetime_first) { 
+    {:order => 'eventstartdate, eventstarttime ASC'}
+  }  
+  
+  default_sphinx_scope :datetime_first
 
   def self.channel_events(edt, ssid)
     where_ssid = where_dt + " AND (subscriptionsourceID = ?)" 
@@ -58,7 +80,7 @@ class Event < KitsTsdModel
   end 
   
   def self.find_events(edate, hp) 
-    edate.blank? ? edate = Date.today+7.days : edate  
+    edate.blank? ? edate = Date.today+7.days : edate 
     hp.blank? ? current_events(edate) : current(edate, hp.subscriptionsourceID)    
   end
   

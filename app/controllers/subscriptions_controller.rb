@@ -16,9 +16,9 @@ class SubscriptionsController < ApplicationController
   
   def unsubscribe
     @channel = Channel.find_by_channelID(params[:channel_id])
-    @subscription = Subscription.find_subscription(params[:user_id],params[:channel_id])
+    @subscription = Subscription.find_subscription(params[:user_id], params[:channel_id])
     if @subscription.save
-      redirect_to events_url, :notice => "#{get_msg(@user, 'Subscription')}" 
+      redirect_to events_url 
     else
       redirect_to channel_url(@channel)
     end  

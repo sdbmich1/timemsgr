@@ -2,9 +2,6 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  date:
-    formats:
-      default: "%m/%d/%Y"
   errors:  
     messages:  
       email_format: "is not formatted properly."        

@@ -1,7 +1,7 @@
 .bundle
 Gemfile.lock
 db/*.sqlite3
-log/*.log
+log/
 config/database.yml
 tmp/
 vendor/cache/

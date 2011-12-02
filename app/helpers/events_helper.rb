@@ -327,4 +327,8 @@ module EventsHelper
 	def getquote
 	  @quote
 	end
+	
+	def get_theme(val)
+	  val.blank? ? 'baaa' : (val.to_date - Date.today).to_i == 7 ? 'abaa' : (val.to_date - Date.today).to_i == 14 ? 'aaba' : 'baaa'
+	end
 end

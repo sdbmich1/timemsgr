@@ -1,0 +1,7 @@
+<div data-role="navbar">
+  	<ul>
+		<li><%= link_to "Today", events_url(:end_date=>"0.days"), "data-theme"=>theme[0] %> </li>
+		<li><%= link_to "7 Days", events_url(:end_date=>"7.days"), "data-theme"=>theme[1] %> </li>
+		<li><%= link_to "14 Days", events_url(:end_date=>"14.days"), "data-theme"=>theme[2] %> </li>
+	</ul>
+</div>

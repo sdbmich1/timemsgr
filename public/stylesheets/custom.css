@@ -157,3 +157,6 @@ footer nav {  float: none; }
 /* form infield label */
 #mform p { position:relative; margin-bottom: 0}
 #mform label  { position:absolute; top:12px; left:112px; font-weight: normal; color:#CCCCCC}
+
+.search-fld { height: 24px; }
+.search_button { width: 24px; height: 24px; margin-right:10px; margin-top: 7px; }

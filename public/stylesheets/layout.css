@@ -224,3 +224,67 @@ hr { height:0.25em; margin-top: 10px;}
     width: 70%;
     z-index:1000;
   }
+  
+.clear-all {clear:both;}
+.pic-size{ width:48px; height:48px; }
+
+a.edit-btn {
+  display: block;
+  text-align: center;
+  margin-top: 1px;
+  width: 60px;
+  height: 22px;
+  font-size: 10px; 
+  color: #ffffff;
+  background: #0C6FCB;
+  font-weight: bold;
+  z-index: 99;
+  vertical-align: middle;
+  padding-top: 5px;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  }      
+         
+a:hover {
+  text-decoration: none;
+  }
+  
+.sponsor-msg {font-weight: bold;}
+
+/* pagination styling */
+.pagination {
+    padding: 3px;
+    margin: 3px;
+  }
+   
+.pagination a {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #aaaadd;
+    text-decoration: none;
+    color: #000099;
+  }
+  
+.pagination a:hover, .pagination a:active {
+    border: 1px solid #000099;
+    color: #000;
+  }
+   
+.pagination span.current {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #000099;
+    font-weight: bold;
+    background-color: #000099;
+    color: #FFF;
+  }
+
+.pagination span.disabled {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #eee;
+    color: #ddd;
+  }

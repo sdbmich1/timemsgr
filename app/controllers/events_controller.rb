@@ -5,8 +5,8 @@ class EventsController < ApplicationController
 	
 	def show
  		@event = Event.find_event(params[:id], params[:etype])
-		@presenters = @event.try(:presenters)
  		@sponsor_pages = @event.try(:sponsor_pages)
+    mobile_device? ? @presenters = @event.presenters : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
 	end
 	
 	def index

@@ -1,0 +1,22 @@
+<div class="show-item">
+  <% unless @event.blank? %>
+	<%= render :partial => 'shared/show_event_header', :locals => {:event => @event} %>
+  	<%= render :partial => 'shared/show_event_details', :locals => {:event => @event}  %>  
+  	<%= render :partial => 'shared/show_event_contact', :locals => {:event => @event}  %>
+  	<%= render :partial => 'shared/show_event_location', :locals => {:event => @event}  %>
+  	<%= render :partial => 'shared/show_event_fees', :locals => {:event => @event} %>  	
+
+	<% unless @sessions.blank? %>
+		<div class="clear-all"></div>
+		<p><%= render 'shared/sessions' %></p>
+	<% end %>	
+	
+	<% unless @presenters.blank? %>
+		<div class="clear-all"></div>
+		<p><strong><%= "#{get_label(@event.event_type)}:"%></strong> <br />
+		<%= render 'shared/presenter_list' %></p>
+	<% end %>	
+		
+   	<%= render :partial => 'shared/show_sponsor_page', :locals => {:event => @event} %>	
+ <% end %>
+</div>

@@ -2,12 +2,18 @@
 <% if any_prices?(event) %>
   <p><div class="span-6"><span class="prepend-4">Prices:</span></div></p>
   <div class="span-18 last">
-  <% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'], ['Other1Fee', 'Student:'],
-      ['Other2Fee', 'Senior:'], ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:'],
-      ['Other3Fee', 'Prepaid:'], ['Other4Fee', 'Disabled:'], ['Other5Fee', 'Other:'], ['Other6Fee', 'Other:']].each do |fld| %>	
-  	<% if price_exists?(event, fld[0] ) %>	
-  		<div class="span-2"><%= "#{fld[1]}" %></div>  		<div class="span-18 last"><%= number_to_currency(event.send(fld[0])) %></div>
+  	<% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'],
+      ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:']].each do |fld| %>
+        <% if price_exists?(event, fld[0] ) %>
+                <div class="span-2"><%= "#{fld[1]}" %></div>
+                <div class="span-16 last"><%= number_to_currency(event.send(fld[0])) %></div>
+        <% end %>
+    <% end %>
+  	<% (1..6).each do |i| %>
+    	<% if price_exists?(event, 'Other' + i.to_s + 'Fee' ) %>
+        	<div class="span-4"><%= event.send('Other' + i.to_s + 'Title') + ':' %></div>
+        	<div class="span-14 last"><%= number_to_currency(event.send('Other' + i.to_s + 'Fee')) %></div>
+    	<% end %>
   	<% end %>
-  <% end %>
   </div>
 <% end %>

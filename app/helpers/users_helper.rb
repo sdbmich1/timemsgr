@@ -9,25 +9,28 @@ module UsersHelper
   
   # sets partial name to navigation to corresponding user profile areas
   def set_area
-    if !@area.empty? 
-      case @area
-      when "Photo"
-        @area = "user_photo"
-      when "Prefs"
-        @area = "user_prefs"
-      when "Contact"
-        @area = "user_contact"
-      when "Interests"
-        @area = "shared/categories"
-      when "Hobbies"
-        @area = "user_hobbies"
-      when "Affiliations"
-        @area = "shared/affiliations"
-      else
-        @area = "user_profile"
-      end
-    else
-      @area = "user_profile"
+    case @area
+    when "Prefs"; @area = "user_prefs"
+    when "Contact"; @area = "user_contact"
+    when "Hobbies"; @area = "user_hobbies"
+    else @area = "user_profile"
     end
   end
+  
+  def user_exists?(ulist, usr)
+    ulist.detect{|x| same_user?(x, usr)}
+  end
+  
+  def same_user?(usr1, usr2)
+    usr1.id == usr2.id
+  end
+  
+  def get_status(trkd_id, trkr_id)
+    Relationship.get_status(trkd_id, trkr_id)
+  end
+  
+  def get_rel_type(trkd_id, trkr_id)
+    Relationship.get_rel_type(trkd_id, trkr_id)
+  end
+  
 end

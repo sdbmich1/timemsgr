@@ -10,6 +10,7 @@
     <ul>
     	<li><%= link_to "My Activities", private_events_url, :class => "manage-item" %></li>
 		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
+		<li><%= link_to "My Connections", relationships_url(:id=>@user) %> </li>
     </ul>
   </li>
   <li><a href="">Account</a>

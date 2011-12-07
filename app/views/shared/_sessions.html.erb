@@ -1,0 +1,24 @@
+  <strong>Session(s):</strong>
+  <table>
+  <tr>
+    <th>Session Name</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Location</th>
+  </tr>
+  <% for session in @sessions %>
+    <tr>
+      <td><%= link_to truncate(session.event_name, :length => 40, :omission =>"..."), event_path(session, :etype=>session.event_type) %></td>
+      <td><%= get_nice_date(session.eventstartdate,'List') %></td>
+      <td><%= get_nice_date(session.eventenddate,'List') %></td>
+      <td><%= chk_offset(session.eventstarttime, session.localGMToffset) %></td>
+      <td><%= chk_offset(session.eventendtime, session.endGMToffset) %></td>
+      <td><%= session.location %></td>
+    </tr>
+   <% end %>
+  </table>
+<div class="nav-right">
+  <%= will_paginate @sessions, :param_name => 'session_page' %>
+</div> 

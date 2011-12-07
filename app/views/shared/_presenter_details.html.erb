@@ -1,0 +1,13 @@
+<p><br />
+<% for contact in presenter.contact_details %>
+  <div class="show-item">
+    <% [['facebook_name', 'Facebook:'],['twitter_name', 'Twitter:'], ['work_phone', 'Work Phone:'], ['work_email', 'Work Email:'],
+		['linkedin_name', 'LinkedIn:'], ['website', 'Website:'], ['skype_name', 'Skype:']].each do |fld| %>
+   		<% unless contact.send(fld[0]).blank? %>	
+  	  		<div class="span-2><%= "#{fld[1]}" %></div>
+ 	  		<div class="span-18 last"><%= contact.send(fld[0]) %></div>
+ 		<% end %>
+    <% end %>
+  </div>
+<% end %>
+</p>

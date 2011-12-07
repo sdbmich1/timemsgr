@@ -10,10 +10,12 @@
 			<div class="span-24 last rpos">
  				<%= link_to "Login", new_user_session_path, :class => "signin_button round" %>
 			</div>
-		<% when "User" %>
+		<% when "Event" %>
 			<span class="menu-search">
 				<%= render :partial => 'shared/search' %>
 			</span>
+			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
+		<% when "User" %>
 			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
 		<% when "Profile" %>
 			<div class="nav-menu"><%= render 'shared/menu_item' %></div>

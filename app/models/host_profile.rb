@@ -17,7 +17,47 @@ class HostProfile < KitsTsdModel
   
   has_many :events, :through => :channels 
   has_many :scheduled_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
+  has_many :private_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
+  has_many :life_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
+    def private_circle
+      where(:allowPrivCircle => 'yes')
+    end
+    
+    def social_circle
+      where(:allowSocCircle => 'yes')
+    end
+    
+    def extended_circle
+      where(:allowWorldCircle => 'yes')
+    end
+    
+    def show_private_circle
+      where(:ShowPrivCircle => 'yes') & LifeEvent.current
+    end
+    
+    def show_social_circle
+      where(:ShowSocCircle => 'yes') & LifeEvent.current
+    end
+    
+    def show_extended_circle
+      where(:ShowWorldCircle => 'yes') & LifeEvent.current
+    end  
+  end
   
+  has_many :private_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
+    def private_circle
+      where(:allowPrivCircle => 'yes')
+    end
+    
+    def social_circle
+      where(:allowSocCircle => 'yes')
+    end
+    
+    def extended_circle
+      where(:allowWorldCircle => 'yes')
+    end
+  end
+ 
   # define channel relationships
   has_many :subscriptions, :through => :channels, 
           :conditions => { :status => 'active'}

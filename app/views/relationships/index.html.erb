@@ -1,7 +1,1 @@
-<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
-
-<%= content_for :content do -%>
-	<center><h3>My Connections</h3></center><hr />
-	<%= render 'shared/connections' %>
-<% end -%>
-
+<%= render :partial => 'relationship', :locals => { :pg_hdr => 'My Connections' } %>

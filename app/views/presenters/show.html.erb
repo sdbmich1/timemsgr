@@ -1,44 +1,15 @@
-<% title "Presenter" %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @presenter.name %>
-</p>
-<p>
-  <strong>Bio:</strong>
-  <%= @presenter.bio %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @presenter.email %>
-</p>
-<p>
-  <strong>Fb Address:</strong>
-  <%= @presenter.fb_address %>
-</p>
-<p>
-  <strong>Tw Address:</strong>
-  <%= @presenter.tw_address %>
-</p>
-<p>
-  <strong>Work Phone:</strong>
-  <%= @presenter.work_phone %>
-</p>
-<p>
-  <strong>Mobile Phone:</strong>
-  <%= @presenter.mobile_phone %>
-</p>
-<p>
-  <strong>Title:</strong>
-  <%= @presenter.title %>
-</p>
-<p>
-  <strong>Company:</strong>
-  <%= @presenter.company %>
-</p>
+<%= content_for :subhead do -%>
+<% end %>
 
-<p>
-  <%= link_to "Edit", edit_presenter_path(@presenter) %> |
-  <%= link_to "Destroy", @presenter, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", presenters_path %>
-</p>
+<%= content_for :content do -%>
+  <div class="span-24 last" >  
+  	<center><h3>Presenter Details</h3></center><hr />
+	<div class="span-4">
+		<%= render :partial => 'shared/show_photo', :locals => {:model => @presenter, :file_name => "headshot1.jpg", :psize => '120x120' } %>
+	</div>
+	<%= render 'shared/show_presenter' %>
+	<%= render :partial => 'shared/presenter_details', :locals => {:presenter => @presenter } %>
+  </div>
+<% end -%>

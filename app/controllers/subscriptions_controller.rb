@@ -29,12 +29,6 @@ class SubscriptionsController < ApplicationController
     @subscriptions = @user.subscriptions
   end
   
-  def cancel
-    Subscription.update_all(["status='inactive'"], :id => params[:user][:subscription_ids])
-    flash[:notice] = "Updated subscriptions!"  
-    redirect_to home_user_path      
-  end
-  
   private
   
   def page_layout 

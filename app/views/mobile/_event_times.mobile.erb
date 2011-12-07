@@ -5,14 +5,14 @@
                                 :end_year => Date.today.year + 1, 
                                 :order => [:month, :day, :year], :required => true, 
                                 :prompt => true %><br />
-    <span>Start Time: </span><br /> <%= f.time_select :eventstarttime,{ :default => default_time(1), :simple_time_select => true, 
-    							:minute_interval => 5, :time_separator => "" }, :value => chk_offset(@event.eventstarttime, @event.localGMToffset) %><br />
+	<span>Start Time </span><br /> <%= f.time_select :eventstarttime,{ :default => Time.now.change(:hour => 12), :simple_time_select => true, 
+		 		:minute_interval => 5, :time_separator => "" }, :value => chk_offset(@event.eventstarttime, @event.localGMToffset) %>
 	<span>Start Time Zone: </span><%= f.collection_select :localGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.localGMToffset)} %><br />
 	<span>End Date: </span><br /><%= f.date_select :eventenddate, :as => :date, 
 								:start_year => Date.today.year,
                                 :end_year => Date.today.year + 2, 
                                 :order => [:month, :day, :year], :required => true, 
                                 :prompt => true %><br />
-    <span>End Time: </span><br /> <%= f.time_select :eventendtime,{ :default => default_time(2), :simple_time_select => true, 
-    							:minute_interval => 5, :time_separator => "" }, :value => chk_offset(@event.eventendtime, @event.endGMToffset) %><br />	
+    <span>End Time </span><br /><%= f.time_select :eventendtime, { :default => Time.now.change(:hour => 12), :simple_time_select => true, :minute_interval => 5, :time_separator => "" }, 
+     				:value => chk_offset(@event.eventendtime, @event.endGMToffset) %>
 	<span>End Time Zone: </span> <%= f.collection_select :endGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.endGMToffset)} %><br />

@@ -41,7 +41,7 @@ Timemsgr::Application.routes.draw do
   end
  
   resources :scheduled_events do
-   member do
+    member do
       get 'clone'
     end
   end 
@@ -51,8 +51,8 @@ Timemsgr::Application.routes.draw do
   
   resources :relationships do
     collection do
-      get 'private', 'social'
-    end    
+      get 'private', 'social', 'pending', 'extended'
+    end 
   end
    
   resources :affiliations do

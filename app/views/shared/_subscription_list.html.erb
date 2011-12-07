@@ -1,0 +1,17 @@
+
+<% model.each do |sub| %>
+  <% unless sub.try(:user).blank?  %>
+    <% if !user_exists?(@user.trackeds, sub.user) && !user_exists?(@user.trackers, sub.user) && !same_user?(sub.user, @user) %>
+    <tr>
+      <td>
+        <div class="pic-size">
+	  	  <%= render :partial => 'shared/show_photo', :locals => {:model => sub.user.host_profiles[0], :file_name => "headshot2.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+      <td><%= "#{sub.user.first_name} #{sub.user.last_name}" %></td>
+      <td><%= link_to "Select", relationships_path(:trk_id=>sub.user.id, :rtype=>@rel_type), :method => :post %></td>
+    </tr>
+    <% end %>
+  <% end %>
+<% end %>
+

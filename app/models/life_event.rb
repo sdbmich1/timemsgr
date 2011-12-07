@@ -38,9 +38,18 @@ class LifeEvent < ActiveRecord::Base
   
   scope :active, where(:status.downcase => 'active')
   scope :unhidden, where(:hide.downcase => 'no')
+  scope :current, where('eventenddate >= curdate()')
   
   def same_day?
     eventstartdate == eventenddate
+  end
+  
+  def ssid
+    subscriptionsourceID
+  end
+  
+  def cid
+    contentsourceID
   end
   
   protected

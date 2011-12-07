@@ -38,14 +38,43 @@ class PrivateEvent < ActiveRecord::Base
   has_many :sponsor_pages, :foreign_key => :event_id
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
+  
+  define_index do
+    indexes :event_name, :sortable => true
+    indexes :bbody, :sortable => true
+    indexes :cbody, :sortable => true
+    indexes :eventstartdate, :sortable => true
+    indexes :eventenddate, :sortable => true
+   
+    has :ID, :as => :event_id
+    has :event_type
+    where "(status = 'active' AND hide = 'no' AND event_type != 'es')
+          AND ((eventstartdate >= curdate() ) 
+                OR (eventstartdate <= curdate() and eventenddate >= curdate()) ) "
+  end
+  
+  sphinx_scope(:datetime_first) { 
+    {:order => 'eventstartdate, eventstarttime ASC'}
+  }  
+  
+  default_sphinx_scope :datetime_first
+
 	
 	scope :active, where(:status.downcase => 'active')
 	scope :unhidden, where(:hide.downcase => 'no')
+	
+	def ssid
+    subscriptionsourceID
+  end
+  
+  def cid
+    contentsourceID
+  end
   
   def self.upcoming(start_dt, end_dt)
     active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
   end   
-  
+    
   def owned?(ssid)
     self.contentsourceID == ssid
   end
@@ -77,88 +106,82 @@ class PrivateEvent < ActiveRecord::Base
         
   protected
   
-   def clone_event
-     new_event = self.clone
-
-     new_event.eventstartdate = new_event.eventenddate = Date.today
-     new_event
-   end
+  def clone_event
+    new_event = self.clone
+    new_event.eventstartdate = new_event.eventenddate = Date.today
+    new_event
+  end
    
-   def self.find_event(cid)
-     get_event(cid).try(:first)
-   end 
+  def reset_attr
+    self.eventstartdate=self.eventenddate = nil
+  end
 
-   def reset_attr
-     self.eventstartdate=self.eventenddate = nil
-   end
-
-   def add_rewards
-     @reward_amt = add_credits(self.changes)
-   end
+  def add_rewards
+    @reward_amt = add_credits(self.changes)
+  end
   
-   def save_rewards
-     save_credits(self.contentsourceID, 'Event', @reward_amt)
-   end
+  def save_rewards
+    save_credits(self.contentsourceID, 'Event', @reward_amt)
+  end
      
-   def set_flds
-      if status.nil?
-        self.hide = "no"
-        self.event_title = self.event_name
-        self.postdate = Date.today
-        self.cformat = "html"
-        self.status = "active" 
-        self.CreateDateTime = Time.now
-        self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
-     end
-   end
+  def set_flds
+    if status.nil?
+      self.hide = "no"
+      self.event_title = self.event_name
+      self.postdate = Date.today
+      self.cformat = "html"
+      self.status = "active" 
+      self.CreateDateTime = Time.now
+      self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
+    end
+  end
 
-   def self.current(edt, cid)
-     edt.blank? ? edt = Date.today+14.days : edt  
-     where_cid = where_dt + " and (contentsourceID = ?)"    
-     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
+  def self.current(edt, cid)
+    edt.blank? ? edt = Date.today+14.days : edt  
+    where_cid = where_dt + " and (contentsourceID = ?)"    
+    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, cid]) 
-   end
+  end
    
-   def self.get_events(cid)
+  def self.get_events(cid)
      where_cid = " WHERE (contentsourceID = ?)"    
      find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid]) 
-   end
-   
-   def self.get_event_pages(page, cid)
+  end
+      
+  def self.get_event_pages(page, cid)
      where_cid = " WHERE (contentsourceID = ?)"    
      paginate_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid], :page=>page) 
-   end
-
-   
-   def self.getSQL
+  end
+ 
+  def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID"     
-   end
+  end
    
-   def self.where_dt
+  def self.where_dt
       "where (status = 'active' and LOWER(hide) = 'no') 
                 and ((eventstartdate >= curdate() and eventstartdate <= ?) 
                 or (eventstartdate <= curdate() and eventenddate >= ?)) "
-   end 
-       
+  end 
+
   def self.get_current_events
-    where('((eventstartdate >= curdate() and eventstartdate <= curdate()) 
+     where('((eventstartdate >= curdate() and eventstartdate <= curdate()) 
             or (eventstartdate <= curdate() and eventenddate >= curdate()))')
   end
   
   def self.get_event(eid)
-    where_id = "where (ID = ?))"
-    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
+     where_id = "where (ID = ?))"
+     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}       
          UNION #{getSQL} FROM `kits_development`.events #{where_id}", eid, eid, eid])        
   end

@@ -1,7 +1,9 @@
 class Interest < KitsTsdModel
   attr_accessible :name
 	belongs_to :category
-#	has_and_belongs_to_many :user
+
+	has_many :interests_users
+	has_many :users, :through => :interests_users
 	
 	has_many :channel_interests
 	has_many :channels, :through => :channel_interests, 

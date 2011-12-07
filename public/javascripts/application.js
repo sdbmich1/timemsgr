@@ -23,6 +23,18 @@ $(function (){
     }	
 }); 
 
+// add spinner to ajax events
+$(function (){ 
+  var toggleLoading = function() { $("#spinner").toggle() };
+
+  $("#connect_btn, #search_btn")
+    .bind("ajax:beforeSend",  toggleLoading)
+    .bind("ajax:complete", toggleLoading)
+    .bind("ajax:success", function(event, data, status, xhr) {
+      $("#response").html(data);
+    });
+}); 
+
 $(function (){ 
 
   // add date picker code and synch start & end dates

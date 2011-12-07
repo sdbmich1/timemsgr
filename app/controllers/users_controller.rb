@@ -30,7 +30,9 @@ class UsersController < ApplicationController
   end
   
   def index
-    respond_with(@users = User.get_associate_list(params[:uid]))
+    @user = User.find params[:id]
+    @rel_type = params[:rtype]
+    @subscriptions = @user.subscriptions
   end
   
   private

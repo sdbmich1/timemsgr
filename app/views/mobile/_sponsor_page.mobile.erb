@@ -20,12 +20,14 @@
 	<h3>Event Sponsors</h3>
 	<% @sponsor_pages.each do |sp| %>
 		<div class="sponsor-msg"><%= sp.message %></div><br />
-			<% sp.sponsors.each do |sponsor| %>
-				<p class="sponsor-type"><%= sponsor.sponsor_type %></p>
-				<% for pic in sponsor.pictures %>
-        			<%= link_to image_tag(pic.photo.url, :size=>"#{get_logo_size(sponsor.logo_type)}"), sponsor.sponsorURL %><br />
+			<% sp.sponsors.group(:sponsor_type).count.each do |sptype| %>
+				<p class="sponsor-type"><%= sptype[0] %></p>
+				<% sp.sponsors.select {|x| x.sponsor_type == sptype[0]}.each do |sponsor| %>
+				  <% for pic in sponsor.pictures %>
+        				<%= link_to image_tag(pic.photo.url, :size=>"#{get_logo_size(sponsor.logo_type)}"), sponsor.sponsorURL %>
+        		  <% end %>  
         		<% end %>  
-        	<% end %>     		
+        	<% end %>     			
 	<% end %>
 	</div>
   </div>

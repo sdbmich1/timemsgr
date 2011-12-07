@@ -88,14 +88,23 @@ class Event < KitsTsdModel
     joins(:sessions).find(eid) 
   end
   
+  def ssid
+    subscriptionsourceID
+  end
+  
+  def cid
+    contentsourceID
+  end
+  
   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, 
-        0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
-        0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 
-        0 as Other5Fee, 0 as Other6Fee, contentsourceURL, subscriptionsourceURL "     
+        0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 0 as AtDoorFee, 
+        0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 0 as Other5Fee, 0 as Other6Fee, 
+        0 as Other1Title, 0 as Other2Title, 0 as Other3Title, 0 as Other4Title, 0 as Other5Title, 0 as Other6Title, 
+        contentsourceURL, subscriptionsourceURL "     
   end
   
   def self.getSQLfee
@@ -104,7 +113,9 @@ class Event < KitsTsdModel
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID,
         MemberFee, NonMemberFee, GroupFee, SpouseFee, AffiliateFee, AtDoorFee,
-        Other1Fee, Other2Fee, Other3Fee, Other4Fee, Other5Fee, Other6Fee, contentsourceURL, subscriptionsourceURL"     
+        Other1Fee, Other2Fee, Other3Fee, Other4Fee, Other5Fee, Other6Fee, 
+        Other1Title, Other2Title, Other3Title, Other4Title, Other5Title, Other6Title, 
+        contentsourceURL, subscriptionsourceURL"     
   end
  
   def self.getSQLe
@@ -113,8 +124,9 @@ class Event < KitsTsdModel
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
         0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
-        0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 
-        0 as Other5Fee, 0 as Other6Fee, e.contentsourceURL, e.subscriptionsourceURL "     
+        0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 0 as Other5Fee, 0 as Other6Fee, 
+        0 as Other1Title, 0 as Other2Title, 0 as Other3Title, 0 as Other4Title, 0 as Other5Title, 0 as Other6Title, 
+        e.contentsourceURL, e.subscriptionsourceURL "     
   end
    
   def self.getSQLefee
@@ -123,20 +135,21 @@ class Event < KitsTsdModel
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
         e.MemberFee, e.NonMemberFee, e.GroupFee, e.SpouseFee, e.AffiliateFee, e.AtDoorFee,
-        e.Other1Fee, e.Other2Fee, e.Other3Fee, e.Other4Fee, e.Other5Fee, e.Other6Fee, e.contentsourceURL, e.subscriptionsourceURL"     
+        e.Other1Fee, e.Other2Fee, e.Other3Fee, e.Other4Fee, e.Other5Fee, e.Other6Fee, 
+        e.Other1Title, e.Other2Title, e.Other3Title, e.Other4Title, e.Other5Title, e.Other6Title,         
+        e.contentsourceURL, e.subscriptionsourceURL"     
   end
- 
    
   def self.where_dt
-      "(status = 'active' AND hide = 'No') 
-                AND ((eventstartdate >= curdate() and eventstartdate <= ?) 
-                OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)) "
+      "(LOWER(status) = 'active' AND LOWER(hide) = 'no') 
+        AND ((eventstartdate >= curdate() and eventstartdate <= ?) 
+        OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)) "
   end
   
   def self.where_dte
-      "( e.status = 'active' AND e.hide = 'No') 
-                AND ((e.eventstartdate >= curdate() and e.eventstartdate <= ?) 
-                OR (e.eventstartdate <= curdate() and e.eventenddate BETWEEN curdate() and ?)) "
+      "( LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no') 
+         AND ((e.eventstartdate >= curdate() and e.eventstartdate <= ?) 
+         OR (e.eventstartdate <= curdate() and e.eventenddate BETWEEN curdate() and ?)) "
   end
    
   def self.where_subscriber_id 

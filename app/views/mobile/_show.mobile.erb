@@ -1,5 +1,7 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Event Details'} %>
-
+<%= content_for :ad_content do %>
+    <%= image_tag 'brandSample04.jpg', :alt => "none", :size => '300x50' %>
+<% end %>
 <%= content_for :content do %>
 	  <div id="show-item">
   		<% if major_event?(@event.event_type) %>

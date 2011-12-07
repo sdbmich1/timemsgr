@@ -160,3 +160,5 @@ footer nav {  float: none; }
 
 .search-fld { height: 24px; }
 .search_button { width: 24px; height: 24px; margin-right:10px; margin-top: 7px; }
+
+.usr-label {color:#0C6FCB; font-size:12px; font-weight:bold;}

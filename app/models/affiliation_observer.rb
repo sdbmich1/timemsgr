@@ -11,7 +11,7 @@ class AffiliationObserver < ActiveRecord::Observer
     
     # add subscription if org is found
     unless org.blank?
-      Subscription.create(:user_id=>user.id, :channelID => org.wschannelID, :contentsourceID => user.host_profiles[0].subscriptionsourceID) if user
+      Subscription.find_or_create_by_channelID(org.wschannelID, :user_id=>user.id, :channelID => org.wschannelID, :contentsourceID => user.host_profiles[0].subscriptionsourceID) if user
     end
   end             
 end

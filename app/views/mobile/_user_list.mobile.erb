@@ -1,5 +1,5 @@
-  <ul data-role="listview">
-  	<% for usr in users %>
+<ul data-role="listview">
+  <% for usr in model %>
 	<li>
 		<%= link_to user_url(usr) do %>
 		  <%= render :partial => 'mobile/show_photo', :locals => {:model => usr, :vtype => 'ppic' }%>
@@ -9,5 +9,5 @@
 		  </div>
 		<% end %>
 	</li>
-	<% end %>
-  </ul>
+  <% end %>
+</ul>

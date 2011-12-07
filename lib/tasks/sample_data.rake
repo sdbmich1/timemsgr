@@ -56,7 +56,11 @@ end
 
 def build_affiliations
   Affiliation.all.each do |a|
-    AffiliationUser.create(:affiliation_id=>a.id, :user_id=>a.user_id)
+    org = Organization.find_by_OrgName(a.name)
+    unless org.blank?
+      a.channelID = org.wschannelID
+      a.save
+    end
   end
 end
 

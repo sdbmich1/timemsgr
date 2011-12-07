@@ -2,12 +2,19 @@
   <ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Prices</li>
   </ul>
-  <% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'], ['Other1Fee', 'Student:'],
-      ['Other2Fee', 'Senior:'], ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:'], _
-      ['Other3Fee', 'Prepaid:'], ['Other4Fee', 'Disabled:'], ['Other5Fee', 'Other:'], ['Other6Fee', 'Other:']].each do |fld| %>	
-  	<% if price_exists?(event, fld[0] ) %>	
-  		<label><%= "#{fld[1]}" %></label>
-  		<span class="item-detail"><%= number_to_currency(event.send(fld[0])) %></span>
-  	<% end %>
+  <% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'],
+      ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:']].each do |fld| %>
+        <% if price_exists?(event, fld[0] ) %>
+   			<label><%= "#{fld[1]}" %></label>
+  			<span class="item-detail"><%= number_to_currency(event.send(fld[0])) %></span><br />
+        <% end %>
   <% end %>
+  <div class="item-descr">
+  <% (1..6).each do |i| %>
+    <% if price_exists?(event, 'Other' + i.to_s + 'Fee' ) %>
+        <%= event.send('Other' + i.to_s + 'Title') + ':' %>
+        <%= number_to_currency(event.send('Other' + i.to_s + 'Fee')) %><br />
+    <% end %>
+  <% end %>
+  </div>
 <% end %>	

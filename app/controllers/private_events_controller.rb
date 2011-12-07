@@ -31,7 +31,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def edit
-    @event = PrivateEvent.find_event(params[:id])
+    @event = PrivateEvent.find(params[:id])
   end
 
   def update

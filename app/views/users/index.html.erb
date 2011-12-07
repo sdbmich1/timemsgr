@@ -1,2 +1,16 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
+
+<% content_for :left_sidebar do -%>
+	<%= render :partial => 'shared/rel_nav_panel' %>
+<% end %>
+
+<%= content_for :content do -%>
+  <center><h3 class="grp-hdr">Suggested Connections</h3></center>
+  <div class="span-20 last prepend-2" >  
+	<% @subscriptions.each do |sub| %>
+		<% unless sub.try(:channel).blank? %>
+			<%= render :partial => 'shared/user_list', :locals => {:model => sub.channel.subscriptions }%>
+		<% end %>
+	<% end %>
+  </div>
+<% end %>

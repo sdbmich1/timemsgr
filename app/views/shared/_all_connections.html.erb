@@ -1,0 +1,29 @@
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Circle</th>
+    <th>Status</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  <% model.each do |trkr| %>
+    <% unless trkr.blank? %>
+    <tr>
+      <td>
+        <div class="pic-size">
+	  		<%= render :partial => 'shared/show_photo', :locals => {:model => trkr.profile, :file_name => "headshot1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+      <td><%= "#{trkr.first_name} #{trkr.last_name}" %></td>
+      <td><%= get_rel_type(@user.id, trkr.id) %></td>
+      <td><%= get_status(@user.id, trkr.id) %></td>
+      <td><%= trkr.email %></td>
+      <% if action_name == 'pending'%>
+      	<td><%= link_to "Accept", relationship_url(:id=>@user, :tracker_id=>@user, :tracked_id=>trkr.id, :status=>'accepted'), :method=>:put %></td>
+      	<td><%= link_to "Reject", relationship_url(:id=>@user, :tracker_id=>@user, :tracked_id=>trkr.id, :status=>'rejected'), :method=>:put %></td>
+     <% else %>
+      	<td><%= link_to "Cancel", relationship_url(:id=>@user, :tracker_id=>@user, :tracked_id=>trkr.id, :status=>'canceled'), :method=>:put %></td>
+     <% end %>
+    </tr>
+    <% end %>
+  <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111101201949) do
+ActiveRecord::Schema.define(:version => 20111130235030) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -31,8 +31,11 @@ ActiveRecord::Schema.define(:version => 20111101201949) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "affiliation_type"
+    t.string   "contentsourceID"
+    t.string   "channelID"
   end
 
+  add_index "affiliations", ["channelID"], :name => "index_affiliations_on_channelID"
   add_index "affiliations", ["user_id", "name"], :name => "index_affiliations_on_user_id_and_name", :unique => true
   add_index "affiliations", ["user_id"], :name => "index_affiliations_on_user_id"
 
@@ -230,61 +233,109 @@ ActiveRecord::Schema.define(:version => 20111101201949) do
 
   add_index "event_types", ["code"], :name => "index_event_types_on_Code"
 
-  create_table "events", :force => true do |t|
-    t.string   "event_name"
-    t.string   "event_title"
-    t.string   "cbody"
-    t.date     "eventstartdate"
-    t.date     "eventenddate"
-    t.time     "eventstarttime"
-    t.time     "eventendtime"
-    t.string   "event_type"
-    t.string   "frequency"
+  create_table "events", :primary_key => "ID", :force => true do |t|
+    t.string   "eventid",               :limit => 20
+    t.string   "event_name",            :limit => 100
+    t.string   "event_title",           :limit => 200
+    t.string   "event_type",            :limit => 20
+    t.datetime "eventstartdate"
+    t.datetime "eventenddate"
+    t.datetime "eventstarttime"
+    t.datetime "eventendtime"
     t.string   "location"
-    t.integer  "start_time_zone_id"
-    t.integer  "end_time_zone_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "status"
-    t.string   "hide"
-    t.string   "cversion"
-    t.date     "post_date"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.string   "start_time_zone",    :default => "UTC"
-    t.string   "end_time_zone",      :default => "UTC"
-    t.string   "mapstreet"
-    t.string   "mapcity"
-    t.string   "mapstate"
-    t.integer  "mapzip"
-    t.string   "other_details"
-    t.string   "bbody"
-    t.string   "mapcountry"
-    t.integer  "user_id"
-    t.string   "contact_name"
-    t.string   "website"
-    t.string   "email"
-    t.string   "phone"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.boolean  "gmaps"
-    t.boolean  "family_flg"
-    t.boolean  "friends_flg"
-    t.boolean  "world_flg"
-    t.string   "activity_type"
-    t.integer  "reminder"
-    t.string   "remind_method"
-    t.integer  "credits"
-    t.string   "mapplacename"
+    t.datetime "postdate"
+    t.string   "cformat",               :limit => 10
+    t.string   "speaker",               :limit => 100
+    t.string   "speakertopic"
+    t.string   "host",                  :limit => 100
+    t.text     "cbody"
+    t.text     "bbody"
+    t.string   "agendaID",              :limit => 50
+    t.string   "minutesID",             :limit => 50
+    t.string   "MembershipType",        :limit => 20
+    t.string   "Committee",             :limit => 20
+    t.string   "rsvp",                  :limit => 50
+    t.string   "RSVPemail",             :limit => 50
+    t.string   "imageID",               :limit => 50
+    t.string   "imagetitle",            :limit => 50
+    t.string   "imagecaption",          :limit => 100
+    t.string   "pdfFilename",           :limit => 50
+    t.string   "imagelink",             :limit => 50
+    t.string   "fundraiser",            :limit => 50
+    t.string   "progserv",              :limit => 5
+    t.string   "prodserv",              :limit => 5
+    t.string   "listID",                :limit => 20
+    t.string   "coordinatorID",         :limit => 50
+    t.string   "notice1send",           :limit => 5
+    t.string   "notice2send",           :limit => 5
+    t.datetime "expirationdate"
+    t.decimal  "MemberFee",                            :precision => 19, :scale => 2
+    t.decimal  "SpouseFee",                            :precision => 19, :scale => 2
+    t.decimal  "NonMemberFee",                         :precision => 19, :scale => 2
+    t.decimal  "AtDoorFee",                            :precision => 19, :scale => 2
+    t.decimal  "AffiliateFee",                         :precision => 19, :scale => 2
+    t.datetime "LateFeeDate"
+    t.decimal  "LateMemberFee",                        :precision => 19, :scale => 2
+    t.decimal  "LateSpouseFee",                        :precision => 19, :scale => 2
+    t.decimal  "LateNonMemberFee",                     :precision => 19, :scale => 2
+    t.string   "Other1Title",           :limit => 50
+    t.decimal  "Other1Fee",                            :precision => 19, :scale => 2
+    t.string   "Other2Title",           :limit => 50
+    t.decimal  "Other2Fee",                            :precision => 19, :scale => 2
+    t.string   "Other3Title",           :limit => 50
+    t.decimal  "Other3Fee",                            :precision => 19, :scale => 2
+    t.string   "Other4Title",           :limit => 50
+    t.decimal  "Other4Fee",                            :precision => 19, :scale => 2
+    t.string   "Other5Title",           :limit => 50
+    t.decimal  "Other5Fee",                            :precision => 19, :scale => 2
+    t.string   "Other6Title",           :limit => 50
+    t.decimal  "Other6Fee",                            :precision => 19, :scale => 2
+    t.string   "GalleryID",             :limit => 50
+    t.string   "allowsubscription",     :limit => 5
+    t.string   "subscriberentry",       :limit => 5
+    t.string   "subscriptionsourceID",  :limit => 50
+    t.string   "subscriptionsourceURL", :limit => 100
+    t.string   "targetoflink",          :limit => 5
+    t.string   "linked",                :limit => 5
+    t.string   "linkeditemID",          :limit => 20
+    t.datetime "origlinkdatetime"
+    t.datetime "lastlinkdatetime"
+    t.string   "memberonly",            :limit => 5
+    t.string   "hide",                  :limit => 3
+    t.string   "status",                :limit => 10
+    t.datetime "CreateDateTime"
+    t.datetime "LastModifyDateTime"
+    t.string   "LastModifyBy",          :limit => 50
+    t.string   "contentsourceID",       :limit => 50
+    t.string   "contentsourceURL",      :limit => 50
+    t.string   "pageexttype",           :limit => 20
+    t.string   "pageextsrc",            :limit => 5
+    t.string   "pageextsourceID",       :limit => 50
+    t.string   "pageextID",             :limit => 20
+    t.string   "image2ID",              :limit => 50
+    t.string   "image2title",           :limit => 50
+    t.string   "image2caption",         :limit => 100
+    t.string   "image2link",            :limit => 50
+    t.string   "sponsorlink",           :limit => 100
+    t.string   "mapstreet",             :limit => 40
+    t.string   "mapcity",               :limit => 40
+    t.string   "mapstate",              :limit => 25
+    t.string   "mapzip",                :limit => 10
+    t.string   "mapcountry",            :limit => 40
+    t.string   "mapplacename",          :limit => 60
+    t.string   "profserv",              :limit => 5
+    t.integer  "reliability",           :limit => 1
+    t.decimal  "GroupFee",                             :precision => 19, :scale => 2
+    t.decimal  "lategroupfee",                         :precision => 19, :scale => 2
+    t.decimal  "lateaffiliatefee",                     :precision => 19, :scale => 2
+    t.float    "localGMToffset"
+    t.float    "endGMToffset"
+    t.string   "resvtargetID",          :limit => 50
+    t.string   "session_type",          :limit => 20
+    t.string   "track",                 :limit => 50
   end
 
-  add_index "events", ["cversion"], :name => "index_events_on_cversion"
-  add_index "events", ["event_type"], :name => "index_events_on_code"
-  add_index "events", ["eventenddate"], :name => "index_events_on_end_date"
-  add_index "events", ["eventstartdate"], :name => "index_events_on_start_date"
-  add_index "events", ["user_id"], :name => "index_events_on_user_id"
+  add_index "events", ["subscriptionsourceID", "contentsourceID"], :name => "ssid_idx"
 
   create_table "eventsobs", :primary_key => "ID", :force => true do |t|
     t.string   "eventid",               :limit => 20
@@ -624,7 +675,7 @@ ActiveRecord::Schema.define(:version => 20111101201949) do
   end
 
   create_table "relationships", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "tracked_id"
     t.integer  "tracker_id"
     t.string   "rel_type"
     t.string   "status"
@@ -632,9 +683,9 @@ ActiveRecord::Schema.define(:version => 20111101201949) do
     t.datetime "updated_at"
   end
 
+  add_index "relationships", ["tracked_id", "tracker_id"], :name => "index_relationships_on_user_id_and_tracker_id", :unique => true
+  add_index "relationships", ["tracked_id"], :name => "index_relationships_on_user_id"
   add_index "relationships", ["tracker_id"], :name => "index_relationships_on_tracker_id"
-  add_index "relationships", ["user_id", "tracker_id"], :name => "index_relationships_on_user_id_and_tracker_id", :unique => true
-  add_index "relationships", ["user_id"], :name => "index_relationships_on_user_id"
 
   create_table "reward_credits", :force => true do |t|
     t.string   "name"
@@ -679,8 +730,7 @@ ActiveRecord::Schema.define(:version => 20111101201949) do
   add_index "settings", ["session_pref_id"], :name => "index_settings_on_session_pref_id"
   add_index "settings", ["user_id"], :name => "index_settings_on_user_id"
 
-  create_table "statecode", :id => false, :force => true do |t|
-    t.float  "ID"
+  create_table "statecode", :primary_key => "ID", :force => true do |t|
     t.string "StateAbbr"
     t.string "State"
     t.float  "SortKey"

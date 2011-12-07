@@ -13,11 +13,12 @@
 		<%= render :partial => 'shared/event_show', :locals => { :f => f } %>
 	<% end %>
 
-	<% if action_name == 'new '%>	
-    	<%= f.hidden_field :contentsourceID, :value => @host_profile.subscriptionsourceID %>
-    	<%= f.hidden_field :subscriptionsourceID, :value => @host_profile.subscriptionsourceID %>
+	<% if action_name == 'new' %>	
+    	<%= f.hidden_field :contentsourceID, :value => @user.ssid %>
+    	<%= f.hidden_field :subscriptionsourceID, :value => @user.ssid %>
     <% end %>
 	<%= f.hidden_field :LastModifyBy, :value => @user.last_name + ', ' + @user.first_name %>
+	<%= f.hidden_field :CreateDateTime, :value => Time.now %>
 
 	<div class="span-24 last" id="new-event">
 		<center><%= f.submit "Save" %> </center><br />

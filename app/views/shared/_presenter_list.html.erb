@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Company</th>
+    <th>Bio</th>
+  </tr>
+  <% for presenter in @presenters %>
+    <tr>
+      <td>
+        <div class="pic-size">
+          <%= render :partial => 'shared/show_photo', :locals => {:model => presenter, :file_name => "headshot1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+
+      <td><%= link_to presenter.name, presenter_url(presenter) %></td>
+      <td><%= presenter.title %></td>
+      <td><%= presenter.org_name %></td>
+      <td><%= truncate(presenter.bio, :length=>120, :omission=>"...") %></td>
+    </tr>
+  <% end %>
+</table>
+<div class="nav-right">
+  <%= will_paginate @presenters, :param_name => 'presenter_page' %>
+</div> 

@@ -14,7 +14,7 @@ module EventsHelper
   end
   
   def major_event?(etype)
-    (%w(cnf cnv fest crs sem prf trmt fr).detect { |x| x == etype})
+    (%w(cnf cnv fest crs sem prf trmt).detect { |x| x == etype})
   end
     
   def life_event?(etype)
@@ -107,11 +107,7 @@ module EventsHelper
   end
   
   def chk_event_type(etype, egrp)
-    case egrp
-    when 'Shop'
-      (['perform', 'match', 'sale', 'fund', 'ue', 'ce'].detect {|x| x == etype}).blank?
-    else false
-    end
+    egrp == 'Shop' ? (['perform', 'match', 'sale', 'fund', 'ue', 'ce'].detect {|x| x == etype}).blank? : false
   end  
     
   # used to build each day's schedule of events
@@ -124,6 +120,10 @@ module EventsHelper
     return [] unless args[0]
     args[1] ? edate = args[1].to_date : edate = args[0].first.eventenddate.to_date
     drange = (Date.today..edate).collect { |x| x }
+  end
+  
+  def get_dates(val)
+    drange = (val.eventstartdate.to_date..val.eventenddate.to_date).collect { |x| x }
   end
 
   # adjusts time display by v1.0 time zone offset when appropriate
@@ -163,8 +163,7 @@ module EventsHelper
   end
   
   def get_user_events
-    ssid = @host_profile.try(:subscriptionsourceID)
-    @events.select {|e| e.contentsourceID == ssid && !observance?(e.event_type) && !appt?(e.event_type) && time_left?(e)}
+    @events.select {|e| e.cid == @user.ssid && !observance?(e.event_type) && !appt?(e.event_type) && time_left?(e)}
   end
   
   def get_appointments
@@ -172,7 +171,7 @@ module EventsHelper
   end
   
   def get_subscriptions
-    @events.reject {|e| !subscribed?(e.subscriptionsourceID) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
+    @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
   end
            
   def get_observances
@@ -182,8 +181,7 @@ module EventsHelper
   def get_upcoming_events(sdt)
     @trk_events ||= get_subscriptions
     @user_events ||= get_user_events
-    @host_profile.blank? ? ssid = " " : ssid = @host_profile.subscriptionsourceID
-    @events.reject {|e| observance?(e.event_type) || e.eventstartdate > sdt || e.contentsourceID == ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
+    @events.reject {|e| observance?(e.event_type) || e.eventstartdate > sdt || e.cid == @user.ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
   end
   
   def set_start_date(event, sdt)
@@ -196,7 +194,7 @@ module EventsHelper
   end
   
   def chk_action(action, event)
-    action == 'new' ? true : event.contentsourceID == event.subscriptionsourceID ? true : false
+    action == 'new' ? true : event.cid == event.ssid ? true : false
   end
   
   def get_sponsor_type(ary)
@@ -213,8 +211,7 @@ module EventsHelper
     
   # build default schedule for new web-based users 
   def get_opportunities
-    events = []
-    t = Time.now
+    events = [];  t = Time.now
     3.times do |i|
       start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 1)
       end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 2)
@@ -330,5 +327,9 @@ module EventsHelper
 	
 	def get_theme(val)
 	  val.blank? ? 'baaa' : (val.to_date - Date.today).to_i == 7 ? 'abaa' : (val.to_date - Date.today).to_i == 14 ? 'aaba' : 'baaa'
+	end
+	
+	def bbody?(event)
+	  event.bbody.blank? ? false : event.bbody.length < 120 ? false : true
 	end
 end

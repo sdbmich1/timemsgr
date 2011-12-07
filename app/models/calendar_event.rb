@@ -9,6 +9,14 @@ class CalendarEvent < KitsCentralModel
   scope :active, where(:status.downcase => 'active')
   scope :unhidden, where(:hide.downcase => 'no')
 
+  def ssid
+    subscriptionsourceID
+  end
+  
+  def cid
+    contentsourceID
+  end
+
   define_index do
     indexes :event_name, :sortable => true
     indexes :bbody, :sortable => true

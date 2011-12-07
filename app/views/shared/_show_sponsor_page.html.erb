@@ -1,0 +1,18 @@
+<div class="span-24 last">
+	<% @sponsor_pages.each do |sp| %>
+		<div class="sponsor-msg"><p><center><%= sp.message %></center></p></div>
+		<div class="prepend-4">
+			<% sp.sponsors.group(:sponsor_type).count.each do |sptype| %>
+				<div class="clear-all"></div>
+				<p class="sponsor-type"><%= sptype[0] %></p>
+				<% sp.sponsors.select {|x| x.sponsor_type == sptype[0]}.each do |sponsor| %>
+				  <% for pic in sponsor.pictures %>
+				  	<div class="span-4">
+        				<%= link_to image_tag(pic.photo.url, :size=>"#{get_logo_size(sponsor.logo_type)}"), sponsor.sponsorURL %>
+        			</div>
+        		  <% end %>  
+        		<% end %>  
+ 			<% end %>     		
+ 		</div>       	
+	<% end %>
+</div>

@@ -166,13 +166,29 @@ div.boolean {
     float: left;
     }
 
-.interest {
+.interest, .connection {
 	line-height: 25px;
 	padding-top: 10px;
 	vertical-align: middle; 
  	display:block;
  	clear:left;
 	
+}
+
+a.select-btn {
+  display: block;
+  text-align: center;
+  margin-top: 1px;
+  width: 60px;
+  height: 22px;
+  font-size: 12px; 
+  color: #ffffff;
+  background: #f08103;
+  font-weight: bold;
+  z-index: 99;
+  vertical-align: middle;
+  padding-top: 5px;
+  margin-bottom: 20px;
 }
 
 .interest label { font-weight: bold; }

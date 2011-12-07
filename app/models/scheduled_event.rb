@@ -19,6 +19,7 @@ class ScheduledEvent < ActiveRecord::Base
         :Other4Fee, :Other5Fee, :Other6Fee, :pictures_attributes
 				        
   belongs_to :host_profile
+  
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   
@@ -31,6 +32,14 @@ class ScheduledEvent < ActiveRecord::Base
     active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
   end   
   
+  def ssid
+    subscriptionsourceID
+  end
+  
+  def cid
+    contentsourceID
+  end
+
   def owned?(ssid)
     self.contentsourceID == ssid
   end

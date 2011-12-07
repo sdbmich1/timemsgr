@@ -48,6 +48,7 @@ function event_slider () {
 		visible: count_items(".opp-slider"),
 		auto: 60000,
     	speed: 1000,
+    	scroll: 3, 
         btnNext: ".next",
         btnPrev: ".prev"
     });

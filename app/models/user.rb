@@ -52,10 +52,9 @@ class User < ActiveRecord::Base
   has_many :transactions
   
   belongs_to :location
-  has_many :associates  
+#  has_many :associates  
   
-#  has_many :affiliation_users
-  has_many :affiliations #, :through => :affiliation_users
+  has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
   has_many :host_profiles, :foreign_key => :ProfileID
@@ -65,14 +64,26 @@ class User < ActiveRecord::Base
   has_many :session_prefs, :through => :settings 
   
   has_many :authentications
+  
+  has_many :relationships, :foreign_key => "tracker_id", :class_name => "Relationship", :dependent => :destroy
+  has_many :trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'accepted'" 
+  has_many :private_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'private' AND status = 'accepted'" 
+  has_many :social_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'social' AND status = 'accepted'" 
+  has_many :extended_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'extended' AND status = 'accepted'"
+  has_many :pending_trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'pending'", :order => :created_at
+  has_many :pending_private_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'private' AND status = 'pending'"
+  has_many :pending_social_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'social' AND status = 'pending'"
+  has_many :pending_extended_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'extended' AND status = 'pending'"
 
-  has_many :relationships
-  has_many :private_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'accepted'"
-  has_many :social_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
-  has_many :trackers, :through => :relationships, :conditions => "status = 'accepted'"
-  has_many :requested_trackers, :through => :relationships, :source => :tracker, :conditions => "status = 'requested'", :order => :created_at
-  has_many :requested_private_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'requested'"
-  has_many :requested_social_trackers, :through => :relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'requested'"
+  has_many :reverse_relationships, :foreign_key => "tracked_id", :class_name => "Relationship", :dependent => :destroy
+  has_many :trackers, :through => :reverse_relationships, :source => :tracker #, :conditions => "status = 'accepted'"
+  has_many :private_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'accepted'"
+  has_many :social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
+  has_many :extended_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'extended' AND status = 'accepted'"
+  has_many :pending_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "status = 'pending'", :order => :created_at
+  has_many :pending_private_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'pending'"
+  has_many :pending_social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'pending'"
+  has_many :pending_extended_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'extended' AND status = 'pending'"
 
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address
@@ -91,7 +102,8 @@ class User < ActiveRecord::Base
    
   # set default time zone for new users
   def set_timezone
-    loc = Location.where(["id = :value", { :value => self.location_id }]).first
+#    loc = Location.where(["id = :value", { :value => self.location_id }]).first
+    loc = Location.find(self.location_id)
     self.time_zone, self.localGMToffset = loc.time_zone, loc.localGMToffset
   end
   
@@ -101,8 +113,8 @@ class User < ActiveRecord::Base
   end
   
   def apply_omniauth(omniauth)  
-      self.email = omniauth['user_info']['email'] #if email.blank?  
-      authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
+    self.email = omniauth['user_info']['email'] #if email.blank?  
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
   end
   
   def with_host_profile
@@ -113,4 +125,41 @@ class User < ActiveRecord::Base
   def self.find_subscriber(uid)
     includes(:subscriptions => [:channel]).find(uid)
   end  
+  
+  def ssid
+    self.host_profiles[0].subscriptionsourceID
+  end
+  
+  def profile
+    self.host_profiles[0]
+  end
+  
+  def pictures
+    profile.pictures
+  end
+  
+  def private_events
+    self.host_profiles[0].private_events
+  end
+  
+  def scheduled_events
+    self.host_profiles[0].scheduled_events    
+  end
+
+  def life_events
+    self.host_profiles[0].life_events    
+  end
+  
+  def private_circle_events
+    self.host_profiles[0].private_events.private_circle   
+  end
+  
+  def social_circle_events
+    self.host_profiles[0].private_events.social_circle   
+  end
+
+  def extended_circle_events
+    self.host_profiles[0].private_events.extended_circle   
+  end  
+
 end

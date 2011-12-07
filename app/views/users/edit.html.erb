@@ -1,6 +1,6 @@
 <%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Profile' } %>
 
-<% content_for :content do -%>
+<%= content_for :content do -%>
   <%= render 'shared/edit_form' %>
   <div class="span-18 last round outer-shadow" id="user-prefs">  
 	<%= form_for setup_user(@user), :html => { :multipart => true }, :validate => true do |f| %>

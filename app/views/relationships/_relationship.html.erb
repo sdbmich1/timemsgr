@@ -1,0 +1,17 @@
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
+
+<%= content_for :subhead do -%>
+  <div class="span-24 last" >  
+  	<center><h3><%= pg_hdr %></h3></center><hr />
+  </div>
+<% end %>
+
+<%= content_for :left_sidebar do -%>
+	<div class="clear-all"></div>
+	<%= render :partial => 'shared/rel_nav_panel' %>
+<% end %>
+
+<%= content_for :content do -%>
+  <div id='rel_form' class="span-22 last"><%= render 'track_list' %></div>
+<% end -%>
+

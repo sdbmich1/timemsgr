@@ -233,8 +233,8 @@ module EventsHelper
   def get_events(*args)
     case 
     when !(args[0] =~ /Observances/i).nil?; get_observances 
-    when !(args[0] =~ /Upcoming/i).nil?; get_upcoming_events(args[1])
-    when !(args[0] =~ /Opportunities/i).nil?; get_opportunities(args[1])
+    when !(args[0] =~ /Suggested/i).nil?; get_upcoming_events(args[1])
+    when !(args[0] =~ /Scheduled/i).nil?; get_opportunities(args[1])
     when !(args[0] =~ /Appointment/i).nil?; get_appointments
     when !(args[0] =~ /Tracked/i).nil?; get_subscriptions
     else get_user_events
@@ -280,7 +280,7 @@ module EventsHelper
       sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "appt-slider" } 
     when !(area =~ /Tracked/i).nil?
       sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "sub-slider" } 
-    when !(area =~ /Upcoming/i).nil?
+    when !(area =~ /Suggested/i).nil?
       sclass = {:lnav => 'prev', :rnav => "next", :stype => "opp-slider" } 
     else
       sclass = {:lnav => 'sch-prev-btn', :rnav => "sch-next-btn", :stype => "sch-slider" } 

@@ -7,7 +7,7 @@
 	
   	<ul data-role="listview">
 		<li><%= link_to "About #{@channel.channel_name}", about_channel_url(@channel), "data-icon"=>"custom", :id => "about" %> </li>
-		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
+		<li data-role="list-divider" class="center-wrapper">Suggested Opportunities</li>
 		<%= render :partial => 'mobile/event_list', :collection => get_event_list(@events), :as => :event %>	
   	</ul>
 <% end %>

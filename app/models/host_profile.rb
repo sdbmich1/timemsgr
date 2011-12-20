@@ -12,7 +12,7 @@ class HostProfile < KitsTsdModel
         
 #  validates :Company, :allow_blank => true, :length => { :maximum => 100 }, :format => { :with => text_regex }
    
-  belongs_to :user
+  belongs_to :user, :foreign_key => :ProfileID
   has_many :channels, :foreign_key => :HostProfileID
   
   has_many :events, :through => :channels 
@@ -59,10 +59,14 @@ class HostProfile < KitsTsdModel
   end
  
   # define channel relationships
-  has_many :subscriptions, :through => :channels, 
-          :conditions => { :status => 'active'}
+  has_many :subscriptions, :through => :channels, :conditions => { :status => 'active'}
           
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
+  
+  def self.get_user(ssid)
+    hp = HostProfile.includes(:user).find_by_subscriptionsourceID(ssid)
+    hp.user
+  end
           
 end

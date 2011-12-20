@@ -67,8 +67,11 @@ function event_slider () {
         btnNext: ".sch-next-btn",
         btnPrev: ".sch-prev-btn"
     });  
+    $('#js-news').ticker({
+    	titleText: 'Observances & Milestones',
+    	displayType: 'fade'
+    });
 }
-
 
 jQuery.event.add(window, "load", resizeFrame);
 jQuery.event.add(window, "resize", resizeFrame);
@@ -86,3 +89,28 @@ function resizeFrame()
 		
 	reset_css();
 }
+
+$(function() {
+	 $(".opp-slider li").draggable({
+			appendTo: "body",
+			helper: "clone"
+		});
+		
+		$( ".sch-slider .eslide li" ).droppable({
+			activeClass: "ui-state-default",
+			hoverClass: "ui-state-hover",
+			drop: function( event, ui ) {
+				var eid = $(ui.draggable).find(".eid").attr("data-eid");
+     			var sdt = $(ui.draggable).find(".sdt").attr("data-sdt");
+   				var etype = $(ui.draggable).find(".etype").attr("data-etype");
+    			$.ajax({
+  						url: '/scheduled_events.js?sdate=' + sdt + "&id=" + eid + '&etype=' + etype,
+  						type: 'POST',
+  						dataType: 'script',
+  						success:  function() {  				
+							reset_slider();
+    					}
+				});
+			}
+		});
+	});

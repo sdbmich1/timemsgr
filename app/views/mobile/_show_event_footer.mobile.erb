@@ -1,22 +1,25 @@
   <div data-role="navbar">
 	  <ul>
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
-			<li><%= link_to "Add", scheduled_events_url(:id=>event, :etype=>event.event_type), :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move", :method => :post %> </li>
+			<li><%= link_to "Add", scheduled_events_url(:id=>event, :etype=>event.event_type, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', "data-icon"=>"custom", :id => "move", :method => :post, :remote => true %> </li>
 		<% elsif private_event?(event.event_type) %>
 		
 			<% if chk_action(action_name, event) %>
 				<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 				<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
+				<li><%= link_to "Notify", notify_private_event_url(event), "data-icon"=>"custom", :id => "notify" %> </li>
 			<% else %>
 				<li><%= link_to "Edit", edit_scheduled_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 				<li><%= link_to "Delete", scheduled_event_url(event), :method => 'delete',  :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
+				<li><%= link_to "Notify", notify_scheduled_event_url(event), "data-icon"=>"custom", :id => "notify" %> </li>
 			<% end %>
 			
 		<% elsif life_event?(event.event_type) %>
 			<li><%= link_to "Edit", edit_life_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 			<li><%= link_to "Delete", life_event_url(event), :method => 'delete', :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
+			<li><%= link_to "Notify", notify_life_event_url(event), "data-icon"=>"custom", :id => "notify" %> </li>
 		<% end %>
-		
+			
 		<% if rsvp?(event.rsvp) %>
 			<% if private_event?(event.event_type) %>			
 				<li><%= link_to "RSVP", rsvp_url(:id=>event.eventid, :eid=>event, :etype=>event.event_type), "data-icon"=>"custom", :id => "rsvp" %> </li>

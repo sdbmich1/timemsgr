@@ -1,6 +1,6 @@
 class CreateRelationships < ActiveRecord::Migration
   def self.up
-    create_table :relationships do |t|
+    create_table :relationships, :force => true do |t|
       t.integer :user_id
       t.integer :tracker_id
       t.string :rel_type

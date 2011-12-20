@@ -25,3 +25,12 @@ $(document).ready(function() {
 		$("#modalGroup").trigger('click');
 	});
 });
+
+// close fancybox on ajax events
+$(function (){ 
+
+  $("#notify_btn")
+    .bind("ajax:success", function(event, data, status, xhr) {
+      parent.$.fancybox.close();
+    });
+}); 

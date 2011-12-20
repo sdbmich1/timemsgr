@@ -1,10 +1,8 @@
 class ScheduledEvent < ActiveRecord::Base
   set_table_name 'events'
   set_primary_key 'ID'
-  include Rewards # include rewards to add credits for user where appropriate
 
-  before_save :set_flds, :add_rewards
-  after_save :save_rewards
+  before_save :set_flds
   attr_accessor :loc
  	attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
 				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
@@ -16,7 +14,8 @@ class ScheduledEvent < ActiveRecord::Base
         :contentsourceID, :subscriptionsourceID, :contentsourceURL, 
         :subscriptionsourceURL, :AffiliateFee, :Other3Fee, :AtDoorFee, 
         :GroupFee, :Other1Fee, :Other2Fee, :SpouseFee, :MemberFee, :NonMemberFee, 
-        :Other4Fee, :Other5Fee, :Other6Fee, :pictures_attributes
+        :Other4Fee, :Other5Fee, :Other6Fee, :pictures_attributes, :Other1Title, :Other2Title,
+        :Other3Title, :Other4Title, :Other5Title, :Other6Title
 				        
   belongs_to :host_profile
   
@@ -43,6 +42,22 @@ class ScheduledEvent < ActiveRecord::Base
   def owned?(ssid)
     self.contentsourceID == ssid
   end
+  
+  def get_location
+    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  end
+  
+  def get_place
+    mapplacename.blank? ? '' : mapplacename + ' '
+  end
+  
+  def csz
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+  end
+  
+  def location_details
+    get_location + csz
+  end  
  
   def self.find_event(eid)
     get_event(eid).first
@@ -75,17 +90,9 @@ class ScheduledEvent < ActiveRecord::Base
   end
   
   protected
-
-   def add_rewards
-     @reward_amt = add_credits(self.changes)
-   end
-  
-   def save_rewards
-     save_credits(self.contentsourceID, 'Event', @reward_amt)
-   end
      
    def set_flds
-      if status.nil?
+     if self.status.blank?
         self.event_title = self.event_name if self.event_title.blank?
         self.postdate = Date.today
         self.CreateDateTime = Time.now

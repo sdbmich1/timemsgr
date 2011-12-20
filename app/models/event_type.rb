@@ -1,8 +1,12 @@
 class EventType < ActiveRecord::Base
   default_scope :order => 'sortkey ASC'
     
-  def self.get_tsd_event_types
-    find_by_sql(["SELECT code FROM `kitsknndb`.event_types"])
+  def self.active
+    where(:status => 'active')
+  end
+  
+  def self.unhidden
+    active.where(:hide => 'no')
   end
 
   def descr_title

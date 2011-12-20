@@ -6,14 +6,20 @@
   </head>
   <body>
 
-    <h2>Koncierge</h2>
+	<span><%= "Hello," %></span><br /><br />
     
-    <p><%= "#{@user.first_name} #{@user.last_name}" %> is inviting you to
-    	join Koncierge.</p>
-
-    <p>Once you join, you'll be able to see upcoming local activities, and track activities from <%= @user.first_name %> and all your other friends... and share your own!!</p>
-    
-	<%= link_to "Join Koncierge",@url, :class => "signup_button round" %>
-
+    <p>Please join me at <%= "#{@notice.event_name}" %> on <%= "#{@notice.start_date}" %> from <%= "#{@notice.start_time} - #{@notice.end_time}" %>. 
+      <% unless @notice.location.blank? %>
+      	This event takes place at <%= @notice.location %>.
+      <% end %>
+      <br />
+    	
+    	I hope you can make it.  </p><br />
+    	
+    <p><%= "#{@user.name}"%> </p>
   </body>
+  <footer>
+  	<center><span style="color:grey;font-size:10px;">This automated message is brought to you by Koncierge. Join at <%= @url %>.</span></center>
+  	<center><span style="color:grey;font-size:10px;">&copy; 2011 KITS, Inc. PO Box 3900 Palo Alto, CA 94306 USA. All rights reserved.</span></center> 	
+  </footer>
 </html>

@@ -26,7 +26,7 @@ module EventsHelper
   end
   
   def tsd_event?(etype)
-    etlist = EventType.get_tsd_event_types.detect {|x| x.code == etype }
+    etlist = TsdEventType.active.detect {|x| x.code == etype }
   end
 
   def current?(sdt)
@@ -94,6 +94,11 @@ module EventsHelper
   
   def price_exists?(event, method)
     event.send(method).blank? ? false : event.send(method) > 0 ? true : false
+  end
+  
+  def notice_count(sid)
+    notices = EventNotice.get_notices(sid)
+    notices.blank? ? 0 : notices.count  
   end
   
   def compare_times(cur_tm, end_tm)
@@ -166,6 +171,10 @@ module EventsHelper
     @events.select {|e| e.cid == @user.ssid && !observance?(e.event_type) && !appt?(e.event_type) && time_left?(e)}
   end
   
+  def get_event_list(dt)
+    @events.select {|e| e.cid == @user.ssid && e.eventstartdate.to_date == dt }     
+  end
+  
   def get_appointments
     @events.select {|event| appt?(event.event_type) && time_left?(event)}
   end
@@ -210,14 +219,14 @@ module EventsHelper
   end
     
   # build default schedule for new web-based users 
-  def get_opportunities
+  def get_opportunities(edate)
     events = [];  t = Time.now
-    3.times do |i|
-      start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 1)
-      end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60).advance(:hours => i + 2)
-      events << {:start_date => Date.today, :start_time => start_time, :end_time => end_time}
+    (Date.today..edate).each do |dt|
+      start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 1)
+      end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 2)
+      events << {:start_date => dt, :start_time => start_time, :end_time => end_time}
     end
-    return events
+    events
   end
   
   # determine which events to display
@@ -225,7 +234,7 @@ module EventsHelper
     case 
     when !(args[0] =~ /Observances/i).nil?; get_observances 
     when !(args[0] =~ /Upcoming/i).nil?; get_upcoming_events(args[1])
-    when !(args[0] =~ /Opportunities/i).nil?; get_opportunities
+    when !(args[0] =~ /Opportunities/i).nil?; get_opportunities(args[1])
     when !(args[0] =~ /Appointment/i).nil?; get_appointments
     when !(args[0] =~ /Tracked/i).nil?; get_subscriptions
     else get_user_events
@@ -263,14 +272,6 @@ module EventsHelper
   
   def show_date(*args)  
     args[0].to_date <= args[1] ? args[1] : args[0]
-  end
-    
-  def get_nice_date(*args) 
-    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m/%d/%Y') 
-  end  
-  
-  def get_nice_time(val)
-    val.blank? ? '' : val.strftime('%l:%M %p')
   end
 
   def set_slider_class(area)
@@ -325,6 +326,7 @@ module EventsHelper
 	  @quote
 	end
 	
+	# get color theme for mobile nav bar tabs - a => black; b=> blue; blue is current tab
 	def get_theme(val)
 	  val.blank? ? 'baaa' : (val.to_date - Date.today).to_i == 7 ? 'abaa' : (val.to_date - Date.today).to_i == 14 ? 'aaba' : 'baaa'
 	end
@@ -332,4 +334,16 @@ module EventsHelper
 	def bbody?(event)
 	  event.bbody.blank? ? false : event.bbody.length < 120 ? false : true
 	end
+	
+	def set_location(event)
+	  event.event_type == 'other' ? event.location : event.location_details
+	end
+	
+	def get_nice_date(*args) 
+    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m/%d/%Y') 
+  end  
+  
+  def get_nice_time(val)
+    val.blank? ? '' : val.strftime('%l:%M %p')
+  end
 end

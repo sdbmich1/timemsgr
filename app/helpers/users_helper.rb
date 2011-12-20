@@ -26,11 +26,22 @@ module UsersHelper
   end
   
   def get_status(trkd_id, trkr_id)
-    Relationship.get_status(trkd_id, trkr_id)
+    Relationship.get_status(trkd_id, trkr_id) || Relationship.get_status(trkr_id, trkd_id)
   end
   
   def get_rel_type(trkd_id, trkr_id)
-    Relationship.get_rel_type(trkd_id, trkr_id)
+    Relationship.get_rel_type(trkd_id, trkr_id) || Relationship.get_rel_type(trkr_id, trkd_id)
   end
   
+  def trackers?
+    @user.trackers.count > 0 ? true : false
+  end
+  
+  def trackeds?
+    @user.trackeds.count > 0 ? true : false
+  end
+  
+  def get_unread_count(usr)
+    EventNotice.unread_by(usr).count
+  end
 end

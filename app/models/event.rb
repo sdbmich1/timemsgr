@@ -1,12 +1,11 @@
-require 'reset_date'
 class Event < KitsTsdModel  
   include ResetDate
   set_primary_key 'ID' 
+  
   belongs_to :channel
   
   has_many :session_relationships, :dependent => :destroy
-  has_many :sessions, :through => :session_relationships, 
-          :dependent => :destroy
+  has_many :sessions, :through => :session_relationships, :dependent => :destroy
 
   has_many :event_presenters, :dependent => :destroy
   has_many :presenters, :through => :event_presenters, :dependent => :destroy
@@ -18,7 +17,6 @@ class Event < KitsTsdModel
   accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
 
   has_many :sponsor_pages, :dependent => :destroy
-  #, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
@@ -96,6 +94,22 @@ class Event < KitsTsdModel
     contentsourceID
   end
   
+  def get_location
+    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  end
+  
+  def get_place
+    mapplacename.blank? ? '' : mapplacename
+  end
+  
+  def csz
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+  end
+  
+  def location_details
+    get_location + ', ' + csz
+  end
+  
   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
@@ -120,7 +134,7 @@ class Event < KitsTsdModel
  
   def self.getSQLe
       "(SELECT e.ID, e.event_name, e.event_type, e.eventstartdate, e.eventenddate, e.eventstarttime, 
-        e.eventendtime, e.event_title, e.cbody, e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
+        e.eventendtime,  e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
         0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
@@ -131,7 +145,7 @@ class Event < KitsTsdModel
    
   def self.getSQLefee
       "(SELECT e.ID, e.event_name, e.event_type, e.eventstartdate, e.eventenddate, e.eventstarttime, 
-        e.eventendtime, e.event_title, e.cbody, e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
+        e.eventendtime,  e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,     
         e.MemberFee, e.NonMemberFee, e.GroupFee, e.SpouseFee, e.AffiliateFee, e.AtDoorFee,

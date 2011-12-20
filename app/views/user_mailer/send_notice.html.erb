@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <style type="text/css"></style>
+  </head>
+  <body>
+
+	<span><%= "Hello," %></span><br /><br />
+    
+    <p><%= @notice.message %> <%= @notice.event_name %> on <%= "#{@notice.start_date}" %> from <%= "#{@notice.start_time} - #{@notice.end_time}" %>. 
+    	  
+      <% if !@notice.location.blank? && @notice.Notice_Type == 'invite' %>
+      	This event will be held at <%= @notice.location %>.
+      <% end %></p><br />
+
+    Regards,	
+    <p><%= "#{@user.name}"%> </p>
+  </body>
+  <footer>
+  	<center><span style="color:grey;font-size:10px;">This automated message is brought to you by Koncierge. Join at <%= @url %>.</span></center>
+  	<center><span style="color:grey;font-size:10px;">&copy; 2011 KITS, Inc. PO Box 3900 Palo Alto, CA 94306 USA. All rights reserved.</span></center> 	
+  </footer>
+</html>

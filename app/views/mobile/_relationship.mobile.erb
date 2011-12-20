@@ -1,22 +1,23 @@
 <%= content_for :head do %>
 	<div data-role="navbar">
 	  	<ul>
-			<li><%= link_to "All", relationships_url(:uid=>@user, :ctype => 'All'), "data-theme"=>"#{theme[0]}"%> </li>
-			<li><%= link_to "Private", private_relationships_url(:uid=>@user, :ctype => 'Private'), "data-theme"=>theme[1] %> </li>
-			<li><%= link_to "Social", social_relationships_url(:uid=>@user, :ctype => 'Social'), "data-theme"=>theme[2] %> </li>
+			<li><%= link_to "All", relationships_url(:id=>@user), "data-theme"=>theme[0]%> </li>
+			<li><%= link_to "Private", private_relationships_url(:id=>@user, :rtype => 'Private'), "data-theme"=>theme[1] %> </li>
+			<li><%= link_to "Social", social_relationships_url(:id=>@user, :rtype => 'Social'), "data-theme"=>theme[2] %> </li>
+			<li><%= link_to "World", extended_relationships_url(:id=>@user, :rtype => 'Extended'), "data-theme"=>theme[3] %> </li>
 		</ul>
 	</div>
 <% end %>
 
 <%= content_for :content do %>
-	<%= render :partial => 'mobile/user_list', :locals => {:model => @trackers}%>
+	<%= render :partial => 'mobile/connections', :locals => {:model => get_trk_list(@trackers, @trackeds)}%>
 <% end %>
 
 <%= content_for :footer do %>
-	<% if rel_type != 'All' %>
+	<% if @rel_type && controller_name == 'relationships' %>
 	  <div data-role="navbar">
 	  	<ul>
-			<li><%= link_to "Add", users_url(:uid=>@user, :rel_type=>rel_type), "data-icon"=>"plus", :method => "post" %> </li>
+			<li><%= link_to "Add", users_url(:id=>@user, :rel_type=>@rel_type), "data-icon"=>"plus" %> </li>
 		</ul>
 	  </div>
 	<% end %>

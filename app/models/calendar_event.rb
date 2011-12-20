@@ -32,7 +32,7 @@ class CalendarEvent < KitsCentralModel
   end
   
   sphinx_scope(:datetime_first) { 
-    {:order => 'eventstartdate, eventstarttime ASC'}
+    {:order => 'eventstartdate ASC'}
   }  
   
   default_sphinx_scope :datetime_first

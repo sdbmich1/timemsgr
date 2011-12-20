@@ -1,13 +1,9 @@
 <ul data-role="listview">
-  <% for usr in model %>
-	<li>
-		<%= link_to user_url(usr) do %>
-		  <%= render :partial => 'mobile/show_photo', :locals => {:model => usr, :vtype => 'ppic' }%>
-
-   		  <div class="pstr">
-		  	<h6><%= "#{usr.first_name} #{usr.last_name}" %></h6>
-		  </div>
-		<% end %>
-	</li>
+<% model.each do |sub| %>
+  <% unless sub.try(:user).blank?  %>
+    <% if !user_exists?(@user.trackeds, sub.user) && !user_exists?(@user.trackers, sub.user) && !same_user?(sub.user, @user) %>
+    	<%= render :partial => 'mobile/user_item', :locals => {:model => sub.user} %>
+    <% end %>
   <% end %>
+<% end %>	
 </ul>

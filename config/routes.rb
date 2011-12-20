@@ -18,7 +18,7 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches
+  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :notifications, :event_notices
   
   resources :events do 
     member do
@@ -42,7 +42,7 @@ Timemsgr::Application.routes.draw do
  
   resources :scheduled_events do
     member do
-      get 'clone'
+      get 'clone', 'add', 'notify', 'share'
     end
   end 
     
@@ -86,6 +86,8 @@ Timemsgr::Application.routes.draw do
   match '/home', 	:to => 'events#index'
   match '/home/user', :to => 'users#home' 
   match '/metrics', :to => 'users#metrics' 
+  match '/notify', :to =>  "events#notify"
+  match '/notice', :to =>  "events#notice"
     
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"

@@ -13,17 +13,11 @@
 	<div class="<%= !event.speaker.blank? ? 'span-6' : 'span-2' %>">
 		<span class="<%= !event.speaker.blank? ? 'prepend-4' : 'none' %>"><%= 'Summary:' %></span>	</div>
 	<div class="span-18 last"><%= event.bbody.html_safe %></div><br />
-	<% if !event.cbody.blank? %>
-	  <div class="span-2">
-		<span class="none"><%= 'Description:' %></span>
-	  </div>
-	  <div class="span-18 last"><%= event.cbody.html_safe %></div><br />
-	<% end %>
-<% else %>
-	<% if !event.cbody.blank? %>
-	<div class="<%= event.speaker.blank? && bbody?(event) ? 'span-6' : 'span-2' %>">
-		<span class="<%= event.speaker.blank? && bbody?(event) ? 'prepend-4' : 'none' %>"><%= 'Description:' %></span>
+<% end %>
+
+<% if !event.cbody.blank? %>
+	<div class="<%= !private_event?(event.event_type) ? 'span-6' : 'span-2' %>">
+		<span class="<%= !private_event?(event.event_type) ? 'prepend-4' : 'none' %>"><%= 'Details:' %></span>
 	</div>
 	<div class="span-18 last"><%= event.cbody.html_safe %></div><br />
-	<% end %>
 <% end %>

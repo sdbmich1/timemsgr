@@ -1,24 +1,21 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'My Connections'} %>
-
-<%= content_for :head do %>
-	<div data-role="navbar">
-	  	<ul>
-			<li><%= link_to "All", relationships_url(:user_id=>@user, :ctype => 'Private'), "data-theme"=>"a" %> </li>
-			<li><%= link_to "Private", private_relationships_url(:user_id=>@user, :ctype => 'Private'), "data-theme"=>"a" %> </li>
-			<li><%= link_to "Social", social_relationships_url(:user_id=>@user, :ctype => 'Social'), "data-theme"=>"a" %> </li>
-			<li><%= link_to "World", world_relationships_url(:user_id=>@user, :ctype => 'World') %> </li>	  		
-		</ul>
-	</div>
-<% end %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Add Connection'} %>
 
 <%= content_for :content do %>
-	<%= render :partial => 'mobile/user_list', :locals => {:users => @user.try(:trackers)}%>
+	<div class="center-wrapper">
+		<%= render :partial => 'mobile/show_photo', :locals => {:model => @user, :vtype => 'ppic', :file_name => 'headshot2.jpg', :psize=>'80x80' }%>
+		<h4><%= "#{@user.first_name} #{@user.last_name}" %></h4>
+	</div>
+	<% @user.affiliations.each do |aff| %>
+		<%= aff.name %><br />
+	<% end %>
 <% end %>
 
 <%= content_for :footer do %>
-	<div data-role="navbar">
-	  	<ul>
-			<li><%= link_to "Add", users_url(:user_id=>@user), "data-icon"=>"plus" %> </li>
+    <% if controller_name == 'users' %>
+	  <div data-role="navbar">
+		<ul>
+			<li><%= link_to "Select", relationships_url(:trk_id=>@user.id, :rtype=>@rel_type), :method => :post %></li>		
 		</ul>
-	</div>
+	  </div>
+	<% end %>
 <% end %>

@@ -8,6 +8,9 @@
 		<% unless holiday?(event.event_type) %>
  			<div class="slider-time"><%= chk_offset(event.eventendtime, event.endGMToffset, event.subscriptionsourceURL) %></div>
 			<div class="slider-stime"><%= chk_offset(event.eventstarttime, event.localGMToffset, event.subscriptionsourceURL) %></div>
+    		<div class="eid" data-eid="<%= event.id %>"></div>
+    		<div class="etype" data-etype="<%= event.event_type %>"></div>
+    		<div class="sdt" data-sdt="<%= event.eventstartdate %>"></div> 
 		<% end %>
  		<div class="slider-title">
 			<h1>

@@ -1,0 +1,34 @@
+<div class="span-20 last">
+<h3><center>Notifications</center></h3><hr />
+<table>
+  <tr>
+    <th></th>
+    <th>From</th>
+    <th>Sent</th>
+    <th>Event Name</th>
+    <th>Message</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th>Start</th>
+    <th>End</th>
+  </tr>
+  <% for event in @notices %>
+    <tr>
+      <td>
+        <div class="pic-size">
+          <%= render :partial => 'shared/show_photo', :locals => {:model => User.get_user(event.subscriberID), :file_name => "headshot1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+      <td><%= User.get_user(event.subscriberID).name %></td>
+      <td><%= event.created_at %></td>
+      <td><%= link_to event.event_name, event_path(:id=>event.event_id, :etype=>event.event_type), :id=>'notice-id' %></td>
+      <td><%= event.message %></td>
+      <td><%= event.start_date %></td>
+      <td><%= event.end_date %></td>
+      <td><%= event.start_time %></td>
+      <td><%= event.end_time %></td>
+    </tr>
+  <% end %>
+</table>
+</div>
+

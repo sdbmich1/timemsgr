@@ -1,13 +1,10 @@
-require 'rewards'
 class LifeEvent < ActiveRecord::Base
   set_table_name 'eventsobs'
   set_primary_key 'ID'
-  include Rewards # include rewards to add credits for user where appropriate
   
   belongs_to :channel
   
-  before_save :set_flds, :add_rewards
-  after_save :save_rewards 
+  before_save :set_flds
   
   attr_accessor :allday, :loc
   attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
@@ -60,16 +57,8 @@ class LifeEvent < ActiveRecord::Base
     new_event.eventstartdate = new_event.eventenddate = Date.today
     new_event
   end
-    
-   def add_rewards
-     @reward_amt = add_credits(self.changes)
-   end
-  
-   def save_rewards
-     save_credits(self.contentsourceID, 'Event', @reward_amt)
-   end
    
-   def set_flds
+  def set_flds
      
     if self.annualsamedate == 'no'
       self.eventmonth = self.eventstartdate.month
@@ -86,7 +75,7 @@ class LifeEvent < ActiveRecord::Base
     self.eventid = self.event_type[0..1] + Time.now.to_i.to_s 
     self.event_title = self.event_name
  
-    if status.nil?     
+    if new_record?     
       self.obscaltype = 'Gregorian'
       self.status = 'active'
       self.hide = 'no'

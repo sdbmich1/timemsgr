@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :load_data, :only => [:show, :index]
   layout :user_layout
   respond_to :html, :json, :xml, :js, :mobile
   include SetAssn
@@ -15,8 +16,7 @@ class UsersController < ApplicationController
   def edit   
     @area = params[:p]  # determine which profile area to edit
     @user = User.includes(:host_profiles).find(params[:id])
-    @host_profile = @user.host_profiles[0]
-    @picture = set_associations(@host_profile.pictures, 1)  
+    @picture = set_associations(@user.pictures, 1)  
   end
    
   def update       
@@ -31,18 +31,17 @@ class UsersController < ApplicationController
   
   def index
     @user = User.find params[:id]
-    @rel_type = params[:rtype]
     @subscriptions = @user.subscriptions
   end
   
   private
   
   def user_layout 
-    if mobile_device?
-      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
-    else
-      "users"
-    end
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application' : "users"
+  end
+  
+  def load_data
+    @rel_type = params[:rtype]  
   end  
     
 end

@@ -1,6 +1,7 @@
-require 'rewards'
 class User < ActiveRecord::Base
-  include Rewards   
+  include Rewards
+  acts_as_reader
+   
   before_create :set_timezone
   before_save :add_rewards
   after_save :save_rewards
@@ -19,7 +20,7 @@ class User < ActiveRecord::Base
   				  :first_name, :last_name, :birth_date, :gender, :location_id, :time_zone,
   				  :interest_ids, :category_ids, :channel_ids, :affiliations_attributes, 
   				  :host_profiles_attributes, :localGMToffset, :subscription_ids, :promo_code
-  				   #:session_pref_ids, :events_attributes,
+  				   #:session_pref_ids
   				  
   # name format validators
   uname_regex = /^[-\w\._@]+$/i
@@ -125,41 +126,49 @@ class User < ActiveRecord::Base
   def self.find_subscriber(uid)
     includes(:subscriptions => [:channel]).find(uid)
   end  
-  
-  def ssid
-    self.host_profiles[0].subscriptionsourceID
-  end
-  
+
   def profile
     self.host_profiles[0]
+  end
+    
+  def ssid
+    profile.subscriptionsourceID
   end
   
   def pictures
     profile.pictures
   end
   
+  def name
+    first_name + ' ' + last_name
+  end
+  
+  def self.get_user(sid)
+    HostProfile.get_user(sid)  
+  end
+  
   def private_events
-    self.host_profiles[0].private_events
+    profile.private_events
   end
   
   def scheduled_events
-    self.host_profiles[0].scheduled_events    
+    profile.scheduled_events    
   end
 
   def life_events
-    self.host_profiles[0].life_events    
+    profile.life_events    
   end
   
   def private_circle_events
-    self.host_profiles[0].private_events.private_circle   
+    profile.private_events.private_circle   
   end
   
   def social_circle_events
-    self.host_profiles[0].private_events.social_circle   
+    profile.private_events.social_circle   
   end
 
   def extended_circle_events
-    self.host_profiles[0].private_events.extended_circle   
+    profile.private_events.extended_circle   
   end  
 
 end

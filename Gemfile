@@ -33,6 +33,9 @@ gem 'validates_timeliness', '~> 3.0.2'
 # add google maps
 gem 'gmaps4rails'
 
+# add unread 
+gem 'unread'
+
 # add forms helper
 gem 'formtastic', '~> 1.2.3'
  

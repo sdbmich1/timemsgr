@@ -1,3 +1,5 @@
- 	<div class="stitle">
-		<h6><%= event.event_name %><%= " ( #{get_nice_date(event.eventstartdate)} )" %></h6>
-	</div>
+<ul id="js-news" class="js-hidden">
+    <li class="news-item"><a href="#">
+		<%= event.event_name.html_safe %><%= " ( #{get_nice_date(event.eventstartdate)} )" %>
+	</a></li>
+</ul>

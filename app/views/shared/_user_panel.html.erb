@@ -5,12 +5,18 @@
  	<div class="box">   
         <div class="quiet">
         	<center>
-        		<%= render :partial => 'shared/show_photo', :locals => {:model=>@host_profile, :psize=>"80x80", :file_name=>"#{showphoto(@user.gender)}"}%>
+        		<%= render :partial => 'shared/show_photo', :locals => {:model=>@user.profile, :psize=>"80x80", :file_name=>"#{showphoto(@user.gender)}"}%>
         	</center>
-            <center><%= "#{@user.first_name} #{@user.last_name}" %><br />
+            <center><%= "#{@user.name}" %><br />
 			<%= link_to "Edit Profile", edit_user_path(@user, {:p => "Profile"}) %></center>
         </div>     </div>
+     <div style="display:none"><div id='modal'>
+     	<div id="notice"><%= render :partial => 'shared/notices' %></div>
+     </div></div>
      <div class="sborder">
+     	<span>Notices: </span> <%= link_to get_unread_count(@user), "#modal", :id => "modalGroup", :class=>"notice_id notice-btn round" %>
+     </div>
+     <div class="pg-title sborder">
      	<%= render 'shared/progress_meter' %>
      </div> 	
 </div>  

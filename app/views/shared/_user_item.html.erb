@@ -1,10 +1,10 @@
 <div class="span-4">
     <div class="pic-size">
-	   <%= render :partial => 'shared/show_photo', :locals => {:model => model.host_profiles[0], :file_name => "headshot1.jpg", :psize => '48x48' } %>
+	   <%= render :partial => 'shared/show_photo', :locals => {:model => model.profile, :file_name => "headshot1.jpg", :psize => '48x48' } %>
 	</div>
     <span class="usr-label"><%= "#{model.first_name} #{model.last_name}" %></span><br />
     <% if controller_name == 'users' %>
-    	<%= link_to "Select", relationships_url(:trk_id=>model.id, :rtype=>@rel_type), :method => :post, :class=>"select-btn round" %>
+    	<%= link_to "Select", relationships_url(:trk_id=>model.id, :rtype=>@rel_type), :id=>'rel_id', :method => :post, :class=>"select-btn round" %>
 	<% else %>
 		<%= get_rel_type(@user.id, model.id) %><br />
       	<%= link_to "Cancel", relationship_url(:id=>@user, :tracker_id=>@user, :tracked_id=>model.id, :status=>'canceled'), :method=>:put, :class=>"select-btn round" %>

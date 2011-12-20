@@ -1,16 +1,14 @@
-require 'rewards'
 class PrivateEvent < ActiveRecord::Base
   set_table_name 'eventspriv'
   set_primary_key 'ID'
-  include Rewards # include rewards to add credits for user where appropriate
 
-  before_save :set_flds, :add_rewards
-  after_save :save_rewards
+  before_save :set_flds
+  
   attr_accessor :allday, :loc
  	attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
 				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
-				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset,
+				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, 
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes
 				        
@@ -22,7 +20,6 @@ class PrivateEvent < ActiveRecord::Base
   validates :eventstarttime, :presence => true, :allow_blank => false
   validates :eventendtime, :presence => true, :allow_blank => false
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
-#  validates :bbody, :length => { :maximum => 255 }  
 
 #  has_many :rsvps, :dependent => :destroy
 #  accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
@@ -58,7 +55,6 @@ class PrivateEvent < ActiveRecord::Base
   }  
   
   default_sphinx_scope :datetime_first
-
 	
 	scope :active, where(:status.downcase => 'active')
 	scope :unhidden, where(:hide.downcase => 'no')
@@ -115,17 +111,9 @@ class PrivateEvent < ActiveRecord::Base
   def reset_attr
     self.eventstartdate=self.eventenddate = nil
   end
-
-  def add_rewards
-    @reward_amt = add_credits(self.changes)
-  end
-  
-  def save_rewards
-    save_credits(self.contentsourceID, 'Event', @reward_amt)
-  end
      
   def set_flds
-    if status.nil?
+    if new_record?
       self.hide = "no"
       self.event_title = self.event_name
       self.postdate = Date.today

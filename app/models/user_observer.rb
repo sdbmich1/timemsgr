@@ -15,7 +15,7 @@ class UserObserver < ActiveRecord::Observer
     hp.ProfileType = 'Individual' 
     hp.LastName = user.last_name
     hp.FirstName = user.first_name
-    hp.HostName = hp.FullName = user.first_name + ' ' + user.last_name
+    hp.HostName = hp.FullName = user.name 
     hp.EMAIL = user.email
     hp.Gender = user.gender
     hp.StartMonth = user.created_at.month
@@ -26,7 +26,7 @@ class UserObserver < ActiveRecord::Observer
     hp.promoCode = user.promo_code 
     hp.status = 'active'
     hp.hide = 'no'
-    hp.HostChannelID = channelID,
+    hp.HostChannelID = channelID
     hp.subscriptionsourceID = channelID
     hp.save
     
@@ -43,7 +43,7 @@ class UserObserver < ActiveRecord::Observer
 	  # add subscription if promo code is valid
     unless hp.try(:promoCode).blank?
       channel = Channel.where("channelID = ?", hp.promoCode)    
-      Subscription.create(:user_id=>user.id, :channelID => channel[0].channelID, :contentsourceID => user.host_profiles[0].subscriptionsourceID) if channel
+      Subscription.create(:user_id=>user.id, :channelID => channel[0].channelID, :contentsourceID => user.ssid) if channel
     end
   end
 end

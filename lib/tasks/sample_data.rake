@@ -30,6 +30,15 @@ namespace :db do
   task :set_affiliations => :environment do
     build_affiliations
   end
+  
+  task :create_notice_types => :environment do
+    build_notice_types
+  end
+  
+  task :notice_types => :environment do
+    add_notice_type
+  end
+ 
 end  
  
 def build_profiles
@@ -52,6 +61,26 @@ def build_channels
      end
   end
   
+end
+
+def build_notice_types
+  et = EventType.where('code NOT IN ("log","party")')
+  plist = NoticeType.where(:event_type => 'party')
+  et.each do |e|
+    cnt = 0
+    plist.each do |p|
+      cnt =+ 1
+      NoticeType.find_or_create_by_code_and_event_type(p.code, e.code, :code=>p.code, :event_type=>e.code, 
+        :description=>p.description, :sortkey=>cnt)
+    end    
+  end
+end
+
+def add_notice_type
+  EventType.all.each do |et|
+    NoticeType.create(:code=>'schedule', :event_type=>et.code, :description=>'The following event has been scheduled.',
+    :sortkey=>1)
+  end
 end
 
 def build_affiliations

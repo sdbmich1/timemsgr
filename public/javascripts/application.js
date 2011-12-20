@@ -27,7 +27,7 @@ $(function (){
 $(function (){ 
   var toggleLoading = function() { $("#spinner").toggle() };
 
-  $("#connect_btn, #search_btn")
+  $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #rel_id")
     .bind("ajax:beforeSend",  toggleLoading)
     .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
@@ -120,4 +120,16 @@ $(function () {
          $.getScript(this.href);
          return false;   
    });
+});
+
+$(function () {
+   $("#submit-btn").live('click', function () {
+   	$.fancybox.close();
+   });
+});
+
+$(function () {
+  $(".notice_id").live('click',function() {
+    $.getScript('/notice.js');
+  })
 });

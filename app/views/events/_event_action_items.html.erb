@@ -6,14 +6,22 @@
 	<% end %>
 
 	<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
-		<%= link_to image_tag("ev-move.png", :class => " rsz-img"), scheduled_events_url(:id=>event, :etype=>event.event_type, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', :title => "Move", :method => :post %>
+		<%= link_to image_tag("ev-move.png", :class => " rsz-img"), scheduled_events_url(:id=>event, :etype=>event.event_type, :sdate=>event.eventstartdate), 
+				:id=>'schedule_btn' , :confirm => 'Add to your schedule?', :title => "Move", :method => :post, :remote => true %>
+	<% else %>
+	
+		<% if trackers? || trackeds? %>
+    		<div id="etype" data-etype="<%= event.event_type %>"></div>
+ 			<%= link_to image_tag("ev-notify.png", :class => " rsz-img"), :title => "Notify", :id=>'notify-rel' %> 
+			<%= link_to image_tag("ev-share.png", :class => " rsz-img"),  :title => "Share", :remote => true %> 
+		<% end %>
+	
+		<div style="display:none"><div id='modal'>
+        	<div id="notify"><%= render :partial => 'shared/notify', :locals=>{:etype=> event.event_type} %></div>
+    	</div></div>
 	<% end %>
 	
-	<%= link_to image_tag("ev-notify.png", :class => " rsz-img"), :title => "Notify", :remote => true %> 
-	<%= link_to image_tag("ev-share.png", :class => " rsz-img"),  :title => "Share", :remote => true %> 
-
 	<% if any_prices?(event) %>
-		<%= link_to image_tag("ev-coupon.png", :class => " rsz-img"), :title => "Offer", :remote => true %> 
 		<%= link_to image_tag("ev-shop.png", :class => " rsz-img"), :title => "Buy Now",  :remote => true %> 
 	<% end %>
 	

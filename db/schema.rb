@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111130235030) do
+ActiveRecord::Schema.define(:version => 20111217075653) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -164,6 +164,33 @@ ActiveRecord::Schema.define(:version => 20111130235030) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "event_notices", :force => true do |t|
+    t.integer  "event_id"
+    t.string   "Notice_ID"
+    t.string   "Notice_Type",    :limit => 20
+    t.string   "Notice_Text"
+    t.string   "event_type",     :limit => 20
+    t.string   "event_name"
+    t.string   "eventid"
+    t.datetime "eventstartdate"
+    t.datetime "eventstarttime"
+    t.datetime "eventenddate"
+    t.datetime "eventendtime"
+    t.string   "sourceID"
+    t.string   "sourceURL"
+    t.string   "status"
+    t.string   "hide"
+    t.integer  "sortkey"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "subscriberID"
+    t.string   "location"
+  end
+
+  add_index "event_notices", ["created_at"], :name => "index_event_notices_on_created_at"
+  add_index "event_notices", ["event_id", "event_type", "sourceID"], :name => "index_event_notices_on_event_id_and_event_type_and_sourceID"
+  add_index "event_notices", ["sourceID"], :name => "index_event_notices_on_sourceID"
 
   create_table "event_page_sections", :force => true do |t|
     t.string   "event_type"
@@ -592,6 +619,49 @@ ActiveRecord::Schema.define(:version => 20111130235030) do
 
   add_index "locations", ["country_id"], :name => "cnty_fkey_idx"
 
+  create_table "notice_types", :force => true do |t|
+    t.string   "code"
+    t.string   "event_type"
+    t.string   "description"
+    t.string   "hide"
+    t.integer  "sortkey"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :primary_key => "ID", :force => true do |t|
+    t.string   "Notice_ID",          :limit => 15
+    t.string   "Notice_Type",        :limit => 50
+    t.string   "Notice_Text"
+    t.string   "eventid",            :limit => 20
+    t.string   "event_type",         :limit => 20
+    t.string   "Comment"
+    t.string   "allowPrivCircle",    :limit => 5
+    t.string   "allowSocCircle",     :limit => 5
+    t.string   "allowWorldCircle",   :limit => 5
+    t.datetime "eventstartdate"
+    t.datetime "eventenddate"
+    t.datetime "eventstarttime"
+    t.datetime "eventendtime"
+    t.string   "email1address",      :limit => 100
+    t.string   "email2address",      :limit => 100
+    t.string   "email3address",      :limit => 100
+    t.string   "email4address",      :limit => 100
+    t.string   "email5address",      :limit => 100
+    t.string   "status",             :limit => 10
+    t.integer  "sortkey"
+    t.string   "hide",               :limit => 5
+    t.datetime "CreateDateTime"
+    t.datetime "LastModifyDateTime"
+    t.string   "LastModifyBy",       :limit => 50
+    t.string   "contentsourceID",    :limit => 50
+    t.string   "contentsourceURL",   :limit => 100
+    t.string   "event_name"
+    t.string   "location"
+    t.integer  "event_id"
+  end
+
   create_table "observance_events", :force => true do |t|
     t.string   "event_name"
     t.datetime "created_at"
@@ -673,6 +743,15 @@ ActiveRecord::Schema.define(:version => 20111130235030) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "read_marks", :force => true do |t|
+    t.integer  "readable_id"
+    t.integer  "user_id",                     :null => false
+    t.string   "readable_type", :limit => 20, :null => false
+    t.datetime "timestamp"
+  end
+
+  add_index "read_marks", ["user_id", "readable_type", "readable_id"], :name => "index_read_marks_on_user_id_and_readable_type_and_readable_id"
 
   create_table "relationships", :force => true do |t|
     t.integer  "tracked_id"

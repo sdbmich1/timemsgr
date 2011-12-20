@@ -1,7 +1,7 @@
   <tr>
     <th></th>
     <th>Name</th>
-    <th>Circle</th>
+    <th>Type</th>
     <th>Status</th>
     <th>Email</th>
     <th></th>
@@ -14,7 +14,7 @@
 	  		<%= render :partial => 'shared/show_photo', :locals => {:model => trkr.profile, :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= "#{trkr.first_name} #{trkr.last_name}" %></td>
+      <td><%= "#{trkr.name}" %></td>
       <td><%= get_rel_type(@user.id, trkr.id) %></td>
       <td><%= get_status(@user.id, trkr.id) %></td>
       <td><%= trkr.email %></td>

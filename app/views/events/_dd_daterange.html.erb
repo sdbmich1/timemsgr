@@ -1,9 +1,9 @@
 <dl class="dropdown">
-    <dt><a href="#"><span>KITS Today</span></a></dt>
+    <dt><a href="#"><span>Next 7 Days</span></a></dt>
     <dd>
         <ul>
 			<li><%= link_to "Today", events_url, {:class => "select-date", "data-numdays" => "0.days", :remote => true} %></li>
-			<li><%= link_to "KITS Today", events_url, {:class => "select-date", "data-numdays" => "7.days", :remote => true} %></li>
+			<li><%= link_to "Next 7 Days", events_url, {:class => "select-date", "data-numdays" => "7.days", :remote => true} %></li>
 			<li><%= link_to "Next 14 Days", events_url, {:class => "select-date", "data-numdays" => "14.days", :remote => true} %></li>
 			<li><%= link_to "Next 30 Days", events_url, {:class => "select-date", "data-numdays" => "30.days", :remote => true} %></li>
         </ul>

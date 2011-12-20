@@ -1,0 +1,6 @@
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Event' } %>
+
+<%= content_for :content do -%>
+	<center><h3>Notifications</h3></center><hr />
+	<div id="ev-results"><%= render 'notices' %></div>
+<% end -%>

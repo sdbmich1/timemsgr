@@ -1,0 +1,5 @@
+<ul data-role="listview">
+  <% for usr in model %>
+		<%= render :partial => 'mobile/user_item', :locals => {:model => usr} %>
+  <% end %>
+</ul>

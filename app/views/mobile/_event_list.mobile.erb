@@ -12,7 +12,7 @@
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => edate  } %>
     <% end %>
   <% else %>
-    <%= link_to event_url(event, :etype=>event.event_type) do %>
+    <%= link_to event_url(event, :etype=>event.event_type, :edate=>edate) do %>
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => edate  } %>
     <% end %>
   <% end %>

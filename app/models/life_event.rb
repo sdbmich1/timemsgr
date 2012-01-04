@@ -45,41 +45,76 @@ class LifeEvent < ActiveRecord::Base
     subscriptionsourceID
   end
   
+  def ssurl
+    subscriptionsourceURL
+  end
+    
   def cid
     contentsourceID
   end
+
+  def get_location
+    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  end
   
+  def get_place
+    mapplacename.blank? ? '' : mapplacename + ' '
+  end
+  
+  def csz
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+  end
+  
+  def location_details
+    get_location + csz
+  end  
+    
   protected
   
   def clone_event
     new_event = self.clone
-
     new_event.eventstartdate = new_event.eventenddate = Date.today
     new_event
   end
    
   def set_flds
-     
+    #set dates 
     if self.annualsamedate == 'no'
-      self.eventmonth = self.eventstartdate.month
-      self.eventday = self.eventstartdate.day
+      self.eventmonth, self.eventday = self.eventstartdate.month, self.eventstartdate.day
     else
-      self.eventgmonth = self.eventstartdate.month
-      self.eventgday = self.eventstartdate.day
-      self.eventenddate = self.eventstartdate+120.years
-      self.eventstarttime = Time.parse('00:00')
-      self.eventendtime = Time.parse('11:59')
+      self.eventgmonth, self.eventgday, self.eventenddate = self.eventstartdate.month, self.eventstartdate.day, self.eventstartdate+120.years
+      self.eventstarttime, self.eventendtime = Time.parse('00:00'), Time.parse('11:59')
     end
      
-    self.postdate = Time.now
+    self.postdate, self.event_title = Time.now, self.event_name
     self.eventid = self.event_type[0..1] + Time.now.to_i.to_s 
-    self.event_title = self.event_name
  
     if new_record?     
-      self.obscaltype = 'Gregorian'
-      self.status = 'active'
-      self.hide = 'no'
+      self.obscaltype, self.status, self.hide  = 'Gregorian', 'active', 'no'
     end 
   end
     
+  def self.set_status(eid)
+    event = LifeEvent.find(eid)
+    event.status = 'inactive'
+    event
+  end    
+
+  define_index do
+    indexes :event_name, :sortable => true
+    indexes :bbody, :sortable => true
+    indexes :cbody, :sortable => true
+    indexes :eventstartdate, :sortable => true
+    indexes :eventenddate, :sortable => true
+   
+    has :ID, :as => :event_id
+    has :event_type
+    where "(status = 'active' AND LOWER(hide) = 'no') "
+  end
+  
+  sphinx_scope(:datetime_first) { 
+    {:order => 'eventstartdate, eventstarttime ASC'}
+  }  
+  
+  default_sphinx_scope :datetime_first
 end

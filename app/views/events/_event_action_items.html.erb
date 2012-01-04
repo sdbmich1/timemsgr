@@ -16,9 +16,6 @@
 			<%= link_to image_tag("ev-share.png", :class => " rsz-img"),  :title => "Share", :remote => true %> 
 		<% end %>
 	
-		<div style="display:none"><div id='modal'>
-        	<div id="notify"><%= render :partial => 'shared/notify', :locals=>{:etype=> event.event_type} %></div>
-    	</div></div>
 	<% end %>
 	
 	<% if any_prices?(event) %>

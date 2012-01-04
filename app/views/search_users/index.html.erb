@@ -1,0 +1,6 @@
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
+
+<%= content_for :content do -%>
+	<center><h3 class="grp-hdr">Search Results</h3></center><hr />
+	<div id="rel_form"><%= render :partial => 'shared/connections', :locals => { :model => @users } %></div>
+<% end -%>

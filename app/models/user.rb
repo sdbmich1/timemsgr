@@ -1,10 +1,7 @@
 class User < ActiveRecord::Base
-  include Rewards
   acts_as_reader
    
   before_create :set_timezone
-  before_save :add_rewards
-  after_save :save_rewards
     
   # Include default devise modules. Others available are:
   # :token_authenticatable,  :lockable and :timeoutable
@@ -49,11 +46,9 @@ class User < ActiveRecord::Base
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :status => 'active'}
   
-#  has_many :events, :through => :host_profiles, :source => "subscriptionsourceID"
   has_many :transactions
   
   belongs_to :location
-#  has_many :associates  
   
   has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
@@ -77,7 +72,7 @@ class User < ActiveRecord::Base
   has_many :pending_extended_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'extended' AND status = 'pending'"
 
   has_many :reverse_relationships, :foreign_key => "tracked_id", :class_name => "Relationship", :dependent => :destroy
-  has_many :trackers, :through => :reverse_relationships, :source => :tracker #, :conditions => "status = 'accepted'"
+  has_many :trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "status = 'accepted'"
   has_many :private_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'accepted'"
   has_many :social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
   has_many :extended_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'extended' AND status = 'accepted'"
@@ -92,15 +87,7 @@ class User < ActiveRecord::Base
     login = conditions.delete(:login)
     where(conditions).where(["username = :value OR email = :value", { :value => login }]).first
   end
-  
-  def add_rewards  
-    @reward_amt = add_credits(self.changes) if self.changed?
-  end
-  
-  def save_rewards    
-    save_credits(self.id, 'Profile', @reward_amt) unless @reward_amt.blank? || @reward_amt == 0
-  end
-   
+     
   # set default time zone for new users
   def set_timezone
 #    loc = Location.where(["id = :value", { :value => self.location_id }]).first
@@ -139,6 +126,14 @@ class User < ActiveRecord::Base
     profile.pictures
   end
   
+  def prof_id
+    profile.ProfileID
+  end
+  
+  def hostname
+    profile.HostName
+  end
+  
   def name
     first_name + ' ' + last_name
   end
@@ -170,5 +165,18 @@ class User < ActiveRecord::Base
   def extended_circle_events
     profile.private_events.extended_circle   
   end  
-
+  
+  define_index do
+    indexes :first_name, :sortable => true
+    indexes :last_name, :sortable => true
+    indexes [first_name, last_name], :as => :name, :sortable => true
+   
+    has :id, :as => :user_id
+  end 
+   
+  sphinx_scope(:name_first) { 
+    {:order => 'last_name, first_name ASC'}
+  }  
+  
+  default_sphinx_scope :name_first
 end

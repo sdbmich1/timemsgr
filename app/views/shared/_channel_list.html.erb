@@ -1,24 +1,36 @@
-<div class='nav-left'>
-  <strong>Channels:</strong>
-</div>
-<div class='nav-right'>
-  <%= link_to "Add Channel", new_channel_path, :id=>"link-btn", :class=>"round" %>
-</div>
-<div class="clear-all"><div>
-<br />
 <table>
   <tr>
-    <th>Channel Name</th>
-    <th>Overview</th>
-    <th>Status</th>
+    <th></th>
+    <th>Name</th>
+    <th>Summary</th>
+    <th>Subscribers</th>
     <th></th>
   </tr>
-  <% for channel in @channels %>
-    <tr>
-      <td><%= link_to channel.channel_name, channel %></td>
-      <td><%= channel.bbody %></td>
-      <td><%= channel.status.titleize %></td>
-      <td><%= link_to "Edit", edit_channel_path(channel) %></td>
-    </tr>
+  <% @channels.each do |channel| %>
+    <% unless channel.blank? %>
+     <tr>
+      <td>
+        <div class="pic-size">
+	  		<%= render :partial => 'shared/show_photo', :locals => {:model => channel, :file_name => "headshot1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+      <td><%= channel.channel_name %></td>
+      <td><%= channel.summary %></td>
+      <td><center><%= channel.subscriptions.size %></center></td>
+	  <td>
+	  	<% if subscribed?(channel.channelID)%>
+			<%= link_to "Unsubscribe", subscriptions_url(:user_id=>@user, :channel_id => channel.channelID), :id=>'unsub_btn', :method=>:delete, :confirm => 'Are you sure?', :remote=>true %>
+	  	<% else %>
+			<%= link_to "Subscribe", subscriptions_url(:user_id=>@user, :channel_id => channel), :id=>'subscribe_btn', :method=>:post %>
+	  	<% end %>
+	  </td>
+     </tr>
+    <% end %>
   <% end %>
 </table>
+<% if @interest %>
+	<%= hidden_field_tag 'interest_id', @interest %>
+<% end %>
+<div class="nav-right">
+  <%= will_paginate @channels %>
+</div>

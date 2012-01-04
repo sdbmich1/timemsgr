@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   layout :page_layout
 	
 	def show
- 		@event = Event.find_event(params[:id], params[:etype])
+ 		@event = Event.find_event(params[:id], params[:etype], params[:sdate])
  		@sponsor_pages = @event.try(:sponsor_pages)
  		@notification = Notification.new
     mobile_device? ? @presenters = @event.presenters : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
@@ -12,6 +12,7 @@ class EventsController < ApplicationController
 	
 	def index
     @events = Event.find_events(@enddate, @user.profile)
+#    @events = Event.get_schedule(@enddate, @user)
     @notices = EventNotice.get_notices(@user.ssid)
   end
   
@@ -26,13 +27,13 @@ class EventsController < ApplicationController
  	private
  	
  	def page_layout 
-    mobile_device? ? action_name == 'show' ? 'showitem' : 'list' : "events"
+    mobile_device? ? action_name == 'show' ? 'showitem' : 'list' : action_name == 'show' ? 'showevent' : "events"
   end    
  	
  	def load_data
  	  @quote = Promo.random
  	  @notice_types = NoticeType.find_types(params[:etype]) if params[:etype]
-    params[:end_date] ? @enddate = Date.today+params[:end_date].to_i.days : @enddate = Date.today+7.days #@events.last.eventenddate
+    params[:end_date] ? @enddate = Date.today+params[:end_date].to_i.days : @enddate = Date.today+7.days 
 	end
 
 end

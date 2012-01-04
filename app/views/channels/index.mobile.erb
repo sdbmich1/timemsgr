@@ -1,9 +1,5 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'Suggested Connections'} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Channels'} %>
 
 <% content_for :content do %>
-	<% @subscriptions.each do |sub| %>
-		<% unless sub.try(:channel).blank? %>
-			<%= render :partial => 'mobile/user_list', :locals => {:model => sub.channel.subscriptions }%>
-		<% end %>
-	<% end %>
+	<%= render "channels" %>
 <% end %>

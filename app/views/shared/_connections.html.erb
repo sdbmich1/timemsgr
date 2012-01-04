@@ -1,8 +1,10 @@
 <div class="nav-right">
-  <%= link_to "+ Add", users_path(:id => @user, :rtype => @rel_type), :class=>"select-btn round"  %>
-</div>
-  <% model.each do |trkr| %>
-    <% unless trkr.blank? %>
- 		<%= render :partial => 'shared/user_item', :locals => {:model => trkr} %>
-    <% end %>
+  <% if @rel_type %>
+  	<%= link_to "+ Add", users_path(:id => @user, :rtype => @rel_type), :class=>"link-btn round" %>
+  <% else %>
+  	<%= link_to "+ Private", users_path(:id => @user, :rtype => 'Private'), :class=>"link-btn round" %>
+  	<%= link_to "+ Social", users_path(:id => @user, :rtype => 'Social'), :class=>"link-btn round" %>
+  	<%= link_to "+ World", users_path(:id => @user, :rtype => 'Extended'), :class=>"link-btn round" %>
   <% end %>
+</div>
+<div id="user_form"><%= render :partial => 'shared/suggested_users', :locals => {:model => model} %></div>

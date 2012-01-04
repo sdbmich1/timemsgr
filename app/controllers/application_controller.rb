@@ -15,23 +15,24 @@ class ApplicationController < ActionController::Base
   
   protected
   
-  def rescue_with_handler(exception)
-    redirect_to '/500.html'
-  end       
+#  def rescue_with_handler(exception)
+#    redirect_to '/500.html'
+#  end       
   
-  def method_missing(id, *args)
-    redirect_to '/404.html'
-  end
+#  def method_missing(id, *args)
+#    redirect_to '/404.html'
+#  end
 
   def load_settings
     if user_signed_in?
 #      Time.zone = current_user.time_zone
-      @credits = get_credits(current_user.id)
-      @meters = get_meter_info     
       @user = current_user
-      @host_profile = @user.host_profiles.first
-    end 
+      @credits, @meters = get_credits(current_user.id), get_meter_info  
+      params[:location] ? loc = params[:location] : loc = current_user.location_id 
+      @location = Location.find_location loc
+    end        
   end
+
   
   private
   

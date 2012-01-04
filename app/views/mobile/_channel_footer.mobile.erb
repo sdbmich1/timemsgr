@@ -2,9 +2,9 @@
 	<div data-role="navbar">
 	  <ul>
 	  	<% if subscribed?(channel.channelID)%>
-			<li><%= link_to "Unsubscribe", unsubscribe_subscription_url(:user_id=>@user, :channel_id => @channel.channelID), :confirm => 'Are you sure?', "data-icon"=>"minus", :remote=>true %> </li>
+			<li><%= link_to "Unsubscribe", subscriptions_url(:user_id=>@user, :channel_id => @channel.channelID), :confirm => 'Are you sure?', "data-icon"=>"minus", :method=>:delete, :remote=>true %> </li>
 	  	<% else %>
-			<li><%= link_to "Join", subscriptions_url(:user_id=>@user, :channel_id => @channel), "data-icon"=>"add", :method=>:post %> </li>
+			<li><%= link_to "Subscribe", subscriptions_url(:user_id=>@user, :channel_id => @channel), "data-icon"=>"add", :method=>:post %> </li>
 	  	<% end %>
 	  </ul>
 	</div>

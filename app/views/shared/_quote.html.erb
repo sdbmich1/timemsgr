@@ -1,1 +1,1 @@
-<% unless getquote.nil? %>	<span class="q-msg"><%= raw truncate(getquote.bbody, :length => 80, :omission =>"…") %></span>	<% unless getquote.speaker.blank? %>		<p><span class="q-spkr"><%= "#{getquote.speaker}" %></span></p>	<% end %><% end %>	
+<% unless getquote.nil? %>	<span class="q-msg"><%= raw truncate(getquote.bbody.html_safe, :length => 80, :omission =>"…") %></span>	<% unless getquote.speaker.blank? %>		<p><span class="q-spkr"><%= "#{getquote.speaker}" %></span></p>	<% end %><% end %>	

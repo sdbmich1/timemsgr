@@ -1,6 +1,5 @@
 class ScheduledEventsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create]
-  before_filter :load_data
+  before_filter :authenticate_user! #, :except => [:create]
   include ResetDate, SetAssn
   layout :page_layout
 
@@ -25,9 +24,13 @@ class ScheduledEventsController < ApplicationController
   end
 
   def destroy
-    @event = ScheduledEvent.find(params[:id])
-    @event.destroy
-    redirect_to events_url, :notice => "Successfully destroyed life event."
+    @event = ScheduledEvent.set_status(params[:id])
+    @event.save ? flash[:notice] = "Removed event from schedule." : flash[:notice] = "Unable to remove event from schedule."
+    respond_to do |format|
+      format.html { redirect_to(events_url) } 
+      format.mobile { redirect_to(events_url) }
+      format.js {@events = PrivateEvent.get_event_data(params[:page], current_user.ssid, params[:sdate])}
+    end   
   end
     
   def clone  
@@ -37,15 +40,7 @@ class ScheduledEventsController < ApplicationController
   private
   
   def page_layout 
-    if mobile_device?
-      (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application'
-    else
-      "events"
-    end
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application' : "events"
   end    
-    
-  def load_data
-    @user = current_user
-    @host_profile = @user.host_profiles.first
-  end  
+
 end

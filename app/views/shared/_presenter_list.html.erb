@@ -6,7 +6,7 @@
     <th>Company</th>
     <th>Bio</th>
   </tr>
-  <% for presenter in @presenters %>
+  <% for presenter in @presenters.uniq %>
     <tr>
       <td>
         <div class="pic-size">

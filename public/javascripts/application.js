@@ -23,11 +23,15 @@ $(function (){
     }	
 }); 
 
+function toggleLoading () { 
+	$("#spinner").toggle(); 
+}
+
 // add spinner to ajax events
 $(function (){ 
-  var toggleLoading = function() { $("#spinner").toggle() };
+//  var toggleLoading = function() { $("#spinner").toggle() };
 
-  $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #rel_id")
+  $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .bind("ajax:beforeSend",  toggleLoading)
     .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
@@ -116,7 +120,7 @@ $(function(){
   });
   
 $(function () {
-   $("#ev-results .pagination a, #event_form .pagination a").live('click', function () {
+   $("#ev-results .pagination a, #event_form .pagination a, #channel_form .pagination a").live('click', function () {
          $.getScript(this.href);
          return false;   
    });
@@ -131,5 +135,58 @@ $(function () {
 $(function () {
   $(".notice_id").live('click',function() {
     $.getScript('/notice.js');
+  })
+});
+
+$(function () {
+  $(".channel_menu").live('click',function() {
+    var intid = $(this).attr("data-intid");
+    var loc = $('#location_id').val();
+    
+    $('ul.menu li ul li a').css('background-color', '#ccc');
+	$(this).css('background-color', '#C2E1EF');
+    $.getScript('/select.js?location=' + loc + "&interest_id=" + intid);
+  })
+});
+
+// toggle navigation menu background color to denote active selection
+$(function (){
+   $(".all_btn, .prv_btn, .soc_btn, .ext_btn, .pend_btn, .nav_btn").live('click', function () {
+	 $('ul.menu li a').css('background-color', '#0C6FCB');
+	 $(this).css('background-color', '#f08103');
+	})
+});
+
+$(function (){
+
+  // when the #location id field changes
+  $("select[id*=location_id]").live('change',function() {
+
+     	// grab the selected location
+     	var loc = $(this).val().toLowerCase();
+     	
+     	// check if interest is selected to call appropriate script
+     	if ( $('#interest_id').length != 0 )
+     	{
+     		var intid = $('#interest_id').val();
+     		var url = '/select.js?location=' + loc + "&interest_id=" + intid;
+     	}
+     	else
+     	{
+     		var url = '/categories.js?location=' + loc;
+     	}
+     	
+		$.ajax({
+  			url: url,
+  			dataType: 'script',
+  			'beforeSend': function() {
+  				toggleLoading();
+  			},
+  			'complete':  function() {  				
+  				toggleLoading();
+    		},
+  			'success': function() {}  
+		});
+		return false;       
   })
 });

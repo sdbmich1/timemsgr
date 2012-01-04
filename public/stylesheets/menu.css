@@ -1,4 +1,4 @@
-#menu {
+#knnmenu {
     background-color: #0c6fcb;
     width: 950px;
     height:30px;
@@ -7,12 +7,12 @@
     color: #ffffff; position:absolute; top: 0;
 }
 
-#menu img {
+#knnmenu img {
 	vertical-align: baseline;
 	margin-top:3px;
 }
 
-#menu input {
+#knnmenu input {
 	margin-top:3px;
 	float:left;
 	height:20px;
@@ -21,10 +21,10 @@
 .menu-offset {
    background-color: #0c6fcb;
 /*    margin-left:15%; */
-    margin-bottom: 20px; 
+    margin-bottom: 0px; 
 }
 
-#menu ul {
+#knnmenu ul {
   font-family: Arial, Verdana;
   font-size: 12px;
   font-weight:bold;
@@ -34,13 +34,13 @@
   list-style: none;
 }
 
-#menu li {  
+#knnmenu li {  
 	list-style: none;
   	position: relative;
 
 }
 
-#menu ul li {
+#knnmenu ul li {
   display: block;
   position: relative;
   float: left;
@@ -67,9 +67,9 @@
   padding: 10px;
 }
 
-#menu li ul { display: none; }
+#knnmenu li ul { display: none; }
 
-#menu ul li a {
+#knnmenu ul li a {
   display: block;
   text-decoration: none;
   color: #ffffff;
@@ -84,24 +84,24 @@
 	background:#0c6fcb url('../images/down.gif') no-repeat scroll right center;
 }
 
-#menu ul li a:hover { background: #f08103 ; }
+#knnmenu ul li a:hover { background: #f08103 ; }
 
-#menu li:hover ul {
+#knnmenu li:hover ul {
   display: block;
   position: absolute;
   z-index: 5;
 }
 
-#menu ul a { text-decoration: none; }
+#knnmenu ul a { text-decoration: none; }
 
-#menu li:hover li {
+#knnmenu li:hover li {
   float: none;
   font-size: 10px;
 }
 
-#menu li:hover a { background: #0c6fcb; }
+#knnmenu li:hover a { background: #0c6fcb; }
 
-#menu li:hover li a:hover { background: #f08103; }
+#knnmenu li:hover li a:hover { background: #f08103; }
 
 .menu-bkgd {position: absolute; top: 0; width: 100%; background-color: #0c6fcb; height: 30px;
  }

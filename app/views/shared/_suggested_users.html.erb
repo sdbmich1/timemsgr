@@ -1,0 +1,1 @@
+<div class="prepend-1">  <% model.each do |trkr| %>    <% unless trkr.blank? %> 		<%= render :partial => 'shared/user_item', :locals => {:model => trkr} %>    <% end %>  <% end %></div>

@@ -1,4 +1,2 @@
-$("#errorExplanation").hide(300);
-$("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
-$("#flash_notice").show(300);
-$("#event_form").html("<%= escape_javascript( render(:partial => "event_list") ) %>");
+$("#event_form").html("<%= escape_javascript( render(:partial => "shared/event_list") ) %>");
+$("#spinner").hide();

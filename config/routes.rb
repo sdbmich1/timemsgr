@@ -18,7 +18,7 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :notifications, :event_notices
+  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, :search_users
   
   resources :events do 
     member do
@@ -47,7 +47,7 @@ Timemsgr::Application.routes.draw do
   end 
     
   # controllers for event related content
-  resources :members, :promotions, :presenters, :event_sessions, :transactions
+  resources :members, :promotions, :presenters, :event_sessions, :transactions, :subscriptions, :notifications, :event_notices
   
   resources :relationships do
     collection do
@@ -58,11 +58,6 @@ Timemsgr::Application.routes.draw do
   resources :affiliations do
     get :autocomplete_organization_OrgName, :on => :collection
   end  
-    
-  resources :subscriptions do
-    put 'cancel', :on => :collection
-    get 'add','unsubscribe', :on => :member
-  end
   
   resources :users 
   
@@ -88,6 +83,7 @@ Timemsgr::Application.routes.draw do
   match '/metrics', :to => 'users#metrics' 
   match '/notify', :to =>  "events#notify"
   match '/notice', :to =>  "events#notice"
+  match '/select', :to =>  "channels#select"
     
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"

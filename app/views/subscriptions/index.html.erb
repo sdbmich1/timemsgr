@@ -1,7 +1,12 @@
-<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Profile' } %>
 
 <%= content_for :content do -%>
-	<center><h3>My Subscriptions</h3></center><hr />
-	<%= render 'subscriptions' %>
+	<div class="pg-title">
+		<center><h3 class="grp-hdr">My Subscriptions</h3></center><hr />
+		<%= render 'subscriptions' %>
+	</div>
 <% end -%>
 
+<%= content_for :footer do %>
+	<%= render 'layouts/footer' %>
+<% end %>

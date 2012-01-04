@@ -5,9 +5,9 @@
  	  	<%= render 'shared/initialize' %>
 
    		<% if user_signed_in? %>
-   			<%= javascript_include_tag 'formfield.js', "autocomplete-rails.js", :cache => true %>
+   			<%= javascript_include_tag "autocomplete-rails.js",'menu.js', :cache => true %>
    		<% end %>
-		<%= stylesheet_link_tag 'layout','screen','users', :media => 'screen', :cache => true %> 
+		<%= stylesheet_link_tag 'layout','screen','users','style', :media => 'screen', :cache => true %> 
  	  	<%= yield :head %>
   </head>
   <body>

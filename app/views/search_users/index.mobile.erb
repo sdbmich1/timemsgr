@@ -1,0 +1,10 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Search Results'} %>
+
+<% content_for :srch_content do %>
+	<%= render :partial => 'mobile/user_search' %>
+<% end %>
+<%= content_for :content do -%>
+<ul data-role="listview">
+	<%= render :partial => 'mobile/user_list', :collection => @users %>
+</ul>
+<% end -%>

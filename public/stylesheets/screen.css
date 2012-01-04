@@ -175,20 +175,27 @@ div.boolean {
 	
 }
 
-a.select-btn {
+a.select-btn, a.link-btn {
   display: block;
   text-align: center;
   margin-top: 1px;
   width: 60px;
   height: 22px;
-  font-size: 12px; 
+  font-size:0.8em;
   color: #ffffff;
-  background: #f08103;
+  background: #0C6FCB;
   font-weight: bold;
   z-index: 99;
   vertical-align: middle;
-  padding-top: 5px;
-  margin-bottom: 20px;
+  padding-top: 8px;
+}
+
+a.select-btn {
+  margin-bottom: 20px;	
+}
+
+a.link-btn {
+  margin-bottom: 5px;		
 }
 
 .interest label { font-weight: bold; }

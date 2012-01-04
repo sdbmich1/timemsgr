@@ -17,7 +17,6 @@ class HostProfile < KitsTsdModel
   
   has_many :events, :through => :channels 
   has_many :scheduled_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
-  has_many :private_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
   has_many :life_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def private_circle
       where(:allowPrivCircle => 'yes')
@@ -67,6 +66,14 @@ class HostProfile < KitsTsdModel
   def self.get_user(ssid)
     hp = HostProfile.includes(:user).find_by_subscriptionsourceID(ssid)
     hp.user
+  end
+  
+  def ssid
+    subscriptionsourceID
+  end
+  
+  def cid
+    contentsourceID
   end
           
 end

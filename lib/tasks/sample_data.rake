@@ -3,17 +3,17 @@ require 'faker'
 namespace :db do
   desc "Fill database with sample data"
   task :populate => :environment do
- #   Rake::Task['db:reset'].invoke
- #   Rake::Task['db:seed'].invoke
+    Rake::Task['db:reset'].invoke
+    Rake::Task['db:seed'].invoke
  
- 	# add category data
- #	make_categories
+ 	  # add category data
+ 	  make_categories
  	
- 	# add channels by location
-# 	make_channels
+ 	  # add channels by location
+ 	  make_channels
 
     # add organizations  
- #   make_orgs
+    make_orgs
  
     # add channel locations
     set_channel_locations
@@ -157,4 +157,12 @@ def add_host_profile
     u.host_profile.create()    
   end
 end 
+
+def set_presenter_eventid
+  EventPresenter.all.each do |p|
+    event = Event.find p.event_id
+    p.eventid = event.eventid
+    p.save
+  end
+end
     

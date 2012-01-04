@@ -5,6 +5,7 @@ log/
 config/database.yml
 config/sphinx.yml
 config/*.sphinx.conf
+db/sphinx/
 tmp/
 vendor/cache/
 vendor/bundle/

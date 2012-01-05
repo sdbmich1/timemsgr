@@ -14,7 +14,7 @@ module EventsHelper
   end
   
   def major_event?(etype)
-    (%w(cnf cnv fest crs sem prf trmt).detect { |x| x == etype})
+    (%w(cnf conf cnv fest crs sem prf trmt).detect { |x| x == etype})
   end
     
   def life_event?(etype)
@@ -22,11 +22,15 @@ module EventsHelper
   end
 
   def private_event?(etype)
-    etlist = PrivateEventType.all.detect {|x| x.code == etype }
+    PrivateEventType.all.detect {|x| x.code == etype }
   end
   
   def tsd_event?(etype)
-    etlist = TsdEventType.active.detect {|x| x.code == etype }
+    TsdEventType.active.detect {|x| x.code == etype }
+  end
+  
+  def trkr_event?(uid)
+    (@user.private_trackers | @user.private_trackeds).detect {|x| x.ssid == uid }
   end
 
   def current?(sdt)
@@ -172,7 +176,7 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    @events.select {|e| e.cid == @user.ssid && e.eventstartdate.to_date == dt }     
+    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.eventstartdate.to_date == dt }.sort_by {|x| x.eventstarttime}     
   end
   
   def get_appointments
@@ -215,12 +219,24 @@ module EventsHelper
   end
   
   def get_logo_size(val)
-    list = LogoType.logo_size(val)
+    LogoType.logo_size(val)
+  end
+  
+  def set_event_text(event, fname, dt)
+    event.event_name = event.event_name + ' (' + fname + ')' if event.eventstartdate.to_date == dt
+    event    
+  end
+  
+  def get_trkr_schedule(usr, elist, dt)
+    (usr.private_trackers | usr.private_trackeds).each do |pt|
+      elist = elist | pt.private_events.map {|e| set_event_text(e, pt.first_name, dt)}
+    end
+    elist
   end
     
   # build default schedule for new web-based users 
   def get_opportunities(edate)
-    events = [];  t = Time.now
+    events, t = [], Time.now
     (Date.today..edate).each do |dt|
       start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 1)
       end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 2)
@@ -304,7 +320,7 @@ module EventsHelper
         dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
       end
     else
-      @date_s = "#{start_dt.strftime("%D")} - #{end_dt.strftime("%D")}" 
+      start_dt.blank? ? @date_s = "#{end_dt.strftime("%A, %B %e, %Y")}" : @date_s = "#{start_dt.strftime("%D")} - #{end_dt.strftime("%D")}" 
     end     
 	end
 	
@@ -346,4 +362,8 @@ module EventsHelper
   def get_nice_time(val)
     val.blank? ? '' : val.strftime('%l:%M %p')
   end
+  
+  def get_local_time(tm)
+    tm.utc.getlocal.strftime('%m/%d/%Y %I:%M%p')
+  end  
 end

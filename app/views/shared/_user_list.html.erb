@@ -1,6 +1,6 @@
 <% model.each do |sub| %>
   <% unless sub.try(:user).blank?  %>
-    <% if !user_exists?(@user.trackeds, sub.user) && !user_exists?(@user.trackers, sub.user) && !same_user?(sub.user, @user) %>
+    <% if !user_exists?(@user.trackeds | @user.trackers, sub.user) && !user_exists?(@user.pending_trackers | @user.pending_trackeds, sub.user) && !same_user?(sub.user, @user) %>
     	<%= render :partial => 'shared/user_item', :locals => {:model => sub.user} %>
     <% end %>
   <% end %>

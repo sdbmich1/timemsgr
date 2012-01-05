@@ -1,0 +1,1 @@
+$("#user_form").html("<%= escape_javascript( raw render(:partial => 'shared/suggested_users', :locals => { :model => @users }) ) %>");

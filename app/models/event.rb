@@ -7,7 +7,7 @@ class Event < KitsTsdModel
   has_many :session_relationships, :dependent => :destroy
   has_many :sessions, :through => :session_relationships, :dependent => :destroy
 
-  has_many :event_presenters, :dependent => :destroy
+  has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid, :dependent => :destroy
   has_many :presenters, :through => :event_presenters, :dependent => :destroy
 
   has_many :event_sites, :dependent => :destroy
@@ -73,13 +73,23 @@ class Event < KitsTsdModel
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype, eid, etype])        
   end
   
-  def self.find_event(eid, etype)
-    get_event(eid, etype).try(:first)
+  def self.find_event(eid, etype, sdate)
+    event = get_event(eid, etype).try(:first)
+    event.eventstartdate = sdate
+    event
   end 
   
   def self.find_events(edate, hp) 
     edate.blank? ? edate = Date.today+7.days : edate 
-    hp.blank? ? current_events(edate) : current(edate, hp.subscriptionsourceID)    
+    hp.blank? ? current_events(edate) : current(edate, hp.ssid)    
+  end
+  
+  def self.get_schedule(edate, usr)
+    elist = Event.find_events(edate, usr.profile)
+    usr.private_trackers.each do |pt|
+      elist = elist | pt.private_events
+    end
+    elist   
   end
   
   def self.get_event_details(eid)
@@ -92,6 +102,18 @@ class Event < KitsTsdModel
   
   def cid
     contentsourceID
+  end
+  
+  def ssurl
+    subscriptionsourceURL
+  end
+  
+  def start_date
+    eventstartdate.to_date
+  end
+  
+  def end_date
+    eventenddate.to_date
   end
   
   def get_location

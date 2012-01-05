@@ -4,7 +4,7 @@ class EventNotice < ActiveRecord::Base
   
   attr_accessible :eventid, :event_id, :event_name, :event_type,
                   :eventstartdate, :eventstarttime, :eventenddate, :eventendtime, :Notice_Type, :Notice_Text, 
-                  :sourceID, :subscriberID, :Notice_ID, :location
+                  :sourceID, :subscriberID, :Notice_ID, :location, :user_id
                   
   def self.find_notices(sid)
     find_by_sourceID(sid)

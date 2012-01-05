@@ -39,13 +39,43 @@ class Channel < KitsTsdModel
   end
   
   def self.get_interests(loc, int_id)
-    find_by_sql([
+    find_by_sql(["#{getSQL}", loc, int_id])
+  end
+  
+  def self.find_channel(cid)
+    includes(:subscriptions => [{:user=>[{:host_profiles=>[:scheduled_events, :private_events]}]}]).find(cid)
+  end  
+  
+  def self.getSQL
     "(SELECT c.* FROM `kitsknndb`.channels c 
     INNER JOIN `kits_development`.channel_locations cl ON cl.channel_id = c.id 
     INNER JOIN `kits_development`.locations l ON cl.location_id=l.id
     INNER JOIN `kitsknndb`.channel_interests i ON i.channel_id = c.id 
     WHERE c.status = 'active' AND c.hide = 'no' 
     AND (cl.location_id = ?) 
-    AND (i.interest_id in (?))) ORDER BY sortkey ASC", loc, int_id])
+    AND (i.interest_id in (?))) ORDER BY sortkey ASC"
   end
+  
+  def summary
+    bbody.blank? ? '' : bbody[0..59] 
+  end
+  
+  def ssid
+    subscriptionsourceID
+  end
+  
+  def self.channel_list(loc, int_id, pg)
+    paginate_by_sql(["#{getSQL}", loc, int_id], :page => pg, :per_page => 15 )
+  end
+  
+  define_index do
+    indexes :channel_name, :sortable => true
+    indexes :bbody
+    indexes :cbody
+    indexes channel_locations.location_id, :as => :location_id
+   
+    has :id, :as => :channel_id
+    where "(status = 'active' AND hide = 'no') "
+  end    
+
 end

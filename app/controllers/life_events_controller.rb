@@ -36,9 +36,13 @@ class LifeEventsController < ApplicationController
   end
 
   def destroy
-    @event = LifeEvent.find(params[:id])
-    @event.destroy
-    redirect_to events_url, :notice => "Successfully destroyed life event."
+    @event = LifeEvent.set_status(params[:id])
+    @event.save ? flash[:notice] = "Removed event from schedule." : flash[:notice] = "Unable to remove event from schedule."
+    respond_to do |format|
+      format.html { redirect_to(events_url) } 
+      format.mobile { redirect_to(events_url) }
+      format.js {@events = PrivateEvent.get_event_data(params[:page], current_user.ssid, params[:sdate])}
+    end  
   end
     
   def clone  

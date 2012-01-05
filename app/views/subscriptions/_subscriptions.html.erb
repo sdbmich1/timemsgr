@@ -6,15 +6,17 @@
     <th></th>
   </tr>
   <% for sub in @subscriptions %>
+    <% unless sub.channel.blank? %>
     <tr>
       <td>
         <div class="pic-size">
           <%= render :partial => 'shared/show_photo', :locals => {:model => sub.channel, :file_name => "headshot1.jpg", :psize => '48x48' } %>
-	</div>
+		</div>
       </td>
       <td><%= sub.channel.channel_name %></td>
       <td><%= truncate(sub.channel.bbody, :length=>80, :omission=>"...") %></td>
-	  <td><%= link_to "Unsubscribe", unsubscribe_subscription_url(sub, :user_id=>@user, :channel_id => sub.channel.channelID), :confirm => 'Are you sure?', :remote=>true %> </td>
+	  <td><%= link_to "Unsubscribe", subscriptions_url(:user_id=>@user, :channel_id => sub.channel.channelID), :id=>'unsub_btn', :method=>:delete, :confirm => 'Are you sure?', :remote=>true %></td>
     </tr>
+    <% end %>
   <% end %>
 </table>

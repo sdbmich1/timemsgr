@@ -1,0 +1,6 @@
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Channel' } %>
+
+<%= content_for :content do -%>
+	<center><h3 class="grp-hdr">Search Results</h3></center><hr />
+	<div id="channel_form"><%= render 'shared/channel_list' %></div>
+<% end -%>

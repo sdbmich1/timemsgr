@@ -1,4 +1,4 @@
-  <div id="menu">
+  <div id="knnmenu">
   	<span class="menu-offset <%= main_menu == 'Home' ? 'none' : '' %>" id="titlebar"><%= link_to get_name_or_logo, root_url %></span> 
 
 	<% case main_menu %>		
@@ -15,7 +15,20 @@
 				<%= render :partial => 'shared/search' %>
 			</span>
 			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
+		<% when "PrivateEvent" %>
+			<span class="menu-search">
+				<%= render :partial => 'shared/search_private_event' %>
+			</span>
+			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
 		<% when "User" %>
+			<span class="menu-search">
+				<%= render :partial => 'shared/search_user' %>
+			</span>
+			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
+		<% when "Channel" %>
+			<span class="menu-search">
+				<%= render :partial => 'shared/search_channel' %>
+			</span>
 			<div class="nav-menu"><%= render 'shared/menu_item' %></div>
 		<% when "Profile" %>
 			<div class="nav-menu"><%= render 'shared/menu_item' %></div>

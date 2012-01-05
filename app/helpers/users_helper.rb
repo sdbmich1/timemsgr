@@ -26,7 +26,7 @@ module UsersHelper
   end
   
   def get_status(trkd_id, trkr_id)
-    Relationship.get_status(trkd_id, trkr_id) || Relationship.get_status(trkr_id, trkd_id)
+    Relationship.get_status(trkd_id, trkr_id) #|| Relationship.get_status(trkr_id, trkd_id)
   end
   
   def get_rel_type(trkd_id, trkr_id)
@@ -42,6 +42,6 @@ module UsersHelper
   end
   
   def get_unread_count(usr)
-    EventNotice.unread_by(usr).count
+    EventNotice.where(:user_id=>usr.id).unread_by(usr).count
   end
 end

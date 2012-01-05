@@ -1,6 +1,6 @@
 <li>
   <% if major_event?(event.event_type) %>
-    <%= link_to major_event_url(event) do %>
+    <%= link_to major_event_url(event, :etype=>event.event_type, :sdate=>edate) do %>
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => edate } %>
     <% end %>  
   <% elsif life_event?(event.event_type) %>
@@ -12,7 +12,7 @@
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => edate  } %>
     <% end %>
   <% else %>
-    <%= link_to event_url(event, :etype=>event.event_type, :edate=>edate) do %>
+    <%= link_to event_url(event, :etype=>event.event_type, :sdate=>edate) do %>
 	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => edate  } %>
     <% end %>
   <% end %>

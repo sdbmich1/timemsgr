@@ -26,7 +26,11 @@ class Rsvp < KitsTsdModel
   validates :guest5name,  :allow_blank => true,
                 :length => { :maximum => 60 },
                 :format => { :with => name_regex }        
-                
+ 
+  def self.find_event(eid, cid)
+    find_by_EventID_and_inviteesourceID(eid, cid)
+  end
+                 
   def set_flds
     self.responsedate = Date.today
     self.CreateDateTime = Time.now

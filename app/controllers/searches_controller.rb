@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index]
+  before_filter :authenticate_user! 
   layout :page_layout
 
   def index

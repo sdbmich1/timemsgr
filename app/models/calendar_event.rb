@@ -19,10 +19,10 @@ class CalendarEvent < KitsCentralModel
 
   define_index do
     indexes :event_name, :sortable => true
-    indexes :bbody, :sortable => true
-    indexes :cbody, :sortable => true
+    indexes :bbody
+    indexes :cbody
     indexes :eventstartdate, :sortable => true
-    indexes :eventenddate, :sortable => true
+    indexes :eventenddate
    
     has :ID, :as => :event_id
     has :event_type
@@ -32,7 +32,7 @@ class CalendarEvent < KitsCentralModel
   end
   
   sphinx_scope(:datetime_first) { 
-    {:order => 'eventstartdate ASC'}
+    {:order => 'eventstartdate, eventstarttime ASC'}
   }  
   
   default_sphinx_scope :datetime_first

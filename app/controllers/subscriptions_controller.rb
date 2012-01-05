@@ -1,5 +1,5 @@
 class SubscriptionsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create, :unsubscribe]   
+  before_filter :authenticate_user!#, :except => [:create, :unsubscribe]   
 #  respond_to :html, :json, :xml, :js
   layout :page_layout
   
@@ -14,7 +14,7 @@ class SubscriptionsController < ApplicationController
     end        
   end
   
-  def unsubscribe
+  def destroy
     @channel = Channel.find_by_channelID(params[:channel_id])
     @subscription = Subscription.find_subscription(params[:user_id], params[:channel_id])
     if @subscription.save

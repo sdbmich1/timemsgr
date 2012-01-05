@@ -24,17 +24,10 @@ class PrivateEvent < ActiveRecord::Base
 #  has_many :rsvps, :dependent => :destroy
 #  accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
 
-  has_many :session_relationships, :dependent => :destroy, :foreign_key => :event_id
-  has_many :sessions, :through => :session_relationships, :dependent => :destroy
-
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
-
-  has_many :event_presenters, :foreign_key => :event_id
-  has_many :presenters, :through => :event_presenters
-  has_many :sponsor_pages, :foreign_key => :event_id
   
-  default_scope :order => 'eventstartdate, eventstarttime ASC'
+  default_scope :order => 'eventstartdate, eventstarttime DESC'
   
   define_index do
     indexes :event_name, :sortable => true
@@ -45,9 +38,7 @@ class PrivateEvent < ActiveRecord::Base
    
     has :ID, :as => :event_id
     has :event_type
-    where "(status = 'active' AND hide = 'no' AND event_type != 'es')
-          AND ((eventstartdate >= curdate() ) 
-                OR (eventstartdate <= curdate() and eventenddate >= curdate()) ) "
+    where "(status = 'active' AND LOWER(hide) = 'no') "
   end
   
   sphinx_scope(:datetime_first) { 
@@ -67,6 +58,26 @@ class PrivateEvent < ActiveRecord::Base
     contentsourceID
   end
   
+  def ssurl
+    subscriptionsourceURL
+  end
+  
+  def get_location
+    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  end
+  
+  def get_place
+    mapplacename.blank? ? '' : mapplacename + ' '
+  end
+  
+  def csz
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+  end
+  
+  def location_details
+    get_location + csz
+  end    
+    
   def self.upcoming(start_dt, end_dt)
     active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
   end   
@@ -114,12 +125,9 @@ class PrivateEvent < ActiveRecord::Base
      
   def set_flds
     if new_record?
-      self.hide = "no"
+      self.hide, self.cformat, self.status = "no", "html", "active"
       self.event_title = self.event_name
-      self.postdate = Date.today
-      self.cformat = "html"
-      self.status = "active" 
-      self.CreateDateTime = Time.now
+      self.postdate, self.CreateDateTime = Date.today, Time.now
       self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
     end
   end
@@ -130,24 +138,41 @@ class PrivateEvent < ActiveRecord::Base
     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, cid]) 
+         ORDER BY eventstartdate, eventstarttime DESC", edt, edt, cid, edt, edt, cid, edt, edt, cid]) 
   end
    
   def self.get_events(cid)
-     where_cid = " WHERE (contentsourceID = ?)"    
+     where_cid = "#{where_stmt} (contentsourceID = ?)"    
      find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid]) 
+         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid]) 
   end
       
   def self.get_event_pages(page, cid)
-     where_cid = " WHERE (contentsourceID = ?)"    
+     where_cid = "#{where_stmt} (contentsourceID = ?)"    
      paginate_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
          UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid], :page=>page) 
+         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid], :page=>page) 
   end
+  
+  def self.get_event_data(page, cid, sdate)
+    sdate.blank? ? get_event_pages(page, cid) : get_event_list(page, cid, sdate)
+  end
+  
+  def self.get_event_list(page, cid, sdate)
+     
+     where_cid = "#{where_stmt} (contentsourceID = ?) AND (date(eventstartdate) = ?)"    
+     paginate_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime DESC", cid, sdate, cid, sdate, cid, sdate], :page=>page) 
+  end 
+  
+  def self.where_stmt
+    "WHERE (status = 'active' and LOWER(hide) = 'no') AND "
+  end  
  
   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
@@ -157,8 +182,7 @@ class PrivateEvent < ActiveRecord::Base
   end
    
   def self.where_dt
-      "where (status = 'active' and LOWER(hide) = 'no') 
-                and ((eventstartdate >= curdate() and eventstartdate <= ?) 
+      "#{where_stmt} ((eventstartdate >= curdate() and eventstartdate <= ?) 
                 or (eventstartdate <= curdate() and eventenddate >= ?)) "
   end 
 
@@ -172,6 +196,12 @@ class PrivateEvent < ActiveRecord::Base
      find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}       
          UNION #{getSQL} FROM `kits_development`.events #{where_id}", eid, eid, eid])        
+  end
+  
+  def self.set_status(eid)
+    event = PrivateEvent.find(eid)
+    event.status = 'inactive'
+    event
   end
        
 end

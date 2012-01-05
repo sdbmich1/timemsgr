@@ -1,20 +1,15 @@
 class PrivateEventsController < ApplicationController
-  before_filter :authenticate_user!, :load_data
+  before_filter :authenticate_user!
   include ResetDate
   layout :page_layout
 
   def index
-    if mobile_device?
-      @events = PrivateEvent.get_events(@host_profile.subscriptionsourceID)
-    else
-      @events = PrivateEvent.get_event_pages(params[:page], @host_profile.subscriptionsourceID)
-    end     
+    @start_date = params[:sdate]
+    mobile_device? ? @events = PrivateEvent.get_events(@user.ssid) : @events = PrivateEvent.get_event_data(params[:page], @user.ssid, @start_date )
   end
 
   def show
     @event = PrivateEvent.find_event(params[:id])
-    @presenters = @event.try(:presenters)
-    @sponsor_pages = @event.try(:sponsor_pages)
   end
 
   def new
@@ -44,9 +39,13 @@ class PrivateEventsController < ApplicationController
   end
 
   def destroy
-    @event = PrivateEvent.find_event(params[:id])
-    @event.destroy
-    redirect_to events_url, :notice => "Successfully destroyed private event."
+    @event = PrivateEvent.set_status(params[:id])
+    @event.save ? flash[:notice] = "Removed event from schedule." : flash[:notice] = "Unable to remove event from schedule."
+    respond_to do |format|
+      format.html { redirect_to(events_url) } 
+      format.mobile { redirect_to(events_url) }
+      format.js {@events = PrivateEvent.get_event_data(params[:page], current_user.ssid, params[:sdate])}
+    end      
   end
     
   def clone  
@@ -56,17 +55,7 @@ class PrivateEventsController < ApplicationController
   private
   
   def page_layout 
-    if mobile_device?
-      (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application'
-    else
-      "events"
-    end
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application' : "events"
   end    
-    
-  def load_data
-    @user = current_user
-    @host_profile = @user.host_profiles.first
-#    @enddate = Date.today+7.days
-  end
 
 end

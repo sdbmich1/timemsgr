@@ -9,7 +9,6 @@
 				<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
 				<li><%= link_to "Notify", notify_private_event_url(event), "data-icon"=>"custom", :id => "notify" %> </li>
 			<% else %>
-				<li><%= link_to "Edit", edit_scheduled_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
 				<li><%= link_to "Delete", scheduled_event_url(event), :method => 'delete',  :confirm => 'Are you sure?', "data-icon"=>"custom", :id => "delete" %> </li>
 				<li><%= link_to "Notify", notify_scheduled_event_url(event), "data-icon"=>"custom", :id => "notify" %> </li>
 			<% end %>

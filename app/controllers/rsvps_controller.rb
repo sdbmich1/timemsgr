@@ -4,7 +4,7 @@ class RsvpsController < ApplicationController
 
   def show
     @event = Event.find_event(params[:eid], params[:etype]) if params[:eid]
-    @rsvp = Rsvp.find_by_EventID_and_inviteesourceID(params[:id], @event.contentsourceID)
+    @rsvp = Rsvp.find_event(params[:id], @event.cid)
   end
 
   def new
@@ -15,8 +15,8 @@ class RsvpsController < ApplicationController
   def create  
     @rsvp = Rsvp.new(params[:rsvp])
     if @rsvp.save
-     add_to_schedule if params[:rsvp][:status] == 'Attending'
-     redirect_to rsvp_url(:id=>@rsvp.EventID, :eid=>@event, :etype=>@event.event_type), :notice => "Successfully created rsvp."
+      add_to_schedule if params[:rsvp][:status] == 'Attending'
+      redirect_to rsvp_url(:id=>@rsvp.EventID, :eid=>@event, :etype=>@event.event_type), :notice => "Successfully created rsvp."
     else
       render :action => 'new'
     end
@@ -30,7 +30,7 @@ class RsvpsController < ApplicationController
   def update
     @rsvp = Rsvp.find(params[:id])
     if @rsvp.update_attributes(params[:rsvp])
-      redirect_to @rsvp, :notice  => "Successfully updated rsvp."
+      redirect_to @rsvp, :notice => "Successfully updated rsvp."
     else
       render :action => 'edit'
     end
@@ -45,15 +45,11 @@ class RsvpsController < ApplicationController
   private
   
   def page_layout 
-    if mobile_device?
-      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
-    else
-      "application"
-    end
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application' : 'application'
   end  
     
   def add_to_schedule
-    @event = ScheduledEvent.add_event(@event,@event.event_type,@host_profile.subscriptionsourceID )
+    @event = ScheduledEvent.add_event(@event,@event.event_type,@user.ssid )
     @event.save 
   end
 end

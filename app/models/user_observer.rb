@@ -1,44 +1,39 @@
 class UserObserver < ActiveRecord::Observer
+  include Rewards
   observe User
+  
+  def after_save(model)
+    save_credits(model.id, 'Profile', @reward_amt) unless @reward_amt.blank? || @reward_amt == 0
+  end
+  
+  def before_save(model)
+    @reward_amt = add_credits(model.changes)   
+  end
 
   def after_create(user)
     
     # send welcome email
-#    UserMailer.welcome_email(user).deliver
+    UserMailer.welcome_email(user).deliver
 
     # define channel id based on timestamp
     channelID = 'IN' + Time.now.to_i.to_s
     
     #create host profile
-    hp = user.host_profiles[0]
+    hp = user.profile
     hp ||= user.host_profiles.build
-    hp.ProfileType = 'Individual' 
-    hp.LastName = user.last_name
-    hp.FirstName = user.first_name
+    hp.LastName, hp.FirstName = user.last_name, user.first_name 
     hp.HostName = hp.FullName = user.name 
-    hp.EMAIL = user.email
-    hp.Gender = user.gender
-    hp.StartMonth = user.created_at.month
-    hp.StartDay = user.created_at.day
-    hp.StartYear = user.created_at.year
-    hp.EntityCategory = 'individual' 
-    hp.EntityType = 'A' 
-    hp.promoCode = user.promo_code 
-    hp.status = 'active'
-    hp.hide = 'no'
-    hp.HostChannelID = channelID
-    hp.subscriptionsourceID = channelID
+    hp.EMAIL, hp.Gender = user.email, user.gender
+    hp.StartMonth, hp.StartDay, hp.StartYear  = user.created_at.month, user.created_at.day, user.created_at.year
+    hp.ProfileType, hp.EntityCategory, hp.EntityType = 'Individual','individual','A'  
+    hp.promoCode, hp.status, hp.hide = user.promo_code, 'active', 'yes' 
+    hp.HostChannelID = hp.ssid = channelID
     hp.save
     
     #create channel
-    hp.channels.create(:channelID => channelID,
-        :subscriptionsourceID => channelID, 
-        :HostProfileID => hp.id, 
-        :status => 'active', :hide => 'no',
-        :channel_name => hp.HostName,
-	      :channel_title => hp.HostName,
-	      :channel_class => 'basic',
-	      :channel_type => 'indhost')
+    hp.channels.create(:channelID => channelID, :subscriptionsourceID => channelID, :HostProfileID => hp.id, 
+        :status => 'active', :hide => 'no', :channel_name => hp.HostName, :channel_title => hp.HostName,
+	      :channel_class => 'basic', :channel_type => 'indhost')
 	  
 	  # add subscription if promo code is valid
     unless hp.try(:promoCode).blank?

@@ -1,6 +1,5 @@
 class RelationshipsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create]
-  before_filter :load_data
+  before_filter :authenticate_user!, :load_data
   layout :page_layout
 
   def create
@@ -14,32 +13,27 @@ class RelationshipsController < ApplicationController
 
   def index
     @user = User.includes(:host_profiles).find(params[:id])
-    @trackers = @user.trackers
-    @trackeds = @user.trackeds  
+    @trackers, @trackeds = @user.trackers, @user.trackeds
   end
   
   def private
     @user = User.find(params[:id])
-    @trackers = @user.private_trackers   
-    @trackeds = @user.private_trackeds  
+    @trackers, @trackeds = @user.private_trackers, @user.private_trackeds  
   end
   
   def social
     @user = User.find(params[:id])
-    @trackers = @user.social_trackers   
-    @trackeds = @user.social_trackeds  
+    @trackers, @trackeds = @user.social_trackers, @user.social_trackeds  
   end
   
   def extended
     @user = User.find(params[:id])
-    @trackers = @user.extended_trackers   
-    @trackeds = @user.extended_trackeds  
+    @trackers, @trackeds = @user.extended_trackers, @user.extended_trackeds  
   end  
   
   def pending
     @user = User.find(params[:id])
-    @trackers = @user.pending_trackers 
-    @trackeds = @user.pending_trackeds  
+    @trackers, @trackeds = @user.pending_trackers, @user.pending_trackeds
   end
   
   def update

@@ -1,0 +1,1 @@
+<%= form_tag search_users_path, :method => :get, :remote=>true, :id => 'search_btn' do %> 	<%= text_field_tag 'search', nil, :placeholder => 'Enter search term...', :class=>'search-fld' %>	<%= image_submit_tag("search1.png", :alt => "search", :class => 'search_button') %><% end %>

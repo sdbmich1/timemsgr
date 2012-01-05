@@ -42,7 +42,11 @@ class ScheduledEvent < ActiveRecord::Base
   def owned?(ssid)
     self.contentsourceID == ssid
   end
-  
+
+  def ssurl
+    subscriptionsourceURL
+  end
+      
   def get_location
     location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
   end
@@ -68,12 +72,10 @@ class ScheduledEvent < ActiveRecord::Base
   end
   
   def self.add_event(eid, etype, ssid, sdt)
-    selected_event = Event.find_event(eid, etype)
+    selected_event = Event.find_event(eid, etype, sdt)
     new_event = ScheduledEvent.new(selected_event.attributes)
     
-    new_event.contentsourceID = ssid
-    new_event.eventstartdate = sdt
-    new_event.ID = nil
+    new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil
     new_event.eventenddate = new_event.eventstartdate unless new_event.event_type == 'cnf'
 
     # reset event type
@@ -94,10 +96,7 @@ class ScheduledEvent < ActiveRecord::Base
    def set_flds
      if self.status.blank?
         self.event_title = self.event_name if self.event_title.blank?
-        self.postdate = Date.today
-        self.CreateDateTime = Time.now
-        self.status = 'active'
-        self.hide = 'no'
+        self.postdate, self.CreateDateTime, self.status, self.hide = Date.today, Time.now, 'active', 'no'
         self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
      end
    end
@@ -144,5 +143,29 @@ class ScheduledEvent < ActiveRecord::Base
          UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}       
          UNION #{getSQL} FROM `kits_development`.events #{where_id}", eid, eid, eid])        
   end
+  
+  def self.set_status(eid)
+    event = ScheduledEvent.find(eid)
+    event.status = 'inactive'
+    event
+  end
+  
+  define_index do
+    indexes :event_name, :sortable => true
+    indexes :bbody, :sortable => true
+    indexes :cbody, :sortable => true
+    indexes :eventstartdate, :sortable => true
+    indexes :eventenddate, :sortable => true
+   
+    has :ID, :as => :event_id
+    has :event_type
+    where "(status = 'active' AND LOWER(hide) = 'no')"
+  end
+  
+  sphinx_scope(:datetime_first) { 
+    {:order => 'eventstartdate, eventstarttime ASC'}
+  }  
+  
+  default_sphinx_scope :datetime_first
        
 end

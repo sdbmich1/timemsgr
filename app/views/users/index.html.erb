@@ -1,16 +1,21 @@
 <%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
 
+<% content_for :subhead do -%>
+  <center><h3 class="grp-hdr">Suggested Connections</h3></center><hr />
+<% end %>
+
 <% content_for :left_sidebar do -%>
 	<%= render :partial => 'shared/rel_nav_panel' %>
 <% end %>
 
 <%= content_for :content do -%>
-  <center><h3 class="grp-hdr">Suggested Connections</h3></center>
-  <div class="span-20 last prepend-2" >  
+  <div class="span-20 last"> 
+  	<div class="prepend-1">
 	<% @subscriptions.each do |sub| %>
 		<% unless sub.try(:channel).blank? %>
-			<%= render :partial => 'shared/user_list', :locals => {:model => sub.channel.subscriptions }%>
+			<div id="user_form"><%= render :partial => 'shared/user_list', :locals => {:model => sub.channel.subscriptions }%></div>
 		<% end %>
 	<% end %>
+	</div>
   </div>
 <% end %>

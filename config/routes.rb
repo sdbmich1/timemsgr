@@ -18,7 +18,8 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, :search_users
+  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
+    :search_users
   
   resources :events do 
     member do
@@ -82,7 +83,7 @@ Timemsgr::Application.routes.draw do
   match '/home/user', :to => 'users#home' 
   match '/metrics', :to => 'users#metrics' 
   match '/notify', :to =>  "events#notify"
-  match '/notice', :to =>  "events#notice"
+  match '/events/notice', :to =>  "events#notice"
   match '/select', :to =>  "channels#select"
     
   # route custom event actions

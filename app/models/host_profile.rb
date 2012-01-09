@@ -64,7 +64,7 @@ class HostProfile < KitsTsdModel
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   
   def self.get_user(ssid)
-    hp = HostProfile.includes(:user).find_by_subscriptionsourceID(ssid)
+    hp = HostProfile.includes(:user).find_by_subscriptionsourceID(ssid) || HostProfile.includes(:user).find_by_ID(ssid)
     hp.user
   end
   
@@ -72,8 +72,8 @@ class HostProfile < KitsTsdModel
     subscriptionsourceID
   end
   
-  def cid
-    contentsourceID
+  def pid
+    ProfileID
   end
           
 end

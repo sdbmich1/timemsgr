@@ -12,8 +12,7 @@ class EventsController < ApplicationController
 	
 	def index
     @events = Event.find_events(@enddate, @user.profile)
-#    @events = Event.get_schedule(@enddate, @user)
-    @notices = EventNotice.get_notices(@user.ssid)
+    @notices = EventNotice.get_notices(@user.ssid).paginate(:page => params[:notice_page], :per_page => 10)
   end
   
   def notify
@@ -22,6 +21,7 @@ class EventsController < ApplicationController
   
   def notice
     EventNotice.mark_as_read! :all, :for => @user    
+    @notices = EventNotice.get_notices(@user.ssid)
   end
  	
  	private
@@ -32,7 +32,6 @@ class EventsController < ApplicationController
  	
  	def load_data
  	  @quote = Promo.random
- 	  @notice_types = NoticeType.find_types(params[:etype]) if params[:etype]
     params[:end_date] ? @enddate = Date.today+params[:end_date].to_i.days : @enddate = Date.today+7.days 
 	end
 

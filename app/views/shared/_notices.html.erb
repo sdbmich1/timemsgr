@@ -19,7 +19,7 @@
           <%= render :partial => 'shared/show_photo', :locals => {:model => User.get_user(event.subscriberID), :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= User.get_user(event.subscriberID).name %></td>
+      <td><%= User.get_user(event.subscriberID).host_name %></td>
       <td><%= event.message %></td>
       <td><%= get_local_time(event.created_at) %></td>
       <% unless event.event_name.blank? %>
@@ -33,4 +33,6 @@
   <% end %>
 </table>
 </div>
-
+<div class="nav-right">
+  <%= will_paginate @notices, :param_name => 'notice_page' %>
+</div>

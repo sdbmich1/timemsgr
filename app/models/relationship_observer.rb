@@ -6,4 +6,8 @@ class RelationshipObserver < ActiveRecord::Observer
     other_notice(model, 'request') 
   end
 
+  def after_update(model)
+    model.status == 'accepted' ? other_notice(model, 'accept') : other_notice(model, 'reject') 
+  end  
+
 end

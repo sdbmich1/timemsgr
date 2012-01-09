@@ -29,8 +29,6 @@ function toggleLoading () {
 
 // add spinner to ajax events
 $(function (){ 
-//  var toggleLoading = function() { $("#spinner").toggle() };
-
   $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .bind("ajax:beforeSend",  toggleLoading)
     .bind("ajax:complete", toggleLoading)
@@ -134,7 +132,7 @@ $(function () {
 
 $(function () {
   $(".notice_id").live('click',function() {
-    $.getScript('/notice.js');
+    $.getScript('/events/notice.js');
   })
 });
 
@@ -189,4 +187,11 @@ $(function (){
 		});
 		return false;       
   })
+});
+
+// when the #start time field changes
+$(function (){
+  $("#start-time").live('change',function() {
+     $("#end-time").val($(this).val());
+  });
 });

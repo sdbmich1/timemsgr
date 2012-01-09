@@ -25,15 +25,14 @@ class NoticeType < ActiveRecord::Base
   end
   
   def set_flds
-    self.status = 'active'
-    self.hide = 'no'
+    self.status, self.hide = 'active', 'no'
   end
   
-  def self.get_type(code, etype)
-    find_by_code_and_event_type(code, etype)
+  def self.get_type(code)
+    find_by_code(code)
   end
   
-  def self.get_description(code, etype)
-    get_type(code, etype).description
+  def self.get_description(code)
+    get_type(code).description
   end
 end

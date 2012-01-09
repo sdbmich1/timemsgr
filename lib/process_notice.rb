@@ -6,9 +6,11 @@ module ProcessNotice
     usr = User.get_user(model.cid)
     
     # get trackers based on type    
-    [['private_trackers', 'allowPrivCircle'], ['social_trackers', 'allowSocCircle'], ['extended_trackers', 'allowWorldCircle']].each do |method|
-      trkrs = usr.send(method[0]) if model.send(method[1])
-      post_notice(trkrs, model, usr, ptype) if trkrs
+    unless usr.blank? 
+      [['private_trackers', 'allowPrivCircle'], ['social_trackers', 'allowSocCircle'], ['extended_trackers', 'allowWorldCircle']].each do |method|
+        trkrs = usr.send(method[0]) if model.send(method[1])
+        post_notice(trkrs, model, usr, ptype) if trkrs
+      end
     end
   end
     
@@ -24,7 +26,7 @@ module ProcessNotice
     trkr = User.find(model.tracker_id)
 
     # add notice
-    enotice = EventNotice.create( :Notice_Type=>ptype,:Notice_Text=>usr.name + ' has sent you a connection request.', 
+    enotice = EventNotice.create( :Notice_Type=>ptype,:Notice_Text=>usr.name + ' has ' + ptype + 'ed a connection with you.', 
             :sourceID=>trkr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )
 
     #also send email to person
@@ -49,11 +51,11 @@ module ProcessNotice
   end
   
   def get_notice_type(model, ptype)
-    notification?(model) ? model.Notice_Type : ptype == 'new'? 'schedule' : 'reschedule'
+    notification?(model) ? model.Notice_Type : ptype == 'new'? 'schedule' : ptype == 'update'? 'reschedule' : ptype
   end
   
   def get_notice_text(model, ptype)
-    notification?(model) ? model.Notice_Text : NoticeType.get_description(get_notice_type(model, ptype), model.event_type) 
+    notification?(model) ? model.Notice_Text : NoticeType.get_description(get_notice_type(model, ptype)) 
   end
   
   def get_notice_id(model)

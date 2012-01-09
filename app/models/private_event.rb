@@ -15,7 +15,7 @@ class PrivateEvent < ActiveRecord::Base
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
   validates :event_type, :presence => true
-  validates_date :eventstartdate, :presence => true, :on_or_after => :today 
+  validates_date :eventstartdate, :presence => true #, :on_or_after => :today 
   validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
   validates :eventstarttime, :presence => true, :allow_blank => false
   validates :eventendtime, :presence => true, :allow_blank => false

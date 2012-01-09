@@ -19,7 +19,7 @@ $(document).ready(function () {
   		}, 60000 );
 	});		
 	
-	$('.show-item, .manage-item').click(function () {  
+	$('#add-item, .event-add, .show-item, .manage-item').click(function () {  
  		clearInterval(timerId);
  		clearInterval(qtimerId);
 //    	return false;  

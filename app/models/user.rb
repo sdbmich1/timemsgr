@@ -142,6 +142,10 @@ class User < ActiveRecord::Base
     HostProfile.get_user(sid)  
   end
   
+  def host_name
+    profile.HostName
+  end
+  
   def private_events
     profile.private_events
   end

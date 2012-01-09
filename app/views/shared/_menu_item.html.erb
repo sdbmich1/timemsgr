@@ -2,8 +2,8 @@
   <li><%= link_to "Home", home_path %></li>
   <li><a href="#">Add</a>
     <ul>
-    	<li><%= link_to "Add Activity", new_private_event_url %> </li>
-		<li><%= link_to "Add Life Event", new_life_event_url %> </li>
+    	<li><%= link_to "Add Activity", new_private_event_url, :id=>'add-item' %> </li>
+		<li><%= link_to "Add Life Event", new_life_event_url, :id=>'add-item'  %> </li>
 		<li><%= link_to "Add Subscription", categories_url %> </li>
     </ul>
   </li>

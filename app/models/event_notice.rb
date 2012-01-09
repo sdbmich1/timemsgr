@@ -6,6 +6,8 @@ class EventNotice < ActiveRecord::Base
                   :eventstartdate, :eventstarttime, :eventenddate, :eventendtime, :Notice_Type, :Notice_Text, 
                   :sourceID, :subscriberID, :Notice_ID, :location, :user_id
                   
+  default_scope :order => "created_at DESC"
+
   def self.find_notices(sid)
     find_by_sourceID(sid)
   end

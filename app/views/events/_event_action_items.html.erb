@@ -1,32 +1,18 @@
 <%= image_tag("face-plain.png", :class => "action-img rsz-img")%>   	
 <%= image_tag("#{get_etype_icon(event.event_type)}", :class => "etype-img rsz-img") %>   	
 <div class="img-btm">
-	<% if (slider =~ /Observances/i).nil? %>
-		<%= link_to image_tag("ev-like.png", :class => " rsz-img"), :title => "Recommend", :method => :post, :remote => true %> 
-	<% end %>
 
 	<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
 		<%= link_to image_tag("ev-move.png", :class => " rsz-img"), scheduled_events_url(:id=>event, :etype=>event.event_type, :sdate=>event.eventstartdate), 
 				:id=>'schedule_btn' , :confirm => 'Add to your schedule?', :title => "Move", :method => :post, :remote => true %>
-	<% else %>
-	
-		<% if trackers? || trackeds? %>
-    		<div id="etype" data-etype="<%= event.event_type %>"></div>
- 			<%= link_to image_tag("ev-notify.png", :class => " rsz-img"), :title => "Notify", :id=>'notify-rel' %> 
-			<%= link_to image_tag("ev-share.png", :class => " rsz-img"),  :title => "Share", :remote => true %> 
-		<% end %>
-	
-	<% end %>
-	
-	<% if any_prices?(event) %>
-		<%= link_to image_tag("ev-shop.png", :class => " rsz-img"), :title => "Buy Now",  :remote => true %> 
+	<% else %>	
 	<% end %>
 	
 	<% if rsvp?(event.rsvp) %>
 		<% if private_event?(event.event_type) %>			
-			<%= link_to image_tag("ev-rsvp.png", :class => " rsz-img"), rsvp_url(:id=>event.eventid, :eid=>event, :etype=>event.event_type), :title => "RSVP" %>
+			<%= link_to image_tag("ev-rsvp.png", :class => "rsz-img"), rsvp_url(:id=>event.eventid, :eid=>event, :etype=>event.event_type), :title => "RSVP" %>
 		<% else %>
-			<%= link_to image_tag("ev-rsvp.png", :class => " rsz-img"), new_rsvp_url(:eid=>event, :etype=>event.event_type), :title => "RSVP" %>		
+			<%= link_to image_tag("ev-rsvp.png", :class => "rsz-img"), new_rsvp_url(:eid=>event, :etype=>event.event_type), :title => "RSVP" %>		
 		<% end %>
 	<% end %>
 </div>

@@ -27,7 +27,7 @@ class UserObserver < ActiveRecord::Observer
     hp.StartMonth, hp.StartDay, hp.StartYear  = user.created_at.month, user.created_at.day, user.created_at.year
     hp.ProfileType, hp.EntityCategory, hp.EntityType = 'Individual','individual','A'  
     hp.promoCode, hp.status, hp.hide = user.promo_code, 'active', 'yes' 
-    hp.HostChannelID = hp.ssid = channelID
+    hp.HostChannelID = hp.subscriptionsourceID = channelID
     hp.save
     
     #create channel

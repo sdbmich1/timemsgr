@@ -8,8 +8,8 @@ class EventSessionsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @presenters = @event.presenters
-    @sessions = @event.sessions
+    @notification = Notification.new
+    @presenters, @sessions = @event.presenters, @event.sessions
   end
 
   private

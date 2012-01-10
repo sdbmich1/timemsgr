@@ -150,6 +150,10 @@ class User < ActiveRecord::Base
     profile.private_events
   end
   
+  def promoCode
+    profile.promoCode
+  end
+  
   def scheduled_events
     profile.scheduled_events    
   end

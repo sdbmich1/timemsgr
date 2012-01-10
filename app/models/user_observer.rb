@@ -32,13 +32,17 @@ class UserObserver < ActiveRecord::Observer
     
     #create channel
     hp.channels.create(:channelID => channelID, :subscriptionsourceID => channelID, :HostProfileID => hp.id, 
-        :status => 'active', :hide => 'no', :channel_name => hp.HostName, :channel_title => hp.HostName,
+        :status => 'active', :hide => 'yes', :channel_name => hp.HostName, :channel_title => hp.HostName,
 	      :channel_class => 'basic', :channel_type => 'indhost')
 	  
 	  # add subscription if promo code is valid
-    unless hp.try(:promoCode).blank?
-      channel = Channel.where("channelID = ?", hp.promoCode)    
-      Subscription.create(:user_id=>user.id, :channelID => channel[0].channelID, :contentsourceID => user.ssid) if channel
+    unless user.promo_code.blank?
+      hp_promo = HostProfile.find_by_promoCode user.promo_code
+      unless hp_promo.blank?
+        hp_promo.channels.each do |channel|
+          Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid) if channel       
+        end
+      end
     end
   end
 end

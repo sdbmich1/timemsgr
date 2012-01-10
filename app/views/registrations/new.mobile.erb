@@ -34,10 +34,9 @@
                                 :prompt => true,
                                 :hint => "This helps find content for you."  %></p>
 
-		<%= f.fields_for :host_profiles do |form| %>
-            <%= render :partial => 'mobile/promo_code', :locals => { :f => form } %>
-        <% end %>
-    	<p><%= f.submit "Sign Up", "data-theme"=>"b" %></p>
+ 		<p><label for="user_promo_code">Enter promo code</label>
+ 		<%= f.text_field :promo_code %></p>
+ 		<p><%= f.submit "Sign Up", "data-theme"=>"b" %></p>
     	</div>
   <% end %>
 

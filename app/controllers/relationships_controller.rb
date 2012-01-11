@@ -1,5 +1,6 @@
 class RelationshipsController < ApplicationController
-  before_filter :authenticate_user!, :load_data
+  before_filter :authenticate_user!, :except => [:create] 
+  before_filter :load_data
   layout :page_layout
 
   def create
@@ -55,7 +56,7 @@ class RelationshipsController < ApplicationController
   protected
   
   def page_layout  
-    mobile_device? ? "application" : "users"  
+    mobile_device? ? "list" : "users"  
   end 
   
   def load_data

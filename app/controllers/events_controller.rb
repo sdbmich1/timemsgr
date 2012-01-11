@@ -7,7 +7,7 @@ class EventsController < ApplicationController
  		@event = Event.find_event(params[:id], params[:etype], params[:sdate])
  		@sponsor_pages = @event.try(:sponsor_pages)
  		@notification = Notification.new
-    mobile_device? ? @presenters = @event.presenters : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
+    mobile_device? ? @presenters = @event.try(:presenters) : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
 	end
 	
 	def index
@@ -21,7 +21,7 @@ class EventsController < ApplicationController
   
   def notice
     EventNotice.mark_as_read! :all, :for => @user    
-    @notices = EventNotice.get_notices(@user.ssid)
+    @notices = EventNotice.get_notices(@user.ssid).paginate(:page => params[:notice_page], :per_page => 10)
   end
  	
  	private

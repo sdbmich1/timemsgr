@@ -13,7 +13,7 @@ class Channel < KitsTsdModel
 
   # define user & subscriptions
   has_many :subscriptions, :foreign_key => :channelID, :primary_key => :channelID,
-            :dependent => :destroy
+            :dependent => :destroy, :conditions => "status = 'active'"
   has_many :users, :through => :subscriptions
   
 	has_many :channel_locations, :dependent => :destroy

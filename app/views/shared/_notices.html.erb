@@ -4,35 +4,35 @@
   <tr>
     <th></th>
     <th>From</th>
-    <th>Message</th>
     <th>Sent</th>
+    <th>Message</th>
     <th>Event Name</th>
     <th>Start Date</th>
     <th>End Date</th>
     <th>Start</th>
     <th>End</th>
   </tr>
-  <% for event in @notices %>
+  <% for notice in @notices %>
     <tr>
       <td>
         <div class="pic-size">
-          <%= render :partial => 'shared/show_photo', :locals => {:model => User.get_user(event.subscriberID), :file_name => "headshot1.jpg", :psize => '48x48' } %>
+          <%= render :partial => 'shared/show_photo', :locals => {:model => User.get_user(notice.subscriberID), :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= User.get_user(event.subscriberID).host_name %></td>
-      <td><%= event.message %></td>
-      <td><%= get_local_time(event.created_at) %></td>
-      <% unless event.event_name.blank? %>
-      	<td><%= link_to event.event_name, event_path(:id=>event.event_id, :etype=>event.event_type), :id=>'notice-id' %></td>
-      	<td><%= event.start_date %></td>
-      	<td><%= event.end_date %></td>
-      	<td><%= event.start_time %></td>
-      	<td><%= event.end_time %></td>
+      <td><%= User.get_user(notice.subscriberID).host_name %></td>
+      <td><%= get_local_time(notice.created_at) %></td>
+      <td><%= notice.message %></td>
+      <% unless notice.event_name.blank? %>
+      	<td><%= link_to notice.event_name, event_path(:id=>notice.event_id, :etype=>notice.event_type), :id=>'notice-id' %></td>
+      	<td><%= notice.start_date %></td>
+      	<td><%= notice.end_date %></td>
+      	<td><%= notice.start_time %></td>
+      	<td><%= notice.end_time %></td>
       <% end %>
     </tr>
   <% end %>
 </table>
-</div>
-<div class="nav-right">
-  <%= will_paginate @notices, :param_name => 'notice_page' %>
+	<div class="nav-right">
+  		<%= will_paginate @notices, :param_name => 'notice_page' %>
+	</div>
 </div>

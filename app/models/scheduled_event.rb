@@ -17,8 +17,16 @@ class ScheduledEvent < ActiveRecord::Base
         :Other4Fee, :Other5Fee, :Other6Fee, :pictures_attributes, :Other1Title, :Other2Title,
         :Other3Title, :Other4Title, :Other5Title, :Other6Title
 				        
-  belongs_to :host_profile
-  
+  belongs_to :host_profile, :foreign_key => :subscriptionsourceID, :primary_key => :contentsourceID
+ 
+  has_many :session_relationships, :dependent => :destroy
+  has_many :sessions, :through => :session_relationships, :dependent => :destroy
+
+  has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid, :dependent => :destroy
+  has_many :presenters, :through => :event_presenters, :dependent => :destroy
+ 
+  has_many :sponsor_pages, :dependent => :destroy
+ 
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   
@@ -80,7 +88,7 @@ class ScheduledEvent < ActiveRecord::Base
 
     # reset event type
     [['ue','other'],['cnf','conf'],['prf','perform'],['fst','fest'],['tmnt','tourn'],['cnv','conv'],['mtg','meeting'], 
-     ['te','match'], ['es','session'], ['ce', 'other']].each do |i|
+     ['te','match'], ['es','session'], ['fr','fund'], ['ce', 'other']].each do |i|
       new_event.event_type = i[1] if selected_event.event_type == i[0]
     end
 

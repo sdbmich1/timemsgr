@@ -8,7 +8,7 @@ class EventNotice < ActiveRecord::Base
                   
   default_scope :order => "created_at DESC"
 
-  def self.find_notices(sid)
+  def self.find_notice(sid)
     find_by_sourceID(sid)
   end
   

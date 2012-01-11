@@ -118,7 +118,7 @@ $(function(){
   });
   
 $(function () {
-   $("#ev-results .pagination a, #event_form .pagination a, #channel_form .pagination a").live('click', function () {
+   $("#ev-results .pagination a, #event_form .pagination a, #sub-list .pagination a,#channel_form .pagination a, #notice_list .pagination a, #pres-list .pagination a, #sess-list .pagination a").live('click', function () {
          $.getScript(this.href);
          return false;   
    });
@@ -149,7 +149,7 @@ $(function () {
 
 // toggle navigation menu background color to denote active selection
 $(function (){
-   $(".all_btn, .prv_btn, .soc_btn, .ext_btn, .pend_btn, .nav_btn").live('click', function () {
+   $(".all_btn, .prv_btn, .soc_btn, .ext_btn, .pend_btn, .def_btn, .nav_btn").live('click', function () {
 	 $('ul.menu li a').css('background-color', '#0C6FCB');
 	 $(this).css('background-color', '#f08103');
 	})

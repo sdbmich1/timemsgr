@@ -1,5 +1,5 @@
   <ul data-role="listview">
-  	<% for presenter in @presenters %>
+  	<% for presenter in @presenters.uniq %>
 	<li>
 		<%= link_to presenter_url(presenter) do %>
 		  <%= render :partial => 'mobile/show_photo', :locals => {:model => presenter, :vtype => 'ppic' }%>

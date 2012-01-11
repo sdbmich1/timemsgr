@@ -1,0 +1,18 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Notice'} %>
+
+<%= content_for :content do %>
+ 	<div class="event-image center-wrapper">
+        <%= render :partial => 'mobile/show_photo', :locals => {:model => User.get_user(@notice.subscriberID), :vtype => 'e-pic', :file_name => "headshot1.jpg", :psize => '80x80' } %>
+	</div>
+	<h3 class="center-wrapper"><%= @notice.title %></h3>
+ 	<div id="show-item">
+		<label>From: </label><span class="item-detail"><%= User.get_user(@notice.subscriberID).host_name %></span><br />
+		<label>Sent: </label><span class="item-detail"><%= get_local_time(@notice.created_at) %></span><br />
+		<label>Message: </label><span class="item-detail"><%= @notice.message %></span><br />
+      <% unless @notice.event_name.blank? %>
+		<label>Name: </label><span class="item-detail"><%= link_to @notice.event_name, event_path(:id=>@notice.event_id, :etype=>@notice.event_type), :id=>'notice-id' %></span><br />
+		<label>Date: </label><span class="item-detail"><%= "#{@notice.start_date} - #{@notice.end_date}" %></span><br />	
+		<label>Time: </label><span class="item-detail"><%= "#{@notice.start_time} - #{@notice.end_time}" %></span><br />     	
+      <% end %>
+  	</div>	
+<% end %>

@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :interests 
    
   # define channel relationships
-  has_many :subscriptions, :conditions => { :status => 'active'}
+  has_many :subscriptions, :dependent => :destroy, :conditions => { :status => 'active'}
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :status => 'active'}
   

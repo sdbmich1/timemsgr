@@ -5,6 +5,7 @@
   <h3><strong><%= "Sign in to #{get_name_or_logo} "%></strong></h3><br />
 
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+ 	<%= devise_error_messages! %>
 	<div id="newreg" class="sign-in-label">
 		<p><span>Username or email</span></p>
 		<p><%= f.text_field :login, :size => 40 %></p> 		

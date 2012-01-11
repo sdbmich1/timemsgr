@@ -14,7 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
   
   def page_layout 
     if mobile_device?
-      (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'application'
+      'form' 
     else
       "application"
     end

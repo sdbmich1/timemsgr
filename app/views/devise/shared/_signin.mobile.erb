@@ -2,6 +2,7 @@
 
 <div id="mform">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+ 	<%= devise_error_messages! %>
 	<p><label for="user_login">Email or Username</label>
     <%= f.text_field :login %></p>
 

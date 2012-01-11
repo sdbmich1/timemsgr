@@ -6,6 +6,7 @@ config/database.yml
 config/sphinx.yml
 config/*.sphinx.conf
 db/sphinx/
+db/schema.rb
 tmp/
 vendor/cache/
 vendor/bundle/

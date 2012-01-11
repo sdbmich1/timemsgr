@@ -75,5 +75,9 @@ class HostProfile < KitsTsdModel
   def pid
     ProfileID
   end
+  
+  def self.find_promo_code(pcode)
+    where('LOWER(promoCode) = ?', pcode.downcase)
+  end
           
 end

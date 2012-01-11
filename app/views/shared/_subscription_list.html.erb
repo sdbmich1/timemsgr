@@ -5,11 +5,11 @@
     <tr>
       <td>
         <div class="pic-size">
-	  	  <%= render :partial => 'shared/show_photo', :locals => {:model => sub.user.host_profiles[0], :file_name => "headshot2.jpg", :psize => '48x48' } %>
+	  	  <%= render :partial => 'shared/show_photo', :locals => {:model => sub.user.profile, :file_name => "headshot2.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= "#{sub.user.first_name} #{sub.user.last_name}" %></td>
-      <td><%= link_to "Select", relationships_path(:trk_id=>sub.user.id, :rtype=>@rel_type), :method => :post %></td>
+      <td><%= sub.user.name %></td>
+      <td><%= link_to "Select", relationships_path(:trk_id=>sub.user, :rtype=>@rel_type), :method => :post %></td>
     </tr>
     <% end %>
   <% end %>

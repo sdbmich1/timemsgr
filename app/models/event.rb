@@ -75,7 +75,7 @@ class Event < KitsTsdModel
   
   def self.find_event(eid, etype, sdate)
     event = get_event(eid, etype).try(:first)
-    event.eventstartdate = sdate
+    event.eventstartdate = sdate if event
     event
   end 
   

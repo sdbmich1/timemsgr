@@ -19,9 +19,9 @@ class ApplicationController < ActionController::Base
 #    redirect_to '/500.html'
 #  end       
   
-#  def method_missing(id, *args)
-#    redirect_to '/404.html'
-#  end
+  def method_missing(id, *args)
+    redirect_to '/404.html'
+  end
 
   def load_settings
     if user_signed_in?

@@ -6,13 +6,13 @@
 	<% if controller_name != 'private_events' && controller_name != 'life_events' %>
 	  <% unless @sessions.blank? %>
 		<div class="clear-all"></div>
-		<p><%= render 'shared/sessions' %></p>
+		<p><div id="sess-list"><%= render 'shared/sessions' %></div></p>
 	  <% end %>	
 	
 	  <% unless @presenters.blank? %>
 		<div class="clear-all"></div>
-		<p><strong><%= "#{get_label(@event.event_type)}:"%></strong> <br />
-		<%= render 'shared/presenter_list' %></p>
+		<p><strong><%= "#{get_label(@event.event_type)}:"%></strong><br />
+		<div id="pres-list"><%= render 'shared/presenter_list' %></div></p>
 	  <% end %>	
 	<% end %>
 		

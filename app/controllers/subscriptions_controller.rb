@@ -1,5 +1,5 @@
 class SubscriptionsController < ApplicationController
-  before_filter :authenticate_user!#, :except => [:create, :unsubscribe]   
+  before_filter :authenticate_user!, :except => [:create]   
 #  respond_to :html, :json, :xml, :js
   layout :page_layout
   
@@ -10,23 +10,29 @@ class SubscriptionsController < ApplicationController
     if @subscription.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Subscription')}" 
     else
-      redirect_to channel_url(@channel)
+      respond_to do |format|
+        format.html { redirect_to(categories_url) } 
+        format.mobile { redirect_to channel_url(@channel) }
+      end
     end        
   end
   
-  def destroy
-    @channel = Channel.find_by_channelID(params[:channel_id])
-    @subscription = Subscription.find_subscription(params[:user_id], params[:channel_id])
+  def update
+    @channel = Channel.find(params[:channel_id])
+    @subscription = Subscription.unsubscribe(params[:user_id], @channel.channelID)
     if @subscription.save
       redirect_to events_url 
     else
-      redirect_to channel_url(@channel)
+      respond_to do |format|
+        format.html { redirect_to categories_url } 
+        format.mobile { redirect_to channel_url(@channel) }
+      end
     end  
   end 
   
   def index
     @user = User.find_subscriber(params[:id])
-    @subscriptions = @user.subscriptions
+    @subscriptions = @user.subscriptions.paginate(:page => params[:page], :per_page => 15)
   end
   
   private

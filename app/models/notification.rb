@@ -48,7 +48,7 @@ class Notification < ActiveRecord::Base
   end
   
   def set_flds
-    ntype = NoticeType.get_type(self.Notice_Type, self.event_type)
+    ntype = NoticeType.get_type(self.Notice_Type)
     self.Notice_Text = ntype.description if ntype
     self.CreateDateTime = Time.now
     self.Notice_ID = self.Notice_Type[0..1] + Time.now.to_i.to_s if self.Notice_ID.blank? 

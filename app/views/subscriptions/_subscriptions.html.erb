@@ -3,6 +3,7 @@
     <th></th>
     <th>Name</th>
     <th>Summary</th>
+    <th>Start Date</th>
     <th></th>
   </tr>
   <% for sub in @subscriptions %>
@@ -15,8 +16,12 @@
       </td>
       <td><%= sub.channel.channel_name %></td>
       <td><%= truncate(sub.channel.bbody, :length=>80, :omission=>"...") %></td>
-	  <td><%= link_to "Unsubscribe", subscriptions_url(:user_id=>@user, :channel_id => sub.channel.channelID), :id=>'unsub_btn', :method=>:delete, :confirm => 'Are you sure?', :remote=>true %></td>
+      <td><%= get_nice_date(sub.created_at, 'List') %></td>
+	  <td><%= link_to "Unsubscribe", subscription_url(:id=>sub, :user_id=>@user, :channel_id => sub.channel), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %></td>
     </tr>
     <% end %>
   <% end %>
 </table>
+<div class="nav-right">
+  <%= will_paginate @subscriptions %>
+</div>

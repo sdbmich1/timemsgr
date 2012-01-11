@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111217075653) do
+ActiveRecord::Schema.define(:version => 20120110091346) do
 
   create_table "affiliation_types", :force => true do |t|
     t.string   "name"
@@ -186,11 +186,13 @@ ActiveRecord::Schema.define(:version => 20111217075653) do
     t.datetime "updated_at"
     t.string   "subscriberID"
     t.string   "location"
+    t.integer  "user_id"
   end
 
   add_index "event_notices", ["created_at"], :name => "index_event_notices_on_created_at"
   add_index "event_notices", ["event_id", "event_type", "sourceID"], :name => "index_event_notices_on_event_id_and_event_type_and_sourceID"
   add_index "event_notices", ["sourceID"], :name => "index_event_notices_on_sourceID"
+  add_index "event_notices", ["user_id"], :name => "index_event_notices_on_user_id"
 
   create_table "event_page_sections", :force => true do |t|
     t.string   "event_type"
@@ -536,6 +538,9 @@ ActiveRecord::Schema.define(:version => 20111217075653) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
+    t.integer  "sortkey"
+    t.string   "hide"
   end
 
   create_table "gmttimezones", :force => true do |t|

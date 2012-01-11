@@ -7,4 +7,9 @@ module ChannelsHelper
   def subscribed?(slist, cid)
     slist.detect { |x| x.channelID == cid && x.status == 'active' }   
   end
+  
+  def get_subscription(slist, cid)
+    sub = slist.detect { |x| x.channelID == cid && x.status == 'active' } 
+    sub  
+  end  
 end

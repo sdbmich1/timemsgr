@@ -1,0 +1,23 @@
+  <ul data-role="listview">
+  	<% for notice in @notices %>
+	<li>		
+		<%= link_to event_notice_url(notice) do %>
+			<div class="calendar">
+   				<span class="month"><%= notice.created_at.strftime("%b") %></span>
+    			<span class="day"><%= notice.created_at.strftime("%e") %></span>	
+    		</div>	
+    	  	<div class="stime"><%= notice.created_at.strftime('%l:%M %p') %></div>  
+ 			<div class="slider-title">
+   		  		<% unless notice.event_name.blank? %>   	
+		  			<h6><%= notice.event_name %></h6>
+		  		<% else %>
+		  			<h6><%= notice.title %></h6>
+		  		<% end %>
+		  	</div>
+			<div class="sl-descr">
+				<div class="ui-li-desc sdescr"><%= truncate(notice.message, :length=>70, :omission=>'...') %></div>
+			</div>
+		<% end %>
+	</li>
+	<% end %>
+  </ul>

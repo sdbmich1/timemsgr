@@ -12,22 +12,22 @@
       <fieldset data-role="controlgroup"> 
 		Allow:
      	<%= f.check_box :allowPrivCircle, {:id => "allowPriv"}, "yes", "no" %>
-		<label for="allowPriv">Private Sphere</label>
+		<label for="allowPriv">My Family</label>
      	<%= f.check_box :allowSocCircle, {:id => "allowSoc"}, "yes", "no" %>
-		<label for="allowSoc">Social Sphere</label>
+		<label for="allowSoc">My Friends</label>
      	<%= f.check_box :allowWorldCircle, {:id => "allowWorld"}, "yes", "no" %>
-		<label for="allowWorld">World Sphere</label>
+		<label for="allowWorld">My World</label>
       </fieldset>   
 
       <% if controller_name == 'life_events' %> 
         <fieldset data-role="controlgroup"> 
 			Show:
      		<%= f.check_box :ShowPrivCircle, {:id => "showPriv"}, "yes", "no" %>
-			<label for="showPriv">Private Sphere</label>
+			<label for="showPriv">My Family</label>
      		<%= f.check_box :ShowSocCircle, {:id => "showSoc"},  "yes",  "no" %>
-			<label for="showSoc">Social Sphere</label>
+			<label for="showSoc">My Friends</label>
      		<%= f.check_box :ShowWorldCircle, {:id => "showWorld"}, "yes", "no" %>
-			<label for="showWorld">World Sphere</label>
+			<label for="showWorld">My World</label>
         </fieldset>        
       <% end %>
       </div>

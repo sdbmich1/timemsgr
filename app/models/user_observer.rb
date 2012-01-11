@@ -37,7 +37,7 @@ class UserObserver < ActiveRecord::Observer
 	  
 	  # add subscription if promo code is valid
     unless user.promo_code.blank?
-      hp_promo = HostProfile.find_by_promoCode user.promo_code
+      hp_promo = HostProfile.find_promo_code user.promo_code
       unless hp_promo.blank?
         hp_promo.channels.each do |channel|
           Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid) if channel       

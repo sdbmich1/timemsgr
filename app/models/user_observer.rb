@@ -12,9 +12,6 @@ class UserObserver < ActiveRecord::Observer
 
   def after_create(user)
     
-    # send welcome email
-    UserMailer.welcome_email(user).deliver
-    
     # define channel id based on timestamp
     channelID = 'IN' + Time.now.to_i.to_s
     
@@ -47,5 +44,8 @@ class UserObserver < ActiveRecord::Observer
     
     # process notice
     newuser_notice(user)
+    
+    # send welcome email
+    UserMailer.welcome_email(user).deliver    
   end
 end

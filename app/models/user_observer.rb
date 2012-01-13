@@ -1,5 +1,5 @@
 class UserObserver < ActiveRecord::Observer
-  include Rewards
+  include ProcessNotice, Rewards
   observe User
   
   def after_save(model)
@@ -14,6 +14,9 @@ class UserObserver < ActiveRecord::Observer
     
     # send welcome email
     UserMailer.welcome_email(user).deliver
+    
+    # process notice
+    newuser_notice(user)
 
     # define channel id based on timestamp
     channelID = 'IN' + Time.now.to_i.to_s

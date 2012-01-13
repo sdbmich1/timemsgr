@@ -3,26 +3,26 @@ class ChannelsController < ApplicationController
   layout :page_layout
   
   def index
-    mobile_device? ? @channels = Channel.get_interests(@location, params[:interest_id]) : @channels = Channel.channel_list(@location, params[:interest_id], params[:channel_page])
+    mobile_device? ? @channels = Channel.channel_cached(@location, params[:interest_id]) : @channels = Channel.list_cached(@location, params[:interest_id], params[:channel_page])
   end
   
   def show
-    @channel = Channel.find(params[:id])
+    @channel = Channel.find_channel(params[:id])
     @events = Event.channel_events(Date.today+7.days, @channel.ssid)
   end
   
   def about
-    @channel = Channel.find(params[:id])   
+    @channel = Channel.find_channel(params[:id])   
   end
   
   def select
     @interest = params[:interest_id]
-    @channels = Channel.channel_list(@location, @interest, params[:channel_page])
+    @channels = Channel.list_cached(@location, @interest, params[:channel_page])
   end
   
   private
   
   def page_layout 
-    !mobile_device? ? 'users' : (%w(about show).detect { |x| x == action_name}) ? 'showitem' : 'application'    
+    !mobile_device? ? 'users' : (%w(about show).detect { |x| x == action_name}) ? 'showitem' : 'list'    
   end 
 end

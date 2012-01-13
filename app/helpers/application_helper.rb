@@ -28,13 +28,17 @@ module ApplicationHelper
   end
   
   def get_cid(usr)
-    usr ? usr.host_profiles[0].subscriptionsourceID : ''
+    usr ? usr.ssid : ''
   end  
 
   # Return a title on a per-page basis.
   def get_title
     base_title = get_name_or_logo
     @title.nil? ? base_title : "#{base_title} | #{@title}"
+  end
+  
+  def set_title(pg_title)
+    @title = pg_title
   end
   
   # returns company logo

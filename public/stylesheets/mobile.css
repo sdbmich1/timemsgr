@@ -219,3 +219,18 @@ a.notice-btn {
   margin-left: 15px;	
 }
 
+/* error handling */
+.error, .alert p {
+  border: 2px solid red;
+/*  padding: 7px; */
+  padding-bottom: 5px;
+  margin: 7px;
+  width: 70%;
+  height: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #c00;
+  color: #fff;
+}

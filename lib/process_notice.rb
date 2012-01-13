@@ -18,6 +18,12 @@ module ProcessNotice
     (%w(eventstartdate eventenddate eventstarttime).detect { |x| x == fld})
   end
   
+  def newuser_notice(model)
+    # add notice
+    enotice = EventNotice.create( :Notice_Type=>'welcome',:Notice_Text=>"Welcome to Koncierge, #{model.first_name}. Your account has been created.", 
+            :sourceID=>model.ssid, :subscriberID=>model.ssid, :Notice_ID=>'cu' + model.id.to_s )  
+  end
+  
   def other_notice(model, ptype)
     # get profile info
     usr = User.find model.tracked_id

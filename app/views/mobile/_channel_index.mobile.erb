@@ -1,0 +1,9 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => title} %>
+
+<% content_for :srch_content do %>
+	<%= render :partial => 'mobile/channel_search' %>
+<% end %>
+
+<%= content_for :content do -%>
+  	<%= render :partial => 'mobile/channels' %>
+<% end -%>

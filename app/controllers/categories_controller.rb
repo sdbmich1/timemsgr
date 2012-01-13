@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   
   def index
     @categories = Category.get_active_list
-    @channels = @location.channel_list(params[:channel_page])
+    @channels = @location.channels.paginate(:page => params[:channel_page], :per_page => 15)
   end
 
   private

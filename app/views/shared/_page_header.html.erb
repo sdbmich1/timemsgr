@@ -1,0 +1,1 @@
+	<% if @form == "event_slider" %>		<div id="events"><%= render 'showtime' %></div>		<div class="rpos">				<span class="timeframe"><%= render "dd_daterange" %></span>		</div>	<% else %>		<center><h3 class="grp-hdr"><%= set_header(@form) %></h3></center>	<% end %>	<hr />

@@ -13,7 +13,6 @@ class NotificationsController < ApplicationController
   
   def new
     @notification = Notification.new
-    EventNotice.mark_as_read! :all, :for => @user    
     @event = Event.find_event(params[:id], params[:etype], params[:sdate])
   end
   

@@ -42,8 +42,21 @@ class Channel < KitsTsdModel
     find_by_sql(["#{getSQL}", loc, int_id])
   end
   
+  def self.channel_cached(loc, int_id)
+    Rails.cache.fetch("get_channels") do 
+      channels = get_interests(loc, int_id)
+      preload_associations(channels, [:pictures, :subscriptions])
+      return channels
+    end 
+  end
+  
+  def self.delete_cached
+    Rails.cache.delete('get_channels')
+    Rails.cache.delete('channel_list')
+  end
+  
   def self.find_channel(cid)
-    includes(:subscriptions => [{:user=>[{:host_profiles=>[:scheduled_events, :private_events]}]}]).find(cid)
+    includes(:pictures, {:subscriptions => [{:user=>[:pictures, {:host_profiles=>[:scheduled_events, :private_events]}]}]}).find(cid)
   end  
   
   def self.getSQL
@@ -67,12 +80,20 @@ class Channel < KitsTsdModel
   def self.channel_list(loc, int_id, pg)
     paginate_by_sql(["#{getSQL}", loc, int_id], :page => pg, :per_page => 15 )
   end
-  
+
+  def self.list_cached(loc, int_id, pg)
+    Rails.cache.fetch("channel_list") do 
+      channels = get_interests(loc, int_id, pg)
+      preload_associations(channels, [:pictures, :subscriptions])
+      return channels
+    end 
+  end
+    
   define_index do
     indexes :channel_name, :sortable => true
     indexes :bbody
     indexes :cbody
-    indexes channel_locations.location_id, :as => :location_id
+    indexes channel_locations(:location_id), :as => :location_id
    
     has :id, :as => :channel_id
     where "(status = 'active' AND hide = 'no') "

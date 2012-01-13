@@ -14,7 +14,7 @@ class Location < ActiveRecord::Base
     includes(:channels => [:subscriptions]).find(loc)
   end  
   
-  def channel_list(pg)
+  def self.channel_list(pg)
     channels.paginate(:page => pg, :per_page => 15)
   end
   

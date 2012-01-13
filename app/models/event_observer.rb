@@ -3,6 +3,10 @@ class EventObserver < ActiveRecord::Observer
   observe :event, :private_event, :scheduled_event, :life_event
   
   def after_create(model)
+    # clear cache
+    Event.delete_cached
+    
+    # send notice as needed
     process_notice(model, 'new') unless model.class.to_s == 'ScheduledEvent'
   end
   

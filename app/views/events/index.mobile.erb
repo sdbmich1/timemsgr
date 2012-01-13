@@ -4,6 +4,8 @@
 	<%= render :partial => 'mobile/event_search' %>
 <% end %>
 <%= content_for :content do %>
-	<%= render :partial => 'mobile/event_header', :locals => { :theme=>get_theme(@enddate) } %>
-	<%= render 'mobile/index' %>
+	<%= cache do %>
+		<%= render :partial => 'mobile/event_header', :locals => { :theme=>get_theme(@enddate) } %>
+		<%= render 'mobile/index' %>
+	<% end %>
 <% end -%>

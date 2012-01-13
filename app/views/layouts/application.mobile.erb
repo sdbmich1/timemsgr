@@ -31,6 +31,7 @@
     		<%= yield :ad_content %>
     	</div>
     </div>
+    <%= yield :subhead %>
     
 	<div class="app-content" data-role="content">
 	  <% if user_signed_in? %>
@@ -38,10 +39,15 @@
 	  <% else %>	
 	  	<div>
 	  <% end %>	
-      		<%= yield :content %>
-      	</div>
+ 	   	<% unless notice.nil? %>
+  	   		<p class="notice"><%= notice %></p>
+  	   	<% end %>
+       	<% unless alert.nil? %>
+            <p class="alert"><%= alert %></p>     
+       	<% end %>  	  
+  		<%= yield :content %>
      </div>
-    
+  
     <div id="app-footer" data-role="footer">		
       <%= yield :footer %>
     </div>

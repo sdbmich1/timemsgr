@@ -132,6 +132,16 @@ class Event < KitsTsdModel
     get_location + ', ' + csz
   end
   
+  def self.upcoming_events(edate, hp)
+    Rails.cache.fetch("find_events") do 
+      find_events(edate, hp)
+    end 
+  end
+  
+  def self.delete_cached
+    Rails.cache.delete('find_events')
+  end
+  
   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,

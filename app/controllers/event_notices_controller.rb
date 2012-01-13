@@ -4,6 +4,7 @@ class EventNoticesController < ApplicationController
   
   def index
     @notices = EventNotice.get_notices(params[:sid])
+    EventNotice.mark_as_read! :all, :for => @user    
   end
   
   def show

@@ -17,7 +17,7 @@ class ChannelsController < ApplicationController
   
   def select
     @interest = params[:interest_id]
-    @channels = Channel.list_cached(@location, @interest, params[:channel_page])
+    @channels = Channel.list_cached(params[:location], @interest, 1)
   end
   
   private

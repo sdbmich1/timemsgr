@@ -83,7 +83,7 @@ class Channel < KitsTsdModel
 
   def self.list_cached(loc, int_id, pg)
     Rails.cache.fetch("channel_list") do 
-      channels = get_interests(loc, int_id, pg)
+      channels = channel_list(loc, int_id, pg)
       preload_associations(channels, [:pictures, :subscriptions])
       return channels
     end 

@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
     @user = user
     @title = 'Koncierge'
     @url  = root_url + "sign_in"
-    mail(:to => "#{user.name} <#{user.email}>", :subject => "Welcome to #{@title}, #{user.username}!") 
+    mail(:to => "#{user.name} <#{user.email}>", :subject => "Welcome to #{@title}, #{user.first_name}!") 
   end
 
   def send_notice(email, notice, usr)

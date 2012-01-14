@@ -13,6 +13,11 @@ class ScheduledEventsController < ApplicationController
     @event = ScheduledEvent.find(params[:id])
     @picture = set_associations(@event.pictures, 1)
   end
+  
+  def index
+    @events = Event.find_events(@enddate, @user.profile)
+    @notices = EventNotice.get_notices(@user.ssid).paginate(:page => params[:notice_page], :per_page => 10)
+  end
 
   def update
     @event = ScheduledEvent.find(params[:id])

@@ -85,7 +85,7 @@ class ScheduledEvent < ActiveRecord::Base
     
     new_event.contentsourceID, new_event.eventstartdate = ssid, sdt
     new_event.ID = nil
-    new_event.eventenddate = new_event.eventstartdate unless new_event.event_type == 'cnf'
+#    new_event.eventenddate = new_event.eventstartdate unless new_event.event_type == 'cnf'
 
     # reset event type
     [['ue','other'],['cnf','conf'],['prf','perform'],['fst','fest'],['tmnt','tourn'],['cnv','conv'],['mtg','meeting'], 

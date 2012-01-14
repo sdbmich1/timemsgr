@@ -8,4 +8,4 @@ require 'action_dispatch/middleware/session/dalli_store'
 # (create the session table with "rails generate session_migration")
  Timemsgr::Application.config.session_store :active_record_store
  
- Rails.application.config.session_store :dalli_store, :memcache_server => ['127.0.0.1'], :namespace => 'koncierge', :key => '_foundation_knn', :expire_after => 30.minutes
+ Rails.application.config.session_store :dalli_store, :memcache_server => ['127.0.0.1'], :namespace => 'koncierge', :key => '_foundation_knn', :expire_after => 60.minutes

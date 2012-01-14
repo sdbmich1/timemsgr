@@ -4,6 +4,7 @@ class ScheduledEventsController < ApplicationController
   layout :page_layout
 
   def create
+    debugger
     @event = ScheduledEvent.add_event(params[:id],params[:etype], @user.ssid, params[:sdate] )
     @event.save ? flash[:notice] = "Added event to schedule." : flash[:notice] = "Unable to add event to schedule."
     redirect_to events_url

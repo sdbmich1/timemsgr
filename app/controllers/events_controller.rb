@@ -7,7 +7,7 @@ class EventsController < ApplicationController
  		@event = Event.find_event(params[:id], params[:etype], params[:sdate])
  		@sponsor_pages = @event.try(:sponsor_pages)
  		@notification = Notification.new
-    mobile_device? ? @presenters = @event.try(:presenters) : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
+    mobile_device? ? @presenters = @event.try(:presenters) : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) if @event.presenters
 	end
 	
 	def index

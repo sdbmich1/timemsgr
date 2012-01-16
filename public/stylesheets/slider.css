@@ -134,6 +134,8 @@ section h1 {
 
 .rsz-img {  height: 16px; width: 16px; margin-left: 4px; }
 
+.bot-20 { margin-bottom: 60px;}
+
 .slider-round {	    
         -webkit-border-radius: 5px; -moz-border-radius: 5px; 
         border-radius: 5px 5px 0 0 / 5px 5px 0 0;;  

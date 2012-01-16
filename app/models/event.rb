@@ -40,6 +40,10 @@ class Event < KitsTsdModel
   
   default_sphinx_scope :datetime_first
 
+  def self.dbname
+    Rails.env.development? ? "`kits_development`" : "`kits_production`"
+  end
+  
   def self.channel_events(edt, ssid)
     where_ssid = where_dt + " AND (subscriptionsourceID = ?)" 
     find_by_sql(["#{getSQL} FROM `kitsknndb`.events WHERE #{where_ssid}) 
@@ -52,23 +56,23 @@ class Event < KitsTsdModel
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
   
-  def self.current(edt, cid)
+  def self.current(edt, cid, loc)
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
-    find_by_sql(["#{getSQLe} FROM `kits_development`.eventspriv e WHERE #{where_cid} ) 
-         UNION #{getSQLe} FROM `kits_development`.eventsobs e WHERE #{where_cid} )
-         UNION #{getSQLefee} FROM `kitsknndb`.events e WHERE #{where_dte} )
-         UNION #{getSQLe} FROM `kitscentraldb`.events e WHERE #{where_dte} )
+    where_loc = where_dte + " AND (e.mapcity = ?)"
+    find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
+         UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
+         UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_loc} )
          UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
-         UNION #{getSQLe} FROM `kits_development`.events e WHERE #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, edt, edt, cid, edt, edt, edt, edt, cid]) 
+         UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, loc, cid, edt, edt, edt, edt, cid]) 
   end
   
   def self.get_event(eid, etype)
     where_id = "where (ID = ? AND event_type = ?))"
-    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id} 
-         UNION #{getSQL} FROM `kits_development`.events #{where_id} 
+    find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id} 
+         UNION #{getSQL} FROM #{dbname}.events #{where_id} 
          UNION #{getSQLfee} FROM `kitsknndb`.events #{where_id} 
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype, eid, etype])        
   end
@@ -79,9 +83,10 @@ class Event < KitsTsdModel
     event
   end 
   
-  def self.find_events(edate, hp) 
+  def self.find_events(edate, hp, loc) 
+    locale = Location.find(loc)
     edate.blank? ? edate = Date.today+7.days : edate 
-    hp.blank? ? current_events(edate) : current(edate, hp.ssid)    
+    hp.blank? ? current_events(edate) : current(edate, hp.ssid, locale.city)    
   end
   
   def self.get_schedule(edate, usr)
@@ -133,7 +138,7 @@ class Event < KitsTsdModel
   end
   
   def self.upcoming_events(edate, hp)
-    Rails.cache.fetch("find_events") do 
+    Rails.cache.fetch("find_events", :expires_in => 30.minutes) do 
       find_events(edate, hp)
     end 
   end

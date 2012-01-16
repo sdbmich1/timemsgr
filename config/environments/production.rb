@@ -35,7 +35,7 @@ Timemsgr::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Enable threaded mode
   # config.threadsafe!
@@ -46,4 +46,19 @@ Timemsgr::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+    # added for memcached
+  config.cache_store = :dalli_store #, '127.0.0.1', '127.0.0.1:11211', { :namespace => 'dev' }
+  
+  if defined?(PhusionPassenger)
+    PhusionPassenger.on_event(:starting_worker_process) do |forked|
+      # Reset Rails's object cache
+      # Only works with DalliStore
+      Rails.cache.reset if forked
+
+      # Reset Rails's session store
+      # If you know a cleaner way to find the session store instance, please let me know
+      ObjectSpace.each_object(ActionDispatch::Session::DalliStore) { |obj| obj.reset }
+    end
+  end  
 end

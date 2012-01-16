@@ -1,11 +1,9 @@
     ActionMailer::Base.smtp_settings = {  
-      :address              => "smtp.gmail.com",  
-      :port                 => 587,  
-      :domain               => "buzzhubnetwork.com",  
-      :user_name            => "sdbmich1",  
-      :password             => "sdb91mse",  
-      :authentication       => "plain",  
+      :address              => "Starfleet3052V1@kitsus.rbca.net",  
+      :port                 => 25,  
+      :domain               => "kitsus.rbca.net",  
+      :authentication       => nil,  
       :enable_starttls_auto => true  
     }  
     
-	ActionMailer::Base.default_url_options[:host] = "localhost:3000" 
+	ActionMailer::Base.default_url_options[:host] = "150.150.2.25" 

@@ -138,6 +138,11 @@ class User < ActiveRecord::Base
     first_name + ' ' + last_name
   end
   
+  def location
+    loc = Location.find(location_id)
+    loc.city
+  end
+  
   def self.get_user(sid)
     HostProfile.get_user(sid)  
   end

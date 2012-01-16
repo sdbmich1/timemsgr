@@ -83,8 +83,7 @@ class ScheduledEvent < ActiveRecord::Base
     selected_event = Event.find_event(eid, etype, sdt)
     new_event = ScheduledEvent.new(selected_event.attributes)
     
-    new_event.contentsourceID, new_event.eventstartdate = ssid, sdt
-    new_event.ID = nil
+    new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil 
 #    new_event.eventenddate = new_event.eventstartdate unless new_event.event_type == 'cnf'
 
     # reset event type

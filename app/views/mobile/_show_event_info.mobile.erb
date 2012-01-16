@@ -1,9 +1,3 @@
-<% unless model.try(:bbody).blank? %>
-	<ul data-role="listview" data-dividertheme="a">
-		<li data-role="list-divider">Summary</li>
-	</ul>
-	<p class="item-descr"><%= model.bbody.html_safe %></p>
-<% end %>
 <% unless model.cbody.blank? %>
 	<ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Description</li>

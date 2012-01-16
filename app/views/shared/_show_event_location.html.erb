@@ -9,11 +9,6 @@
 	<div class="span-20 last">
 		<span class="prepend-2"><%= event.csz %></span>	</div><br />
 <% end %>
-<% if !event.bbody.blank? %>
-	<div class="span-2"><%= 'Summary:' %></div>
-	<div class="span-18 last"><%= event.bbody.html_safe %></div><br />
-<% end %>
-
 <% if !event.cbody.blank? %>
 	<div class="span-2"><%= 'Details:' %></div>
 	<div class="span-18 last"><%= event.cbody.html_safe %></div><br />

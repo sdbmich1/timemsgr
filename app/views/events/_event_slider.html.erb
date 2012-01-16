@@ -8,4 +8,6 @@
 <% if subscriptions? %>
 	<%= render :partial => 'slider', :locals => { :slider => "Tracked Activities" }  %>
 <% end %>
-<%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" } %>
+<%= cache "events", :expires_in => 30.minutes do %>
+	<%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" } %>
+<% end %>

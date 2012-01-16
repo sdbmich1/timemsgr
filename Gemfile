@@ -81,3 +81,14 @@ end
 # add caching
  gem "dalli"
  
+# add asynchronous processing
+gem "delayed_job", "~> 2.1.4"
+
+# data dump utility
+gem 'yaml_db'
+ 
+# google analytics 
+group :production do
+  gem 'rack-google_analytics', :require => "rack/google_analytics"
+end 
+ 

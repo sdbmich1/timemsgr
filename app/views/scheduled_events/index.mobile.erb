@@ -1,19 +1,1 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'My Activities'} %>
 
-<%= content_for :content do %>
-	<ul data-role="listview" data-filter="true">
-		<% @events.each do |event| %>
-	  		<li>
-	  			 <% if life_event?(event.event_type) %>
-    				<%= link_to life_event_url(event) do %>
-	  					<%= render :partial => 'mobile/event_item', :locals => { :event => event, :privlist => 'Yes' } %>
-    				<% end %>
-  				<% else %>
-   					<%= link_to private_event_url(event) do %>
-	  				 	<%= render :partial => 'mobile/event_item', :locals => { :event => event, :privlist => 'Yes' } %>
-				    <% end %>
-				<% end %>
-	  		</li>
-		<% end %>
-	</ul>
-<% end -%>

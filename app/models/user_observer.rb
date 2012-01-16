@@ -42,10 +42,16 @@ class UserObserver < ActiveRecord::Observer
       end
     end
     
+    # subscribe to local channels
+#    local_channels = LocalChannel.where('localename = ?', user.location)    
+#    local_channels.each do |channel|
+#      Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid) if channel
+#    end
+    
     # process notice
     newuser_notice(user)
     
     # send welcome email
-    UserMailer.welcome_email(user).deliver    
+    UserMailer.welcome_email(user).delay.deliver    
   end
 end

@@ -8,6 +8,7 @@ class LogoType < KitsTsdModel
   end
   
   def self.logo_size(val)
-    active.where('code = ?', val).first
+    logo = LogoType.find_by_code(val)
+    logo.logo_size
   end
 end

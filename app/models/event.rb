@@ -16,7 +16,7 @@ class Event < KitsTsdModel
   has_many :rsvps, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :EventID
   accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
 
-  has_many :sponsor_pages, :dependent => :destroy
+  has_many :sponsor_pages, :dependent => :destroy, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
@@ -52,7 +52,7 @@ class Event < KitsTsdModel
   
   def self.current_events(edt)
     find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_dt} )
-         UNION #{getSQL} FROM `kitsknndb`.events WHERE #{where_dt} )
+         UNION #{getSQL} FROM `kitsknndb`.eventstsd WHERE #{where_dt} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
   
@@ -62,10 +62,10 @@ class Event < KitsTsdModel
     where_loc = where_dte + " AND (e.mapcity = ?)"
     find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
+         UNION #{getSQLefee} FROM `kitsknndb`.eventstsd #{where_sid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_loc} )
-         UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, loc, cid, edt, edt, edt, edt, cid]) 
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt, edt, edt, loc, edt, edt, cid]) 
   end
   
   def self.get_event(eid, etype)
@@ -73,7 +73,7 @@ class Event < KitsTsdModel
     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id} 
          UNION #{getSQL} FROM #{dbname}.events #{where_id} 
-         UNION #{getSQLfee} FROM `kitsknndb`.events #{where_id} 
+         UNION #{getSQLfee} FROM `kitsknndb`.eventstsd #{where_id} 
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype, eid, etype])        
   end
   

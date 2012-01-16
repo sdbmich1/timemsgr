@@ -16,7 +16,7 @@ class Event < KitsTsdModel
   has_many :rsvps, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :EventID
   accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
 
-  has_many :sponsor_pages, :dependent => :destroy, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
+  has_many :sponsor_pages, :dependent => :destroy#, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
@@ -78,7 +78,7 @@ class Event < KitsTsdModel
   end
   
   def self.find_event(eid, etype, sdate)
-    event = get_event(eid, etype, sdate).try(:first)
+    event = get_event(eid, etype, sdate.to_date).try(:first)
     event.eventstartdate = sdate if event
     event
   end 

@@ -68,17 +68,17 @@ class Event < KitsTsdModel
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt, edt, edt, loc, edt, edt, cid]) 
   end
   
-  def self.get_event(eid, etype)
-    where_id = "where (ID = ? AND event_type = ?))"
+  def self.get_event(eid, etype, sdt)
+    where_id = "where (ID = ? AND event_type = ? AND eventstartdate = ?))"
     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id} 
          UNION #{getSQL} FROM #{dbname}.events #{where_id} 
          UNION #{getSQLfee} FROM `kitsknndb`.eventstsd #{where_id} 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, eid, etype, eid, etype, eid, etype, eid, etype])        
+         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, sdt, eid, etype, sdt, eid, etype, sdt, eid, etype, sdt, eid, etype, sdt])        
   end
   
   def self.find_event(eid, etype, sdate)
-    event = get_event(eid, etype).try(:first)
+    event = get_event(eid, etype, sdate).try(:first)
     event.eventstartdate = sdate if event
     event
   end 

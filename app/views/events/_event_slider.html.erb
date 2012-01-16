@@ -9,5 +9,5 @@
 	<%= render :partial => 'slider', :locals => { :slider => "Tracked Activities" }  %>
 <% end %>
 <%= cache "events", :expires_in => 30.minutes do %>
-	<%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" } %>
+	<div class="bot-20"><%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" } %></div>
 <% end %>

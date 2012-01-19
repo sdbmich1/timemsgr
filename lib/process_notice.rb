@@ -36,7 +36,7 @@ module ProcessNotice
             :sourceID=>trkr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )
 
     #also send email to person
-    UserMailer.delay.send_request(trkr.email, enotice, usr).deliver unless trkr.email.blank? 
+    UserMailer.delay.send_request(trkr.email, enotice, usr) unless trkr.email.blank? 
   end
     
   def post_notice(ary, model, usr, ptype)
@@ -48,7 +48,7 @@ module ProcessNotice
             :event_id=>get_event_id(model) )
       
       #also send email to each person
-      trkr.email.blank? ? next : UserMailer.delay.send_notice(trkr.email, enotice, usr).deliver     
+      trkr.email.blank? ? next : UserMailer.delay.send_notice(trkr.email, enotice, usr)     
     end
   end
   

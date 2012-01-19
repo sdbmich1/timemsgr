@@ -17,7 +17,7 @@ class EventObserver < ActiveRecord::Observer
     process_notice(model, 'new') unless model.class.to_s == 'ScheduledEvent'
   end
   
-  # add events to schedule as needed for reoccuring events
+  # add events to schedule as needed for re-occurring events
   def schedule_event(model, sdate, edate, period, freq)
     if sdate <= edate
       new_event = model.clone
@@ -28,6 +28,10 @@ class EventObserver < ActiveRecord::Observer
   end
   
   def get_code(rtype)
+    ReoccurenceType.get_code rtype
+  end
+  
+  def get_freq(rtype)
     Frequency.get_code rtype
   end
   

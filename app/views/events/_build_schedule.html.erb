@@ -1,15 +1,14 @@
-<% get_events(slider, edate).each do |ev| %>
-<li class="placehdr">
+<li>
   <section class="sborder">
   	<div id="elist">
-  		<%= link_to private_events_url(:sdate=>ev[:start_date]) do %>
+  		<%= link_to private_events_url(:sdate=>edate) do %>
 		<div class="calendar"> 
-    		<span class="month"><%= ev[:start_date].strftime("%b") %></span>
-    		<span class="day"><%= ev[:start_date].strftime("%e") %></span>
+    		<span class="month"><%= edate.strftime("%b") %></span>
+    		<span class="day"><%= edate.strftime("%e") %></span>
 		</div>
 		<% end %>		
 		<div class="slider-title"><h1>
-		<% get_event_list(ev[:start_date]).each do |event| %>
+		<% get_event_list(edate).each do |event| %>
 			<%= chk_offset(event.eventstarttime, event.localGMToffset, event.subscriptionsourceURL) %>
   			<% unless major_event?(event.event_type) %>
 			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :sdate=>event.eventstartdate.to_date), :class => "show-item" %>
@@ -22,4 +21,4 @@
 	</div>
   </section>
 </li>
-<% end %>
+

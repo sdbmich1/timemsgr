@@ -131,29 +131,33 @@ class PrivateEvent < ActiveRecord::Base
       self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
     end
   end
+  
+  def self.dbname
+    Rails.env.development? ? "`kits_development`" : "`kits_production`"
+  end  
 
   def self.current(edt, cid)
     edt.blank? ? edt = Date.today+14.days : edt  
     where_cid = where_dt + " and (contentsourceID = ?)"    
-    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+    find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime DESC", edt, edt, cid, edt, edt, cid, edt, edt, cid]) 
   end
    
   def self.get_events(cid)
      where_cid = "#{where_stmt} (contentsourceID = ?)"    
-     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid]) 
   end
       
   def self.get_event_pages(page, cid)
      where_cid = "#{where_stmt} (contentsourceID = ?)"    
-     paginate_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+     paginate_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid], :page=>page) 
   end
   
@@ -161,12 +165,11 @@ class PrivateEvent < ActiveRecord::Base
     sdate.blank? ? get_event_pages(page, cid) : get_event_list(page, cid, sdate)
   end
   
-  def self.get_event_list(page, cid, sdate)
-     
+  def self.get_event_list(page, cid, sdate)     
      where_cid = "#{where_stmt} (contentsourceID = ?) AND (date(eventstartdate) = ?)"    
-     paginate_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+     paginate_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime DESC", cid, sdate, cid, sdate, cid, sdate], :page=>page) 
   end 
   
@@ -193,9 +196,9 @@ class PrivateEvent < ActiveRecord::Base
   
   def self.get_event(eid)
      where_id = "where (ID = ?))"
-     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}       
-         UNION #{getSQL} FROM `kits_development`.events #{where_id}", eid, eid, eid])        
+     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id}       
+         UNION #{getSQL} FROM #{dbname}.events #{where_id}", eid, eid, eid])        
   end
   
   def self.set_status(eid)

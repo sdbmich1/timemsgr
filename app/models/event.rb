@@ -69,7 +69,7 @@ class Event < KitsTsdModel
   end
   
   def self.get_event(eid, etype, sdt)
-    where_id = "where (ID = ? AND event_type = ? AND eventstartdate = ?))"
+    where_id = "where (ID = ? AND event_type = ? AND date(eventstartdate) = ?))"
     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id} 
          UNION #{getSQL} FROM #{dbname}.events #{where_id} 

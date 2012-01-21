@@ -53,7 +53,7 @@ section h1 {
 	clear: right;
 }
 
-.opp-slider, .obsrv-slider, .sch-slider { margin: 5px 0 5px 0; padding: 0; height: 145px; width: 640px; visibility: hidden; }
+.opp-slider, .obsrv-slider, .sch-slider { margin: 5px 0 5px 0; padding: 0; height: 145px; width: 640px; }
 .obsrv-slider { display:inline-block; }
 .slider-title {
 	margin-top: -40px;

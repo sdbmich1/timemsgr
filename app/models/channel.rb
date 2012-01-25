@@ -18,7 +18,7 @@ class Channel < KitsTsdModel
   
 	has_many :channel_locations, :dependent => :destroy
 	has_many :locations, :through => :channel_locations,
-	:finder_sql => proc { "SELECT l.* FROM kits_development.locations l " +
+	:finder_sql => proc { "SELECT l.* FROM #{dbname}.locations l " +
            "INNER JOIN channel_locations c ON c.location_id=l.id " +
            "WHERE c.id=#{id}" }
 	
@@ -29,6 +29,10 @@ class Channel < KitsTsdModel
 #  scope :uniquelist, :select => 'DISTINCT channels.id, channels.name'
   
   default_scope :order => 'sortkey ASC'
+  
+  def self.dbname
+    Rails.env.development? ? "`kits_development`" : "`kits_production`"
+  end 
   
   def self.local(loc)
     active.unhidden.joins(:channel_locations).where("channel_locations.location_id = ?", loc)
@@ -61,8 +65,8 @@ class Channel < KitsTsdModel
   
   def self.getSQL
     "(SELECT c.* FROM `kitsknndb`.channels c 
-    INNER JOIN `kits_development`.channel_locations cl ON cl.channel_id = c.id 
-    INNER JOIN `kits_development`.locations l ON cl.location_id=l.id
+    INNER JOIN #{dbname}.channel_locations cl ON cl.channel_id = c.id 
+    INNER JOIN #{dbname}.locations l ON cl.location_id=l.id
     INNER JOIN `kitsknndb`.channel_interests i ON i.channel_id = c.id 
     WHERE c.status = 'active' AND c.hide = 'no' 
     AND (cl.location_id = ?) 

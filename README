@@ -1,3 +1,12 @@
 # KITS Koncierge application
 
-This is the first Rails application for KITS Koncierge by Sean Brown.
+Timemsgr is the rails web application for version 2 of Koncierge, a mobile intelligent message delivery platform 
+that helps organizations increase engagement, reduce scheduling hassles, and increase revenues 
+by delivering timely, relevant scheduling opportunities in Twitter-like fashion to users’ schedules.  Version 1
+was built on top of MS stack using ASP.Net.
+
+The application manages both the mobile and web presentations of the application by detecting the MIME types
+dynamically and directing the user to the appropriate view files.  Mobile partial views are hosted in the app/views/mobile
+folder while the web partial views are hosted in the app/views/shared folder.
+
+JQuery Mobile is used by the application to manage and process the mobile user view requests.  

@@ -12,9 +12,9 @@
 		<% get_event_list(ev[:start_date]).each do |event| %>
 			<%= chk_offset(event.eventstarttime, event.localGMToffset, event.subscriptionsourceURL) %>
   			<% unless major_event?(event.event_type) %>
-			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :sdate=>event.eventstartdate), :class => "show-item" %>
+			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid), :class => "show-item" %>
 			<% else %>
-			  	<%= link_to event.event_name, major_event_url(event, :etype=>event.event_type, :sdate=>event.eventstartdate), :class => "show-item" %>
+			  	<%= link_to event.event_name, major_event_url(event, :etype=>event.event_type, :eid=>event.eventid), :class => "show-item" %>
 			<% end %>
 			<br />
 		<% end %>

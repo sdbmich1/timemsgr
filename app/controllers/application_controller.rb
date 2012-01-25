@@ -25,14 +25,12 @@ class ApplicationController < ActionController::Base
 
   def load_settings
     if user_signed_in?
-#      Time.zone = current_user.time_zone
       @user = current_user
       @credits, @meters = get_credits(current_user.id), get_meter_info  
       params[:location] ? loc = params[:location] : loc = current_user.location_id 
       @location = Location.find_location loc
     end        
   end
-
   
   private
   

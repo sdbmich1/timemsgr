@@ -1,0 +1,24 @@
+<li>
+  <section class="sborder">
+  	<div id="elist">
+  		<%= link_to private_events_url(:sdate=>edate) do %>
+		<div class="calendar"> 
+    		<span class="month"><%= edate.strftime("%b") %></span>
+    		<span class="day"><%= edate.strftime("%e") %></span>
+		</div>
+		<% end %>		
+		<div class="slider-title"><h1>
+		<% get_event_list(edate).each do |event| %>
+			<%= chk_offset(event.eventstarttime, event.localGMToffset, event.subscriptionsourceURL) %>
+  			<% unless major_event?(event.event_type) %>
+			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :sdate=>event.eventstartdate.to_date), :class => "show-item" %>
+			<% else %>
+			  	<%= link_to event.event_name, major_event_url(event, :etype=>event.event_type, :sdate=>event.eventstartdate.to_date), :class => "show-item" %>
+			<% end %>
+			<br />
+		<% end %>
+		</h1></div>
+	</div>
+  </section>
+</li>
+

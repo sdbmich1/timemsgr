@@ -53,6 +53,7 @@ class User < ActiveRecord::Base
   has_many :affiliations 
   accepts_nested_attributes_for :affiliations, :reject_if => lambda { |a| a[:name].blank? }
  
+  # support legacy db user profile data
   has_many :host_profiles, :foreign_key => :ProfileID
   accepts_nested_attributes_for :host_profiles, :reject_if => :all_blank 
       
@@ -61,21 +62,27 @@ class User < ActiveRecord::Base
   
   has_many :authentications
   
+  # define friend relationships
   has_many :relationships, :foreign_key => "tracker_id", :class_name => "Relationship", :dependent => :destroy
   has_many :trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'accepted'" 
   has_many :private_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'private' AND status = 'accepted'" 
   has_many :social_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'social' AND status = 'accepted'" 
   has_many :extended_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'extended' AND status = 'accepted'"
+
+  # define pending friend relationships
   has_many :pending_trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'pending'", :order => :created_at
   has_many :pending_private_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'private' AND status = 'pending'"
   has_many :pending_social_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'social' AND status = 'pending'"
   has_many :pending_extended_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'extended' AND status = 'pending'"
 
+  # define reverse friend relationships
   has_many :reverse_relationships, :foreign_key => "tracked_id", :class_name => "Relationship", :dependent => :destroy
   has_many :trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "status = 'accepted'"
   has_many :private_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'accepted'"
   has_many :social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
   has_many :extended_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'extended' AND status = 'accepted'"
+
+  # define reverse pending friend relationships
   has_many :pending_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "status = 'pending'", :order => :created_at
   has_many :pending_private_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'pending'"
   has_many :pending_social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'pending'"
@@ -90,7 +97,6 @@ class User < ActiveRecord::Base
      
   # set default time zone for new users
   def set_timezone
-#    loc = Location.where(["id = :value", { :value => self.location_id }]).first
     loc = Location.find(self.location_id)
     self.time_zone, self.localGMToffset = loc.time_zone, loc.localGMToffset
   end
@@ -179,6 +185,7 @@ class User < ActiveRecord::Base
     profile.private_events.extended_circle   
   end  
   
+  # define sphinx search indexes and criteria
   define_index do
     indexes :first_name, :sortable => true
     indexes :last_name, :sortable => true

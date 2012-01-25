@@ -6,8 +6,10 @@ class MajorEventsController < ApplicationController
     @event = Event.find_event(params[:id], params[:etype], params[:sdate])
     @notification = Notification.new
     @sponsor_pages = @event.try(:sponsor_pages)   
-    mobile_device? ? @presenters = @event.presenters : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
-    mobile_device? ? @sessions = @event.sessions : @sessions = @event.sessions.paginate(:page => params[:session_page], :per_page => 15) 
+    @presenters = @event.try(:presenters)
+    @sessions = @event.try (:sessions)
+#    mobile_device? ? @presenters = @event.presenters : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
+#    mobile_device? ? @sessions = @event.sessions : @sessions = @event.sessions.paginate(:page => params[:session_page], :per_page => 15) 
   end
   
   def about

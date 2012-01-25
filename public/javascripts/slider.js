@@ -80,8 +80,8 @@ function resizeFrame()
 {
     var h = $(window).height();
     var w = $(window).width();
-        $(".left-nav").css('left',(w < 1024 || h < 768) ? 150 : 350 );
-        $(".right-nav").css('right',(w < 1024 || h < 768) ? 50 : 200 );
+        $(".left-nav").css('left',(w < 1024 || h < 768) ? 150 : (w > 1400) ? 250 : 350 );
+        $(".right-nav").css('right',(w < 1024 || h < 768) ? 50 : (w > 1400) ? 150 : 200 );
 		$(".push").css('margin-top', function() {
 	  		   var c = $(".container").height();
 			   return c + 20;

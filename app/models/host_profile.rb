@@ -9,14 +9,14 @@ class HostProfile < KitsTsdModel
         :Phone_cell, :wirelessservice, :Country, :promoCode, :pictures_attributes
         
   text_regex = /^[-\w\,. _\/&@]+$/i
-        
-#  validates :Company, :allow_blank => true, :length => { :maximum => 100 }, :format => { :with => text_regex }
-   
+          
   belongs_to :user, :foreign_key => :ProfileID
   has_many :channels, :foreign_key => :HostProfileID
   
   has_many :events, :through => :channels 
   has_many :scheduled_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
+  
+  # used to access friends life schedule of events
   has_many :life_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def private_circle
       where(:allowPrivCircle => 'yes')
@@ -43,6 +43,7 @@ class HostProfile < KitsTsdModel
     end  
   end
   
+  # used to access friends private schedule of events
   has_many :private_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def private_circle
       where(:allowPrivCircle => 'yes')

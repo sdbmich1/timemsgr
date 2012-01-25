@@ -1,7 +1,7 @@
 <li>
   <% if major_event?(event.event_type) %>
     <%= link_to major_event_url(event, :etype=>event.event_type, :eid=>event.eventid) do %>
-	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => event.eventstartdate.to_date } %>
+	  	<%= render :partial => 'mobile/event', :locals => { :event => event, :edate => event.eventstartdate > Date.today ? event.eventstartdate.to_date : Date.today } %>
     <% end %>  
   <% else %>
     <%= link_to event_url(event, :etype=>event.event_type, :eid=>event.eventid) do %>

@@ -3,8 +3,9 @@
 <% content_for :srch_content do %>
 	<%= render :partial => 'mobile/event_search' %>
 <% end %>
+
 <%= content_for :content do %>
-	<% cache do %>
+	<% cache ([@user, @enddate, 'event_list']) do %>
 		<%= render :partial => 'mobile/event_header', :locals => { :theme=>get_theme(@enddate) } %>
 		<%= render 'mobile/index' %>
 	<% end %>

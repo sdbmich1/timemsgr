@@ -4,10 +4,9 @@ class EventsController < ApplicationController
   layout :page_layout
 	
 	def show
- 		@event = Event.find_event(params[:id], params[:etype], params[:sdate])
+ 		@event = Event.find_event(params[:id], params[:etype], params[:eid])
  		@sponsor_pages = @event.try(:sponsor_pages)
  		@notification = Notification.new
-#    mobile_device? ? @presenters = @event.try(:presenters) : @event.presenters ? @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) : @presenters
     @presenters = @event.try(:presenters)
 	end
 	

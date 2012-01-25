@@ -16,10 +16,11 @@ class Event < KitsTsdModel
   has_many :rsvps, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :EventID
   accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
 
-  has_many :sponsor_pages, :dependent => :destroy#, :foreign_key => :subscriptionsourceID, :primary_key => :subscriptionsourceID
+  has_many :sponsor_pages, :dependent => :destroy
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
+  # define sphinx search criteria and indexes
   define_index do
     indexes :event_name, :sortable => true
     indexes :bbody, :sortable => true
@@ -56,6 +57,7 @@ class Event < KitsTsdModel
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
   
+  # build dynamic union to pull event data from legacy dbs across different schemas
   def self.current(edt, cid, loc)
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
@@ -67,9 +69,10 @@ class Event < KitsTsdModel
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt, edt, edt, edt, edt, cid]) 
   end
-  
+
+  # build dynamic union to pull event data from legacy dbs across different schemas for specific event  
   def self.get_event(eid, etype, sdt)
-    where_id = "where (ID = ? AND event_type = ? AND date(eventstartdate) = ?))"
+    where_id = "where (ID = ? AND event_type = ? AND eventid = ?))"
     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id} 
          UNION #{getSQL} FROM #{dbname}.events #{where_id} 
@@ -77,8 +80,8 @@ class Event < KitsTsdModel
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, sdt, eid, etype, sdt, eid, etype, sdt, eid, etype, sdt, eid, etype, sdt])        
   end
   
-  def self.find_event(eid, etype, sdate)
-    event = get_event(eid, etype, sdate.to_date).try(:first)
+  def self.find_event(id, etype, eid)
+    event = get_event(id, etype, eid).try(:first)
     event.eventstartdate = sdate if event
     event
   end 
@@ -89,6 +92,7 @@ class Event < KitsTsdModel
     hp.blank? ? current_events(edate) : current(edate, hp.ssid, locale.city)    
   end
   
+  # used to get friends schedule when shared
   def self.get_schedule(edate, usr)
     elist = Event.find_events(edate, usr.profile)
     usr.private_trackers.each do |pt|
@@ -147,6 +151,7 @@ class Event < KitsTsdModel
     Rails.cache.delete('find_events')
   end
   
+  # define SQL field for SELECT UNION statements without fee and title fields
   def self.getSQL
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
@@ -158,6 +163,7 @@ class Event < KitsTsdModel
         contentsourceURL, subscriptionsourceURL "     
   end
   
+  # define SQL field for SELECT UNION statements with join tables
   def self.getSQLfee
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
@@ -169,6 +175,7 @@ class Event < KitsTsdModel
         contentsourceURL, subscriptionsourceURL"     
   end
  
+  # define SQL field for SELECT UNION statements for event table without fee and title fields
   def self.getSQLe
       "(SELECT e.ID, e.event_name, e.event_type, e.eventstartdate, e.eventenddate, e.eventstarttime, 
         e.eventendtime,  e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
@@ -179,7 +186,8 @@ class Event < KitsTsdModel
         0 as Other1Title, 0 as Other2Title, 0 as Other3Title, 0 as Other4Title, 0 as Other5Title, 0 as Other6Title, 
         e.contentsourceURL, e.subscriptionsourceURL "     
   end
-   
+  
+  # define SQL field for SELECT UNION statements with join tables
   def self.getSQLefee
       "(SELECT e.ID, e.event_name, e.event_type, e.eventstartdate, e.eventenddate, e.eventstarttime, 
         e.eventendtime,  e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
@@ -191,12 +199,14 @@ class Event < KitsTsdModel
         e.contentsourceURL, e.subscriptionsourceURL"     
   end
    
+  # define SQL WHERE clause for SELECT UNION statements 
   def self.where_dt
       "(LOWER(status) = 'active' AND LOWER(hide) = 'no') 
         AND ((eventstartdate >= curdate() and eventstartdate <= ?) 
         OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)) "
   end
   
+  # define SQL WHERE clause for SELECT UNION statements 
   def self.where_dte
       "( LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no') 
          AND ((e.eventstartdate >= curdate() and e.eventstartdate <= ?) 

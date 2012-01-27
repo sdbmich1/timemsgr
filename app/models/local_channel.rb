@@ -70,7 +70,7 @@ class LocalChannel < KitsSubModel
     indexes :bbody
     indexes :cbody
    
-    has :id, :as => :channel_id
+    has :ID, :as => :channel_id
     where "(status = 'active' AND hide = 'no') "
   end    
 

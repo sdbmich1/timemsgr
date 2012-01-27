@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   layout :page_layout
 	
 	def show
- 		@event = Event.find_event(params[:id], params[:etype], params[:eid])
+ 		@event = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt])
  		@sponsor_pages = @event.try(:sponsor_pages)
  		@notification = Notification.new
     @presenters = @event.try(:presenters)

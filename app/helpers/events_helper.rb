@@ -121,18 +121,18 @@ module EventsHelper
     
   # used to build each day's schedule of events
   def list_events(elist, start_date)
-    elist.select {|event| event.eventstartdate.to_date == start_date && time_left?(event)}   
+    elist.select {|event| event.start_date == start_date && time_left?(event)}   
   end
   
   # determines date range to build schedule view
   def get_date_range(*args)
     return [] unless args[0]
-    args[1] ? edate = args[1].to_date : edate = args[0].first.eventenddate.to_date
+    args[1] ? edate = args[1].to_date : edate = args[0].first.end_date
     drange = (Date.today..edate).collect { |x| x }
   end
   
   def get_dates(val)
-    drange = (val.eventstartdate.to_date..val.eventenddate.to_date).collect { |x| x }
+    drange = (val.start_date..val.end_date).collect { |x| x }
   end
 
   # adjusts time display by v1.0 time zone offset when appropriate
@@ -176,7 +176,7 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.eventstartdate.to_date == dt }.sort_by {|x| x.eventstarttime}     
+    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date == dt }.sort_by {|x| x.eventstarttime}     
   end
   
   def get_appointments
@@ -194,14 +194,16 @@ module EventsHelper
   def get_upcoming_events(sdt)
     @trk_events ||= get_subscriptions
     @user_events ||= get_user_events
-    @events.reject {|e| observance?(e.event_type) || e.eventstartdate > sdt || e.cid == @user.ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
+    @events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
   end
   
+  # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events
   def set_start_date(event, sdt)
-    event.eventstartdate = sdt
+    event.eventstartdate = sdt if event.eventenddate >= sdt && event.eventstartdate < sdt
     event
   end
    
+  # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
   def chk_user_events(elist, event)
     elist.detect{|x| x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name}
   end
@@ -222,6 +224,7 @@ module EventsHelper
     LogoType.logo_size(val)
   end
   
+  # adds event owner to the event text display for shared events
   def set_event_text(event, fname, dt)
     event.event_name = event.event_name + ' (' + fname + ')' if event.eventstartdate.to_date == dt
     event    
@@ -317,6 +320,7 @@ module EventsHelper
       if start_dt == Date.today
         @date_s = "Today" 
       else
+        debugger
         dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
       end
     else

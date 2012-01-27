@@ -70,7 +70,15 @@ class ScheduledEvent < ActiveRecord::Base
   def location_details
     get_location + csz
   end  
- 
+
+  def start_date
+    eventstartdate.to_date
+  end
+  
+  def end_date
+    eventenddate.to_date
+  end
+   
   def self.find_event(eid)
     get_event(eid).first
   end 
@@ -79,8 +87,8 @@ class ScheduledEvent < ActiveRecord::Base
     eventstartdate == eventenddate
   end
   
-  def self.add_event(eid, etype, ssid, sdt)
-    selected_event = Event.find_event(eid, etype, sdt)
+  def self.add_event(eid, etype, ssid, evid, sdt)
+    selected_event = Event.find_event(eid, etype, evid, sdt)
     new_event = ScheduledEvent.new(selected_event.attributes)
     
     new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil 

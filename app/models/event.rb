@@ -65,7 +65,7 @@ class Event < KitsTsdModel
     find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
-         UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_dte} )
+         UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_dte})
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt, edt, edt, edt, edt, cid]) 
   end
@@ -80,9 +80,9 @@ class Event < KitsTsdModel
          UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, evid, eid, etype, evid, eid, etype, evid, eid, etype, evid, eid, etype, evid])        
   end
   
-  def self.find_event(id, etype, eid)
+  def self.find_event(id, etype, eid, sdt)
     event = get_event(id, etype, eid).try(:first)
-    event.eventenddate = event.eventstartdate if event
+    event.eventenddate, event.eventstartdate = sdt, sdt if event
     event
   end 
   

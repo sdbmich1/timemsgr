@@ -1,9 +1,8 @@
 <%= image_tag("face-plain.png", :class => "action-img rsz-img")%>   	
 <%= image_tag("#{get_etype_icon(event.event_type)}", :class => "etype-img rsz-img") %>   	
 <div class="img-btm">
-
 	<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
-		<%= link_to image_tag("ev-move.png", :class => " rsz-img"), scheduled_events_url(:id=>event, :etype=>event.event_type, :sdate=>event.eventstartdate), 
+		<%= link_to image_tag("ev-move.png", :class => " rsz-img"), scheduled_events_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), 
 				:id=>'schedule_btn' , :confirm => 'Add to your schedule?', :title => "Move", :method => :post, :remote => true %>
 	<% else %>	
 	<% end %>

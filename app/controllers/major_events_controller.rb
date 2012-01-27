@@ -3,16 +3,14 @@ class MajorEventsController < ApplicationController
   layout :page_layout
   
   def show
-    @event = Event.find_event(params[:id], params[:etype], params[:eid])
+    @event = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt])
     @notification = Notification.new
-    @sponsor_pages = @event.try(:sponsor_pages)   
-    @presenters = @event.try(:presenters)
-    @sessions = @event.try (:sessions)
+    @sponsor_pages, @presenters, @sessions = @event.try(:sponsor_pages), @event.try(:presenters), @event.try(:sessions)
   end
   
   def about
     @event = Event.find(params[:id])
-    mobile_device? ? @presenters = @event.presenters : @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15)
+    @event.try(:presenters)
   end
 
   private

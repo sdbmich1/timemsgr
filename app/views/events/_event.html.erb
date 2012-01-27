@@ -10,14 +10,14 @@
 			<div class="slider-stime"><%= chk_offset(event.eventstarttime, event.localGMToffset, event.ssurl) %></div>
     		<div class="eid" data-eid="<%= event.id %>"></div>
     		<div class="etype" data-etype="<%= event.event_type %>"></div>
-    		<div class="sdt" data-sdt="<%= event.eventstartdate %>"></div> 
+    		<div class="sdt" data-sdt="<%= event.start_date %>"></div> 
 		<% end %>
  		<div class="slider-title">
 			<h1>
   			<% unless major_event?(event.event_type) %>
-			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid), :class => "show-item" %>
+			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
 			<% else %>
-			  	<%= link_to event.event_name, major_event_url(event, :etype=>event.event_type, :eid=>event.eventid), :class => "show-item" %>
+			  	<%= link_to event.event_name, major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
 			<% end %>
 			</h1><br />
 		</div>

@@ -62,6 +62,14 @@ class PrivateEvent < ActiveRecord::Base
     subscriptionsourceURL
   end
   
+  def start_date
+    eventstartdate.to_date
+  end
+  
+  def end_date
+    eventenddate.to_date
+  end  
+  
   def get_location
     location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
   end

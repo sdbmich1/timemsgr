@@ -1,5 +1,6 @@
 <div class="show-item">
   <% unless @event.blank? %>
+  <% debugger %>
 	<%= render :partial => 'shared/show_event_header', :locals => {:event => @event} %>
   	<%= render :partial => 'shared/show_event_details', :locals => {:event => @event}  %>  
 

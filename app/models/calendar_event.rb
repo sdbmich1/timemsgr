@@ -17,6 +17,30 @@ class CalendarEvent < KitsCentralModel
     contentsourceID
   end
 
+  def start_date
+    eventstartdate.to_date
+  end
+  
+  def end_date
+    eventenddate.to_date
+  end
+
+  def get_location
+    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  end
+  
+  def get_place
+    mapplacename.blank? ? '' : mapplacename
+  end
+  
+  def csz
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+  end
+  
+  def location_details
+    get_location + ', ' + csz
+  end
+    
   define_index do
     indexes :event_name, :sortable => true
     indexes :bbody

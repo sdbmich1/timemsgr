@@ -14,6 +14,8 @@
  	<script src="http://cubiq.org/dropbox/iscroll/iscroll.js?v3.7.1"></script>
  
 	<%= yield :pre_mobile_load %>
+    <%= render :partial => 'layouts/ga_head' if Rails.env.production? %>      
+
     <%= stylesheet_link_tag "mobile", "calendar", "mobile_device", :cache => true %>  
   	<%= javascript_include_tag 'jquery.infieldlabel.min.js','jquery.progressbar.min.js', "jquery.mobile.iscroll.js", :cache => true %>
   	<%= csrf_meta_tag %>  	
@@ -40,10 +42,11 @@
       	</div>
      </div>
     
-    <div id="app-footer" data-role="footer">		
-      <%= yield :footer %>
-    </div>
-   </div>   
-     
+     <div id="app-footer" data-role="footer">		
+       <%= yield :footer %>
+     </div>
+    </div>   
+   </div>
+   <%= render :partial => 'layouts/ga_body' if Rails.env.production? %>        
   </body> 
 </html>

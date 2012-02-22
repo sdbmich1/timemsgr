@@ -1,4 +1,5 @@
 # config/initializers/delayed_job_config.rb
+Delayed::Worker.backend = :active_record
 Delayed::Worker.destroy_failed_jobs = false
 Delayed::Worker.sleep_delay = 60
 Delayed::Worker.max_attempts = 3

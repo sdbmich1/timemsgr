@@ -12,7 +12,7 @@ class PrivateEvent < ActiveRecord::Base
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes
 				        
-  validates :event_name, :presence => true, :length => { :maximum => 100 },
+  validates :event_name, :presence => true, :length => { :maximum => 255 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
   validates :event_type, :presence => true
   validates_date :eventstartdate, :presence => true #, :on_or_after => :today 
@@ -71,7 +71,7 @@ class PrivateEvent < ActiveRecord::Base
   end  
   
   def get_location
-    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+    location.blank? ? '' : get_place.blank? ? location : [get_place, location].join(', ')
   end
   
   def get_place
@@ -79,7 +79,7 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate, mapzip].compact.join(', ')
   end
   
   def location_details

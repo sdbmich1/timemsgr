@@ -16,6 +16,14 @@ class ScheduledEvent < ActiveRecord::Base
         :GroupFee, :Other1Fee, :Other2Fee, :SpouseFee, :MemberFee, :NonMemberFee, 
         :Other4Fee, :Other5Fee, :Other6Fee, :pictures_attributes, :Other1Title, :Other2Title,
         :Other3Title, :Other4Title, :Other5Title, :Other6Title
+        
+  validates :event_name, :presence => true, :length => { :maximum => 255 },
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
+  validates :event_type, :presence => true
+  validates_date :eventstartdate, :presence => true, :allow_blank => false #, :on_or_after => :today 
+  validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
+  validates :eventstarttime, :presence => true, :allow_blank => false
+  validates :eventendtime, :presence => true, :allow_blank => false        
 				        
   belongs_to :host_profile, :foreign_key => :subscriptionsourceID, :primary_key => :contentsourceID
  

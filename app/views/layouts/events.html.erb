@@ -20,5 +20,6 @@
 		<%= yield :footer %>
 	</div>
 	<%= render 'shared/jsheets'%>
+    <%= render :partial => 'layouts/ga' if Rails.env.production? %>      
   </body>
 </html>

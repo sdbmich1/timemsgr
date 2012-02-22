@@ -27,6 +27,10 @@ class LocalChannel < KitsSubModel
   
   default_scope :order => 'sortkey ASC'
   
+  def self.dbname
+    Rails.env.development? ? "`kits_development`" : "`kits_production`"
+  end    
+  
   def self.local(loc)
     active.unhidden.joins(:channel_locations).where("channel_locations.location_id = ?", loc)
   end
@@ -35,10 +39,22 @@ class LocalChannel < KitsSubModel
     find_by_sql(["#{getSQL}", loc, int_id])
   end
   
+  def self.get_channel(title, loc, loc2)
+    if loc
+      where("channel_name like ? AND (localename like ? OR localename like ?)", '%' + title + '%', loc + '%', loc2 + '%')
+    else
+      where("channel_name like ? AND localename like ?", '%' + title + '%', loc2 + '%')      
+    end   
+  end
+  
+  def self.get_college_channel(title)
+    where("channel_name like ?", '%' + title + '%')   
+  end
+  
   def self.getSQL
-    "(SELECT c.* FROM `kitsknndb`.channels c 
-    INNER JOIN `kits_development`.channel_locations cl ON cl.channel_id = c.id 
-    INNER JOIN `kits_development`.locations l ON cl.location_id=l.id
+    "(SELECT c.* FROM `kitssubdb`.channels c 
+    INNER JOIN #{dbname}.channel_locations cl ON cl.channel_id = c.id 
+    INNER JOIN #{dbname}.locations l ON cl.location_id=l.id
     INNER JOIN `kitsknndb`.channel_interests i ON i.channel_id = c.id 
     WHERE c.status = 'active' AND c.hide = 'no' 
     AND (cl.location_id = ?) 

@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
-gem 'rake', '0.8.7'
+gem 'rake' #, '0.8.7'
 
 gem 'passenger'
 
@@ -82,10 +82,13 @@ end
  gem "dalli"
  
 # add asynchronous processing
-gem "delayed_job", "~> 2.1.4"
+gem 'delayed_job_active_record'
 
 # data dump utility
 gem 'yaml_db'
+
+# rss feed reader
+gem "feedzirra", "~> 0.1.1"
  
 # google analytics 
 group :production do

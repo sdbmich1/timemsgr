@@ -1,7 +1,16 @@
 class CalendarEvent < KitsCentralModel
   set_table_name 'events'
   set_primary_key 'ID'
-   
+  
+  before_save :set_flds
+
+  attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
+        :eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
+        :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :postdate,
+        :mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
+        :allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :LastModifyDateTime,
+        :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :contentsourceURL
+                  
   default_scope :order => 'eventstartdate, eventstarttime ASC'
   
   has_many :pictures, :as => :imageable, :dependent => :destroy
@@ -39,6 +48,15 @@ class CalendarEvent < KitsCentralModel
   
   def location_details
     get_location + ', ' + csz
+  end
+  
+  def set_flds
+    if new_record?
+      self.hide, self.cformat, self.status, self.LastModifyBy, self.rsvp = "no", "html", "active", "system", "No"
+      self.event_title,self.bbody  = self.event_name, self.cbody
+      self.CreateDateTime, self.LastModifyDateTime = Time.now, Time.now
+      self.eventid = self.event_type[0..1].upcase + Time.now.to_i.to_s if self.eventid.blank? 
+    end
   end
     
   define_index do

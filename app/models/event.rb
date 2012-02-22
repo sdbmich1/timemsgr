@@ -141,6 +141,14 @@ class Event < KitsTsdModel
     get_location + ', ' + csz
   end
   
+  def summary
+    bbody.html_safe[0..74]
+  end
+  
+  def details
+    cbody.html_safe
+  end
+  
   # action caching for SELECT UNION query
   def self.upcoming_events(edate, hp, loc)
     Rails.cache.fetch("find_events", :expires_in => 30.minutes) do 

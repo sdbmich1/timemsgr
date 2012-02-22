@@ -22,14 +22,11 @@ module ImportEvent
     @events.each do |e|
       if !e.title.blank? && e.start_time >= Time.now 
         
-        @start = e.start_time.strftime("%I:%M%p")
-        @end = e.end_time.strftime("%I:%M%p")
-        
-        debugger
-        
-        Event.create!(:title => e.title, :event_type => 'ue', :start_date => e.start_time, 
-          :start_time => @start, :state => 'IL', :end_date => e.end_time, :end_time => @end, :address => e.where,
-          :location => e.where, :user_id => @user.id)
+        @start, @end = e.start_time.strftime("%I:%M%p"), e.end_time.strftime("%I:%M%p")
+         
+        PrivateEvent.create!(:event_name => e.title, :event_type => 'ue', :eventstartdate => e.start_time, 
+          :eventstarttime => @start, :eventenddate => e.end_time, :eventendtime => @end, 
+          :location => e.where, :contentsourceID => @user.ssid)
       end
     end
   end

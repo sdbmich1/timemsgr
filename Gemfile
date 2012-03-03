@@ -57,6 +57,18 @@ gem 'thinking-sphinx', '2.0.3'
 # add google calendar
 gem "gcal4ruby"
 
+# add icalendar access
+gem 'ics', "~> 0.1"
+
+#add whenever for cron jobs
+gem 'whenever', "~> 0.7.3"
+
+#add timezone
+gem 'timezone', "~> 0.1.4"
+
+# add geokit
+gem 'geokit', "~> 1.6.5"
+
 group :development, :test do
 #  gem 'capybara'
   gem 'spork', '~> 0.9.0.rc'

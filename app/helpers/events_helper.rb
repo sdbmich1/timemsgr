@@ -75,13 +75,13 @@ module EventsHelper
   end  
 
   def is_past?(ev)
-    return false if ev.blank?
+    return false if ev.blank? 
     etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
     ev.eventstartdate <= Date.today && compare_time(Time.now, etm) ? true : false    
   end
   
   def compare_time(ctime, etime)
-    if ctime.hour > etime.hour
+    if etime.blank? || ctime.hour > etime.hour
       false
     else
       ctime.hour == etime.hour && ctime.min > etime.min ? false : true

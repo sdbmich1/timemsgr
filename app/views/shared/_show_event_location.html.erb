@@ -1,6 +1,9 @@
 <% unless event.mapplacename.blank? && event.mapcity.blank? && event.location.blank? %>
 	<div class="span-2"><%= 'Where:' %></div>	
-	<div class="span-18 last"><%= event.mapplacename %></div>
+	<div class="span-18 last"><%= event.location %></div>
+	<div class="span-18 last">
+		<span class="<%= !event.location.blank? ? 'prepend-2' : 'none' %>"><%= event.mapplacename %></span>
+	</div>
 	<div class="span-18 last">	
   		<span class="<%= !event.mapplacename.blank? ? 'prepend-2' : 'none' %>"><%= event.mapstreet %></span>
 	</div>

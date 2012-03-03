@@ -53,7 +53,7 @@ class CalendarEvent < KitsCentralModel
   def set_flds
     if new_record?
       self.hide, self.cformat, self.status, self.LastModifyBy, self.rsvp = "no", "html", "active", "system", "No"
-      self.event_title,self.bbody  = self.event_name, self.cbody
+      self.event_name,self.bbody  = self.event_title[0..99], self.cbody
       self.CreateDateTime, self.LastModifyDateTime = Time.now, Time.now
       self.eventid = self.event_type[0..1].upcase + Time.now.to_i.to_s if self.eventid.blank? 
     end

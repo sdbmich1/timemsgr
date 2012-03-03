@@ -47,7 +47,7 @@ class LocalChannel < KitsSubModel
     end   
   end
   
-  def self.get_college_channel(title)
+  def self.get_channel_by_name(title)
     where("channel_name like ?", '%' + title + '%')   
   end
   

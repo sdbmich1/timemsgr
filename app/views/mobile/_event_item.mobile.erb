@@ -7,10 +7,15 @@
     	<span class="day"><%= show_date(event.eventstartdate, edate).strftime("%e") %></span>
 	  <% end %>
 	</div>
-	<div class="stime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> - <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
+	<div class="stime">
+		<%= " #{chk_offset(event.eventstarttime, event.localGMToffset)} " if event.eventstarttime %>
+		<%= " - #{chk_offset(event.eventendtime, event.endGMToffset)}" if event.eventendtime %>
+		<%= "TBD" unless event.eventstarttime || event.eventendtime %>
+	</div>
+
  	<div class="slider-title">
-		<h6><%= event.event_name %></h6>
+		<h6><%= event.event_name.html_safe %></h6>
 	</div>
 	<div class="sl-descr">
-		<div class="ui-li-desc sdescr"><%= truncate(event.bbody.html_safe, :length=>75, :omission=>'...') %></div>
+		<div class="ui-li-desc sdescr"><%= raw truncate(event.bbody, :length=>75, :omission=>'...') %></div>
 	</div>

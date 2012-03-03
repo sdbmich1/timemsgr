@@ -88,6 +88,16 @@ section h1 {
 	margin-top: -50px;
 }
 
+.slider-tbd {
+	font-size: 0.75em;
+	margin-left: 0.15em;
+	text-align:right;
+	height: 40px;
+	width: 45px;
+	margin-top: -30px;
+}
+
+
 .slider-nav {
 	margin-top: 56px;
 }

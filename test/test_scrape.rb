@@ -2,6 +2,7 @@ require "open-uri"
 require "nokogiri"
 require 'rss/2.0'
 require 'json'
+require 'geokit'
 #require 'feedzirra'
 
 def load_url(url)  
@@ -87,35 +88,44 @@ end
   end 
   
   def select_channel(title, cnty, loc)
-    [['Gallery', 'Galleries'], ['Museum', 'Museum'], ['Aquarium', 'Aquarium'], ['Festival', 'Festival'], ['Exhibit', 'Exhibit'],
-     ['Preschool', 'Youth'], ['Teen', 'Youth'], ['Painting', 'Galleries'], ['Ballet', 'Performing Arts'], ['Dance', 'Performing Arts'], 
-     ['Opera', 'Performing Arts'], ['Symphony', 'Performing Arts'], ['Crafts', 'Museum'],
-     ['Choir', 'Performing Arts'], ['Theatre', 'Performing Arts'], ['Dance', 'Music Scene'], ['Comedy', 'Comedy'], 
-     ['Parade', 'Parade'], ['Children', 'Youth'], ['Ball', 'Music Scene'], ['Fair', 'Fair'], ['Dance', 'Dance'],
-     ['Culinary', 'Food'], ['Food', 'Food'], ['Jazz', 'Jazz'], ['Private School', 'High School'], ['Fiesta', 'Festival'],
-     ['Wine', 'Food'], ['Chocolate', 'Food'], ['Volunteer', 'Charity'], ['Cooking', 'Food'], ['Dinner', 'Food'], 
-     ['Taste', 'Food'], ['Brunch', 'Food'], ['Kitchen', 'Food'], ['Screening', 'Film'], ['Film','Film'],
-     ['Zoo', 'Zoo'], ['Zoo', 'Parks'], ['Concert','Music Scene'], ['Concerto', 'Performing Arts'],
-     ['Fundraiser','Charity'], ['Meeting', 'Meeting'], ['Chef', 'Food'], ['Lecture', 'Speaker']].each do |str|
-      if !(title =~ /#{str[0]}/i).nil? 
-        return get_channel(str[1],cnty, loc) 
+    channel = []
+    [['Sculpture|Art|Painting|Exhibit|Gallery|Artist|Artwork|Museum|Curated|Arts|Crafts', 'Galleries'], 
+     ['Preschool|Teen|Children|Kids|Kindergarten|Elementary', 'Youth'], ['Elementary','Elementary'],
+     ['Dance|Concert|Band|Performance|Music|Ball|Jazz|Salsa|DJ|Ballroom|CD|Blues|Reggae|Rehearsal|Rock|Pop|Noise|Country Music|Quartet|Trio|Quintet', 'Music Scene'],  
+     ['Parade', 'Parade'], ['Comedy|Funny|Comedian|Improv|Laugh', 'Comedy'],
+     ['Culinary|Food|Wine|Cooking|Taste|Brunch|Dinner|Chocolate|Chef|Kitchen|Farmers|Barbeque|Tasting|Lunch|Dining|Coffee|Dine|Potluck|Winery|Feed|Feast|Beer', 'Food'],  
+     ['Jazz', 'Jazz'], ['Blues', 'Blues'], ['Bluegrass|Country Music|Country', 'Country Music'], ['Private School|High School', 'High School'], 
+     ['Fiesta|Festival|Fair|Show|Celebration|Fireworks|Exhibition|Flea|Fest', 'Festival'],
+     ['Volunteer|Charity|Fundraiser|Gala|Benefit|Luncheon|Fundraising', 'Charity'], 
+     ['Speaker|Lecture|Discussion|Talk|Author|Panel|Book|Reading|Literature|Stories', 'Speaker'],
+     ['Screening|Film|Movie|Cinema|3D', 'Film'], ['Science|History','Science'],
+     ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist', 'Church'],
+     ['R&B|Hip-Hop|Soul','Hip-Hop'], ['Rock|Pop', 'Rock'], ['Medical|Health|Medicine','Health'],
+     ['Book|Reading|Literature|Stories|Author', 'Book'],['Senior', 'Senior'],
+     ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto', 'Classical'],
+     ['Sale|Offer','Promotions'],     
+     ['Opera|Choir|Theater|Symphony|Ballet|Concerto|Theatre|Play|Choregraphy|Dance|Orchestra|Piano|Violin|Cello|Musical|Recital', 'Performing Arts'],
+     ['Zoo|Animals|Aquarium', 'Zoo'], ['Park', 'Parks'], 
+     ['Meeting|Conference', 'Meeting']].each do |str|
+      if !(title.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil? 
+        channel << get_channel(str[1],cnty, loc) 
       end
     end 
-    return get_channel('Consolidated', cnty, loc)   
+    channel << get_channel('Consolidated: All', cnty, loc) unless channel   
   end
   
-  def select_college_channel(title, school)
-    [['Painting', 'Art Activities'], ['Ballet', 'Performing Arts'], ['Dance', 'Performing Arts'], 
-     ['Opera', 'Performing Arts'], ['Symphony', 'Performing Arts'], ['Crafts', 'Art Activities'],
-     ['Choir', 'Performing Arts'], ['Theatre', 'Performing Arts'], ['Lecture', 'Speaker'],
-     ['Talk', 'Speaker'], ['Sculpture', 'Art Activities'], ['Author', 'Speaker'], 
-     ['Art', 'Art Activities'], ['Screening', 'Film'], ['Film','Film'], ['Concerto', 'Performing Arts'],
-     ['Concert','Lively'],['Drama','Lively'],['Theater', 'Performing Arts']].each do |str|
-       if !(title =~ /#{str[0]}/i).nil? 
-         return get_college_channel([school, str[1]].join('%')) 
+  def select_college_channel(title, school, descr)
+    channel = []
+    [['Opera|Choir|Theater|Symphony|Dance|Ballet|Concerto|Theatre', 'Performing Arts'],  
+     ['Speaker|Lecture|Discussion|Talk|Author|Panel', 'Speaker'],
+     ['Sculpture|Crafts|Art|Painting|Exhibit|Gallery', 'Art Activities'],  
+     ['Screening|Film|Movie|Cinema', 'Film'], 
+     ['Concert|Drama|Comedy','Lively']].each do |str|
+       if !(title.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil? || !(descr.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil?
+         channel << get_college_channel([school, str[1]].join('%')) 
        end      
      end
-    return get_college_channel([school, "Consolidated"].join('%'))   
+    channel << get_college_channel([school, "Consolidated"].join('%'))   
   end
   
   def get_channel(str, cnty, locale)
@@ -123,7 +133,7 @@ end
   end
   
   def get_college_channel(school)
-    LocalChannel.get_college_channel school
+    LocalChannel.get_channel_by_name school
   end
    
   def chk_geocode(lat, long)
@@ -158,7 +168,7 @@ end
       etitle = doc.xpath("//item//title")[n].text.split(' at ')[0].split('Event: ')[1]
       url = doc.xpath("//item//link")[n].text 
       sid = doc.xpath("//item//id")[n].text      
-#      p "Item #{n}: #{etitle.html_safe}"
+      p "Item #{n}: #{etitle.html_safe}"
 
       # get county based on coordinates
       lat = doc.xpath("//item//geo:lat")[n].text
@@ -169,9 +179,10 @@ end
             
       # find correct channel and location
       cid = select_channel(etitle, county, locale)
+      cid.map {|channel| p "Channel: #{channel[0].channelID}" }
 
       # add event to calendar
-      cid.map {|channel| add_event(doc, n, sid, etitle[0..99], sdt, enddt, channel.channelID, url, offset)}
+#      cid.map {|channel| add_event(doc, n, sid, etitle[0..199], sdt, enddt, channel[0].channelID, url, offset)}
  
  #     p "County: #{county} " if county
  #     p "Channel: #{cid[0].channelID}"
@@ -201,38 +212,147 @@ end
       p "Start: #{sdt} | End: #{edt} "
       p "Start Time: #{start_time}" if start_time
       
+      # get guid 
+      gstr = doc.xpath("//item//guid")[n].text.split('/')
+      guid = gstr[gstr.size-1]
+      p "ID: #{guid}"
+      
       # get location
       loc = descr.split('<br/>')[1].split('Location: ')[1]
       p "Loc: #{loc}"
-                
-      # find correct channel and location
-      cid = select_college_channel(etitle, school)
-      p "Channel: #{cid[0].channelID}" if cid[0]
 
       # get details
       details = descr.split('<br/>')[3].split("\n\n")[1]
-#      p details
       
       #get publication date
       pubdt = DateTime.parse(doc.xpath("//item//pubDate")[n].text)
+                
+      # find correct channel and location
+      cid = select_college_channel(etitle, school, details)
+      cid.map {|channel| p "Channel: #{channel[0].channelID}" }
 
       # add event to calendar
-      cid.map {|channel| add_college_event(url, etitle[0..99], details, pubdt, sdt, start_time, edt, channel.channelID, offset, loc)}
+#      cid.map {|channel| add_college_event(url, etitle[0..199], details, pubdt, sdt, start_time, edt, channel[0].channelID, offset, loc, guid)}
     end   
+  end
+  
+  include ResetDate
+  def process_stanford_scrape(feed_url, school, sport, offset)
+    prev_dt = ""
+    doc = Nokogiri::XML(open(feed_url))
+    cnt = doc.css(".row-text").count / 4
+    cnt.times do |n|
+      doc.css(".row-text")[n*4].text.blank? ? dt = prev_dt : dt = doc.css(".row-text")[n*4].text
+      (dt =~ /.,/i).nil? ? (sdt = edt = parse_date(dt)) : (sdt = edt = get_date(dt)) unless dt.blank?
+      
+      etitle = doc.css(".row-text")[n*4+1].text.split("\n")[0]
+      !(etitle =~ /^.*\b(at|vs)\b.*$/i).nil? ? etitle = [school, etitle].join(' ') : etitle
+      
+      loc = doc.css(".row-text")[n*4+2].text
+      st = doc.css(".row-text")[n*4+3].text
+      stime = Time.parse(doc.css(".row-text")[n*4].text + st) if (st =~ /TBA|All|W|L/i).nil? && sdt >= Date.today
+      p "Item: #{n} | Title: #{etitle}" 
+      p "Start: #{sdt} | End: #{edt} "
+      p "Loc: #{loc}"      
+      p "Start Time: #{stime}" if (st =~ /TBA|All|W|L/i).nil? && sdt >= Date.today
+      
+      # find correct channel and location
+      cid = get_college_channel([school, sport].join(' '))
+      cid.map {|channel| p "Channel: #{channel.channelID}" }
+      
+      # set prev date if case of double headers
+      prev_dt = dt
+    end    
+  end
+  
+  def parse_pga_events(feed_url, sport, oset, x)
+    events = []
+    doc = Nokogiri::HTML(open(feed_url)) 
+    
+    # set array of event names & links  
+    doc.css('.tourSchArrowFront').map {|item| events << {:name =>item.text, :url => item.attributes["href"]}}     
+    cnt = doc.css('td , td , td , .tourSchArrowFront').count
+    
+    # loop thru each row to parse schedule; 6 items per row
+    oset.step(cnt, x) do |n|
+      dstr = doc.css('td , td , td , .tourSchArrowFront')[n].content
+      descr = doc.css('td , td , td , .tourSchArrowFront')[n+1].content
+      
+      # use name array to parse description for matching event name
+      event = events.detect {|e| !(descr =~ /#{e[:name]}/i).nil? }  
+            
+      # parse start date
+      dt = dstr.split("\n")[0].split(" - ")[0]
+      (sdt = Date.parse(dt)) rescue nil # p 'Invalid Date'
+           
+      # parse end date     
+      dt2 = dstr.split("\n")[0].split(" - ")[1]
+      edt = set_end_date sdt, Date.parse(dt2), dt2 if sdt
+      
+      # get site location
+      if event && sdt
+        lstr = descr.split(event[:name])[1].split('Purse')[0].split(",\n")  # get location string
+        loc, city, mstate = lstr[0].compact.strip, lstr[1].compact.strip, lstr[2].split("\n")[1].compact.strip # get location, city, state
+        !(event[:url].to_s.split("/")[0] =~ /http/i).nil? ? event[:url] : event[:url] = ['http://www.pgatour.com', event[:url]].join('')  # set url  
+        
+        # event details
+        str = doc.css('td , td , td , .tourSchArrowFront')[n+3].content.compact.split('$')
+        details = 'Defending Champion: ' + str[0] + "\n" + 'Purse: $' + str[1].split(' ')[0] unless str[1].blank?
+
+        # select channel
+        cid = get_college_channel(sport)
+        cid.map {|channel| p "Channel: #{channel.channelID}" }
+        
+        # get offset
+        offset = get_offset [city, mstate].join(', ') unless city.blank? 
+        
+        # add event to calendar
+       # cid.map {|channel| add_pga_event(event[:url], event[:name], details, Date.today, sdt, edt, channel.channelID, offset || 0, loc)}
+
+        p "Event #{n}: #{event[:name]} | Start Date: #{sdt} | End Date: #{edt} | Loc: #{loc} | City: #{city} | State: #{mstate}"
+        p "PGA Tour Event. For more info visit #{event[:url]} "
+        p details if details
+      end
+    end     
+  end
+  
+  # returns time offset for a given location
+  def get_offset(loc)   
+    res = Geokit::Geocoders::GoogleGeocoder.geocode(loc)
+    url = ['http://www.earthtools.org/timezone', res.lat, res.lng].join("/") if res    
+    doc = Nokogiri::XML(open(url)) if url
+    doc.xpath("//offset").text.to_i if doc
+  end
+  
+  def set_end_date(sdate, edate, edt)
+    (edate - sdate).days > 4.days || edate < sdate ? Date.parse([sdate.year, sdate.month, edt].join('-')) : edate
+  end
+   
+  def get_date(dt)
+     Date.parse(dt).strftime('%A')[0..2] == dt[0..2] ? Date.parse(dt) : Date.parse(dt) - 1.year
   end
 
   def add_college_event(*args)
     CalendarEvent.find_or_create_by_contentsourceURL(args[0][0..254], 
-        :event_type => 'ce', :event_name => args[1], :cbody => args[2], :postdate => args[3],
+        :event_type => 'ce', :event_title => args[1], :cbody => args[2], :postdate => args[3],
         :eventstartdate => args[4], :eventstarttime => args[5], :eventenddate => args[6], 
         :contentsourceURL => args[0][0..254], :location => args[9][0..254],
         :contentsourceID => args[7], :localGMToffset => args[8], :endGMToffset => args[8],
-        :subscriptionsourceID => args[7])
+        :subscriptionsourceID => args[7], :pageextsourceID => args[10])
+  end
+  
+  def add_pga_event(*args)
+    CalendarEvent.find_or_create_by_contentsourceURL(args[0][0..254], 
+        :event_type => 'ce', :event_title => args[1], :cbody => args[2], :postdate => args[3],
+        :eventstartdate => args[4], :eventenddate => args[5], 
+        :contentsourceURL => args[0][0..254], :location => args[8][0..254],
+        :contentsourceID => args[6], :localGMToffset => args[7], :endGMToffset => args[7],
+        :subscriptionsourceID => args[6])
   end
   
   def add_event(doc, n, *args)
     CalendarEvent.find_or_create_by_pageextsourceID(args[0], 
-        :event_type => 'ce', :event_name => args[1],
+        :event_type => 'ce', :event_title => args[1],
         :cbody => doc.xpath("//item//description")[n].text + ' ' + doc.xpath("//item//phone")[n].text,
         :postdate => DateTime.parse(doc.xpath("//item//pubDate")[n].text),
         :eventstartdate => args[2], :eventstarttime => args[2], :eventenddate => args[3], :eventendtime => args[3],

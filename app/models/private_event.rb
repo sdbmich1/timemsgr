@@ -6,10 +6,10 @@ class PrivateEvent < ActiveRecord::Base
   
   attr_accessor :allday, :loc
  	attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
-				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID,
-				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
-				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, 
-				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp,
+				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID, :pageexttype,
+				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :contentsourceURL,
+				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
+				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :pageextsrc,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
@@ -104,8 +104,7 @@ class PrivateEvent < ActiveRecord::Base
   
   def self.move_event(eid, etype, ssid)
     selected_event = Event.find_event(eid, etype)
-    selected_event.contentsourceID = ssid
-    selected_event.ID = nil
+    selected_event.ID, selected_event.contentsourceID = nil, ssid
     new_event = PrivateEvent.new(selected_event.attributes)
     
     selected_event.pictures.each do |p|
@@ -117,6 +116,27 @@ class PrivateEvent < ActiveRecord::Base
       new_event.event_type = i[1] if selected_event.event_type == i[0]
     end
     new_event
+  end
+  
+  def self.add_facebook_events(fb_user, usr)
+    debugger
+    if fb_user
+      fb_user.events.each do |event|
+        if event.end_time > Time.now
+          start_offset, end_offset = event.start_time.getlocal.utc_offset/3600, event.end_time.getlocal.utc_offset/3600
+           
+          new_event = PrivateEvent.find_or_initialize_by_pageextsourceID(event.identifier, :event_name => event.name )       
+          new_event.eventstartdate = new_event.eventstarttime = event.start_time.advance(:hours=>start_offset)
+          new_event.eventenddate = new_event.eventendtime = event.end_time.advance(:hours=>end_offset)
+          new_event.pageextsourceID, new_event.location, new_event.cbody = event.identifier, event.location, event.description
+          new_event.contentsourceURL, new_event.event_type = event.endpoint, 'UE'
+          new_event.pageexttype, new_event.pageextsrc = 'Facebook','html'
+          new_event.contentsourceID = new_event.subscriptionsourceID = usr.ssid
+          new_event.localGMToffset = new_event.endGMToffset = usr.localGMToffset
+          new_event.save(:validate=>false)
+        end
+      end
+    end 
   end
         
   protected

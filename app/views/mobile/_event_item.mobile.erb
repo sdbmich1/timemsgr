@@ -8,8 +8,8 @@
 	  <% end %>
 	</div>
 	<div class="stime">
-		<%= " #{chk_offset(event.eventstarttime, event.localGMToffset)} " if event.eventstarttime %>
-		<%= " - #{chk_offset(event.eventendtime, event.endGMToffset)}" if event.eventendtime %>
+		<%= " #{chk_offset(event.eventstarttime, event.localGMToffset, event.contentsourceURL)} " if event.eventstarttime %>
+		<%= " - #{chk_offset(event.eventendtime, event.endGMToffset, event.contentsourceURL)}" if event.eventendtime %>
 		<%= "TBD" unless event.eventstarttime || event.eventendtime %>
 	</div>
 

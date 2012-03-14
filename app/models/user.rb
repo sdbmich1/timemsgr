@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include ResetDate
   acts_as_reader
    
   before_create :set_timezone
@@ -6,7 +7,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable,  :lockable and :timeoutable
   devise :database_authenticatable, :registerable,  #:confirmable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
@@ -60,7 +61,7 @@ class User < ActiveRecord::Base
   has_many :settings
   has_many :session_prefs, :through => :settings 
   
-  has_many :authentications
+  has_many :authentications, :dependent => :delete_all
   
   # define friend relationships
   has_many :relationships, :foreign_key => "tracker_id", :class_name => "Relationship", :dependent => :destroy
@@ -111,6 +112,46 @@ class User < ActiveRecord::Base
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
   end
   
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.first_name = auth["user_info"]["name"].split(' ')[0]
+      user.last_name = auth["user_info"]["name"].split(' ')[1]
+    end
+  end
+  
+  def get_facebook_user(access_token)
+    @fb_user ||= FbGraph::User.me(access_token.credentials.token).fetch
+  end
+  
+  def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
+    data = access_token.extra.raw_info
+    if user = User.where(:email => data.email).first
+      user
+    else # Create a user with a stub password. 
+      user = User.new(:first_name => data.first_name, :last_name => data.last_name, 
+        :username => data.username ? data.username : data.nickname,
+        :location_id => get_location(data.location.name.split(', ')[0]), :birth_date => parse_date(data.birthday),
+        :localGMToffset => data.timezone.to_i, :gender => data.gender.capitalize, :email => data.email, 
+        :password => Devise.friendly_token[0,20]) 
+      user.save(:validate => false)  
+      user
+    end
+  end
+  
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        user.email = data["email"]
+      end
+    end
+  end
+  
+  def password_required?  
+    (authentications.empty? || !password.blank?) && super  
+  end   
+  
   def with_host_profile
     self.host_profiles.build if self.host_profiles.empty?
     self
@@ -119,6 +160,11 @@ class User < ActiveRecord::Base
   def self.find_subscriber(uid)
     includes(:subscriptions => [:channel]).find(uid)
   end  
+  
+  def self.get_location(city)
+    loc = Location.find_by_city city
+    loc.id if loc
+  end
 
   def profile
     self.host_profiles[0]

@@ -138,6 +138,7 @@ module EventsHelper
   # adjusts time display by v1.0 time zone offset when appropriate
   def chk_offset(*tm)
     return Time.now unless tm[0]
+#    return tm[0].getlocal if tm[0] && !( tm[2].to_s =~ /^.*\b(facebook|twitter)\b.*$/i).nil?
     unless @user.blank?
       offset = tm[1] - @user.localGMToffset if tm[1]
       @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
@@ -159,7 +160,7 @@ module EventsHelper
   end
   
   def subscribed?(ssid)
-    slist = @user.try(:subscriptions)
+    slist = @user.subscriptions rescue nil
     slist.blank? ? false : slist.detect {|u| u.channelID == ssid && u.status == 'active' }
   end
 
@@ -320,7 +321,6 @@ module EventsHelper
       if start_dt == Date.today
         @date_s = "Today" 
       else
-        debugger
         dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
       end
     else

@@ -86,10 +86,10 @@ class Event < KitsTsdModel
     event
   end 
   
-  def self.find_events(edate, hp, loc) 
+  def self.find_events(edate, usr, loc) 
     locale = Location.find(loc)
     edate.blank? ? edate = Date.today+7.days : edate 
-    hp.blank? ? current_events(edate) : current(edate, hp.ssid, locale.city)    
+    usr.blank? ? current_events(edate) : current(edate, usr.ssid, locale.city)    
   end
   
   # used to get friends schedule when shared
@@ -162,9 +162,7 @@ class Event < KitsTsdModel
   
   # define SQL field for SELECT UNION statements without fee and title fields
   def self.getSQL
-      "(#{getSQLhdr}, 0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 0 as AtDoorFee, 
-        0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 0 as Other5Fee, 0 as Other6Fee, 
-        0 as Other1Title, 0 as Other2Title, 0 as Other3Title, 0 as Other4Title, 0 as Other5Title, 0 as Other6Title"     
+    "(#{getSQLhdr}, #{otherSQLstr}"     
   end
   
   # define SQL field for SELECT UNION statements with join tables
@@ -176,9 +174,13 @@ class Event < KitsTsdModel
  
   # define SQL field for SELECT UNION statements for event table without fee and title fields
   def self.getSQLe
-      "(#{getSQLehdr}, 0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
-        0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 0 as Other5Fee, 0 as Other6Fee, 
-        0 as Other1Title, 0 as Other2Title, 0 as Other3Title, 0 as Other4Title, 0 as Other5Title, 0 as Other6Title"     
+    "(#{getSQLehdr}, #{otherSQLstr}"     
+  end
+  
+  def self.otherSQLstr
+    "0 as MemberFee, 0 as NonMemberFee, 0 as GroupFee, 0 as SpouseFee, 0 as AffiliateFee, 
+     0 as AtDoorFee, 0 as Other1Fee, 0 as Other2Fee, 0 as Other3Fee, 0 as Other4Fee, 0 as Other5Fee, 0 as Other6Fee, 
+     0 as Other1Title, 0 as Other2Title, 0 as Other3Title, 0 as Other4Title, 0 as Other5Title, 0 as Other6Title"
   end
   
   # define SQL field for SELECT UNION statements with join tables

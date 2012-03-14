@@ -9,7 +9,7 @@ gem 'passenger'
 gem 'mysql2', '0.2.6'
 
 gem 'will_paginate', '~> 3.0'
-gem 'devise'
+gem 'devise', '1.5.3'
 
 # => add autocomplete search capability
 gem 'rails3-jquery-autocomplete'
@@ -19,7 +19,17 @@ gem 'meta_where'
 gem 'meta_search'
 
 # install oauth
-gem 'omniauth', '0.2.6'
+gem 'omniauth'
+#gem "oa-core", "~> 0.3.2"
+
+# add facebook & twitter
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem "omniauth-github"
+gem "omniauth-openid"
+
+# facebook graph
+gem "fb_graph", '~> 1.8.4' #"~> 2.4.6"
 
 # add form validations 
 gem 'client_side_validations'  
@@ -59,6 +69,9 @@ gem "gcal4ruby"
 
 # add icalendar access
 gem 'ics', "~> 0.1"
+
+# add for date syntax
+gem "ice_cube", "~> 0.7.8"
 
 #add whenever for cron jobs
 gem 'whenever', "~> 0.7.3"

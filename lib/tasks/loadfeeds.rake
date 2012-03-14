@@ -22,7 +22,12 @@ namespace :loader do
   desc "Load database with data from MLB feeds"
   task :process_mlb_feeds => :environment do
     load_mlb_feeds '/opt/kits/system/ics/MLBSchedule022512.txt'
-  end    
+  end  
+  
+  desc "Load database with data from pro golf feeds"
+  task :process_golf_feeds => :environment do
+    load_golf_feeds    
+  end  
 end
 
 def load_sf_feeds(*args)
@@ -43,4 +48,12 @@ end
 def load_mlb_feeds(*args)
   feed = ImportICSFeed.new
   feed.read_ics_feed *args
+end
+
+def load_golf_feeds
+  feed = ImportGolfEvent.new
+  feed.parse_golf_events 'http://www.pgatour.com/r/schedule/', 'US Professional Golf Association Tour Tournaments', 54, 6 # pga tour
+  feed.parse_golf_events 'http://www.pgatour.com/s/schedule/', 'US Professional Golf Association Seniors Tour Tournaments', 25, 5 # champions tour
+  feed.parse_golf_events 'http://www.pgatour.com/h/schedule/', 'US Professional Golf Association Tour Tournaments',35, 5 # nationwide tour
+  feed.parse_lpga_events 'http://www.golfchannel.com/tours/lpga/?t=schedule','US Ladies Professional Golf Association Tour Tournaments'  # lpga tour
 end

@@ -10,7 +10,7 @@
 		<% end %>		
 		<div class="slider-title"><h1>
 		<% get_event_list(ev[:start_date]).each do |event| %>
-			<%= chk_offset(event.eventstarttime, event.localGMToffset, event.subscriptionsourceURL) %>
+			<%= chk_offset(event.eventstarttime, event.localGMToffset, event.contentsourceURL) %>
   			<% unless major_event?(event.event_type) %>
 			  	<%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
 			<% else %>

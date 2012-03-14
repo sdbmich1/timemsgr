@@ -1,16 +1,19 @@
 <%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Sign In' } %>
 
 <% content_for :content do -%>
-  <%= render :partial => "devise/shared/forgot" %>
-  <h3><strong><%= "Sign in to #{get_name_or_logo} "%></strong></h3><br />
-
+  <div class="nav-right">
+  	Sign in with <%= link_to image_tag("fblogin.png", :size => "67x22", :alt => "Facebook", :class => 'auth-provr'), user_omniauth_authorize_path(:facebook) %> 
+  </div> 
+  <h3><strong><%= "Sign In "%></strong></h3><br />
+  
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<%= render "shared/error_messages", :target => resource %>  
 	<div id="newreg" class="sign-in-label">
 		<p><span>Username or email</span></p>
 		<p><%= f.text_field :login, :size => 40 %></p> 		
 		<p><span>Password</span></p>
-		<p><%= f.password_field :password, :size => 40 %></p>
+		<p><%= f.password_field :password, :size => 40 %> <%= render :partial => "devise/shared/forgot" %></p> 
+
  			
     		<% if devise_mapping.rememberable? -%>
   				<p><span>Remember Me</span>  					  							
@@ -21,6 +24,6 @@
    		<%= f.submit 'Sign In' %> 
     </div>
   <% end %>
-
+  
   <%= render :partial => "devise/shared/signup" %>
 <% end -%>

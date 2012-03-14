@@ -23,10 +23,10 @@ def get_art_events
   end  
 end
 
-def rss_feed
+def rss_feed(feed_url)
   url = 'http://events.sfgate.com/search?cat=1&city=San+Francisco&new=n&rss=1&sort=1&srad=85&srss=50&st=event&svt=text&swhat=&swhen=&swhere='
   output = ""
-  open(url) do |http|
+  open(feed_url) do |http|
     response = http.read
     result = RSS::Parser.parse(response, false)
     output += "Feed Title: #{result.channel.title}<br />" 
@@ -38,7 +38,7 @@ def rss_feed
 end
 
 def feed_entries(cid, ssid)
-  feed_url = 'http://events.sfgate.com/search?cat=1&city=San+Francisco&new=n&rss=1&sort=1&srad=85&srss=50&st=event&svt=text&swhat=&swhen=&swhere='
+#  feed_url = 'http://events.sfgate.com/search?cat=1&city=San+Francisco&new=n&rss=1&sort=1&srad=85&srss=50&st=event&svt=text&swhat=&swhen=&swhere='
   feed = Feedzirra::Feed.fetch_and_parse(feed_url) 
   add_entries(cid, ssid, feed.entries) 
 end
@@ -316,12 +316,43 @@ end
     end     
   end
   
+  def process_lpga_events(feed_url, sport)
+    doc = Nokogiri::HTML(open(feed_url)) 
+    cnt = doc.css('.scheduleDate').count  
+    
+    cnt.times do |n|
+      dt = doc.css('.scheduleDate')[n].text.compact.split(" - ")
+      edt = Date.parse(dt[1]) rescue nil
+      sdt = Date.parse(dt[0].split('2012 ')[1]) rescue nil
+      
+      loc = doc.css('.scheduleTournament')[n].text.split("\r\n")[6].compact.strip
+      event = doc.css('.scheduleTournament')[n].text.split("\r\n")[3].compact.strip
+      plyr = doc.css('.schedulePlayerThumb')[n].text.compact.strip
+      purse = doc.css('.schedulePurse')[n].text.compact.strip
+      
+      # select channel
+      cid = get_college_channel(sport)
+      cid.map {|channel| p "Channel: #{channel.channelID}" }
+        
+      # get offset
+      addr = get_offset loc unless loc.blank? 
+      
+      p "Event #{n}: #{event} | Start Date: #{sdt} | End Date: #{edt} "
+      p "Loc: #{loc} | City: #{addr[:city]} | State: #{addr[:state]}" if addr
+      details = 'Defending Champion: ' + plyr + "\n" + 'Purse: ' + purse unless plyr.blank?
+      p details if details
+       
+    end
+  end
+  
   # returns time offset for a given location
-  def get_offset(loc)   
+  def get_offset(loc) 
+    addr = {}  
     res = Geokit::Geocoders::GoogleGeocoder.geocode(loc)
-    url = ['http://www.earthtools.org/timezone', res.lat, res.lng].join("/") if res    
+    url = ['http://www.earthtools.org/timezone', res.lat, res.lng].join("/") if res.success    
     doc = Nokogiri::XML(open(url)) if url
-    doc.xpath("//offset").text.to_i if doc
+    offset = doc.xpath("//offset").text.to_i if doc
+    addr = {:city=>res.city, :state=>res.state, :offset=>offset||0, :zip=>res.zip, :country=>res.country} if res.success
   end
   
   def set_end_date(sdate, edate, edt)

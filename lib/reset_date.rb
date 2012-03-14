@@ -1,8 +1,9 @@
 module ResetDate
+  
+  # used to reset date strings to rails date format
 
   def parse_date(old_dt)
-    sdate = old_dt.to_s.split('/')
-    new_dt = Date.parse(sdate.last + '-' + sdate.first + '-' + sdate.second)    
+    Date.strptime(old_dt, '%m/%d/%Y') if old_dt    
   end   
 
   def reset_dates(val)

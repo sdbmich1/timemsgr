@@ -119,7 +119,6 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   def self.add_facebook_events(fb_user, usr)
-    debugger
     if fb_user
       fb_user.events.each do |event|
         if event.end_time > Time.now

@@ -43,6 +43,10 @@ email: marco@i-marco.nl
 Free to use any way you like.
 */
 
+// used to retrieve channels based on category selection
+function get_channels (category, loc) {
+  $.getScript('/list.js?location=' + loc + "&category=" + encodeURIComponent(category));
+}
 
 jQuery.fn.initMenu = function() {  
     return this.each(function(){
@@ -70,9 +74,10 @@ jQuery.fn.initMenu = function() {
                     return false;
                 }
                 else {
-                    if(theElement.hasClass('acitem') && theElement.is(':visible')) {
+                   if(theElement.hasClass('acitem') && theElement.is(':visible')) {
                         if($(parent).hasClass('collapsible')) {
-                            $('.acitem:visible', parent).first().slideUp('normal', 
+                           get_channels($(this).text(), $('#location_id').val());
+                           $('.acitem:visible', parent).first().slideUp('normal', 
                             function() {
                                 $(this).prev().removeClass('active');
                             }
@@ -87,6 +92,11 @@ jQuery.fn.initMenu = function() {
                     });
                     theElement.slideDown('normal', function() {
                         $(this).prev().addClass('active');
+                        
+                        // grabs category text and location to get correct channels
+   						var category = $(this).prev().addClass('active').text();
+  						var loc = $('#location_id').val();
+                        get_channels(category, loc);
                     });
                     return false;
                 }

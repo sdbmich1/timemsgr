@@ -5,8 +5,8 @@ require 'json'
 # tasks
 namespace :loader do
   desc "Load database with data from 3rd party data feeds"
-  task :process_feeds => :environment do
-    load_sf_feeds '/opt/kits/system/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
+  task :process_feeds => :environment do    
+    load_sf_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
   end 
   
   desc "Load database with data from Stanford feeds"
@@ -16,12 +16,12 @@ namespace :loader do
 
   desc "Load database with data from Stanford athletics feeds"
   task :process_stanford_sports_feeds => :environment do
-    load_stanford_data '/opt/kits/system/feeds/StanfordSportsFeed022612.txt', 'Stanford', -8
+    load_stanford_data RAILS_ROOT +'/lib/feeds/StanfordSportsFeed022612.txt', 'Stanford', -8
   end
 
   desc "Load database with data from MLB feeds"
   task :process_mlb_feeds => :environment do
-    load_mlb_feeds '/opt/kits/system/ics/MLBSchedule022512.txt'
+    load_mlb_feeds RAILS_ROOT + '/lib/feeds/MLBSchedule022512.txt'
   end  
   
   desc "Load database with data from pro golf feeds"

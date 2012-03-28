@@ -242,8 +242,7 @@ module EventsHelper
   def get_opportunities(edate)
     events, t = [], Time.now
     (Date.today..edate).each do |dt|
-      start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 1)
-      end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 2)
+      start_time = end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 1)
       events << {:start_date => dt, :start_time => start_time, :end_time => end_time}
     end
     events

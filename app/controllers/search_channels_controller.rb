@@ -5,7 +5,7 @@ class SearchChannelsController < ApplicationController
   def index
     query = params[:search]
     page  = params[:page] || 1
-    @channels = Channel.search query, :with => {:location_id => @location} 
+    @channels = LocalChannel.search query, :conditions => {:localename => @location.city + '*'}
   end
   
   def page_layout 

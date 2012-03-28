@@ -1,0 +1,2798 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 Arizona Diamondbacks Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120303T150500
+DTEND;TZID=America/New_York:20120303T180500
+DTSTAMP:20120226T081803Z
+UID:332098@mlb.com
+CREATED:20111130T212812Z
+DESCRIPTION:Spring Training: Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120303T151000
+DTEND;TZID=America/New_York:20120303T181000
+DTSTAMP:20120226T081803Z
+UID:332097@mlb.com
+CREATED:20111130T212812Z
+DESCRIPTION:Spring Training: Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120222T001930Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T151000
+DTEND;TZID=America/New_York:20120304T181000
+DTSTAMP:20120226T081803Z
+UID:332117@mlb.com
+CREATED:20111130T212815Z
+DESCRIPTION:Spring Training: San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T151000
+DTEND;TZID=America/New_York:20120305T181000
+DTSTAMP:20120226T081803Z
+UID:332121@mlb.com
+CREATED:20111130T212815Z
+DESCRIPTION:Spring Training: Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T151000
+DTEND;TZID=America/New_York:20120306T181000
+DTSTAMP:20120226T081803Z
+UID:332150@mlb.com
+CREATED:20111130T212820Z
+DESCRIPTION:Spring Training: Texas at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_texmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Texas at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_texmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T151000
+DTEND;TZID=America/New_York:20120307T181000
+DTSTAMP:20120226T081803Z
+UID:332155@mlb.com
+CREATED:20111130T212821Z
+DESCRIPTION:Spring Training: Cleveland at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_clemlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal TV: MLBN\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Cleveland at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_clemlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T081803Z
+UID:332184@mlb.com
+CREATED:20111130T212825Z
+DESCRIPTION:Spring Training: Arizona at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_arimlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Arizona at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_arimlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T211000
+DTEND;TZID=America/New_York:20120311T001000
+DTSTAMP:20120226T081803Z
+UID:332212@mlb.com
+CREATED:20111130T212829Z
+DESCRIPTION:Spring Training: Seattle at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_seamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 92.3 FM
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Seattle at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_seamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T160500
+DTEND;TZID=America/New_York:20120311T190500
+DTSTAMP:20120226T081803Z
+UID:332219@mlb.com
+CREATED:20111130T212830Z
+DESCRIPTION:Spring Training: Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120312T160500
+DTEND;TZID=America/New_York:20120312T190500
+DTSTAMP:20120226T081803Z
+UID:332237@mlb.com
+CREATED:20111130T212832Z
+DESCRIPTION:Spring Training: Arizona at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_arimlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Arizona at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_arimlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T161000
+DTEND;TZID=America/New_York:20120313T191000
+DTSTAMP:20120226T081803Z
+UID:332252@mlb.com
+CREATED:20111130T212834Z
+DESCRIPTION:Spring Training: LA Angels at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_anamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), FS-A\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: LA Angels at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_anamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T221000
+DTEND;TZID=America/New_York:20120315T011000
+DTSTAMP:20120226T081803Z
+UID:332268@mlb.com
+CREATED:20111130T212837Z
+DESCRIPTION:Spring Training: Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T161000
+DTEND;TZID=America/New_York:20120314T191000
+DTSTAMP:20120226T081803Z
+UID:332280@mlb.com
+CREATED:20111130T212838Z
+DESCRIPTION:Spring Training: San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_sdnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T160500
+DTEND;TZID=America/New_York:20120315T190500
+DTSTAMP:20120226T081803Z
+UID:332283@mlb.com
+CREATED:20111130T212839Z
+DESCRIPTION:Spring Training: Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_arimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T161000
+DTEND;TZID=America/New_York:20120316T191000
+DTSTAMP:20120226T081803Z
+UID:332301@mlb.com
+CREATED:20111130T212841Z
+DESCRIPTION:Spring Training: Chi White Sox at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_chamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi White Sox at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_chamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T160500
+DTEND;TZID=America/New_York:20120317T190500
+DTSTAMP:20120226T081803Z
+UID:332315@mlb.com
+CREATED:20111130T212844Z
+DESCRIPTION:Spring Training: Arizona at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_arimlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Arizona at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_arimlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T081803Z
+UID:332336@mlb.com
+CREATED:20111130T212847Z
+DESCRIPTION:Spring Training: Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T161000
+DTEND;TZID=America/New_York:20120318T191000
+DTSTAMP:20120226T081803Z
+UID:332346@mlb.com
+CREATED:20111130T212848Z
+DESCRIPTION:Spring Training: Oakland at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_oakmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194522Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Oakland at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_oakmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120319T160500
+DTEND;TZID=America/New_York:20120319T190500
+DTSTAMP:20120226T081803Z
+UID:332353@mlb.com
+CREATED:20111130T212849Z
+DESCRIPTION:Spring Training: Arizona at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_arimlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194522Z
+LOCATION:Phoenix Municipal Stadium, Phoenix
+SUMMARY:Spring Training: Arizona at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_arimlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T161000
+DTEND;TZID=America/New_York:20120320T191000
+DTSTAMP:20120226T081803Z
+UID:332370@mlb.com
+CREATED:20111130T212851Z
+DESCRIPTION:Spring Training: San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120321T161000
+DTEND;TZID=America/New_York:20120321T191000
+DTSTAMP:20120226T081803Z
+UID:332379@mlb.com
+CREATED:20111130T212853Z
+DESCRIPTION:Spring Training: Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T220500
+DTEND;TZID=America/New_York:20120324T010500
+DTSTAMP:20120226T081803Z
+UID:332402@mlb.com
+CREATED:20111130T212856Z
+DESCRIPTION:Spring Training: Arizona at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_arimlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Arizona at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_arimlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T221000
+DTEND;TZID=America/New_York:20120325T011000
+DTSTAMP:20120226T081803Z
+UID:332423@mlb.com
+CREATED:20111130T212859Z
+DESCRIPTION:Spring Training: Kansas City at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_kcamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Kansas City at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_kcamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T160500
+DTEND;TZID=America/New_York:20120325T190500
+DTSTAMP:20120226T081803Z
+UID:332431@mlb.com
+CREATED:20111130T212900Z
+DESCRIPTION:Spring Training: Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 92.3 FM
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T161000
+DTEND;TZID=America/New_York:20120326T191000
+DTSTAMP:20120226T081803Z
+UID:332450@mlb.com
+CREATED:20111130T212902Z
+DESCRIPTION:Spring Training: Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T161000
+DTEND;TZID=America/New_York:20120327T191000
+DTSTAMP:20120226T081803Z
+UID:332464@mlb.com
+CREATED:20111130T212904Z
+DESCRIPTION:Spring Training: Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV, FS-A\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T160500
+DTEND;TZID=America/New_York:20120328T190500
+DTSTAMP:20120226T081803Z
+UID:332475@mlb.com
+CREATED:20111130T212905Z
+DESCRIPTION:Spring Training: Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_arimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T161000
+DTEND;TZID=America/New_York:20120329T191000
+DTSTAMP:20120226T081803Z
+UID:332493@mlb.com
+CREATED:20111130T212907Z
+DESCRIPTION:Spring Training: Cleveland at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_clemlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Cleveland at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_clemlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T160500
+DTEND;TZID=America/New_York:20120330T190500
+DTSTAMP:20120226T081803Z
+UID:332503@mlb.com
+CREATED:20111130T212908Z
+DESCRIPTION:Spring Training: Arizona at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_arimlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Tempe Diablo Stadium, Tempe
+SUMMARY:Spring Training: Arizona at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_arimlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T160500
+DTEND;TZID=America/New_York:20120331T190500
+DTSTAMP:20120226T081803Z
+UID:332520@mlb.com
+CREATED:20111130T212910Z
+DESCRIPTION:Spring Training: Arizona at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_arimlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Arizona at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_arimlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T161000
+DTEND;TZID=America/New_York:20120331T191000
+DTSTAMP:20120226T081803Z
+UID:332526@mlb.com
+CREATED:20111130T212911Z
+DESCRIPTION:Spring Training: LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=03&y=2012\n\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T160500
+DTEND;TZID=America/New_York:20120401T190500
+DTSTAMP:20120226T081803Z
+UID:332535@mlb.com
+CREATED:20111130T212912Z
+DESCRIPTION:Spring Training: Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: MLB.TV, MLBN (delay)\nLocal Radio: KTAR 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T161000
+DTEND;TZID=America/New_York:20120402T191000
+DTSTAMP:20120226T081803Z
+UID:332550@mlb.com
+CREATED:20111130T212914Z
+DESCRIPTION:Spring Training: Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T214000
+DTEND;TZID=America/New_York:20120404T004000
+DTSTAMP:20120226T081803Z
+UID:331124@mlb.com
+CREATED:20111117T181025Z
+DESCRIPTION:Spring Training: Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal Radio: KTAR 92.3 FM, ESPN Deportes 710
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Spring Training: Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120404T154000
+DTEND;TZID=America/New_York:20120404T184000
+DTSTAMP:20120226T081803Z
+UID:331125@mlb.com
+CREATED:20111117T181026Z
+DESCRIPTION:Spring Training: Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), FS-A\nLocal Radio: ESPN Deportes 710
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Spring Training: Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120406T191000
+DTEND;TZID=America/New_York:20120406T221000
+DTSTAMP:20120226T081803Z
+UID:317748@mlb.com
+CREATED:20110908T191146Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs T-shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120202T215059Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T161000
+DTEND;TZID=America/New_York:20120407T191000
+DTSTAMP:20120226T081803Z
+UID:317761@mlb.com
+CREATED:20110908T191147Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Kirk Gibson Fan\n    Magnet Schedule\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T161000
+DTEND;TZID=America/New_York:20120408T191000
+DTSTAMP:20120226T081803Z
+UID:317776@mlb.com
+CREATED:20110908T191149Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120410T220500
+DTEND;TZID=America/New_York:20120411T010500
+DTSTAMP:20120226T081803Z
+UID:317792@mlb.com
+CREATED:20110908T191152Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T020833Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T183500
+DTEND;TZID=America/New_York:20120411T213500
+DTSTAMP:20120226T081803Z
+UID:317805@mlb.com
+CREATED:20110908T191153Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n
+LAST-MODIFIED:20120117T020833Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T220500
+DTEND;TZID=America/New_York:20120413T010500
+DTSTAMP:20120226T081803Z
+UID:317820@mlb.com
+CREATED:20110908T191155Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T020833Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T204000
+DTEND;TZID=America/New_York:20120413T234000
+DTSTAMP:20120226T081803Z
+UID:317829@mlb.com
+CREATED:20110908T191156Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A+
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T201000
+DTEND;TZID=America/New_York:20120414T231000
+DTSTAMP:20120226T081803Z
+UID:317844@mlb.com
+CREATED:20110908T191158Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A+
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T151000
+DTEND;TZID=America/New_York:20120415T181000
+DTSTAMP:20120226T081803Z
+UID:317859@mlb.com
+CREATED:20110908T191200Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120416T214000
+DTEND;TZID=America/New_York:20120417T004000
+DTSTAMP:20120226T081803Z
+UID:317880@mlb.com
+CREATED:20110908T191202Z
+DESCRIPTION:Pittsburgh at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_16_pitmlb_arimlb_1\n\nPromotions/Giveaways: \n    Jackie Robinson Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A+
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Pittsburgh at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_16_pitmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T214000
+DTEND;TZID=America/New_York:20120418T004000
+DTSTAMP:20120226T081803Z
+UID:317894@mlb.com
+CREATED:20110908T191206Z
+DESCRIPTION:Pittsburgh at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_pitmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Pittsburgh at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_pitmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T154000
+DTEND;TZID=America/New_York:20120418T184000
+DTSTAMP:20120226T081803Z
+UID:317909@mlb.com
+CREATED:20110908T191208Z
+DESCRIPTION:Pittsburgh at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_pitmlb_arimlb_1\n\nPromotions/Giveaways: \n    Senior Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Pittsburgh at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_pitmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120419T214000
+DTEND;TZID=America/New_York:20120420T004000
+DTSTAMP:20120226T081803Z
+UID:317913@mlb.com
+CREATED:20110908T191208Z
+DESCRIPTION:Atlanta at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_atlmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Atlanta at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_atlmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T214000
+DTEND;TZID=America/New_York:20120421T004000
+DTSTAMP:20120226T081803Z
+UID:317925@mlb.com
+CREATED:20110908T191210Z
+DESCRIPTION:Atlanta at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_atlmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fireworks Night\n    College Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Atlanta at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_atlmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T201000
+DTEND;TZID=America/New_York:20120421T231000
+DTSTAMP:20120226T081803Z
+UID:317940@mlb.com
+CREATED:20110908T191211Z
+DESCRIPTION:Atlanta at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_atlmlb_arimlb_1\n\nPromotions/Giveaways: \n    Drawstring Backpack\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Atlanta at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_atlmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T161000
+DTEND;TZID=America/New_York:20120422T191000
+DTSTAMP:20120226T081803Z
+UID:317955@mlb.com
+CREATED:20110908T191213Z
+DESCRIPTION:Atlanta at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_atlmlb_arimlb_1\n\nPromotions/Giveaways: \n    NL West Champions Puzzle\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Atlanta at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_atlmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120423T214000
+DTEND;TZID=America/New_York:20120424T004000
+DTSTAMP:20120226T081803Z
+UID:317976@mlb.com
+CREATED:20110908T191215Z
+DESCRIPTION:Philadelphia at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_phimlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Philadelphia at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_phimlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T214000
+DTEND;TZID=America/New_York:20120425T004000
+DTSTAMP:20120226T081803Z
+UID:317989@mlb.com
+CREATED:20110908T191217Z
+DESCRIPTION:Philadelphia at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_phimlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A+
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Philadelphia at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_phimlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T154000
+DTEND;TZID=America/New_York:20120425T184000
+DTSTAMP:20120226T081803Z
+UID:318004@mlb.com
+CREATED:20110908T191219Z
+DESCRIPTION:Philadelphia at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_phimlb_arimlb_1\n\nPromotions/Giveaways: \n    Senior Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Philadelphia at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_phimlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T191000
+DTEND;TZID=America/New_York:20120427T221000
+DTSTAMP:20120226T081803Z
+UID:318019@mlb.com
+CREATED:20110908T191220Z
+DESCRIPTION:Arizona at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_arimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Arizona at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_arimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T191000
+DTEND;TZID=America/New_York:20120428T221000
+DTSTAMP:20120226T081803Z
+UID:318034@mlb.com
+CREATED:20110908T191222Z
+DESCRIPTION:Arizona at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_arimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Arizona at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_arimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T131000
+DTEND;TZID=America/New_York:20120429T161000
+DTSTAMP:20120226T081803Z
+UID:318049@mlb.com
+CREATED:20110908T191224Z
+DESCRIPTION:Arizona at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_arimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Arizona at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_arimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120430T124000
+DTEND;TZID=America/New_York:20120430T154000
+DTSTAMP:20120226T081803Z
+UID:318063@mlb.com
+CREATED:20110908T191225Z
+DESCRIPTION:Arizona at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_arimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=04&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Arizona at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_arimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T190500
+DTEND;TZID=America/New_York:20120501T220500
+DTSTAMP:20120226T081803Z
+UID:318075@mlb.com
+CREATED:20110908T191227Z
+DESCRIPTION:Arizona at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_arimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Arizona at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_arimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T190500
+DTEND;TZID=America/New_York:20120502T220500
+DTSTAMP:20120226T081803Z
+UID:318090@mlb.com
+CREATED:20110908T191228Z
+DESCRIPTION:Arizona at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_arimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Arizona at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_arimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120503T190500
+DTEND;TZID=America/New_York:20120503T220500
+DTSTAMP:20120226T081803Z
+UID:318105@mlb.com
+CREATED:20110908T191230Z
+DESCRIPTION:Arizona at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_arimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Arizona at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_arimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T191000
+DTEND;TZID=America/New_York:20120504T221000
+DTSTAMP:20120226T081803Z
+UID:318114@mlb.com
+CREATED:20110908T191231Z
+DESCRIPTION:Arizona at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_arimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Arizona at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_arimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T160500
+DTEND;TZID=America/New_York:20120505T190500
+DTSTAMP:20120226T081803Z
+UID:318129@mlb.com
+CREATED:20110908T191233Z
+DESCRIPTION:Arizona at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_arimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Arizona at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_arimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T131000
+DTEND;TZID=America/New_York:20120506T161000
+DTSTAMP:20120226T081803Z
+UID:318144@mlb.com
+CREATED:20110908T191235Z
+DESCRIPTION:Arizona at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_arimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Arizona at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_arimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T214000
+DTEND;TZID=America/New_York:20120508T004000
+DTSTAMP:20120226T081803Z
+UID:318169@mlb.com
+CREATED:20110908T191238Z
+DESCRIPTION:St. Louis at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_slnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Educational Field Trip Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:St. Louis at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_slnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T214000
+DTEND;TZID=America/New_York:20120509T004000
+DTSTAMP:20120226T081803Z
+UID:318181@mlb.com
+CREATED:20110908T191239Z
+DESCRIPTION:St. Louis at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_slnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:St. Louis at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_slnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T214000
+DTEND;TZID=America/New_York:20120510T004000
+DTSTAMP:20120226T081803Z
+UID:318196@mlb.com
+CREATED:20110908T191241Z
+DESCRIPTION:St. Louis at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_slnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Educational Field Trip Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:St. Louis at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_slnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T214000
+DTEND;TZID=America/New_York:20120512T004000
+DTSTAMP:20120226T081803Z
+UID:318218@mlb.com
+CREATED:20110908T191243Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    KaChingKo Key Chains\n    Fireworks Night\n    College Night\n    Faith & Family Night Concert\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T201000
+DTEND;TZID=America/New_York:20120512T231000
+DTSTAMP:20120226T081803Z
+UID:318233@mlb.com
+CREATED:20110908T191245Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Mystery Ball\n    Ryan Roberts Tattoo Sleeve\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T161000
+DTEND;TZID=America/New_York:20120513T191000
+DTSTAMP:20120226T081803Z
+UID:318248@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    MLB Going to Bat Against Breast Cancer\n    Mother's Day Earrings\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T221000
+DTEND;TZID=America/New_York:20120515T011000
+DTSTAMP:20120226T081803Z
+UID:318252@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T221000
+DTEND;TZID=America/New_York:20120516T011000
+DTSTAMP:20120226T081803Z
+UID:318267@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T204000
+DTEND;TZID=America/New_York:20120516T234000
+DTSTAMP:20120226T081803Z
+UID:318282@mlb.com
+CREATED:20110908T191250Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T151000
+DTEND;TZID=America/New_York:20120517T181000
+DTSTAMP:20120226T081803Z
+UID:318297@mlb.com
+CREATED:20110908T191252Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T201000
+DTEND;TZID=America/New_York:20120518T231000
+DTSTAMP:20120226T081803Z
+UID:318313@mlb.com
+CREATED:20110908T191254Z
+DESCRIPTION:Arizona at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_arimlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120118T170102Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:Arizona at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_arimlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T191500
+DTEND;TZID=America/New_York:20120519T221500
+DTSTAMP:20120226T081803Z
+UID:318328@mlb.com
+CREATED:20110908T191255Z
+DESCRIPTION:Arizona at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_arimlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120118T170102Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:Arizona at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_arimlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T141000
+DTEND;TZID=America/New_York:20120520T171000
+DTSTAMP:20120226T081803Z
+UID:318343@mlb.com
+CREATED:20110908T191257Z
+DESCRIPTION:Arizona at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_arimlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120118T170102Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:Arizona at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_arimlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T214000
+DTEND;TZID=America/New_York:20120522T004000
+DTSTAMP:20120226T081803Z
+UID:318363@mlb.com
+CREATED:20110908T191259Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T214000
+DTEND;TZID=America/New_York:20120523T004000
+DTSTAMP:20120226T081803Z
+UID:318377@mlb.com
+CREATED:20110908T191300Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T214000
+DTEND;TZID=America/New_York:20120524T004000
+DTSTAMP:20120226T081803Z
+UID:318392@mlb.com
+CREATED:20110908T191302Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T214000
+DTEND;TZID=America/New_York:20120526T004000
+DTSTAMP:20120226T081803Z
+UID:318414@mlb.com
+CREATED:20110908T191304Z
+DESCRIPTION:Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_milmlb_arimlb_1\n\nPromotions/Giveaways: \n    Boy Scout Night\n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T221000
+DTEND;TZID=America/New_York:20120527T011000
+DTSTAMP:20120226T081803Z
+UID:318429@mlb.com
+CREATED:20110908T191306Z
+DESCRIPTION:Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_milmlb_arimlb_1\n\nPromotions/Giveaways: \n    J.J. Putz Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T161000
+DTEND;TZID=America/New_York:20120527T191000
+DTSTAMP:20120226T081803Z
+UID:318444@mlb.com
+CREATED:20110908T191308Z
+DESCRIPTION:Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_milmlb_arimlb_1\n\nPromotions/Giveaways: \n    Bark in the Park\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T170500
+DTEND;TZID=America/New_York:20120528T200500
+DTSTAMP:20120226T081803Z
+UID:318452@mlb.com
+CREATED:20110908T191308Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T221500
+DTEND;TZID=America/New_York:20120530T011500
+DTSTAMP:20120226T081803Z
+UID:318467@mlb.com
+CREATED:20110908T191310Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T221500
+DTEND;TZID=America/New_York:20120531T011500
+DTSTAMP:20120226T081803Z
+UID:318482@mlb.com
+CREATED:20110908T191313Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=05&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T220500
+DTEND;TZID=America/New_York:20120602T010500
+DTSTAMP:20120226T081803Z
+UID:318500@mlb.com
+CREATED:20110908T191315Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T020837Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T191500
+DTEND;TZID=America/New_York:20120602T221500
+DTSTAMP:20120226T081803Z
+UID:318515@mlb.com
+CREATED:20110908T191317Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120117T020837Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T183500
+DTEND;TZID=America/New_York:20120603T213500
+DTSTAMP:20120226T081803Z
+UID:318530@mlb.com
+CREATED:20110908T191318Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n
+LAST-MODIFIED:20120117T020837Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120604T214000
+DTEND;TZID=America/New_York:20120605T004000
+DTSTAMP:20120226T081803Z
+UID:318584@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T214000
+DTEND;TZID=America/New_York:20120606T004000
+DTSTAMP:20120226T081803Z
+UID:318554@mlb.com
+CREATED:20110908T191321Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T214000
+DTEND;TZID=America/New_York:20120607T004000
+DTSTAMP:20120226T081803Z
+UID:318569@mlb.com
+CREATED:20110908T191322Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T214000
+DTEND;TZID=America/New_York:20120609T004000
+DTSTAMP:20120226T081803Z
+UID:318601@mlb.com
+CREATED:20110908T191326Z
+DESCRIPTION:Oakland at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_oakmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Oakland at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_oakmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T221000
+DTEND;TZID=America/New_York:20120610T011000
+DTSTAMP:20120226T081803Z
+UID:318616@mlb.com
+CREATED:20110908T191327Z
+DESCRIPTION:Oakland at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_oakmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Oakland at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_oakmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T161000
+DTEND;TZID=America/New_York:20120610T191000
+DTSTAMP:20120226T081803Z
+UID:318631@mlb.com
+CREATED:20110908T191329Z
+DESCRIPTION:Oakland at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_oakmlb_arimlb_1\n\nPromotions/Giveaways: \n    D. Baxter Fathead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Oakland at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_oakmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T200500
+DTEND;TZID=America/New_York:20120612T230500
+DTSTAMP:20120226T081803Z
+UID:318643@mlb.com
+CREATED:20110908T191330Z
+DESCRIPTION:Arizona at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_arimlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120111T002820Z
+LOCATION:Rangers Ballpark in Arlington, Arlington
+SUMMARY:Arizona at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_arimlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T200500
+DTEND;TZID=America/New_York:20120613T230500
+DTSTAMP:20120226T081803Z
+UID:318658@mlb.com
+CREATED:20110908T191332Z
+DESCRIPTION:Arizona at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_arimlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120111T002820Z
+LOCATION:Rangers Ballpark in Arlington, Arlington
+SUMMARY:Arizona at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_arimlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120614T200500
+DTEND;TZID=America/New_York:20120614T230500
+DTSTAMP:20120226T081803Z
+UID:318672@mlb.com
+CREATED:20110908T191333Z
+DESCRIPTION:Arizona at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_arimlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120111T002820Z
+LOCATION:Rangers Ballpark in Arlington, Arlington
+SUMMARY:Arizona at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_arimlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T220500
+DTEND;TZID=America/New_York:20120616T010500
+DTSTAMP:20120226T081803Z
+UID:318683@mlb.com
+CREATED:20110908T191334Z
+DESCRIPTION:Arizona at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_arimlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T225114Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:Arizona at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_arimlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T220500
+DTEND;TZID=America/New_York:20120617T010500
+DTSTAMP:20120226T081803Z
+UID:318698@mlb.com
+CREATED:20110908T191336Z
+DESCRIPTION:Arizona at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_arimlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T225114Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:Arizona at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_arimlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T153500
+DTEND;TZID=America/New_York:20120617T183500
+DTSTAMP:20120226T081803Z
+UID:318713@mlb.com
+CREATED:20110908T191338Z
+DESCRIPTION:Arizona at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_arimlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:Arizona at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_arimlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120618T214000
+DTEND;TZID=America/New_York:20120619T004000
+DTSTAMP:20120226T081803Z
+UID:318733@mlb.com
+CREATED:20110908T191340Z
+DESCRIPTION:Seattle at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_seamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Seattle at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_seamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T214000
+DTEND;TZID=America/New_York:20120620T004000
+DTSTAMP:20120226T081803Z
+UID:318746@mlb.com
+CREATED:20110908T191341Z
+DESCRIPTION:Seattle at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_seamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Seattle at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_seamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T154000
+DTEND;TZID=America/New_York:20120620T184000
+DTSTAMP:20120226T081803Z
+UID:318761@mlb.com
+CREATED:20110908T191343Z
+DESCRIPTION:Seattle at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_seamlb_arimlb_1\n\nPromotions/Giveaways: \n    Camp Day\n    Senior Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Seattle at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_seamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T214000
+DTEND;TZID=America/New_York:20120623T004000
+DTSTAMP:20120226T081803Z
+UID:318774@mlb.com
+CREATED:20110908T191345Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_chnmlb_arimlb_1\n\nPromotions/Giveaways: \n    APS Green Series\n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T221000
+DTEND;TZID=America/New_York:20120624T011000
+DTSTAMP:20120226T081803Z
+UID:318789@mlb.com
+CREATED:20110908T191346Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_chnmlb_arimlb_1\n\nPromotions/Giveaways: \n    APS Green Series\n    Ian Kennedy Bobblehead\n    Martial Arts Night\n    Mystery Ball\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T161000
+DTEND;TZID=America/New_York:20120624T191000
+DTSTAMP:20120226T081803Z
+UID:318804@mlb.com
+CREATED:20110908T191348Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_chnmlb_arimlb_1\n\nPromotions/Giveaways: \n    APS Green Series\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T191000
+DTEND;TZID=America/New_York:20120626T221000
+DTSTAMP:20120226T081803Z
+UID:318831@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:Arizona at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_arimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Arizona at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_arimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T191000
+DTEND;TZID=America/New_York:20120627T221000
+DTSTAMP:20120226T081803Z
+UID:318846@mlb.com
+CREATED:20110908T191352Z
+DESCRIPTION:Arizona at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_arimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Arizona at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_arimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120628T191000
+DTEND;TZID=America/New_York:20120628T221000
+DTSTAMP:20120226T081803Z
+UID:318861@mlb.com
+CREATED:20110908T191354Z
+DESCRIPTION:Arizona at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_arimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Arizona at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_arimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T201000
+DTEND;TZID=America/New_York:20120629T231000
+DTSTAMP:20120226T081803Z
+UID:318873@mlb.com
+CREATED:20110908T191355Z
+DESCRIPTION:Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_arimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T191500
+DTEND;TZID=America/New_York:20120630T221500
+DTSTAMP:20120226T081803Z
+UID:318888@mlb.com
+CREATED:20110908T191357Z
+DESCRIPTION:Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_arimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T141000
+DTEND;TZID=America/New_York:20120701T171000
+DTSTAMP:20120226T081803Z
+UID:318903@mlb.com
+CREATED:20110908T191358Z
+DESCRIPTION:Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_arimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120702T214000
+DTEND;TZID=America/New_York:20120703T004000
+DTSTAMP:20120226T081803Z
+UID:318928@mlb.com
+CREATED:20110908T191401Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_sdnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T214000
+DTEND;TZID=America/New_York:20120704T004000
+DTSTAMP:20120226T081803Z
+UID:318941@mlb.com
+CREATED:20110908T191403Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_sdnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T214000
+DTEND;TZID=America/New_York:20120705T004000
+DTSTAMP:20120226T081803Z
+UID:318956@mlb.com
+CREATED:20110908T191404Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_sdnmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs 4th of July T-shirt\n    Fireworks Night\n    Mystery Ball\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T214000
+DTEND;TZID=America/New_York:20120706T004000
+DTSTAMP:20120226T081803Z
+UID:318966@mlb.com
+CREATED:20110908T191405Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T214000
+DTEND;TZID=America/New_York:20120707T004000
+DTSTAMP:20120226T081803Z
+UID:318980@mlb.com
+CREATED:20110908T191407Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T221000
+DTEND;TZID=America/New_York:20120708T011000
+DTSTAMP:20120226T081803Z
+UID:318995@mlb.com
+CREATED:20110908T191408Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_lanmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs Lucha Libre Mask\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T161000
+DTEND;TZID=America/New_York:20120708T191000
+DTSTAMP:20120226T081803Z
+UID:319010@mlb.com
+CREATED:20110908T191410Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_lanmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs Soccer Ball\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T081803Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T142000
+DTEND;TZID=America/New_York:20120713T172000
+DTSTAMP:20120226T081803Z
+UID:319020@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_arimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T160500
+DTEND;TZID=America/New_York:20120714T190500
+DTSTAMP:20120226T081803Z
+UID:319035@mlb.com
+CREATED:20110908T191413Z
+DESCRIPTION:Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_arimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T142000
+DTEND;TZID=America/New_York:20120715T172000
+DTSTAMP:20120226T081803Z
+UID:319050@mlb.com
+CREATED:20110908T191415Z
+DESCRIPTION:Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_arimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120716T191000
+DTEND;TZID=America/New_York:20120716T221000
+DTSTAMP:20120226T081803Z
+UID:319065@mlb.com
+CREATED:20110908T191416Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T191000
+DTEND;TZID=America/New_York:20120717T221000
+DTSTAMP:20120226T081803Z
+UID:319078@mlb.com
+CREATED:20110908T191418Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T191000
+DTEND;TZID=America/New_York:20120718T221000
+DTSTAMP:20120226T081803Z
+UID:319093@mlb.com
+CREATED:20110908T191419Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120719T123500
+DTEND;TZID=America/New_York:20120719T153500
+DTSTAMP:20120226T081803Z
+UID:319108@mlb.com
+CREATED:20110908T191421Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T214000
+DTEND;TZID=America/New_York:20120721T004000
+DTSTAMP:20120226T081803Z
+UID:319124@mlb.com
+CREATED:20110908T191423Z
+DESCRIPTION:Houston at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_houmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Houston at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_houmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T201000
+DTEND;TZID=America/New_York:20120721T231000
+DTSTAMP:20120226T081803Z
+UID:319139@mlb.com
+CREATED:20110908T191424Z
+DESCRIPTION:Houston at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_houmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs Cap\n    Native American Recognition Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Houston at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_houmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T161000
+DTEND;TZID=America/New_York:20120722T191000
+DTSTAMP:20120226T081803Z
+UID:319154@mlb.com
+CREATED:20110908T191426Z
+DESCRIPTION:Houston at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_houmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Houston at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_houmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T214000
+DTEND;TZID=America/New_York:20120724T004000
+DTSTAMP:20120226T081803Z
+UID:319168@mlb.com
+CREATED:20110908T191428Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T214000
+DTEND;TZID=America/New_York:20120725T004000
+DTSTAMP:20120226T081803Z
+UID:319180@mlb.com
+CREATED:20110908T191429Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T214000
+DTEND;TZID=America/New_York:20120726T004000
+DTSTAMP:20120226T081803Z
+UID:319195@mlb.com
+CREATED:20110908T191431Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120726T214000
+DTEND;TZID=America/New_York:20120727T004000
+DTSTAMP:20120226T081803Z
+UID:319209@mlb.com
+CREATED:20110908T191432Z
+DESCRIPTION:NY Mets at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_26_nynmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:NY Mets at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_26_nynmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T214000
+DTEND;TZID=America/New_York:20120728T004000
+DTSTAMP:20120226T081803Z
+UID:319221@mlb.com
+CREATED:20110908T191433Z
+DESCRIPTION:NY Mets at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_nynmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:NY Mets at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_nynmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T201000
+DTEND;TZID=America/New_York:20120728T231000
+DTSTAMP:20120226T081803Z
+UID:319236@mlb.com
+CREATED:20110908T191435Z
+DESCRIPTION:NY Mets at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_nynmlb_arimlb_1\n\nPromotions/Giveaways: \n    Justin Upton Silver Slugger Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:NY Mets at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_nynmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T161000
+DTEND;TZID=America/New_York:20120729T191000
+DTSTAMP:20120226T081803Z
+UID:319251@mlb.com
+CREATED:20110908T191437Z
+DESCRIPTION:NY Mets at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_nynmlb_arimlb_1\n\nPromotions/Giveaways: \n    Back-to-School Backpack\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:NY Mets at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_nynmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120730T221000
+DTEND;TZID=America/New_York:20120731T011000
+DTSTAMP:20120226T081803Z
+UID:319260@mlb.com
+CREATED:20110908T191438Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T221000
+DTEND;TZID=America/New_York:20120801T011000
+DTSTAMP:20120226T081803Z
+UID:319272@mlb.com
+CREATED:20110908T191439Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=07&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T151000
+DTEND;TZID=America/New_York:20120801T181000
+DTSTAMP:20120226T081803Z
+UID:319287@mlb.com
+CREATED:20110908T191441Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T190500
+DTEND;TZID=America/New_York:20120803T220500
+DTSTAMP:20120226T081803Z
+UID:319311@mlb.com
+CREATED:20110908T191443Z
+DESCRIPTION:Arizona at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_arimlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Arizona at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_arimlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T190500
+DTEND;TZID=America/New_York:20120804T220500
+DTSTAMP:20120226T081803Z
+UID:319326@mlb.com
+CREATED:20110908T191445Z
+DESCRIPTION:Arizona at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_arimlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Arizona at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_arimlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T033300
+DTEND;TZID=America/New_York:20120805T063300
+DTSTAMP:20120226T081803Z
+UID:319341@mlb.com
+CREATED:20110908T191447Z
+DESCRIPTION:Arizona at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_arimlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Arizona at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_arimlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T190500
+DTEND;TZID=America/New_York:20120806T220500
+DTSTAMP:20120226T081803Z
+UID:319356@mlb.com
+CREATED:20110908T191448Z
+DESCRIPTION:Arizona at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_arimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Arizona at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_arimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T190500
+DTEND;TZID=America/New_York:20120807T220500
+DTSTAMP:20120226T081803Z
+UID:319369@mlb.com
+CREATED:20110908T191450Z
+DESCRIPTION:Arizona at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_arimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Arizona at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_arimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T190500
+DTEND;TZID=America/New_York:20120808T220500
+DTSTAMP:20120226T081803Z
+UID:319384@mlb.com
+CREATED:20110908T191451Z
+DESCRIPTION:Arizona at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_arimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Arizona at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_arimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120809T160500
+DTEND;TZID=America/New_York:20120809T190500
+DTSTAMP:20120226T081803Z
+UID:319398@mlb.com
+CREATED:20110908T191453Z
+DESCRIPTION:Arizona at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_arimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Arizona at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_arimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T214000
+DTEND;TZID=America/New_York:20120811T004000
+DTSTAMP:20120226T081803Z
+UID:319421@mlb.com
+CREATED:20110908T191455Z
+DESCRIPTION:Washington at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_wasmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Washington at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_wasmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T201000
+DTEND;TZID=America/New_York:20120811T231000
+DTSTAMP:20120226T081803Z
+UID:319436@mlb.com
+CREATED:20110908T191457Z
+DESCRIPTION:Washington at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_wasmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fan Vote Bobblehead\n    Mystery Ball\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Washington at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_wasmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T161000
+DTEND;TZID=America/New_York:20120812T191000
+DTSTAMP:20120226T081803Z
+UID:319451@mlb.com
+CREATED:20110908T191458Z
+DESCRIPTION:Washington at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_wasmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs Mini License Plate\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Washington at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_wasmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T201500
+DTEND;TZID=America/New_York:20120814T231500
+DTSTAMP:20120226T081803Z
+UID:319463@mlb.com
+CREATED:20110908T191500Z
+DESCRIPTION:Arizona at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_arimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Arizona at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_arimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T201500
+DTEND;TZID=America/New_York:20120815T231500
+DTSTAMP:20120226T081803Z
+UID:319478@mlb.com
+CREATED:20110908T191501Z
+DESCRIPTION:Arizona at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_arimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Arizona at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_arimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120816T201500
+DTEND;TZID=America/New_York:20120816T231500
+DTSTAMP:20120226T081803Z
+UID:319493@mlb.com
+CREATED:20110908T191503Z
+DESCRIPTION:Arizona at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_arimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Arizona at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_arimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T200500
+DTEND;TZID=America/New_York:20120817T230500
+DTSTAMP:20120226T081803Z
+UID:319504@mlb.com
+CREATED:20110908T191505Z
+DESCRIPTION:Arizona at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_arimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Arizona at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_arimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T190500
+DTEND;TZID=America/New_York:20120818T220500
+DTSTAMP:20120226T081803Z
+UID:319519@mlb.com
+CREATED:20110908T191507Z
+DESCRIPTION:Arizona at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_arimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Arizona at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_arimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T140500
+DTEND;TZID=America/New_York:20120819T170500
+DTSTAMP:20120226T081803Z
+UID:319534@mlb.com
+CREATED:20110908T191509Z
+DESCRIPTION:Arizona at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_arimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Arizona at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_arimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T214000
+DTEND;TZID=America/New_York:20120821T004000
+DTSTAMP:20120226T081803Z
+UID:319555@mlb.com
+CREATED:20110908T191511Z
+DESCRIPTION:Miami at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_miamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Miami at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_miamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T214000
+DTEND;TZID=America/New_York:20120822T004000
+DTSTAMP:20120226T081803Z
+UID:319567@mlb.com
+CREATED:20110908T191513Z
+DESCRIPTION:Miami at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_miamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Miami at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_miamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T214000
+DTEND;TZID=America/New_York:20120823T004000
+DTSTAMP:20120226T081803Z
+UID:319582@mlb.com
+CREATED:20110908T191515Z
+DESCRIPTION:Miami at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_miamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Miami at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_miamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120823T214000
+DTEND;TZID=America/New_York:20120824T004000
+DTSTAMP:20120226T081803Z
+UID:319594@mlb.com
+CREATED:20110908T191516Z
+DESCRIPTION:Miami at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_miamlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Miami at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_miamlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T214000
+DTEND;TZID=America/New_York:20120825T004000
+DTSTAMP:20120226T081803Z
+UID:319609@mlb.com
+CREATED:20110908T191518Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_sdnmlb_arimlb_1\n\nPromotions/Giveaways: \n    College Night\n    Faith & Family Night Concert\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T201000
+DTEND;TZID=America/New_York:20120825T231000
+DTSTAMP:20120226T081803Z
+UID:319624@mlb.com
+CREATED:20110908T191519Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_sdnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Choir Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T161000
+DTEND;TZID=America/New_York:20120826T191000
+DTSTAMP:20120226T081803Z
+UID:319639@mlb.com
+CREATED:20110908T191521Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_sdnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Bark in the Park\n    Daniel Hudson Growth Chart\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120827T214000
+DTEND;TZID=America/New_York:20120828T004000
+DTSTAMP:20120226T081803Z
+UID:319646@mlb.com
+CREATED:20110908T191522Z
+DESCRIPTION:Cincinnati at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_cinmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Cincinnati at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_cinmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T214000
+DTEND;TZID=America/New_York:20120829T004000
+DTSTAMP:20120226T081803Z
+UID:319658@mlb.com
+CREATED:20110908T191523Z
+DESCRIPTION:Cincinnati at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_cinmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Cincinnati at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_cinmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T154000
+DTEND;TZID=America/New_York:20120829T184000
+DTSTAMP:20120226T081803Z
+UID:319673@mlb.com
+CREATED:20110908T191525Z
+DESCRIPTION:Cincinnati at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_cinmlb_arimlb_1\n\nPromotions/Giveaways: \n    Senior Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Cincinnati at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_cinmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120830T221000
+DTEND;TZID=America/New_York:20120831T011000
+DTSTAMP:20120226T081803Z
+UID:319685@mlb.com
+CREATED:20110908T191526Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T221000
+DTEND;TZID=America/New_York:20120901T011000
+DTSTAMP:20120226T081803Z
+UID:319697@mlb.com
+CREATED:20110908T191527Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=08&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T211000
+DTEND;TZID=America/New_York:20120902T001000
+DTSTAMP:20120226T081803Z
+UID:319712@mlb.com
+CREATED:20110908T191529Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T201000
+DTEND;TZID=America/New_York:20120902T231000
+DTSTAMP:20120226T081803Z
+UID:319727@mlb.com
+CREATED:20110908T191531Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120114T050530Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T160500
+DTEND;TZID=America/New_York:20120903T190500
+DTSTAMP:20120226T081803Z
+UID:319742@mlb.com
+CREATED:20110908T191533Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T221500
+DTEND;TZID=America/New_York:20120905T011500
+DTSTAMP:20120226T081803Z
+UID:319757@mlb.com
+CREATED:20110908T191534Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T221500
+DTEND;TZID=America/New_York:20120906T011500
+DTSTAMP:20120226T081803Z
+UID:319772@mlb.com
+CREATED:20110908T191536Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T220500
+DTEND;TZID=America/New_York:20120908T010500
+DTSTAMP:20120226T081803Z
+UID:319791@mlb.com
+CREATED:20110908T191538Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T020843Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T203500
+DTEND;TZID=America/New_York:20120908T233500
+DTSTAMP:20120226T081803Z
+UID:319806@mlb.com
+CREATED:20110908T191540Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T020843Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T160500
+DTEND;TZID=America/New_York:20120909T190500
+DTSTAMP:20120226T081803Z
+UID:319821@mlb.com
+CREATED:20110908T191541Z
+DESCRIPTION:Arizona at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_arimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120117T020843Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Arizona at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_arimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T214000
+DTEND;TZID=America/New_York:20120912T004000
+DTSTAMP:20120226T081803Z
+UID:319853@mlb.com
+CREATED:20110908T191545Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T214000
+DTEND;TZID=America/New_York:20120913T004000
+DTSTAMP:20120226T081803Z
+UID:319868@mlb.com
+CREATED:20110908T191547Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T214000
+DTEND;TZID=America/New_York:20120915T004000
+DTSTAMP:20120226T081803Z
+UID:319897@mlb.com
+CREATED:20110908T191550Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Choir Night\n    College Night\n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T201000
+DTEND;TZID=America/New_York:20120915T231000
+DTSTAMP:20120226T081803Z
+UID:319912@mlb.com
+CREATED:20110908T191551Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Alumni/Throwback Jersey Night\n    Band Night\n    Matt Williams Alumni Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T161000
+DTEND;TZID=America/New_York:20120916T191000
+DTSTAMP:20120226T081803Z
+UID:319927@mlb.com
+CREATED:20110908T191554Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_sfnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Hispanic Heritage Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T214000
+DTEND;TZID=America/New_York:20120919T004000
+DTSTAMP:20120226T081803Z
+UID:319949@mlb.com
+CREATED:20110908T191556Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_sdnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T214000
+DTEND;TZID=America/New_York:20120920T004000
+DTSTAMP:20120226T081803Z
+UID:319964@mlb.com
+CREATED:20110908T191558Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_sdnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120920T154000
+DTEND;TZID=America/New_York:20120920T184000
+DTSTAMP:20120226T081803Z
+UID:319976@mlb.com
+CREATED:20110908T191559Z
+DESCRIPTION:San Diego at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_sdnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Senior Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Diego at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_sdnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T201000
+DTEND;TZID=America/New_York:20120921T231000
+DTSTAMP:20120226T081803Z
+UID:319979@mlb.com
+CREATED:20110908T191559Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T201000
+DTEND;TZID=America/New_York:20120922T231000
+DTSTAMP:20120226T081803Z
+UID:319994@mlb.com
+CREATED:20110908T191601Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T151000
+DTEND;TZID=America/New_York:20120923T181000
+DTSTAMP:20120226T081803Z
+UID:320009@mlb.com
+CREATED:20110908T191602Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120924T204000
+DTEND;TZID=America/New_York:20120924T234000
+DTSTAMP:20120226T081803Z
+UID:320024@mlb.com
+CREATED:20110908T191604Z
+DESCRIPTION:Arizona at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_24_arimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Arizona at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_24_arimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T221500
+DTEND;TZID=America/New_York:20120926T011500
+DTSTAMP:20120226T081803Z
+UID:320032@mlb.com
+CREATED:20110908T191605Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T221500
+DTEND;TZID=America/New_York:20120927T011500
+DTSTAMP:20120226T081803Z
+UID:320047@mlb.com
+CREATED:20110908T191607Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T154500
+DTEND;TZID=America/New_York:20120927T184500
+DTSTAMP:20120226T081803Z
+UID:320062@mlb.com
+CREATED:20110908T191608Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T214000
+DTEND;TZID=America/New_York:20120929T004000
+DTSTAMP:20120226T081803Z
+UID:320076@mlb.com
+CREATED:20110908T191610Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_chnmlb_arimlb_1\n\nPromotions/Giveaways: \n    College Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T201000
+DTEND;TZID=America/New_York:20120929T231000
+DTSTAMP:20120226T081803Z
+UID:320091@mlb.com
+CREATED:20110908T191611Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_chnmlb_arimlb_1\n\nPromotions/Giveaways: \n    D-backs Car Flag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T161000
+DTEND;TZID=America/New_York:20120930T191000
+DTSTAMP:20120226T081803Z
+UID:320106@mlb.com
+CREATED:20110908T191613Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_chnmlb_arimlb_1\n\nPromotions/Giveaways: \n    Shirts Off Our D-backs\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=09&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T214000
+DTEND;TZID=America/New_York:20121002T004000
+DTSTAMP:20120226T081803Z
+UID:320125@mlb.com
+CREATED:20110908T191615Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=10&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T214000
+DTEND;TZID=America/New_York:20121003T004000
+DTSTAMP:20120226T081803Z
+UID:320140@mlb.com
+CREATED:20110908T191617Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_colmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=10&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_colmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T214000
+DTEND;TZID=America/New_York:20121004T004000
+DTSTAMP:20120226T081803Z
+UID:320155@mlb.com
+CREATED:20110908T191619Z
+DESCRIPTION:Colorado at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_colmlb_arimlb_1\n\nPromotions/Giveaways: \n    Fandemonium\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=ari&m=10&y=2012\n\nLocal TV: FS-A
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Colorado at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_colmlb_arimlb_1
+END:VEVENT
+END:VCALENDAR

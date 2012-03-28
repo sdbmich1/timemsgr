@@ -1,12 +1,7 @@
 require 'ics'
 require 'open-uri'
 class ImportICSFeed
-  
-  # get channel to map event content
-  def get_channel(str)
-    LocalChannel.get_channel_by_name(str)
-  end
-  
+    
   # read given file with list of ics filenames 
   def read_feeds(fname)
     File.foreach(fname) {|line| process_feed(line.split(',')[0], line.split(',')[1], line.split(',')[2])}
@@ -20,7 +15,7 @@ class ImportICSFeed
   
   # process each calendar event
   def process_event(cal, channel, offset)    
-    cid = get_channel channel    # get correct channels for events
+    cid = LocalChannel.get_channel_by_name channel    # get correct channels for events
     cid.map {|ch| add_event(cal, ch.channelID, offset)} #add event to system
   end
   

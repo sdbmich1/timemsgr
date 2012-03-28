@@ -1,5 +1,5 @@
 class InterestsController < ApplicationController
-  before_filter :load_data	
+  before_filter :authenticate_user!, :load_data	
   layout :page_layout
 	respond_to :html, :json, :xml, :js
   
@@ -10,8 +10,10 @@ class InterestsController < ApplicationController
 	
 	def create
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {})
-    add_credits if @user.update_attributes(params[:user])
-    respond_with(@user, :location => new_affiliation_path) 
+    if @user.update_attributes(params[:user])
+      add_credits; @user.add_initial_subscriptions
+    end
+    respond_with(@user, :location => new_subscription_path) 
 	end
 	
 	def edit

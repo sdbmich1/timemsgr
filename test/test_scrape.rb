@@ -87,33 +87,6 @@ end
     end 
   end 
   
-  def select_channel(title, cnty, loc)
-    channel = []
-    [['Sculpture|Art|Painting|Exhibit|Gallery|Artist|Artwork|Museum|Curated|Arts|Crafts', 'Galleries'], 
-     ['Preschool|Teen|Children|Kids|Kindergarten|Elementary', 'Youth'], ['Elementary','Elementary'],
-     ['Dance|Concert|Band|Performance|Music|Ball|Jazz|Salsa|DJ|Ballroom|CD|Blues|Reggae|Rehearsal|Rock|Pop|Noise|Country Music|Quartet|Trio|Quintet', 'Music Scene'],  
-     ['Parade', 'Parade'], ['Comedy|Funny|Comedian|Improv|Laugh', 'Comedy'],
-     ['Culinary|Food|Wine|Cooking|Taste|Brunch|Dinner|Chocolate|Chef|Kitchen|Farmers|Barbeque|Tasting|Lunch|Dining|Coffee|Dine|Potluck|Winery|Feed|Feast|Beer', 'Food'],  
-     ['Jazz', 'Jazz'], ['Blues', 'Blues'], ['Bluegrass|Country Music|Country', 'Country Music'], ['Private School|High School', 'High School'], 
-     ['Fiesta|Festival|Fair|Show|Celebration|Fireworks|Exhibition|Flea|Fest', 'Festival'],
-     ['Volunteer|Charity|Fundraiser|Gala|Benefit|Luncheon|Fundraising', 'Charity'], 
-     ['Speaker|Lecture|Discussion|Talk|Author|Panel|Book|Reading|Literature|Stories', 'Speaker'],
-     ['Screening|Film|Movie|Cinema|3D', 'Film'], ['Science|History','Science'],
-     ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist', 'Church'],
-     ['R&B|Hip-Hop|Soul','Hip-Hop'], ['Rock|Pop', 'Rock'], ['Medical|Health|Medicine','Health'],
-     ['Book|Reading|Literature|Stories|Author', 'Book'],['Senior', 'Senior'],
-     ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto', 'Classical'],
-     ['Sale|Offer','Promotions'],     
-     ['Opera|Choir|Theater|Symphony|Ballet|Concerto|Theatre|Play|Choregraphy|Dance|Orchestra|Piano|Violin|Cello|Musical|Recital', 'Performing Arts'],
-     ['Zoo|Animals|Aquarium', 'Zoo'], ['Park', 'Parks'], 
-     ['Meeting|Conference', 'Meeting']].each do |str|
-      if !(title.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil? 
-        channel << get_channel(str[1],cnty, loc) 
-      end
-    end 
-    channel << get_channel('Consolidated: All', cnty, loc) unless channel   
-  end
-  
   def select_college_channel(title, school, descr)
     channel = []
     [['Opera|Choir|Theater|Symphony|Dance|Ballet|Concerto|Theatre', 'Performing Arts'],  
@@ -178,8 +151,8 @@ end
       county = chk_geocode(lat, lng)
             
       # find correct channel and location
-      cid = select_channel(etitle, county, locale)
-      cid.map {|channel| p "Channel: #{channel[0].channelID}" }
+      cid = LocalChannel.select_channel(etitle, county, locale).flatten 1
+      cid.map {|channel| p "Channel: #{channel.channelID}" }
 
       # add event to calendar
 #      cid.map {|channel| add_event(doc, n, sid, etitle[0..199], sdt, enddt, channel[0].channelID, url, offset)}

@@ -38,8 +38,38 @@ namespace :db do
   task :notice_types => :environment do
     add_notice_type
   end
+  
+  task :load_latlng => :environment do
+    add_lat_lng
+  end
+  
+  task :update_channel_interests => :environment do
+    set_channel_interests
+  end  
  
-end  
+end 
+
+def add_lat_lng
+  include Schedule
+  
+  Location.all.each do |loc|
+    addr = Schedule::get_offset [loc.city, loc.state].join(', ')
+    loc.lat, loc.lng = addr[:lat], addr[:lng] if addr
+    loc.save
+  end
+end 
+
+def set_channel_interests
+  ChannelInterest.delete_all 
+
+  # find correct channel based on location
+  LocalChannel.all.each do |loc|
+    category = Category.select_category(loc.channel_name).flatten 2 
+    category.map { |cat| cat.interests.map {|interest| ChannelInterest.find_or_create_by_channel_id_and_interest_id(:channel_id=>loc.id, :interest_id=>interest.id, :category_id=>cat.id)} if cat.interests} if category   
+#    category.interests.map {|interest| ChannelInterest.create(:channel_id=>loc.id, :interest_id=>interest.id, :category_id=>category.id)}
+  end
+
+end
  
 def build_profiles
   User.all.each do |u|

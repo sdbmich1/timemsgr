@@ -15,4 +15,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def passthru
     render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
   end
+  
+  def setup
+    request.env['omniauth.strategy'].options[:display] = mobile_device? ? "touch" : "page"
+    render :text => "Setup complete.", :status => 404    
+  end
 end

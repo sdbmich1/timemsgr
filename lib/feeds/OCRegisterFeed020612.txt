@@ -1,0 +1,14 @@
+http://events.ocregister.com/search?cat=1&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=3&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=41&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=2&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=4&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=1110&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=5&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=6&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=7&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=11&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=8&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=1049&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=9&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=
+http://events.ocregister.com/search?cat=10&catex=1049&new=n&rss=1&srad=85&srss=100&st=event&svt=text&swhat=&swhen=&swhere=

@@ -1,11 +1,10 @@
 class SubscriptionsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create]   
-#  respond_to :html, :json, :xml, :js
+  before_filter :authenticate_user! #, :except => [:create]   
   layout :page_layout
   
   def create
-    @channel = Channel.find(params[:channel_id])
-    @user = User.find(params[:user_id])
+    @channel = LocalChannel.find(params[:channel_id])
+    @user ||= User.find(params[:user_id])
     @subscription = Subscription.new_member(@user, @channel)
     if @subscription.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Subscription')}" 
@@ -18,7 +17,7 @@ class SubscriptionsController < ApplicationController
   end
   
   def update
-    @channel = Channel.find(params[:channel_id])
+    @channel = LocalChannel.find(params[:channel_id])
     @subscription = Subscription.unsubscribe(params[:user_id], @channel.channelID)
     if @subscription.save
       redirect_to events_url 
@@ -35,9 +34,15 @@ class SubscriptionsController < ApplicationController
     @subscriptions = @user.subscriptions.paginate(:page => params[:page], :per_page => 15)
   end
   
+  def new
+    @subscription = @user.subscriptions.build
+    @subscriptions = @user.subscriptions.paginate(:page => params[:page], :per_page => 15)  
+    @credits, @meters = get_credits(current_user.id), get_meter_info 
+  end
+  
   private
   
   def page_layout 
-    mobile_device? ? "application" : "events"
+    mobile_device? || action_name == 'new' ? "application" : "events"
   end    
 end

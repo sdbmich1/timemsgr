@@ -1,0 +1,24 @@
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Register' } %>
+
+<% content_for :subhead do %>
+  <%= render :partial => 'shared/breadcrumb', :locals => { :breadcrumb => 2 } %>
+<% end %>
+
+<% content_for :content do %>
+  <div class="subscription">
+	<h3 class="strong">Select Your Channels</h3>
+	<p class='descr-width'>Based on your information we found the following channels for you. As you add more channels, your list of schedule
+		opportunities will get better and better.</p>
+
+	<%= form_for @subscription, :url => local_subscriptions_path(@subscription) do |f| %>
+ 		<div id="event_errors" style="display:none" class="error"></div>
+		<%= render "shared/error_messages", :target => @subscription %>  
+		<%= render :partial => 'shared/subscription', :collection => @subscriptions, :as => :subscription %><br />
+		<%= f.submit 'Continue >>', :class => set_class %><br />
+	<% end %>
+  </div>
+<% end %>
+
+<% content_for :right_sidebar do %>
+	<%= render 'shared/right_gauge_sidebar' %>
+<% end %>

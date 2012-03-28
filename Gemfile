@@ -81,6 +81,7 @@ gem 'timezone', "~> 0.1.4"
 
 # add geokit
 gem 'geokit', "~> 1.6.5"
+gem "geokit-rails3", "~> 0.1.5"
 
 group :development, :test do
 #  gem 'capybara'

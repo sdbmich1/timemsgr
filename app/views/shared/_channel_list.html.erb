@@ -32,5 +32,5 @@
 	<%= hidden_field_tag 'interest_id', @interest %>
 <% end %>
 <div class="nav-right">
-  <%= will_paginate @channels %>
+  <%= will_paginate @channels, :param_name => 'channel_page' %>
 </div>

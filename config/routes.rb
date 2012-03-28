@@ -7,6 +7,7 @@ Timemsgr::Application.routes.draw do
   
   devise_scope :user do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+    get '/users/auth/:provider/setup' => 'users/omniauth_callbacks#setup'
   end 
     
   resources :channels do
@@ -25,9 +26,11 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
+  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
     :search_users
-  
+    
+  resources :local_subscriptions, :only => [:create, :new]
+
   resources :events do 
     member do
       get 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
@@ -87,6 +90,7 @@ Timemsgr::Application.routes.draw do
   match '/notify', :to =>  "events#notify"
   match '/events/notice', :to =>  "events#notice"
   match '/select', :to =>  "channels#select"
+  match '/list', :to =>  "categories#list"
     
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"

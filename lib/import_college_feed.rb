@@ -3,28 +3,7 @@ require "nokogiri"
 require 'json'
 include ResetDate
 class ImportCollegeFeed
-  
-  # get channel to map event content
-  def get_college_channel(school)
-    LocalChannel.get_channel_by_name school
-  end
-  
-  # use regex to match key words in title & description to find right channels  
-  def select_college_channel(title, school, descr)
-    channel = []
-    [['Opera|Choir|Theater|Symphony|Dance|Ballet|Concerto|Theatre', 'Performing Arts'],  
-     ['Speaker|Lecture|Discussion|Talk|Author|Panel', 'Speaker'],
-     ['Sculpture|Crafts|Art|Painting|Exhibit|Gallery', 'Art Activities'],  
-     ['Science|Natural History|Technology|Physics', 'Science'],
-     ['Screening|Film|Movie|Cinema', 'Film'], 
-     ['Concert|Drama|Comedy','Lively']].each do |str|
-       if !(title.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil? || !(descr.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil?
-         channel << get_college_channel([school, str[1]].join('%')) 
-       end      
-     end
-    channel << get_college_channel([school, "Consolidated"].join('%'))   
-  end  
-  
+    
   # parse xml feeds from given url
   def read_stanford_feed(feed_url, school, offset)
     doc = Nokogiri::XML(open(feed_url))
@@ -59,7 +38,7 @@ class ImportCollegeFeed
       guid = gstr[gstr.size-1]
                 
       # find correct channel and location
-      cid = select_college_channel(etitle, school, details)
+      cid = LocalChannel.select_college_channel(etitle, school, details)
 
       # add event to calendar
       cid.map {|channel| add_college_event(url[0..254], etitle, details, pubdt, sdt, start_time, edt, channel[0].channelID, offset, loc, guid)}
@@ -99,7 +78,7 @@ class ImportCollegeFeed
       stime = Time.parse(doc.css(".row-text")[n*4].text + st) if (st =~ /TBA|All|W|L/i).nil? && sdt >= Date.today
       
       # find correct channel and location
-      cid = get_college_channel([school, sport].join(' '))
+      cid = LocalChannel.get_channel_by_name([school, sport].join(' '))
      
       # add event to calendar
       cid.map {|channel| add_scraped_event(feed_url[0..254], etitle, sport, Date.today, sdt, stime, edt, channel.channelID, offset, loc)}      

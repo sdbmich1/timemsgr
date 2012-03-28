@@ -1,0 +1,2784 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 Cincinnati Reds Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120303T150500
+DTEND;TZID=America/New_York:20120303T180500
+DTSTAMP:20120226T083947Z
+UID:332100@mlb.com
+CREATED:20111130T212812Z
+DESCRIPTION:Spring Training: Cleveland at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_clemlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Cleveland at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_clemlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T150500
+DTEND;TZID=America/New_York:20120304T180500
+DTSTAMP:20120226T083947Z
+UID:332109@mlb.com
+CREATED:20111130T212814Z
+DESCRIPTION:Spring Training: Cincinnati at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_cinmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Cincinnati at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_cinmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T150500
+DTEND;TZID=America/New_York:20120305T180500
+DTSTAMP:20120226T083947Z
+UID:332125@mlb.com
+CREATED:20111130T212816Z
+DESCRIPTION:Spring Training: Cleveland at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_clemlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLB.TV, FS-O, MLBN (delay)\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Cleveland at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_clemlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T150500
+DTEND;TZID=America/New_York:20120306T180500
+DTSTAMP:20120226T083947Z
+UID:332138@mlb.com
+CREATED:20111130T212818Z
+DESCRIPTION:Spring Training: Cincinnati at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_cinmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Cincinnati at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_cinmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T150500
+DTEND;TZID=America/New_York:20120307T180500
+DTSTAMP:20120226T083947Z
+UID:332162@mlb.com
+CREATED:20111130T212822Z
+DESCRIPTION:Spring Training: San Diego at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_sdnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: San Diego at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_sdnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120308T150500
+DTEND;TZID=America/New_York:20120308T180500
+DTSTAMP:20120226T083947Z
+UID:332172@mlb.com
+CREATED:20111130T212823Z
+DESCRIPTION:Spring Training: Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T083947Z
+UID:332190@mlb.com
+CREATED:20111130T212826Z
+DESCRIPTION:Spring Training: Kansas City at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_kcamlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Kansas City at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_kcamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T083947Z
+UID:332188@mlb.com
+CREATED:20111130T212825Z
+DESCRIPTION:Spring Training: Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T083947Z
+UID:332203@mlb.com
+CREATED:20111130T212827Z
+DESCRIPTION:Spring Training: Cincinnati at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_cinmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Phoenix Municipal Stadium, Phoenix
+SUMMARY:Spring Training: Cincinnati at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_cinmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T160500
+DTEND;TZID=America/New_York:20120311T190500
+DTSTAMP:20120226T083947Z
+UID:332218@mlb.com
+CREATED:20111130T212830Z
+DESCRIPTION:Spring Training: LA Angels at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_anamlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120123T165754Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: LA Angels at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_anamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120312T160500
+DTEND;TZID=America/New_York:20120312T190500
+DTSTAMP:20120226T083947Z
+UID:332240@mlb.com
+CREATED:20111130T212833Z
+DESCRIPTION:Spring Training: Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T160500
+DTEND;TZID=America/New_York:20120313T190500
+DTSTAMP:20120226T083947Z
+UID:332257@mlb.com
+CREATED:20111130T212835Z
+DESCRIPTION:Spring Training: Cincinnati at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_cinmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Cincinnati at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_cinmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T220500
+DTEND;TZID=America/New_York:20120315T010500
+DTSTAMP:20120226T083947Z
+UID:332273@mlb.com
+CREATED:20111130T212837Z
+DESCRIPTION:Spring Training: LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_lanmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T160500
+DTEND;TZID=America/New_York:20120314T190500
+DTSTAMP:20120226T083947Z
+UID:332281@mlb.com
+CREATED:20111130T212839Z
+DESCRIPTION:Spring Training: San Diego at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_sdnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: San Diego at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_sdnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T160500
+DTEND;TZID=America/New_York:20120315T190500
+DTSTAMP:20120226T083947Z
+UID:332288@mlb.com
+CREATED:20111130T212840Z
+DESCRIPTION:Spring Training: Cincinnati at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_cinmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20111206T181504Z
+LOCATION:Tempe Diablo Stadium, Tempe
+SUMMARY:Spring Training: Cincinnati at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_cinmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T220500
+DTEND;TZID=America/New_York:20120317T010500
+DTSTAMP:20120226T083947Z
+UID:332303@mlb.com
+CREATED:20111130T212842Z
+DESCRIPTION:Spring Training: Colorado at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_colmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120123T165837Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Colorado at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_colmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T160500
+DTEND;TZID=America/New_York:20120317T190500
+DTSTAMP:20120226T083947Z
+UID:332320@mlb.com
+CREATED:20111130T212844Z
+DESCRIPTION:Spring Training: Cincinnati at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_cinmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120209T202722Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Cincinnati at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_cinmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T083947Z
+UID:332336@mlb.com
+CREATED:20111130T212847Z
+DESCRIPTION:Spring Training: Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120319T160500
+DTEND;TZID=America/New_York:20120319T190500
+DTSTAMP:20120226T083947Z
+UID:332355@mlb.com
+CREATED:20111130T212849Z
+DESCRIPTION:Spring Training: Cincinnati at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_cinmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Cincinnati at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_cinmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T160500
+DTEND;TZID=America/New_York:20120320T190500
+DTSTAMP:20120226T083947Z
+UID:332369@mlb.com
+CREATED:20111130T212851Z
+DESCRIPTION:Spring Training: Seattle at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_seamlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Seattle at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_seamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120322T220500
+DTEND;TZID=America/New_York:20120323T010500
+DTSTAMP:20120226T083947Z
+UID:332398@mlb.com
+CREATED:20111130T212855Z
+DESCRIPTION:Spring Training: Texas at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_texmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111213T230915Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Texas at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_texmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T220500
+DTEND;TZID=America/New_York:20120324T010500
+DTSTAMP:20120226T083947Z
+UID:332405@mlb.com
+CREATED:20111130T212856Z
+DESCRIPTION:Spring Training: Cincinnati at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_cinmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Cincinnati at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_cinmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T083947Z
+UID:332419@mlb.com
+CREATED:20111130T212858Z
+DESCRIPTION:Spring Training: Cincinnati at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_cinmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Cincinnati at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_cinmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T083947Z
+UID:332427@mlb.com
+CREATED:20111130T212900Z
+DESCRIPTION:Spring Training: San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_sfnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T161000
+DTEND;TZID=America/New_York:20120325T191000
+DTSTAMP:20120226T083947Z
+UID:332435@mlb.com
+CREATED:20111130T212900Z
+DESCRIPTION:Spring Training: Cincinnati at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_cinmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Cincinnati at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_cinmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T210500
+DTEND;TZID=America/New_York:20120327T000500
+DTSTAMP:20120226T083947Z
+UID:332451@mlb.com
+CREATED:20111130T212902Z
+DESCRIPTION:Spring Training: Cincinnati at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_cinmlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLBN\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Cincinnati at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_cinmlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T160500
+DTEND;TZID=America/New_York:20120327T190500
+DTSTAMP:20120226T083947Z
+UID:332462@mlb.com
+CREATED:20111130T212904Z
+DESCRIPTION:Spring Training: Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T160500
+DTEND;TZID=America/New_York:20120328T190500
+DTSTAMP:20120226T083947Z
+UID:332474@mlb.com
+CREATED:20111130T212905Z
+DESCRIPTION:Spring Training: LA Angels at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_anamlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: LA Angels at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_anamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T160500
+DTEND;TZID=America/New_York:20120329T190500
+DTSTAMP:20120226T083947Z
+UID:332492@mlb.com
+CREATED:20111130T212907Z
+DESCRIPTION:Spring Training: Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T160500
+DTEND;TZID=America/New_York:20120330T190500
+DTSTAMP:20120226T083947Z
+UID:332507@mlb.com
+CREATED:20111130T212909Z
+DESCRIPTION:Spring Training: Cleveland at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_clemlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Cleveland at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_clemlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T180500
+DTEND;TZID=America/New_York:20120331T210500
+DTSTAMP:20120226T083947Z
+UID:332523@mlb.com
+CREATED:20111130T212911Z
+DESCRIPTION:Spring Training: Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T160500
+DTEND;TZID=America/New_York:20120401T190500
+DTSTAMP:20120226T083947Z
+UID:332536@mlb.com
+CREATED:20111130T212912Z
+DESCRIPTION:Spring Training: Chi White Sox at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_chamlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n\nLocal TV: MLB.TV, MLBN\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Chi White Sox at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_chamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T150500
+DTEND;TZID=America/New_York:20120402T180500
+DTSTAMP:20120226T083947Z
+UID:332551@mlb.com
+CREATED:20111130T212914Z
+DESCRIPTION:Spring Training: Cincinnati at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_cinmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Cincinnati at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_cinmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T190000
+DTEND;TZID=America/New_York:20120403T220000
+DTSTAMP:20120226T083947Z
+UID:336444@mlb.com
+CREATED:20120126T151848Z
+DESCRIPTION:Exhibition Game: Reds Futures at Cincinnati\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n\nLocal Radio: WLW 700
+LAST-MODIFIED:19700101T000140Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Exhibition Game: Reds Futures at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_cifmin_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120405T160500
+DTEND;TZID=America/New_York:20120405T190500
+DTSTAMP:20120226T083947Z
+UID:317742@mlb.com
+CREATED:20110908T191145Z
+DESCRIPTION:Miami at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_miamlb_cinmlb_1\n\nPromotions/Giveaways: \n    Opening Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120126T201151Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Miami at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_miamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T191000
+DTEND;TZID=America/New_York:20120407T221000
+DTSTAMP:20120226T083947Z
+UID:317754@mlb.com
+CREATED:20110908T191146Z
+DESCRIPTION:Miami at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_miamlb_cinmlb_1\n\nPromotions/Giveaways: \n    Opening Night\n    2012 Team Calendar\n    Opening Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Miami at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_miamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T131000
+DTEND;TZID=America/New_York:20120408T161000
+DTSTAMP:20120226T083947Z
+UID:317769@mlb.com
+CREATED:20110908T191148Z
+DESCRIPTION:Miami at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_miamlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Easter Tin\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Miami at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_miamlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120409T191000
+DTEND;TZID=America/New_York:20120409T221000
+DTSTAMP:20120226T083947Z
+UID:317790@mlb.com
+CREATED:20110908T191151Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    2012 Magnetic Schedule/Car Magnet\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120410T191000
+DTEND;TZID=America/New_York:20120410T221000
+DTSTAMP:20120226T083947Z
+UID:317801@mlb.com
+CREATED:20110908T191153Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    2012 Magnetic Schedule/Car Magnet\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T123500
+DTEND;TZID=America/New_York:20120411T153500
+DTSTAMP:20120226T083947Z
+UID:317816@mlb.com
+CREATED:20110908T191155Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    2012 Magnetic Schedule/Car Magnet\n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T130500
+DTEND;TZID=America/New_York:20120412T160500
+DTSTAMP:20120226T083947Z
+UID:317821@mlb.com
+CREATED:20110908T191155Z
+DESCRIPTION:Cincinnati at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_cinmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120126T201150Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Cincinnati at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_cinmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T190500
+DTEND;TZID=America/New_York:20120413T220500
+DTSTAMP:20120226T083947Z
+UID:317832@mlb.com
+CREATED:20110908T191157Z
+DESCRIPTION:Cincinnati at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_cinmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Cincinnati at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_cinmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T160500
+DTEND;TZID=America/New_York:20120414T190500
+DTSTAMP:20120226T083947Z
+UID:317847@mlb.com
+CREATED:20110908T191159Z
+DESCRIPTION:Cincinnati at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_cinmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Cincinnati at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_cinmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T133500
+DTEND;TZID=America/New_York:20120415T163500
+DTSTAMP:20120226T083947Z
+UID:317862@mlb.com
+CREATED:20110908T191201Z
+DESCRIPTION:Cincinnati at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_cinmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Cincinnati at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_cinmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T201500
+DTEND;TZID=America/New_York:20120417T231500
+DTSTAMP:20120226T083947Z
+UID:317885@mlb.com
+CREATED:20110908T191203Z
+DESCRIPTION:Cincinnati at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_cinmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Cincinnati at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_cinmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T201500
+DTEND;TZID=America/New_York:20120418T231500
+DTSTAMP:20120226T083947Z
+UID:317900@mlb.com
+CREATED:20110908T191207Z
+DESCRIPTION:Cincinnati at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_cinmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Cincinnati at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_cinmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120419T134500
+DTEND;TZID=America/New_York:20120419T164500
+DTSTAMP:20120226T083947Z
+UID:317916@mlb.com
+CREATED:20110908T191208Z
+DESCRIPTION:Cincinnati at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_cinmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Cincinnati at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_cinmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T142000
+DTEND;TZID=America/New_York:20120420T172000
+DTSTAMP:20120226T083947Z
+UID:317928@mlb.com
+CREATED:20110908T191210Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T130500
+DTEND;TZID=America/New_York:20120421T160500
+DTSTAMP:20120226T083947Z
+UID:317943@mlb.com
+CREATED:20110908T191212Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T142000
+DTEND;TZID=America/New_York:20120422T172000
+DTSTAMP:20120226T083947Z
+UID:317958@mlb.com
+CREATED:20110908T191214Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T191000
+DTEND;TZID=America/New_York:20120424T221000
+DTSTAMP:20120226T083947Z
+UID:317991@mlb.com
+CREATED:20110908T191217Z
+DESCRIPTION:San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_sfnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Bark in the Park #1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T191000
+DTEND;TZID=America/New_York:20120425T221000
+DTSTAMP:20120226T083947Z
+UID:318006@mlb.com
+CREATED:20110908T191219Z
+DESCRIPTION:San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_sfnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120426T123500
+DTEND;TZID=America/New_York:20120426T153500
+DTSTAMP:20120226T083947Z
+UID:318015@mlb.com
+CREATED:20110908T191220Z
+DESCRIPTION:San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_26_sfnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_26_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T191000
+DTEND;TZID=America/New_York:20120427T221000
+DTSTAMP:20120226T083947Z
+UID:318023@mlb.com
+CREATED:20110908T191221Z
+DESCRIPTION:Houston at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_houmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Houston at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_houmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T161000
+DTEND;TZID=America/New_York:20120428T191000
+DTSTAMP:20120226T083947Z
+UID:318038@mlb.com
+CREATED:20110908T191222Z
+DESCRIPTION:Houston at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_houmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Reds Fleece Blanket\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Houston at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_houmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T131000
+DTEND;TZID=America/New_York:20120429T161000
+DTSTAMP:20120226T083947Z
+UID:318053@mlb.com
+CREATED:20110908T191224Z
+DESCRIPTION:Houston at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_houmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Team Baseball Card Set\n    Meijer Family Days\n    Run the Bases Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=04&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Houston at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_houmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T191000
+DTEND;TZID=America/New_York:20120501T221000
+DTSTAMP:20120226T083947Z
+UID:318077@mlb.com
+CREATED:20110908T191227Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T191000
+DTEND;TZID=America/New_York:20120502T221000
+DTSTAMP:20120226T083947Z
+UID:318092@mlb.com
+CREATED:20110908T191229Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120503T123500
+DTEND;TZID=America/New_York:20120503T153500
+DTSTAMP:20120226T083947Z
+UID:318106@mlb.com
+CREATED:20110908T191230Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_chnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T190500
+DTEND;TZID=America/New_York:20120504T220500
+DTSTAMP:20120226T083947Z
+UID:318118@mlb.com
+CREATED:20110908T191232Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T190500
+DTEND;TZID=America/New_York:20120505T220500
+DTSTAMP:20120226T083947Z
+UID:318133@mlb.com
+CREATED:20110908T191233Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T133500
+DTEND;TZID=America/New_York:20120506T163500
+DTSTAMP:20120226T083947Z
+UID:318148@mlb.com
+CREATED:20110908T191235Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T201000
+DTEND;TZID=America/New_York:20120507T231000
+DTSTAMP:20120226T083947Z
+UID:318163@mlb.com
+CREATED:20110908T191237Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T201000
+DTEND;TZID=America/New_York:20120508T231000
+DTSTAMP:20120226T083947Z
+UID:318175@mlb.com
+CREATED:20110908T191238Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T131000
+DTEND;TZID=America/New_York:20120509T161000
+DTSTAMP:20120226T083947Z
+UID:318190@mlb.com
+CREATED:20110908T191240Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T191000
+DTEND;TZID=America/New_York:20120511T221000
+DTSTAMP:20120226T083947Z
+UID:318221@mlb.com
+CREATED:20110908T191244Z
+DESCRIPTION:Washington at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_wasmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n    Girls Night Out\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Washington at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_wasmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T191000
+DTEND;TZID=America/New_York:20120512T221000
+DTSTAMP:20120226T083947Z
+UID:318236@mlb.com
+CREATED:20110908T191245Z
+DESCRIPTION:Washington at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_wasmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Joey Votto Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Washington at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_wasmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T131000
+DTEND;TZID=America/New_York:20120513T161000
+DTSTAMP:20120226T083947Z
+UID:318251@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:Washington at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_wasmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Giveaway\n    Kids Jay Bruce Cereal Bowl and Spoon Set\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Washington at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_wasmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T191000
+DTEND;TZID=America/New_York:20120514T221000
+DTSTAMP:20120226T083947Z
+UID:318254@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:Cincinnati at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_cinmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Cincinnati at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_cinmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T191000
+DTEND;TZID=America/New_York:20120515T221000
+DTSTAMP:20120226T083947Z
+UID:318269@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Cincinnati at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_cinmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Cincinnati at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_cinmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T191000
+DTEND;TZID=America/New_York:20120516T221000
+DTSTAMP:20120226T083947Z
+UID:318286@mlb.com
+CREATED:20110908T191251Z
+DESCRIPTION:Cincinnati at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_cinmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Cincinnati at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_cinmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T131000
+DTEND;TZID=America/New_York:20120517T161000
+DTSTAMP:20120226T083947Z
+UID:318301@mlb.com
+CREATED:20110908T191252Z
+DESCRIPTION:Cincinnati at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_cinmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Cincinnati at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_cinmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T190500
+DTEND;TZID=America/New_York:20120518T220500
+DTSTAMP:20120226T083947Z
+UID:318318@mlb.com
+CREATED:20110908T191254Z
+DESCRIPTION:Cincinnati at NY Yankees\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_cinmlb_nyamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Yankee Stadium, Bronx
+SUMMARY:Cincinnati at NY Yankees
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_cinmlb_nyamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T130500
+DTEND;TZID=America/New_York:20120519T160500
+DTSTAMP:20120226T083947Z
+UID:318333@mlb.com
+CREATED:20110908T191256Z
+DESCRIPTION:Cincinnati at NY Yankees\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_cinmlb_nyamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Yankee Stadium, Bronx
+SUMMARY:Cincinnati at NY Yankees
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_cinmlb_nyamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T130500
+DTEND;TZID=America/New_York:20120520T160500
+DTSTAMP:20120226T083947Z
+UID:318348@mlb.com
+CREATED:20110908T191257Z
+DESCRIPTION:Cincinnati at NY Yankees\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_cinmlb_nyamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Yankee Stadium, Bronx
+SUMMARY:Cincinnati at NY Yankees
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_cinmlb_nyamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T191000
+DTEND;TZID=America/New_York:20120521T221000
+DTSTAMP:20120226T083947Z
+UID:318358@mlb.com
+CREATED:20110908T191258Z
+DESCRIPTION:Atlanta at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_atlmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Atlanta at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_atlmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T191000
+DTEND;TZID=America/New_York:20120522T221000
+DTSTAMP:20120226T083947Z
+UID:318371@mlb.com
+CREATED:20110908T191300Z
+DESCRIPTION:Atlanta at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_atlmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Atlanta at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_atlmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T191000
+DTEND;TZID=America/New_York:20120523T221000
+DTSTAMP:20120226T083947Z
+UID:318386@mlb.com
+CREATED:20110908T191301Z
+DESCRIPTION:Atlanta at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_atlmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Atlanta at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_atlmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120524T191000
+DTEND;TZID=America/New_York:20120524T221000
+DTSTAMP:20120226T083947Z
+UID:318401@mlb.com
+CREATED:20110908T191303Z
+DESCRIPTION:Atlanta at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_24_atlmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Atlanta at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_24_atlmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T191000
+DTEND;TZID=America/New_York:20120525T221000
+DTSTAMP:20120226T083947Z
+UID:318410@mlb.com
+CREATED:20110908T191304Z
+DESCRIPTION:Colorado at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_colmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Colorado at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_colmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T191500
+DTEND;TZID=America/New_York:20120526T221500
+DTSTAMP:20120226T083947Z
+UID:318425@mlb.com
+CREATED:20110908T191306Z
+DESCRIPTION:Colorado at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_colmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Scott Rolen Rawlings Gold Glove Award Replica Trophy\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Colorado at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_colmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T131000
+DTEND;TZID=America/New_York:20120527T161000
+DTSTAMP:20120226T083947Z
+UID:318440@mlb.com
+CREATED:20110908T191307Z
+DESCRIPTION:Colorado at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_colmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Binoculars\n    Meijer Family Days\n    Run the Bases Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Colorado at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_colmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T133500
+DTEND;TZID=America/New_York:20120528T163500
+DTSTAMP:20120226T083947Z
+UID:318455@mlb.com
+CREATED:20110908T191309Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T190500
+DTEND;TZID=America/New_York:20120529T220500
+DTSTAMP:20120226T083947Z
+UID:318470@mlb.com
+CREATED:20110908T191310Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T190500
+DTEND;TZID=America/New_York:20120530T220500
+DTSTAMP:20120226T083947Z
+UID:318485@mlb.com
+CREATED:20110908T191313Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=05&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T200500
+DTEND;TZID=America/New_York:20120601T230500
+DTSTAMP:20120226T083947Z
+UID:318505@mlb.com
+CREATED:20110908T191315Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T191500
+DTEND;TZID=America/New_York:20120602T221500
+DTSTAMP:20120226T083947Z
+UID:318520@mlb.com
+CREATED:20110908T191317Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120113T045600Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T140500
+DTEND;TZID=America/New_York:20120603T170500
+DTSTAMP:20120226T083947Z
+UID:318535@mlb.com
+CREATED:20110908T191319Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T191000
+DTEND;TZID=America/New_York:20120605T221000
+DTSTAMP:20120226T083947Z
+UID:318558@mlb.com
+CREATED:20110908T191321Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_pitmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T191000
+DTEND;TZID=America/New_York:20120606T221000
+DTSTAMP:20120226T083947Z
+UID:318573@mlb.com
+CREATED:20110908T191323Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_pitmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120607T191000
+DTEND;TZID=America/New_York:20120607T221000
+DTSTAMP:20120226T083947Z
+UID:318587@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_pitmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T191000
+DTEND;TZID=America/New_York:20120608T221000
+DTSTAMP:20120226T083947Z
+UID:318596@mlb.com
+CREATED:20110908T191325Z
+DESCRIPTION:Detroit at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_detmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Detroit at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_detmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T161000
+DTEND;TZID=America/New_York:20120609T191000
+DTSTAMP:20120226T083947Z
+UID:318611@mlb.com
+CREATED:20110908T191327Z
+DESCRIPTION:Detroit at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_detmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Reds Grilling Set\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Detroit at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_detmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T131000
+DTEND;TZID=America/New_York:20120610T161000
+DTSTAMP:20120226T083947Z
+UID:318626@mlb.com
+CREATED:20110908T191328Z
+DESCRIPTION:Detroit at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_detmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Die-Cast Toy Car\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Detroit at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_detmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T191000
+DTEND;TZID=America/New_York:20120612T221000
+DTSTAMP:20120226T083947Z
+UID:318646@mlb.com
+CREATED:20110908T191331Z
+DESCRIPTION:Cleveland at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_clemlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Cleveland at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_clemlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T191000
+DTEND;TZID=America/New_York:20120613T221000
+DTSTAMP:20120226T083947Z
+UID:318661@mlb.com
+CREATED:20110908T191332Z
+DESCRIPTION:Cleveland at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_clemlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Cleveland at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_clemlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120614T123500
+DTEND;TZID=America/New_York:20120614T153500
+DTSTAMP:20120226T083947Z
+UID:318674@mlb.com
+CREATED:20110908T191333Z
+DESCRIPTION:Cleveland at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_clemlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Cleveland at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_clemlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T191000
+DTEND;TZID=America/New_York:20120615T221000
+DTSTAMP:20120226T083947Z
+UID:318687@mlb.com
+CREATED:20110908T191335Z
+DESCRIPTION:Cincinnati at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_cinmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Cincinnati at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_cinmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T191500
+DTEND;TZID=America/New_York:20120616T221500
+DTSTAMP:20120226T083947Z
+UID:318702@mlb.com
+CREATED:20110908T191337Z
+DESCRIPTION:Cincinnati at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_cinmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Cincinnati at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_cinmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T131000
+DTEND;TZID=America/New_York:20120617T161000
+DTSTAMP:20120226T083947Z
+UID:318717@mlb.com
+CREATED:20110908T191338Z
+DESCRIPTION:Cincinnati at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_cinmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Cincinnati at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_cinmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120618T190500
+DTEND;TZID=America/New_York:20120618T220500
+DTSTAMP:20120226T083947Z
+UID:318731@mlb.com
+CREATED:20110908T191340Z
+DESCRIPTION:Cincinnati at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_cinmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120126T150057Z
+LOCATION:Progressive Field, Cleveland
+SUMMARY:Cincinnati at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_cinmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T190500
+DTEND;TZID=America/New_York:20120619T220500
+DTSTAMP:20120226T083947Z
+UID:318740@mlb.com
+CREATED:20110908T191341Z
+DESCRIPTION:Cincinnati at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_cinmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120126T150057Z
+LOCATION:Progressive Field, Cleveland
+SUMMARY:Cincinnati at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_cinmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T190500
+DTEND;TZID=America/New_York:20120620T220500
+DTSTAMP:20120226T083947Z
+UID:318755@mlb.com
+CREATED:20110908T191342Z
+DESCRIPTION:Cincinnati at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_cinmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120126T150057Z
+LOCATION:Progressive Field, Cleveland
+SUMMARY:Cincinnati at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_cinmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T191000
+DTEND;TZID=America/New_York:20120622T221000
+DTSTAMP:20120226T083947Z
+UID:318780@mlb.com
+CREATED:20110908T191345Z
+DESCRIPTION:Minnesota at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_minmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Minnesota at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_minmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T161000
+DTEND;TZID=America/New_York:20120623T191000
+DTSTAMP:20120226T083947Z
+UID:318795@mlb.com
+CREATED:20110908T191347Z
+DESCRIPTION:Minnesota at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_minmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Reds Hall of Fame Induction Night\n    Sean Casey Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Minnesota at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_minmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T131000
+DTEND;TZID=America/New_York:20120624T161000
+DTSTAMP:20120226T083947Z
+UID:318810@mlb.com
+CREATED:20110908T191348Z
+DESCRIPTION:Minnesota at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_minmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Batting Gloves\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Minnesota at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_minmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120625T191000
+DTEND;TZID=America/New_York:20120625T221000
+DTSTAMP:20120226T083947Z
+UID:318822@mlb.com
+CREATED:20110908T191350Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T191000
+DTEND;TZID=America/New_York:20120626T221000
+DTSTAMP:20120226T083947Z
+UID:318836@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T123500
+DTEND;TZID=America/New_York:20120627T153500
+DTSTAMP:20120226T083947Z
+UID:318851@mlb.com
+CREATED:20110908T191353Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_milmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120628T221500
+DTEND;TZID=America/New_York:20120629T011500
+DTSTAMP:20120226T083947Z
+UID:318864@mlb.com
+CREATED:20110908T191354Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T221500
+DTEND;TZID=America/New_York:20120630T011500
+DTSTAMP:20120226T083947Z
+UID:318876@mlb.com
+CREATED:20110908T191355Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T160500
+DTEND;TZID=America/New_York:20120630T190500
+DTSTAMP:20120226T083947Z
+UID:318891@mlb.com
+CREATED:20110908T191357Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T160500
+DTEND;TZID=America/New_York:20120701T190500
+DTSTAMP:20120226T083947Z
+UID:318906@mlb.com
+CREATED:20110908T191359Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120702T221000
+DTEND;TZID=America/New_York:20120703T011000
+DTSTAMP:20120226T083947Z
+UID:318921@mlb.com
+CREATED:20110908T191400Z
+DESCRIPTION:Cincinnati at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_cinmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Cincinnati at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_cinmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T221000
+DTEND;TZID=America/New_York:20120704T011000
+DTSTAMP:20120226T083947Z
+UID:318933@mlb.com
+CREATED:20110908T191402Z
+DESCRIPTION:Cincinnati at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_cinmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Cincinnati at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_cinmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T211000
+DTEND;TZID=America/New_York:20120705T001000
+DTSTAMP:20120226T083947Z
+UID:318948@mlb.com
+CREATED:20110908T191403Z
+DESCRIPTION:Cincinnati at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_cinmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Cincinnati at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_cinmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T220500
+DTEND;TZID=America/New_York:20120706T010500
+DTSTAMP:20120226T083947Z
+UID:318961@mlb.com
+CREATED:20110908T191405Z
+DESCRIPTION:Cincinnati at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_cinmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120117T020839Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Cincinnati at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_cinmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T220500
+DTEND;TZID=America/New_York:20120707T010500
+DTSTAMP:20120226T083947Z
+UID:318976@mlb.com
+CREATED:20110908T191406Z
+DESCRIPTION:Cincinnati at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_cinmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120117T020839Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Cincinnati at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_cinmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T220500
+DTEND;TZID=America/New_York:20120708T010500
+DTSTAMP:20120226T083947Z
+UID:318991@mlb.com
+CREATED:20110908T191408Z
+DESCRIPTION:Cincinnati at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_cinmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120117T020839Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Cincinnati at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_cinmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T160500
+DTEND;TZID=America/New_York:20120708T190500
+DTSTAMP:20120226T083947Z
+UID:319006@mlb.com
+CREATED:20110908T191410Z
+DESCRIPTION:Cincinnati at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_cinmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120117T020839Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Cincinnati at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_cinmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T083947Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T191000
+DTEND;TZID=America/New_York:20120713T221000
+DTSTAMP:20120226T083947Z
+UID:319031@mlb.com
+CREATED:20110908T191413Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T191000
+DTEND;TZID=America/New_York:20120714T221000
+DTSTAMP:20120226T083947Z
+UID:319046@mlb.com
+CREATED:20110908T191414Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Reds Lawn Flag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T200000
+DTEND;TZID=America/New_York:20120715T230000
+DTSTAMP:20120226T083947Z
+UID:319061@mlb.com
+CREATED:20110908T191416Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Braided Necklace\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n\nLocal TV: ESPN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120716T191000
+DTEND;TZID=America/New_York:20120716T221000
+DTSTAMP:20120226T083947Z
+UID:319065@mlb.com
+CREATED:20110908T191416Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T191000
+DTEND;TZID=America/New_York:20120717T221000
+DTSTAMP:20120226T083947Z
+UID:319078@mlb.com
+CREATED:20110908T191418Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_arimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T191000
+DTEND;TZID=America/New_York:20120718T221000
+DTSTAMP:20120226T083947Z
+UID:319093@mlb.com
+CREATED:20110908T191419Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_arimlb_cinmlb_1\n\nPromotions/Giveaways: \n    Jay Bruce Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120719T123500
+DTEND;TZID=America/New_York:20120719T153500
+DTSTAMP:20120226T083947Z
+UID:319108@mlb.com
+CREATED:20110908T191421Z
+DESCRIPTION:Arizona at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_arimlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Arizona at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_arimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T191000
+DTEND;TZID=America/New_York:20120720T221000
+DTSTAMP:20120226T083947Z
+UID:319126@mlb.com
+CREATED:20110908T191423Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_milmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T191000
+DTEND;TZID=America/New_York:20120721T221000
+DTSTAMP:20120226T083947Z
+UID:319141@mlb.com
+CREATED:20110908T191425Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_milmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Reds Soft-Sided Cooler\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T131000
+DTEND;TZID=America/New_York:20120722T161000
+DTSTAMP:20120226T083947Z
+UID:319156@mlb.com
+CREATED:20110908T191426Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_milmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Mini Mascot Set\n    Meijer Family Days\n    Run the Bases Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T200500
+DTEND;TZID=America/New_York:20120723T230500
+DTSTAMP:20120226T083947Z
+UID:319167@mlb.com
+CREATED:20110908T191428Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T200500
+DTEND;TZID=America/New_York:20120724T230500
+DTSTAMP:20120226T083947Z
+UID:319179@mlb.com
+CREATED:20110908T191429Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T200500
+DTEND;TZID=America/New_York:20120725T230500
+DTSTAMP:20120226T083947Z
+UID:319194@mlb.com
+CREATED:20110908T191430Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T204000
+DTEND;TZID=America/New_York:20120727T234000
+DTSTAMP:20120226T083947Z
+UID:319216@mlb.com
+CREATED:20110908T191433Z
+DESCRIPTION:Cincinnati at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_cinmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:Cincinnati at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_cinmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T201000
+DTEND;TZID=America/New_York:20120728T231000
+DTSTAMP:20120226T083947Z
+UID:319231@mlb.com
+CREATED:20110908T191434Z
+DESCRIPTION:Cincinnati at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_cinmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:Cincinnati at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_cinmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T151000
+DTEND;TZID=America/New_York:20120729T181000
+DTSTAMP:20120226T083947Z
+UID:319246@mlb.com
+CREATED:20110908T191436Z
+DESCRIPTION:Cincinnati at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_cinmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Coors Field, Denver
+SUMMARY:Cincinnati at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_cinmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120730T191000
+DTEND;TZID=America/New_York:20120730T221000
+DTSTAMP:20120226T083947Z
+UID:319268@mlb.com
+CREATED:20110908T191439Z
+DESCRIPTION:San Diego at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_sdnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Diego at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_sdnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T191000
+DTEND;TZID=America/New_York:20120731T221000
+DTSTAMP:20120226T083947Z
+UID:319282@mlb.com
+CREATED:20110908T191440Z
+DESCRIPTION:San Diego at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_sdnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Diego at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_sdnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T191000
+DTEND;TZID=America/New_York:20120801T221000
+DTSTAMP:20120226T083947Z
+UID:319297@mlb.com
+CREATED:20110908T191442Z
+DESCRIPTION:San Diego at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_sdnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Diego at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_sdnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120802T123500
+DTEND;TZID=America/New_York:20120802T153500
+DTSTAMP:20120226T083947Z
+UID:319307@mlb.com
+CREATED:20110908T191443Z
+DESCRIPTION:San Diego at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_02_sdnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Diego at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_02_sdnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T191000
+DTEND;TZID=America/New_York:20120803T221000
+DTSTAMP:20120226T083947Z
+UID:319320@mlb.com
+CREATED:20110908T191444Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_pitmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T191000
+DTEND;TZID=America/New_York:20120804T221000
+DTSTAMP:20120226T083947Z
+UID:319335@mlb.com
+CREATED:20110908T191446Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_pitmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Johnny Cueto Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T131000
+DTEND;TZID=America/New_York:20120805T161000
+DTSTAMP:20120226T083947Z
+UID:319350@mlb.com
+CREATED:20110908T191448Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_pitmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Aroldis Chapman Mesh Jersey Backpack\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T201000
+DTEND;TZID=America/New_York:20120806T231000
+DTSTAMP:20120226T083947Z
+UID:319359@mlb.com
+CREATED:20110908T191449Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T201000
+DTEND;TZID=America/New_York:20120807T231000
+DTSTAMP:20120226T083947Z
+UID:319372@mlb.com
+CREATED:20110908T191450Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T141000
+DTEND;TZID=America/New_York:20120808T171000
+DTSTAMP:20120226T083947Z
+UID:319387@mlb.com
+CREATED:20110908T191452Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120809T200500
+DTEND;TZID=America/New_York:20120809T230500
+DTSTAMP:20120226T083947Z
+UID:319400@mlb.com
+CREATED:20110908T191453Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T142000
+DTEND;TZID=America/New_York:20120810T172000
+DTSTAMP:20120226T083947Z
+UID:319409@mlb.com
+CREATED:20110908T191454Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T160500
+DTEND;TZID=America/New_York:20120811T190500
+DTSTAMP:20120226T083947Z
+UID:319424@mlb.com
+CREATED:20110908T191456Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T142000
+DTEND;TZID=America/New_York:20120812T172000
+DTSTAMP:20120226T083947Z
+UID:319439@mlb.com
+CREATED:20110908T191457Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T191000
+DTEND;TZID=America/New_York:20120814T221000
+DTSTAMP:20120226T083947Z
+UID:319471@mlb.com
+CREATED:20110908T191501Z
+DESCRIPTION:NY Mets at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_nynmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:NY Mets at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_nynmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T191000
+DTEND;TZID=America/New_York:20120815T221000
+DTSTAMP:20120226T083947Z
+UID:319486@mlb.com
+CREATED:20110908T191502Z
+DESCRIPTION:NY Mets at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_nynmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:NY Mets at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_nynmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120816T191000
+DTEND;TZID=America/New_York:20120816T221000
+DTSTAMP:20120226T083947Z
+UID:319498@mlb.com
+CREATED:20110908T191505Z
+DESCRIPTION:NY Mets at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_nynmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:NY Mets at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_nynmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T191000
+DTEND;TZID=America/New_York:20120817T221000
+DTSTAMP:20120226T083947Z
+UID:319508@mlb.com
+CREATED:20110908T191506Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_chnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T191000
+DTEND;TZID=America/New_York:20120818T221000
+DTSTAMP:20120226T083947Z
+UID:319523@mlb.com
+CREATED:20110908T191507Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_chnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Barry Larkin Reds Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T131000
+DTEND;TZID=America/New_York:20120819T161000
+DTSTAMP:20120226T083947Z
+UID:319538@mlb.com
+CREATED:20110908T191509Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_chnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Faith Post-Game Concert\n    Kids Giveaway\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T190500
+DTEND;TZID=America/New_York:20120820T220500
+DTSTAMP:20120226T083947Z
+UID:319552@mlb.com
+CREATED:20110908T191511Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_cinmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T190500
+DTEND;TZID=America/New_York:20120821T220500
+DTSTAMP:20120226T083947Z
+UID:319564@mlb.com
+CREATED:20110908T191512Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_cinmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T190500
+DTEND;TZID=America/New_York:20120822T220500
+DTSTAMP:20120226T083947Z
+UID:319579@mlb.com
+CREATED:20110908T191514Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_cinmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120823T190500
+DTEND;TZID=America/New_York:20120823T220500
+DTSTAMP:20120226T083947Z
+UID:319592@mlb.com
+CREATED:20110908T191516Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_cinmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T191000
+DTEND;TZID=America/New_York:20120824T221000
+DTSTAMP:20120226T083947Z
+UID:319611@mlb.com
+CREATED:20110908T191518Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fireworks Friday\n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T160500
+DTEND;TZID=America/New_York:20120825T190500
+DTSTAMP:20120226T083947Z
+UID:319626@mlb.com
+CREATED:20110908T191520Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Reds Stein\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T131000
+DTEND;TZID=America/New_York:20120826T161000
+DTSTAMP:20120226T083947Z
+UID:319641@mlb.com
+CREATED:20110908T191521Z
+DESCRIPTION:St. Louis at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_slnmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Kids Giveaway\n    Meijer Family Days\n    Run the Bases Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:St. Louis at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_slnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120827T214000
+DTEND;TZID=America/New_York:20120828T004000
+DTSTAMP:20120226T083947Z
+UID:319646@mlb.com
+CREATED:20110908T191522Z
+DESCRIPTION:Cincinnati at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_cinmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Cincinnati at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_cinmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T214000
+DTEND;TZID=America/New_York:20120829T004000
+DTSTAMP:20120226T083947Z
+UID:319658@mlb.com
+CREATED:20110908T191523Z
+DESCRIPTION:Cincinnati at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_cinmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Cincinnati at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_cinmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T154000
+DTEND;TZID=America/New_York:20120829T184000
+DTSTAMP:20120226T083947Z
+UID:319673@mlb.com
+CREATED:20110908T191525Z
+DESCRIPTION:Cincinnati at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_cinmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Cincinnati at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_cinmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T200500
+DTEND;TZID=America/New_York:20120831T230500
+DTSTAMP:20120226T083947Z
+UID:319701@mlb.com
+CREATED:20110908T191528Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=08&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T190500
+DTEND;TZID=America/New_York:20120901T220500
+DTSTAMP:20120226T083947Z
+UID:319716@mlb.com
+CREATED:20110908T191530Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T140500
+DTEND;TZID=America/New_York:20120902T170500
+DTSTAMP:20120226T083947Z
+UID:319731@mlb.com
+CREATED:20110908T191531Z
+DESCRIPTION:Cincinnati at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_cinmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Cincinnati at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_cinmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T131000
+DTEND;TZID=America/New_York:20120903T161000
+DTSTAMP:20120226T083947Z
+UID:319753@mlb.com
+CREATED:20110908T191534Z
+DESCRIPTION:Philadelphia at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_phimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Philadelphia at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_phimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T191000
+DTEND;TZID=America/New_York:20120904T221000
+DTSTAMP:20120226T083947Z
+UID:319768@mlb.com
+CREATED:20110908T191536Z
+DESCRIPTION:Philadelphia at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_phimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Philadelphia at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_phimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T123500
+DTEND;TZID=America/New_York:20120905T153500
+DTSTAMP:20120226T083947Z
+UID:319783@mlb.com
+CREATED:20110908T191537Z
+DESCRIPTION:Philadelphia at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_phimlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Philadelphia at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_phimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T191000
+DTEND;TZID=America/New_York:20120907T221000
+DTSTAMP:20120226T083947Z
+UID:319798@mlb.com
+CREATED:20110908T191539Z
+DESCRIPTION:Houston at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_houmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Free Agent Fridays\n    Hispanic Heritage Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Houston at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_houmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T191000
+DTEND;TZID=America/New_York:20120908T221000
+DTSTAMP:20120226T083947Z
+UID:319813@mlb.com
+CREATED:20110908T191541Z
+DESCRIPTION:Houston at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_houmlb_cinmlb_1\n\nPromotions/Giveaways: \n    2012 Team Photo\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Houston at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_houmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T131000
+DTEND;TZID=America/New_York:20120909T161000
+DTSTAMP:20120226T083947Z
+UID:319828@mlb.com
+CREATED:20110908T191542Z
+DESCRIPTION:Houston at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_houmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Houston at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_houmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120910T191000
+DTEND;TZID=America/New_York:20120910T221000
+DTSTAMP:20120226T083947Z
+UID:319842@mlb.com
+CREATED:20110908T191544Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_pitmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Bark in the Park #2\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T191000
+DTEND;TZID=America/New_York:20120911T221000
+DTSTAMP:20120226T083947Z
+UID:319856@mlb.com
+CREATED:20110908T191545Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_pitmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T191000
+DTEND;TZID=America/New_York:20120912T221000
+DTSTAMP:20120226T083947Z
+UID:319871@mlb.com
+CREATED:20110908T191547Z
+DESCRIPTION:Pittsburgh at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_pitmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Pittsburgh at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_pitmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T191000
+DTEND;TZID=America/New_York:20120914T221000
+DTSTAMP:20120226T083947Z
+UID:319890@mlb.com
+CREATED:20110908T191549Z
+DESCRIPTION:Cincinnati at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_cinmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Cincinnati at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_cinmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T191000
+DTEND;TZID=America/New_York:20120915T221000
+DTSTAMP:20120226T083947Z
+UID:319905@mlb.com
+CREATED:20110908T191551Z
+DESCRIPTION:Cincinnati at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_cinmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Cincinnati at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_cinmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T131000
+DTEND;TZID=America/New_York:20120916T161000
+DTSTAMP:20120226T083947Z
+UID:319920@mlb.com
+CREATED:20110908T191553Z
+DESCRIPTION:Cincinnati at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_cinmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Cincinnati at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_cinmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T200500
+DTEND;TZID=America/New_York:20120918T230500
+DTSTAMP:20120226T083947Z
+UID:319941@mlb.com
+CREATED:20110908T191555Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T200500
+DTEND;TZID=America/New_York:20120919T230500
+DTSTAMP:20120226T083947Z
+UID:319956@mlb.com
+CREATED:20110908T191557Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120920T142000
+DTEND;TZID=America/New_York:20120920T172000
+DTSTAMP:20120226T083947Z
+UID:319969@mlb.com
+CREATED:20110908T191558Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T191000
+DTEND;TZID=America/New_York:20120921T221000
+DTSTAMP:20120226T083947Z
+UID:319985@mlb.com
+CREATED:20110908T191600Z
+DESCRIPTION:LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_lanmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Free Agent Fridays\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T191000
+DTEND;TZID=America/New_York:20120922T221000
+DTSTAMP:20120226T083947Z
+UID:320000@mlb.com
+CREATED:20110908T191601Z
+DESCRIPTION:LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_lanmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T131000
+DTEND;TZID=America/New_York:20120923T161000
+DTSTAMP:20120226T083947Z
+UID:320015@mlb.com
+CREATED:20110908T191603Z
+DESCRIPTION:LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_lanmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Fan Appreciation Day\n    Meijer Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T191000
+DTEND;TZID=America/New_York:20120925T221000
+DTSTAMP:20120226T083947Z
+UID:320038@mlb.com
+CREATED:20110908T191606Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T191000
+DTEND;TZID=America/New_York:20120926T221000
+DTSTAMP:20120226T083947Z
+UID:320053@mlb.com
+CREATED:20110908T191607Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T123500
+DTEND;TZID=America/New_York:20120927T153500
+DTSTAMP:20120226T083947Z
+UID:320067@mlb.com
+CREATED:20110908T191609Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_milmlb_cinmlb_1\n\nPromotions/Giveaways: \n    Paycor Business Day Specials\n    Tri-State Centers for Sight Senior Citizen Specials\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T190500
+DTEND;TZID=America/New_York:20120928T220500
+DTSTAMP:20120226T083947Z
+UID:320077@mlb.com
+CREATED:20110908T191610Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T190500
+DTEND;TZID=America/New_York:20120929T220500
+DTSTAMP:20120226T083947Z
+UID:320092@mlb.com
+CREATED:20110908T191611Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T133500
+DTEND;TZID=America/New_York:20120930T163500
+DTSTAMP:20120226T083947Z
+UID:320107@mlb.com
+CREATED:20110908T191613Z
+DESCRIPTION:Cincinnati at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_cinmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Cincinnati at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_cinmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T201500
+DTEND;TZID=America/New_York:20121001T231500
+DTSTAMP:20120226T083947Z
+UID:320124@mlb.com
+CREATED:20110908T191615Z
+DESCRIPTION:Cincinnati at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_cinmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=10&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Cincinnati at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_cinmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T201500
+DTEND;TZID=America/New_York:20121002T231500
+DTSTAMP:20120226T083947Z
+UID:320139@mlb.com
+CREATED:20110908T191617Z
+DESCRIPTION:Cincinnati at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_cinmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=10&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Cincinnati at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_cinmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T201500
+DTEND;TZID=America/New_York:20121003T231500
+DTSTAMP:20120226T083947Z
+UID:320154@mlb.com
+CREATED:20110908T191618Z
+DESCRIPTION:Cincinnati at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_cinmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=cin&m=10&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Cincinnati at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_cinmlb_slnmlb_1
+END:VEVENT
+END:VCALENDAR

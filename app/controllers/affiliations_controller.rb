@@ -1,5 +1,5 @@
 class AffiliationsController < ApplicationController
-  before_filter :authenticate_user!, :load_data	
+  before_filter :authenticate_user!
   layout :page_layout
   respond_to :html, :json, :xml, :js, :mobile
   include SetAssn
@@ -38,9 +38,5 @@ class AffiliationsController < ApplicationController
   def page_layout  
     mobile_device? ? 'form' : params[:p].blank? ? "application" : "users"  
   end  
-  
-  def load_data 
-    @user = current_user  #set current user
-  end
-     
+
 end

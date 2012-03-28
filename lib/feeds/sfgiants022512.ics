@@ -1,0 +1,2812 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 San Francisco Giants Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120303T150500
+DTEND;TZID=America/New_York:20120303T180500
+DTSTAMP:20120226T024118Z
+UID:332098@mlb.com
+CREATED:20111130T212812Z
+DESCRIPTION:Spring Training: Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T151000
+DTEND;TZID=America/New_York:20120304T181000
+DTSTAMP:20120226T024118Z
+UID:332117@mlb.com
+CREATED:20111130T212815Z
+DESCRIPTION:Spring Training: San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T150500
+DTEND;TZID=America/New_York:20120304T180500
+DTSTAMP:20120226T024118Z
+UID:332118@mlb.com
+CREATED:20111130T212815Z
+DESCRIPTION:Spring Training: San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n
+LAST-MODIFIED:20111214T194931Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T213500
+DTEND;TZID=America/New_York:20120306T003500
+DTSTAMP:20120226T024118Z
+UID:332128@mlb.com
+CREATED:20111130T212817Z
+DESCRIPTION:Spring Training: Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN, CSN-BA\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T150500
+DTEND;TZID=America/New_York:20120306T180500
+DTSTAMP:20120226T024118Z
+UID:332148@mlb.com
+CREATED:20111130T212820Z
+DESCRIPTION:Spring Training: San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T150500
+DTEND;TZID=America/New_York:20120307T180500
+DTSTAMP:20120226T024118Z
+UID:332156@mlb.com
+CREATED:20111130T212821Z
+DESCRIPTION:Spring Training: Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120308T150500
+DTEND;TZID=America/New_York:20120308T180500
+DTSTAMP:20120226T024118Z
+UID:332181@mlb.com
+CREATED:20111130T212824Z
+DESCRIPTION:Spring Training: San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T024118Z
+UID:332188@mlb.com
+CREATED:20111130T212825Z
+DESCRIPTION:Spring Training: Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T024118Z
+UID:332213@mlb.com
+CREATED:20111130T212829Z
+DESCRIPTION:Spring Training: San Francisco at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_sfnmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLB.TV
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Tempe Diablo Stadium, Tempe
+SUMMARY:Spring Training: San Francisco at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_sfnmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T024118Z
+UID:332207@mlb.com
+CREATED:20111130T212828Z
+DESCRIPTION:Spring Training: Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T160500
+DTEND;TZID=America/New_York:20120311T190500
+DTSTAMP:20120226T024118Z
+UID:332234@mlb.com
+CREATED:20111130T212832Z
+DESCRIPTION:Spring Training: Seattle at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_seamlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Seattle at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_seamlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120312T160500
+DTEND;TZID=America/New_York:20120312T190500
+DTSTAMP:20120226T024118Z
+UID:332249@mlb.com
+CREATED:20111130T212834Z
+DESCRIPTION:Spring Training: San Francisco at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_sfnmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: San Francisco at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_sfnmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T160500
+DTEND;TZID=America/New_York:20120313T190500
+DTSTAMP:20120226T024118Z
+UID:332256@mlb.com
+CREATED:20111130T212835Z
+DESCRIPTION:Spring Training: Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T160500
+DTEND;TZID=America/New_York:20120314T190500
+DTSTAMP:20120226T024118Z
+UID:332269@mlb.com
+CREATED:20111130T212837Z
+DESCRIPTION:Spring Training: Cleveland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_clemlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Cleveland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_clemlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T220500
+DTEND;TZID=America/New_York:20120316T010500
+DTSTAMP:20120226T024118Z
+UID:332296@mlb.com
+CREATED:20111130T212841Z
+DESCRIPTION:Spring Training: San Francisco at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_sfnmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: San Francisco at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_sfnmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T160500
+DTEND;TZID=America/New_York:20120316T190500
+DTSTAMP:20120226T024118Z
+UID:332311@mlb.com
+CREATED:20111130T212843Z
+DESCRIPTION:Spring Training: San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_sfnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T220500
+DTEND;TZID=America/New_York:20120318T010500
+DTSTAMP:20120226T024118Z
+UID:332329@mlb.com
+CREATED:20111130T212846Z
+DESCRIPTION:Spring Training: San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T160500
+DTEND;TZID=America/New_York:20120317T190500
+DTSTAMP:20120226T024118Z
+UID:332327@mlb.com
+CREATED:20111130T212845Z
+DESCRIPTION:Spring Training: Oakland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_oakmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: CSN-BA, MLB.TV\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Oakland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_oakmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T024118Z
+UID:332349@mlb.com
+CREATED:20111130T212848Z
+DESCRIPTION:Spring Training: San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_sdnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T161000
+DTEND;TZID=America/New_York:20120320T191000
+DTSTAMP:20120226T024118Z
+UID:332370@mlb.com
+CREATED:20111130T212851Z
+DESCRIPTION:Spring Training: San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120321T160500
+DTEND;TZID=America/New_York:20120321T190500
+DTSTAMP:20120226T024118Z
+UID:332385@mlb.com
+CREATED:20111130T212853Z
+DESCRIPTION:Spring Training: San Francisco at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_sfnmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: San Francisco at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_sfnmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120322T221000
+DTEND;TZID=America/New_York:20120323T011000
+DTSTAMP:20120226T024118Z
+UID:332396@mlb.com
+CREATED:20111130T212855Z
+DESCRIPTION:Spring Training: San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T220500
+DTEND;TZID=America/New_York:20120324T010500
+DTSTAMP:20120226T024118Z
+UID:332412@mlb.com
+CREATED:20111130T212857Z
+DESCRIPTION:Spring Training: Texas at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_texmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV, NBC Bay Area\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Texas at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_texmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T024118Z
+UID:332427@mlb.com
+CREATED:20111130T212900Z
+DESCRIPTION:Spring Training: San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_sfnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T024118Z
+UID:332421@mlb.com
+CREATED:20111130T212859Z
+DESCRIPTION:Spring Training: Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T160500
+DTEND;TZID=America/New_York:20120325T190500
+DTSTAMP:20120226T024118Z
+UID:332445@mlb.com
+CREATED:20111130T212902Z
+DESCRIPTION:Spring Training: San Francisco at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_sfnmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: San Francisco at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_sfnmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T160500
+DTEND;TZID=America/New_York:20120326T190500
+DTSTAMP:20120226T024118Z
+UID:332454@mlb.com
+CREATED:20111130T212903Z
+DESCRIPTION:Spring Training: Kansas City at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_kcamlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Kansas City at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_kcamlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T160500
+DTEND;TZID=America/New_York:20120327T190500
+DTSTAMP:20120226T024118Z
+UID:332460@mlb.com
+CREATED:20111130T212903Z
+DESCRIPTION:Spring Training: LA Angels at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_anamlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: ESPN2, MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: LA Angels at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_anamlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T160500
+DTEND;TZID=America/New_York:20120328T190500
+DTSTAMP:20120226T024118Z
+UID:332480@mlb.com
+CREATED:20111130T212906Z
+DESCRIPTION:Spring Training: LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T210500
+DTEND;TZID=America/New_York:20120330T000500
+DTSTAMP:20120226T024118Z
+UID:332498@mlb.com
+CREATED:20111130T212908Z
+DESCRIPTION:Spring Training: San Francisco at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_sfnmlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: San Francisco at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_sfnmlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T220500
+DTEND;TZID=America/New_York:20120331T010500
+DTSTAMP:20120226T024118Z
+UID:332516@mlb.com
+CREATED:20111130T212910Z
+DESCRIPTION:Spring Training: San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T180500
+DTEND;TZID=America/New_York:20120331T210500
+DTSTAMP:20120226T024118Z
+UID:332523@mlb.com
+CREATED:20111130T212911Z
+DESCRIPTION:Spring Training: Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=03&y=2012\n\nLocal TV: NBC Bay Area, MLBN (delay), MLB.TV\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T160500
+DTEND;TZID=America/New_York:20120401T190500
+DTSTAMP:20120226T024118Z
+UID:332546@mlb.com
+CREATED:20111130T212913Z
+DESCRIPTION:Spring Training: San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T221500
+DTEND;TZID=America/New_York:20120403T011500
+DTSTAMP:20120226T024118Z
+UID:331123@mlb.com
+CREATED:20111117T181025Z
+DESCRIPTION:Spring Training: Oakland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_oakmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Spring Training: Oakland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_oakmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T223500
+DTEND;TZID=America/New_York:20120404T013500
+DTSTAMP:20120226T024118Z
+UID:331915@mlb.com
+CREATED:20111122T190424Z
+DESCRIPTION:Spring Training: San Francisco at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_sfnmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:Spring Training: San Francisco at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_sfnmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120404T154500
+DTEND;TZID=America/New_York:20120404T184500
+DTSTAMP:20120226T024118Z
+UID:331126@mlb.com
+CREATED:20111117T181026Z
+DESCRIPTION:Spring Training: Oakland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_oakmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KNBR 680
+LAST-MODIFIED:20120203T194520Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Spring Training: Oakland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_oakmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120406T191000
+DTEND;TZID=America/New_York:20120406T221000
+DTSTAMP:20120226T024118Z
+UID:317748@mlb.com
+CREATED:20110908T191146Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120202T215059Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T161000
+DTEND;TZID=America/New_York:20120407T191000
+DTSTAMP:20120226T024118Z
+UID:317761@mlb.com
+CREATED:20110908T191147Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T161000
+DTEND;TZID=America/New_York:20120408T191000
+DTSTAMP:20120226T024118Z
+UID:317776@mlb.com
+CREATED:20110908T191149Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120409T161000
+DTEND;TZID=America/New_York:20120409T191000
+DTSTAMP:20120226T024118Z
+UID:317789@mlb.com
+CREATED:20110908T191151Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120126T201151Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T204000
+DTEND;TZID=America/New_York:20120411T234000
+DTSTAMP:20120226T024118Z
+UID:317815@mlb.com
+CREATED:20110908T191154Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T151000
+DTEND;TZID=America/New_York:20120412T181000
+DTSTAMP:20120226T024118Z
+UID:317826@mlb.com
+CREATED:20110908T191156Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T163500
+DTEND;TZID=America/New_York:20120413T193500
+DTSTAMP:20120226T024118Z
+UID:317839@mlb.com
+CREATED:20110908T191158Z
+DESCRIPTION:Pittsburgh at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_pitmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Opening Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120126T201150Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Pittsburgh at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_pitmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T210500
+DTEND;TZID=America/New_York:20120415T000500
+DTSTAMP:20120226T024118Z
+UID:317854@mlb.com
+CREATED:20110908T191200Z
+DESCRIPTION:Pittsburgh at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_pitmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Opening Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Pittsburgh at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_pitmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T160500
+DTEND;TZID=America/New_York:20120415T190500
+DTSTAMP:20120226T024118Z
+UID:317869@mlb.com
+CREATED:20110908T191201Z
+DESCRIPTION:Pittsburgh at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_pitmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Welcome Mat\n    Giants Welcome Mat\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Pittsburgh at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_pitmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120416T221500
+DTEND;TZID=America/New_York:20120417T011500
+DTSTAMP:20120226T024118Z
+UID:317879@mlb.com
+CREATED:20110908T191202Z
+DESCRIPTION:Philadelphia at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_16_phimlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Magnet Schedule\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Philadelphia at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_16_phimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T221500
+DTEND;TZID=America/New_York:20120418T011500
+DTSTAMP:20120226T024118Z
+UID:317893@mlb.com
+CREATED:20110908T191206Z
+DESCRIPTION:Philadelphia at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_phimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Philadelphia at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_phimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T221500
+DTEND;TZID=America/New_York:20120419T011500
+DTSTAMP:20120226T024118Z
+UID:317908@mlb.com
+CREATED:20110908T191207Z
+DESCRIPTION:Philadelphia at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_phimlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Food Drive\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Philadelphia at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_phimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T191000
+DTEND;TZID=America/New_York:20120420T221000
+DTSTAMP:20120226T024118Z
+UID:317936@mlb.com
+CREATED:20110908T191211Z
+DESCRIPTION:San Francisco at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_sfnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:San Francisco at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_sfnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T131000
+DTEND;TZID=America/New_York:20120421T161000
+DTSTAMP:20120226T024118Z
+UID:317951@mlb.com
+CREATED:20110908T191213Z
+DESCRIPTION:San Francisco at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_sfnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:San Francisco at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_sfnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T131000
+DTEND;TZID=America/New_York:20120422T161000
+DTSTAMP:20120226T024118Z
+UID:317966@mlb.com
+CREATED:20110908T191214Z
+DESCRIPTION:San Francisco at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_sfnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:San Francisco at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_sfnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120423T191000
+DTEND;TZID=America/New_York:20120423T221000
+DTSTAMP:20120226T024118Z
+UID:317977@mlb.com
+CREATED:20110908T191216Z
+DESCRIPTION:San Francisco at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_sfnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:San Francisco at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_sfnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T191000
+DTEND;TZID=America/New_York:20120424T221000
+DTSTAMP:20120226T024118Z
+UID:317991@mlb.com
+CREATED:20110908T191217Z
+DESCRIPTION:San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_sfnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T191000
+DTEND;TZID=America/New_York:20120425T221000
+DTSTAMP:20120226T024118Z
+UID:318006@mlb.com
+CREATED:20110908T191219Z
+DESCRIPTION:San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_sfnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120426T123500
+DTEND;TZID=America/New_York:20120426T153500
+DTSTAMP:20120226T024118Z
+UID:318015@mlb.com
+CREATED:20110908T191220Z
+DESCRIPTION:San Francisco at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_26_sfnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:San Francisco at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_26_sfnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T221500
+DTEND;TZID=America/New_York:20120428T011500
+DTSTAMP:20120226T024118Z
+UID:318029@mlb.com
+CREATED:20110908T191221Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_sdnmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Orange Friday Knit Hat\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T210500
+DTEND;TZID=America/New_York:20120429T000500
+DTSTAMP:20120226T024118Z
+UID:318044@mlb.com
+CREATED:20110908T191223Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_sdnmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Messenger Bag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T160500
+DTEND;TZID=America/New_York:20120429T190500
+DTSTAMP:20120226T024118Z
+UID:318059@mlb.com
+CREATED:20110908T191225Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_sdnmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Tim Lincecum Wall Sticker\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=04&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T221500
+DTEND;TZID=America/New_York:20120502T011500
+DTSTAMP:20120226T024118Z
+UID:318079@mlb.com
+CREATED:20110908T191227Z
+DESCRIPTION:Miami at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_miamlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Miami at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_miamlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T221500
+DTEND;TZID=America/New_York:20120503T011500
+DTSTAMP:20120226T024118Z
+UID:318094@mlb.com
+CREATED:20110908T191229Z
+DESCRIPTION:Miami at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_miamlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Miami at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_miamlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120503T154500
+DTEND;TZID=America/New_York:20120503T184500
+DTSTAMP:20120226T024118Z
+UID:318108@mlb.com
+CREATED:20110908T191230Z
+DESCRIPTION:Miami at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_miamlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Miami at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_miamlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T221500
+DTEND;TZID=America/New_York:20120505T011500
+DTSTAMP:20120226T024118Z
+UID:318121@mlb.com
+CREATED:20110908T191232Z
+DESCRIPTION:Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_milmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Orange Friday Texting Gloves\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T160500
+DTEND;TZID=America/New_York:20120505T190500
+DTSTAMP:20120226T024118Z
+UID:318136@mlb.com
+CREATED:20110908T191234Z
+DESCRIPTION:Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_milmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Sergio Romo Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal TV: FOX\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T160500
+DTEND;TZID=America/New_York:20120506T190500
+DTSTAMP:20120226T024118Z
+UID:318151@mlb.com
+CREATED:20110908T191236Z
+DESCRIPTION:Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_milmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Rope Necklace\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T221000
+DTEND;TZID=America/New_York:20120508T011000
+DTSTAMP:20120226T024118Z
+UID:318168@mlb.com
+CREATED:20110908T191237Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T221000
+DTEND;TZID=America/New_York:20120509T011000
+DTSTAMP:20120226T024118Z
+UID:318180@mlb.com
+CREATED:20110908T191239Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T221000
+DTEND;TZID=America/New_York:20120510T011000
+DTSTAMP:20120226T024118Z
+UID:318195@mlb.com
+CREATED:20110908T191241Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T214000
+DTEND;TZID=America/New_York:20120512T004000
+DTSTAMP:20120226T024118Z
+UID:318218@mlb.com
+CREATED:20110908T191243Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T201000
+DTEND;TZID=America/New_York:20120512T231000
+DTSTAMP:20120226T024118Z
+UID:318233@mlb.com
+CREATED:20110908T191245Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T161000
+DTEND;TZID=America/New_York:20120513T191000
+DTSTAMP:20120226T024118Z
+UID:318248@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T221500
+DTEND;TZID=America/New_York:20120515T011500
+DTSTAMP:20120226T024118Z
+UID:318256@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T221500
+DTEND;TZID=America/New_York:20120516T011500
+DTSTAMP:20120226T024118Z
+UID:318271@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T221500
+DTEND;TZID=America/New_York:20120517T011500
+DTSTAMP:20120226T024118Z
+UID:318296@mlb.com
+CREATED:20110908T191252Z
+DESCRIPTION:St. Louis at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_slnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:St. Louis at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_slnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T154500
+DTEND;TZID=America/New_York:20120517T184500
+DTSTAMP:20120226T024118Z
+UID:318311@mlb.com
+CREATED:20110908T191253Z
+DESCRIPTION:St. Louis at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_slnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:St. Louis at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_slnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T221500
+DTEND;TZID=America/New_York:20120519T011500
+DTSTAMP:20120226T024118Z
+UID:318322@mlb.com
+CREATED:20110908T191255Z
+DESCRIPTION:Oakland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_oakmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Oakland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_oakmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T160500
+DTEND;TZID=America/New_York:20120519T190500
+DTSTAMP:20120226T024118Z
+UID:318337@mlb.com
+CREATED:20110908T191256Z
+DESCRIPTION:Oakland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_oakmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Fedora Hat & Strike Out Cancer Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Oakland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_oakmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T160500
+DTEND;TZID=America/New_York:20120520T190500
+DTSTAMP:20120226T024118Z
+UID:318352@mlb.com
+CREATED:20110908T191258Z
+DESCRIPTION:Oakland at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_oakmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Brian Wilson Gnome\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Oakland at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_oakmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T201000
+DTEND;TZID=America/New_York:20120521T231000
+DTSTAMP:20120226T024118Z
+UID:318366@mlb.com
+CREATED:20110908T191259Z
+DESCRIPTION:San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T201000
+DTEND;TZID=America/New_York:20120522T231000
+DTSTAMP:20120226T024118Z
+UID:318381@mlb.com
+CREATED:20110908T191301Z
+DESCRIPTION:San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T131000
+DTEND;TZID=America/New_York:20120523T161000
+DTSTAMP:20120226T024118Z
+UID:318396@mlb.com
+CREATED:20110908T191302Z
+DESCRIPTION:San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120524T191000
+DTEND;TZID=America/New_York:20120524T221000
+DTSTAMP:20120226T024118Z
+UID:318406@mlb.com
+CREATED:20110908T191303Z
+DESCRIPTION:San Francisco at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_24_sfnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Marlins Park, Miami
+SUMMARY:San Francisco at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_24_sfnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T191000
+DTEND;TZID=America/New_York:20120525T221000
+DTSTAMP:20120226T024118Z
+UID:318418@mlb.com
+CREATED:20110908T191305Z
+DESCRIPTION:San Francisco at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_sfnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Marlins Park, Miami
+SUMMARY:San Francisco at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_sfnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T161000
+DTEND;TZID=America/New_York:20120526T191000
+DTSTAMP:20120226T024118Z
+UID:318433@mlb.com
+CREATED:20110908T191306Z
+DESCRIPTION:San Francisco at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_sfnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120113T051505Z
+LOCATION:Marlins Park, Miami
+SUMMARY:San Francisco at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_sfnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T131000
+DTEND;TZID=America/New_York:20120527T161000
+DTSTAMP:20120226T024118Z
+UID:318448@mlb.com
+CREATED:20110908T191308Z
+DESCRIPTION:San Francisco at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_sfnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Marlins Park, Miami
+SUMMARY:San Francisco at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_sfnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T170500
+DTEND;TZID=America/New_York:20120528T200500
+DTSTAMP:20120226T024118Z
+UID:318452@mlb.com
+CREATED:20110908T191308Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T221500
+DTEND;TZID=America/New_York:20120530T011500
+DTSTAMP:20120226T024118Z
+UID:318467@mlb.com
+CREATED:20110908T191310Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T221500
+DTEND;TZID=America/New_York:20120531T011500
+DTSTAMP:20120226T024118Z
+UID:318482@mlb.com
+CREATED:20110908T191313Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=05&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T221500
+DTEND;TZID=America/New_York:20120602T011500
+DTSTAMP:20120226T024118Z
+UID:318504@mlb.com
+CREATED:20110908T191315Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T191500
+DTEND;TZID=America/New_York:20120602T221500
+DTSTAMP:20120226T024118Z
+UID:318519@mlb.com
+CREATED:20110908T191317Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_chnmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Turn Back the Century Game\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal TV: FOX\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T160500
+DTEND;TZID=America/New_York:20120603T190500
+DTSTAMP:20120226T024118Z
+UID:318534@mlb.com
+CREATED:20110908T191319Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_chnmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Willie McCovey Statue Replica\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120604T154500
+DTEND;TZID=America/New_York:20120604T184500
+DTSTAMP:20120226T024118Z
+UID:318545@mlb.com
+CREATED:20110908T191320Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T220500
+DTEND;TZID=America/New_York:20120606T010500
+DTSTAMP:20120226T024118Z
+UID:318560@mlb.com
+CREATED:20110908T191321Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120117T020837Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T183500
+DTEND;TZID=America/New_York:20120606T213500
+DTSTAMP:20120226T024118Z
+UID:318575@mlb.com
+CREATED:20110908T191323Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120117T020837Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120607T153500
+DTEND;TZID=America/New_York:20120607T183500
+DTSTAMP:20120226T024118Z
+UID:318588@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120117T020838Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T221500
+DTEND;TZID=America/New_York:20120609T011500
+DTSTAMP:20120226T024118Z
+UID:318605@mlb.com
+CREATED:20110908T191326Z
+DESCRIPTION:Texas at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_texmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Texas at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_texmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T160500
+DTEND;TZID=America/New_York:20120609T190500
+DTSTAMP:20120226T024118Z
+UID:318620@mlb.com
+CREATED:20110908T191328Z
+DESCRIPTION:Texas at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_texmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Super Hero Cape\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Texas at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_texmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T160500
+DTEND;TZID=America/New_York:20120610T190500
+DTSTAMP:20120226T024118Z
+UID:318635@mlb.com
+CREATED:20110908T191329Z
+DESCRIPTION:Texas at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_texmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Texas at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_texmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T221500
+DTEND;TZID=America/New_York:20120613T011500
+DTSTAMP:20120226T024118Z
+UID:318648@mlb.com
+CREATED:20110908T191331Z
+DESCRIPTION:Houston at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_houmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Houston at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_houmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T221500
+DTEND;TZID=America/New_York:20120614T011500
+DTSTAMP:20120226T024118Z
+UID:318663@mlb.com
+CREATED:20110908T191332Z
+DESCRIPTION:Houston at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_houmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Houston at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_houmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120614T154500
+DTEND;TZID=America/New_York:20120614T184500
+DTSTAMP:20120226T024118Z
+UID:318676@mlb.com
+CREATED:20110908T191334Z
+DESCRIPTION:Houston at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_houmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Houston at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_houmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T221000
+DTEND;TZID=America/New_York:20120616T011000
+DTSTAMP:20120226T024118Z
+UID:318697@mlb.com
+CREATED:20110908T191336Z
+DESCRIPTION:San Francisco at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_sfnmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Safeco Field, Seattle
+SUMMARY:San Francisco at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_sfnmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T221000
+DTEND;TZID=America/New_York:20120617T011000
+DTSTAMP:20120226T024118Z
+UID:318712@mlb.com
+CREATED:20110908T191338Z
+DESCRIPTION:San Francisco at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_sfnmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Safeco Field, Seattle
+SUMMARY:San Francisco at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_sfnmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T161000
+DTEND;TZID=America/New_York:20120617T191000
+DTSTAMP:20120226T024118Z
+UID:318727@mlb.com
+CREATED:20110908T191339Z
+DESCRIPTION:San Francisco at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_sfnmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Safeco Field, Seattle
+SUMMARY:San Francisco at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_sfnmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120618T220500
+DTEND;TZID=America/New_York:20120619T010500
+DTSTAMP:20120226T024118Z
+UID:318734@mlb.com
+CREATED:20110908T191340Z
+DESCRIPTION:San Francisco at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_sfnmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:San Francisco at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_sfnmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T220500
+DTEND;TZID=America/New_York:20120620T010500
+DTSTAMP:20120226T024118Z
+UID:318747@mlb.com
+CREATED:20110908T191341Z
+DESCRIPTION:San Francisco at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_sfnmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:San Francisco at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_sfnmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T220500
+DTEND;TZID=America/New_York:20120621T010500
+DTSTAMP:20120226T024118Z
+UID:318762@mlb.com
+CREATED:20110908T191343Z
+DESCRIPTION:San Francisco at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_sfnmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:San Francisco at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_sfnmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T220500
+DTEND;TZID=America/New_York:20120623T010500
+DTSTAMP:20120226T024118Z
+UID:318783@mlb.com
+CREATED:20110908T191345Z
+DESCRIPTION:San Francisco at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_sfnmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:San Francisco at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_sfnmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T191500
+DTEND;TZID=America/New_York:20120623T221500
+DTSTAMP:20120226T024118Z
+UID:318798@mlb.com
+CREATED:20110908T191347Z
+DESCRIPTION:San Francisco at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_sfnmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal TV: FOX\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:San Francisco at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_sfnmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T160500
+DTEND;TZID=America/New_York:20120624T190500
+DTSTAMP:20120226T024118Z
+UID:318813@mlb.com
+CREATED:20110908T191349Z
+DESCRIPTION:San Francisco at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_sfnmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:San Francisco at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_sfnmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120625T221500
+DTEND;TZID=America/New_York:20120626T011500
+DTSTAMP:20120226T024118Z
+UID:318821@mlb.com
+CREATED:20110908T191350Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T221500
+DTEND;TZID=America/New_York:20120627T011500
+DTSTAMP:20120226T024118Z
+UID:318835@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T154500
+DTEND;TZID=America/New_York:20120627T184500
+DTSTAMP:20120226T024118Z
+UID:318850@mlb.com
+CREATED:20110908T191353Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120628T221500
+DTEND;TZID=America/New_York:20120629T011500
+DTSTAMP:20120226T024118Z
+UID:318864@mlb.com
+CREATED:20110908T191354Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T221500
+DTEND;TZID=America/New_York:20120630T011500
+DTSTAMP:20120226T024118Z
+UID:318876@mlb.com
+CREATED:20110908T191355Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_cinmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T160500
+DTEND;TZID=America/New_York:20120630T190500
+DTSTAMP:20120226T024118Z
+UID:318891@mlb.com
+CREATED:20110908T191357Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_cinmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    2002 Player Bobbleheads\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=06&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T160500
+DTEND;TZID=America/New_York:20120701T190500
+DTSTAMP:20120226T024118Z
+UID:318906@mlb.com
+CREATED:20110908T191359Z
+DESCRIPTION:Cincinnati at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_cinmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    2002 World Series Team Reunion\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Cincinnati at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_cinmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T183500
+DTEND;TZID=America/New_York:20120703T213500
+DTSTAMP:20120226T024118Z
+UID:318942@mlb.com
+CREATED:20110908T191403Z
+DESCRIPTION:San Francisco at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_sfnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Nationals Park, Washington
+SUMMARY:San Francisco at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_sfnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T110500
+DTEND;TZID=America/New_York:20120704T140500
+DTSTAMP:20120226T024118Z
+UID:318957@mlb.com
+CREATED:20110908T191404Z
+DESCRIPTION:San Francisco at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_sfnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Nationals Park, Washington
+SUMMARY:San Francisco at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_sfnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T190500
+DTEND;TZID=America/New_York:20120705T220500
+DTSTAMP:20120226T024118Z
+UID:318970@mlb.com
+CREATED:20110908T191406Z
+DESCRIPTION:San Francisco at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_sfnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Nationals Park, Washington
+SUMMARY:San Francisco at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_sfnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T190500
+DTEND;TZID=America/New_York:20120706T220500
+DTSTAMP:20120226T024118Z
+UID:318985@mlb.com
+CREATED:20110908T191407Z
+DESCRIPTION:San Francisco at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_sfnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:San Francisco at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_sfnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T160500
+DTEND;TZID=America/New_York:20120707T190500
+DTSTAMP:20120226T024118Z
+UID:319000@mlb.com
+CREATED:20110908T191409Z
+DESCRIPTION:San Francisco at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_sfnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:San Francisco at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_sfnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T133500
+DTEND;TZID=America/New_York:20120708T163500
+DTSTAMP:20120226T024118Z
+UID:319015@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:San Francisco at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_sfnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:San Francisco at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_sfnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T024118Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T221500
+DTEND;TZID=America/New_York:20120714T011500
+DTSTAMP:20120226T024118Z
+UID:319025@mlb.com
+CREATED:20110908T191412Z
+DESCRIPTION:Houston at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_houmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Fireworks Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Houston at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_houmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T210500
+DTEND;TZID=America/New_York:20120715T000500
+DTSTAMP:20120226T024118Z
+UID:319040@mlb.com
+CREATED:20110908T191414Z
+DESCRIPTION:Houston at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_houmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Player T-shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Houston at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_houmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T160500
+DTEND;TZID=America/New_York:20120715T190500
+DTSTAMP:20120226T024118Z
+UID:319055@mlb.com
+CREATED:20110908T191415Z
+DESCRIPTION:Houston at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_houmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Madison Bumgarner Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Houston at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_houmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T191000
+DTEND;TZID=America/New_York:20120717T221000
+DTSTAMP:20120226T024118Z
+UID:319088@mlb.com
+CREATED:20110908T191419Z
+DESCRIPTION:San Francisco at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_sfnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:San Francisco at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_sfnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T191000
+DTEND;TZID=America/New_York:20120718T221000
+DTSTAMP:20120226T024118Z
+UID:319103@mlb.com
+CREATED:20110908T191420Z
+DESCRIPTION:San Francisco at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_sfnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:San Francisco at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_sfnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120719T121000
+DTEND;TZID=America/New_York:20120719T151000
+DTSTAMP:20120226T024118Z
+UID:319117@mlb.com
+CREATED:20110908T191422Z
+DESCRIPTION:San Francisco at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_sfnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:San Francisco at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_sfnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T190500
+DTEND;TZID=America/New_York:20120720T220500
+DTSTAMP:20120226T024118Z
+UID:319130@mlb.com
+CREATED:20110908T191423Z
+DESCRIPTION:San Francisco at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_sfnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Francisco at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_sfnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T160500
+DTEND;TZID=America/New_York:20120721T190500
+DTSTAMP:20120226T024118Z
+UID:319145@mlb.com
+CREATED:20110908T191425Z
+DESCRIPTION:San Francisco at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_sfnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Francisco at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_sfnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T133500
+DTEND;TZID=America/New_York:20120722T163500
+DTSTAMP:20120226T024118Z
+UID:319160@mlb.com
+CREATED:20110908T191427Z
+DESCRIPTION:San Francisco at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_sfnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Francisco at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_sfnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T221500
+DTEND;TZID=America/New_York:20120724T011500
+DTSTAMP:20120226T024118Z
+UID:319174@mlb.com
+CREATED:20110908T191428Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_sdnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T221500
+DTEND;TZID=America/New_York:20120725T011500
+DTSTAMP:20120226T024118Z
+UID:319188@mlb.com
+CREATED:20110908T191430Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_sdnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T154500
+DTEND;TZID=America/New_York:20120725T184500
+DTSTAMP:20120226T024118Z
+UID:319203@mlb.com
+CREATED:20110908T191431Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_sdnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T221500
+DTEND;TZID=America/New_York:20120728T011500
+DTSTAMP:20120226T024118Z
+UID:319220@mlb.com
+CREATED:20110908T191433Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T210500
+DTEND;TZID=America/New_York:20120729T000500
+DTSTAMP:20120226T024118Z
+UID:319235@mlb.com
+CREATED:20110908T191435Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_lanmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Trading Cards\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T160500
+DTEND;TZID=America/New_York:20120729T190500
+DTSTAMP:20120226T024118Z
+UID:319250@mlb.com
+CREATED:20110908T191437Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_lanmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Snap Watch\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120730T221500
+DTEND;TZID=America/New_York:20120731T011500
+DTSTAMP:20120226T024118Z
+UID:319266@mlb.com
+CREATED:20110908T191438Z
+DESCRIPTION:NY Mets at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_nynmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:NY Mets at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_nynmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T221500
+DTEND;TZID=America/New_York:20120801T011500
+DTSTAMP:20120226T024118Z
+UID:319279@mlb.com
+CREATED:20110908T191440Z
+DESCRIPTION:NY Mets at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_nynmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=07&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:NY Mets at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_nynmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T221500
+DTEND;TZID=America/New_York:20120802T011500
+DTSTAMP:20120226T024118Z
+UID:319294@mlb.com
+CREATED:20110908T191441Z
+DESCRIPTION:NY Mets at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_nynmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:NY Mets at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_nynmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120802T154500
+DTEND;TZID=America/New_York:20120802T184500
+DTSTAMP:20120226T024118Z
+UID:319305@mlb.com
+CREATED:20110908T191443Z
+DESCRIPTION:NY Mets at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_02_nynmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:NY Mets at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_02_nynmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T204000
+DTEND;TZID=America/New_York:20120803T234000
+DTSTAMP:20120226T024118Z
+UID:319322@mlb.com
+CREATED:20110908T191445Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T201000
+DTEND;TZID=America/New_York:20120804T231000
+DTSTAMP:20120226T024118Z
+UID:319337@mlb.com
+CREATED:20110908T191446Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T151000
+DTEND;TZID=America/New_York:20120805T181000
+DTSTAMP:20120226T024118Z
+UID:319352@mlb.com
+CREATED:20110908T191448Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T201500
+DTEND;TZID=America/New_York:20120806T231500
+DTSTAMP:20120226T024118Z
+UID:319365@mlb.com
+CREATED:20110908T191449Z
+DESCRIPTION:San Francisco at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_sfnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:San Francisco at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_sfnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T201500
+DTEND;TZID=America/New_York:20120807T231500
+DTSTAMP:20120226T024118Z
+UID:319379@mlb.com
+CREATED:20110908T191451Z
+DESCRIPTION:San Francisco at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_sfnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:San Francisco at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_sfnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T201500
+DTEND;TZID=America/New_York:20120808T231500
+DTSTAMP:20120226T024118Z
+UID:319394@mlb.com
+CREATED:20110908T191452Z
+DESCRIPTION:San Francisco at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_sfnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:San Francisco at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_sfnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120809T134500
+DTEND;TZID=America/New_York:20120809T164500
+DTSTAMP:20120226T024118Z
+UID:319404@mlb.com
+CREATED:20110908T191453Z
+DESCRIPTION:San Francisco at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_sfnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:San Francisco at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_sfnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T221500
+DTEND;TZID=America/New_York:20120811T011500
+DTSTAMP:20120226T024118Z
+UID:319410@mlb.com
+CREATED:20110908T191454Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T160500
+DTEND;TZID=America/New_York:20120811T190500
+DTSTAMP:20120226T024118Z
+UID:319425@mlb.com
+CREATED:20110908T191456Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_colmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Virgin America Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T160500
+DTEND;TZID=America/New_York:20120812T190500
+DTSTAMP:20120226T024118Z
+UID:319440@mlb.com
+CREATED:20110908T191457Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_colmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Giants Gym Bag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120813T221500
+DTEND;TZID=America/New_York:20120814T011500
+DTSTAMP:20120226T024118Z
+UID:319462@mlb.com
+CREATED:20110908T191500Z
+DESCRIPTION:Washington at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_wasmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Washington at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_wasmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T221500
+DTEND;TZID=America/New_York:20120815T011500
+DTSTAMP:20120226T024118Z
+UID:319477@mlb.com
+CREATED:20110908T191501Z
+DESCRIPTION:Washington at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_wasmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Washington at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_wasmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T154500
+DTEND;TZID=America/New_York:20120815T184500
+DTSTAMP:20120226T024118Z
+UID:319492@mlb.com
+CREATED:20110908T191503Z
+DESCRIPTION:Washington at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_wasmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Washington at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_wasmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T220500
+DTEND;TZID=America/New_York:20120818T010500
+DTSTAMP:20120226T024118Z
+UID:319516@mlb.com
+CREATED:20110908T191507Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120117T020841Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T160500
+DTEND;TZID=America/New_York:20120818T190500
+DTSTAMP:20120226T024118Z
+UID:319531@mlb.com
+CREATED:20110908T191509Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120117T020842Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T160500
+DTEND;TZID=America/New_York:20120819T190500
+DTSTAMP:20120226T024118Z
+UID:319546@mlb.com
+CREATED:20110908T191510Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120117T020842Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T221000
+DTEND;TZID=America/New_York:20120821T011000
+DTSTAMP:20120226T024118Z
+UID:319559@mlb.com
+CREATED:20110908T191512Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T221000
+DTEND;TZID=America/New_York:20120822T011000
+DTSTAMP:20120226T024118Z
+UID:319573@mlb.com
+CREATED:20110908T191513Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T221000
+DTEND;TZID=America/New_York:20120823T011000
+DTSTAMP:20120226T024118Z
+UID:319588@mlb.com
+CREATED:20110908T191515Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120823T221500
+DTEND;TZID=America/New_York:20120824T011500
+DTSTAMP:20120226T024118Z
+UID:319591@mlb.com
+CREATED:20110908T191516Z
+DESCRIPTION:Atlanta at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_atlmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Atlanta at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_atlmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T221500
+DTEND;TZID=America/New_York:20120825T011500
+DTSTAMP:20120226T024118Z
+UID:319600@mlb.com
+CREATED:20110908T191517Z
+DESCRIPTION:Atlanta at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_atlmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Atlanta at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_atlmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T160500
+DTEND;TZID=America/New_York:20120825T190500
+DTSTAMP:20120226T024118Z
+UID:319615@mlb.com
+CREATED:20110908T191518Z
+DESCRIPTION:Atlanta at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_atlmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Dog Days of Summer\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal TV: FOX\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Atlanta at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_atlmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T160500
+DTEND;TZID=America/New_York:20120826T190500
+DTSTAMP:20120226T024118Z
+UID:319630@mlb.com
+CREATED:20110908T191520Z
+DESCRIPTION:Atlanta at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_atlmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Pablo Sandoval Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Atlanta at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_atlmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T200500
+DTEND;TZID=America/New_York:20120828T230500
+DTSTAMP:20120226T024118Z
+UID:319665@mlb.com
+CREATED:20110908T191524Z
+DESCRIPTION:San Francisco at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_sfnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:San Francisco at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_sfnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T200500
+DTEND;TZID=America/New_York:20120829T230500
+DTSTAMP:20120226T024118Z
+UID:319680@mlb.com
+CREATED:20110908T191526Z
+DESCRIPTION:San Francisco at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_sfnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:San Francisco at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_sfnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120830T200500
+DTEND;TZID=America/New_York:20120830T230500
+DTSTAMP:20120226T024118Z
+UID:319693@mlb.com
+CREATED:20110908T191527Z
+DESCRIPTION:San Francisco at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_sfnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:San Francisco at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_sfnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T142000
+DTEND;TZID=America/New_York:20120831T172000
+DTSTAMP:20120226T024118Z
+UID:319707@mlb.com
+CREATED:20110908T191529Z
+DESCRIPTION:San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_sfnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=08&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T160500
+DTEND;TZID=America/New_York:20120901T190500
+DTSTAMP:20120226T024118Z
+UID:319722@mlb.com
+CREATED:20110908T191530Z
+DESCRIPTION:San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_sfnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T142000
+DTEND;TZID=America/New_York:20120902T172000
+DTSTAMP:20120226T024118Z
+UID:319737@mlb.com
+CREATED:20110908T191532Z
+DESCRIPTION:San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_sfnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120130T184107Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T160500
+DTEND;TZID=America/New_York:20120903T190500
+DTSTAMP:20120226T024118Z
+UID:319742@mlb.com
+CREATED:20110908T191533Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T221500
+DTEND;TZID=America/New_York:20120905T011500
+DTSTAMP:20120226T024118Z
+UID:319757@mlb.com
+CREATED:20110908T191534Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T221500
+DTEND;TZID=America/New_York:20120906T011500
+DTSTAMP:20120226T024118Z
+UID:319772@mlb.com
+CREATED:20110908T191536Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T221500
+DTEND;TZID=America/New_York:20120908T011500
+DTSTAMP:20120226T024118Z
+UID:319800@mlb.com
+CREATED:20110908T191539Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T160500
+DTEND;TZID=America/New_York:20120908T190500
+DTSTAMP:20120226T024118Z
+UID:319815@mlb.com
+CREATED:20110908T191541Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_lanmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Gigantes Player T-Shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal TV: FOX\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T160500
+DTEND;TZID=America/New_York:20120909T190500
+DTSTAMP:20120226T024118Z
+UID:319830@mlb.com
+CREATED:20110908T191542Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120910T204000
+DTEND;TZID=America/New_York:20120910T234000
+DTSTAMP:20120226T024118Z
+UID:319843@mlb.com
+CREATED:20110908T191544Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T204000
+DTEND;TZID=America/New_York:20120911T234000
+DTSTAMP:20120226T024118Z
+UID:319858@mlb.com
+CREATED:20110908T191545Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T204000
+DTEND;TZID=America/New_York:20120912T234000
+DTSTAMP:20120226T024118Z
+UID:319873@mlb.com
+CREATED:20110908T191547Z
+DESCRIPTION:San Francisco at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_sfnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:San Francisco at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_sfnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T214000
+DTEND;TZID=America/New_York:20120915T004000
+DTSTAMP:20120226T024118Z
+UID:319897@mlb.com
+CREATED:20110908T191550Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T201000
+DTEND;TZID=America/New_York:20120915T231000
+DTSTAMP:20120226T024118Z
+UID:319912@mlb.com
+CREATED:20110908T191551Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T161000
+DTEND;TZID=America/New_York:20120916T191000
+DTSTAMP:20120226T024118Z
+UID:319927@mlb.com
+CREATED:20110908T191554Z
+DESCRIPTION:San Francisco at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_sfnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:San Francisco at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_sfnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120917T221500
+DTEND;TZID=America/New_York:20120918T011500
+DTSTAMP:20120226T024118Z
+UID:319934@mlb.com
+CREATED:20110908T191554Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_17_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_17_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T221500
+DTEND;TZID=America/New_York:20120919T011500
+DTSTAMP:20120226T024118Z
+UID:319942@mlb.com
+CREATED:20110908T191555Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T221500
+DTEND;TZID=America/New_York:20120920T011500
+DTSTAMP:20120226T024118Z
+UID:319957@mlb.com
+CREATED:20110908T191557Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120920T154500
+DTEND;TZID=America/New_York:20120920T184500
+DTSTAMP:20120226T024118Z
+UID:319970@mlb.com
+CREATED:20110908T191558Z
+DESCRIPTION:Colorado at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_colmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Colorado at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_colmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T221500
+DTEND;TZID=America/New_York:20120922T011500
+DTSTAMP:20120226T024118Z
+UID:319990@mlb.com
+CREATED:20110908T191600Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_sdnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T210500
+DTEND;TZID=America/New_York:20120923T000500
+DTSTAMP:20120226T024118Z
+UID:320005@mlb.com
+CREATED:20110908T191602Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_sdnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T160500
+DTEND;TZID=America/New_York:20120923T190500
+DTSTAMP:20120226T024118Z
+UID:320020@mlb.com
+CREATED:20110908T191604Z
+DESCRIPTION:San Diego at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_sdnmlb_sfnmlb_1\n\nPromotions/Giveaways: \n    Fan Appreciation Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:San Diego at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_sdnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T221500
+DTEND;TZID=America/New_York:20120926T011500
+DTSTAMP:20120226T024118Z
+UID:320032@mlb.com
+CREATED:20110908T191605Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T221500
+DTEND;TZID=America/New_York:20120927T011500
+DTSTAMP:20120226T024118Z
+UID:320047@mlb.com
+CREATED:20110908T191607Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n\nLocal Radio: KTRB 860
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T154500
+DTEND;TZID=America/New_York:20120927T184500
+DTSTAMP:20120226T024118Z
+UID:320062@mlb.com
+CREATED:20110908T191608Z
+DESCRIPTION:Arizona at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_arimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Arizona at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_arimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T220500
+DTEND;TZID=America/New_York:20120929T010500
+DTSTAMP:20120226T024118Z
+UID:320086@mlb.com
+CREATED:20110908T191611Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120117T020845Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T203500
+DTEND;TZID=America/New_York:20120929T233500
+DTSTAMP:20120226T024118Z
+UID:320101@mlb.com
+CREATED:20110908T191612Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120117T020845Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T160500
+DTEND;TZID=America/New_York:20120930T190500
+DTSTAMP:20120226T024118Z
+UID:320116@mlb.com
+CREATED:20110908T191614Z
+DESCRIPTION:San Francisco at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_sfnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=09&y=2012\n
+LAST-MODIFIED:20120117T020845Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:San Francisco at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_sfnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T221000
+DTEND;TZID=America/New_York:20121002T011000
+DTSTAMP:20120226T024118Z
+UID:320132@mlb.com
+CREATED:20110908T191616Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=10&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T221000
+DTEND;TZID=America/New_York:20121003T011000
+DTSTAMP:20120226T024118Z
+UID:320147@mlb.com
+CREATED:20110908T191618Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=10&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T221000
+DTEND;TZID=America/New_York:20121004T011000
+DTSTAMP:20120226T024118Z
+UID:320162@mlb.com
+CREATED:20110908T191619Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=sf&m=10&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_sfnmlb_lanmlb_1
+END:VEVENT
+END:VCALENDAR

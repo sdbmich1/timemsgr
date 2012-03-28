@@ -134,7 +134,7 @@ div.boolean {
 	min-height: 280px;
 }
 
-.set-btm { margin-top: 90px; }
+.set-btm { margin-top: 90px; margin-bottom: 20px;}
 
 #landing {
   margin-top: 1em;
@@ -202,3 +202,4 @@ a.link-btn {
 
 .int-label { font-weight: bold; }
 
+.descr-width { width: 650px; }

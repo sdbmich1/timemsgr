@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :load_settings, :prepare_for_mobile, :except => :destroy
-  include Rewards, Schedule
+  before_filter :load_settings, :except => [:destroy, :clock, :getquote]
+  before_filter :prepare_for_mobile, :except => :destroy
+  include Rewards
   helper_method :mobile_device?
   
   def authenticate_user!
@@ -10,7 +11,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    events_path
+    if @user.sign_in_count <= 1 # check for new users
+      new_local_subscription_path
+    else
+      events_path
+    end 
   end
   
   protected
@@ -24,13 +29,19 @@ class ApplicationController < ActionController::Base
   end
 
   def load_settings
-    if user_signed_in?
-      @user = current_user
-      @credits, @meters = get_credits(current_user.id), get_meter_info  
-      params[:location] ? loc = params[:location] : loc = current_user.location_id 
-      @location = Location.find_location loc
-    end        
+    if signed_in?
+      @user ||= current_user
+      @location = Location.find_location params[:location] || current_user.location_id
+      @facebook_user = @user.get_facebook_user session[:omniauth] if session[:omniauth]
+    end
   end
+  
+  def stored_location_for(resource)
+    if current_user && params[:redirect_to]
+      return params[:redirect_to]
+    end
+    super( resource ) 
+  end  
   
   private
   
@@ -45,5 +56,6 @@ class ApplicationController < ActionController::Base
   def prepare_for_mobile  
     session[:mobile_param] = params[:mobile] if params[:mobile]  
     request.format = :mobile if mobile_device?  
-  end  
+  end 
+ 
 end

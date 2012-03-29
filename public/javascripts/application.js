@@ -147,6 +147,7 @@ $(function () {
   })
 });
 
+
 // toggle navigation menu background color to denote active selection
 $(function (){
    $(".all_btn, .prv_btn, .soc_btn, .ext_btn, .pend_btn, .def_btn, .nav_btn").live('click', function () {

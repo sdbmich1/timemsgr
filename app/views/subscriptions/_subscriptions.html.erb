@@ -2,22 +2,23 @@
   <tr>
     <th></th>
     <th>Name</th>
-    <th>Summary</th>
+    <th>Description</th>
     <th>Start Date</th>
     <th></th>
   </tr>
+  <% debugger %>
   <% for sub in @subscriptions %>
-    <% unless sub.channel.blank? %>
+    <% unless sub.local_channel.blank? %>
     <tr>
       <td>
         <div class="pic-size">
-          <%= render :partial => 'shared/show_photo', :locals => {:model => sub.channel, :file_name => "headshot1.jpg", :psize => '48x48' } %>
+          <%= render :partial => 'shared/show_photo', :locals => {:model => sub.local_channel, :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= sub.channel.channel_name %></td>
-      <td><%= truncate(sub.channel.bbody, :length=>80, :omission=>"...") %></td>
+      <td><%= sub.local_channel.channel_name %></td>
+      <td><%= truncate(sub.local_channel.bbody, :length=>80, :omission=>"...") %></td>
       <td><%= get_nice_date(sub.created_at, 'List') %></td>
-	  <td><%= link_to "Unsubscribe", subscription_url(:id=>sub, :user_id=>@user, :channel_id => sub.channel), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %></td>
+	  <td><%= link_to "Unsubscribe", subscription_url(:id=>sub, :user_id=>@user, :channel_id => sub.local_channel), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %></td>
     </tr>
     <% end %>
   <% end %>

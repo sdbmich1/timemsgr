@@ -75,13 +75,13 @@ module EventsHelper
   end  
 
   def is_past?(ev)
-    return false if ev.blank?
+    return false if ev.blank? 
     etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
     ev.eventstartdate <= Date.today && compare_time(Time.now, etm) ? true : false    
   end
   
   def compare_time(ctime, etime)
-    if ctime.hour > etime.hour
+    if etime.blank? || ctime.hour > etime.hour
       false
     else
       ctime.hour == etime.hour && ctime.min > etime.min ? false : true
@@ -138,6 +138,7 @@ module EventsHelper
   # adjusts time display by v1.0 time zone offset when appropriate
   def chk_offset(*tm)
     return Time.now unless tm[0]
+#    return tm[0].getlocal if tm[0] && !( tm[2].to_s =~ /^.*\b(facebook|twitter)\b.*$/i).nil?
     unless @user.blank?
       offset = tm[1] - @user.localGMToffset if tm[1]
       @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
@@ -159,7 +160,7 @@ module EventsHelper
   end
   
   def subscribed?(ssid)
-    slist = @user.try(:subscriptions)
+    slist = @user.subscriptions rescue nil
     slist.blank? ? false : slist.detect {|u| u.channelID == ssid && u.status == 'active' }
   end
 
@@ -241,8 +242,7 @@ module EventsHelper
   def get_opportunities(edate)
     events, t = [], Time.now
     (Date.today..edate).each do |dt|
-      start_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 1)
-      end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 2)
+      start_time = end_time = Time.at(t.to_i - t.sec - t.min % 15 * 60) #.advance(:hours => i + 1)
       events << {:start_date => dt, :start_time => start_time, :end_time => end_time}
     end
     events
@@ -320,7 +320,6 @@ module EventsHelper
       if start_dt == Date.today
         @date_s = "Today" 
       else
-        debugger
         dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
       end
     else

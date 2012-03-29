@@ -1,5 +1,9 @@
-class Location < ActiveRecord::Base  
+class Location < ActiveRecord::Base
+  include Schedule 
+  acts_as_mappable 
   belongs_to :country
+  
+  attr_accessible :lat, :lng
   
   has_many :channel_locations
   has_many :channels, :through => :channel_locations
@@ -25,4 +29,10 @@ class Location < ActiveRecord::Base
   def self.unhidden
     active.where(:hide => 'no')
   end
+  
+  def self.nearest_city loc
+    location = Schedule::get_offset loc
+    location.present? ? Location.closest(:origin => [location[:lat], location[:lng]]).first : nil
+#    Location.within(25, :origin => "San Rafael, CA")
+  end  
 end

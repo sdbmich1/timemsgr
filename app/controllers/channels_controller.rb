@@ -3,7 +3,7 @@ class ChannelsController < ApplicationController
   layout :page_layout
   
   def index
-    mobile_device? ? @channels = Channel.channel_cached(@location, params[:interest_id]) : @channels = Channel.list_cached(@location, params[:interest_id], params[:channel_page])
+    mobile_device? ? @channels = Channel.channel_cached(@location, params[:interest_id]) : @channels = LocalChannel.get_channel_by_loc(@user.location)  #Channel.list_cached(@location, params[:interest_id], params[:channel_page])
   end
   
   def show
@@ -16,8 +16,10 @@ class ChannelsController < ApplicationController
   end
   
   def select
-    @interest = params[:interest_id]
-    @channels = Channel.list_cached(params[:location], @interest, 1)
+    @interest = Interest.find params[:interest_id]
+    @channels = LocalChannel.select_channel(@interest.name, @location.city, @user.location)[0].paginate(:page => params[:channel_page], :per_page => 15 )
+#    @channels = Channel.list_cached(params[:location], @interest, 1)
+ #   @channels = LocalChannel.get_channel(@interest.name, @location.city, @user.location).paginate(:page => params[:channel_page], :per_page => 15 )
   end
   
   private

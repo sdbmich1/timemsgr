@@ -77,7 +77,7 @@ Devise.setup do |config|
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this
   # time the user will be asked for credentials again.
-  config.timeout_in = 60.minutes
+  config.timeout_in = 7.days
 
   # ==> Configuration for :lockable
   # Defines which strategy will be used to lock an account.
@@ -139,6 +139,9 @@ Devise.setup do |config|
   #   end
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
-#  config.omniauth :open_id, OpenID::Store::Filesystem.new('/tmp')
-#  config.omniauth :google, OpenID::Store::Filesystem.new('/tmp'), :domain => 'gmail.com' 
+  require "omniauth-facebook"
+  require 'openid/store/filesystem'
+  config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :require => 'omniauth-openid'
+  config.omniauth :facebook, '131627943626812', '440e7e13fcf9ccc418d727e9b2f59b79', { :client_options => {:ssl => {:ca_file => Rails.root.join('/lib/assets/ca-bundle.crt').to_s}} }
+      
 end

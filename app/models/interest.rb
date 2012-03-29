@@ -1,10 +1,11 @@
 class Interest < KitsTsdModel
-  attr_accessible :name
+  before_save :set_flds
+  attr_accessible :name, :hide, :status, :category_id, :id, :sortkey
 	belongs_to :category
 
-	has_many :interests_users
-	has_many :users, :through => :interests_users
-	
+	has_many :user_interests
+	has_many :users, :through => :user_interests
+		
 	has_many :channel_interests
 	has_many :channels, :through => :channel_interests, 
 				:conditions => { :status.downcase => 'active'}
@@ -22,4 +23,22 @@ class Interest < KitsTsdModel
   def self.find_interests(cid)
     get_active_list.where(:category_id => cid)
   end
+  
+  def self.find_or_add_interest title
+    category = Category.select_category(title).first  
+    interest = Interest.find_or_create_by_name title, :category_id => category[0].id, :sortkey => category[0].interests.count+1
+    interest
+  end
+  
+  def self.get_interest_by_name(title)
+    if interest = Interest.where("name like ?", '%' + title + '%').first
+      interest
+    else 
+      interest = Interest.add_interest title
+    end  
+  end 
+  
+  def set_flds
+    self.hide, self.status = "no", "active"
+  end 
 end

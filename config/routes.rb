@@ -1,6 +1,14 @@
 Timemsgr::Application.routes.draw do
 
-  devise_for :users, :controllers => { :registrations => "registrations" }  
+  devise_for :users, :controllers => { :registrations => "registrations" , :omniauth_callbacks => "omniauth_callbacks" } do
+    get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
+    get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
+  end
+  
+  devise_scope :user do
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+    get '/users/auth/:provider/setup' => 'users/omniauth_callbacks#setup'
+  end 
     
   resources :channels do
     get 'about', :on => :member
@@ -18,9 +26,11 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :categories, :interests,  :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
+  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
     :search_users
-  
+    
+  resources :local_subscriptions, :only => [:create, :new]
+
   resources :events do 
     member do
       get 'share', 'like', 'notify', 'offer', 'rsvp', 'purchase'
@@ -67,11 +77,6 @@ Timemsgr::Application.routes.draw do
   	root :to => "users#home", :as => :user_root
   end
 
-  # add authentication route callback
-  match "/auth/failure", :to => "authentications#failure"
-  match '/auth/:provider', :to => 'authentications#blank'
-  match '/auth/:provider/callback', :to => 'authentications#create' 
-
   # set up general routes
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
@@ -85,6 +90,7 @@ Timemsgr::Application.routes.draw do
   match '/notify', :to =>  "events#notify"
   match '/events/notice', :to =>  "events#notice"
   match '/select', :to =>  "channels#select"
+  match '/list', :to =>  "categories#list"
     
   # route custom event actions
   match '/outlook', :to => 'events#outlook', :as => "outlook"

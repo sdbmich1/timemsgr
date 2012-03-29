@@ -1,6 +1,7 @@
 class Subscription < KitsTsdModel
 	belongs_to :user	   	
 	belongs_to :channel, :foreign_key => :channelID, :primary_key => :channelID
+  belongs_to :local_channel, :foreign_key => :channelID, :primary_key => :channelID
 	
 	before_create :set_flds
 	
@@ -19,11 +20,11 @@ class Subscription < KitsTsdModel
   end
   
   def self.get_active_list(uid)
-    Channel.joins(:subscriptions).where('subscriptions.user_id = ? and subscriptions.status = ?', uid, 'active')
+    LocalChannel.joins(:subscriptions).where('subscriptions.user_id = ? and subscriptions.status = ?', uid, 'active')
   end
   
   def self.new_member(usr, channel)
-    sub = Subscription.new(:user_id=>usr.id, :channelID => channel.channelID, :contentsourceID => usr.host_profiles[0].subscriptionsourceID )
+    sub = Subscription.new(:user_id=>usr.id, :channelID => channel.channelID, :contentsourceID => usr.ssid )
     sub
   end
   
@@ -31,5 +32,10 @@ class Subscription < KitsTsdModel
     subscription = Subscription.find_by_user_id_and_channelID(uid, cid)
     subscription.status = 'inactive'
     subscription
+  end
+  
+  def channel_name(cid)
+    channel = LocalChannel.find_by_channelID(cid)
+    channel.channel_name if channel
   end
 end

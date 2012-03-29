@@ -76,6 +76,10 @@ module ApplicationHelper
 
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
+  end
+  
+  def has_facebook_photo?
+    @facebook_user.blank? ? false : !@facebook_user.picture.blank?
   end  
   
 end

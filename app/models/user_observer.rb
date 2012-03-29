@@ -1,5 +1,5 @@
 class UserObserver < ActiveRecord::Observer
-  include ProcessNotice, Rewards
+  include ProcessNotice, Rewards, UserInfo
   observe User
   
   def after_save(model)
@@ -16,42 +16,51 @@ class UserObserver < ActiveRecord::Observer
     channelID = 'IN' + Time.now.to_i.to_s
     
     #create host profile
-    hp = user.profile
-    hp ||= user.host_profiles.build
-    hp.LastName, hp.FirstName = user.last_name, user.first_name 
+    hp = user.profile 
+    hp.LastName, hp.FirstName, hp.EMAIL, hp.Gender = user.last_name, user.first_name, user.email, user.gender 
     hp.HostName = hp.FullName = user.name 
-    hp.EMAIL, hp.Gender = user.email, user.gender
     hp.StartMonth, hp.StartDay, hp.StartYear  = user.created_at.month, user.created_at.day, user.created_at.year
     hp.ProfileType, hp.EntityCategory, hp.EntityType = 'Individual','individual','A'  
     hp.promoCode, hp.status, hp.hide = user.promo_code, 'active', 'yes' 
     hp.HostChannelID = hp.subscriptionsourceID = channelID
+    hp.City, hp.State = user.city.split(', ')[0], user.city.split(', ')[1] if user.city
     hp.save
-    
+        
     #create channel
     hp.channels.create(:channelID => channelID, :subscriptionsourceID => channelID, :HostProfileID => hp.id, 
         :status => 'active', :hide => 'yes', :channel_name => hp.HostName, :channel_title => hp.HostName,
 	      :channel_class => 'basic', :channel_type => 'indhost')
-	  
-	  # add subscription if promo code is valid
-    unless user.promo_code.blank?
-      hp_promo = HostProfile.find_promo_code user.promo_code
-      unless hp_promo.blank?
-        hp_promo.channels.each do |channel|
-          Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid) if channel       
-        end
-      end
-    end
-    
-    # subscribe to local channels
-#    local_channels = LocalChannel.where('localename = ?', user.location)    
-#    local_channels.each do |channel|
-#      Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid) if channel
-#    end
+        
+    # set up initial subscriptions
+    add_subscriptions user
     
     # process notice
     newuser_notice(user)
     
     # send welcome email
-    UserMailer.welcome_email(user).delay    
+    UserMailer.delay.welcome_email(user)    
+  end
+  
+  def add_subscriptions user
+    
+    # load user interests from oauth api
+    oauth_user.interests.each do |interest| 
+      int = Interest.find_or_add_interest interest.name
+      UserInterest.create :user_id=>user.id, :interest_id=>int.id
+        
+      # find correct channel based on location
+      cid = LocalChannel.select_channel(interest.name, user.city, user.location)
+      cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+    end
+    
+    # add subscription if promo code is valid
+    unless user.promo_code.blank?
+      hp_promo = HostProfile.find_promo_code user.promo_code      
+      hp_promo.channels.map {|channel| Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid)} unless hp_promo.blank?              
+    end
+    
+    # add system channels for given location
+#    cid = LocalChannel.select_system_channels(user.profile.City, user.location)
+#    cid.map { |ch| ch.map {|channel| Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid) }}    
   end
 end

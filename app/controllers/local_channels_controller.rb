@@ -1,0 +1,2 @@
+class LocalChannelsController < ApplicationController
+end

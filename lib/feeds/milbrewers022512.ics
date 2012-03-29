@@ -1,0 +1,2798 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 Milwaukee Brewers Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T150500
+DTEND;TZID=America/New_York:20120304T180500
+DTSTAMP:20120226T084230Z
+UID:332118@mlb.com
+CREATED:20111130T212815Z
+DESCRIPTION:Spring Training: San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20111214T194931Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T213500
+DTEND;TZID=America/New_York:20120306T003500
+DTSTAMP:20120226T084230Z
+UID:332128@mlb.com
+CREATED:20111130T212817Z
+DESCRIPTION:Spring Training: Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T150500
+DTEND;TZID=America/New_York:20120306T180500
+DTSTAMP:20120226T084230Z
+UID:332145@mlb.com
+CREATED:20111130T212819Z
+DESCRIPTION:Spring Training: Oakland at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_oakmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: MLBN (delay), FSN, MLB.TV\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Oakland at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_oakmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T150500
+DTEND;TZID=America/New_York:20120307T180500
+DTSTAMP:20120226T084230Z
+UID:332159@mlb.com
+CREATED:20111130T212821Z
+DESCRIPTION:Spring Training: Milwaukee at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_milmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Milwaukee at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_milmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120308T150500
+DTEND;TZID=America/New_York:20120308T180500
+DTSTAMP:20120226T084230Z
+UID:332172@mlb.com
+CREATED:20111130T212823Z
+DESCRIPTION:Spring Training: Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T084230Z
+UID:332189@mlb.com
+CREATED:20111130T212825Z
+DESCRIPTION:Spring Training: Cleveland at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_clemlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Cleveland at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_clemlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T084230Z
+UID:332207@mlb.com
+CREATED:20111130T212828Z
+DESCRIPTION:Spring Training: Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T084230Z
+UID:332202@mlb.com
+CREATED:20111130T212827Z
+DESCRIPTION:Spring Training: Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T160500
+DTEND;TZID=America/New_York:20120311T190500
+DTSTAMP:20120226T084230Z
+UID:332226@mlb.com
+CREATED:20111130T212831Z
+DESCRIPTION:Spring Training: Colorado at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_colmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Colorado at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_colmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T160500
+DTEND;TZID=America/New_York:20120313T190500
+DTSTAMP:20120226T084230Z
+UID:332262@mlb.com
+CREATED:20111130T212836Z
+DESCRIPTION:Spring Training: Seattle at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_seamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Seattle at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_seamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T160500
+DTEND;TZID=America/New_York:20120313T190500
+DTSTAMP:20120226T084230Z
+UID:332260@mlb.com
+CREATED:20111130T212836Z
+DESCRIPTION:Spring Training: Milwaukee at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_milmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Phoenix Municipal Stadium, Phoenix
+SUMMARY:Spring Training: Milwaukee at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_milmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T160500
+DTEND;TZID=America/New_York:20120314T190500
+DTSTAMP:20120226T084230Z
+UID:332275@mlb.com
+CREATED:20111130T212838Z
+DESCRIPTION:Spring Training: Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T160500
+DTEND;TZID=America/New_York:20120315T190500
+DTSTAMP:20120226T084230Z
+UID:332295@mlb.com
+CREATED:20111130T212841Z
+DESCRIPTION:Spring Training: San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_sdnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_sdnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T160500
+DTEND;TZID=America/New_York:20120316T190500
+DTSTAMP:20120226T084230Z
+UID:332307@mlb.com
+CREATED:20111130T212842Z
+DESCRIPTION:Spring Training: Milwaukee at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_milmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Milwaukee at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_milmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T160500
+DTEND;TZID=America/New_York:20120316T190500
+DTSTAMP:20120226T084230Z
+UID:337253@mlb.com
+CREATED:20120213T233434Z
+DESCRIPTION:Spring Training: Seattle at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_seamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n
+LAST-MODIFIED:20120223T223220Z
+LOCATION:Kino Veterans Memorial Stadium, Tucson
+SUMMARY:Spring Training: Seattle at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_seamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T160500
+DTEND;TZID=America/New_York:20120317T190500
+DTSTAMP:20120226T084230Z
+UID:332325@mlb.com
+CREATED:20111130T212845Z
+DESCRIPTION:Spring Training: Milwaukee at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_milmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: FSN, MLB.TV, MLBN\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Tempe Diablo Stadium, Tempe
+SUMMARY:Spring Training: Milwaukee at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_milmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T084230Z
+UID:332351@mlb.com
+CREATED:20111130T212849Z
+DESCRIPTION:Spring Training: Texas at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_texmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Texas at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_texmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120319T160500
+DTEND;TZID=America/New_York:20120319T190500
+DTSTAMP:20120226T084230Z
+UID:332359@mlb.com
+CREATED:20111130T212850Z
+DESCRIPTION:Spring Training: Milwaukee at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_milmlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194523Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Milwaukee at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_milmlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T160500
+DTEND;TZID=America/New_York:20120320T190500
+DTSTAMP:20120226T084230Z
+UID:332366@mlb.com
+CREATED:20111130T212851Z
+DESCRIPTION:Spring Training: Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: MLB.TV, FSN, MLBN
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120321T161000
+DTEND;TZID=America/New_York:20120321T191000
+DTSTAMP:20120226T084230Z
+UID:332379@mlb.com
+CREATED:20111130T212853Z
+DESCRIPTION:Spring Training: Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T160500
+DTEND;TZID=America/New_York:20120323T190500
+DTSTAMP:20120226T084230Z
+UID:332401@mlb.com
+CREATED:20111130T212856Z
+DESCRIPTION:Spring Training: LA Angels at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_anamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111214T194929Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: LA Angels at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_anamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T084230Z
+UID:332418@mlb.com
+CREATED:20111130T212858Z
+DESCRIPTION:Spring Training: Chi White Sox at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_chamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Chi White Sox at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_chamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T160500
+DTEND;TZID=America/New_York:20120325T190500
+DTSTAMP:20120226T084230Z
+UID:332438@mlb.com
+CREATED:20111130T212901Z
+DESCRIPTION:Spring Training: LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_lanmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T160500
+DTEND;TZID=America/New_York:20120325T190500
+DTSTAMP:20120226T084230Z
+UID:332440@mlb.com
+CREATED:20111130T212901Z
+DESCRIPTION:Spring Training: Milwaukee at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_milmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n
+LAST-MODIFIED:20111213T230915Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Milwaukee at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_milmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T160500
+DTEND;TZID=America/New_York:20120326T190500
+DTSTAMP:20120226T084230Z
+UID:332456@mlb.com
+CREATED:20111130T212903Z
+DESCRIPTION:Spring Training: Milwaukee at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_milmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Milwaukee at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_milmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T160500
+DTEND;TZID=America/New_York:20120327T190500
+DTSTAMP:20120226T084230Z
+UID:332466@mlb.com
+CREATED:20111130T212904Z
+DESCRIPTION:Spring Training: Kansas City at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_kcamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111213T230915Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Kansas City at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_kcamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T160500
+DTEND;TZID=America/New_York:20120328T190500
+DTSTAMP:20120226T084230Z
+UID:332475@mlb.com
+CREATED:20111130T212905Z
+DESCRIPTION:Spring Training: Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_arimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T160500
+DTEND;TZID=America/New_York:20120329T190500
+DTSTAMP:20120226T084230Z
+UID:332492@mlb.com
+CREATED:20111130T212907Z
+DESCRIPTION:Spring Training: Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T160500
+DTEND;TZID=America/New_York:20120330T190500
+DTSTAMP:20120226T084230Z
+UID:332512@mlb.com
+CREATED:20111130T212909Z
+DESCRIPTION:Spring Training: Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: FSN, MLBN (delay), MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T150500
+DTEND;TZID=America/New_York:20120331T180500
+DTSTAMP:20120226T084230Z
+UID:332527@mlb.com
+CREATED:20111130T212911Z
+DESCRIPTION:Spring Training: Milwaukee at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_milmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=03&y=2012\n\nLocal TV: FSN, MLB.TV\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Milwaukee at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_milmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T160500
+DTEND;TZID=America/New_York:20120401T190500
+DTSTAMP:20120226T084230Z
+UID:332546@mlb.com
+CREATED:20111130T212913Z
+DESCRIPTION:Spring Training: San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_sfnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T150500
+DTEND;TZID=America/New_York:20120402T180500
+DTSTAMP:20120226T084230Z
+UID:332555@mlb.com
+CREATED:20111130T212914Z
+DESCRIPTION:Spring Training: Milwaukee at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_milmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Milwaukee at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_milmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T150500
+DTEND;TZID=America/New_York:20120403T180500
+DTSTAMP:20120226T084230Z
+UID:332563@mlb.com
+CREATED:20111130T212915Z
+DESCRIPTION:Spring Training: Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T214000
+DTEND;TZID=America/New_York:20120404T004000
+DTSTAMP:20120226T084230Z
+UID:331124@mlb.com
+CREATED:20111117T181025Z
+DESCRIPTION:Spring Training: Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Spring Training: Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120404T154000
+DTEND;TZID=America/New_York:20120404T184000
+DTSTAMP:20120226T084230Z
+UID:331125@mlb.com
+CREATED:20111117T181026Z
+DESCRIPTION:Spring Training: Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN, MLBN (delay), MLB.TV\nLocal Radio: WTMJ 620
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Spring Training: Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120406T161000
+DTEND;TZID=America/New_York:20120406T191000
+DTSTAMP:20120226T084230Z
+UID:317749@mlb.com
+CREATED:20110908T191146Z
+DESCRIPTION:St. Louis at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_slnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Associated Bank Brewers Magnetic Schedule Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120126T201149Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:St. Louis at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_slnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T160500
+DTEND;TZID=America/New_York:20120407T190500
+DTSTAMP:20120226T084230Z
+UID:317762@mlb.com
+CREATED:20110908T191147Z
+DESCRIPTION:St. Louis at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_slnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Potawatomi Pen Schedule\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FOX\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:St. Louis at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_slnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T141000
+DTEND;TZID=America/New_York:20120408T171000
+DTSTAMP:20120226T084230Z
+UID:317777@mlb.com
+CREATED:20110908T191149Z
+DESCRIPTION:St. Louis at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_slnmlb_milmlb_1\n\nPromotions/Giveaways: \n    West Bend – The Silver Lining, Kapco Metal Stamping and Delzer Lithograph 2011 Brewers Highlight DVD (All fans)\n    2-Man Advantage\n    Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:St. Louis at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_slnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120409T190500
+DTEND;TZID=America/New_York:20120409T220500
+DTSTAMP:20120226T084230Z
+UID:317786@mlb.com
+CREATED:20110908T191151Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120223T170115Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120410T200500
+DTEND;TZID=America/New_York:20120410T230500
+DTSTAMP:20120226T084230Z
+UID:317797@mlb.com
+CREATED:20110908T191152Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T142000
+DTEND;TZID=America/New_York:20120411T172000
+DTSTAMP:20120226T084230Z
+UID:317811@mlb.com
+CREATED:20110908T191154Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T142000
+DTEND;TZID=America/New_York:20120412T172000
+DTSTAMP:20120226T084230Z
+UID:317823@mlb.com
+CREATED:20110908T191155Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T193500
+DTEND;TZID=America/New_York:20120413T223500
+DTSTAMP:20120226T084230Z
+UID:317836@mlb.com
+CREATED:20110908T191157Z
+DESCRIPTION:Milwaukee at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_milmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120126T201149Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Milwaukee at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_milmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T191000
+DTEND;TZID=America/New_York:20120414T221000
+DTSTAMP:20120226T084230Z
+UID:317851@mlb.com
+CREATED:20110908T191159Z
+DESCRIPTION:Milwaukee at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_milmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Milwaukee at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_milmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T133500
+DTEND;TZID=America/New_York:20120415T163500
+DTSTAMP:20120226T084230Z
+UID:317866@mlb.com
+CREATED:20110908T191201Z
+DESCRIPTION:Milwaukee at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_milmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Milwaukee at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_milmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T201000
+DTEND;TZID=America/New_York:20120417T231000
+DTSTAMP:20120226T084230Z
+UID:317889@mlb.com
+CREATED:20110908T191204Z
+DESCRIPTION:LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_lanmlb_milmlb_1\n\nPromotions/Giveaways: \n    5-County 5-Day Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T201000
+DTEND;TZID=America/New_York:20120418T231000
+DTSTAMP:20120226T084230Z
+UID:317904@mlb.com
+CREATED:20110908T191207Z
+DESCRIPTION:LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_lanmlb_milmlb_1\n\nPromotions/Giveaways: \n    5-County 5-Day Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120419T131000
+DTEND;TZID=America/New_York:20120419T161000
+DTSTAMP:20120226T084230Z
+UID:317919@mlb.com
+CREATED:20110908T191209Z
+DESCRIPTION:LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_lanmlb_milmlb_1\n\nPromotions/Giveaways: \n    5-County 5-Day Celebration\n    Weather Day at Miller Park\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T201000
+DTEND;TZID=America/New_York:20120420T231000
+DTSTAMP:20120226T084230Z
+UID:317930@mlb.com
+CREATED:20110908T191210Z
+DESCRIPTION:Colorado at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_colmlb_milmlb_1\n\nPromotions/Giveaways: \n    5-County 5-Day Celebration\n    Sentry Foods Special Coupon and “Ultimate Brewers Fan Experience” Sweepstakes\n    Brewers Community Foundation Drive For Charity\n    2-Man Advantage\n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Colorado at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_colmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T191000
+DTEND;TZID=America/New_York:20120421T221000
+DTSTAMP:20120226T084230Z
+UID:317945@mlb.com
+CREATED:20110908T191212Z
+DESCRIPTION:Colorado at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_colmlb_milmlb_1\n\nPromotions/Giveaways: \n    5-County 5-Day Celebration\n    Sports Authority Special Coupon\n    Brewers Community Foundation Drive For Charity\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Colorado at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_colmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T141000
+DTEND;TZID=America/New_York:20120422T171000
+DTSTAMP:20120226T084230Z
+UID:317960@mlb.com
+CREATED:20110908T191214Z
+DESCRIPTION:Colorado at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_colmlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n    Kwik Trip Jonathan Lucroy Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: Telemundo, FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Colorado at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_colmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120423T201000
+DTEND;TZID=America/New_York:20120423T231000
+DTSTAMP:20120226T084230Z
+UID:317974@mlb.com
+CREATED:20110908T191215Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_houmlb_milmlb_1\n\nPromotions/Giveaways: \n    Career Fair at Miller Park\n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T201000
+DTEND;TZID=America/New_York:20120424T231000
+DTSTAMP:20120226T084230Z
+UID:317986@mlb.com
+CREATED:20110908T191217Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_houmlb_milmlb_1\n\nPromotions/Giveaways: \n    2-Man Advantage\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T131000
+DTEND;TZID=America/New_York:20120425T161000
+DTSTAMP:20120226T084230Z
+UID:318001@mlb.com
+CREATED:20110908T191218Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_houmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T201500
+DTEND;TZID=America/New_York:20120427T231500
+DTSTAMP:20120226T084230Z
+UID:318025@mlb.com
+CREATED:20110908T191221Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T130500
+DTEND;TZID=America/New_York:20120428T160500
+DTSTAMP:20120226T084230Z
+UID:318040@mlb.com
+CREATED:20110908T191223Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T141500
+DTEND;TZID=America/New_York:20120429T171500
+DTSTAMP:20120226T084230Z
+UID:318055@mlb.com
+CREATED:20110908T191224Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120430T220500
+DTEND;TZID=America/New_York:20120501T010500
+DTSTAMP:20120226T084230Z
+UID:318068@mlb.com
+CREATED:20110908T191226Z
+DESCRIPTION:Milwaukee at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_milmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=04&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120117T020835Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Milwaukee at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_milmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T220500
+DTEND;TZID=America/New_York:20120502T010500
+DTSTAMP:20120226T084230Z
+UID:318082@mlb.com
+CREATED:20110908T191227Z
+DESCRIPTION:Milwaukee at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_milmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120117T020835Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Milwaukee at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_milmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T183500
+DTEND;TZID=America/New_York:20120502T213500
+DTSTAMP:20120226T084230Z
+UID:318097@mlb.com
+CREATED:20110908T191229Z
+DESCRIPTION:Milwaukee at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_milmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120117T020835Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Milwaukee at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_milmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T221500
+DTEND;TZID=America/New_York:20120505T011500
+DTSTAMP:20120226T084230Z
+UID:318121@mlb.com
+CREATED:20110908T191232Z
+DESCRIPTION:Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T160500
+DTEND;TZID=America/New_York:20120505T190500
+DTSTAMP:20120226T084230Z
+UID:318136@mlb.com
+CREATED:20110908T191234Z
+DESCRIPTION:Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T160500
+DTEND;TZID=America/New_York:20120506T190500
+DTSTAMP:20120226T084230Z
+UID:318151@mlb.com
+CREATED:20110908T191236Z
+DESCRIPTION:Milwaukee at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_milmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Milwaukee at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_milmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T201000
+DTEND;TZID=America/New_York:20120507T231000
+DTSTAMP:20120226T084230Z
+UID:318163@mlb.com
+CREATED:20110908T191237Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_cinmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T201000
+DTEND;TZID=America/New_York:20120508T231000
+DTSTAMP:20120226T084230Z
+UID:318175@mlb.com
+CREATED:20110908T191238Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T131000
+DTEND;TZID=America/New_York:20120509T161000
+DTSTAMP:20120226T084230Z
+UID:318190@mlb.com
+CREATED:20110908T191240Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_cinmlb_milmlb_1\n\nPromotions/Giveaways: \n    University of Wisconsin – Milwaukee Baseball Game\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T201000
+DTEND;TZID=America/New_York:20120511T231000
+DTSTAMP:20120226T084230Z
+UID:318209@mlb.com
+CREATED:20110908T191242Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_chnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Sports Authority Special Coupon\n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T130500
+DTEND;TZID=America/New_York:20120512T160500
+DTSTAMP:20120226T084230Z
+UID:318224@mlb.com
+CREATED:20110908T191244Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FOX\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T141000
+DTEND;TZID=America/New_York:20120513T171000
+DTSTAMP:20120226T084230Z
+UID:318239@mlb.com
+CREATED:20110908T191246Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_chnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Robert Haack Diamonds Yovani Gallardo Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T191000
+DTEND;TZID=America/New_York:20120514T221000
+DTSTAMP:20120226T084230Z
+UID:318260@mlb.com
+CREATED:20110908T191248Z
+DESCRIPTION:Milwaukee at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_milmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Milwaukee at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_milmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T191000
+DTEND;TZID=America/New_York:20120515T221000
+DTSTAMP:20120226T084230Z
+UID:318275@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Milwaukee at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_milmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Milwaukee at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_milmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T200500
+DTEND;TZID=America/New_York:20120516T230500
+DTSTAMP:20120226T084230Z
+UID:318289@mlb.com
+CREATED:20110908T191251Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T200500
+DTEND;TZID=America/New_York:20120517T230500
+DTSTAMP:20120226T084230Z
+UID:318304@mlb.com
+CREATED:20110908T191253Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T201000
+DTEND;TZID=America/New_York:20120518T231000
+DTSTAMP:20120226T084230Z
+UID:318320@mlb.com
+CREATED:20110908T191254Z
+DESCRIPTION:Minnesota at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_minmlb_milmlb_1\n\nPromotions/Giveaways: \n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Minnesota at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_minmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T161000
+DTEND;TZID=America/New_York:20120519T191000
+DTSTAMP:20120226T084230Z
+UID:318335@mlb.com
+CREATED:20110908T191256Z
+DESCRIPTION:Minnesota at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_minmlb_milmlb_1\n\nPromotions/Giveaways: \n    Kwik Trip Coupon Giveaway\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120106T053220Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Minnesota at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_minmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T141000
+DTEND;TZID=America/New_York:20120520T171000
+DTSTAMP:20120226T084230Z
+UID:318350@mlb.com
+CREATED:20110908T191258Z
+DESCRIPTION:Minnesota at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_minmlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Kids Police Baseball Card Set\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: Telemundo, FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Minnesota at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_minmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T201000
+DTEND;TZID=America/New_York:20120521T231000
+DTSTAMP:20120226T084230Z
+UID:318366@mlb.com
+CREATED:20110908T191259Z
+DESCRIPTION:San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_sfnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Spring Madness\n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T201000
+DTEND;TZID=America/New_York:20120522T231000
+DTSTAMP:20120226T084230Z
+UID:318381@mlb.com
+CREATED:20110908T191301Z
+DESCRIPTION:San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_sfnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Spring Madness\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T131000
+DTEND;TZID=America/New_York:20120523T161000
+DTSTAMP:20120226T084230Z
+UID:318396@mlb.com
+CREATED:20110908T191302Z
+DESCRIPTION:San Francisco at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_sfnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Spring Madness\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Francisco at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_sfnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T214000
+DTEND;TZID=America/New_York:20120526T004000
+DTSTAMP:20120226T084230Z
+UID:318414@mlb.com
+CREATED:20110908T191304Z
+DESCRIPTION:Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T221000
+DTEND;TZID=America/New_York:20120527T011000
+DTSTAMP:20120226T084230Z
+UID:318429@mlb.com
+CREATED:20110908T191306Z
+DESCRIPTION:Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T161000
+DTEND;TZID=America/New_York:20120527T191000
+DTSTAMP:20120226T084230Z
+UID:318444@mlb.com
+CREATED:20110908T191308Z
+DESCRIPTION:Milwaukee at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_milmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Milwaukee at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_milmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T201000
+DTEND;TZID=America/New_York:20120528T231000
+DTSTAMP:20120226T084230Z
+UID:318459@mlb.com
+CREATED:20110908T191309Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T221000
+DTEND;TZID=America/New_York:20120530T011000
+DTSTAMP:20120226T084230Z
+UID:318474@mlb.com
+CREATED:20110908T191311Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T221000
+DTEND;TZID=America/New_York:20120531T011000
+DTSTAMP:20120226T084230Z
+UID:318489@mlb.com
+CREATED:20110908T191314Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120531T221000
+DTEND;TZID=America/New_York:20120601T011000
+DTSTAMP:20120226T084230Z
+UID:318499@mlb.com
+CREATED:20110908T191315Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_31_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=05&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120131T151437Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_31_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T201000
+DTEND;TZID=America/New_York:20120601T231000
+DTSTAMP:20120226T084230Z
+UID:318511@mlb.com
+CREATED:20110908T191316Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T191000
+DTEND;TZID=America/New_York:20120602T221000
+DTSTAMP:20120226T084230Z
+UID:318526@mlb.com
+CREATED:20110908T191318Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Cerveceros Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T141000
+DTEND;TZID=America/New_York:20120603T171000
+DTSTAMP:20120226T084230Z
+UID:318541@mlb.com
+CREATED:20110908T191319Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    MLB Network Drawstring Backpack\n    Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN, Telemundo\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T201000
+DTEND;TZID=America/New_York:20120605T231000
+DTSTAMP:20120226T084230Z
+UID:318552@mlb.com
+CREATED:20110908T191320Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T201000
+DTEND;TZID=America/New_York:20120606T231000
+DTSTAMP:20120226T084230Z
+UID:318567@mlb.com
+CREATED:20110908T191322Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120607T141000
+DTEND;TZID=America/New_York:20120607T171000
+DTSTAMP:20120226T084230Z
+UID:318582@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T201000
+DTEND;TZID=America/New_York:20120608T231000
+DTSTAMP:20120226T084230Z
+UID:318603@mlb.com
+CREATED:20110908T191326Z
+DESCRIPTION:San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_sdnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Sports Authority Special Coupon\n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_sdnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T161000
+DTEND;TZID=America/New_York:20120609T191000
+DTSTAMP:20120226T084230Z
+UID:318618@mlb.com
+CREATED:20110908T191328Z
+DESCRIPTION:San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_sdnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_sdnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T141000
+DTEND;TZID=America/New_York:20120610T171000
+DTSTAMP:20120226T084230Z
+UID:318633@mlb.com
+CREATED:20110908T191329Z
+DESCRIPTION:San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_sdnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Wisconsin Milk Marketing Board Nyjer Morgan Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN, Telemundo\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_sdnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T201000
+DTEND;TZID=America/New_York:20120612T231000
+DTSTAMP:20120226T084230Z
+UID:318649@mlb.com
+CREATED:20110908T191331Z
+DESCRIPTION:Milwaukee at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_milmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120118T170103Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:Milwaukee at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_milmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T201000
+DTEND;TZID=America/New_York:20120613T231000
+DTSTAMP:20120226T084230Z
+UID:318664@mlb.com
+CREATED:20110908T191332Z
+DESCRIPTION:Milwaukee at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_milmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120118T170103Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:Milwaukee at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_milmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120614T201000
+DTEND;TZID=America/New_York:20120614T231000
+DTSTAMP:20120226T084230Z
+UID:318677@mlb.com
+CREATED:20110908T191334Z
+DESCRIPTION:Milwaukee at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_milmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120118T170103Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:Milwaukee at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_milmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T201000
+DTEND;TZID=America/New_York:20120615T231000
+DTSTAMP:20120226T084230Z
+UID:318692@mlb.com
+CREATED:20110908T191335Z
+DESCRIPTION:Milwaukee at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_milmlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Milwaukee at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_milmlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T141000
+DTEND;TZID=America/New_York:20120616T171000
+DTSTAMP:20120226T084230Z
+UID:318707@mlb.com
+CREATED:20110908T191337Z
+DESCRIPTION:Milwaukee at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_milmlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Milwaukee at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_milmlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T141000
+DTEND;TZID=America/New_York:20120617T171000
+DTSTAMP:20120226T084230Z
+UID:318722@mlb.com
+CREATED:20110908T191339Z
+DESCRIPTION:Milwaukee at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_milmlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Milwaukee at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_milmlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120618T201000
+DTEND;TZID=America/New_York:20120618T231000
+DTSTAMP:20120226T084230Z
+UID:318736@mlb.com
+CREATED:20110908T191340Z
+DESCRIPTION:Toronto at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_tormlb_milmlb_1\n\nPromotions/Giveaways: \n    Little League Night\n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Toronto at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_tormlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T201000
+DTEND;TZID=America/New_York:20120619T231000
+DTSTAMP:20120226T084230Z
+UID:318751@mlb.com
+CREATED:20110908T191342Z
+DESCRIPTION:Toronto at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_tormlb_milmlb_1\n\nPromotions/Giveaways: \n    Stitch N' Pitch Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Toronto at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_tormlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T141000
+DTEND;TZID=America/New_York:20120620T171000
+DTSTAMP:20120226T084230Z
+UID:318766@mlb.com
+CREATED:20110908T191344Z
+DESCRIPTION:Toronto at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_tormlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Toronto at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_tormlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T201000
+DTEND;TZID=America/New_York:20120622T231000
+DTSTAMP:20120226T084230Z
+UID:318779@mlb.com
+CREATED:20110908T191345Z
+DESCRIPTION:Milwaukee at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_milmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:U.S. Cellular Field, Chicago
+SUMMARY:Milwaukee at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_milmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T191500
+DTEND;TZID=America/New_York:20120623T221500
+DTSTAMP:20120226T084230Z
+UID:318794@mlb.com
+CREATED:20110908T191347Z
+DESCRIPTION:Milwaukee at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_milmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193202Z
+LOCATION:U.S. Cellular Field, Chicago
+SUMMARY:Milwaukee at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_milmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T141000
+DTEND;TZID=America/New_York:20120624T171000
+DTSTAMP:20120226T084230Z
+UID:318809@mlb.com
+CREATED:20110908T191348Z
+DESCRIPTION:Milwaukee at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_milmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:U.S. Cellular Field, Chicago
+SUMMARY:Milwaukee at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_milmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120625T191000
+DTEND;TZID=America/New_York:20120625T221000
+DTSTAMP:20120226T084230Z
+UID:318822@mlb.com
+CREATED:20110908T191350Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T191000
+DTEND;TZID=America/New_York:20120626T221000
+DTSTAMP:20120226T084230Z
+UID:318836@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T123500
+DTEND;TZID=America/New_York:20120627T153500
+DTSTAMP:20120226T084230Z
+UID:318851@mlb.com
+CREATED:20110908T191353Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T201000
+DTEND;TZID=America/New_York:20120629T231000
+DTSTAMP:20120226T084230Z
+UID:318873@mlb.com
+CREATED:20110908T191355Z
+DESCRIPTION:Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_arimlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T191500
+DTEND;TZID=America/New_York:20120630T221500
+DTSTAMP:20120226T084230Z
+UID:318888@mlb.com
+CREATED:20110908T191357Z
+DESCRIPTION:Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_arimlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T141000
+DTEND;TZID=America/New_York:20120701T171000
+DTSTAMP:20120226T084230Z
+UID:318903@mlb.com
+CREATED:20110908T191358Z
+DESCRIPTION:Arizona at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_arimlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n    Klement’s Sausage Italian Racing Sausage Bobble\n    Italian Heritage Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN, Telemundo\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Arizona at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_arimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120702T201000
+DTEND;TZID=America/New_York:20120702T231000
+DTSTAMP:20120226T084230Z
+UID:318923@mlb.com
+CREATED:20110908T191401Z
+DESCRIPTION:Miami at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_miamlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Miami at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_miamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T161000
+DTEND;TZID=America/New_York:20120703T191000
+DTSTAMP:20120226T084230Z
+UID:318935@mlb.com
+CREATED:20110908T191402Z
+DESCRIPTION:Miami at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_miamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Miami at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_miamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T161000
+DTEND;TZID=America/New_York:20120704T191000
+DTSTAMP:20120226T084230Z
+UID:318950@mlb.com
+CREATED:20110908T191403Z
+DESCRIPTION:Miami at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_miamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Miami at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_miamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T141000
+DTEND;TZID=America/New_York:20120705T171000
+DTSTAMP:20120226T084230Z
+UID:318963@mlb.com
+CREATED:20110908T191405Z
+DESCRIPTION:Miami at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_miamlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Miami at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_miamlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T200500
+DTEND;TZID=America/New_York:20120706T230500
+DTSTAMP:20120226T084230Z
+UID:318981@mlb.com
+CREATED:20110908T191407Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T160500
+DTEND;TZID=America/New_York:20120707T190500
+DTSTAMP:20120226T084230Z
+UID:318996@mlb.com
+CREATED:20110908T191409Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120105T215749Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T140500
+DTEND;TZID=America/New_York:20120708T170500
+DTSTAMP:20120226T084230Z
+UID:319011@mlb.com
+CREATED:20110908T191410Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T084230Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T201000
+DTEND;TZID=America/New_York:20120713T231000
+DTSTAMP:20120226T084230Z
+UID:319029@mlb.com
+CREATED:20110908T191412Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Sports Authority Special Coupon\n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T191000
+DTEND;TZID=America/New_York:20120714T221000
+DTSTAMP:20120226T084230Z
+UID:319044@mlb.com
+CREATED:20110908T191414Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller Lite Brewers Beer Glass\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T141000
+DTEND;TZID=America/New_York:20120715T171000
+DTSTAMP:20120226T084230Z
+UID:319059@mlb.com
+CREATED:20110908T191416Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_pitmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN, Telemundo\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120716T201000
+DTEND;TZID=America/New_York:20120716T231000
+DTSTAMP:20120226T084230Z
+UID:319073@mlb.com
+CREATED:20110908T191417Z
+DESCRIPTION:St. Louis at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_slnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:St. Louis at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_slnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T201000
+DTEND;TZID=America/New_York:20120717T231000
+DTSTAMP:20120226T084230Z
+UID:319089@mlb.com
+CREATED:20110908T191419Z
+DESCRIPTION:St. Louis at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_slnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:St. Louis at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_slnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T141000
+DTEND;TZID=America/New_York:20120718T171000
+DTSTAMP:20120226T084230Z
+UID:319104@mlb.com
+CREATED:20110908T191420Z
+DESCRIPTION:St. Louis at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_slnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Subway Coupon\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:St. Louis at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_slnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T191000
+DTEND;TZID=America/New_York:20120720T221000
+DTSTAMP:20120226T084230Z
+UID:319126@mlb.com
+CREATED:20110908T191423Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T191000
+DTEND;TZID=America/New_York:20120721T221000
+DTSTAMP:20120226T084230Z
+UID:319141@mlb.com
+CREATED:20110908T191425Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T131000
+DTEND;TZID=America/New_York:20120722T161000
+DTSTAMP:20120226T084230Z
+UID:319156@mlb.com
+CREATED:20110908T191426Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T190500
+DTEND;TZID=America/New_York:20120723T220500
+DTSTAMP:20120226T084230Z
+UID:319171@mlb.com
+CREATED:20110908T191428Z
+DESCRIPTION:Milwaukee at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_milmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Milwaukee at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_milmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T190500
+DTEND;TZID=America/New_York:20120724T220500
+DTSTAMP:20120226T084230Z
+UID:319184@mlb.com
+CREATED:20110908T191429Z
+DESCRIPTION:Milwaukee at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_milmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Milwaukee at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_milmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T130500
+DTEND;TZID=America/New_York:20120725T160500
+DTSTAMP:20120226T084230Z
+UID:319199@mlb.com
+CREATED:20110908T191431Z
+DESCRIPTION:Milwaukee at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_milmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Milwaukee at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_milmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120726T201000
+DTEND;TZID=America/New_York:20120726T231000
+DTSTAMP:20120226T084230Z
+UID:319213@mlb.com
+CREATED:20110908T191433Z
+DESCRIPTION:Washington at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_26_wasmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Camouflage Brewers Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Washington at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_26_wasmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T201000
+DTEND;TZID=America/New_York:20120727T231000
+DTSTAMP:20120226T084230Z
+UID:319228@mlb.com
+CREATED:20110908T191434Z
+DESCRIPTION:Washington at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_wasmlb_milmlb_1\n\nPromotions/Giveaways: \n    Fair Fridays\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Washington at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_wasmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T191000
+DTEND;TZID=America/New_York:20120728T221000
+DTSTAMP:20120226T084230Z
+UID:319243@mlb.com
+CREATED:20110908T191436Z
+DESCRIPTION:Washington at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_wasmlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation 5K Famous Racing Sausages Run/Walk\n    Negro Leagues Tribute\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Washington at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_wasmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T141000
+DTEND;TZID=America/New_York:20120729T171000
+DTSTAMP:20120226T084230Z
+UID:319258@mlb.com
+CREATED:20110908T191437Z
+DESCRIPTION:Washington at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_wasmlb_milmlb_1\n\nPromotions/Giveaways: \n    Time Warner Cable Bob Uecker Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Washington at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_wasmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120730T201000
+DTEND;TZID=America/New_York:20120730T231000
+DTSTAMP:20120226T084230Z
+UID:319265@mlb.com
+CREATED:20110908T191438Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_houmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T201000
+DTEND;TZID=America/New_York:20120731T231000
+DTSTAMP:20120226T084230Z
+UID:319278@mlb.com
+CREATED:20110908T191440Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_houmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=07&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T141000
+DTEND;TZID=America/New_York:20120801T171000
+DTSTAMP:20120226T084230Z
+UID:319293@mlb.com
+CREATED:20110908T191441Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_houmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T201500
+DTEND;TZID=America/New_York:20120803T231500
+DTSTAMP:20120226T084230Z
+UID:319317@mlb.com
+CREATED:20110908T191444Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T191500
+DTEND;TZID=America/New_York:20120804T221500
+DTSTAMP:20120226T084230Z
+UID:319332@mlb.com
+CREATED:20110908T191446Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T141500
+DTEND;TZID=America/New_York:20120805T171500
+DTSTAMP:20120226T084230Z
+UID:319347@mlb.com
+CREATED:20110908T191447Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T201000
+DTEND;TZID=America/New_York:20120806T231000
+DTSTAMP:20120226T084230Z
+UID:319359@mlb.com
+CREATED:20110908T191449Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_cinmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T201000
+DTEND;TZID=America/New_York:20120807T231000
+DTSTAMP:20120226T084230Z
+UID:319372@mlb.com
+CREATED:20110908T191450Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T141000
+DTEND;TZID=America/New_York:20120808T171000
+DTSTAMP:20120226T084230Z
+UID:319387@mlb.com
+CREATED:20110908T191452Z
+DESCRIPTION:Cincinnati at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_cinmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Cincinnati at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_cinmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T200500
+DTEND;TZID=America/New_York:20120810T230500
+DTSTAMP:20120226T084230Z
+UID:319414@mlb.com
+CREATED:20110908T191455Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T190500
+DTEND;TZID=America/New_York:20120811T220500
+DTSTAMP:20120226T084230Z
+UID:319429@mlb.com
+CREATED:20110908T191456Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T140500
+DTEND;TZID=America/New_York:20120812T170500
+DTSTAMP:20120226T084230Z
+UID:319444@mlb.com
+CREATED:20110908T191458Z
+DESCRIPTION:Milwaukee at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_milmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Milwaukee at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_milmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120813T204000
+DTEND;TZID=America/New_York:20120813T234000
+DTSTAMP:20120226T084230Z
+UID:319457@mlb.com
+CREATED:20110908T191459Z
+DESCRIPTION:Milwaukee at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_milmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:Milwaukee at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_milmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T204000
+DTEND;TZID=America/New_York:20120814T234000
+DTSTAMP:20120226T084230Z
+UID:319470@mlb.com
+CREATED:20110908T191500Z
+DESCRIPTION:Milwaukee at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_milmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:Milwaukee at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_milmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T151000
+DTEND;TZID=America/New_York:20120815T181000
+DTSTAMP:20120226T084230Z
+UID:319485@mlb.com
+CREATED:20110908T191502Z
+DESCRIPTION:Milwaukee at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_milmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Coors Field, Denver
+SUMMARY:Milwaukee at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_milmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120816T201000
+DTEND;TZID=America/New_York:20120816T231000
+DTSTAMP:20120226T084230Z
+UID:319500@mlb.com
+CREATED:20110908T191505Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_phimlb_milmlb_1\n\nPromotions/Giveaways: \n    BCF Week\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T201000
+DTEND;TZID=America/New_York:20120817T231000
+DTSTAMP:20120226T084230Z
+UID:319514@mlb.com
+CREATED:20110908T191506Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_phimlb_milmlb_1\n\nPromotions/Giveaways: \n    Sports Authority Special Coupon\n    BCF Week\n    Brewers-Timber Rattlers Fang-tastic Ticket Deal\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T191000
+DTEND;TZID=America/New_York:20120818T221000
+DTSTAMP:20120226T084230Z
+UID:319529@mlb.com
+CREATED:20110908T191509Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_phimlb_milmlb_1\n\nPromotions/Giveaways: \n    BCF Week\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120106T053250Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T141000
+DTEND;TZID=America/New_York:20120819T171000
+DTSTAMP:20120226T084230Z
+UID:319544@mlb.com
+CREATED:20110908T191510Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_phimlb_milmlb_1\n\nPromotions/Giveaways: \n    BCF Week\n    Brewers Kids Club Day presented by Associated Bank\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: Telemundo, FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T201000
+DTEND;TZID=America/New_York:20120820T231000
+DTSTAMP:20120226T084230Z
+UID:319551@mlb.com
+CREATED:20110908T191511Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_chnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Subway Coupon\n    BCF Week\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T201000
+DTEND;TZID=America/New_York:20120821T231000
+DTSTAMP:20120226T084230Z
+UID:319563@mlb.com
+CREATED:20110908T191512Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_chnmlb_milmlb_1\n\nPromotions/Giveaways: \n    BCF Week\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T141000
+DTEND;TZID=America/New_York:20120822T171000
+DTSTAMP:20120226T084230Z
+UID:319578@mlb.com
+CREATED:20110908T191514Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_chnmlb_milmlb_1\n\nPromotions/Giveaways: \n    BCF Week\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T190500
+DTEND;TZID=America/New_York:20120824T220500
+DTSTAMP:20120226T084230Z
+UID:319605@mlb.com
+CREATED:20110908T191517Z
+DESCRIPTION:Milwaukee at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_milmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Milwaukee at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_milmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T190500
+DTEND;TZID=America/New_York:20120825T220500
+DTSTAMP:20120226T084230Z
+UID:319620@mlb.com
+CREATED:20110908T191519Z
+DESCRIPTION:Milwaukee at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_milmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Milwaukee at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_milmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T133500
+DTEND;TZID=America/New_York:20120826T163500
+DTSTAMP:20120226T084230Z
+UID:319635@mlb.com
+CREATED:20110908T191521Z
+DESCRIPTION:Milwaukee at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_milmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Milwaukee at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_milmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120827T200500
+DTEND;TZID=America/New_York:20120827T230500
+DTSTAMP:20120226T084230Z
+UID:319649@mlb.com
+CREATED:20110908T191522Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T200500
+DTEND;TZID=America/New_York:20120828T230500
+DTSTAMP:20120226T084230Z
+UID:319661@mlb.com
+CREATED:20110908T191523Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T200500
+DTEND;TZID=America/New_York:20120829T230500
+DTSTAMP:20120226T084230Z
+UID:319676@mlb.com
+CREATED:20110908T191525Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120830T142000
+DTEND;TZID=America/New_York:20120830T172000
+DTSTAMP:20120226T084230Z
+UID:319689@mlb.com
+CREATED:20110908T191527Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T201000
+DTEND;TZID=America/New_York:20120831T231000
+DTSTAMP:20120226T084230Z
+UID:319705@mlb.com
+CREATED:20110908T191528Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=08&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T191000
+DTEND;TZID=America/New_York:20120901T221000
+DTSTAMP:20120226T084230Z
+UID:319720@mlb.com
+CREATED:20110908T191530Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T141000
+DTEND;TZID=America/New_York:20120902T171000
+DTSTAMP:20120226T084230Z
+UID:319735@mlb.com
+CREATED:20110908T191532Z
+DESCRIPTION:Pittsburgh at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_pitmlb_milmlb_1\n\nPromotions/Giveaways: \n    Brewers Community Foundation Drive For Charity\n    Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Pittsburgh at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_pitmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T131000
+DTEND;TZID=America/New_York:20120903T161000
+DTSTAMP:20120226T084230Z
+UID:319749@mlb.com
+CREATED:20110908T191534Z
+DESCRIPTION:Milwaukee at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_milmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Milwaukee at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_milmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T191000
+DTEND;TZID=America/New_York:20120904T221000
+DTSTAMP:20120226T084230Z
+UID:319764@mlb.com
+CREATED:20110908T191535Z
+DESCRIPTION:Milwaukee at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_milmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Milwaukee at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_milmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T191000
+DTEND;TZID=America/New_York:20120905T221000
+DTSTAMP:20120226T084230Z
+UID:319779@mlb.com
+CREATED:20110908T191537Z
+DESCRIPTION:Milwaukee at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_milmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Milwaukee at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_milmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120906T124000
+DTEND;TZID=America/New_York:20120906T154000
+DTSTAMP:20120226T084230Z
+UID:319788@mlb.com
+CREATED:20110908T191538Z
+DESCRIPTION:Milwaukee at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_06_milmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Milwaukee at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_06_milmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T201500
+DTEND;TZID=America/New_York:20120907T231500
+DTSTAMP:20120226T084230Z
+UID:319801@mlb.com
+CREATED:20110908T191539Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T191500
+DTEND;TZID=America/New_York:20120908T221500
+DTSTAMP:20120226T084230Z
+UID:319816@mlb.com
+CREATED:20110908T191541Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T141500
+DTEND;TZID=America/New_York:20120909T171500
+DTSTAMP:20120226T084230Z
+UID:319831@mlb.com
+CREATED:20110908T191543Z
+DESCRIPTION:Milwaukee at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_milmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Milwaukee at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_milmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120910T201000
+DTEND;TZID=America/New_York:20120910T231000
+DTSTAMP:20120226T084230Z
+UID:319836@mlb.com
+CREATED:20110908T191543Z
+DESCRIPTION:Atlanta at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_atlmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Atlanta at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_atlmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T201000
+DTEND;TZID=America/New_York:20120911T231000
+DTSTAMP:20120226T084230Z
+UID:319847@mlb.com
+CREATED:20110908T191544Z
+DESCRIPTION:Atlanta at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_atlmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Atlanta at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_atlmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T201000
+DTEND;TZID=America/New_York:20120912T231000
+DTSTAMP:20120226T084230Z
+UID:319862@mlb.com
+CREATED:20110908T191546Z
+DESCRIPTION:Atlanta at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_atlmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Atlanta at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_atlmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T201000
+DTEND;TZID=America/New_York:20120914T231000
+DTSTAMP:20120226T084230Z
+UID:319893@mlb.com
+CREATED:20110908T191549Z
+DESCRIPTION:NY Mets at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_nynmlb_milmlb_1\n\nPromotions/Giveaways: \n    Sports Authority Special Coupon\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:NY Mets at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_nynmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T191000
+DTEND;TZID=America/New_York:20120915T221000
+DTSTAMP:20120226T084230Z
+UID:319908@mlb.com
+CREATED:20110908T191551Z
+DESCRIPTION:NY Mets at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_nynmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:NY Mets at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_nynmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T141000
+DTEND;TZID=America/New_York:20120916T171000
+DTSTAMP:20120226T084230Z
+UID:319923@mlb.com
+CREATED:20110908T191553Z
+DESCRIPTION:NY Mets at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_nynmlb_milmlb_1\n\nPromotions/Giveaways: \n    Wild Impact Marketing Aramis Ramirez Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN, Telemundo\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:NY Mets at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_nynmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T190500
+DTEND;TZID=America/New_York:20120918T220500
+DTSTAMP:20120226T084230Z
+UID:319945@mlb.com
+CREATED:20110908T191555Z
+DESCRIPTION:Milwaukee at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_milmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Milwaukee at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_milmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T190500
+DTEND;TZID=America/New_York:20120919T220500
+DTSTAMP:20120226T084230Z
+UID:319960@mlb.com
+CREATED:20110908T191557Z
+DESCRIPTION:Milwaukee at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_milmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Milwaukee at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_milmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120920T160500
+DTEND;TZID=America/New_York:20120920T190500
+DTSTAMP:20120226T084230Z
+UID:319973@mlb.com
+CREATED:20110908T191559Z
+DESCRIPTION:Milwaukee at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_milmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Milwaukee at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_milmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T190500
+DTEND;TZID=America/New_York:20120921T220500
+DTSTAMP:20120226T084230Z
+UID:319986@mlb.com
+CREATED:20110908T191600Z
+DESCRIPTION:Milwaukee at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_milmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Milwaukee at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_milmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T130500
+DTEND;TZID=America/New_York:20120922T160500
+DTSTAMP:20120226T084230Z
+UID:320001@mlb.com
+CREATED:20110908T191602Z
+DESCRIPTION:Milwaukee at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_milmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Milwaukee at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_milmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T133500
+DTEND;TZID=America/New_York:20120923T163500
+DTSTAMP:20120226T084230Z
+UID:320016@mlb.com
+CREATED:20110908T191603Z
+DESCRIPTION:Milwaukee at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_milmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Milwaukee at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_milmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120924T130500
+DTEND;TZID=America/New_York:20120924T160500
+DTSTAMP:20120226T084230Z
+UID:320026@mlb.com
+CREATED:20110908T191604Z
+DESCRIPTION:Milwaukee at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_24_milmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Milwaukee at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_24_milmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T191000
+DTEND;TZID=America/New_York:20120925T221000
+DTSTAMP:20120226T084230Z
+UID:320038@mlb.com
+CREATED:20110908T191606Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T191000
+DTEND;TZID=America/New_York:20120926T221000
+DTSTAMP:20120226T084230Z
+UID:320053@mlb.com
+CREATED:20110908T191607Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T123500
+DTEND;TZID=America/New_York:20120927T153500
+DTSTAMP:20120226T084230Z
+UID:320067@mlb.com
+CREATED:20110908T191609Z
+DESCRIPTION:Milwaukee at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_milmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Milwaukee at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_milmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T201000
+DTEND;TZID=America/New_York:20120928T231000
+DTSTAMP:20120226T084230Z
+UID:320080@mlb.com
+CREATED:20110908T191610Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_houmlb_milmlb_1\n\nPromotions/Giveaways: \n    Subway Coupon\n    Student Nights\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T191000
+DTEND;TZID=America/New_York:20120929T221000
+DTSTAMP:20120226T084230Z
+UID:320095@mlb.com
+CREATED:20110908T191612Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_houmlb_milmlb_1\n\nPromotions/Giveaways: \n    Fan Appreciation Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T141000
+DTEND;TZID=America/New_York:20120930T171000
+DTSTAMP:20120226T084230Z
+UID:320110@mlb.com
+CREATED:20110908T191613Z
+DESCRIPTION:Houston at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_houmlb_milmlb_1\n\nPromotions/Giveaways: \n    Family Days\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=09&y=2012\n\nLocal TV: Telemundo, FSN\nLocal Radio: ESPN Deportes 1510
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Houston at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_houmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T201000
+DTEND;TZID=America/New_York:20121001T231000
+DTSTAMP:20120226T084230Z
+UID:320131@mlb.com
+CREATED:20110908T191616Z
+DESCRIPTION:San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_sdnmlb_milmlb_1\n\nPromotions/Giveaways: \n    Miller High Life Games\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=10&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_sdnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T201000
+DTEND;TZID=America/New_York:20121002T231000
+DTSTAMP:20120226T084230Z
+UID:320146@mlb.com
+CREATED:20110908T191617Z
+DESCRIPTION:San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_sdnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=10&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_sdnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T201000
+DTEND;TZID=America/New_York:20121003T231000
+DTSTAMP:20120226T084230Z
+UID:320161@mlb.com
+CREATED:20110908T191619Z
+DESCRIPTION:San Diego at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_sdnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=mil&m=10&y=2012\n\nLocal TV: FSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:San Diego at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_sdnmlb_milmlb_1
+END:VEVENT
+END:VCALENDAR

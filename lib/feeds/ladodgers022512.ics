@@ -1,0 +1,2784 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 Los Angeles Dodgers Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T150500
+DTEND;TZID=America/New_York:20120305T180500
+DTSTAMP:20120226T081725Z
+UID:332126@mlb.com
+CREATED:20111130T212816Z
+DESCRIPTION:Spring Training: LA Dodgers at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_lanmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal Radio: 570 Fox Sports L.A., KTNQ 1020
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: LA Dodgers at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_lanmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T150500
+DTEND;TZID=America/New_York:20120306T180500
+DTSTAMP:20120226T081725Z
+UID:332148@mlb.com
+CREATED:20111130T212820Z
+DESCRIPTION:Spring Training: San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), PRIME\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T150500
+DTEND;TZID=America/New_York:20120307T180500
+DTSTAMP:20120226T081725Z
+UID:332158@mlb.com
+CREATED:20111130T212821Z
+DESCRIPTION:Spring Training: LA Dodgers at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_lanmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Phoenix Municipal Stadium, Phoenix
+SUMMARY:Spring Training: LA Dodgers at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_lanmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120308T150500
+DTEND;TZID=America/New_York:20120308T180500
+DTSTAMP:20120226T081725Z
+UID:332178@mlb.com
+CREATED:20111130T212824Z
+DESCRIPTION:Spring Training: Oakland at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_oakmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLBN (delay), PRIME, MLB.TV
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Oakland at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_oakmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T081725Z
+UID:332191@mlb.com
+CREATED:20111130T212826Z
+DESCRIPTION:Spring Training: LA Dodgers at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_lanmlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: LA Dodgers at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_lanmlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T081725Z
+UID:332206@mlb.com
+CREATED:20111130T212828Z
+DESCRIPTION:Spring Training: LA Dodgers at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_lanmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: LA Dodgers at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_lanmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T210500
+DTEND;TZID=America/New_York:20120311T000500
+DTSTAMP:20120226T081725Z
+UID:332201@mlb.com
+CREATED:20111130T212827Z
+DESCRIPTION:Spring Training: LA Dodgers at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_lanmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: LA Dodgers at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_lanmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T150500
+DTEND;TZID=America/New_York:20120311T180500
+DTSTAMP:20120226T081725Z
+UID:332223@mlb.com
+CREATED:20111130T212830Z
+DESCRIPTION:Spring Training: Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_chnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLBN (delay), PRIME, MLB.TV\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120128T000848Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120312T160500
+DTEND;TZID=America/New_York:20120312T190500
+DTSTAMP:20120226T081725Z
+UID:332242@mlb.com
+CREATED:20111130T212833Z
+DESCRIPTION:Spring Training: LA Dodgers at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_lanmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay)\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20111206T181435Z
+LOCATION:Tempe Diablo Stadium, Tempe
+SUMMARY:Spring Training: LA Dodgers at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_lanmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T160500
+DTEND;TZID=America/New_York:20120313T190500
+DTSTAMP:20120226T081725Z
+UID:332258@mlb.com
+CREATED:20111130T212835Z
+DESCRIPTION:Spring Training: Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_colmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, PRIME, MLBN (delay)
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T220500
+DTEND;TZID=America/New_York:20120315T010500
+DTSTAMP:20120226T081725Z
+UID:332273@mlb.com
+CREATED:20111130T212837Z
+DESCRIPTION:Spring Training: LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_lanmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T160500
+DTEND;TZID=America/New_York:20120315T190500
+DTSTAMP:20120226T081725Z
+UID:332289@mlb.com
+CREATED:20111130T212840Z
+DESCRIPTION:Spring Training: Kansas City at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_kcamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, PRIME, MLBN (delay)
+LAST-MODIFIED:20111209T161703Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Kansas City at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_kcamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T160500
+DTEND;TZID=America/New_York:20120316T190500
+DTSTAMP:20120226T081725Z
+UID:332313@mlb.com
+CREATED:20111130T212843Z
+DESCRIPTION:Spring Training: Texas at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_texmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: PRIME, MLBN
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Texas at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_texmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T161000
+DTEND;TZID=America/New_York:20120317T191000
+DTSTAMP:20120226T081725Z
+UID:332323@mlb.com
+CREATED:20111130T212845Z
+DESCRIPTION:Spring Training: LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay)
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T220500
+DTEND;TZID=America/New_York:20120318T010500
+DTSTAMP:20120226T081725Z
+UID:332329@mlb.com
+CREATED:20111130T212846Z
+DESCRIPTION:Spring Training: San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, PRIME, MLBN\nLocal Radio: KTNQ 1020
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T081725Z
+UID:332335@mlb.com
+CREATED:20111130T212846Z
+DESCRIPTION:Spring Training: LA Angels at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_anamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV, KCAL\nLocal Radio: KTNQ 1020
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: LA Angels at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_anamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120319T160500
+DTEND;TZID=America/New_York:20120319T190500
+DTSTAMP:20120226T081725Z
+UID:332358@mlb.com
+CREATED:20111130T212850Z
+DESCRIPTION:Spring Training: LA Dodgers at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_lanmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: LA Dodgers at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_lanmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T160500
+DTEND;TZID=America/New_York:20120320T190500
+DTSTAMP:20120226T081725Z
+UID:332366@mlb.com
+CREATED:20111130T212851Z
+DESCRIPTION:Spring Training: Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN, PRIME
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120321T160500
+DTEND;TZID=America/New_York:20120321T190500
+DTSTAMP:20120226T081725Z
+UID:332384@mlb.com
+CREATED:20111130T212853Z
+DESCRIPTION:Spring Training: San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_sdnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), PRIME
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_21_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T160500
+DTEND;TZID=America/New_York:20120323T190500
+DTSTAMP:20120226T081725Z
+UID:335733@mlb.com
+CREATED:20120117T190854Z
+DESCRIPTION:Spring Training: LA Dodgers at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_lanmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Kino Veterans Memorial Stadium, Tucson
+SUMMARY:Spring Training: LA Dodgers at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_lanmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T160500
+DTEND;TZID=America/New_York:20120323T190500
+DTSTAMP:20120226T081725Z
+UID:332407@mlb.com
+CREATED:20111130T212857Z
+DESCRIPTION:Spring Training: LA Dodgers at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_lanmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20111213T230915Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: LA Dodgers at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_lanmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T081725Z
+UID:332420@mlb.com
+CREATED:20111130T212859Z
+DESCRIPTION:Spring Training: Cleveland at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_clemlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: KCAL, MLB.TV, MLBN\nLocal Radio: KTNQ 1020
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Cleveland at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_clemlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T160500
+DTEND;TZID=America/New_York:20120325T190500
+DTSTAMP:20120226T081725Z
+UID:332438@mlb.com
+CREATED:20111130T212901Z
+DESCRIPTION:Spring Training: LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_lanmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal Radio: KTNQ 1020
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T160500
+DTEND;TZID=America/New_York:20120326T190500
+DTSTAMP:20120226T081725Z
+UID:332449@mlb.com
+CREATED:20111130T212902Z
+DESCRIPTION:Spring Training: Chi White Sox at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_chamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLB.TV, PRIME, MLBN (delay)
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Chi White Sox at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_chamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T160500
+DTEND;TZID=America/New_York:20120327T190500
+DTSTAMP:20120226T081725Z
+UID:332467@mlb.com
+CREATED:20111130T212904Z
+DESCRIPTION:Spring Training: LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T160500
+DTEND;TZID=America/New_York:20120328T190500
+DTSTAMP:20120226T081725Z
+UID:332480@mlb.com
+CREATED:20111130T212906Z
+DESCRIPTION:Spring Training: LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T160500
+DTEND;TZID=America/New_York:20120329T190500
+DTSTAMP:20120226T081725Z
+UID:332490@mlb.com
+CREATED:20111130T212907Z
+DESCRIPTION:Spring Training: Chi White Sox at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_chamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: MLBN (delay), PRIME, MLB.TV
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Chi White Sox at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_chamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T160500
+DTEND;TZID=America/New_York:20120330T190500
+DTSTAMP:20120226T081725Z
+UID:332512@mlb.com
+CREATED:20111130T212909Z
+DESCRIPTION:Spring Training: Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal TV: PRIME, MLBN (delay), MLB.TV
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T160500
+DTEND;TZID=America/New_York:20120330T190500
+DTSTAMP:20120226T081725Z
+UID:332510@mlb.com
+CREATED:20111130T212909Z
+DESCRIPTION:Spring Training: LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T161000
+DTEND;TZID=America/New_York:20120331T191000
+DTSTAMP:20120226T081725Z
+UID:332526@mlb.com
+CREATED:20111130T212911Z
+DESCRIPTION:Spring Training: LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=03&y=2012\n\nLocal Radio: KTNQ 1020
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T160500
+DTEND;TZID=America/New_York:20120401T190500
+DTSTAMP:20120226T081725Z
+UID:332535@mlb.com
+CREATED:20111130T212912Z
+DESCRIPTION:Spring Training: Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal TV: MLBN (delay), PRIME, MLB.TV\nLocal Radio: 570 Fox Sports L.A., KTNQ 1020
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T220500
+DTEND;TZID=America/New_York:20120403T010500
+DTSTAMP:20120226T081725Z
+UID:332633@mlb.com
+CREATED:20111202T183220Z
+DESCRIPTION:Spring Training: LA Dodgers at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_lanmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal TV: FS-W, MLB.TV, MLBN\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:Spring Training: LA Dodgers at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_lanmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T221000
+DTEND;TZID=America/New_York:20120404T011000
+DTSTAMP:20120226T081725Z
+UID:332634@mlb.com
+CREATED:20111202T183220Z
+DESCRIPTION:Spring Training: LA Angels at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_anamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal TV: MLB.TV, KCAL\nLocal Radio: KTNQ 1020, 570 Fox Sports L.A.
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Spring Training: LA Angels at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_anamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120404T151000
+DTEND;TZID=America/New_York:20120404T181000
+DTSTAMP:20120226T081725Z
+UID:332635@mlb.com
+CREATED:20111202T183220Z
+DESCRIPTION:Spring Training: LA Angels at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_anamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal TV: MLBN, FS-W, MLB.TV\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Spring Training: LA Angels at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_04_anamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120405T190500
+DTEND;TZID=America/New_York:20120405T220500
+DTSTAMP:20120226T081725Z
+UID:317736@mlb.com
+CREATED:20110908T191144Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal TV: MLBN\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120126T201150Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120406T220500
+DTEND;TZID=America/New_York:20120407T010500
+DTSTAMP:20120226T081725Z
+UID:317744@mlb.com
+CREATED:20110908T191145Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020833Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_06_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T203500
+DTEND;TZID=America/New_York:20120407T233500
+DTSTAMP:20120226T081725Z
+UID:317756@mlb.com
+CREATED:20110908T191147Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020833Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T160500
+DTEND;TZID=America/New_York:20120408T190500
+DTSTAMP:20120226T081725Z
+UID:317771@mlb.com
+CREATED:20110908T191149Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020833Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120410T161000
+DTEND;TZID=America/New_York:20120410T191000
+DTSTAMP:20120226T081725Z
+UID:317799@mlb.com
+CREATED:20110908T191153Z
+DESCRIPTION:Pittsburgh at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_pitmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Opening Day / 50th Anniversary of Dodger Stadium\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120126T201150Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Pittsburgh at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_pitmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T221000
+DTEND;TZID=America/New_York:20120412T011000
+DTSTAMP:20120226T081725Z
+UID:317813@mlb.com
+CREATED:20110908T191154Z
+DESCRIPTION:Pittsburgh at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_pitmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Clayton Kershaw Cy Young Replica*\n    Cy Young Award Presentation\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Pittsburgh at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_pitmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T221000
+DTEND;TZID=America/New_York:20120413T011000
+DTSTAMP:20120226T081725Z
+UID:317824@mlb.com
+CREATED:20110908T191156Z
+DESCRIPTION:Pittsburgh at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_pitmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Pittsburgh at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_pitmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T221000
+DTEND;TZID=America/New_York:20120414T011000
+DTSTAMP:20120226T081725Z
+UID:317840@mlb.com
+CREATED:20110908T191158Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T211000
+DTEND;TZID=America/New_York:20120415T001000
+DTSTAMP:20120226T081725Z
+UID:317855@mlb.com
+CREATED:20110908T191200Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Dodger Stadium Replica*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T161000
+DTEND;TZID=America/New_York:20120415T191000
+DTSTAMP:20120226T081725Z
+UID:317870@mlb.com
+CREATED:20110908T191201Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Jackie Robinson Sweatbands^\n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050337Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T201000
+DTEND;TZID=America/New_York:20120417T231000
+DTSTAMP:20120226T081725Z
+UID:317889@mlb.com
+CREATED:20110908T191204Z
+DESCRIPTION:LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_lanmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T201000
+DTEND;TZID=America/New_York:20120418T231000
+DTSTAMP:20120226T081725Z
+UID:317904@mlb.com
+CREATED:20110908T191207Z
+DESCRIPTION:LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_lanmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120419T131000
+DTEND;TZID=America/New_York:20120419T161000
+DTSTAMP:20120226T081725Z
+UID:317919@mlb.com
+CREATED:20110908T191209Z
+DESCRIPTION:LA Dodgers at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_lanmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:LA Dodgers at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_lanmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T200500
+DTEND;TZID=America/New_York:20120420T230500
+DTSTAMP:20120226T081725Z
+UID:317932@mlb.com
+CREATED:20110908T191210Z
+DESCRIPTION:LA Dodgers at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_lanmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:LA Dodgers at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_lanmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T190500
+DTEND;TZID=America/New_York:20120421T220500
+DTSTAMP:20120226T081725Z
+UID:317947@mlb.com
+CREATED:20110908T191212Z
+DESCRIPTION:LA Dodgers at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_lanmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:LA Dodgers at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_lanmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T140500
+DTEND;TZID=America/New_York:20120422T170500
+DTSTAMP:20120226T081725Z
+UID:317962@mlb.com
+CREATED:20110908T191214Z
+DESCRIPTION:LA Dodgers at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_lanmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:LA Dodgers at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_lanmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120423T221000
+DTEND;TZID=America/New_York:20120424T011000
+DTSTAMP:20120226T081725Z
+UID:317970@mlb.com
+CREATED:20110908T191215Z
+DESCRIPTION:Atlanta at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_atlmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Atlanta at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_atlmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T221000
+DTEND;TZID=America/New_York:20120425T011000
+DTSTAMP:20120226T081725Z
+UID:317981@mlb.com
+CREATED:20110908T191216Z
+DESCRIPTION:Atlanta at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_atlmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Sleeved Blanket*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Atlanta at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_atlmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T221000
+DTEND;TZID=America/New_York:20120426T011000
+DTSTAMP:20120226T081725Z
+UID:317996@mlb.com
+CREATED:20110908T191218Z
+DESCRIPTION:Atlanta at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_atlmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Atlanta at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_atlmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T221000
+DTEND;TZID=America/New_York:20120428T011000
+DTSTAMP:20120226T081725Z
+UID:318032@mlb.com
+CREATED:20110908T191222Z
+DESCRIPTION:Washington at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_wasmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Washington at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_wasmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T211000
+DTEND;TZID=America/New_York:20120429T001000
+DTSTAMP:20120226T081725Z
+UID:318047@mlb.com
+CREATED:20110908T191223Z
+DESCRIPTION:Washington at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_wasmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #1: Don Drysdale and Maury Wills\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Washington at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_wasmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T161000
+DTEND;TZID=America/New_York:20120429T191000
+DTSTAMP:20120226T081725Z
+UID:318062@mlb.com
+CREATED:20110908T191225Z
+DESCRIPTION:Washington at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_wasmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Clayton Kershaw Replica Jersey^\n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050347Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Washington at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_wasmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120430T204000
+DTEND;TZID=America/New_York:20120430T234000
+DTSTAMP:20120226T081725Z
+UID:318067@mlb.com
+CREATED:20110908T191226Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=04&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T204000
+DTEND;TZID=America/New_York:20120501T234000
+DTSTAMP:20120226T081725Z
+UID:318081@mlb.com
+CREATED:20110908T191227Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T151000
+DTEND;TZID=America/New_York:20120502T181000
+DTSTAMP:20120226T081725Z
+UID:318096@mlb.com
+CREATED:20110908T191229Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T142000
+DTEND;TZID=America/New_York:20120504T172000
+DTSTAMP:20120226T081725Z
+UID:318120@mlb.com
+CREATED:20110908T191232Z
+DESCRIPTION:LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T130500
+DTEND;TZID=America/New_York:20120505T160500
+DTSTAMP:20120226T081725Z
+UID:318135@mlb.com
+CREATED:20110908T191233Z
+DESCRIPTION:LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T142000
+DTEND;TZID=America/New_York:20120506T172000
+DTSTAMP:20120226T081725Z
+UID:318150@mlb.com
+CREATED:20110908T191236Z
+DESCRIPTION:LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T221000
+DTEND;TZID=America/New_York:20120508T011000
+DTSTAMP:20120226T081725Z
+UID:318168@mlb.com
+CREATED:20110908T191237Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_sfnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Cooler Bag*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T221000
+DTEND;TZID=America/New_York:20120509T011000
+DTSTAMP:20120226T081725Z
+UID:318180@mlb.com
+CREATED:20110908T191239Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T221000
+DTEND;TZID=America/New_York:20120510T011000
+DTSTAMP:20120226T081725Z
+UID:318195@mlb.com
+CREATED:20110908T191241Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T221000
+DTEND;TZID=America/New_York:20120512T011000
+DTSTAMP:20120226T081725Z
+UID:318211@mlb.com
+CREATED:20110908T191243Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_colmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T211000
+DTEND;TZID=America/New_York:20120513T001000
+DTSTAMP:20120226T081725Z
+UID:318226@mlb.com
+CREATED:20110908T191244Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_colmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T161000
+DTEND;TZID=America/New_York:20120513T191000
+DTSTAMP:20120226T081725Z
+UID:318241@mlb.com
+CREATED:20110908T191246Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_colmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Mother's Day Tote Bag**\n    Mother's Day Walk Around the Park\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050359Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T221000
+DTEND;TZID=America/New_York:20120515T011000
+DTSTAMP:20120226T081725Z
+UID:318252@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T221000
+DTEND;TZID=America/New_York:20120516T011000
+DTSTAMP:20120226T081725Z
+UID:318267@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_arimlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #2: Orel Hershiser\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T183500
+DTEND;TZID=America/New_York:20120516T213500
+DTSTAMP:20120226T081725Z
+UID:318288@mlb.com
+CREATED:20110908T191251Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020836Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T220500
+DTEND;TZID=America/New_York:20120518T010500
+DTSTAMP:20120226T081725Z
+UID:318303@mlb.com
+CREATED:20110908T191253Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020836Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T221000
+DTEND;TZID=America/New_York:20120519T011000
+DTSTAMP:20120226T081725Z
+UID:318325@mlb.com
+CREATED:20110908T191255Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_slnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T221000
+DTEND;TZID=America/New_York:20120520T011000
+DTSTAMP:20120226T081725Z
+UID:318340@mlb.com
+CREATED:20110908T191256Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_slnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Dodger Stadium FanFest\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T200000
+DTEND;TZID=America/New_York:20120520T230000
+DTSTAMP:20120226T081725Z
+UID:318355@mlb.com
+CREATED:20110908T191258Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_slnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Power Necklace^\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal TV: ESPN\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050409Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T214000
+DTEND;TZID=America/New_York:20120522T004000
+DTSTAMP:20120226T081725Z
+UID:318363@mlb.com
+CREATED:20110908T191259Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T214000
+DTEND;TZID=America/New_York:20120523T004000
+DTSTAMP:20120226T081725Z
+UID:318377@mlb.com
+CREATED:20110908T191300Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T214000
+DTEND;TZID=America/New_York:20120524T004000
+DTSTAMP:20120226T081725Z
+UID:318392@mlb.com
+CREATED:20110908T191302Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T221000
+DTEND;TZID=America/New_York:20120526T011000
+DTSTAMP:20120226T081725Z
+UID:318412@mlb.com
+CREATED:20110908T191304Z
+DESCRIPTION:Houston at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_houmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Houston at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_houmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T221000
+DTEND;TZID=America/New_York:20120527T011000
+DTSTAMP:20120226T081725Z
+UID:318427@mlb.com
+CREATED:20110908T191306Z
+DESCRIPTION:Houston at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_houmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Natural Balance Bark in the Park\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Houston at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_houmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T161000
+DTEND;TZID=America/New_York:20120527T191000
+DTSTAMP:20120226T081725Z
+UID:318442@mlb.com
+CREATED:20110908T191307Z
+DESCRIPTION:Houston at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_houmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050422Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Houston at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_houmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T201000
+DTEND;TZID=America/New_York:20120528T231000
+DTSTAMP:20120226T081725Z
+UID:318459@mlb.com
+CREATED:20110908T191309Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_milmlb_lanmlb_1\n\nPromotions/Giveaways: \n    $1 Dodger Dogs\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T221000
+DTEND;TZID=America/New_York:20120530T011000
+DTSTAMP:20120226T081725Z
+UID:318474@mlb.com
+CREATED:20110908T191311Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_milmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #3: “The Infield” (Steve Garvey, Davey Lopes, Bill Russell, Ron Cey)\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T221000
+DTEND;TZID=America/New_York:20120531T011000
+DTSTAMP:20120226T081725Z
+UID:318489@mlb.com
+CREATED:20110908T191314Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120531T221000
+DTEND;TZID=America/New_York:20120601T011000
+DTSTAMP:20120226T081725Z
+UID:318499@mlb.com
+CREATED:20110908T191315Z
+DESCRIPTION:Milwaukee at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_31_milmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=05&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120131T151437Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Milwaukee at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_31_milmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T204000
+DTEND;TZID=America/New_York:20120601T234000
+DTSTAMP:20120226T081725Z
+UID:318507@mlb.com
+CREATED:20110908T191316Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T161000
+DTEND;TZID=America/New_York:20120602T191000
+DTSTAMP:20120226T081725Z
+UID:318522@mlb.com
+CREATED:20110908T191317Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T151000
+DTEND;TZID=America/New_York:20120603T181000
+DTSTAMP:20120226T081725Z
+UID:318537@mlb.com
+CREATED:20110908T191319Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120604T190500
+DTEND;TZID=America/New_York:20120604T220500
+DTSTAMP:20120226T081725Z
+UID:318546@mlb.com
+CREATED:20110908T191320Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T190500
+DTEND;TZID=America/New_York:20120605T220500
+DTSTAMP:20120226T081725Z
+UID:318555@mlb.com
+CREATED:20110908T191321Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T190500
+DTEND;TZID=America/New_York:20120606T220500
+DTSTAMP:20120226T081725Z
+UID:318570@mlb.com
+CREATED:20110908T191322Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120607T130500
+DTEND;TZID=America/New_York:20120607T160500
+DTSTAMP:20120226T081725Z
+UID:318585@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T221000
+DTEND;TZID=America/New_York:20120609T011000
+DTSTAMP:20120226T081725Z
+UID:318599@mlb.com
+CREATED:20110908T191326Z
+DESCRIPTION:LA Dodgers at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_lanmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Safeco Field, Seattle
+SUMMARY:LA Dodgers at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_lanmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T191500
+DTEND;TZID=America/New_York:20120609T221500
+DTSTAMP:20120226T081725Z
+UID:318614@mlb.com
+CREATED:20110908T191327Z
+DESCRIPTION:LA Dodgers at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_lanmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal TV: FOX\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Safeco Field, Seattle
+SUMMARY:LA Dodgers at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_lanmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T161000
+DTEND;TZID=America/New_York:20120610T191000
+DTSTAMP:20120226T081725Z
+UID:318629@mlb.com
+CREATED:20110908T191329Z
+DESCRIPTION:LA Dodgers at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_lanmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Safeco Field, Seattle
+SUMMARY:LA Dodgers at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_lanmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120611T221000
+DTEND;TZID=America/New_York:20120612T011000
+DTSTAMP:20120226T081725Z
+UID:318638@mlb.com
+CREATED:20110908T191330Z
+DESCRIPTION:LA Angels at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_11_anamlb_lanmlb_1\n\nPromotions/Giveaways: \n    Dodger T-Shirt*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:LA Angels at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_11_anamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T221000
+DTEND;TZID=America/New_York:20120613T011000
+DTSTAMP:20120226T081725Z
+UID:318642@mlb.com
+CREATED:20110908T191330Z
+DESCRIPTION:LA Angels at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_anamlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #4: Mike Scioscia\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:LA Angels at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_anamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T221000
+DTEND;TZID=America/New_York:20120614T011000
+DTSTAMP:20120226T081725Z
+UID:318657@mlb.com
+CREATED:20110908T191332Z
+DESCRIPTION:LA Angels at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_anamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:LA Angels at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_anamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T221000
+DTEND;TZID=America/New_York:20120616T011000
+DTSTAMP:20120226T081725Z
+UID:318686@mlb.com
+CREATED:20110908T191335Z
+DESCRIPTION:Chi White Sox at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_chamlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi White Sox at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_chamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T221000
+DTEND;TZID=America/New_York:20120617T011000
+DTSTAMP:20120226T081725Z
+UID:318701@mlb.com
+CREATED:20110908T191336Z
+DESCRIPTION:Chi White Sox at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_chamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi White Sox at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_chamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T161000
+DTEND;TZID=America/New_York:20120617T191000
+DTSTAMP:20120226T081725Z
+UID:318716@mlb.com
+CREATED:20110908T191338Z
+DESCRIPTION:Chi White Sox at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_chamlb_lanmlb_1\n\nPromotions/Giveaways: \n    Father's Day Sports Bag**\n    Father's Day Catch\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050449Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi White Sox at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_chamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T220500
+DTEND;TZID=America/New_York:20120620T010500
+DTSTAMP:20120226T081725Z
+UID:318744@mlb.com
+CREATED:20110908T191341Z
+DESCRIPTION:LA Dodgers at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_lanmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:LA Dodgers at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_lanmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T220500
+DTEND;TZID=America/New_York:20120621T010500
+DTSTAMP:20120226T081725Z
+UID:318759@mlb.com
+CREATED:20110908T191343Z
+DESCRIPTION:LA Dodgers at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_lanmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:LA Dodgers at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_lanmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120621T153500
+DTEND;TZID=America/New_York:20120621T183500
+DTSTAMP:20120226T081725Z
+UID:318769@mlb.com
+CREATED:20110908T191344Z
+DESCRIPTION:LA Dodgers at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_21_lanmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Oakland Coliseum, Oakland
+SUMMARY:LA Dodgers at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_21_lanmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T220500
+DTEND;TZID=America/New_York:20120623T010500
+DTSTAMP:20120226T081725Z
+UID:318778@mlb.com
+CREATED:20110908T191345Z
+DESCRIPTION:LA Dodgers at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_lanmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:LA Dodgers at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_lanmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T191500
+DTEND;TZID=America/New_York:20120623T221500
+DTSTAMP:20120226T081725Z
+UID:318793@mlb.com
+CREATED:20110908T191347Z
+DESCRIPTION:LA Dodgers at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_lanmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal TV: FOX\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:LA Dodgers at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_lanmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T153500
+DTEND;TZID=America/New_York:20120624T183500
+DTSTAMP:20120226T081725Z
+UID:318808@mlb.com
+CREATED:20110908T191348Z
+DESCRIPTION:LA Dodgers at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_lanmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T225115Z
+LOCATION:Angel Stadium of Anaheim, Anaheim
+SUMMARY:LA Dodgers at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_lanmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120625T221500
+DTEND;TZID=America/New_York:20120626T011500
+DTSTAMP:20120226T081725Z
+UID:318821@mlb.com
+CREATED:20110908T191350Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T221500
+DTEND;TZID=America/New_York:20120627T011500
+DTSTAMP:20120226T081725Z
+UID:318835@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T154500
+DTEND;TZID=America/New_York:20120627T184500
+DTSTAMP:20120226T081725Z
+UID:318850@mlb.com
+CREATED:20110908T191353Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120628T221000
+DTEND;TZID=America/New_York:20120629T011000
+DTSTAMP:20120226T081725Z
+UID:318867@mlb.com
+CREATED:20110908T191354Z
+DESCRIPTION:NY Mets at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_nynmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #5: Eric Karros\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:NY Mets at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_nynmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T221000
+DTEND;TZID=America/New_York:20120630T011000
+DTSTAMP:20120226T081725Z
+UID:318881@mlb.com
+CREATED:20110908T191356Z
+DESCRIPTION:NY Mets at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_nynmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:NY Mets at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_nynmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T191500
+DTEND;TZID=America/New_York:20120630T221500
+DTSTAMP:20120226T081725Z
+UID:318896@mlb.com
+CREATED:20110908T191358Z
+DESCRIPTION:NY Mets at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_nynmlb_lanmlb_1\n\nPromotions/Giveaways: \n    On-Field Photo Day\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=06&y=2012\n\nLocal TV: FOX\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:NY Mets at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_nynmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T033300
+DTEND;TZID=America/New_York:20120701T063300
+DTSTAMP:20120226T081725Z
+UID:318911@mlb.com
+CREATED:20110908T191359Z
+DESCRIPTION:NY Mets at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_nynmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Hello Kitty Mini Bobblehead\n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:NY Mets at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_nynmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120702T221000
+DTEND;TZID=America/New_York:20120703T011000
+DTSTAMP:20120226T081725Z
+UID:318921@mlb.com
+CREATED:20110908T191400Z
+DESCRIPTION:Cincinnati at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_cinmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Cincinnati at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_cinmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T221000
+DTEND;TZID=America/New_York:20120704T011000
+DTSTAMP:20120226T081725Z
+UID:318933@mlb.com
+CREATED:20110908T191402Z
+DESCRIPTION:Cincinnati at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_cinmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Dodger Stadium 50th Anniversary LA Cap*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Cincinnati at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_cinmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T211000
+DTEND;TZID=America/New_York:20120705T001000
+DTSTAMP:20120226T081725Z
+UID:318948@mlb.com
+CREATED:20110908T191403Z
+DESCRIPTION:Cincinnati at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_cinmlb_lanmlb_1\n\nPromotions/Giveaways: \n    4th of July Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Cincinnati at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_cinmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T214000
+DTEND;TZID=America/New_York:20120706T004000
+DTSTAMP:20120226T081725Z
+UID:318966@mlb.com
+CREATED:20110908T191405Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T214000
+DTEND;TZID=America/New_York:20120707T004000
+DTSTAMP:20120226T081725Z
+UID:318980@mlb.com
+CREATED:20110908T191407Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T221000
+DTEND;TZID=America/New_York:20120708T011000
+DTSTAMP:20120226T081725Z
+UID:318995@mlb.com
+CREATED:20110908T191408Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T161000
+DTEND;TZID=America/New_York:20120708T191000
+DTSTAMP:20120226T081725Z
+UID:319010@mlb.com
+CREATED:20110908T191410Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T081725Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T221000
+DTEND;TZID=America/New_York:20120714T011000
+DTSTAMP:20120226T081725Z
+UID:319030@mlb.com
+CREATED:20110908T191412Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T211000
+DTEND;TZID=America/New_York:20120715T001000
+DTSTAMP:20120226T081725Z
+UID:319045@mlb.com
+CREATED:20110908T191414Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #6: Tommy Lasorda and Walter Alston\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T161000
+DTEND;TZID=America/New_York:20120715T191000
+DTSTAMP:20120226T081725Z
+UID:319060@mlb.com
+CREATED:20110908T191416Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n    MLB Network Drawstring Bag*\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050503Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120716T221000
+DTEND;TZID=America/New_York:20120717T011000
+DTSTAMP:20120226T081725Z
+UID:319070@mlb.com
+CREATED:20110908T191417Z
+DESCRIPTION:Philadelphia at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_phimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Philadelphia at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_phimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T221000
+DTEND;TZID=America/New_York:20120718T011000
+DTSTAMP:20120226T081725Z
+UID:319085@mlb.com
+CREATED:20110908T191418Z
+DESCRIPTION:Philadelphia at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_phimlb_lanmlb_1\n\nPromotions/Giveaways: \n    Beach Chair*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Philadelphia at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_phimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T151000
+DTEND;TZID=America/New_York:20120718T181000
+DTSTAMP:20120226T081725Z
+UID:319100@mlb.com
+CREATED:20110908T191420Z
+DESCRIPTION:Philadelphia at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_phimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Philadelphia at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_phimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T191000
+DTEND;TZID=America/New_York:20120720T221000
+DTSTAMP:20120226T081725Z
+UID:319125@mlb.com
+CREATED:20110908T191423Z
+DESCRIPTION:LA Dodgers at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_lanmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:LA Dodgers at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_lanmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T131000
+DTEND;TZID=America/New_York:20120721T161000
+DTSTAMP:20120226T081725Z
+UID:319140@mlb.com
+CREATED:20110908T191425Z
+DESCRIPTION:LA Dodgers at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_lanmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:LA Dodgers at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_lanmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T131000
+DTEND;TZID=America/New_York:20120722T161000
+DTSTAMP:20120226T081725Z
+UID:319155@mlb.com
+CREATED:20110908T191426Z
+DESCRIPTION:LA Dodgers at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_lanmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:LA Dodgers at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_lanmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T201500
+DTEND;TZID=America/New_York:20120723T231500
+DTSTAMP:20120226T081725Z
+UID:319170@mlb.com
+CREATED:20110908T191428Z
+DESCRIPTION:LA Dodgers at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_lanmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:LA Dodgers at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_lanmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T201500
+DTEND;TZID=America/New_York:20120724T231500
+DTSTAMP:20120226T081725Z
+UID:319183@mlb.com
+CREATED:20110908T191429Z
+DESCRIPTION:LA Dodgers at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_lanmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:LA Dodgers at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_lanmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T201500
+DTEND;TZID=America/New_York:20120725T231500
+DTSTAMP:20120226T081725Z
+UID:319198@mlb.com
+CREATED:20110908T191431Z
+DESCRIPTION:LA Dodgers at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_lanmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:LA Dodgers at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_lanmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120726T134500
+DTEND;TZID=America/New_York:20120726T164500
+DTSTAMP:20120226T081725Z
+UID:319208@mlb.com
+CREATED:20110908T191432Z
+DESCRIPTION:LA Dodgers at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_26_lanmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:LA Dodgers at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_26_lanmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T221500
+DTEND;TZID=America/New_York:20120728T011500
+DTSTAMP:20120226T081725Z
+UID:319220@mlb.com
+CREATED:20110908T191433Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T210500
+DTEND;TZID=America/New_York:20120729T000500
+DTSTAMP:20120226T081725Z
+UID:319235@mlb.com
+CREATED:20110908T191435Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T160500
+DTEND;TZID=America/New_York:20120729T190500
+DTSTAMP:20120226T081725Z
+UID:319250@mlb.com
+CREATED:20110908T191437Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120730T221000
+DTEND;TZID=America/New_York:20120731T011000
+DTSTAMP:20120226T081725Z
+UID:319260@mlb.com
+CREATED:20110908T191438Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T221000
+DTEND;TZID=America/New_York:20120801T011000
+DTSTAMP:20120226T081725Z
+UID:319272@mlb.com
+CREATED:20110908T191439Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_arimlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #7: Kirk Gibson\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=07&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T151000
+DTEND;TZID=America/New_York:20120801T181000
+DTSTAMP:20120226T081725Z
+UID:319287@mlb.com
+CREATED:20110908T191441Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T221000
+DTEND;TZID=America/New_York:20120804T011000
+DTSTAMP:20120226T081725Z
+UID:319313@mlb.com
+CREATED:20110908T191444Z
+DESCRIPTION:Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_chnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T211000
+DTEND;TZID=America/New_York:20120805T001000
+DTSTAMP:20120226T081725Z
+UID:319328@mlb.com
+CREATED:20110908T191445Z
+DESCRIPTION:Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_chnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T033300
+DTEND;TZID=America/New_York:20120805T063300
+DTSTAMP:20120226T081725Z
+UID:319343@mlb.com
+CREATED:20110908T191447Z
+DESCRIPTION:Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_chnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Snapback Cap*\n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T221000
+DTEND;TZID=America/New_York:20120807T011000
+DTSTAMP:20120226T081725Z
+UID:319360@mlb.com
+CREATED:20110908T191449Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_colmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T221000
+DTEND;TZID=America/New_York:20120808T011000
+DTSTAMP:20120226T081725Z
+UID:319373@mlb.com
+CREATED:20110908T191450Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_colmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #8: Sandy Koufax\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T221000
+DTEND;TZID=America/New_York:20120809T011000
+DTSTAMP:20120226T081725Z
+UID:319388@mlb.com
+CREATED:20110908T191452Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_colmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T191000
+DTEND;TZID=America/New_York:20120810T221000
+DTSTAMP:20120226T081725Z
+UID:319413@mlb.com
+CREATED:20110908T191454Z
+DESCRIPTION:LA Dodgers at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_lanmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Marlins Park, Miami
+SUMMARY:LA Dodgers at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_lanmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T191000
+DTEND;TZID=America/New_York:20120811T221000
+DTSTAMP:20120226T081725Z
+UID:319428@mlb.com
+CREATED:20110908T191456Z
+DESCRIPTION:LA Dodgers at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_lanmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Marlins Park, Miami
+SUMMARY:LA Dodgers at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_lanmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T131000
+DTEND;TZID=America/New_York:20120812T161000
+DTSTAMP:20120226T081725Z
+UID:319443@mlb.com
+CREATED:20110908T191458Z
+DESCRIPTION:LA Dodgers at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_lanmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Marlins Park, Miami
+SUMMARY:LA Dodgers at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_lanmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120813T190500
+DTEND;TZID=America/New_York:20120813T220500
+DTSTAMP:20120226T081725Z
+UID:319456@mlb.com
+CREATED:20110908T191459Z
+DESCRIPTION:LA Dodgers at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_lanmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:LA Dodgers at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_lanmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T190500
+DTEND;TZID=America/New_York:20120814T220500
+DTSTAMP:20120226T081725Z
+UID:319469@mlb.com
+CREATED:20110908T191500Z
+DESCRIPTION:LA Dodgers at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_lanmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:LA Dodgers at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_lanmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T190500
+DTEND;TZID=America/New_York:20120815T220500
+DTSTAMP:20120226T081725Z
+UID:319484@mlb.com
+CREATED:20110908T191502Z
+DESCRIPTION:LA Dodgers at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_lanmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:LA Dodgers at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_lanmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120816T160500
+DTEND;TZID=America/New_York:20120816T190500
+DTSTAMP:20120226T081725Z
+UID:319497@mlb.com
+CREATED:20110908T191505Z
+DESCRIPTION:LA Dodgers at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_lanmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:LA Dodgers at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_lanmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T193500
+DTEND;TZID=America/New_York:20120817T223500
+DTSTAMP:20120226T081725Z
+UID:319511@mlb.com
+CREATED:20110908T191506Z
+DESCRIPTION:LA Dodgers at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_lanmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:LA Dodgers at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_lanmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T191000
+DTEND;TZID=America/New_York:20120818T221000
+DTSTAMP:20120226T081725Z
+UID:319526@mlb.com
+CREATED:20110908T191508Z
+DESCRIPTION:LA Dodgers at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_lanmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:LA Dodgers at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_lanmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T133500
+DTEND;TZID=America/New_York:20120819T163500
+DTSTAMP:20120226T081725Z
+UID:319541@mlb.com
+CREATED:20110908T191510Z
+DESCRIPTION:LA Dodgers at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_lanmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:LA Dodgers at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_lanmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T221000
+DTEND;TZID=America/New_York:20120821T011000
+DTSTAMP:20120226T081725Z
+UID:319559@mlb.com
+CREATED:20110908T191512Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T221000
+DTEND;TZID=America/New_York:20120822T011000
+DTSTAMP:20120226T081725Z
+UID:319573@mlb.com
+CREATED:20110908T191513Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_sfnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #9: Fernando Valenzuela\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T221000
+DTEND;TZID=America/New_York:20120823T011000
+DTSTAMP:20120226T081725Z
+UID:319588@mlb.com
+CREATED:20110908T191515Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T221000
+DTEND;TZID=America/New_York:20120825T011000
+DTSTAMP:20120226T081725Z
+UID:319602@mlb.com
+CREATED:20110908T191517Z
+DESCRIPTION:Miami at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_miamlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Miami at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_miamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T211000
+DTEND;TZID=America/New_York:20120826T001000
+DTSTAMP:20120226T081725Z
+UID:319617@mlb.com
+CREATED:20110908T191519Z
+DESCRIPTION:Miami at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_miamlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Miami at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_miamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T161000
+DTEND;TZID=America/New_York:20120826T191000
+DTSTAMP:20120226T081725Z
+UID:319632@mlb.com
+CREATED:20110908T191520Z
+DESCRIPTION:Miami at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_miamlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Back to School Backpack^\n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050518Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Miami at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_miamlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120827T204000
+DTEND;TZID=America/New_York:20120827T234000
+DTSTAMP:20120226T081725Z
+UID:319648@mlb.com
+CREATED:20110908T191522Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T204000
+DTEND;TZID=America/New_York:20120828T234000
+DTSTAMP:20120226T081725Z
+UID:319660@mlb.com
+CREATED:20110908T191523Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T151000
+DTEND;TZID=America/New_York:20120829T181000
+DTSTAMP:20120226T081725Z
+UID:319675@mlb.com
+CREATED:20110908T191525Z
+DESCRIPTION:LA Dodgers at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_lanmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Coors Field, Denver
+SUMMARY:LA Dodgers at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_lanmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120830T221000
+DTEND;TZID=America/New_York:20120831T011000
+DTSTAMP:20120226T081725Z
+UID:319685@mlb.com
+CREATED:20110908T191526Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_arimlb_lanmlb_1\n\nPromotions/Giveaways: \n    Bobblehead #10: Vin Scully\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T221000
+DTEND;TZID=America/New_York:20120901T011000
+DTSTAMP:20120226T081725Z
+UID:319697@mlb.com
+CREATED:20110908T191527Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_arimlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=08&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T211000
+DTEND;TZID=America/New_York:20120902T001000
+DTSTAMP:20120226T081725Z
+UID:319712@mlb.com
+CREATED:20110908T191529Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_arimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T201000
+DTEND;TZID=America/New_York:20120902T231000
+DTSTAMP:20120226T081725Z
+UID:319727@mlb.com
+CREATED:20110908T191531Z
+DESCRIPTION:Arizona at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_arimlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120114T050530Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Arizona at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_arimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T201000
+DTEND;TZID=America/New_York:20120903T231000
+DTSTAMP:20120226T081725Z
+UID:319754@mlb.com
+CREATED:20110908T191534Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    $1 Dodger Dogs\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T221000
+DTEND;TZID=America/New_York:20120905T011000
+DTSTAMP:20120226T081725Z
+UID:319769@mlb.com
+CREATED:20110908T191536Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_sdnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Matt Kemp Replica Jersey*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T221000
+DTEND;TZID=America/New_York:20120906T011000
+DTSTAMP:20120226T081725Z
+UID:319784@mlb.com
+CREATED:20110908T191537Z
+DESCRIPTION:San Diego at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_sdnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Diego at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_sdnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T221500
+DTEND;TZID=America/New_York:20120908T011500
+DTSTAMP:20120226T081725Z
+UID:319800@mlb.com
+CREATED:20110908T191539Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T160500
+DTEND;TZID=America/New_York:20120908T190500
+DTSTAMP:20120226T081725Z
+UID:319815@mlb.com
+CREATED:20110908T191541Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal TV: FOX\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T160500
+DTEND;TZID=America/New_York:20120909T190500
+DTSTAMP:20120226T081725Z
+UID:319830@mlb.com
+CREATED:20110908T191542Z
+DESCRIPTION:LA Dodgers at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_lanmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:LA Dodgers at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_lanmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T214000
+DTEND;TZID=America/New_York:20120912T004000
+DTSTAMP:20120226T081725Z
+UID:319853@mlb.com
+CREATED:20110908T191545Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T214000
+DTEND;TZID=America/New_York:20120913T004000
+DTSTAMP:20120226T081725Z
+UID:319868@mlb.com
+CREATED:20110908T191547Z
+DESCRIPTION:LA Dodgers at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_lanmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:LA Dodgers at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_lanmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120913T221000
+DTEND;TZID=America/New_York:20120914T011000
+DTSTAMP:20120226T081725Z
+UID:319884@mlb.com
+CREATED:20110908T191548Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_13_slnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Fleece Blanket*\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_13_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T221000
+DTEND;TZID=America/New_York:20120915T011000
+DTSTAMP:20120226T081725Z
+UID:319898@mlb.com
+CREATED:20110908T191550Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_slnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T211000
+DTEND;TZID=America/New_York:20120916T001000
+DTSTAMP:20120226T081725Z
+UID:319913@mlb.com
+CREATED:20110908T191552Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_slnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T033300
+DTEND;TZID=America/New_York:20120916T063300
+DTSTAMP:20120226T081725Z
+UID:319928@mlb.com
+CREATED:20110908T191554Z
+DESCRIPTION:St. Louis at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_slnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n    Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120203T220748Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:St. Louis at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_slnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T190500
+DTEND;TZID=America/New_York:20120918T220500
+DTSTAMP:20120226T081725Z
+UID:319944@mlb.com
+CREATED:20110908T191555Z
+DESCRIPTION:LA Dodgers at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_lanmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:LA Dodgers at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_lanmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T190500
+DTEND;TZID=America/New_York:20120919T220500
+DTSTAMP:20120226T081725Z
+UID:319959@mlb.com
+CREATED:20110908T191557Z
+DESCRIPTION:LA Dodgers at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_lanmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:LA Dodgers at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_lanmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120920T190500
+DTEND;TZID=America/New_York:20120920T220500
+DTSTAMP:20120226T081725Z
+UID:319972@mlb.com
+CREATED:20110908T191558Z
+DESCRIPTION:LA Dodgers at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_lanmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:LA Dodgers at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_lanmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T191000
+DTEND;TZID=America/New_York:20120921T221000
+DTSTAMP:20120226T081725Z
+UID:319985@mlb.com
+CREATED:20110908T191600Z
+DESCRIPTION:LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_lanmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T191000
+DTEND;TZID=America/New_York:20120922T221000
+DTSTAMP:20120226T081725Z
+UID:320000@mlb.com
+CREATED:20110908T191601Z
+DESCRIPTION:LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_lanmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T131000
+DTEND;TZID=America/New_York:20120923T161000
+DTSTAMP:20120226T081725Z
+UID:320015@mlb.com
+CREATED:20110908T191603Z
+DESCRIPTION:LA Dodgers at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_lanmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:LA Dodgers at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_lanmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T220500
+DTEND;TZID=America/New_York:20120926T010500
+DTSTAMP:20120226T081725Z
+UID:320037@mlb.com
+CREATED:20110908T191605Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020844Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T183500
+DTEND;TZID=America/New_York:20120926T213500
+DTSTAMP:20120226T081725Z
+UID:320052@mlb.com
+CREATED:20110908T191607Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020844Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T220500
+DTEND;TZID=America/New_York:20120928T010500
+DTSTAMP:20120226T081725Z
+UID:320066@mlb.com
+CREATED:20110908T191609Z
+DESCRIPTION:LA Dodgers at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_lanmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120117T020845Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:LA Dodgers at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_lanmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T221000
+DTEND;TZID=America/New_York:20120929T011000
+DTSTAMP:20120226T081725Z
+UID:320078@mlb.com
+CREATED:20110908T191610Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_colmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Friday Night Fireworks\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T033300
+DTEND;TZID=America/New_York:20120929T063300
+DTSTAMP:20120226T081725Z
+UID:320093@mlb.com
+CREATED:20110908T191612Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_colmlb_lanmlb_1\n\nPromotions/Giveaways: \n    La Gran Fiesta - Viva Los Dodgers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T161000
+DTEND;TZID=America/New_York:20120930T191000
+DTSTAMP:20120226T081725Z
+UID:320108@mlb.com
+CREATED:20110908T191613Z
+DESCRIPTION:Colorado at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_colmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Fan Appreciation Day\n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=09&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120130T184412Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Colorado at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_colmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T221000
+DTEND;TZID=America/New_York:20121002T011000
+DTSTAMP:20120226T081725Z
+UID:320132@mlb.com
+CREATED:20110908T191616Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=10&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T221000
+DTEND;TZID=America/New_York:20121003T011000
+DTSTAMP:20120226T081725Z
+UID:320147@mlb.com
+CREATED:20110908T191618Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_sfnmlb_lanmlb_1\n\nPromotions/Giveaways: \n    Dodger Giveaway Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=10&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_sfnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T221000
+DTEND;TZID=America/New_York:20121004T011000
+DTSTAMP:20120226T081725Z
+UID:320162@mlb.com
+CREATED:20110908T191619Z
+DESCRIPTION:San Francisco at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_sfnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=la&m=10&y=2012\n\nLocal Radio: 570 Fox Sports L.A.
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:San Francisco at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_sfnmlb_lanmlb_1
+END:VEVENT
+END:VCALENDAR

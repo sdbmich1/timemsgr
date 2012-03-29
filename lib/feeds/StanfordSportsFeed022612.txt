@@ -1,0 +1,31 @@
+http://www.gostanford.com/sports/w-softbl/sched/stan-w-softbl-sched.html, Softball
+http://www.gostanford.com/sports/m-gym/sched/stan-m-gym-sched.html, Men's Sports
+http://www.gostanford.com/sports/c-xc/sched/stan-c-xc-sched.html, Track
+http://www.gostanford.com/sports/c-fenc/sched/stan-c-fenc-sched.html, Women's Sports
+http://www.gostanford.com/sports/w-fieldh/sched/stan-w-fieldh-sched.html, Women's Sports
+http://www.gostanford.com/sports/w-golf/sched/stan-w-golf-sched.html, Women's Golf
+http://www.gostanford.com/sports/w-gym/sched/stan-w-gym-sched.html, Women's Gymnastics
+http://www.gostanford.com/sports/w-lacros/sched/stan-w-lacros-sched.html, Lacrosse
+http://www.gostanford.com/sports/w-crew/sched/stan-w-crew-sched.html, Women's Rowing
+http://www.gostanford.com/sports/c-crewlt/sched/stan-c-crewlt-sched.html, Women's Rowing
+http://www.gostanford.com/sports/c-sail/sched/stan-c-sail-sched.html, Sailing
+http://www.gostanford.com/sports/w-soccer/sched/stan-w-soccer-sched.html, Women's Soccer
+http://www.gostanford.com/sports/w-squash/sched/stan-w-squash-sched.html, Women's Squash
+http://www.gostanford.com/sports/w-swim/sched/stan-w-swim-sched.html, Women's Swimming
+http://www.gostanford.com/sports/w-syncs/sched/stan-w-syncs-sched.html, Synchronized Swimming
+http://www.gostanford.com/sports/w-tennis/sched/stan-w-tennis-sched.html, Women's Tennis
+http://www.gostanford.com/sports/c-track/sched/stan-c-track-sched.html, Track
+http://www.gostanford.com/sports/w-baskbl/sched/stan-w-baskbl-sched.html, Women's Basketball
+http://www.gostanford.com/sports/m-basebl/sched/stan-m-basebl-sched.html, Men's Baseball
+http://www.gostanford.com/sports/m-baskbl/sched/stan-m-baskbl-sched.html, Men's Basketball 
+http://www.gostanford.com/sports/m-footbl/sched/stan-m-footbl-sched.html, Football
+http://www.gostanford.com/sports/m-golf/sched/stan-m-golf-sched.html, Men's Golf
+http://www.gostanford.com/sports/m-crew/sched/stan-m-crew-sched.html, Men's Rowing
+http://www.gostanford.com/sports/m-soccer/sched/stan-m-soccer-sched.html, Men's Sports
+http://www.gostanford.com/sports/m-swim/sched/stan-m-swim-sched.html, Men's Swimming
+http://www.gostanford.com/sports/m-tennis/sched/stan-m-tennis-sched.html, Men's Tennis
+http://www.gostanford.com/sports/m-volley/sched/stan-m-volley-sched.html, Men's Volleyball
+http://www.gostanford.com/sports/w-volley/sched/stan-w-volley-sched.html, Women's Volleyball
+http://www.gostanford.com/sports/m-wpolo/sched/stan-m-wpolo-sched.html, Men's Sports
+http://www.gostanford.com/sports/m-wrestl/sched/stan-m-wrestl-sched.html, Men's Wrestling
+http://www.gostanford.com/sports/w-wpolo/sched/stan-w-wpolo-sched.html, Women's Water Polo

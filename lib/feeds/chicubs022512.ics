@@ -1,0 +1,2798 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 Chicago Cubs Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T150500
+DTEND;TZID=America/New_York:20120304T180500
+DTSTAMP:20120226T081242Z
+UID:332114@mlb.com
+CREATED:20111130T212814Z
+DESCRIPTION:Spring Training: Oakland at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_oakmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111214T194931Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Oakland at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_oakmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T150500
+DTEND;TZID=America/New_York:20120305T180500
+DTSTAMP:20120226T081242Z
+UID:332130@mlb.com
+CREATED:20111130T212817Z
+DESCRIPTION:Spring Training: Oakland at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_oakmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: WGN 720
+LAST-MODIFIED:20120203T194519Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Oakland at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_oakmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T150500
+DTEND;TZID=America/New_York:20120306T180500
+DTSTAMP:20120226T081242Z
+UID:332139@mlb.com
+CREATED:20111130T212818Z
+DESCRIPTION:Spring Training: Colorado at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_colmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: WGN 720
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Colorado at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_colmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T150500
+DTEND;TZID=America/New_York:20120307T180500
+DTSTAMP:20120226T081242Z
+UID:332154@mlb.com
+CREATED:20111130T212820Z
+DESCRIPTION:Spring Training: Chi Cubs at Kansas City\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_chnmlb_kcamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: WGN 720
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Chi Cubs at Kansas City
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_chnmlb_kcamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120308T150500
+DTEND;TZID=America/New_York:20120308T180500
+DTSTAMP:20120226T081242Z
+UID:332180@mlb.com
+CREATED:20111130T212824Z
+DESCRIPTION:Spring Training: Seattle at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_seamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Seattle at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_seamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T150500
+DTEND;TZID=America/New_York:20120309T180500
+DTSTAMP:20120226T081242Z
+UID:332187@mlb.com
+CREATED:20111130T212825Z
+DESCRIPTION:Spring Training: Chi Cubs at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_chnmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Chi Cubs at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_chnmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T150500
+DTEND;TZID=America/New_York:20120310T180500
+DTSTAMP:20120226T081242Z
+UID:332202@mlb.com
+CREATED:20111130T212827Z
+DESCRIPTION:Spring Training: Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLB.TV, WGN\nLocal Radio: WGN 720
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Maryvale Baseball Park, Phoenix
+SUMMARY:Spring Training: Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T150500
+DTEND;TZID=America/New_York:20120311T180500
+DTSTAMP:20120226T081242Z
+UID:332223@mlb.com
+CREATED:20111130T212830Z
+DESCRIPTION:Spring Training: Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_chnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV, WGN\nLocal Radio: MLB.com
+LAST-MODIFIED:20120128T000848Z
+LOCATION:Camelback Ranch, Glendale
+SUMMARY:Spring Training: Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120312T160500
+DTEND;TZID=America/New_York:20120312T190500
+DTSTAMP:20120226T081242Z
+UID:332240@mlb.com
+CREATED:20111130T212833Z
+DESCRIPTION:Spring Training: Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: WGN 720
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T160500
+DTEND;TZID=America/New_York:20120313T190500
+DTSTAMP:20120226T081242Z
+UID:332256@mlb.com
+CREATED:20111130T212835Z
+DESCRIPTION:Spring Training: Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Scottsdale Stadium, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T160500
+DTEND;TZID=America/New_York:20120314T190500
+DTSTAMP:20120226T081242Z
+UID:332275@mlb.com
+CREATED:20111130T212838Z
+DESCRIPTION:Spring Training: Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T161000
+DTEND;TZID=America/New_York:20120315T191000
+DTSTAMP:20120226T081242Z
+UID:332287@mlb.com
+CREATED:20111130T212839Z
+DESCRIPTION:Spring Training: Chi Cubs at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_chnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_chnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T160500
+DTEND;TZID=America/New_York:20120315T190500
+DTSTAMP:20120226T081242Z
+UID:332283@mlb.com
+CREATED:20111130T212839Z
+DESCRIPTION:Spring Training: Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_arimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T160500
+DTEND;TZID=America/New_York:20120316T190500
+DTSTAMP:20120226T081242Z
+UID:332311@mlb.com
+CREATED:20111130T212843Z
+DESCRIPTION:Spring Training: San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_sfnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T160500
+DTEND;TZID=America/New_York:20120317T190500
+DTSTAMP:20120226T081242Z
+UID:332332@mlb.com
+CREATED:20111130T212846Z
+DESCRIPTION:Spring Training: Texas at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_texmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay)
+LAST-MODIFIED:20120203T194522Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Texas at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_texmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T160500
+DTEND;TZID=America/New_York:20120317T190500
+DTSTAMP:20120226T081242Z
+UID:332319@mlb.com
+CREATED:20111130T212844Z
+DESCRIPTION:Spring Training: Chi Cubs at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_chnmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Phoenix Municipal Stadium, Phoenix
+SUMMARY:Spring Training: Chi Cubs at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_chnmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T081242Z
+UID:332350@mlb.com
+CREATED:20111130T212848Z
+DESCRIPTION:Spring Training: Texas at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_texmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLB.TV
+LAST-MODIFIED:20120203T194522Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Texas at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_texmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T160500
+DTEND;TZID=America/New_York:20120318T190500
+DTSTAMP:20120226T081242Z
+UID:332339@mlb.com
+CREATED:20111130T212847Z
+DESCRIPTION:Spring Training: Chi White Sox at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_chamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Chi White Sox at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_chamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120319T160500
+DTEND;TZID=America/New_York:20120319T190500
+DTSTAMP:20120226T081242Z
+UID:332354@mlb.com
+CREATED:20111130T212849Z
+DESCRIPTION:Spring Training: Chi Cubs at Seattle\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_chnmlb_seamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Chi Cubs at Seattle
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_chnmlb_seamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T160500
+DTEND;TZID=America/New_York:20120320T190500
+DTSTAMP:20120226T081242Z
+UID:332373@mlb.com
+CREATED:20111130T212852Z
+DESCRIPTION:Spring Training: Texas at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_texmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Texas at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_texmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T160500
+DTEND;TZID=America/New_York:20120320T190500
+DTSTAMP:20120226T081242Z
+UID:332364@mlb.com
+CREATED:20111130T212850Z
+DESCRIPTION:Spring Training: Chi Cubs at Oakland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_chnmlb_oakmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Phoenix Municipal Stadium, Phoenix
+SUMMARY:Spring Training: Chi Cubs at Oakland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_chnmlb_oakmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120322T160500
+DTEND;TZID=America/New_York:20120322T190500
+DTSTAMP:20120226T081242Z
+UID:332388@mlb.com
+CREATED:20111130T212854Z
+DESCRIPTION:Spring Training: Chi Cubs at Texas\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_chnmlb_texmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), CSN\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Surprise Stadium, Surprise
+SUMMARY:Spring Training: Chi Cubs at Texas
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_chnmlb_texmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T161000
+DTEND;TZID=America/New_York:20120323T191000
+DTSTAMP:20120226T081242Z
+UID:332404@mlb.com
+CREATED:20111130T212856Z
+DESCRIPTION:Spring Training: Chi Cubs at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_chnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_chnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T160500
+DTEND;TZID=America/New_York:20120324T190500
+DTSTAMP:20120226T081242Z
+UID:332426@mlb.com
+CREATED:20111130T212859Z
+DESCRIPTION:Spring Training: San Diego at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_sdnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLB.TV, WGN\nLocal Radio: WGN 720
+LAST-MODIFIED:20120203T194519Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: San Diego at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_sdnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T160500
+DTEND;TZID=America/New_York:20120325T190500
+DTSTAMP:20120226T081242Z
+UID:332434@mlb.com
+CREATED:20111130T212900Z
+DESCRIPTION:Spring Training: Chi Cubs at Cleveland\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_chnmlb_clemlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: WGN, MLB.TV, MLBN (delay)\nLocal Radio: WGN 720
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Chi Cubs at Cleveland
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_chnmlb_clemlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T161000
+DTEND;TZID=America/New_York:20120326T191000
+DTSTAMP:20120226T081242Z
+UID:332450@mlb.com
+CREATED:20111130T212902Z
+DESCRIPTION:Spring Training: Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T160500
+DTEND;TZID=America/New_York:20120326T190500
+DTSTAMP:20120226T081242Z
+UID:332458@mlb.com
+CREATED:20111130T212903Z
+DESCRIPTION:Spring Training: San Diego at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_sdnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: San Diego at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_sdnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T160500
+DTEND;TZID=America/New_York:20120327T190500
+DTSTAMP:20120226T081242Z
+UID:332462@mlb.com
+CREATED:20111130T212904Z
+DESCRIPTION:Spring Training: Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Goodyear Ballpark, Goodyear
+SUMMARY:Spring Training: Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T160500
+DTEND;TZID=America/New_York:20120328T190500
+DTSTAMP:20120226T081242Z
+UID:332478@mlb.com
+CREATED:20111130T212905Z
+DESCRIPTION:Spring Training: Cleveland at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_clemlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Cleveland at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_clemlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T160500
+DTEND;TZID=America/New_York:20120329T190500
+DTSTAMP:20120226T081242Z
+UID:332491@mlb.com
+CREATED:20111130T212907Z
+DESCRIPTION:Spring Training: Chi Cubs at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_chnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Peoria Stadium, Peoria
+SUMMARY:Spring Training: Chi Cubs at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_chnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T160500
+DTEND;TZID=America/New_York:20120330T190500
+DTSTAMP:20120226T081242Z
+UID:332510@mlb.com
+CREATED:20111130T212909Z
+DESCRIPTION:Spring Training: LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T160500
+DTEND;TZID=America/New_York:20120331T190500
+DTSTAMP:20120226T081242Z
+UID:332519@mlb.com
+CREATED:20111130T212910Z
+DESCRIPTION:Spring Training: LA Angels at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_anamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=03&y=2012\n\nLocal TV: MLBN, CSN, MLB.TV\nLocal Radio: WGN 720
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: LA Angels at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_anamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T160500
+DTEND;TZID=America/New_York:20120401T190500
+DTSTAMP:20120226T081242Z
+UID:332537@mlb.com
+CREATED:20111130T212912Z
+DESCRIPTION:Spring Training: Chi Cubs at LA Angels\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_chnmlb_anamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Tempe Diablo Stadium, Tempe
+SUMMARY:Spring Training: Chi Cubs at LA Angels
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_chnmlb_anamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T161000
+DTEND;TZID=America/New_York:20120402T191000
+DTSTAMP:20120226T081242Z
+UID:332550@mlb.com
+CREATED:20111130T212914Z
+DESCRIPTION:Spring Training: Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Salt River Fields at Talking Stick, Scottsdale
+SUMMARY:Spring Training: Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T150500
+DTEND;TZID=America/New_York:20120403T180500
+DTSTAMP:20120226T081242Z
+UID:332563@mlb.com
+CREATED:20111130T212915Z
+DESCRIPTION:Spring Training: Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal Radio: WGN 720
+LAST-MODIFIED:20120203T194520Z
+LOCATION:HoHoKam Park, Mesa
+SUMMARY:Spring Training: Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120405T142000
+DTEND;TZID=America/New_York:20120405T172000
+DTSTAMP:20120226T081242Z
+UID:317739@mlb.com
+CREATED:20110908T191144Z
+DESCRIPTION:Washington at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_wasmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Magnet Schedule\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120126T201149Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Washington at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_wasmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T130500
+DTEND;TZID=America/New_York:20120407T160500
+DTSTAMP:20120226T081242Z
+UID:317764@mlb.com
+CREATED:20110908T191148Z
+DESCRIPTION:Washington at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_wasmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Magnet Schedule\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Washington at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_wasmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T142000
+DTEND;TZID=America/New_York:20120408T172000
+DTSTAMP:20120226T081242Z
+UID:317779@mlb.com
+CREATED:20110908T191150Z
+DESCRIPTION:Washington at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_wasmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Washington at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_wasmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120409T190500
+DTEND;TZID=America/New_York:20120409T220500
+DTSTAMP:20120226T081242Z
+UID:317786@mlb.com
+CREATED:20110908T191151Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_milmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs "Puffy Ball" Winter Hat\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120223T170115Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120410T200500
+DTEND;TZID=America/New_York:20120410T230500
+DTSTAMP:20120226T081242Z
+UID:317797@mlb.com
+CREATED:20110908T191152Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_milmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Ear Warmers\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_10_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T142000
+DTEND;TZID=America/New_York:20120411T172000
+DTSTAMP:20120226T081242Z
+UID:317811@mlb.com
+CREATED:20110908T191154Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_milmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Koozie\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T142000
+DTEND;TZID=America/New_York:20120412T172000
+DTSTAMP:20120226T081242Z
+UID:317823@mlb.com
+CREATED:20110908T191155Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T151500
+DTEND;TZID=America/New_York:20120413T181500
+DTSTAMP:20120226T081242Z
+UID:317831@mlb.com
+CREATED:20110908T191157Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120126T201149Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T130500
+DTEND;TZID=America/New_York:20120414T160500
+DTSTAMP:20120226T081242Z
+UID:317846@mlb.com
+CREATED:20110908T191159Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T141500
+DTEND;TZID=America/New_York:20120415T171500
+DTSTAMP:20120226T081242Z
+UID:317861@mlb.com
+CREATED:20110908T191200Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120120T151911Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T191000
+DTEND;TZID=America/New_York:20120417T221000
+DTSTAMP:20120226T081242Z
+UID:317884@mlb.com
+CREATED:20110908T191203Z
+DESCRIPTION:Chi Cubs at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_chnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Chi Cubs at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_chnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T191000
+DTEND;TZID=America/New_York:20120418T221000
+DTSTAMP:20120226T081242Z
+UID:317899@mlb.com
+CREATED:20110908T191206Z
+DESCRIPTION:Chi Cubs at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_chnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Chi Cubs at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_chnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120419T124000
+DTEND;TZID=America/New_York:20120419T154000
+DTSTAMP:20120226T081242Z
+UID:317915@mlb.com
+CREATED:20110908T191208Z
+DESCRIPTION:Chi Cubs at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_chnmlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Chi Cubs at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_chnmlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T142000
+DTEND;TZID=America/New_York:20120420T172000
+DTSTAMP:20120226T081242Z
+UID:317928@mlb.com
+CREATED:20110908T191210Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T130500
+DTEND;TZID=America/New_York:20120421T160500
+DTSTAMP:20120226T081242Z
+UID:317943@mlb.com
+CREATED:20110908T191212Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T142000
+DTEND;TZID=America/New_York:20120422T172000
+DTSTAMP:20120226T081242Z
+UID:317958@mlb.com
+CREATED:20110908T191214Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_cinmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120423T200500
+DTEND;TZID=America/New_York:20120423T230500
+DTSTAMP:20120226T081242Z
+UID:317978@mlb.com
+CREATED:20110908T191216Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Fleece Gloves\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T200500
+DTEND;TZID=America/New_York:20120424T230500
+DTSTAMP:20120226T081242Z
+UID:317992@mlb.com
+CREATED:20110908T191217Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Scarf\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T142000
+DTEND;TZID=America/New_York:20120425T172000
+DTSTAMP:20120226T081242Z
+UID:318007@mlb.com
+CREATED:20110908T191219Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_slnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T190500
+DTEND;TZID=America/New_York:20120427T220500
+DTSTAMP:20120226T081242Z
+UID:318021@mlb.com
+CREATED:20110908T191221Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_chnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T190500
+DTEND;TZID=America/New_York:20120428T220500
+DTSTAMP:20120226T081242Z
+UID:318036@mlb.com
+CREATED:20110908T191222Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_chnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T133500
+DTEND;TZID=America/New_York:20120429T163500
+DTSTAMP:20120226T081242Z
+UID:318051@mlb.com
+CREATED:20110908T191224Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_chnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120430T190500
+DTEND;TZID=America/New_York:20120430T220500
+DTSTAMP:20120226T081242Z
+UID:318065@mlb.com
+CREATED:20110908T191226Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_chnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=04&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T191000
+DTEND;TZID=America/New_York:20120501T221000
+DTSTAMP:20120226T081242Z
+UID:318077@mlb.com
+CREATED:20110908T191227Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T191000
+DTEND;TZID=America/New_York:20120502T221000
+DTSTAMP:20120226T081242Z
+UID:318092@mlb.com
+CREATED:20110908T191229Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120503T123500
+DTEND;TZID=America/New_York:20120503T153500
+DTSTAMP:20120226T081242Z
+UID:318106@mlb.com
+CREATED:20110908T191230Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T142000
+DTEND;TZID=America/New_York:20120504T172000
+DTSTAMP:20120226T081242Z
+UID:318120@mlb.com
+CREATED:20110908T191232Z
+DESCRIPTION:LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T130500
+DTEND;TZID=America/New_York:20120505T160500
+DTSTAMP:20120226T081242Z
+UID:318135@mlb.com
+CREATED:20110908T191233Z
+DESCRIPTION:LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_lanmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T142000
+DTEND;TZID=America/New_York:20120506T172000
+DTSTAMP:20120226T081242Z
+UID:318150@mlb.com
+CREATED:20110908T191236Z
+DESCRIPTION:LA Dodgers at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_lanmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:LA Dodgers at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_lanmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T200500
+DTEND;TZID=America/New_York:20120507T230500
+DTSTAMP:20120226T081242Z
+UID:318160@mlb.com
+CREATED:20110908T191237Z
+DESCRIPTION:Atlanta at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_atlmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Atlanta at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_atlmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T200500
+DTEND;TZID=America/New_York:20120508T230500
+DTSTAMP:20120226T081242Z
+UID:318172@mlb.com
+CREATED:20110908T191238Z
+DESCRIPTION:Atlanta at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_atlmlb_chnmlb_1\n\nPromotions/Giveaways: \n    T-Shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Atlanta at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_atlmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T142000
+DTEND;TZID=America/New_York:20120509T172000
+DTSTAMP:20120226T081242Z
+UID:318187@mlb.com
+CREATED:20110908T191240Z
+DESCRIPTION:Atlanta at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_atlmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Exclusive limited-edition Ryan Dempster Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Atlanta at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_atlmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T201000
+DTEND;TZID=America/New_York:20120511T231000
+DTSTAMP:20120226T081242Z
+UID:318209@mlb.com
+CREATED:20110908T191242Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T130500
+DTEND;TZID=America/New_York:20120512T160500
+DTSTAMP:20120226T081242Z
+UID:318224@mlb.com
+CREATED:20110908T191244Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T141000
+DTEND;TZID=America/New_York:20120513T171000
+DTSTAMP:20120226T081242Z
+UID:318239@mlb.com
+CREATED:20110908T191246Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T190500
+DTEND;TZID=America/New_York:20120514T220500
+DTSTAMP:20120226T081242Z
+UID:318253@mlb.com
+CREATED:20110908T191247Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120215T174859Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T134500
+DTEND;TZID=America/New_York:20120515T164500
+DTSTAMP:20120226T081242Z
+UID:318268@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T200500
+DTEND;TZID=America/New_York:20120516T230500
+DTSTAMP:20120226T081242Z
+UID:318293@mlb.com
+CREATED:20110908T191251Z
+DESCRIPTION:Philadelphia at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_phimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Philadelphia at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_phimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T200500
+DTEND;TZID=America/New_York:20120517T230500
+DTSTAMP:20120226T081242Z
+UID:318308@mlb.com
+CREATED:20110908T191253Z
+DESCRIPTION:Philadelphia at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_phimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Philadelphia at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_phimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T142000
+DTEND;TZID=America/New_York:20120518T172000
+DTSTAMP:20120226T081242Z
+UID:318317@mlb.com
+CREATED:20110908T191254Z
+DESCRIPTION:Chi White Sox at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_chamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Chi White Sox at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_chamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T191500
+DTEND;TZID=America/New_York:20120519T221500
+DTSTAMP:20120226T081242Z
+UID:318332@mlb.com
+CREATED:20110908T191256Z
+DESCRIPTION:Chi White Sox at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_chamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Chi White Sox at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_chamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T142000
+DTEND;TZID=America/New_York:20120520T172000
+DTSTAMP:20120226T081242Z
+UID:318347@mlb.com
+CREATED:20110908T191257Z
+DESCRIPTION:Chi White Sox at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_chamlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120130T183856Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Chi White Sox at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_chamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T200500
+DTEND;TZID=America/New_York:20120521T230500
+DTSTAMP:20120226T081242Z
+UID:318360@mlb.com
+CREATED:20110908T191259Z
+DESCRIPTION:Chi Cubs at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_chnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Chi Cubs at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_chnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T200500
+DTEND;TZID=America/New_York:20120522T230500
+DTSTAMP:20120226T081242Z
+UID:318373@mlb.com
+CREATED:20110908T191300Z
+DESCRIPTION:Chi Cubs at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_chnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Chi Cubs at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_chnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T200500
+DTEND;TZID=America/New_York:20120523T230500
+DTSTAMP:20120226T081242Z
+UID:318388@mlb.com
+CREATED:20110908T191302Z
+DESCRIPTION:Chi Cubs at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_chnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Chi Cubs at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_chnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T190500
+DTEND;TZID=America/New_York:20120525T220500
+DTSTAMP:20120226T081242Z
+UID:318408@mlb.com
+CREATED:20110908T191304Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120104T193202Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T191500
+DTEND;TZID=America/New_York:20120526T221500
+DTSTAMP:20120226T081242Z
+UID:318423@mlb.com
+CREATED:20110908T191305Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193203Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T133500
+DTEND;TZID=America/New_York:20120527T163500
+DTSTAMP:20120226T081242Z
+UID:318438@mlb.com
+CREATED:20110908T191307Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T142000
+DTEND;TZID=America/New_York:20120528T172000
+DTSTAMP:20120226T081242Z
+UID:318463@mlb.com
+CREATED:20110908T191310Z
+DESCRIPTION:San Diego at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_sdnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Diego at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_sdnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T142000
+DTEND;TZID=America/New_York:20120529T172000
+DTSTAMP:20120226T081242Z
+UID:318478@mlb.com
+CREATED:20110908T191311Z
+DESCRIPTION:San Diego at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_sdnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Exclusive limited-edition Jeff Samardzija Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Diego at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_sdnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T142000
+DTEND;TZID=America/New_York:20120530T172000
+DTSTAMP:20120226T081242Z
+UID:318493@mlb.com
+CREATED:20110908T191314Z
+DESCRIPTION:San Diego at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_sdnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Drawstring Bag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=05&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Diego at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_sdnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T221500
+DTEND;TZID=America/New_York:20120602T011500
+DTSTAMP:20120226T081242Z
+UID:318504@mlb.com
+CREATED:20110908T191315Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T191500
+DTEND;TZID=America/New_York:20120602T221500
+DTSTAMP:20120226T081242Z
+UID:318519@mlb.com
+CREATED:20110908T191317Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T160500
+DTEND;TZID=America/New_York:20120603T190500
+DTSTAMP:20120226T081242Z
+UID:318534@mlb.com
+CREATED:20110908T191319Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120604T154500
+DTEND;TZID=America/New_York:20120604T184500
+DTSTAMP:20120226T081242Z
+UID:318545@mlb.com
+CREATED:20110908T191320Z
+DESCRIPTION:Chi Cubs at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_chnmlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Chi Cubs at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_chnmlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T201000
+DTEND;TZID=America/New_York:20120605T231000
+DTSTAMP:20120226T081242Z
+UID:318552@mlb.com
+CREATED:20110908T191320Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T201000
+DTEND;TZID=America/New_York:20120606T231000
+DTSTAMP:20120226T081242Z
+UID:318567@mlb.com
+CREATED:20110908T191322Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120607T141000
+DTEND;TZID=America/New_York:20120607T171000
+DTSTAMP:20120226T081242Z
+UID:318582@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T201000
+DTEND;TZID=America/New_York:20120608T231000
+DTSTAMP:20120226T081242Z
+UID:318594@mlb.com
+CREATED:20110908T191325Z
+DESCRIPTION:Chi Cubs at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_chnmlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Chi Cubs at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_chnmlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T141000
+DTEND;TZID=America/New_York:20120609T171000
+DTSTAMP:20120226T081242Z
+UID:318609@mlb.com
+CREATED:20110908T191327Z
+DESCRIPTION:Chi Cubs at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_chnmlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Chi Cubs at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_chnmlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T141000
+DTEND;TZID=America/New_York:20120610T171000
+DTSTAMP:20120226T081242Z
+UID:318624@mlb.com
+CREATED:20110908T191328Z
+DESCRIPTION:Chi Cubs at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_chnmlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Chi Cubs at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_chnmlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T200500
+DTEND;TZID=America/New_York:20120612T230500
+DTSTAMP:20120226T081242Z
+UID:318647@mlb.com
+CREATED:20110908T191331Z
+DESCRIPTION:Detroit at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_detmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Military Style Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Detroit at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_detmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T200500
+DTEND;TZID=America/New_York:20120613T230500
+DTSTAMP:20120226T081242Z
+UID:318662@mlb.com
+CREATED:20110908T191332Z
+DESCRIPTION:Detroit at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_detmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Key Chain\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Detroit at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_detmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120614T142000
+DTEND;TZID=America/New_York:20120614T172000
+DTSTAMP:20120226T081242Z
+UID:318675@mlb.com
+CREATED:20110908T191334Z
+DESCRIPTION:Detroit at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_detmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Jersey Off Our Back\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Detroit at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_detmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T142000
+DTEND;TZID=America/New_York:20120615T172000
+DTSTAMP:20120226T081242Z
+UID:318685@mlb.com
+CREATED:20110908T191335Z
+DESCRIPTION:Boston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_bosmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Boston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_bosmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T191500
+DTEND;TZID=America/New_York:20120616T221500
+DTSTAMP:20120226T081242Z
+UID:318700@mlb.com
+CREATED:20110908T191336Z
+DESCRIPTION:Boston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_bosmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Boston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_bosmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T033300
+DTEND;TZID=America/New_York:20120617T063300
+DTSTAMP:20120226T081242Z
+UID:318715@mlb.com
+CREATED:20110908T191338Z
+DESCRIPTION:Boston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_bosmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Boston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_bosmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120618T201000
+DTEND;TZID=America/New_York:20120618T231000
+DTSTAMP:20120226T081242Z
+UID:318730@mlb.com
+CREATED:20110908T191340Z
+DESCRIPTION:Chi Cubs at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_chnmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120104T193201Z
+LOCATION:U.S. Cellular Field, Chicago
+SUMMARY:Chi Cubs at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_18_chnmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T201000
+DTEND;TZID=America/New_York:20120619T231000
+DTSTAMP:20120226T081242Z
+UID:318739@mlb.com
+CREATED:20110908T191341Z
+DESCRIPTION:Chi Cubs at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_chnmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:U.S. Cellular Field, Chicago
+SUMMARY:Chi Cubs at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_chnmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T201000
+DTEND;TZID=America/New_York:20120620T231000
+DTSTAMP:20120226T081242Z
+UID:318754@mlb.com
+CREATED:20110908T191342Z
+DESCRIPTION:Chi Cubs at Chi White Sox\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_chnmlb_chamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:U.S. Cellular Field, Chicago
+SUMMARY:Chi Cubs at Chi White Sox
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_chnmlb_chamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T214000
+DTEND;TZID=America/New_York:20120623T004000
+DTSTAMP:20120226T081242Z
+UID:318774@mlb.com
+CREATED:20110908T191345Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T221000
+DTEND;TZID=America/New_York:20120624T011000
+DTSTAMP:20120226T081242Z
+UID:318789@mlb.com
+CREATED:20110908T191346Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T161000
+DTEND;TZID=America/New_York:20120624T191000
+DTSTAMP:20120226T081242Z
+UID:318804@mlb.com
+CREATED:20110908T191348Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120625T200500
+DTEND;TZID=America/New_York:20120625T230500
+DTSTAMP:20120226T081242Z
+UID:318823@mlb.com
+CREATED:20110908T191350Z
+DESCRIPTION:NY Mets at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_nynmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Exclusive limited-edition David DeJesus Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:NY Mets at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_nynmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T200500
+DTEND;TZID=America/New_York:20120626T230500
+DTSTAMP:20120226T081242Z
+UID:318837@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:NY Mets at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_nynmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:NY Mets at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_nynmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T142000
+DTEND;TZID=America/New_York:20120627T172000
+DTSTAMP:20120226T081242Z
+UID:318852@mlb.com
+CREATED:20110908T191353Z
+DESCRIPTION:NY Mets at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_nynmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:NY Mets at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_nynmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T142000
+DTEND;TZID=America/New_York:20120629T172000
+DTSTAMP:20120226T081242Z
+UID:318879@mlb.com
+CREATED:20110908T191356Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_houmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Drawstring Bag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T160500
+DTEND;TZID=America/New_York:20120630T190500
+DTSTAMP:20120226T081242Z
+UID:318894@mlb.com
+CREATED:20110908T191357Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_houmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Wristbands\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=06&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T142000
+DTEND;TZID=America/New_York:20120701T172000
+DTSTAMP:20120226T081242Z
+UID:318909@mlb.com
+CREATED:20110908T191359Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_houmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Custom Earbuds\n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120702T191000
+DTEND;TZID=America/New_York:20120702T221000
+DTSTAMP:20120226T081242Z
+UID:318920@mlb.com
+CREATED:20110908T191400Z
+DESCRIPTION:Chi Cubs at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_chnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Chi Cubs at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_02_chnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T191000
+DTEND;TZID=America/New_York:20120703T221000
+DTSTAMP:20120226T081242Z
+UID:318932@mlb.com
+CREATED:20110908T191402Z
+DESCRIPTION:Chi Cubs at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_chnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Chi Cubs at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_chnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T191000
+DTEND;TZID=America/New_York:20120704T221000
+DTSTAMP:20120226T081242Z
+UID:318947@mlb.com
+CREATED:20110908T191403Z
+DESCRIPTION:Chi Cubs at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_chnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Chi Cubs at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_chnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T191000
+DTEND;TZID=America/New_York:20120705T221000
+DTSTAMP:20120226T081242Z
+UID:318960@mlb.com
+CREATED:20110908T191405Z
+DESCRIPTION:Chi Cubs at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_chnmlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Chi Cubs at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_chnmlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T191000
+DTEND;TZID=America/New_York:20120706T221000
+DTSTAMP:20120226T081242Z
+UID:318975@mlb.com
+CREATED:20110908T191406Z
+DESCRIPTION:Chi Cubs at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_chnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Chi Cubs at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_chnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T161000
+DTEND;TZID=America/New_York:20120707T191000
+DTSTAMP:20120226T081242Z
+UID:318990@mlb.com
+CREATED:20110908T191408Z
+DESCRIPTION:Chi Cubs at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_chnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120117T222428Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Chi Cubs at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_chnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T131000
+DTEND;TZID=America/New_York:20120708T161000
+DTSTAMP:20120226T081242Z
+UID:319005@mlb.com
+CREATED:20110908T191410Z
+DESCRIPTION:Chi Cubs at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_chnmlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Chi Cubs at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_chnmlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T081242Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T142000
+DTEND;TZID=America/New_York:20120713T172000
+DTSTAMP:20120226T081242Z
+UID:319020@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_arimlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Slap Koozie\n    Slap Koozie\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T160500
+DTEND;TZID=America/New_York:20120714T190500
+DTSTAMP:20120226T081242Z
+UID:319035@mlb.com
+CREATED:20110908T191413Z
+DESCRIPTION:Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_arimlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Hat\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T142000
+DTEND;TZID=America/New_York:20120715T172000
+DTSTAMP:20120226T081242Z
+UID:319050@mlb.com
+CREATED:20110908T191415Z
+DESCRIPTION:Arizona at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_arimlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Arizona at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_arimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T200500
+DTEND;TZID=America/New_York:20120717T230500
+DTSTAMP:20120226T081242Z
+UID:319082@mlb.com
+CREATED:20110908T191418Z
+DESCRIPTION:Miami at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_miamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Miami at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_miamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T200500
+DTEND;TZID=America/New_York:20120718T230500
+DTSTAMP:20120226T081242Z
+UID:319097@mlb.com
+CREATED:20110908T191420Z
+DESCRIPTION:Miami at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_miamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Miami at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_miamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120719T142000
+DTEND;TZID=America/New_York:20120719T172000
+DTSTAMP:20120226T081242Z
+UID:319112@mlb.com
+CREATED:20110908T191421Z
+DESCRIPTION:Miami at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_miamlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Miami at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_19_miamlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T201500
+DTEND;TZID=America/New_York:20120720T231500
+DTSTAMP:20120226T081242Z
+UID:319121@mlb.com
+CREATED:20110908T191422Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T160500
+DTEND;TZID=America/New_York:20120721T190500
+DTSTAMP:20120226T081242Z
+UID:319136@mlb.com
+CREATED:20110908T191424Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T141500
+DTEND;TZID=America/New_York:20120722T171500
+DTSTAMP:20120226T081242Z
+UID:319151@mlb.com
+CREATED:20110908T191426Z
+DESCRIPTION:Chi Cubs at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_chnmlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Chi Cubs at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_chnmlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T190500
+DTEND;TZID=America/New_York:20120723T220500
+DTSTAMP:20120226T081242Z
+UID:319166@mlb.com
+CREATED:20110908T191427Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T190500
+DTEND;TZID=America/New_York:20120724T220500
+DTSTAMP:20120226T081242Z
+UID:319178@mlb.com
+CREATED:20110908T191429Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T123500
+DTEND;TZID=America/New_York:20120725T153500
+DTSTAMP:20120226T081242Z
+UID:319193@mlb.com
+CREATED:20110908T191430Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T142000
+DTEND;TZID=America/New_York:20120727T172000
+DTSTAMP:20120226T081242Z
+UID:319226@mlb.com
+CREATED:20110908T191434Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Ron Santo Hall of Fame Plaque\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T130500
+DTEND;TZID=America/New_York:20120728T160500
+DTSTAMP:20120226T081242Z
+UID:319241@mlb.com
+CREATED:20110908T191436Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    T-Shirt presented\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T142000
+DTEND;TZID=America/New_York:20120729T172000
+DTSTAMP:20120226T081242Z
+UID:319256@mlb.com
+CREATED:20110908T191437Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120130T183908Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120730T200500
+DTEND;TZID=America/New_York:20120730T230500
+DTSTAMP:20120226T081242Z
+UID:319267@mlb.com
+CREATED:20110908T191438Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_pitmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Tote Bag \n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_30_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T200500
+DTEND;TZID=America/New_York:20120731T230500
+DTSTAMP:20120226T081242Z
+UID:319281@mlb.com
+CREATED:20110908T191440Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_pitmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=07&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T142000
+DTEND;TZID=America/New_York:20120801T172000
+DTSTAMP:20120226T081242Z
+UID:319296@mlb.com
+CREATED:20110908T191442Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_pitmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Limited Edition American Girl doll-sized Cubs Apparel\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T221000
+DTEND;TZID=America/New_York:20120804T011000
+DTSTAMP:20120226T081242Z
+UID:319313@mlb.com
+CREATED:20110908T191444Z
+DESCRIPTION:Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_chnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T211000
+DTEND;TZID=America/New_York:20120805T001000
+DTSTAMP:20120226T081242Z
+UID:319328@mlb.com
+CREATED:20110908T191445Z
+DESCRIPTION:Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_chnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T033300
+DTEND;TZID=America/New_York:20120805T063300
+DTSTAMP:20120226T081242Z
+UID:319343@mlb.com
+CREATED:20110908T191447Z
+DESCRIPTION:Chi Cubs at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_chnmlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Chi Cubs at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_chnmlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T220500
+DTEND;TZID=America/New_York:20120807T010500
+DTSTAMP:20120226T081242Z
+UID:319358@mlb.com
+CREATED:20110908T191448Z
+DESCRIPTION:Chi Cubs at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_chnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120117T020841Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Chi Cubs at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_chnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T220500
+DTEND;TZID=America/New_York:20120808T010500
+DTSTAMP:20120226T081242Z
+UID:319371@mlb.com
+CREATED:20110908T191450Z
+DESCRIPTION:Chi Cubs at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_chnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120117T020841Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Chi Cubs at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_chnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T183500
+DTEND;TZID=America/New_York:20120808T213500
+DTSTAMP:20120226T081242Z
+UID:319386@mlb.com
+CREATED:20110908T191452Z
+DESCRIPTION:Chi Cubs at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_chnmlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120117T020841Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Chi Cubs at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_chnmlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120809T200500
+DTEND;TZID=America/New_York:20120809T230500
+DTSTAMP:20120226T081242Z
+UID:319400@mlb.com
+CREATED:20110908T191453Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_cinmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Reusable Shopping Bag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_09_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T142000
+DTEND;TZID=America/New_York:20120810T172000
+DTSTAMP:20120226T081242Z
+UID:319409@mlb.com
+CREATED:20110908T191454Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_cinmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Foam Finger\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T160500
+DTEND;TZID=America/New_York:20120811T190500
+DTSTAMP:20120226T081242Z
+UID:319424@mlb.com
+CREATED:20110908T191456Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T142000
+DTEND;TZID=America/New_York:20120812T172000
+DTSTAMP:20120226T081242Z
+UID:319439@mlb.com
+CREATED:20110908T191457Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_cinmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Exclusive Cubs Plush Bear from Build-A-Bear Workshop&reg;\n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120813T200500
+DTEND;TZID=America/New_York:20120813T230500
+DTSTAMP:20120226T081242Z
+UID:319455@mlb.com
+CREATED:20110908T191459Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_houmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Exclusive limited-edition Starlin Castro Bobblehead\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T200500
+DTEND;TZID=America/New_York:20120814T230500
+DTSTAMP:20120226T081242Z
+UID:319468@mlb.com
+CREATED:20110908T191500Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_houmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Replica Game Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T142000
+DTEND;TZID=America/New_York:20120815T172000
+DTSTAMP:20120226T081242Z
+UID:319483@mlb.com
+CREATED:20110908T191502Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_houmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T191000
+DTEND;TZID=America/New_York:20120817T221000
+DTSTAMP:20120226T081242Z
+UID:319508@mlb.com
+CREATED:20110908T191506Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T191000
+DTEND;TZID=America/New_York:20120818T221000
+DTSTAMP:20120226T081242Z
+UID:319523@mlb.com
+CREATED:20110908T191507Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T131000
+DTEND;TZID=America/New_York:20120819T161000
+DTSTAMP:20120226T081242Z
+UID:319538@mlb.com
+CREATED:20110908T191509Z
+DESCRIPTION:Chi Cubs at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_chnmlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Chi Cubs at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_chnmlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T201000
+DTEND;TZID=America/New_York:20120820T231000
+DTSTAMP:20120226T081242Z
+UID:319551@mlb.com
+CREATED:20110908T191511Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T201000
+DTEND;TZID=America/New_York:20120821T231000
+DTSTAMP:20120226T081242Z
+UID:319563@mlb.com
+CREATED:20110908T191512Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T141000
+DTEND;TZID=America/New_York:20120822T171000
+DTSTAMP:20120226T081242Z
+UID:319578@mlb.com
+CREATED:20110908T191514Z
+DESCRIPTION:Chi Cubs at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_chnmlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Chi Cubs at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_chnmlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T142000
+DTEND;TZID=America/New_York:20120824T172000
+DTSTAMP:20120226T081242Z
+UID:319601@mlb.com
+CREATED:20110908T191517Z
+DESCRIPTION:Colorado at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_colmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Trucker Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Colorado at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_colmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T130500
+DTEND;TZID=America/New_York:20120825T160500
+DTSTAMP:20120226T081242Z
+UID:319616@mlb.com
+CREATED:20110908T191519Z
+DESCRIPTION:Colorado at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_colmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Colorado at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_colmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T142000
+DTEND;TZID=America/New_York:20120826T172000
+DTSTAMP:20120226T081242Z
+UID:319631@mlb.com
+CREATED:20110908T191520Z
+DESCRIPTION:Colorado at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_colmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Colorado at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_colmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120827T200500
+DTEND;TZID=America/New_York:20120827T230500
+DTSTAMP:20120226T081242Z
+UID:319649@mlb.com
+CREATED:20110908T191522Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_27_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T200500
+DTEND;TZID=America/New_York:20120828T230500
+DTSTAMP:20120226T081242Z
+UID:319661@mlb.com
+CREATED:20110908T191523Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T200500
+DTEND;TZID=America/New_York:20120829T230500
+DTSTAMP:20120226T081242Z
+UID:319676@mlb.com
+CREATED:20110908T191525Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120830T142000
+DTEND;TZID=America/New_York:20120830T172000
+DTSTAMP:20120226T081242Z
+UID:319689@mlb.com
+CREATED:20110908T191527Z
+DESCRIPTION:Milwaukee at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_milmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Milwaukee at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_milmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T142000
+DTEND;TZID=America/New_York:20120831T172000
+DTSTAMP:20120226T081242Z
+UID:319707@mlb.com
+CREATED:20110908T191529Z
+DESCRIPTION:San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_sfnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=08&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T160500
+DTEND;TZID=America/New_York:20120901T190500
+DTSTAMP:20120226T081242Z
+UID:319722@mlb.com
+CREATED:20110908T191530Z
+DESCRIPTION:San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_sfnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs Luggage Tag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: FOX
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T142000
+DTEND;TZID=America/New_York:20120902T172000
+DTSTAMP:20120226T081242Z
+UID:319737@mlb.com
+CREATED:20110908T191532Z
+DESCRIPTION:San Francisco at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_sfnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120130T184107Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:San Francisco at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_sfnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T130500
+DTEND;TZID=America/New_York:20120903T160500
+DTSTAMP:20120226T081242Z
+UID:319745@mlb.com
+CREATED:20110908T191533Z
+DESCRIPTION:Chi Cubs at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_chnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Chi Cubs at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_chnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T190500
+DTEND;TZID=America/New_York:20120904T220500
+DTSTAMP:20120226T081242Z
+UID:319760@mlb.com
+CREATED:20110908T191535Z
+DESCRIPTION:Chi Cubs at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_chnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Chi Cubs at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_chnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T190500
+DTEND;TZID=America/New_York:20120905T220500
+DTSTAMP:20120226T081242Z
+UID:319775@mlb.com
+CREATED:20110908T191536Z
+DESCRIPTION:Chi Cubs at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_chnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Chi Cubs at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_chnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120906T190500
+DTEND;TZID=America/New_York:20120906T220500
+DTSTAMP:20120226T081242Z
+UID:319786@mlb.com
+CREATED:20110908T191538Z
+DESCRIPTION:Chi Cubs at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_06_chnmlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Chi Cubs at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_06_chnmlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T190500
+DTEND;TZID=America/New_York:20120907T220500
+DTSTAMP:20120226T081242Z
+UID:319793@mlb.com
+CREATED:20110908T191538Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T190500
+DTEND;TZID=America/New_York:20120908T220500
+DTSTAMP:20120226T081242Z
+UID:319808@mlb.com
+CREATED:20110908T191540Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T133500
+DTEND;TZID=America/New_York:20120909T163500
+DTSTAMP:20120226T081242Z
+UID:319823@mlb.com
+CREATED:20110908T191542Z
+DESCRIPTION:Chi Cubs at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_chnmlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Chi Cubs at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_chnmlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120910T200500
+DTEND;TZID=America/New_York:20120910T230500
+DTSTAMP:20120226T081242Z
+UID:319837@mlb.com
+CREATED:20110908T191543Z
+DESCRIPTION:Chi Cubs at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_chnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Chi Cubs at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_chnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T200500
+DTEND;TZID=America/New_York:20120911T230500
+DTSTAMP:20120226T081242Z
+UID:319848@mlb.com
+CREATED:20110908T191544Z
+DESCRIPTION:Chi Cubs at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_chnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WCIU
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Chi Cubs at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_chnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T200500
+DTEND;TZID=America/New_York:20120912T230500
+DTSTAMP:20120226T081242Z
+UID:319863@mlb.com
+CREATED:20110908T191546Z
+DESCRIPTION:Chi Cubs at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_chnmlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120105T215802Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Chi Cubs at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_chnmlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T142000
+DTEND;TZID=America/New_York:20120914T172000
+DTSTAMP:20120226T081242Z
+UID:319895@mlb.com
+CREATED:20110908T191549Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_pitmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T130500
+DTEND;TZID=America/New_York:20120915T160500
+DTSTAMP:20120226T081242Z
+UID:319910@mlb.com
+CREATED:20110908T191551Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_pitmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T142000
+DTEND;TZID=America/New_York:20120916T172000
+DTSTAMP:20120226T081242Z
+UID:319925@mlb.com
+CREATED:20110908T191553Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_pitmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120917T200500
+DTEND;TZID=America/New_York:20120917T230500
+DTSTAMP:20120226T081242Z
+UID:319936@mlb.com
+CREATED:20110908T191555Z
+DESCRIPTION:Pittsburgh at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_17_pitmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Pittsburgh at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_17_pitmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T200500
+DTEND;TZID=America/New_York:20120918T230500
+DTSTAMP:20120226T081242Z
+UID:319941@mlb.com
+CREATED:20110908T191555Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T200500
+DTEND;TZID=America/New_York:20120919T230500
+DTSTAMP:20120226T081242Z
+UID:319956@mlb.com
+CREATED:20110908T191557Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120920T142000
+DTEND;TZID=America/New_York:20120920T172000
+DTSTAMP:20120226T081242Z
+UID:319969@mlb.com
+CREATED:20110908T191558Z
+DESCRIPTION:Cincinnati at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_cinmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Cincinnati at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_20_cinmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T142000
+DTEND;TZID=America/New_York:20120921T172000
+DTSTAMP:20120226T081242Z
+UID:319991@mlb.com
+CREATED:20110908T191600Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Cubs T-Shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T033300
+DTEND;TZID=America/New_York:20120922T063300
+DTSTAMP:20120226T081242Z
+UID:320006@mlb.com
+CREATED:20110908T191602Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_slnmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T142000
+DTEND;TZID=America/New_York:20120923T172000
+DTSTAMP:20120226T081242Z
+UID:320021@mlb.com
+CREATED:20110908T191604Z
+DESCRIPTION:St. Louis at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_slnmlb_chnmlb_1\n\nPromotions/Giveaways: \n    Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120130T184118Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:St. Louis at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_slnmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T204000
+DTEND;TZID=America/New_York:20120925T234000
+DTSTAMP:20120226T081242Z
+UID:320033@mlb.com
+CREATED:20110908T191605Z
+DESCRIPTION:Chi Cubs at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_chnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Chi Cubs at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_chnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T204000
+DTEND;TZID=America/New_York:20120926T234000
+DTSTAMP:20120226T081242Z
+UID:320048@mlb.com
+CREATED:20110908T191607Z
+DESCRIPTION:Chi Cubs at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_chnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Chi Cubs at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_chnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T151000
+DTEND;TZID=America/New_York:20120927T181000
+DTSTAMP:20120226T081242Z
+UID:320063@mlb.com
+CREATED:20110908T191608Z
+DESCRIPTION:Chi Cubs at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_chnmlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Coors Field, Denver
+SUMMARY:Chi Cubs at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_chnmlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T214000
+DTEND;TZID=America/New_York:20120929T004000
+DTSTAMP:20120226T081242Z
+UID:320076@mlb.com
+CREATED:20110908T191610Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T201000
+DTEND;TZID=America/New_York:20120929T231000
+DTSTAMP:20120226T081242Z
+UID:320091@mlb.com
+CREATED:20110908T191611Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T161000
+DTEND;TZID=America/New_York:20120930T191000
+DTSTAMP:20120226T081242Z
+UID:320106@mlb.com
+CREATED:20110908T191613Z
+DESCRIPTION:Chi Cubs at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_chnmlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=09&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Chi Cubs at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_chnmlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T200500
+DTEND;TZID=America/New_York:20121001T230500
+DTSTAMP:20120226T081242Z
+UID:320127@mlb.com
+CREATED:20110908T191615Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_houmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=10&y=2012\n\nLocal TV: CSN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T200500
+DTEND;TZID=America/New_York:20121002T230500
+DTSTAMP:20120226T081242Z
+UID:320142@mlb.com
+CREATED:20110908T191617Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_houmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=10&y=2012\n\nLocal TV: CSN+
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_houmlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T142000
+DTEND;TZID=America/New_York:20121003T172000
+DTSTAMP:20120226T081242Z
+UID:320157@mlb.com
+CREATED:20110908T191619Z
+DESCRIPTION:Houston at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_houmlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=chc&m=10&y=2012\n\nLocal TV: WGN
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Houston at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_houmlb_chnmlb_1
+END:VEVENT
+END:VCALENDAR

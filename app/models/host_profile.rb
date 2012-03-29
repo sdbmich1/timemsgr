@@ -14,10 +14,10 @@ class HostProfile < KitsTsdModel
   has_many :channels, :foreign_key => :HostProfileID
   
   has_many :events, :through => :channels 
-  has_many :scheduled_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
+  has_many :scheduled_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
   
   # used to access friends life schedule of events
-  has_many :life_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
+  has_many :life_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def private_circle
       where(:allowPrivCircle => 'yes')
     end
@@ -44,7 +44,7 @@ class HostProfile < KitsTsdModel
   end
   
   # used to access friends private schedule of events
-  has_many :private_events, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
+  has_many :private_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def private_circle
       where(:allowPrivCircle => 'yes')
     end

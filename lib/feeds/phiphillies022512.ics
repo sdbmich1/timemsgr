@@ -1,0 +1,2798 @@
+BEGIN:VCALENDAR
+PRODID:-//MLB.com//Schedule Calendar 0.001//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:2012 Philadelphia Phillies Schedule
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120229T130500
+DTEND;TZID=America/New_York:20120229T160500
+DTSTAMP:20120226T083300Z
+UID:332093@mlb.com
+CREATED:20111130T212811Z
+DESCRIPTION:Exhibition Game: Florida State U. at Philadelphia\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=02&y=2012\n
+LAST-MODIFIED:20111205T204625Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Exhibition Game: Florida State U. at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_02_29_fanbbc_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120303T130500
+DTEND;TZID=America/New_York:20120303T160500
+DTSTAMP:20120226T083300Z
+UID:332103@mlb.com
+CREATED:20111130T212813Z
+DESCRIPTION:Spring Training: NY Yankees at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_nyamlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLBN, CSN, MLB.TV\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: NY Yankees at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_03_nyamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120304T130500
+DTEND;TZID=America/New_York:20120304T160500
+DTSTAMP:20120226T083300Z
+UID:332115@mlb.com
+CREATED:20111130T212815Z
+DESCRIPTION:Spring Training: Philadelphia at NY Yankees\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_phimlb_nyamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20111205T204626Z
+LOCATION:George M. Steinbrenner Field, Tampa
+SUMMARY:Spring Training: Philadelphia at NY Yankees
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_04_phimlb_nyamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120305T130500
+DTEND;TZID=America/New_York:20120305T160500
+DTSTAMP:20120226T083300Z
+UID:332129@mlb.com
+CREATED:20111130T212817Z
+DESCRIPTION:Spring Training: NY Yankees at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_nyamlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: TCN, MLBN, MLB.TV
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: NY Yankees at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_05_nyamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120306T130500
+DTEND;TZID=America/New_York:20120306T160500
+DTSTAMP:20120226T083300Z
+UID:332146@mlb.com
+CREATED:20111130T212819Z
+DESCRIPTION:Spring Training: Philadelphia at Toronto\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_phimlb_tormlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Florida Auto Exchange Stadium, Dunedin
+SUMMARY:Spring Training: Philadelphia at Toronto
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_06_phimlb_tormlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120307T130500
+DTEND;TZID=America/New_York:20120307T160500
+DTSTAMP:20120226T083300Z
+UID:332157@mlb.com
+CREATED:20111130T212821Z
+DESCRIPTION:Spring Training: Houston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_houmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, TCN, MLBN (delay)
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Houston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_07_houmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120308T130500
+DTEND;TZID=America/New_York:20120308T160500
+DTSTAMP:20120226T083300Z
+UID:332179@mlb.com
+CREATED:20111130T212824Z
+DESCRIPTION:Spring Training: Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_pitmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLBN (delay), MLB.TV, TCN
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_08_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120309T130500
+DTEND;TZID=America/New_York:20120309T160500
+DTSTAMP:20120226T083300Z
+UID:332194@mlb.com
+CREATED:20111130T212826Z
+DESCRIPTION:Spring Training: Philadelphia at Detroit\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_phimlb_detmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Joker Marchant Stadium, Lakeland
+SUMMARY:Spring Training: Philadelphia at Detroit
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_09_phimlb_detmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120310T130500
+DTEND;TZID=America/New_York:20120310T160500
+DTSTAMP:20120226T083300Z
+UID:332200@mlb.com
+CREATED:20111130T212827Z
+DESCRIPTION:Spring Training: Baltimore at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_balmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, CSN, MLBN (delay)\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Baltimore at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_10_balmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T130500
+DTEND;TZID=America/New_York:20120311T160500
+DTSTAMP:20120226T083300Z
+UID:332228@mlb.com
+CREATED:20111130T212831Z
+DESCRIPTION:Spring Training: Detroit at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_detmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), PHL 17\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Detroit at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_detmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120311T130500
+DTEND;TZID=America/New_York:20120311T160500
+DTSTAMP:20120226T083300Z
+UID:332232@mlb.com
+CREATED:20111130T212832Z
+DESCRIPTION:Spring Training: Philadelphia at NY Yankees\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_phimlb_nyamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV
+LAST-MODIFIED:20120203T194520Z
+LOCATION:George M. Steinbrenner Field, Tampa
+SUMMARY:Spring Training: Philadelphia at NY Yankees
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_11_phimlb_nyamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120312T130500
+DTEND;TZID=America/New_York:20120312T160500
+DTSTAMP:20120226T083300Z
+UID:332247@mlb.com
+CREATED:20111130T212834Z
+DESCRIPTION:Spring Training: Philadelphia at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_phimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120105T215234Z
+LOCATION:McKechnie Field, Bradenton
+SUMMARY:Spring Training: Philadelphia at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_12_phimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120313T130500
+DTEND;TZID=America/New_York:20120313T160500
+DTSTAMP:20120226T083300Z
+UID:332261@mlb.com
+CREATED:20111130T212836Z
+DESCRIPTION:Spring Training: Philadelphia at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_phimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120117T151300Z
+LOCATION:Osceola County Stadium, Kissimmee
+SUMMARY:Spring Training: Philadelphia at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_13_phimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120314T130500
+DTEND;TZID=America/New_York:20120314T160500
+DTSTAMP:20120226T083300Z
+UID:332276@mlb.com
+CREATED:20111130T212838Z
+DESCRIPTION:Spring Training: Minnesota at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_minmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), TCN
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Minnesota at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_14_minmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T130500
+DTEND;TZID=America/New_York:20120315T160500
+DTSTAMP:20120226T083300Z
+UID:332284@mlb.com
+CREATED:20111130T212839Z
+DESCRIPTION:Spring Training: Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: TCN, MLB.TV, MLBN (delay)
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120315T130500
+DTEND;TZID=America/New_York:20120315T160500
+DTSTAMP:20120226T083300Z
+UID:332293@mlb.com
+CREATED:20111130T212840Z
+DESCRIPTION:Spring Training: Philadelphia at Tampa Bay\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_phimlb_tbamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Charlotte Sports Park, Port Charlotte
+SUMMARY:Spring Training: Philadelphia at Tampa Bay
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_15_phimlb_tbamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120316T130500
+DTEND;TZID=America/New_York:20120316T160500
+DTSTAMP:20120226T083300Z
+UID:332309@mlb.com
+CREATED:20111130T212843Z
+DESCRIPTION:Spring Training: Philadelphia at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_phimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120105T215241Z
+LOCATION:McKechnie Field, Bradenton
+SUMMARY:Spring Training: Philadelphia at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_16_phimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120317T130500
+DTEND;TZID=America/New_York:20120317T160500
+DTSTAMP:20120226T083300Z
+UID:332334@mlb.com
+CREATED:20111130T212846Z
+DESCRIPTION:Spring Training: Toronto at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_tormlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), TCN\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Toronto at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_17_tormlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120318T130500
+DTEND;TZID=America/New_York:20120318T160500
+DTSTAMP:20120226T083300Z
+UID:332347@mlb.com
+CREATED:20111130T212848Z
+DESCRIPTION:Spring Training: Philadelphia at Toronto\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_phimlb_tormlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLBN (delay)\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Florida Auto Exchange Stadium, Dunedin
+SUMMARY:Spring Training: Philadelphia at Toronto
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_18_phimlb_tormlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120319T130500
+DTEND;TZID=America/New_York:20120319T160500
+DTSTAMP:20120226T083300Z
+UID:332356@mlb.com
+CREATED:20111130T212849Z
+DESCRIPTION:Spring Training: Detroit at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_detmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, ESPN, TCN
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Detroit at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_19_detmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120320T130500
+DTEND;TZID=America/New_York:20120320T160500
+DTSTAMP:20120226T083300Z
+UID:332367@mlb.com
+CREATED:20111130T212851Z
+DESCRIPTION:Spring Training: Philadelphia at Baltimore\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_phimlb_balmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Ed Smith Stadium, Sarasota
+SUMMARY:Spring Training: Philadelphia at Baltimore
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_20_phimlb_balmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120322T130500
+DTEND;TZID=America/New_York:20120322T160500
+DTSTAMP:20120226T083300Z
+UID:332395@mlb.com
+CREATED:20111130T212855Z
+DESCRIPTION:Spring Training: Philadelphia at Toronto\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_phimlb_tormlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Florida Auto Exchange Stadium, Dunedin
+SUMMARY:Spring Training: Philadelphia at Toronto
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_22_phimlb_tormlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120323T130500
+DTEND;TZID=America/New_York:20120323T160500
+DTSTAMP:20120226T083300Z
+UID:332409@mlb.com
+CREATED:20111130T212857Z
+DESCRIPTION:Spring Training: NY Yankees at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_nyamlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), TCN
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: NY Yankees at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_23_nyamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120324T133500
+DTEND;TZID=America/New_York:20120324T163500
+DTSTAMP:20120226T083300Z
+UID:332425@mlb.com
+CREATED:20111130T212859Z
+DESCRIPTION:Spring Training: Philadelphia at Boston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_phimlb_bosmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194519Z
+LOCATION:JetBlue Park, Ft. Myers
+SUMMARY:Spring Training: Philadelphia at Boston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_24_phimlb_bosmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T130500
+DTEND;TZID=America/New_York:20120325T160500
+DTSTAMP:20120226T083300Z
+UID:332443@mlb.com
+CREATED:20111130T212901Z
+DESCRIPTION:Spring Training: Philadelphia at Detroit\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_phimlb_detmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Joker Marchant Stadium, Lakeland
+SUMMARY:Spring Training: Philadelphia at Detroit
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_phimlb_detmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120325T130500
+DTEND;TZID=America/New_York:20120325T160500
+DTSTAMP:20120226T083300Z
+UID:332432@mlb.com
+CREATED:20111130T212900Z
+DESCRIPTION:Spring Training: Baltimore at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_balmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, PHL 17\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Baltimore at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_25_balmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120326T130500
+DTEND;TZID=America/New_York:20120326T160500
+DTSTAMP:20120226T083300Z
+UID:332448@mlb.com
+CREATED:20111130T212902Z
+DESCRIPTION:Spring Training: Boston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_bosmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: TCN, MLB.TV, ESPN
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Boston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_26_bosmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120327T130500
+DTEND;TZID=America/New_York:20120327T160500
+DTSTAMP:20120226T083300Z
+UID:332469@mlb.com
+CREATED:20111130T212904Z
+DESCRIPTION:Spring Training: Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_pitmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN, TCN
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_27_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120328T130500
+DTEND;TZID=America/New_York:20120328T160500
+DTSTAMP:20120226T083300Z
+UID:332483@mlb.com
+CREATED:20111130T212906Z
+DESCRIPTION:Spring Training: Philadelphia at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_phimlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal Radio: MLB.com
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Lee County Sports Complex, Hammond County Stadium, Lee County
+SUMMARY:Spring Training: Philadelphia at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_28_phimlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120329T130500
+DTEND;TZID=America/New_York:20120329T160500
+DTSTAMP:20120226T083300Z
+UID:332500@mlb.com
+CREATED:20111130T212908Z
+DESCRIPTION:Spring Training: Tampa Bay at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_tbamlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: ESPN, TCN, MLB.TV
+LAST-MODIFIED:20111213T230915Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Tampa Bay at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_29_tbamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120330T190500
+DTEND;TZID=America/New_York:20120330T220500
+DTSTAMP:20120226T083300Z
+UID:332515@mlb.com
+CREATED:20111130T212910Z
+DESCRIPTION:Spring Training: Philadelphia at NY Yankees\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_phimlb_nyamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLBN, MLB.TV\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20111205T204626Z
+LOCATION:George M. Steinbrenner Field, Tampa
+SUMMARY:Spring Training: Philadelphia at NY Yankees
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_30_phimlb_nyamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120331T130500
+DTEND;TZID=America/New_York:20120331T160500
+DTSTAMP:20120226T083300Z
+UID:332534@mlb.com
+CREATED:20111130T212912Z
+DESCRIPTION:Spring Training: Toronto at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_tormlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=03&y=2012\n\nLocal TV: MLB.TV, MLBN (delay), PHL 17\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194519Z
+LOCATION:Bright House Field, Clearwater
+SUMMARY:Spring Training: Toronto at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_03_31_tormlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120401T130500
+DTEND;TZID=America/New_York:20120401T160500
+DTSTAMP:20120226T083300Z
+UID:332543@mlb.com
+CREATED:20111130T212913Z
+DESCRIPTION:Spring Training: Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: MLB.TV\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20120203T194520Z
+LOCATION:Champion Stadium, Lake Buena Vista
+SUMMARY:Spring Training: Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_01_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120402T190500
+DTEND;TZID=America/New_York:20120402T220500
+DTSTAMP:20120226T083300Z
+UID:325971@mlb.com
+CREATED:20111014T172354Z
+DESCRIPTION:Spring Training: Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_pitmlb_phimlb_1\n\nPromotions/Giveaways: \n    On Deck Series\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN, MLBN (delay), MLB.TV\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Spring Training: Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_02_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120403T190500
+DTEND;TZID=America/New_York:20120403T220500
+DTSTAMP:20120226T083300Z
+UID:326073@mlb.com
+CREATED:20111014T172355Z
+DESCRIPTION:Spring Training: Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_pitmlb_phimlb_1\n\nPromotions/Giveaways: \n    xpedx 2012 Schedule Magnet\n    On Deck Series\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal Radio: 1210 WPHT
+LAST-MODIFIED:20111205T204626Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Spring Training: Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_03_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120405T133500
+DTEND;TZID=America/New_York:20120405T163500
+DTSTAMP:20120226T083300Z
+UID:317746@mlb.com
+CREATED:20110908T191145Z
+DESCRIPTION:Philadelphia at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_phimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120126T201151Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Philadelphia at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_05_phimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120407T190500
+DTEND;TZID=America/New_York:20120407T220500
+DTSTAMP:20120226T083300Z
+UID:317759@mlb.com
+CREATED:20110908T191147Z
+DESCRIPTION:Philadelphia at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_phimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Philadelphia at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_07_phimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120408T133500
+DTEND;TZID=America/New_York:20120408T163500
+DTSTAMP:20120226T083300Z
+UID:317774@mlb.com
+CREATED:20110908T191149Z
+DESCRIPTION:Philadelphia at Pittsburgh\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_phimlb_pitmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:PNC Park, Pittsburgh
+SUMMARY:Philadelphia at Pittsburgh
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_08_phimlb_pitmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120409T130500
+DTEND;TZID=America/New_York:20120409T160500
+DTSTAMP:20120226T083300Z
+UID:317784@mlb.com
+CREATED:20110908T191150Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    Modell's Sporting Goods Opening Day\n    2011 NL East Champions Pennant\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120126T201150Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_09_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120411T190500
+DTEND;TZID=America/New_York:20120411T220500
+DTSTAMP:20120226T083300Z
+UID:317809@mlb.com
+CREATED:20110908T191154Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    McDonald's Opening Night T-Shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_11_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120412T190500
+DTEND;TZID=America/New_York:20120412T220500
+DTSTAMP:20120226T083300Z
+UID:317822@mlb.com
+CREATED:20110908T191155Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    Hatfield Phillies Franks Dollar Dog Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_12_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120413T190500
+DTEND;TZID=America/New_York:20120413T220500
+DTSTAMP:20120226T083300Z
+UID:317837@mlb.com
+CREATED:20110908T191158Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_nynmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_13_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120414T160500
+DTEND;TZID=America/New_York:20120414T190500
+DTSTAMP:20120226T083300Z
+UID:317852@mlb.com
+CREATED:20110908T191159Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_nynmlb_phimlb_1\n\nPromotions/Giveaways: \n    Turkey Hill Kids Opening Day\n    Charlie Manuel Commemorative Baseball\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_14_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120415T133500
+DTEND;TZID=America/New_York:20120415T163500
+DTSTAMP:20120226T083300Z
+UID:317867@mlb.com
+CREATED:20110908T191201Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_nynmlb_phimlb_1\n\nPromotions/Giveaways: \n    Jackie Robinson Salute\n    xpedx 2012 Schedule Magnet\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_15_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120416T221500
+DTEND;TZID=America/New_York:20120417T011500
+DTSTAMP:20120226T083300Z
+UID:317879@mlb.com
+CREATED:20110908T191202Z
+DESCRIPTION:Philadelphia at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_16_phimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Philadelphia at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_16_phimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120417T221500
+DTEND;TZID=America/New_York:20120418T011500
+DTSTAMP:20120226T083300Z
+UID:317893@mlb.com
+CREATED:20110908T191206Z
+DESCRIPTION:Philadelphia at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_phimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Philadelphia at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_17_phimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120418T221500
+DTEND;TZID=America/New_York:20120419T011500
+DTSTAMP:20120226T083300Z
+UID:317908@mlb.com
+CREATED:20110908T191207Z
+DESCRIPTION:Philadelphia at San Francisco\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_phimlb_sfnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:AT&T Park, San Francisco
+SUMMARY:Philadelphia at San Francisco
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_18_phimlb_sfnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120419T220500
+DTEND;TZID=America/New_York:20120420T010500
+DTSTAMP:20120226T083300Z
+UID:317922@mlb.com
+CREATED:20110908T191209Z
+DESCRIPTION:Philadelphia at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_phimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120117T020834Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Philadelphia at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_19_phimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120420T220500
+DTEND;TZID=America/New_York:20120421T010500
+DTSTAMP:20120226T083300Z
+UID:317935@mlb.com
+CREATED:20110908T191211Z
+DESCRIPTION:Philadelphia at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_phimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120117T020834Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Philadelphia at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_20_phimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120421T203500
+DTEND;TZID=America/New_York:20120421T233500
+DTSTAMP:20120226T083300Z
+UID:317950@mlb.com
+CREATED:20110908T191212Z
+DESCRIPTION:Philadelphia at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_phimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120117T020834Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Philadelphia at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_21_phimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120422T160500
+DTEND;TZID=America/New_York:20120422T190500
+DTSTAMP:20120226T083300Z
+UID:317965@mlb.com
+CREATED:20110908T191214Z
+DESCRIPTION:Philadelphia at San Diego\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_phimlb_sdnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120117T020834Z
+LOCATION:PETCO Park, San Diego
+SUMMARY:Philadelphia at San Diego
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_22_phimlb_sdnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120423T214000
+DTEND;TZID=America/New_York:20120424T004000
+DTSTAMP:20120226T083300Z
+UID:317976@mlb.com
+CREATED:20110908T191215Z
+DESCRIPTION:Philadelphia at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_phimlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Philadelphia at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_23_phimlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120424T214000
+DTEND;TZID=America/New_York:20120425T004000
+DTSTAMP:20120226T083300Z
+UID:317989@mlb.com
+CREATED:20110908T191217Z
+DESCRIPTION:Philadelphia at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_phimlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Philadelphia at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_24_phimlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120425T154000
+DTEND;TZID=America/New_York:20120425T184000
+DTSTAMP:20120226T083300Z
+UID:318004@mlb.com
+CREATED:20110908T191219Z
+DESCRIPTION:Philadelphia at Arizona\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_phimlb_arimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Chase Field, Phoenix
+SUMMARY:Philadelphia at Arizona
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_25_phimlb_arimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120427T190500
+DTEND;TZID=America/New_York:20120427T220500
+DTSTAMP:20120226T083300Z
+UID:318021@mlb.com
+CREATED:20110908T191221Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_chnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_27_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120428T190500
+DTEND;TZID=America/New_York:20120428T220500
+DTSTAMP:20120226T083300Z
+UID:318036@mlb.com
+CREATED:20110908T191222Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_chnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_28_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120429T133500
+DTEND;TZID=America/New_York:20120429T163500
+DTSTAMP:20120226T083300Z
+UID:318051@mlb.com
+CREATED:20110908T191224Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_chnmlb_phimlb_1\n\nPromotions/Giveaways: \n    Citizens Bank Phanatic Birthday\n    Phanatic Bank\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_29_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120430T190500
+DTEND;TZID=America/New_York:20120430T220500
+DTSTAMP:20120226T083300Z
+UID:318065@mlb.com
+CREATED:20110908T191226Z
+DESCRIPTION:Chi Cubs at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_chnmlb_phimlb_1\n\nPromotions/Giveaways: \n    Hatfield Phillies Franks Dollar Dog Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=04&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Chi Cubs at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_04_30_chnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120501T191000
+DTEND;TZID=America/New_York:20120501T221000
+DTSTAMP:20120226T083300Z
+UID:318086@mlb.com
+CREATED:20110908T191228Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_01_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120502T191000
+DTEND;TZID=America/New_York:20120502T221000
+DTSTAMP:20120226T083300Z
+UID:318101@mlb.com
+CREATED:20110908T191230Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_02_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120503T121000
+DTEND;TZID=America/New_York:20120503T151000
+DTSTAMP:20120226T083300Z
+UID:318110@mlb.com
+CREATED:20110908T191231Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_03_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120504T190500
+DTEND;TZID=America/New_York:20120504T220500
+DTSTAMP:20120226T083300Z
+UID:318125@mlb.com
+CREATED:20110908T191232Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: TCN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_04_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120505T130500
+DTEND;TZID=America/New_York:20120505T160500
+DTSTAMP:20120226T083300Z
+UID:318140@mlb.com
+CREATED:20110908T191234Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_05_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120506T200500
+DTEND;TZID=America/New_York:20120506T230500
+DTSTAMP:20120226T083300Z
+UID:318155@mlb.com
+CREATED:20110908T191236Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: ESPN, CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120120T201051Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_06_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120507T190500
+DTEND;TZID=America/New_York:20120507T220500
+DTSTAMP:20120226T083300Z
+UID:318167@mlb.com
+CREATED:20110908T191237Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_nynmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_07_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120508T190500
+DTEND;TZID=America/New_York:20120508T220500
+DTSTAMP:20120226T083300Z
+UID:318179@mlb.com
+CREATED:20110908T191239Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_nynmlb_phimlb_1\n\nPromotions/Giveaways: \n    Asian Pacific Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_08_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120509T190500
+DTEND;TZID=America/New_York:20120509T220500
+DTSTAMP:20120226T083300Z
+UID:318194@mlb.com
+CREATED:20110908T191241Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_nynmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_09_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120511T190500
+DTEND;TZID=America/New_York:20120511T220500
+DTSTAMP:20120226T083300Z
+UID:318216@mlb.com
+CREATED:20110908T191243Z
+DESCRIPTION:San Diego at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_sdnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Diego at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_11_sdnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120512T190500
+DTEND;TZID=America/New_York:20120512T220500
+DTSTAMP:20120226T083300Z
+UID:318231@mlb.com
+CREATED:20110908T191245Z
+DESCRIPTION:San Diego at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_sdnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Diego at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_12_sdnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120513T133500
+DTEND;TZID=America/New_York:20120513T163500
+DTSTAMP:20120226T083300Z
+UID:318246@mlb.com
+CREATED:20110908T191246Z
+DESCRIPTION:San Diego at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_sdnmlb_phimlb_1\n\nPromotions/Giveaways: \n    Stroehmann's Mother's Appreciation Day\n    Women's Scarf\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Diego at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_13_sdnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120514T190500
+DTEND;TZID=America/New_York:20120514T220500
+DTSTAMP:20120226T083300Z
+UID:318258@mlb.com
+CREATED:20110908T191248Z
+DESCRIPTION:Houston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_houmlb_phimlb_1\n\nPromotions/Giveaways: \n    Teva Respiratory Asthma Awareness Night\n    Phillies Liberty Bell Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Houston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_14_houmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120515T130500
+DTEND;TZID=America/New_York:20120515T160500
+DTSTAMP:20120226T083300Z
+UID:318273@mlb.com
+CREATED:20110908T191249Z
+DESCRIPTION:Houston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_houmlb_phimlb_1\n\nPromotions/Giveaways: \n    Modell's Sporting Goods Senior Stroll the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Houston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_15_houmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120516T200500
+DTEND;TZID=America/New_York:20120516T230500
+DTSTAMP:20120226T083300Z
+UID:318293@mlb.com
+CREATED:20110908T191251Z
+DESCRIPTION:Philadelphia at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_phimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Philadelphia at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_16_phimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120517T200500
+DTEND;TZID=America/New_York:20120517T230500
+DTSTAMP:20120226T083300Z
+UID:318308@mlb.com
+CREATED:20110908T191253Z
+DESCRIPTION:Philadelphia at Chi Cubs\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_phimlb_chnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Wrigley Field, Chicago
+SUMMARY:Philadelphia at Chi Cubs
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_17_phimlb_chnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120518T190500
+DTEND;TZID=America/New_York:20120518T220500
+DTSTAMP:20120226T083300Z
+UID:318316@mlb.com
+CREATED:20110908T191254Z
+DESCRIPTION:Boston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_bosmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Boston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_18_bosmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120519T191500
+DTEND;TZID=America/New_York:20120519T221500
+DTSTAMP:20120226T083300Z
+UID:318331@mlb.com
+CREATED:20110908T191256Z
+DESCRIPTION:Boston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_bosmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Boston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_19_bosmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120520T133500
+DTEND;TZID=America/New_York:20120520T163500
+DTSTAMP:20120226T083300Z
+UID:318346@mlb.com
+CREATED:20110908T191257Z
+DESCRIPTION:Boston at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_bosmlb_phimlb_1\n\nPromotions/Giveaways: \n    W.B. Mason Collectible Truck\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Boston at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_20_bosmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120521T190500
+DTEND;TZID=America/New_York:20120521T220500
+DTSTAMP:20120226T083300Z
+UID:318369@mlb.com
+CREATED:20110908T191300Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_wasmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_21_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120522T190500
+DTEND;TZID=America/New_York:20120522T220500
+DTSTAMP:20120226T083300Z
+UID:318384@mlb.com
+CREATED:20110908T191301Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_wasmlb_phimlb_1\n\nPromotions/Giveaways: \n    Hatfield Phillies Franks Dollar Dog Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_22_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120523T190500
+DTEND;TZID=America/New_York:20120523T220500
+DTSTAMP:20120226T083300Z
+UID:318399@mlb.com
+CREATED:20110908T191303Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_wasmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_23_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120524T201500
+DTEND;TZID=America/New_York:20120524T231500
+DTSTAMP:20120226T083300Z
+UID:318404@mlb.com
+CREATED:20110908T191303Z
+DESCRIPTION:Philadelphia at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_24_phimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Philadelphia at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_24_phimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120525T201500
+DTEND;TZID=America/New_York:20120525T231500
+DTSTAMP:20120226T083300Z
+UID:318416@mlb.com
+CREATED:20110908T191305Z
+DESCRIPTION:Philadelphia at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_phimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Philadelphia at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_25_phimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120526T191500
+DTEND;TZID=America/New_York:20120526T221500
+DTSTAMP:20120226T083300Z
+UID:318431@mlb.com
+CREATED:20110908T191306Z
+DESCRIPTION:Philadelphia at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_phimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Philadelphia at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_26_phimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120527T141500
+DTEND;TZID=America/New_York:20120527T171500
+DTSTAMP:20120226T083300Z
+UID:318446@mlb.com
+CREATED:20110908T191308Z
+DESCRIPTION:Philadelphia at St. Louis\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_phimlb_slnmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Busch Stadium, St. Louis
+SUMMARY:Philadelphia at St. Louis
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_27_phimlb_slnmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120528T131000
+DTEND;TZID=America/New_York:20120528T161000
+DTSTAMP:20120226T083300Z
+UID:318462@mlb.com
+CREATED:20110908T191310Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_28_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120529T191000
+DTEND;TZID=America/New_York:20120529T221000
+DTSTAMP:20120226T083300Z
+UID:318477@mlb.com
+CREATED:20110908T191311Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_29_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120530T191000
+DTEND;TZID=America/New_York:20120530T221000
+DTSTAMP:20120226T083300Z
+UID:318492@mlb.com
+CREATED:20110908T191314Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=05&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_05_30_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120601T190500
+DTEND;TZID=America/New_York:20120601T220500
+DTSTAMP:20120226T083300Z
+UID:318506@mlb.com
+CREATED:20110908T191316Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    Comcast Phanatic About Reading Night\n    Phanatic Children's Book\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_01_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120602T160500
+DTEND;TZID=America/New_York:20120602T190500
+DTSTAMP:20120226T083300Z
+UID:318521@mlb.com
+CREATED:20110908T191317Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    Modell’s Sporting Goods Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_02_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120603T133500
+DTEND;TZID=America/New_York:20120603T163500
+DTSTAMP:20120226T083300Z
+UID:318536@mlb.com
+CREATED:20110908T191319Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    Chevrolet Father's Appreciation Day\n    Men’s Cap\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_03_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120604T190500
+DTEND;TZID=America/New_York:20120604T220500
+DTSTAMP:20120226T083300Z
+UID:318546@mlb.com
+CREATED:20110908T191320Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_lanmlb_phimlb_1\n\nPromotions/Giveaways: \n    Toyota Cliff Lee Bobble Figurine\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_04_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120605T190500
+DTEND;TZID=America/New_York:20120605T220500
+DTSTAMP:20120226T083300Z
+UID:318555@mlb.com
+CREATED:20110908T191321Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_05_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120606T190500
+DTEND;TZID=America/New_York:20120606T220500
+DTSTAMP:20120226T083300Z
+UID:318570@mlb.com
+CREATED:20110908T191322Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_06_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120607T130500
+DTEND;TZID=America/New_York:20120607T160500
+DTSTAMP:20120226T083300Z
+UID:318585@mlb.com
+CREATED:20110908T191324Z
+DESCRIPTION:LA Dodgers at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_lanmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:LA Dodgers at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_07_lanmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120608T190500
+DTEND;TZID=America/New_York:20120608T220500
+DTSTAMP:20120226T083300Z
+UID:318602@mlb.com
+CREATED:20110908T191326Z
+DESCRIPTION:Philadelphia at Baltimore\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_phimlb_balmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Oriole Park at Camden Yards, Baltimore
+SUMMARY:Philadelphia at Baltimore
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_08_phimlb_balmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120609T160500
+DTEND;TZID=America/New_York:20120609T190500
+DTSTAMP:20120226T083300Z
+UID:318617@mlb.com
+CREATED:20110908T191327Z
+DESCRIPTION:Philadelphia at Baltimore\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_phimlb_balmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120105T052145Z
+LOCATION:Oriole Park at Camden Yards, Baltimore
+SUMMARY:Philadelphia at Baltimore
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_09_phimlb_balmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120610T133500
+DTEND;TZID=America/New_York:20120610T163500
+DTSTAMP:20120226T083300Z
+UID:318632@mlb.com
+CREATED:20110908T191329Z
+DESCRIPTION:Philadelphia at Baltimore\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_phimlb_balmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Oriole Park at Camden Yards, Baltimore
+SUMMARY:Philadelphia at Baltimore
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_10_phimlb_balmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120612T201000
+DTEND;TZID=America/New_York:20120612T231000
+DTSTAMP:20120226T083300Z
+UID:318653@mlb.com
+CREATED:20110908T191331Z
+DESCRIPTION:Philadelphia at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_phimlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Philadelphia at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_12_phimlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120613T201000
+DTEND;TZID=America/New_York:20120613T231000
+DTSTAMP:20120226T083300Z
+UID:318668@mlb.com
+CREATED:20110908T191333Z
+DESCRIPTION:Philadelphia at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_phimlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Philadelphia at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_13_phimlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120614T201000
+DTEND;TZID=America/New_York:20120614T231000
+DTSTAMP:20120226T083300Z
+UID:318680@mlb.com
+CREATED:20110908T191334Z
+DESCRIPTION:Philadelphia at Minnesota\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_phimlb_minmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Target Field, Minneapolis
+SUMMARY:Philadelphia at Minnesota
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_14_phimlb_minmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120615T190700
+DTEND;TZID=America/New_York:20120615T220700
+DTSTAMP:20120226T083300Z
+UID:318694@mlb.com
+CREATED:20110908T191336Z
+DESCRIPTION:Philadelphia at Toronto\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_phimlb_tormlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Rogers Centre, Toronto
+SUMMARY:Philadelphia at Toronto
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_15_phimlb_tormlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120616T130700
+DTEND;TZID=America/New_York:20120616T160700
+DTSTAMP:20120226T083300Z
+UID:318709@mlb.com
+CREATED:20110908T191337Z
+DESCRIPTION:Philadelphia at Toronto\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_phimlb_tormlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Rogers Centre, Toronto
+SUMMARY:Philadelphia at Toronto
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_16_phimlb_tormlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120617T130700
+DTEND;TZID=America/New_York:20120617T160700
+DTSTAMP:20120226T083300Z
+UID:318724@mlb.com
+CREATED:20110908T191339Z
+DESCRIPTION:Philadelphia at Toronto\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_phimlb_tormlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Rogers Centre, Toronto
+SUMMARY:Philadelphia at Toronto
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_17_phimlb_tormlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120619T190500
+DTEND;TZID=America/New_York:20120619T220500
+DTSTAMP:20120226T083300Z
+UID:318741@mlb.com
+CREATED:20110908T191341Z
+DESCRIPTION:Colorado at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_colmlb_phimlb_1\n\nPromotions/Giveaways: \n    Irish Heritage Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Colorado at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_19_colmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120620T190500
+DTEND;TZID=America/New_York:20120620T220500
+DTSTAMP:20120226T083300Z
+UID:318756@mlb.com
+CREATED:20110908T191343Z
+DESCRIPTION:Colorado at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_colmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Colorado at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_20_colmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120621T190500
+DTEND;TZID=America/New_York:20120621T220500
+DTSTAMP:20120226T083300Z
+UID:318767@mlb.com
+CREATED:20110908T191344Z
+DESCRIPTION:Colorado at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_21_colmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Colorado at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_21_colmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120622T190500
+DTEND;TZID=America/New_York:20120622T220500
+DTSTAMP:20120226T083300Z
+UID:318785@mlb.com
+CREATED:20110908T191346Z
+DESCRIPTION:Tampa Bay at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_tbamlb_phimlb_1\n\nPromotions/Giveaways: \n    Sound of Philadelphia Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Tampa Bay at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_22_tbamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120623T160500
+DTEND;TZID=America/New_York:20120623T190500
+DTSTAMP:20120226T083300Z
+UID:318800@mlb.com
+CREATED:20110908T191347Z
+DESCRIPTION:Tampa Bay at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_tbamlb_phimlb_1\n\nPromotions/Giveaways: \n    Mama Lucia Meatballs Ladies Night\n    Women's Phillies Print\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Tampa Bay at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_23_tbamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120624T133500
+DTEND;TZID=America/New_York:20120624T163500
+DTSTAMP:20120226T083300Z
+UID:318815@mlb.com
+CREATED:20110908T191349Z
+DESCRIPTION:Tampa Bay at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_tbamlb_phimlb_1\n\nPromotions/Giveaways: \n    IBEW Local 98 Jonathan Papelbon T-Shirt\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Tampa Bay at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_24_tbamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120625T190500
+DTEND;TZID=America/New_York:20120625T220500
+DTSTAMP:20120226T083300Z
+UID:318825@mlb.com
+CREATED:20110908T191350Z
+DESCRIPTION:Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_pitmlb_phimlb_1\n\nPromotions/Giveaways: \n    XFINITY Fireworks Show #1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_25_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120626T190500
+DTEND;TZID=America/New_York:20120626T220500
+DTSTAMP:20120226T083300Z
+UID:318839@mlb.com
+CREATED:20110908T191351Z
+DESCRIPTION:Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_pitmlb_phimlb_1\n\nPromotions/Giveaways: \n    XFINITY Fireworks Show #2\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_26_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120627T190500
+DTEND;TZID=America/New_York:20120627T220500
+DTSTAMP:20120226T083300Z
+UID:318854@mlb.com
+CREATED:20110908T191353Z
+DESCRIPTION:Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_pitmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_27_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120628T130500
+DTEND;TZID=America/New_York:20120628T160500
+DTSTAMP:20120226T083300Z
+UID:318869@mlb.com
+CREATED:20110908T191355Z
+DESCRIPTION:Pittsburgh at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_pitmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Pittsburgh at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_28_pitmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120629T191000
+DTEND;TZID=America/New_York:20120629T221000
+DTSTAMP:20120226T083300Z
+UID:318883@mlb.com
+CREATED:20110908T191356Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_29_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120630T161000
+DTEND;TZID=America/New_York:20120630T191000
+DTSTAMP:20120226T083300Z
+UID:318898@mlb.com
+CREATED:20110908T191358Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=06&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120113T051518Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_06_30_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120701T131000
+DTEND;TZID=America/New_York:20120701T161000
+DTSTAMP:20120226T083300Z
+UID:318913@mlb.com
+CREATED:20110908T191400Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120117T184556Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_01_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120703T191000
+DTEND;TZID=America/New_York:20120703T221000
+DTSTAMP:20120226T083300Z
+UID:318940@mlb.com
+CREATED:20110908T191402Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_03_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120704T131000
+DTEND;TZID=America/New_York:20120704T161000
+DTSTAMP:20120226T083300Z
+UID:318955@mlb.com
+CREATED:20110908T191404Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_04_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120705T191000
+DTEND;TZID=America/New_York:20120705T221000
+DTSTAMP:20120226T083300Z
+UID:318968@mlb.com
+CREATED:20110908T191405Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_05_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120706T190500
+DTEND;TZID=America/New_York:20120706T220500
+DTSTAMP:20120226T083300Z
+UID:318973@mlb.com
+CREATED:20110908T191406Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_06_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120707T191500
+DTEND;TZID=America/New_York:20120707T221500
+DTSTAMP:20120226T083300Z
+UID:318988@mlb.com
+CREATED:20110908T191408Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_07_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120708T133500
+DTEND;TZID=America/New_York:20120708T163500
+DTSTAMP:20120226T083300Z
+UID:319003@mlb.com
+CREATED:20110908T191409Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_08_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120710T033300
+DTEND;TZID=America/New_York:20120710T063300
+DTSTAMP:20120226T083300Z
+UID:319018@mlb.com
+CREATED:20110908T191411Z
+DESCRIPTION:MLB All-Star Game: NL All-Stars at AL All-Stars\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Kauffman Stadium, Kansas City
+SUMMARY:MLB All-Star Game: NL All-Stars at AL All-Stars
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_10_nasmlb_aasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120713T204000
+DTEND;TZID=America/New_York:20120713T234000
+DTSTAMP:20120226T083300Z
+UID:319028@mlb.com
+CREATED:20110908T191412Z
+DESCRIPTION:Philadelphia at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_phimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Coors Field, Denver
+SUMMARY:Philadelphia at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_13_phimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120714T160500
+DTEND;TZID=America/New_York:20120714T190500
+DTSTAMP:20120226T083300Z
+UID:319043@mlb.com
+CREATED:20110908T191414Z
+DESCRIPTION:Philadelphia at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_phimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120207T170655Z
+LOCATION:Coors Field, Denver
+SUMMARY:Philadelphia at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_14_phimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120715T151000
+DTEND;TZID=America/New_York:20120715T181000
+DTSTAMP:20120226T083300Z
+UID:319058@mlb.com
+CREATED:20110908T191415Z
+DESCRIPTION:Philadelphia at Colorado\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_phimlb_colmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Coors Field, Denver
+SUMMARY:Philadelphia at Colorado
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_15_phimlb_colmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120716T221000
+DTEND;TZID=America/New_York:20120717T011000
+DTSTAMP:20120226T083300Z
+UID:319070@mlb.com
+CREATED:20110908T191417Z
+DESCRIPTION:Philadelphia at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_phimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Philadelphia at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_16_phimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120717T221000
+DTEND;TZID=America/New_York:20120718T011000
+DTSTAMP:20120226T083300Z
+UID:319085@mlb.com
+CREATED:20110908T191418Z
+DESCRIPTION:Philadelphia at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_phimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Philadelphia at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_17_phimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120718T151000
+DTEND;TZID=America/New_York:20120718T181000
+DTSTAMP:20120226T083300Z
+UID:319100@mlb.com
+CREATED:20110908T191420Z
+DESCRIPTION:Philadelphia at LA Dodgers\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_phimlb_lanmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Dodger Stadium, Los Angeles
+SUMMARY:Philadelphia at LA Dodgers
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_18_phimlb_lanmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120720T190500
+DTEND;TZID=America/New_York:20120720T220500
+DTSTAMP:20120226T083300Z
+UID:319130@mlb.com
+CREATED:20110908T191423Z
+DESCRIPTION:San Francisco at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_sfnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Francisco at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_20_sfnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120721T160500
+DTEND;TZID=America/New_York:20120721T190500
+DTSTAMP:20120226T083300Z
+UID:319145@mlb.com
+CREATED:20110908T191425Z
+DESCRIPTION:San Francisco at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_sfnmlb_phimlb_1\n\nPromotions/Giveaways: \n    Apple Vacations Photo Day presented by Iberostar Hotels and Resorts\n    2012 Phillies Print\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Francisco at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_21_sfnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120722T133500
+DTEND;TZID=America/New_York:20120722T163500
+DTSTAMP:20120226T083300Z
+UID:319160@mlb.com
+CREATED:20110908T191427Z
+DESCRIPTION:San Francisco at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_sfnmlb_phimlb_1\n\nPromotions/Giveaways: \n    PECO Roy Halladay Fathead Jr.\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:San Francisco at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_22_sfnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120723T190500
+DTEND;TZID=America/New_York:20120723T220500
+DTSTAMP:20120226T083300Z
+UID:319171@mlb.com
+CREATED:20110908T191428Z
+DESCRIPTION:Milwaukee at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_milmlb_phimlb_1\n\nPromotions/Giveaways: \n    Italian Heritage Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Milwaukee at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_23_milmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120724T190500
+DTEND;TZID=America/New_York:20120724T220500
+DTSTAMP:20120226T083300Z
+UID:319184@mlb.com
+CREATED:20110908T191429Z
+DESCRIPTION:Milwaukee at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_milmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Milwaukee at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_24_milmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120725T130500
+DTEND;TZID=America/New_York:20120725T160500
+DTSTAMP:20120226T083300Z
+UID:319199@mlb.com
+CREATED:20110908T191431Z
+DESCRIPTION:Milwaukee at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_milmlb_phimlb_1\n\nPromotions/Giveaways: \n    Modell's Sporting Goods Kid's Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Milwaukee at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_25_milmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120727T193500
+DTEND;TZID=America/New_York:20120727T223500
+DTSTAMP:20120226T083300Z
+UID:319223@mlb.com
+CREATED:20110908T191434Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_27_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120728T160500
+DTEND;TZID=America/New_York:20120728T190500
+DTSTAMP:20120226T083300Z
+UID:319238@mlb.com
+CREATED:20110908T191435Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_28_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120729T033300
+DTEND;TZID=America/New_York:20120729T063300
+DTSTAMP:20120226T083300Z
+UID:319253@mlb.com
+CREATED:20110908T191437Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_29_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120731T190500
+DTEND;TZID=America/New_York:20120731T220500
+DTSTAMP:20120226T083300Z
+UID:319280@mlb.com
+CREATED:20110908T191440Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=07&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_07_31_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120801T190500
+DTEND;TZID=America/New_York:20120801T220500
+DTSTAMP:20120226T083300Z
+UID:319295@mlb.com
+CREATED:20110908T191441Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_01_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120802T190500
+DTEND;TZID=America/New_York:20120802T220500
+DTSTAMP:20120226T083300Z
+UID:319306@mlb.com
+CREATED:20110908T191443Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_02_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_02_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120803T190500
+DTEND;TZID=America/New_York:20120803T220500
+DTSTAMP:20120226T083300Z
+UID:319311@mlb.com
+CREATED:20110908T191443Z
+DESCRIPTION:Arizona at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_arimlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Arizona at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_03_arimlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120804T190500
+DTEND;TZID=America/New_York:20120804T220500
+DTSTAMP:20120226T083300Z
+UID:319326@mlb.com
+CREATED:20110908T191445Z
+DESCRIPTION:Arizona at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_arimlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Arizona at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_04_arimlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120805T033300
+DTEND;TZID=America/New_York:20120805T063300
+DTSTAMP:20120226T083300Z
+UID:319341@mlb.com
+CREATED:20110908T191447Z
+DESCRIPTION:Arizona at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_arimlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Arizona at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_05_arimlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120806T190500
+DTEND;TZID=America/New_York:20120806T220500
+DTSTAMP:20120226T083300Z
+UID:319357@mlb.com
+CREATED:20110908T191448Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_06_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120807T190500
+DTEND;TZID=America/New_York:20120807T220500
+DTSTAMP:20120226T083300Z
+UID:319370@mlb.com
+CREATED:20110908T191450Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_atlmlb_phimlb_1\n\nPromotions/Giveaways: \n    Jewish Heritage Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_07_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120808T190500
+DTEND;TZID=America/New_York:20120808T220500
+DTSTAMP:20120226T083300Z
+UID:319385@mlb.com
+CREATED:20110908T191451Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_08_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120810T190500
+DTEND;TZID=America/New_York:20120810T220500
+DTSTAMP:20120226T083300Z
+UID:319419@mlb.com
+CREATED:20110908T191455Z
+DESCRIPTION:St. Louis at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_slnmlb_phimlb_1\n\nPromotions/Giveaways: \n    Toyota Wall of Fame Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:St. Louis at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_10_slnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120811T190500
+DTEND;TZID=America/New_York:20120811T220500
+DTSTAMP:20120226T083300Z
+UID:319434@mlb.com
+CREATED:20110908T191457Z
+DESCRIPTION:St. Louis at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_slnmlb_phimlb_1\n\nPromotions/Giveaways: \n    Alumni Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:St. Louis at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_11_slnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120812T033300
+DTEND;TZID=America/New_York:20120812T063300
+DTSTAMP:20120226T083300Z
+UID:319449@mlb.com
+CREATED:20110908T191458Z
+DESCRIPTION:St. Louis at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_slnmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:St. Louis at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_12_slnmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120813T191000
+DTEND;TZID=America/New_York:20120813T221000
+DTSTAMP:20120226T083300Z
+UID:319458@mlb.com
+CREATED:20110908T191459Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_13_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120814T191000
+DTEND;TZID=America/New_York:20120814T221000
+DTSTAMP:20120226T083300Z
+UID:319473@mlb.com
+CREATED:20110908T191501Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_14_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120815T124000
+DTEND;TZID=America/New_York:20120815T154000
+DTSTAMP:20120226T083300Z
+UID:319488@mlb.com
+CREATED:20110908T191502Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_15_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120816T201000
+DTEND;TZID=America/New_York:20120816T231000
+DTSTAMP:20120226T083300Z
+UID:319500@mlb.com
+CREATED:20110908T191505Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_phimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_16_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120817T201000
+DTEND;TZID=America/New_York:20120817T231000
+DTSTAMP:20120226T083300Z
+UID:319514@mlb.com
+CREATED:20110908T191506Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_phimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_17_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120818T191000
+DTEND;TZID=America/New_York:20120818T221000
+DTSTAMP:20120226T083300Z
+UID:319529@mlb.com
+CREATED:20110908T191509Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_phimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120106T053250Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_18_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120819T141000
+DTEND;TZID=America/New_York:20120819T171000
+DTSTAMP:20120226T083300Z
+UID:319544@mlb.com
+CREATED:20110908T191510Z
+DESCRIPTION:Philadelphia at Milwaukee\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_phimlb_milmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Miller Park, Milwaukee
+SUMMARY:Philadelphia at Milwaukee
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_19_phimlb_milmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120820T190500
+DTEND;TZID=America/New_York:20120820T220500
+DTSTAMP:20120226T083300Z
+UID:319552@mlb.com
+CREATED:20110908T191511Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_cinmlb_phimlb_1\n\nPromotions/Giveaways: \n    Hatfield Phillies Franks Dollar Dog Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_20_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120821T190500
+DTEND;TZID=America/New_York:20120821T220500
+DTSTAMP:20120226T083300Z
+UID:319564@mlb.com
+CREATED:20110908T191512Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_cinmlb_phimlb_1\n\nPromotions/Giveaways: \n    Hunter Pence Bobble Figurine\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_21_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120822T190500
+DTEND;TZID=America/New_York:20120822T220500
+DTSTAMP:20120226T083300Z
+UID:319579@mlb.com
+CREATED:20110908T191514Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_cinmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_22_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120823T190500
+DTEND;TZID=America/New_York:20120823T220500
+DTSTAMP:20120226T083300Z
+UID:319592@mlb.com
+CREATED:20110908T191516Z
+DESCRIPTION:Cincinnati at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_cinmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193202Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Cincinnati at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_23_cinmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120824T190500
+DTEND;TZID=America/New_York:20120824T220500
+DTSTAMP:20120226T083300Z
+UID:319613@mlb.com
+CREATED:20110908T191518Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_wasmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193201Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_24_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120825T190500
+DTEND;TZID=America/New_York:20120825T220500
+DTSTAMP:20120226T083300Z
+UID:319628@mlb.com
+CREATED:20110908T191520Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_wasmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193203Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_25_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120826T133500
+DTEND;TZID=America/New_York:20120826T163500
+DTSTAMP:20120226T083300Z
+UID:319643@mlb.com
+CREATED:20110908T191522Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_wasmlb_phimlb_1\n\nPromotions/Giveaways: \n    ShopRite Jimmy Rollins Back to School Cooler Bag\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_26_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120828T190500
+DTEND;TZID=America/New_York:20120828T220500
+DTSTAMP:20120226T083300Z
+UID:319662@mlb.com
+CREATED:20110908T191523Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_nynmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_28_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120829T190500
+DTEND;TZID=America/New_York:20120829T220500
+DTSTAMP:20120226T083300Z
+UID:319677@mlb.com
+CREATED:20110908T191525Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_nynmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193204Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_29_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120830T130500
+DTEND;TZID=America/New_York:20120830T160500
+DTSTAMP:20120226T083300Z
+UID:319690@mlb.com
+CREATED:20110908T191527Z
+DESCRIPTION:NY Mets at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_nynmlb_phimlb_1\n\nPromotions/Giveaways: \n    Modell’s Sporting Goods Kids Run the Bases\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:NY Mets at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_30_nynmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120831T193500
+DTEND;TZID=America/New_York:20120831T223500
+DTSTAMP:20120226T083300Z
+UID:319704@mlb.com
+CREATED:20110908T191528Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=08&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_08_31_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120901T160500
+DTEND;TZID=America/New_York:20120901T190500
+DTSTAMP:20120226T083300Z
+UID:319719@mlb.com
+CREATED:20110908T191530Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: FOX\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_01_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120902T170500
+DTEND;TZID=America/New_York:20120902T200500
+DTSTAMP:20120226T083300Z
+UID:319734@mlb.com
+CREATED:20110908T191532Z
+DESCRIPTION:Philadelphia at Atlanta\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_phimlb_atlmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Turner Field, Atlanta
+SUMMARY:Philadelphia at Atlanta
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_02_phimlb_atlmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120903T131000
+DTEND;TZID=America/New_York:20120903T161000
+DTSTAMP:20120226T083300Z
+UID:319753@mlb.com
+CREATED:20110908T191534Z
+DESCRIPTION:Philadelphia at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_phimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Philadelphia at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_03_phimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120904T191000
+DTEND;TZID=America/New_York:20120904T221000
+DTSTAMP:20120226T083300Z
+UID:319768@mlb.com
+CREATED:20110908T191536Z
+DESCRIPTION:Philadelphia at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_phimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Philadelphia at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_04_phimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120905T123500
+DTEND;TZID=America/New_York:20120905T153500
+DTSTAMP:20120226T083300Z
+UID:319783@mlb.com
+CREATED:20110908T191537Z
+DESCRIPTION:Philadelphia at Cincinnati\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_phimlb_cinmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Great American Ball Park, Cincinnati
+SUMMARY:Philadelphia at Cincinnati
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_05_phimlb_cinmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120907T190500
+DTEND;TZID=America/New_York:20120907T220500
+DTSTAMP:20120226T083300Z
+UID:319795@mlb.com
+CREATED:20110908T191539Z
+DESCRIPTION:Colorado at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_colmlb_phimlb_1\n\nPromotions/Giveaways: \n    Cabrini College Knit Hat\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Colorado at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_07_colmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120908T190500
+DTEND;TZID=America/New_York:20120908T220500
+DTSTAMP:20120226T083300Z
+UID:319810@mlb.com
+CREATED:20110908T191540Z
+DESCRIPTION:Colorado at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_colmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Colorado at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_08_colmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120909T133500
+DTEND;TZID=America/New_York:20120909T163500
+DTSTAMP:20120226T083300Z
+UID:319825@mlb.com
+CREATED:20110908T191542Z
+DESCRIPTION:Colorado at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_colmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Colorado at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_09_colmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120910T190500
+DTEND;TZID=America/New_York:20120910T220500
+DTSTAMP:20120226T083300Z
+UID:319840@mlb.com
+CREATED:20110908T191544Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_miamlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_10_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120911T190500
+DTEND;TZID=America/New_York:20120911T220500
+DTSTAMP:20120226T083300Z
+UID:319851@mlb.com
+CREATED:20110908T191545Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_miamlb_phimlb_1\n\nPromotions/Giveaways: \n    Hatfield Phillies Franks Dollar Dog Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_11_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120912T160500
+DTEND;TZID=America/New_York:20120912T190500
+DTSTAMP:20120226T083300Z
+UID:319866@mlb.com
+CREATED:20110908T191546Z
+DESCRIPTION:Miami at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_miamlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Miami at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_12_miamlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120913T200500
+DTEND;TZID=America/New_York:20120913T230500
+DTSTAMP:20120226T083300Z
+UID:319882@mlb.com
+CREATED:20110908T191548Z
+DESCRIPTION:Philadelphia at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_13_phimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Philadelphia at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_13_phimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120914T200500
+DTEND;TZID=America/New_York:20120914T230500
+DTSTAMP:20120226T083300Z
+UID:319894@mlb.com
+CREATED:20110908T191549Z
+DESCRIPTION:Philadelphia at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_phimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Philadelphia at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_14_phimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120915T190500
+DTEND;TZID=America/New_York:20120915T220500
+DTSTAMP:20120226T083300Z
+UID:319909@mlb.com
+CREATED:20110908T191551Z
+DESCRIPTION:Philadelphia at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_phimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Philadelphia at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_15_phimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120916T140500
+DTEND;TZID=America/New_York:20120916T170500
+DTSTAMP:20120226T083300Z
+UID:319924@mlb.com
+CREATED:20110908T191553Z
+DESCRIPTION:Philadelphia at Houston\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_phimlb_houmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Minute Maid Park, Houston
+SUMMARY:Philadelphia at Houston
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_16_phimlb_houmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120917T191000
+DTEND;TZID=America/New_York:20120917T221000
+DTSTAMP:20120226T083300Z
+UID:319935@mlb.com
+CREATED:20110908T191554Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_17_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_17_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120918T191000
+DTEND;TZID=America/New_York:20120918T221000
+DTSTAMP:20120226T083300Z
+UID:319948@mlb.com
+CREATED:20110908T191556Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_18_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120919T191000
+DTEND;TZID=America/New_York:20120919T221000
+DTSTAMP:20120226T083300Z
+UID:319963@mlb.com
+CREATED:20110908T191557Z
+DESCRIPTION:Philadelphia at NY Mets\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_phimlb_nynmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citi Field, Flushing
+SUMMARY:Philadelphia at NY Mets
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_19_phimlb_nynmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120921T190500
+DTEND;TZID=America/New_York:20120921T220500
+DTSTAMP:20120226T083300Z
+UID:319980@mlb.com
+CREATED:20110908T191559Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_atlmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_21_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120922T033300
+DTEND;TZID=America/New_York:20120922T063300
+DTSTAMP:20120226T083300Z
+UID:319995@mlb.com
+CREATED:20110908T191601Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_atlmlb_phimlb_1\n\nPromotions/Giveaways: \n    German Heritage Celebration\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_22_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120923T033300
+DTEND;TZID=America/New_York:20120923T063300
+DTSTAMP:20120226T083300Z
+UID:320010@mlb.com
+CREATED:20110908T191603Z
+DESCRIPTION:Atlanta at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_atlmlb_phimlb_1\n\nPromotions/Giveaways: \n    TOTAL Cole Hamels Action Figurine\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Atlanta at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_23_atlmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120925T190500
+DTEND;TZID=America/New_York:20120925T220500
+DTSTAMP:20120226T083300Z
+UID:320046@mlb.com
+CREATED:20110908T191606Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_wasmlb_phimlb_1\n\nPromotions/Giveaways: \n    Goya Latino Family Celebration and Food Drive\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_25_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120926T190500
+DTEND;TZID=America/New_York:20120926T220500
+DTSTAMP:20120226T083300Z
+UID:320061@mlb.com
+CREATED:20110908T191608Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_wasmlb_phimlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_26_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120927T190500
+DTEND;TZID=America/New_York:20120927T220500
+DTSTAMP:20120226T083300Z
+UID:320073@mlb.com
+CREATED:20110908T191609Z
+DESCRIPTION:Washington at Philadelphia\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_wasmlb_phimlb_1\n\nPromotions/Giveaways: \n    Fan Appreciation Night\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Citizens Bank Park, Philadelphia
+SUMMARY:Washington at Philadelphia
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_27_wasmlb_phimlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120928T191000
+DTEND;TZID=America/New_York:20120928T221000
+DTSTAMP:20120226T083300Z
+UID:320084@mlb.com
+CREATED:20110908T191611Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_28_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120929T191000
+DTEND;TZID=America/New_York:20120929T221000
+DTSTAMP:20120226T083300Z
+UID:320099@mlb.com
+CREATED:20110908T191612Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_29_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20120930T131000
+DTEND;TZID=America/New_York:20120930T161000
+DTSTAMP:20120226T083300Z
+UID:320114@mlb.com
+CREATED:20110908T191614Z
+DESCRIPTION:Philadelphia at Miami\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_phimlb_miamlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=09&y=2012\n\nLocal TV: PHL 17\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Marlins Park, Miami
+SUMMARY:Philadelphia at Miami
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_09_30_phimlb_miamlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121001T190500
+DTEND;TZID=America/New_York:20121001T220500
+DTSTAMP:20120226T083300Z
+UID:320130@mlb.com
+CREATED:20110908T191616Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=10&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_01_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121002T190500
+DTEND;TZID=America/New_York:20121002T220500
+DTSTAMP:20120226T083300Z
+UID:320145@mlb.com
+CREATED:20110908T191617Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=10&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_02_phimlb_wasmlb_1
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20121003T130500
+DTEND;TZID=America/New_York:20121003T160500
+DTSTAMP:20120226T083300Z
+UID:320160@mlb.com
+CREATED:20110908T191619Z
+DESCRIPTION:Philadelphia at Washington\n\nClick below for game previews, wraps and boxscores plus video, tickets, stats, gameday and more!\nhttp://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_phimlb_wasmlb_1\n\nWatch or Listen with MLB.TV: http://mlb.mlb.com/schedule/index.jsp?c_id=phi&m=10&y=2012\n\nLocal TV: CSN\nLocal Radio: 94 WIP, 1210 WPHT
+LAST-MODIFIED:20120104T193205Z
+LOCATION:Nationals Park, Washington
+SUMMARY:Philadelphia at Washington
+TRANSP:TRANSPARENT
+SEQUENCE:0
+URL:http://mlb.mlb.com/mlb/gameday/index.jsp?gid=2012_10_03_phimlb_wasmlb_1
+END:VEVENT
+END:VCALENDAR

@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
-gem 'rake', '0.8.7'
+gem 'rake' #, '0.8.7'
 
 gem 'passenger'
 
@@ -9,7 +9,7 @@ gem 'passenger'
 gem 'mysql2', '0.2.6'
 
 gem 'will_paginate', '~> 3.0'
-gem 'devise'
+gem 'devise', '1.5.3'
 
 # => add autocomplete search capability
 gem 'rails3-jquery-autocomplete'
@@ -19,7 +19,17 @@ gem 'meta_where'
 gem 'meta_search'
 
 # install oauth
-gem 'omniauth', '0.2.6'
+gem 'omniauth'
+#gem "oa-core", "~> 0.3.2"
+
+# add facebook & twitter
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+gem "omniauth-github"
+gem "omniauth-openid"
+
+# facebook graph
+gem "fb_graph", '~> 1.8.4' #"~> 2.4.6"
 
 # add form validations 
 gem 'client_side_validations'  
@@ -57,6 +67,22 @@ gem 'thinking-sphinx', '2.0.3'
 # add google calendar
 gem "gcal4ruby"
 
+# add icalendar access
+gem 'ics', "~> 0.1"
+
+# add for date syntax
+gem "ice_cube", "~> 0.7.8"
+
+#add whenever for cron jobs
+gem 'whenever', "~> 0.7.3"
+
+#add timezone
+gem 'timezone', "~> 0.1.4"
+
+# add geokit
+gem 'geokit', "~> 1.6.5"
+gem "geokit-rails3", "~> 0.1.5"
+
 group :development, :test do
 #  gem 'capybara'
   gem 'spork', '~> 0.9.0.rc'
@@ -82,10 +108,13 @@ end
  gem "dalli"
  
 # add asynchronous processing
-gem "delayed_job", "~> 2.1.4"
+gem 'delayed_job_active_record'
 
 # data dump utility
 gem 'yaml_db'
+
+# rss feed reader
+gem "feedzirra", "~> 0.1.1"
  
 # google analytics 
 group :production do

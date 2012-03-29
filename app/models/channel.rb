@@ -74,7 +74,7 @@ class Channel < KitsTsdModel
   end
   
   def summary
-    bbody.blank? ? '' : bbody[0..59] 
+    bbody.blank? ? '' : bbody[0..80] 
   end
   
   def ssid

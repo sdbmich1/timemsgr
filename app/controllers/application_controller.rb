@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
+    @user ||= resource
     if @user.sign_in_count <= 1 # check for new users
       new_local_subscription_path
     else

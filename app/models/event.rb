@@ -65,9 +65,11 @@ class Event < KitsTsdModel
     find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
+         UNION #{getSQLefee} FROM `kitscentraldb`.events #{where_sid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_dte})
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt, edt, edt, edt, edt, cid]) 
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt,
+                                                       edt, cid, edt, edt, edt, edt, edt, edt, cid]) 
   end
 
   # build dynamic union to pull event data from legacy dbs across different schemas for specific event  
@@ -195,7 +197,7 @@ class Event < KitsTsdModel
         e.eventendtime,  e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,         
-        e.contentsourceURL, e.subscriptionsourceURL "
+        e.contentsourceURL, e.subscriptionsourceURL, e.imagelink "
   end
   
   def self.getSQLhdr
@@ -203,7 +205,7 @@ class Event < KitsTsdModel
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, 
-        contentsourceURL, subscriptionsourceURL "
+        contentsourceURL, subscriptionsourceURL, imagelink "
   end
    
   # define SQL WHERE clause for SELECT UNION statements 

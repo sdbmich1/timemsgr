@@ -19,7 +19,7 @@
           <%= render :partial => 'shared/show_photo', :locals => {:model => User.get_user(notice.subscriberID), :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= User.get_user(notice.subscriberID).host_name %></td>
+      <td><%= User.get_user(notice.subscriberID).host_name if User.get_user(notice.subscriberID) %></td>
       <td><%= get_local_time(notice.created_at) %></td>
       <td><%= notice.message %></td>
       <% unless notice.event_name.blank? %>

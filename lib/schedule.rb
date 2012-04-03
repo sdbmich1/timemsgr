@@ -7,7 +7,8 @@ module Schedule
   # returns time offset for a given location
   def self.get_offset(loc) 
     addr = {}  
-    res = Geokit::Geocoders::GoogleGeocoder.geocode(loc)
+    res = Geokit::Geocoders::GoogleGeocoder.geocode(loc) rescue nil
+    return false unless res
     url = ['http://www.earthtools.org/timezone', res.lat, res.lng].join("/") if res.success    
     doc = Nokogiri::XML(open(url)) if url
     offset = doc.xpath("//offset").text.to_i if doc

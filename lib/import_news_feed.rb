@@ -7,11 +7,11 @@ class ImportNewsFeed
   # add event to system
   def add_event(doc, n, *args)
     CalendarEvent.first_or_create_by_pageextsourceID(args[0], 
-        :event_type => 'ce', :event_title => args[1],
+        :event_type => 'ce', :event_title => args[1][0..199],
         :cbody => doc.xpath("//item//description")[n].text + ' ' + doc.xpath("//item//phone")[n].text,
         :postdate => DateTime.parse(doc.xpath("//item//pubDate")[n].text),
         :eventstartdate => args[2], :eventstarttime => args[2], :eventenddate => args[3], :eventendtime => args[3],
-        :contentsourceURL => args[5][0..254],   
+        :contentsourceURL => args[5][0..99],   
         :location => doc.xpath("//item//xCal:location")[n].text,
         :mapplacename => doc.xpath("//item//xCal:adr//xCal:x-calconnect-venue-name")[n].text[0..59],
         :mapstreet => doc.xpath("//item//xCal:adr//xCal:x-calconnect-street")[n].text,
@@ -19,6 +19,7 @@ class ImportNewsFeed
         :mapstate => doc.xpath("//item//xCal:adr//xCal:x-calconnect-region")[n].text,
         :mapzip => doc.xpath("//item//xCal:adr//xCal:x-calconnect-postalcode")[n].text,
         :mapcountry => doc.xpath("//item//xCal:adr//xCal:x-calconnect-country")[n].text,
+        :imagelink => doc.xpath("//item//images//url")[n].text,
         :pageextsourceID => doc.xpath("//item//id")[n].text,
         :contentsourceID => args[4], :localGMToffset => args[6], :endGMToffset => args[6],
         :subscriptionsourceID => args[4])

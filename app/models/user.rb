@@ -62,9 +62,7 @@ class User < ActiveRecord::Base
       
   has_many :settings, :dependent => :destroy
   has_many :session_prefs, :dependent => :destroy, :through => :settings 
-  
-  has_many :authentications, :dependent => :delete_all
-  
+    
   # define friend relationships
   has_many :relationships, :foreign_key => "tracker_id", :class_name => "Relationship", :dependent => :destroy
   has_many :trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'accepted'" 
@@ -115,33 +113,13 @@ class User < ActiveRecord::Base
   def clear_dependents
     self.interests.delete
   end
-  
-  # set user hash for omniauth
-  def self.create_from_hash!(hash)
-    create(:name => hash['user_info']['name'])
-  end
-  
-  def apply_omniauth(omniauth)  
-    self.email = omniauth['user_info']['email'] #if email.blank?  
-    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])  
-  end
-  
-  def self.create_with_omniauth(auth)
-    create! do |user|
-      user.provider = auth["provider"]
-      user.uid = auth["uid"]
-      user.first_name = auth["user_info"]["name"].split(' ')[0]
-      user.last_name = auth["user_info"]["name"].split(' ')[1]
-    end
-  end
-  
+    
   def get_facebook_user(access_token)
     @fb_user ||= FbGraph::User.me(access_token.credentials.token).fetch
   end
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token.extra.raw_info
-#    debugger
     if user = User.where(:email => data.email).first
       user
     else # Create a user with a stub password. 

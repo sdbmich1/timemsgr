@@ -1,6 +1,7 @@
 require 'ics'
 require 'open-uri'
 class ImportICSFeed
+  include Schedule
     
   # read given file with list of ics filenames 
   def read_feeds(fname)
@@ -9,7 +10,7 @@ class ImportICSFeed
     
   # open and read ics file
   def process_feed(fname, channel, offset)
-    schedule = ICS::Event.file(File.open(fname)) 
+    schedule = ICS::Event.file(open(fname)) 
     schedule.map {|cal| process_event(cal, channel, offset) }
   end
   
@@ -21,12 +22,14 @@ class ImportICSFeed
   
   # add to system
   def add_event(cal, cid, offset)
+    addr = Schedule.get_offset cal.location
     CalendarEvent.find_or_create_by_pageextsourceID(cal.uid, :event_type => 'ce', :event_title => cal.summary, 
         :cbody => cal.description, :postdate => cal.created.to_datetime,
         :eventstartdate => cal.dtstart.to_datetime, :eventstarttime => cal.dtstart.to_datetime, 
         :eventenddate => cal.dtend.to_datetime, :eventendtime => cal.dtend.to_datetime, 
         :contentsourceURL => cal.url, :location => cal.location,
-        :contentsourceID => cid, :localGMToffset => offset, :endGMToffset => offset,
-        :subscriptionsourceID => cid, :pageextsourceID => cal.uid)
+        :mapcity => addr[:city], :mapstate => addr[:state], :mapzip => addr[:zip], :mapcountry => addr[:country],
+        :contentsourceID => cid, :localGMToffset => addr[:offset], :endGMToffset => addrr[:offset],
+        :subscriptionsourceID => cid, :pageextsourceID => cal.uid) if cal.dtstart.to_datetime > Time.now
   end    
 end

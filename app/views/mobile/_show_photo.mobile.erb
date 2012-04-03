@@ -3,6 +3,8 @@
    		<%= image_tag pic.photo.url, :class => vtype %>
    	<% end %>		
 <% end %>
-<% if model.try(:pictures).blank? %>
+<% if has_facebook_photo? && controller_name == 'users' %>
+   	<%= image_tag @facebook_user.picture, :size => psize %>   
+<% elsif model.try(:pictures).blank? %>
     <%= image_tag file_name, :alt => "none", :size => psize %>
 <% end %>

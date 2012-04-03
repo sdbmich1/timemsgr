@@ -46,7 +46,7 @@ class ImportGolfEvent
         addr = Schedule.get_offset [city, mstate].join(', ') unless city.blank? 
         
         # add event to calendar
-        cid.map {|channel| add_golf_event(event[:url], event[:name], details, Date.today, sdt, edt, channel.channelID, loc, addr)}
+        cid.map {|channel| add_golf_event(event[:url], event[:name], details, Date.today, sdt, edt, channel.channelID, loc, addr)} if addr
       end
     end     
   end
@@ -74,7 +74,7 @@ class ImportGolfEvent
       addr = Schedule.get_offset loc unless loc.blank? 
       
       # add event to calendar
-      cid.map {|channel| add_golf_event(feed_url, event, details, Date.today, sdt, edt, channel.channelID, loc, addr)}     
+      cid.map {|channel| add_golf_event(feed_url, event, details, Date.today, sdt, edt, channel.channelID, loc, addr)} if addr    
     end
   end
   
@@ -83,14 +83,15 @@ class ImportGolfEvent
   end 
     
   def add_golf_event(*args)
-    event = CalendarEvent.find_or_initialize_by_event_title(args[1][0.199], 
-        :event_type => 'ce', :event_title => args[1][0.199], :cbody => args[2], :postdate => args[3],
+    event = CalendarEvent.find_or_initialize_by_event_title(args[1][0..199], 
+        :event_type => 'ce', :event_title => args[1][0..199], :cbody => args[2], :postdate => args[3],
         :eventstartdate => args[4], :eventenddate => args[5], 
-        :contentsourceURL => args[0][0..254], :location => args[7][0..254],
+        :contentsourceURL => args[0][0..99], :location => args[7][0..254],
         :contentsourceID => args[6], :subscriptionsourceID => args[6])
         
     event.localGMToffset = event.endGMToffset = args[8][:offset] if args[8]
-    event.mapcity, event.mapstate, event.mapzip = args[8][:city], args[8][:state], args[8][:zip] if args[8] 
+    event.mapstate = args[8][:state][0..24] if args[8][:state]    
+    event.mapcity, event.mapzip, event.mapcountry = args[8][:city], args[8][:zip], args[8][:country] if args[8] 
     event.save      
   end  
 end

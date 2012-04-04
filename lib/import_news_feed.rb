@@ -31,7 +31,8 @@ class ImportNewsFeed
     doc.xpath("//item").each do |n|
       
       # process dates
-      sdt = DateTime.parse(doc.xpath("//item//xCal:dtstart")[n].text)
+      sdt = DateTime.parse(doc.xpath("//item//xCal:dtstart")[n].text) rescue nil
+      sdt ||= Time.now
       edt = doc.xpath("//item//xCal:dtend")[n].text
       edt.blank? ? enddt = sdt.advance(:hours => 2) : enddt = DateTime.parse(edt)
       

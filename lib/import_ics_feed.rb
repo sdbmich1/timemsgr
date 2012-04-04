@@ -29,7 +29,7 @@ class ImportICSFeed
         :eventenddate => cal.dtend.to_datetime, :eventendtime => cal.dtend.to_datetime, 
         :contentsourceURL => cal.url, :location => cal.location,
         :mapcity => addr[:city], :mapstate => addr[:state], :mapzip => addr[:zip], :mapcountry => addr[:country],
-        :contentsourceID => cid, :localGMToffset => addr[:offset], :endGMToffset => addrr[:offset],
+        :contentsourceID => cid, :localGMToffset => addr[:offset], :endGMToffset => addr[:offset],
         :subscriptionsourceID => cid, :pageextsourceID => cal.uid) if cal.dtstart.to_datetime > Time.now
   end    
 end

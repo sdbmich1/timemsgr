@@ -1,5 +1,7 @@
 <span class="pb-label"> Time Saving Metrics</span><br />
-<% load_meters.each do |meter| %>
+<% if load_meters %>
+  <% load_meters.each do |meter| %>
 	<span class="pb-offset"><%= "#{meter.title} " %></span><br />
 	<span class='progressBar pb-<%= "#{meter.meter_type}"%>'><%= 100*getcredits/meter.maxval %></span><br />
+  <% end %>
 <% end %>

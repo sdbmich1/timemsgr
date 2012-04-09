@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_filter :authenticate_user! 
+  before_filter :authenticate_user!, :except => [:clock, :getquote] 
   before_filter :load_data, :only => :index
   before_filter :chk_notices, :only => [:index, :notice]
   respond_to :html, :xml, :js, :mobile

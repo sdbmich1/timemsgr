@@ -95,16 +95,22 @@ $(function() {
 			appendTo: "body",
 			helper: "clone"
 		});
+
+	 $(".sub-slider li").draggable({
+			appendTo: "body",
+			helper: "clone"
+		});
 		
-		$( ".sch-slider .eslide li" ).droppable({
+	 $( ".sch-slider .eslide li" ).droppable({
 			activeClass: "ui-state-default",
 			hoverClass: "ui-state-hover",
 			drop: function( event, ui ) {
 				var eid = $(ui.draggable).find(".eid").attr("data-eid");
      			var sdt = $(ui.draggable).find(".sdt").attr("data-sdt");
    				var etype = $(ui.draggable).find(".etype").attr("data-etype");
+   				var evid = $(ui.draggable).find(".evid").attr("data-evid");
     			$.ajax({
-  						url: '/scheduled_events.js?sdate=' + sdt + "&id=" + eid + '&etype=' + etype,
+  						url: '/scheduled_events.js?sdate=' + sdt + "&id=" + eid + '&etype=' + etype +'&eid=' + evid,
   						type: 'POST',
   						dataType: 'script',
   						success:  function() {  				

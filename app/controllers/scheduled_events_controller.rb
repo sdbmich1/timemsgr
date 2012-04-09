@@ -1,5 +1,5 @@
 class ScheduledEventsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create]
+  before_filter :authenticate_user!#, :except => [:create]
   include ResetDate, SetAssn
   layout :page_layout
 

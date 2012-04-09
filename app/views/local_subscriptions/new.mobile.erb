@@ -1,0 +1,11 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Select Channels'} %>
+
+<% content_for :content do %>
+	<p>Based on your information we found the following channels for you. As you add more channels, your list of schedule
+		opportunities will get better and better...</p>
+
+	<%= form_for @subscription, :url => local_subscriptions_path(@subscription) do |f| %>
+		<%= render :partial => 'mobile/subscription_list' %><br />
+		<%= f.submit "Continue >>", "data-theme"=>"b" %>
+	<% end %>
+<% end %>

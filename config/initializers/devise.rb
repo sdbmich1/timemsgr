@@ -59,7 +59,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  config.remember_for = 2.weeks
+  #config.remember_for = 2.weeks
 
   # If true, a valid remember token can be re-used between multiple browsers.
   # config.remember_across_browsers = true
@@ -126,23 +126,11 @@ Devise.setup do |config|
   # should add them to the navigational formats lists. Default is [:html]
   config.navigational_formats = [:"*/*", "*/*", :html, :mobile]
 
-  # ==> Warden configuration
-  # If you want to use other strategies, that are not (yet) supported by Devise,
-  # you can configure them inside the config.warden block. The example below
-  # allows you to setup OAuth, using http://github.com/roman/warden_oauth
-  #
-  # config.warden do |manager|
-  #   manager.oauth(:twitter) do |twitter|
-  #     twitter.consumer_secret = <YOUR CONSUMER SECRET>
-  #     twitter.consumer_key  = <YOUR CONSUMER KEY>
-  #     twitter.options :site => 'http://twitter.com'
-  #   end
-  #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
-  # end
+  # ==> OAuth configuration
   require "omniauth-facebook"
   require 'openid/store/filesystem'
   config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :require => 'omniauth-openid'
-  config.omniauth :facebook, '131627943626812', '440e7e13fcf9ccc418d727e9b2f59b79', { :client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}} }
-#  config.omniauth :facebook, '131627943626812', '440e7e13fcf9ccc418d727e9b2f59b79', { :client_options => {:ssl => {:ca_file => Rails.root.join('/lib/assets/ca-bundle.crt').to_s}} }
+#  config.omniauth :facebook, '131627943626812', '440e7e13fcf9ccc418d727e9b2f59b79', { :client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}} }
+  config.omniauth :facebook, '131627943626812', '440e7e13fcf9ccc418d727e9b2f59b79', { :client_options => {:ssl => {:ca_file => Rails.root.join('/lib/assets/ca-bundle.crt').to_s}} }
       
 end

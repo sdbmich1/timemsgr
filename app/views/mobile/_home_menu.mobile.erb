@@ -10,6 +10,7 @@
 		<li data-role="list-divider">Manage</li>
 		<li><%= link_to "My Activities", private_events_url %></li>		<li><%= link_to "My Affiliations", edit_affiliation_path(@user, {:p => "Affiliations"}) %></li>
 		<li><%= link_to "My Connections", relationships_url(:id=>@user) %> </li>
+		<li><%= link_to "My Interests", edit_interest_path(@user, {:p => "Interests"}) %> </li>
 		<li><%= link_to "My Profile", edit_user_url(@user) %> </li>
 		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
 		<li data-role="list-divider">Account</li>

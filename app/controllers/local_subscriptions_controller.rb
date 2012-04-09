@@ -10,7 +10,7 @@ class LocalSubscriptionsController < ApplicationController
   end
 
   def create
-    @subscription = @user.subscriptions.new
+#    @subscription = @user.subscriptions.new
     @user.attributes = {'subscription_ids' => []}.merge(params[:user] || {})
     unless @user.update_attributes(params[:user])
       @credits, @meters = get_credits(current_user.id), get_meter_info
@@ -21,6 +21,10 @@ class LocalSubscriptionsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? || action_name == 'new' ? "application" : "events"
+    if action_name == 'new'  
+      mobile_device? ? "form" : "application"
+    else
+      mobile_device? ? "list" : "events"
+    end
   end    
 end

@@ -4,8 +4,8 @@ class HostProfile < KitsTsdModel
 
   attr_accessible :ProfileID, :HostChannelID, :ProfileType, :EntityType, :status,
         :hide, :sortkey, :channelID, :subscriptionsourceID, :subscriptionsourceURL,
-        :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory, 
-        :Address1, :Address2, :City, :State, :PostalCode, :Phone_Home, :Phone_Work,
+        :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory, :EducationalInst, :PoliticalAffiliation1,
+        :Address1, :Address2, :City, :State, :PostalCode, :Phone_Home, :Phone_Work, :Religion, 
         :Phone_cell, :wirelessservice, :Country, :promoCode, :pictures_attributes
         
   text_regex = /^[-\w\,. _\/&@]+$/i

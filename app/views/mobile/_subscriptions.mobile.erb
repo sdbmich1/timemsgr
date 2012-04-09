@@ -1,7 +1,7 @@
 <ul data-role="listview" data-filter="true">
   <% @subscriptions.each do |sub| %>
-	<% unless sub.channel.blank? %>
-		  <%= render :partial => 'mobile/channel', :locals => {:channel => sub.channel }%>
+	<% unless sub.local_channel.blank? %>
+		  <%= render :partial => 'mobile/channel', :locals => {:channel => sub.local_channel }%>
 	<% end %>
   <% end %>
 </ul>

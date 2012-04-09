@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
   before_destroy :clear_dependents
     
   # Include default devise modules. Others available are:
-  # :token_authenticatable,  :lockable and 
-  devise :database_authenticatable, :registerable, :timeoutable, #:confirmable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  # :token_authenticatable,  :lockable and :confirmable, :rememberable,
+  devise :database_authenticatable, :registerable, :timeoutable, 
+         :recoverable, :trackable, :validatable, :omniauthable
 
   # Virtual attribute for authenticating by either username or email
   # This is in addition to a real persisted field like 'username'
@@ -99,10 +99,6 @@ class User < ActiveRecord::Base
   def dbname
     Rails.env.development? ? "`kits_development`" : "`kits_production`"
   end  
-  
-  def timeout_in
-    7.days
-  end 
      
   # set default time zone for new users
   def set_timezone
@@ -120,6 +116,7 @@ class User < ActiveRecord::Base
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token.extra.raw_info
+#    debugger
     if user = User.where(:email => data.email).first
       user
     else # Create a user with a stub password. 
@@ -127,7 +124,7 @@ class User < ActiveRecord::Base
         :username => data.username ? data.username : data.nickname, :birth_date => ResetDate.convert_date(data.birthday),
         :location_id => get_location(data.location.name.split(', ')[0]), :city => data.location.name,
         :localGMToffset => data.timezone.to_i, :gender => data.gender.capitalize, :email => data.email, 
-        :password => Devise.friendly_token[0,20])   
+        :password => Devise.friendly_token[0,20]) 
       UserInfo.oauth_user = user.get_facebook_user access_token          
       user.save(:validate => false)  
       user
@@ -143,7 +140,7 @@ class User < ActiveRecord::Base
   end
   
   def password_required?  
-    (authentications.empty? || !password.blank?) && super  
+    !password.blank? && super  
   end   
   
   def with_host_profile
@@ -226,17 +223,17 @@ class User < ActiveRecord::Base
     profile.private_events.extended_circle   
   end 
   
-  def city
+  def profile_city
     profile.City
   end
   
-  def self.add_initial_subscriptions
+  def add_initial_subscriptions
     self.interest_ids.each do |i|
       interest = Interest.find(i).name rescue nil
       
       # find correct channel based on location
-      cid = LocalChannel.select_channel(interest, user.profile.City, user.location) if interest
-      cid.map {|channel| Subscription.create(:user_id=>self.id, :channelID => channel.channelID, :contentsourceID => self.ssid) } if cid   
+      cid = LocalChannel.select_channel(interest, self.city, self.location).flatten 1 if interest
+      cid.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(:user_id=>self.id, :channelID => channel.channelID, :contentsourceID => self.ssid) } if cid   
     end        
   end 
   

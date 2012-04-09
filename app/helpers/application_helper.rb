@@ -82,4 +82,8 @@ module ApplicationHelper
     @facebook_user.blank? ? false : !@facebook_user.picture.blank?
   end  
   
+  def has_user_photo?
+    current_user.pictures
+  end
+  
 end

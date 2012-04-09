@@ -13,7 +13,7 @@ class InterestsController < ApplicationController
     if @user.update_attributes(params[:user])
       add_credits; @user.add_initial_subscriptions
     end
-    respond_with(@user, :location => new_subscription_path) 
+    respond_with(@user, :location => new_local_subscription_path) 
 	end
 	
 	def edit
@@ -23,6 +23,7 @@ class InterestsController < ApplicationController
 	end
 	
 	def update
+    @user ||= User.find(params[:id])
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {}) 
     flash[:notice] = "#{get_msg(@user, 'Interest')}" if @user.update_attributes(params[:user])
     respond_with(@user, :location => home_path) 
@@ -46,7 +47,7 @@ class InterestsController < ApplicationController
 	end
 	
 	def page_layout  
-    params[:p].blank? ? "application" : "users"  
+    mobile_device? ? 'form' : params[:p].blank? ? "application" : "users" 
   end  
 
 end

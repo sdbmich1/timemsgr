@@ -122,9 +122,8 @@ class PrivateEvent < ActiveRecord::Base
     if fb_user
       fb_user.events.each do |event|
         if event.end_time > Time.now
-          start_offset, end_offset = event.start_time.getlocal.utc_offset/3600, event.end_time.getlocal.utc_offset/3600
-           
-          new_event = PrivateEvent.find_or_initialize_by_pageextsourceID(event.identifier, :event_name => event.name )       
+          start_offset, end_offset = event.start_time.getlocal.utc_offset/3600, event.end_time.getlocal.utc_offset/3600           
+          new_event = PrivateEvent.find_or_initialize_by_pageextsourceID(event.identifier, :event_name => event.name)       
           new_event.eventstartdate = new_event.eventstarttime = event.start_time.advance(:hours=>start_offset)
           new_event.eventenddate = new_event.eventendtime = event.end_time.advance(:hours=>end_offset)
           new_event.pageextsourceID, new_event.location, new_event.cbody = event.identifier, event.location, event.description

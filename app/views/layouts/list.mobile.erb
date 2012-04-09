@@ -32,11 +32,7 @@
     </div>
     
 	<div class="app-content" data-role="content">
-	  <% if user_signed_in? %>
 		<div data-iscroll="scroller" class="scroller">
-	  <% else %>	
-	  	<div>
-	  <% end %>	
       		<%= yield :content %>
       	</div>
      </div>

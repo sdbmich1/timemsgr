@@ -1,8 +1,8 @@
 <div class="interest">
 	<% @subscriptions.each do |sub| %>		
 		<fieldset data-role="controlgroup"> 
-			<%= check_box_tag :subscription_ids, sub.id, false, :name => 'user[subscription_ids][]' -%>
-			<label for="subscription_ids"><%= get_channel_name(sub.channelID) %></label>
+			<%= check_box_tag :subscription_ids, sub.id, true, :name => 'user[subscription_ids][]' -%>
+			<label for="subscription_ids"><%= sub.channel_name %></label>
       	</fieldset> 			
 	<% end %>
 </div>

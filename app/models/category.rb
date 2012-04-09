@@ -33,7 +33,7 @@ class Category < ActiveRecord::Base
      ['Volunteer|Charity|Fundraiser|Gala|Benefit|Luncheon|Fundraising|Community|Foundation', 'Community'], 
      ['Speaker|Lecture|Discussion|Talk|Author|Panel|Book|Reading|Literature|Stories', 'Entertainment'],
      ['Screening|Film|Movie|Cinema|3D|Film noir|Drama|Documentary', 'Entertainment'], ['Science|History','Education'],
-     ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist|Lutheran', 'Religion'],
+     ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist|Congregational|Presbyterian|Quaker|Lutheran', 'Religion'],
      ['Medical|Health|Medicine|Yoga|Rehab','Health & Fitness'], ['Home|House|Real Estate|Construction|Land', 'Housing'],
      ['Book|Reading|Literature|Stories|Author|Novels|Poems|Poetry|Magazines', 'Entertainment'],['Senior|Youth|Kids|Children|Family', 'Family'],
      ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto', 'Music'],

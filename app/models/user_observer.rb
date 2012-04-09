@@ -24,6 +24,8 @@ class UserObserver < ActiveRecord::Observer
     hp.promoCode, hp.status, hp.hide = user.promo_code, 'active', 'yes' 
     hp.HostChannelID = hp.subscriptionsourceID = channelID
     hp.City, hp.State = user.city.split(', ')[0], user.city.split(', ')[1] if user.city
+#    debugger
+#    hp.EducationalInst, hp.PoliticalAffiliation1, hp.Religion = oauth_user.education, oauth_user.party, oauth_user.religion if oauth_user
     hp.save
         
     #create channel
@@ -44,13 +46,28 @@ class UserObserver < ActiveRecord::Observer
   def add_subscriptions user
     
     # load user interests from oauth api
-    oauth_user.interests.each do |interest| 
-      int = Interest.find_or_add_interest interest.name
-      UserInterest.create :user_id=>user.id, :interest_id=>int.id
+    if oauth_user
+      oauth_user.interests.each do |interest| 
+        int = Interest.find_or_add_interest interest.name
+        UserInterest.create :user_id=>user.id, :interest_id=>int.id
         
-      # find correct channel based on location
-      cid = LocalChannel.select_channel(interest.name, user.city, user.location)
-      cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+        # find correct channel based on location
+        cid = LocalChannel.select_channel(interest.name, user.city, user.location)
+        cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+      end
+      
+      # match education to channels
+      oauth_user.education.each do |ed|
+        cid = LocalChannel.select_channel ed.school.name, user.city, user.location
+        cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+      end
+
+      # match likes to channels
+      oauth_user.likes.each do |lk|
+        cid = LocalChannel.select_channel lk.name, user.city, user.location
+        cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+      end
+
     end
     
     # add subscription if promo code is valid

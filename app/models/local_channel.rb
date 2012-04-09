@@ -32,10 +32,10 @@ class LocalChannel < KitsSubModel
   end    
   
   def self.get_channel(title, loc, loc2)
-    if loc
-      where("channel_name like ? AND (localename like ? OR localename like ?)", '%' + title + '%', loc + '%', loc2 + '%')
+    if !loc.blank?
+      where("(channel_name like ? AND (localename like ? OR localename like ?)) OR (channel_name like ?)", '%' + title + '%', loc + '%', loc2 + '%', [title, loc, ''].join('%'))
     else
-      where("channel_name like ? AND localename like ?", '%' + title + '%', loc2 + '%')      
+      where("(channel_name like ? AND localename like ?) OR (channel_name like ?)", '%' + title + '%', loc2 + '%', [title, loc2, ''].join('%'))      
     end   
   end
   
@@ -97,15 +97,17 @@ class LocalChannel < KitsSubModel
      ['Speaker|Lecture|Discussion|Talk|Author|Panel|Book|Reading|Literature|Stories', 'Speaker'],
      ['Screening|Film|Movie|Cinema|3D|Documentary|Flick', 'Film'], ['Science|History','Science'],
      ['Civic|Government|Policy|Politics|Civics', 'Government'],
-     ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist', 'Church'],
+     ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist|Congregational|Presbyterian|Quaker|Lutheran', 'Church'],
      ['R&B|Hip-Hop|Soul','Hip-Hop'], ['Rock|Pop', 'Rock'], ['Medical|Health|Medicine','Health'],
-     ['Book|Reading|Literature|Stories|Author', 'Book'],['Senior', 'Senior'], ['Career|Job|Job Fair|Hiring|Employer|Employee|Employment','Job'],
+     ['Book|Reading|Literature|Stories|Author', 'Book'],['Senior', 'Senior'], 
+     ['Career|Job|Job Fair|Hiring|Employer|Employee|Employment','Job'],
+     ['Business|Conferences|Seminars|Meetings|Trade Missions', 'Business'],
      ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto|Pops', 'Classical'],
-     ['Cloud|Mobile|Technology|Software|Hardware|Server|Engineering', 'Technology'],
+     ['Cloud|Mobile|Technology|Software|Hardware|Server|Engineering|Social Media|SaaS|Enterprise|IaaS', 'Technology'],
      ['Tennis|Boxing|Cricket|Wrestling', 'Sports'],['NFL|Football','NFL'],
-     ['NBA|Basketball', 'NBA'], ['NHL|Hockey', 'NHL'], ['MLB|Baseball', 'MLB'], ['MMA|Fighting', 'MMA'], ['PGA|Golf', 'PGA'], ["Women's Golf", 'LPGA'],
+     ['NBA|Basketball', 'NBA'], ['NHL|Hockey', 'NHL'], ['MLB|Baseball', 'MLB'], ['MMA|Fighting', 'MMA'], ['PGA|Golf', 'PGA'], ["Women's Golf|LPGA|Golf", 'LPGA'],
      ["WNBA|Women's Basketball", 'WNBA'],['MLS|Soccer|World Cup', 'Soccer'],
-     ['Pro Sports', 'NFL'],['Pro Sports','NBA'],
+     ['Pro Sports', 'NFL'],['Pro Sports','NBA'], ['Pro Sports','MLB'], ['Pro Sports','NHL'],
      ['College Football|College Baseball|College Hockey|College Golf|College Tennis|College Basketball|Soccer|Softball|College Wrestling|Gymnastics|Track|Lacrosse|Water Polo|Rowing|Swimming|Fencing', 'College Sports'],
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Founder', 'Startup'], 
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Financing|Venture|VC|IPO|M&A', 'Venture'],
@@ -144,7 +146,7 @@ class LocalChannel < KitsSubModel
   end    
 
   def self.find_channel(cid)
-    includes(:pictures, {:subscriptions => [{:user=>[:pictures, {:host_profiles=>[:scheduled_events, :private_events]}]}]}).find(cid)
+    includes({:subscriptions => [{:user=>[{:host_profiles=>[:scheduled_events, :private_events]}]}]}).find(cid)
   end  
       
   define_index do

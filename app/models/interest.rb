@@ -10,7 +10,6 @@ class Interest < KitsTsdModel
 	has_many :channels, :through => :channel_interests, 
 				:conditions => { :status.downcase => 'active'}
 	
-#	has_attached_file :photo, :styles => { :small => "25x25>" }  
   has_many :events, :through => :channels
     
   scope :unhidden, where(:hide.downcase => 'no')

@@ -1,32 +1,28 @@
 module ImportEvent
   
-  def import
-    @form = "import_event"
-#   render :partial => "form"
-  end
-  
   # import events from google calendar for user
-  def gcal_import  
-    @email = params[:user][:email] # grab login parameters & authenticate
-    @pwd = params[:user][:password]
-
+  def self.gcal_import email, pwd, usr 
     gservice = GCal4Ruby::Service.new # initialize service
-    gservice.authenticate(@email, @pwd)
-    @events = GCal4Ruby::Event.find(gservice, "") # grab events
-      
-    add_import_events # add import events to db
-    redirect_to events_url  # redisplay events
+    res = gservice.authenticate(email, pwd) rescue nil
+    if res
+      @events = GCal4Ruby::Event.find(gservice, "") # grab events     
+      add_import_events usr # add import events to db
+    end
+    res
   end
   
-  def add_import_events
+  def self.add_import_events usr
     @events.each do |e|
-      if !e.title.blank? && e.start_time >= Time.now 
-        
-        @start, @end = e.start_time.strftime("%I:%M%p"), e.end_time.strftime("%I:%M%p")
-         
-        PrivateEvent.create!(:event_name => e.title, :event_type => 'ue', :eventstartdate => e.start_time, 
-          :eventstarttime => @start, :eventenddate => e.end_time, :eventendtime => @end, 
-          :location => e.where, :contentsourceID => @user.ssid)
+      if !e.title.blank? && e.start_time >= Time.now && (e.attendees[0][:name] =~ /Holidays/i).nil?    
+        start_offset, end_offset = e.start_time.getlocal.utc_offset/3600, e.end_time.getlocal.utc_offset/3600           
+        new_event = PrivateEvent.new(:event_name => e.title, :event_type => 'other', :cbody => e.content,                                      
+                                     :bbody => e.content, :location => e.where)
+        new_event.pageexttype, new_event.pageextsrc = 'Google','html'
+        new_event.contentsourceID = new_event.subscriptionsourceID = usr.ssid
+        new_event.localGMToffset = new_event.endGMToffset = usr.localGMToffset
+        new_event.eventstartdate = new_event.eventstarttime = e.start_time.advance(:hours=>start_offset)
+        new_event.eventenddate = new_event.eventendtime = e.end_time.advance(:hours=>end_offset)
+        new_event.save
       end
     end
   end

@@ -7,10 +7,9 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 
 	<%= javascript_include_tag :defaults %>
-	<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-  	
-   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
- 	<script src="http://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script> 	
  	<script src="http://cubiq.org/dropbox/iscroll/iscroll.js?v3.7.1"></script>
  
 	<%= yield :pre_mobile_load %>
@@ -19,29 +18,27 @@
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div id="app" data-role="page" data-iscroll="enable"> 
-    <div data-role="header" data-theme="b">
-      <%= yield :head %>
-      <%= yield :srch_content %>
-  </div>
+    <div id="app" data-role="page" data-iscroll="enable"> 
+      <div data-role="header" data-theme="b">
+      	<%= yield :head %>
+      	<%= yield :srch_content %>
+  	  </div>
     
-    <div id="banner_ad_top">
+      <div id="banner_ad_top">
     	<div class="center-wrapper">
     		<%= yield :ad_content %>
     	</div>
-    </div>
+      </div>
     
-	<div class="app-content" data-role="content">
+	  <div class="app-content" data-role="content">
 		<div data-iscroll="scroller" class="scroller">
       		<%= yield :content %>
       	</div>
-     </div>
+      </div>
     
-    <div id="app-footer" data-role="footer">		
-      <%= yield :footer %>
-    </div>
-   </div> 
-   </div>  
-     
+      <div id="app-footer" data-role="footer">		
+      	<%= yield :footer %>
+      </div>
+    </div>  
   </body> 
 </html>

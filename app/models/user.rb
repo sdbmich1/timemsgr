@@ -105,6 +105,10 @@ class User < ActiveRecord::Base
     loc = Location.find(self.location_id)
     self.time_zone, self.localGMToffset = loc.time_zone, loc.localGMToffset
   end
+  
+  def timeout_in
+    7.days
+  end  
 
   def clear_dependents
     self.interests.delete

@@ -10,7 +10,7 @@ a:hover {
 }
 
 a:visited {
-  color: #069;
+  text-decoration: none;
 }
 
 /* Navigation */

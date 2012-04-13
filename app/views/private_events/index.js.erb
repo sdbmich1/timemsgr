@@ -1,2 +1,3 @@
-<%= set_form_type("event_slider") %>
-$("#event_form").html("<%= escape_javascript( raw render(:partial => "event_slider") ) %>");
+$("#flash_notice").hide(300);
+$("#event_form").html("<%= escape_javascript( raw render(:partial => "shared/event_list") ) %>");
+$("#new_event").html("<%= escape_javascript( raw render(:partial => "shared/import_event") ) %>");

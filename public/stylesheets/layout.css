@@ -1,3 +1,15 @@
+html, body { height: 100%; margin: 0; }
+#landing {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto 20px;
+  padding-top: 10px;
+}
+#push {
+  height: 20px;
+}
+
 body {
      background-color:#ffffff;
 }
@@ -55,7 +67,7 @@ body {
 	height:100px;
 	}
 
-#new-event p { line-height:0.55em; }
+#new-event p { line-height:1.25em; }
 
 #new-event h2 {}
 
@@ -265,15 +277,7 @@ a.notice-btn {
   font-size: 10px; 
   margin-bottom: 0;
   margin-left: 5px;	
-}
-
-a {
-  text-decoration: none;
-  }      
-         
-a:hover {
-  text-decoration: none;
-  }
+}       
   
 .sponsor-msg {font-weight: bold;}
 
@@ -317,3 +321,6 @@ a:hover {
 .div-footer {margin-top: 20px;}
 
 .def_btn {background: #f08103}
+
+.padtop {padding-top: 20px;}
+.btn-top {margin-top: -25px;}

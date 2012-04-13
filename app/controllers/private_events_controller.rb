@@ -1,6 +1,6 @@
 class PrivateEventsController < ApplicationController
   before_filter :authenticate_user!
-  include ResetDate
+  include ResetDate, ImportEvent
   layout :page_layout
 
   def index
@@ -51,11 +51,23 @@ class PrivateEventsController < ApplicationController
   def clone  
     @event = PrivateEvent.find_event(params[:id]).clone_event
   end
+  
+  def gcal_import
+    email = params[:user][:email] # grab login parameters
+    pwd = params[:user][:password]
+
+    # import events from google calendar    
+    if ImportEvent.gcal_import(email, pwd, @user)
+      redirect_to private_events_url 
+    else
+      flash[:notice] = "Import events authentication failed.  Please re-enter your email and password." 
+    end
+  end
  
   private
   
   def page_layout 
-    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application' : "events"
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application' : "showevent"
   end    
 
 end

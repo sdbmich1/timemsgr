@@ -17,7 +17,7 @@ class ChannelsController < ApplicationController
   
   def select
     @interest = Interest.find params[:interest_id]
-    @channels = LocalChannel.select_channel(@interest.name, @location.city, @user.location)[0].paginate(:page => params[:channel_page], :per_page => 15 )
+    @channels = LocalChannel.select_channel(@interest.name, @location.city, @user.location)[0].paginate(:page => params[:page], :per_page => 15 )
 #    @channels = Channel.list_cached(params[:location], @interest, 1)
  #   @channels = LocalChannel.get_channel(@interest.name, @location.city, @user.location).paginate(:page => params[:channel_page], :per_page => 15 )
   end

@@ -18,11 +18,13 @@ module EventsHelper
   end
     
   def life_event?(etype)
-    etlist = LifeEventType.all.detect {|x| x.Code == etype }
+    lt = LifeEventType.get_type etype
+    !lt.blank?
   end
 
   def private_event?(etype)
-    PrivateEventType.all.detect {|x| x.code == etype }
+    pt = PrivateEventType.get_type etype 
+    !pt.blank?    
   end
   
   def tsd_event?(etype)

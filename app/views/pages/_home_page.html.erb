@@ -7,6 +7,7 @@
 		<%= "#{get_name_or_logo}" %> brings all your schedules together online & automatically 
 		notifies you of upcoming relevant activities saving you time and money. </span><br />	  
 	<center>
- 		<%= link_to "Sign Up!",new_user_registration_path, :class => "signup_button round" %>
+ 		<%= link_to "Sign Up!",new_user_registration_path, :class => "signup_button round" %><br />
+ 		<%= link_to image_tag("facebook-login-button-lg.png", :size => "154x22", :alt => "Facebook", :class => 'auth-provr'), user_omniauth_authorize_path(:facebook), :rel => "external"  %> 
 	</center> 
 </div>

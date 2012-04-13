@@ -1,0 +1,7 @@
+<% if flash.nil? %>
+	$("#flash_notice").hide(300);
+	$("#event_form").html("<%= escape_javascript( raw render(:partial => "shared/event_list") ) %>");
+<% else %>
+	$("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
+	$("#flash_notice").show(300);
+<% end %>

@@ -8,8 +8,7 @@
 		<% else %>
 		<% end %>
       </fieldset> 
-      <div class="dtsize">
-      <fieldset data-role="controlgroup"> 
+      <fieldset data-role="controlgroup" data-mini="true"> 
 		Allow:
      	<%= f.check_box :allowPrivCircle, {:id => "allowPriv"}, "yes", "no" %>
 		<label for="allowPriv">My Family</label>
@@ -20,7 +19,7 @@
       </fieldset>   
 
       <% if controller_name == 'life_events' %> 
-        <fieldset data-role="controlgroup"> 
+        <fieldset data-role="controlgroup" data-mini="true"> 
 			Show:
      		<%= f.check_box :ShowPrivCircle, {:id => "showPriv"}, "yes", "no" %>
 			<label for="showPriv">My Family</label>
@@ -30,5 +29,4 @@
 			<label for="showWorld">My World</label>
         </fieldset>        
       <% end %>
-      </div>
     </div> 	

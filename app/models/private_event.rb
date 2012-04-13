@@ -127,7 +127,7 @@ class PrivateEvent < ActiveRecord::Base
           new_event.eventstartdate = new_event.eventstarttime = event.start_time.advance(:hours=>start_offset)
           new_event.eventenddate = new_event.eventendtime = event.end_time.advance(:hours=>end_offset)
           new_event.pageextsourceID, new_event.location, new_event.cbody = event.identifier, event.location, event.description
-          new_event.contentsourceURL, new_event.event_type = event.endpoint, 'UE'
+          new_event.contentsourceURL, new_event.event_type = event.endpoint, 'other'
           new_event.pageexttype, new_event.pageextsrc = 'Facebook','html'
           new_event.contentsourceID = new_event.subscriptionsourceID = usr.ssid
           new_event.localGMToffset = new_event.endGMToffset = usr.localGMToffset
@@ -184,7 +184,7 @@ class PrivateEvent < ActiveRecord::Base
      paginate_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
          UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid], :page=>page) 
+         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid], :page=>page, :per_page => 25) 
   end
   
   def self.get_event_data(page, cid, sdate)
@@ -196,7 +196,7 @@ class PrivateEvent < ActiveRecord::Base
      paginate_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
          UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime DESC", cid, sdate, cid, sdate, cid, sdate], :page=>page) 
+         ORDER BY eventstartdate, eventstarttime DESC", cid, sdate, cid, sdate, cid, sdate], :page=>page, :per_page => 25) 
   end 
   
   def self.where_stmt

@@ -1,3 +1,4 @@
+<div class="chanlist"></div>
 <table>
   <tr>
     <th></th>
@@ -32,5 +33,5 @@
 	<%= hidden_field_tag 'interest_id', @interest %>
 <% end %>
 <div class="nav-right">
-  <%= will_paginate @channels, :param_name => 'channel_page' %>
+  <%= will_paginate @channels %>
 </div>

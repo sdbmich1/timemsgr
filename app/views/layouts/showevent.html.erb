@@ -2,13 +2,13 @@
 <html>
   <head>	
    		<%= stylesheet_link_tag 'custom', :media => 'screen', :cache => true %>     		
- 	  	<%= render 'shared/initialize' %>
- 	  	
+ 	  	<%= render 'shared/initialize' %>	  	
 		<%= stylesheet_link_tag 'layout', 'links','jquery.fancybox-1.3.4', :media => 'screen', :cache => true %>	
  	  	<%= yield :head %>
   </head>
   <body>
  	<div class="container landing-bg" id="landing">  
+ 		<div id="flash_notice" style="display:none" class="error"></div>
  		<div id="spinner" style="display:none"></div>
  		<%= yield :left_sidebar %>
 	  	<%= yield :content %>

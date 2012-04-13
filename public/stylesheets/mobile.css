@@ -171,7 +171,7 @@ a {
   text-decoration: none;
   }
 
-a:hover {
+a:hover, a:visited {
   text-decoration: none;
   }
   
@@ -219,6 +219,7 @@ a.notice-btn {
   font-size: 10px; 
   margin-bottom: 0;
   margin-left: 15px;	
+  text-decoration: none;
 }
 
 /* error handling */

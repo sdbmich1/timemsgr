@@ -24,7 +24,6 @@ class UserObserver < ActiveRecord::Observer
     hp.promoCode, hp.status, hp.hide = user.promo_code, 'active', 'yes' 
     hp.HostChannelID = hp.subscriptionsourceID = channelID
     hp.City, hp.State = user.city.split(', ')[0], user.city.split(', ')[1] if user.city
-#    debugger
 #    hp.EducationalInst, hp.PoliticalAffiliation1, hp.Religion = oauth_user.education, oauth_user.party, oauth_user.religion if oauth_user
     hp.save
         

@@ -27,6 +27,7 @@ $(function() {
 function reset_slider () {
 	event_slider();
 	resizeFrame();
+	window.reset_slider=reset_slider;
 }
 
 function reset_css () {

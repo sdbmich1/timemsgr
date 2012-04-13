@@ -66,7 +66,7 @@ class LocalChannel < KitsSubModel
   end
   
   def summary
-    bbody.blank? ? '' : bbody[0..80] 
+    bbody.blank? ? '' : bbody[0..95] + '...'
   end
   
   def ssid

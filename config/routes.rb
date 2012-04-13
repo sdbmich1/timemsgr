@@ -93,8 +93,8 @@ Timemsgr::Application.routes.draw do
   match '/list', :to =>  "categories#list"
     
   # route custom event actions
-  match '/outlook', :to => 'events#outlook', :as => "outlook"
-  match '/gcal_import', :to => 'events#gcal_import', :as => "gcal_import"
+  match '/outlook', :to => 'private_events#outlook', :as => "outlook"
+  match '/gcal_import', :to => 'private_events#gcal_import', :as => "gcal_import"
   match '/system/photos/:id/:style/:basename.:extension', :to => 'pictures#asset'
 
   # add route for dynamically changing event types

@@ -29,7 +29,7 @@ function toggleLoading () {
 
 // add spinner to ajax events
 $(function (){ 
-  $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
+  $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .bind("ajax:beforeSend",  toggleLoading)
     .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
@@ -163,7 +163,7 @@ $(function (){
 
      	// grab the selected location
      	var loc = $(this).val().toLowerCase();
-     	
+
      	// check if interest is selected to call appropriate script
      	if ( $('#interest_id').length != 0 )
      	{
@@ -172,7 +172,17 @@ $(function (){
      	}
      	else
      	{
-     		var url = '/categories.js?location=' + loc;
+ 			// check which dom is current to call appropriate url
+ 			if ( $('.chanlist').length != 0 )
+ 				{
+ 					var url = '/categories.js?location=' + loc;
+ 					var Slider = false;
+ 				}
+ 			else
+ 				{
+ 					var url = '/events.js?location=' + loc;
+ 					var Slider = true;
+ 				}    		
      	}
      	
 		$.ajax({
@@ -184,7 +194,13 @@ $(function (){
   			'complete':  function() {  				
   				toggleLoading();
     		},
-  			'success': function() {}  
+  			'success': function() {
+  				if (Slider)
+  					{ 
+  					toggleLoading();	
+  					reset_slider();
+  						}
+  			}  
 		});
 		return false;       
   })

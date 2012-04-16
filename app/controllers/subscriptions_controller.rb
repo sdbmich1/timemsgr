@@ -20,7 +20,7 @@ class SubscriptionsController < ApplicationController
     @channel = LocalChannel.find_by_channelID(params[:channel_id])
     @subscription = Subscription.unsubscribe(params[:user_id], params[:channel_id])
     if @subscription.save
-      redirect_to :back 
+      redirect_to :back, :notice => 'Successfully unsubscribed from channel ' + @channel.channel_name 
     else
       respond_to do |format|
         format.html { redirect_to categories_url } 

@@ -17,8 +17,8 @@ class SubscriptionsController < ApplicationController
   end
   
   def update
-    @channel = LocalChannel.find(params[:channel_id])
-    @subscription = Subscription.unsubscribe(params[:user_id], @channel.channelID)
+    @channel = LocalChannel.find_by_channelID(params[:channel_id])
+    @subscription = Subscription.unsubscribe(params[:user_id], params[:channel_id])
     if @subscription.save
       redirect_to :back 
     else

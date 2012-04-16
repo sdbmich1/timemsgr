@@ -3,7 +3,7 @@ class SubscriptionsController < ApplicationController
   layout :page_layout
   
   def create
-    @channel = LocalChannel.find(params[:channel_id])
+    @channel = LocalChannel.find_by_channelID(params[:channel_id])
     @user ||= User.find(params[:user_id])
     @subscription = Subscription.new_member(@user, @channel)
     if @subscription.save

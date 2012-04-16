@@ -13,7 +13,7 @@ class PrivateEvent < ActiveRecord::Base
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
-        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
   validates :event_type, :presence => true
   validates_date :eventstartdate, :presence => true #, :on_or_after => :today 
   validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
@@ -49,7 +49,11 @@ class PrivateEvent < ActiveRecord::Base
 	
 	scope :active, where(:status.downcase => 'active')
 	scope :unhidden, where(:hide.downcase => 'no')
-	
+
+  def inactive?
+    status == 'inactive'
+  end	
+
 	def ssid
     subscriptionsourceID
   end
@@ -136,14 +140,14 @@ class PrivateEvent < ActiveRecord::Base
       end
     end 
   end
-        
-  protected
   
   def clone_event
     new_event = self.clone
     new_event.eventstartdate = new_event.eventenddate = Date.today
     new_event
-  end
+  end  
+      
+  protected
    
   def reset_attr
     self.eventstartdate=self.eventenddate = nil
@@ -228,8 +232,8 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   def self.set_status(eid)
-    event = PrivateEvent.find(eid)
-    event.status = 'inactive'
+    event = PrivateEvent.find_event(eid)
+    event.status = 'inactive' if event
     event
   end
        

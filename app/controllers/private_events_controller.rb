@@ -5,7 +5,7 @@ class PrivateEventsController < ApplicationController
 
   def index
     @start_date = params[:sdate]
-    mobile_device? ? @events = PrivateEvent.get_events(@user.ssid) : @events = PrivateEvent.get_event_data(params[:page], @user.ssid, @start_date )
+    @events = mobile_device? ? PrivateEvent.get_events(@user.ssid) : PrivateEvent.get_event_data(params[:page], @user.ssid, @start_date )
   end
 
   def show
@@ -26,7 +26,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def edit
-    @event = PrivateEvent.find(params[:id])
+    @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]) : PrivateEvent.find(params[:id])
   end
 
   def update
@@ -39,35 +39,36 @@ class PrivateEventsController < ApplicationController
   end
 
   def destroy
-    @event = PrivateEvent.set_status(params[:id])
-    @event.save ? flash[:notice] = "Removed event from schedule." : flash[:notice] = "Unable to remove event from schedule."
+    @user ||= current_user
+    @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]) : PrivateEvent.find(params[:id])
+    @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
-      format.html { redirect_to(events_url) } 
-      format.mobile { redirect_to(events_url) }
-      format.js {@events = PrivateEvent.get_event_data(params[:page], current_user.ssid, params[:sdate])}
+      format.html { redirect_to events_url } 
+      format.mobile { redirect_to events_url }
+      format.js {@events = PrivateEvent.get_event_data(params[:current_page], @user.ssid, params[:sdate])}
     end      
   end
     
-  def clone  
-    @event = PrivateEvent.find_event(params[:id]).clone_event
+  def clone 
+    @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]).clone_event : PrivateEvent.find(params[:id]).clone_event 
   end
   
   def gcal_import
-    email = params[:user][:email] # grab login parameters
-    pwd = params[:user][:password]
+    email, pwd = params[:user][:email], params[:user][:password] # grab login parameters
 
     # import events from google calendar    
     if ImportEvent.gcal_import(email, pwd, @user)
       redirect_to private_events_url 
+      flash[:notice] = "Your google calendar events have been successfully imported." 
     else
-      flash[:notice] = "Import events authentication failed.  Please re-enter your email and password." 
+      flash[:error] = "Import events authentication failed.  Please re-enter your email and password." 
     end
   end
  
   private
   
   def page_layout 
-    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application' : "showevent"
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'list' : "showevent"
   end    
 
 end

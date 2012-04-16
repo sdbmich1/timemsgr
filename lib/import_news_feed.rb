@@ -7,7 +7,7 @@ class ImportNewsFeed
   # add event to system
   def add_event(doc, n, *args)
     p 'Add event ' + args[1][0..199]
-    CalendarEvent.find_or_create_by_pageextsourceID(:pageextsourceID => doc.xpath("//item//id")[n].text, 
+    new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(:pageextsourceID => doc.xpath("//item//id")[n].text, 
         :event_type => 'ce', :event_title => args[1][0..199],
         :cbody => doc.xpath("//item//description")[n].text + ' ' + doc.xpath("//item//phone")[n].text,
         :postdate => DateTime.parse(doc.xpath("//item//pubDate")[n].text),
@@ -20,9 +20,10 @@ class ImportNewsFeed
         :mapstate => doc.xpath("//item//xCal:adr//xCal:x-calconnect-region")[n].text[0..24],
         :mapzip => doc.xpath("//item//xCal:adr//xCal:x-calconnect-postalcode")[n].text,
         :mapcountry => doc.xpath("//item//xCal:adr//xCal:x-calconnect-country")[n].text,
-        :imagelink => doc.xpath("//item//images//url")[n].text,
         :contentsourceID => args[4], :localGMToffset => args[6], :endGMToffset => args[6],
-        :subscriptionsourceID => args[4])
+        :subscriptionsourceID => args[4]) 
+    new_event.imagelink = doc.xpath("//item//images//url")[n].text rescue nil
+    new_event.save(false)
   end  
   
   # parse xml feeds from given url
@@ -44,14 +45,18 @@ class ImportNewsFeed
       # get county based on coordinates
       lat = doc.xpath("//item//geo:lat")[n].text
       lng = doc.xpath("//item//geo:long")[n].text
-      county = Schedule.chk_geocode(lat, lng)
-            
-      # find correct channel and location
-      cid = LocalChannel.select_channel(etitle, county, locale).flatten 1
-      cid.map {|channel| p "Channel: #{channel.channelID}" }
+      county = Schedule.chk_geocode(lat, lng) rescue nil
+        
+      # add only current events      
+      if sdt >= Date.today
+        
+        # find correct channel and location
+        cid = LocalChannel.select_channel(etitle, county, locale).flatten 1
+#      cid.map {|channel| p "Channel: #{channel.channelID}" }
 
-      # add event to calendar
-      cid.map {|channel| add_event(doc, n, sid, etitle[0..199], sdt, enddt, channel.channelID, url, offset)} if cid
+        # add event to calendar
+        cid.map {|channel| add_event(doc, n, sid, etitle[0..199], sdt, enddt, channel.channelID, url, offset)} if cid
+      end
     end     
   end
   

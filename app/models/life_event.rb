@@ -19,7 +19,7 @@ class LifeEvent < ActiveRecord::Base
         :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
   
   validates :event_name, :presence => true, :length => { :maximum => 100 },
-        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
   validates :event_type, :presence => true
   validates_date :eventstartdate, :presence => true, :on_or_after => :today 
   validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
@@ -40,6 +40,11 @@ class LifeEvent < ActiveRecord::Base
   def same_day?
     eventstartdate == eventenddate
   end
+  
+  def inactive?
+    status == 'inactive'
+  end
+  
   
   def ssid
     subscriptionsourceID

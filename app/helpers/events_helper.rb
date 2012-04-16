@@ -28,7 +28,7 @@ module EventsHelper
   end
   
   def tsd_event?(etype)
-    TsdEventType.active.detect {|x| x.code == etype }
+    TsdEventType.active.detect {|x| x.code == etype.downcase }
   end
   
   def trkr_event?(uid)
@@ -325,13 +325,8 @@ module EventsHelper
         dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
       end
     else
-      start_dt.blank? ? @date_s = "#{end_dt.strftime("%A, %B %e, %Y")}" : @date_s = "#{start_dt.strftime("%D")} - #{end_dt.strftime("%D")}" 
+     @date_s = start_dt.blank? ? "#{end_dt.strftime("%A, %B %e, %Y")}" : "#{start_dt.strftime("%D")} - #{end_dt.strftime("%D")}" 
     end     
-	end
-	
-	# set blank user photo based on gender
-	def showphoto(gender)	  	  
-	  gender == "Male" ? @photo = "headshot_male.jpg" : @photo = "headshot_female.jpg"
 	end
 	
   def set_header(form)

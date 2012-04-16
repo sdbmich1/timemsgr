@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
   before_destroy :clear_dependents
     
   # Include default devise modules. Others available are:
-  # :token_authenticatable,  :lockable and :confirmable, :rememberable,
-  devise :database_authenticatable, :registerable, :timeoutable, 
+  #   :lockable and :confirmable, :rememberable,
+  devise :database_authenticatable, :registerable, :timeoutable, :token_authenticatable,
          :recoverable, :trackable, :validatable, :omniauthable
 
   # Virtual attribute for authenticating by either username or email
@@ -104,10 +104,6 @@ class User < ActiveRecord::Base
   def set_timezone
     loc = Location.find(self.location_id)
     self.time_zone, self.localGMToffset = loc.time_zone, loc.localGMToffset
-  end
-  
-  def timeout_in
-    7.days
   end  
 
   def clear_dependents

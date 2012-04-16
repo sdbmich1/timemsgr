@@ -30,9 +30,18 @@ function toggleLoading () {
 // add spinner to ajax events
 $(function (){ 
   $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
-    .bind("ajax:beforeSend",  toggleLoading)
+    .bind("ajax:beforeSend", toggleLoading)
     .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
+      $("#response").html(data);
+    });
+}); 
+
+$(function() {
+	$("#schedule_btn, #subscribe_btn").click(function() {
+    $.bind("ajax:beforeSend", toggleLoading)
+     .bind("ajax:complete", toggleLoading)
+     .bind("ajax:success", function(event, data, status, xhr) {
       $("#response").html(data);
     });
 }); 

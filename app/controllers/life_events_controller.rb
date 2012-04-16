@@ -22,7 +22,7 @@ class LifeEventsController < ApplicationController
   end
 
   def edit
-    @event = LifeEvent.find(params[:id])
+    @event = params[:eid] ? LifeEvent.find_by_eventid(params[:eid]) : LifeEvent.find(params[:id])
     @picture = set_associations(@event.pictures, 1)
   end
 
@@ -36,17 +36,18 @@ class LifeEventsController < ApplicationController
   end
 
   def destroy
-    @event = LifeEvent.set_status(params[:id])
-    @event.save ? flash[:notice] = "Removed event from schedule." : flash[:notice] = "Unable to remove event from schedule."
+    @user ||= current_user
+    @event = params[:eid] ? LifeEvent.find_by_eventid(params[:eid]) : LifeEvent.find(params[:id])
+    @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
       format.html { redirect_to(events_url) } 
       format.mobile { redirect_to(events_url) }
-      format.js {@events = PrivateEvent.get_event_data(params[:page], current_user.ssid, params[:sdate])}
+      format.js {@events = PrivateEvent.get_event_data(params[:page], @user.ssid, params[:sdate])}
     end  
   end
     
   def clone  
-    @event = LifeEvent.find(params[:id]).clone_event
+    @event = params[:eid] ? LifeEvent.find_by_eventid(params[:eid]).clone_event : LifeEvent.find(params[:id]).clone_event
   end
   
   private

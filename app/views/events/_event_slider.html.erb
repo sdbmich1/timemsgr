@@ -1,3 +1,6 @@
+<div class="span-21 last prepend-5" id="flash_notice">
+	<div id="event_errors" style="display:none" class="error"></div>
+</div>
 <% if observances? %>
 	<div class="span-22 last prepend-4">
 	<%= render :partial => 'shared/oblist', :collection => get_events("Observances"), :as => :event %>

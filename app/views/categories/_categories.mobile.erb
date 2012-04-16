@@ -1,6 +1,8 @@
-<ul data-role="listview">
-  <% @categories.each do |category| %>
-	<li><%= link_to category.name, interests_url(:category_id => category) %></li>
-  <% end %>
-</ul>
-	
+<div data-role="collapsible">
+	<h3><%= getlogo(category.photo_file_name) %><%= "#{category.name.titleize}" %></h3>
+	<ul data-role="listview">
+	  <% category.interests.each do |interest| %>		
+		<li><%= link_to interest.name, select_url(:interest_id => interest), :remote=>true %></li>
+	  <% end %>
+	</ul>	
+</div>

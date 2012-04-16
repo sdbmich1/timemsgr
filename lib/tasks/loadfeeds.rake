@@ -6,10 +6,10 @@ require 'json'
 namespace :loader do
   desc "Load database with data from 3rd party data feeds"
   task :process_news_feeds => :environment do  
-    p 'Loading SF Chronicle Feed'  
+    p 'Loading SF Chronicle Feed...'  
     load_news_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
-#    p 'Loading SJ Mercury News Feed'  
-#    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Francisco', -8
+    p 'Loading SJ Mercury News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Francisco', -8
   end 
   
   desc "Load database with data from Stanford feeds"

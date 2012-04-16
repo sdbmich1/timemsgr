@@ -136,8 +136,20 @@ class Event < KitsTsdModel
     mapplacename.blank? ? '' : mapplacename
   end
   
+  def get_zip
+    mapzip.blank? ? '' : mapzip
+  end
+  
+  def get_city
+    mapcity.blank? ? '' : mapcity
+  end
+  
+  def get_state
+    mapstate.blank? ? '' : mapstate
+  end
+  
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+    [[get_city, get_state].join(', '), get_zip].join(' ')
   end
   
   def location_details

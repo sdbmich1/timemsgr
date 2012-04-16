@@ -7,7 +7,7 @@ class SubscriptionsController < ApplicationController
     @user ||= User.find(params[:user_id])
     @subscription = Subscription.new_member(@user, @channel)
     if @subscription.save
-      redirect_to events_url, :notice => "#{get_msg(@user, 'Subscription')}" 
+      redirect_to :back, :notice => "#{get_msg(@user, 'Subscription')}" 
     else
       respond_to do |format|
         format.html { redirect_to(categories_url) } 
@@ -20,7 +20,7 @@ class SubscriptionsController < ApplicationController
     @channel = LocalChannel.find(params[:channel_id])
     @subscription = Subscription.unsubscribe(params[:user_id], @channel.channelID)
     if @subscription.save
-      redirect_to events_url 
+      redirect_to :back 
     else
       respond_to do |format|
         format.html { redirect_to categories_url } 

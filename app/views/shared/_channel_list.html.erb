@@ -22,7 +22,7 @@
 	  	<% if subscribed?(channel.channelID)%>
 			<%= link_to "Unsubscribe", subscription_url(:id=>get_subscription(channel.subscriptions, channel.channelID), :user_id=>@user, :channel_id =>channel), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %>
 	  	<% else %>
-			<%= link_to "Subscribe", subscriptions_url(:user_id=>@user, :channel_id => channel), :id=>'subscribe_btn', :method=>:post %>
+			<%= link_to "Subscribe", subscriptions_url(:user_id=>@user, :channel_id => channel), :id=>'subscribe_btn', :method=>:post, :remote=>true %>
 	  	<% end %>
 	  </td>
      </tr>

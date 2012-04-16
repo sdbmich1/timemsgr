@@ -3,7 +3,7 @@ class NotificationsController < ApplicationController
   layout :page_layout
 
   def create
-    @event = Event.find_event(params[:id], params[:etype], params[:sdate])
+    @event = Event.find_event params[:id], params[:etype], params[:eid], params[:sdt]
     @notification = Notification.new(params[:notification])
     @notification.save ? flash[:notice] = "Notification request sent." : flash[:notice] = "Unable to send notification request."
     respond_to do |format|
@@ -13,7 +13,7 @@ class NotificationsController < ApplicationController
   
   def new
     @notification = Notification.new
-    @event = Event.find_event(params[:id], params[:etype], params[:sdate])
+    @event = Event.find_event params[:id], params[:etype], params[:eid], params[:sdt]
   end
   
   private

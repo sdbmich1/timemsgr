@@ -85,5 +85,10 @@ module ApplicationHelper
   def has_user_photo?
     current_user.pictures
   end
-  
+
+  # set blank user photo based on gender
+  def showphoto(gender)       
+    @photo = gender == "Male" ? "headshot_male.jpg" : "headshot_female.jpg"
+  end
+    
 end

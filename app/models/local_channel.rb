@@ -69,6 +69,10 @@ class LocalChannel < KitsSubModel
     bbody.blank? ? '' : bbody[0..95] + '...'
   end
   
+  def current_events
+    calendar_events.select {|e| e.eventstartdate >= Date.today}
+  end
+  
   def ssid
     subscriptionsourceID
   end

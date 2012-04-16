@@ -18,7 +18,7 @@ class ScheduledEvent < ActiveRecord::Base
         :Other3Title, :Other4Title, :Other5Title, :Other6Title
         
   validates :event_name, :presence => true, :length => { :maximum => 255 },
-        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
   validates :event_type, :presence => true
   validates_date :eventstartdate, :presence => true, :allow_blank => false #, :on_or_after => :today 
   validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
@@ -27,13 +27,13 @@ class ScheduledEvent < ActiveRecord::Base
 				        
   belongs_to :host_profile, :foreign_key => :subscriptionsourceID, :primary_key => :contentsourceID
  
-  has_many :session_relationships, :dependent => :destroy
+  has_many :session_relationships, :primary_key => :ID, :foreign_key=>:event_id, :dependent => :destroy
   has_many :sessions, :through => :session_relationships, :dependent => :destroy
 
   has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid, :dependent => :destroy
   has_many :presenters, :through => :event_presenters, :dependent => :destroy
  
-  has_many :sponsor_pages, :dependent => :destroy
+  has_many :sponsor_pages, :primary_key => :ID, :foreign_key=>:event_id, :dependent => :destroy
  
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
@@ -45,7 +45,15 @@ class ScheduledEvent < ActiveRecord::Base
   
   def self.upcoming(start_dt, end_dt)
     active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)
+  end  
+  
+  def self.dbname
+    Rails.env.development? ? "`kits_development`" : "`kits_production`"
   end   
+  
+  def inactive?
+    status == 'inactive'
+  end
   
   def ssid
     subscriptionsourceID
@@ -97,10 +105,8 @@ class ScheduledEvent < ActiveRecord::Base
   
   def self.add_event(eid, etype, ssid, evid, sdt)
     selected_event = Event.find_event(eid, etype, evid, sdt)
-    new_event = ScheduledEvent.new(selected_event.attributes)
-    
+    new_event = ScheduledEvent.new(selected_event.attributes)    
     new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil 
-#    new_event.eventenddate = new_event.eventstartdate unless new_event.event_type == 'cnf'
 
     # reset event type
     [['ue','other'],['cnf','conf'],['prf','perform'],['fst','fest'],['tmnt','tourn'],['cnv','conv'],['mtg','meeting'], 
@@ -128,17 +134,17 @@ class ScheduledEvent < ActiveRecord::Base
    def self.current(edt, cid)
      edt.blank? ? edt = Date.today+14.days : edt  
      where_cid = where_dt + " and (contentsourceID = ?)"    
-     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, edt, edt, cid]) 
    end
    
    def self.get_events(cid)
      where_cid = " WHERE (contentsourceID = ?)"    
-     find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_cid} ) 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_cid} )
-         UNION #{getSQL} FROM `kits_development`.events #{where_cid} )
+     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime ASC", cid, cid, cid]) 
    end
 
@@ -163,14 +169,14 @@ class ScheduledEvent < ActiveRecord::Base
   
   def self.get_event(eid)
     where_id = "where (ID = ?))"
-    find_by_sql(["#{getSQL} FROM `kits_development`.eventspriv #{where_id} 
-         UNION #{getSQL} FROM `kits_development`.eventsobs #{where_id}       
-         UNION #{getSQL} FROM `kits_development`.events #{where_id}", eid, eid, eid])        
+    find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id}       
+         UNION #{getSQL} FROM #{dbname}.events #{where_id}", eid, eid, eid])        
   end
   
   def self.set_status(eid)
-    event = ScheduledEvent.find(eid)
-    event.status = 'inactive'
+    event = ScheduledEvent.find_by_eventid(eid)
+    event.status = 'inactive' if event
     event
   end
   

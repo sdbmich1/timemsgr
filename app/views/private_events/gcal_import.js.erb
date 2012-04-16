@@ -1,7 +1,14 @@
 <% if flash.nil? %>
 	$("#flash_notice").hide(300);
-	$("#event_form").html("<%= escape_javascript( raw render(:partial => "shared/event_list") ) %>");
+	$("#flash_error").hide(300);
 <% else %>
-	$("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
-	$("#flash_notice").show(300);
+	<% if !flash[:notice].nil? %>
+		$("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
+		$("#flash_notice").show(300);
+		$("#import").html("<%= escape_javascript( raw render('shared/show_import_event') ) %>");
+		$("#event_form").html("<%= escape_javascript( raw render(:partial => "shared/event_list") ) %>");
+	<% elsif !flash[:error].nil? %>
+		$("#flash_error").html("<%= escape_javascript(flash[:error])%>");
+		$("#flash_error").show(300);
+	<% end %>
 <% end %>

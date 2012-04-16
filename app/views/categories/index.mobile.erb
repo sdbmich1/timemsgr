@@ -7,7 +7,9 @@
 <% content_for :content do %>
   <div id="wrapper">
 	<div id="scroller">
-		<%= render 'categories' %>
+		<div data-role="collapsible-set">	
+			<%= render :partial => 'categories', :as => :category, :collection => @categories %>
+		</div>
 	</div>
   </div>
 <% end %>

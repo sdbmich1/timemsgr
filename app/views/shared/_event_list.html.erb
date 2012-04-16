@@ -1,8 +1,4 @@
-  <div id="flash_notice" style="display:none" class="error"></div>
   <%= render 'shared/show_import_event' %>
-  <div class="rpos">	
-	<span class="timeframe"><%= link_to "Import Events", "#modal", :id => "modalGroup" %></span>
-  </div>
   <table>
   <tr>
     <th>Event Name</th>
@@ -24,21 +20,21 @@
       <td><%= chk_offset(event.eventstarttime, event.localGMToffset, event.eventid) %></td>
       <td><%= chk_offset(event.eventendtime, event.endGMToffset, event.eventid) %></td>
       <% if life_event?(event.event_type) %>
-    	<td><%= link_to "Edit", edit_life_event_url(event) %></td>
-      	<td><%= link_to "Clone", clone_life_event_path(event), :confirm => 'Clone this event?' %></td>
-      	<td><%= link_to "Remove", life_event_url(event, :sdate=>@start_date), :confirm => 'Remove this event?', :id=>'remove_btn', :method => :delete, :remote=>true %></td>
-  	  <% elsif private_event?(event.event_type) %>  
-    	<td><%= link_to "Edit", edit_private_event_path(event) %></td>
-      	<td><%= link_to "Clone", clone_private_event_path(event), :confirm => 'Clone this event?' %></td>
-      	<td><%= link_to "Remove", private_event_url(event, :sdate=>@start_date), :confirm => 'Remove this event?', :id=>'remove_btn', :method => :delete, :remote=>true %></td>
+    	<td><%= link_to "Edit", edit_life_event_url(event, :eid=>event.eventid) %></td>
+      	<td><%= link_to "Clone", clone_life_event_path(event, :eid=>event.eventid), :confirm => 'Clone this event?' %></td>
+      	<td><%= link_to "Remove", life_event_url(event, :eid=>event.eventid, :sdate=>@start_date), :confirm => 'Remove this event?', :id=>'remove_btn', :method => :delete, :remote=>true %></td>
+  	  <% elsif private_event?(event.event_type) && !tsd_event?(event.eventid[0..1]) %>  
+    	<td><%= link_to "Edit", edit_private_event_path(event, :eid=>event.eventid) %></td>
+      	<td><%= link_to "Clone", clone_private_event_path(event, :eid=>event.eventid), :confirm => 'Clone this event?' %></td>
+      	<td><%= link_to "Remove", private_event_url(event, :eid=>event.eventid, :sdate=>@start_date), :confirm => 'Remove this event?', :id=>'remove_btn', :method => :delete, :remote=>true %></td>
 	  <% else %>
    		<td></td>
       	<td></td>
-      	<td><%= link_to "Remove", scheduled_event_url(event, :sdate=>@start_date), :confirm => 'Remove this event?', :id=>'remove_btn', :method => :delete, :remote=>true %></td>	  	
+      	<td><%= link_to "Remove", scheduled_event_url(event, :eid=>event.eventid, :sdate=>@start_date), :confirm => 'Remove this event?', :id=>'remove_btn', :method => :delete, :remote=>true %></td>	  	
       <% end %>
     </tr>
   <% end %>
 </table>
 <div class="nav-right">
-  <%= will_paginate @events %>
+  <%= will_paginate @events, :params => { :controller => "private_events"} %>
 </div>

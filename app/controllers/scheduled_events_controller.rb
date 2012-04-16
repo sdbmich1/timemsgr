@@ -4,8 +4,9 @@ class ScheduledEventsController < ApplicationController
   layout :page_layout
 
   def create
-    @event = ScheduledEvent.add_event(params[:id],params[:etype], @user.ssid, params[:eid], params[:sdate] )
-    @event.save ? flash[:notice] = "Added event to schedule." : flash[:notice] = "Unable to add event to schedule."
+    @user ||= current_user
+    @event = ScheduledEvent.add_event params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate]
+    @event.save ? flash[:notice] = "Added event to schedule." : flash[:error] = "Unable to add event to schedule."
     redirect_to events_url
   end
   
@@ -24,13 +25,14 @@ class ScheduledEventsController < ApplicationController
   end
 
   def destroy
-    @event = ScheduledEvent.set_status(params[:id])
-    @event.save ? flash[:notice] = "Removed event from schedule." : flash[:notice] = "Unable to remove event from schedule."
+    @user ||= current_user
+    @event = params[:eid] ? ScheduledEvent.find_by_eventid(params[:eid]) : ScheduledEvent.find(params[:id])
+    @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
-      format.html { redirect_to(events_url) } 
-      format.mobile { redirect_to(events_url) }
-      format.js {@events = PrivateEvent.get_event_data(params[:page], current_user.ssid, params[:sdate])}
-    end   
+      format.html { redirect_to events_url } 
+      format.mobile { redirect_to events_url }
+      format.js {@events = PrivateEvent.get_event_data(params[:current_page], @user.ssid, params[:sdate])}
+    end    
   end
     
   def clone  

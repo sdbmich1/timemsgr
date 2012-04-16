@@ -29,8 +29,8 @@ class Subscription < KitsTsdModel
   end
   
   def self.unsubscribe(uid, cid)
-    subscription = Subscription.find_by_user_id_and_channelID(uid, cid)
-    subscription.status = 'inactive'
+    subscription = Subscription.find_by_user_id_and_channelID(uid, cid) rescue nil
+    subscription.status = 'inactive' if subscription
     subscription
   end
   

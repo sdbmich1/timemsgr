@@ -37,15 +37,6 @@ $(function (){
     });
 }); 
 
-$(function() {
-	$("#schedule_btn, #subscribe_btn").click(function() {
-    $.bind("ajax:beforeSend", toggleLoading)
-     .bind("ajax:complete", toggleLoading)
-     .bind("ajax:success", function(event, data, status, xhr) {
-      $("#response").html(data);
-    });
-}); 
-
 $(function (){ 
 
   // add date picker code and synch start & end dates

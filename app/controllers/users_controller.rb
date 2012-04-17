@@ -6,11 +6,7 @@ class UsersController < ApplicationController
   include SetAssn
   
   def home
-    if @user.sign_in_count <= 1 # check for new users
-      redirect_to new_interest_path, :notice => "#{get_msg(@user,'Welcome')}" unless mobile_device?
-    else
-      redirect_to events_path unless mobile_device?
-    end 
+    redirect_to events_path unless mobile_device?
   end
  
   def edit   

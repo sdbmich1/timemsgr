@@ -9,13 +9,13 @@ namespace :loader do
     p 'Loading SF Chronicle Feed...'  
     load_news_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
     p 'Loading SJ Mercury News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Francisco', -8
+    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Jose', -8
     p 'Loading Atlanta News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/AtlantaJournalConstitutionFeed020612.txt', 'San Francisco', -5
+    load_news_feeds RAILS_ROOT + '/lib/feeds/AtlantaJournalConstitutionFeed020612.txt', 'Atlanta', -5
     p 'Loading Denver Post News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'San Francisco', -7
+    load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'Denver', -7
     p 'Loading OC Register News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'San Francisco', -8
+    load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'Orange County', -8
   end 
   
   desc "Load database with data from Stanford feeds"

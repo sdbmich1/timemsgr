@@ -1,10 +1,15 @@
-<% for pic in model.pictures %>
+  <% for pic in model.pictures %>
 	<% if pic %>
    		<%= image_tag pic.photo.url, :class => vtype %>
    	<% end %>		
-<% end %>
-<% if has_facebook_photo? && controller_name == 'users' %>
-   	<%= image_tag @facebook_user.picture, :size => psize %>   
-<% elsif model.try(:pictures).blank? %>
+  <% end %>
+  <% if has_facebook_photo? && model.pictures.blank? %>
+  	<% if controller_name == 'users' %>
+   		<%= image_tag @facebook_user.picture, :size => psize %> 
+   	<% else %>
+   		<%= image_tag file_name, :alt => "none", :size => psize %>
+   	<% end %> 
+   	
+  <% elsif model.try(:pictures).blank? %>
     <%= image_tag file_name, :alt => "none", :size => psize %>
-<% end %>
+  <% end %>

@@ -6,7 +6,7 @@ class ImportNewsFeed
   
   # add event to system
   def add_event(doc, n, *args)
-    p 'Add event ' + args[1][0..199]
+#    p 'Add event ' + args[1][0..199]
     new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(:pageextsourceID => doc.xpath("//item//id")[n].text, 
         :event_type => 'ce', :event_title => args[1][0..199],
         :cbody => doc.xpath("//item//description")[n].text + ' ' + doc.xpath("//item//phone")[n].text,

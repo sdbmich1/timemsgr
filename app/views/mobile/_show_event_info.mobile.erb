@@ -2,5 +2,5 @@
 	<ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Description</li>
 	</ul>
-	<p class="item-descr"><%= auto_link(model.cbody.gsub("\\n","<br />")).html_safe %></p>
+	<p class="item-descr"><%= model.details %></p>
 <% end %>

@@ -10,6 +10,12 @@ namespace :loader do
     load_news_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
     p 'Loading SJ Mercury News Feed...'  
     load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Francisco', -8
+    p 'Loading Atlanta News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/AtlantaJournalConstitutionFeed020612.txt', 'San Francisco', -5
+    p 'Loading Denver Post News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'San Francisco', -7
+    p 'Loading OC Register News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'San Francisco', -8
   end 
   
   desc "Load database with data from Stanford feeds"

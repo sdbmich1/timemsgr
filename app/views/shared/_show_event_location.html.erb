@@ -14,5 +14,5 @@
 <% end %>
 <% if !event.cbody.blank? %>
 	<div class="span-2"><%= 'Details:' %></div>
-	<div class="span-18 last"><%= event.details %></div><br />
+	<div class="span-18 last"><%= auto_link(event.cbody.gsub("\\n","<br />")).html_safe %></div><br />
 <% end %>

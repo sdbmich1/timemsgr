@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   def load_settings
     if signed_in?
       @user ||= current_user
-      @location = Location.find_location params[:location] || current_user.location_id
+      @location ||= Location.find_location params[:location] || current_user.location_id
       @facebook_user = @user.get_facebook_user session[:omniauth] if session[:omniauth]
     end
   end

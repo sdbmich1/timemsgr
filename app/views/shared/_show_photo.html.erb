@@ -3,7 +3,7 @@
     <%= image_tag pic.photo.url, :size => psize %>
   <% end %>
   <% if has_facebook_photo? && model.pictures.blank? %>
-  	<% unless controller_name == 'events' && action_name != 'index' %>
+  	<% if (controller_name == 'events' && action_name == 'index') || controller_name == 'users' %>
    		<%= image_tag @facebook_user.picture, :size => psize %> 
    	<% end %> 
   <% elsif model.try(:pictures).blank? %>

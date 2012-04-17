@@ -161,8 +161,7 @@ class Event < KitsTsdModel
   end
   
   def details
-#    cbody.html_safe
-    auto_link(cbody.gsub("\\n","<br />")).html_safe
+    cbody.html_safe
   end
   
   # action caching for SELECT UNION query

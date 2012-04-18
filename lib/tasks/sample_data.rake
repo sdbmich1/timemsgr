@@ -211,7 +211,7 @@ def add_sfstate_channels
       new_channel.channel_name.gsub!('Stanford', 'San Francisco State')
       new_channel.channel_title = new_channel.channel_name
       new_channel.localename = 'San Francisco' 
-      new_channel.cbody.gsub!('Stanford', 'San Francisco State')
+      new_channel.cbody.gsub!('Stanford', 'San Francisco State') rescue nil
       new_channel.bbody = new_channel.cbody
       p "Channel: #{new_channel.channel_name}"
     

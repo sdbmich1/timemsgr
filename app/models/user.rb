@@ -111,7 +111,7 @@ class User < ActiveRecord::Base
   end
     
   def get_facebook_user(access_token)
-    @fb_user ||= FbGraph::User.me(access_token.credentials.token).fetch
+    @fb_user ||= FbGraph::User.me(access_token.credentials.token).fetch rescue nil
   end
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)

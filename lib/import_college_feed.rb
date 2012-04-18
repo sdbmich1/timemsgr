@@ -123,13 +123,15 @@ class ImportCollegeFeed
       contact = target_page.search('.contact').text.split(': ')[1].strip
       email = target_page.search('.email').text.split(': ')[1].strip
       phone = target_page.search('.phone').text.split(': ')[1].strip
-      details = target_page.search('.description').text
+      details = target_page.search('.description').text 
+      contact ? details += ' <br /> Contact: ' + contact : details
+      phone ? details += ' <br /> ' + phone : details
       
       # find correct channel and location
       cid = LocalChannel.select_college_channel(etitle, school, details).flatten 1
 
       # add event to calendar
-      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime)}      
+      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime, host)}      
     end 
   end
   
@@ -148,6 +150,8 @@ class ImportCollegeFeed
         :contentsourceID => args[7], :localGMToffset => args[8], :endGMToffset => args[8],
         :subscriptionsourceID => args[7], :pageextsourceID => args[10])
     new_event.eventendtime = args[11] if args[11]
+    new_event.host = args[12] if args[12]
+    new_event.save
   end 
   
   def add_scraped_event(*args)

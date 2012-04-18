@@ -1,30 +1,30 @@
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=146&season=2012, Miami Marlins, -5
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=137&season=2012, San Francisco Giants, -8
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=137&season=2012, San Francisco Giants, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=144&season=2012, Atlanta Braves, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=121&season=2012, New York Mets, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=143&season=2012, Philadelphia Phillies, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=120&season=2012, Washington Nationals, -5
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=112&season=2012, Chicago Cubs, -6
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=112&season=2012, Chicago Cubs, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=113&season=2012, Cincinnati Reds, -5
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=117&season=2012, Houston Astros, -6
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=158&season=2012, Milwaukee Brewers, -6
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=117&season=2012, Houston Astros, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=158&season=2012, Milwaukee Brewers, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=134&season=2012, Pittsburgh Pirates, -5
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=138&season=2012, St. Louis Cardinals, -6
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=109&season=2012, Arizona Diamondbacks, -8
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=115&season=2012, Colorado Rockies, -7
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=119&season=2012, Los Angeles Dodgers, -8
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=135&season=2012, San Diego Padres, -8
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=138&season=2012, St. Louis Cardinals, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=109&season=2012, Arizona Diamondbacks, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=115&season=2012, Colorado Rockies, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=119&season=2012, Los Angeles Dodgers, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=135&season=2012, San Diego Padres, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=110&season=2012, Baltimore Orioles, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=111&season=2012, Boston Red Sox, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=147&season=2012, New York Yankees, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=139&season=2012, Tampa Bay Rays, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=141&season=2012, Toronto Blue Jays, -5
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=145&season=2012, Chicago White Sox, -6
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=145&season=2012, Chicago White Sox, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=114&season=2012, Cleveland Indians, -5
 http://mlb.mlb.com/soa/ical/schedule.ics?team_id=116&season=2012, Detroit Tigers, -5
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=118&season=2012, Kansas City Royals, -6
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=142&season=2012, Minnesota Twins, -6
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=108&season=2012, Los Angeles Angels, -8
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=133&season=2012, Oakland Athletics, -8
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=136&season=2012, Seattle Mariners, -8
-http://mlb.mlb.com/soa/ical/schedule.ics?team_id=140&season=2012, Texas Rangers, -6
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=118&season=2012, Kansas City Royals, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=142&season=2012, Minnesota Twins, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=108&season=2012, Los Angeles Angels, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=133&season=2012, Oakland Athletics, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=136&season=2012, Seattle Mariners, -5
+http://mlb.mlb.com/soa/ical/schedule.ics?team_id=140&season=2012, Texas Rangers, -5

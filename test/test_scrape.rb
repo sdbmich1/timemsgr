@@ -201,9 +201,10 @@ end
       
       # find correct channel and location
       cid = LocalChannel.select_college_channel(etitle, school, details).flatten 1
+      cid.map {|channel| p "Channel: #{channel.channelID}" }
 
       # add event to calendar
-      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime)}      
+#      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime)}      
     end
     
   end

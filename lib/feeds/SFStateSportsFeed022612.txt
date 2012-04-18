@@ -1,0 +1,11 @@
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=2, San Francisco State Baseball, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=5, San Francisco State Men's Track & Field, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=7, San Francisco State Men's Soccer, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=3, San Francisco State Men's Basketball, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=13, San Francisco State Wrestling, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=4, San Francisco State Women's Basketball, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=6, San Francisco State Women's Track & Field, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=8, San Francisco State Women's Soccer, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=9, San Francisco State Softball, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=12, San Francisco State Women's Track & Field, -8
+http://www.sfstategators.com/calendar.ashx/calendar.ics?sport_id=14, San Francisco State Women's Volleyball, -8

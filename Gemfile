@@ -45,6 +45,9 @@ gem 'unread'
 
 # add forms helper
 gem 'formtastic', '~> 1.2.3'
+
+#add mechanize for web crawling
+gem "mechanize", "~> 2.3"
  
 # add nifty
 gem "nifty-generators", :group => :development

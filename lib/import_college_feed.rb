@@ -53,6 +53,7 @@ class ImportCollegeFeed
     end
   end  
   
+  # parse stanford athletics web pages
   def process_stanford_scrape(feed_url, school, sport, offset)
     prev_dt = ""    
     doc = Nokogiri::XML(open(feed_url)) #open feed
@@ -88,6 +89,51 @@ class ImportCollegeFeed
     end    
   end
   
+  # process SF State pages
+  def read_sfstate_feed(feed_url, school, offset)
+    agent = Mechanize.new
+    agent.get(feed_url)
+    
+    # parse the appropriate links
+    pages = agent.page.links.select { |l| !(l.href =~ /p_id/i).nil? }
+    pages.each do |pg|
+      
+       # open target page
+      target_page = pg.click
+           
+      # parse event id
+      str = CGI.parse(pg.href)
+      event_id = str["webcalendar.detail?p_id"][0]
+      
+      etitle = target_page.search('.summary').text
+      sdt = target_page.search('.dtstart').text.split(': ')[1] rescue nil
+      stm = target_page.search('.dtstart').text.split(': ')[2].split("\n")[0] rescue nil
+      edt = target_page.search('.dtend').text rescue nil
+      url = target_page.search('.url').text
+      
+      # set event times
+      start_time = sdt && stm ? (sdt + stm).to_datetime : sdt.to_datetime 
+      etime = (sdt + edt).to_datetime if sdt && edt 
+      
+#      p "Event : #{etitle} | #{sdt} | #{start_time} | #{etime}"
+      
+      # get event details
+      loc = target_page.search('.location').text.split(': ')[1] 
+      host = target_page.search('.organiser').text.split(': ')[1].strip
+      contact = target_page.search('.contact').text.split(': ')[1].strip
+      email = target_page.search('.email').text.split(': ')[1].strip
+      phone = target_page.search('.phone').text.split(': ')[1].strip
+      details = target_page.search('.description').text
+      
+      # find correct channel and location
+      cid = LocalChannel.select_college_channel(etitle, school, details).flatten 1
+
+      # add event to calendar
+      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime)}      
+    end 
+  end
+  
+  
   # check day of week to ensure correct year for date
   def get_date(dt)
     Date.parse(dt).strftime('%A')[0..2] == dt[0..2] ? Date.parse(dt) : Date.parse(dt) - 1.year
@@ -95,12 +141,13 @@ class ImportCollegeFeed
 
   # add to system
   def add_college_event(*args)
-    CalendarEvent.find_or_create_by_pageextsourceID(args[10], 
+    new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(args[10], 
         :event_type => 'ce', :event_title => args[1][0..199], :cbody => args[2], :postdate => args[3],
         :eventstartdate => args[4], :eventstarttime => args[5], :eventenddate => args[6], 
         :contentsourceURL => args[0], :location => args[9][0..254],
         :contentsourceID => args[7], :localGMToffset => args[8], :endGMToffset => args[8],
         :subscriptionsourceID => args[7], :pageextsourceID => args[10])
+    new_event.eventendtime = args[11] if args[11]
   end 
   
   def add_scraped_event(*args)

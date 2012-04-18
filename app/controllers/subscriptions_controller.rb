@@ -43,6 +43,6 @@ class SubscriptionsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? || action_name == 'new' ? "application" : "events"
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'list' : "showevent"
   end    
 end

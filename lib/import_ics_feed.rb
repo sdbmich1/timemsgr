@@ -32,7 +32,7 @@ class ImportICSFeed
         :eventenddate => cal.dtend.to_datetime, :eventendtime => cal.dtend.to_datetime, 
         :contentsourceURL => cal.url, :location => cal.location, 
         :mapcity => addr[:city], :mapstate => addr[:state], :mapzip => addr[:zip], :mapcountry => addr[:country],
-        :contentsourceID => cid, :localGMToffset => -5, :endGMToffset => -5,
+        :contentsourceID => cid, :localGMToffset => offset, :endGMToffset => offset,
         :subscriptionsourceID => cid, :pageextsourceID => cal.uid) 
       new_event.save(:validate=>false)
     end

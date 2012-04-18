@@ -4,6 +4,8 @@ require 'rss/2.0'
 require 'json'
 require 'geokit'
 #require 'feedzirra'
+require 'mechanize'
+require 'cgi'
 
 def load_url(url)  
   doc = Nokogiri::HTML(open(url))
@@ -161,6 +163,52 @@ end
  #     p "Channel: #{cid[0].channelID}"
     end     
   end
+  
+  def xml_sfstate_feed(feed_url, school, offset)
+    agent = Mechanize.new
+    agent.get(feed_url)
+    
+    # parse the appropriate links
+    pages = agent.page.links.select { |l| !(l.href =~ /p_id/i).nil? }
+    pages.each do |pg|
+      
+       # open target page
+      target_page = pg.click
+           
+      # parse event id
+      str = CGI.parse(pg.href)
+      event_id = str["webcalendar.detail?p_id"][0]
+      
+      etitle = target_page.search('.summary').text
+      sdt = target_page.search('.dtstart').text.split(': ')[1] rescue nil
+      stm = target_page.search('.dtstart').text.split(': ')[2].split("\n")[0] rescue nil
+      edt = target_page.search('.dtend').text rescue nil
+      url = target_page.search('.url').text
+      
+      # set event times
+      start_time = sdt && stm ? (sdt + stm).to_datetime : sdt.to_datetime 
+      etime = (sdt + edt).to_datetime if sdt && edt 
+      
+#      p "Event : #{etitle} | #{sdt} | #{start_time} | #{etime}"
+      
+      # get event details
+      loc = target_page.search('.location').text.split(': ')[1] 
+      host = target_page.search('.organiser').text.split(': ')[1].strip
+      contact = target_page.search('.contact').text.split(': ')[1].strip
+      email = target_page.search('.email').text.split(': ')[1].strip
+      phone = target_page.search('.phone').text.split(': ')[1].strip
+      details = target_page.search('.description').text
+      
+      # find correct channel and location
+      cid = LocalChannel.select_college_channel(etitle, school, details).flatten 1
+      cid.map {|channel| p "Channel: #{channel.channelID}" }
+
+      # add event to calendar
+#      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime)}      
+    end
+    
+  end
+  
   
   def xml_stanford_feed(feed_url, school, offset)
     doc = Nokogiri::XML(open(feed_url))

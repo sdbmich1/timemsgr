@@ -9,13 +9,13 @@ namespace :loader do
     p 'Loading SF Chronicle Feed...'  
     load_news_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
     p 'Loading SJ Mercury News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Francisco', -8
+    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Jose', -8
     p 'Loading Atlanta News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/AtlantaJournalConstitutionFeed020612.txt', 'San Francisco', -5
+    load_news_feeds RAILS_ROOT + '/lib/feeds/AtlantaJournalConstitutionFeed020612.txt', 'Atlanta', -5
     p 'Loading Denver Post News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'San Francisco', -7
+    load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'Denver', -7
     p 'Loading OC Register News Feed...'  
-    load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'San Francisco', -8
+    load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'Orange County', -8
   end 
   
   desc "Load database with data from Stanford feeds"
@@ -25,10 +25,18 @@ namespace :loader do
     p 'Loading Stanford Sports Events Feed...'  
     load_stanford_data RAILS_ROOT + '/lib/feeds/StanfordSportsFeed022612.txt', 'Stanford', -8
   end
+  
+  desc "Load database with data from SF State feeds"
+  task :process_sfstate_feeds => :environment do
+    p 'Loading SF State General Events Feed...'  
+    load_sfstate_feed "http://apps.sfsu.edu/cgi-bin/student/webcalendar.htm", "San Francisco State", -8   
+    p "Loading SF State Sports Events Feeds..."  
+    load_ics_feeds RAILS_ROOT + '/lib/feeds/SFStateSportsFeed022612.txt'
+  end  
 
   desc "Load database with data from MLB feeds"
   task :process_mlb_feeds => :environment do
-    load_mlb_feeds RAILS_ROOT + '/lib/feeds/MLBScheduleFeed022712.txt'
+    load_ics_feeds RAILS_ROOT + '/lib/feeds/MLBScheduleFeed022712.txt'
   end  
   
   desc "Load database with data from pro golf feeds"
@@ -52,7 +60,12 @@ def load_stanford_data(*args)
   feed.read_feeds *args
 end
 
-def load_mlb_feeds(*args)
+def load_sfstate_feed(*args)
+  feed = ImportCollegeFeed.new
+  feed.read_sfstate_feed *args
+end
+
+def load_ics_feeds(*args)
   feed = ImportICSFeed.new
   feed.read_feeds *args
 end

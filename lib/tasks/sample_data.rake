@@ -45,7 +45,11 @@ namespace :db do
   
   task :update_channel_interests => :environment do
     set_channel_interests
-  end  
+  end 
+  
+  task :set_sfstate_channels => :environment do
+    add_sfstate_channels
+  end 
  
 end 
 
@@ -194,5 +198,28 @@ def set_presenter_eventid
     p.eventid = event.eventid
     p.save
   end
+end
+
+def add_sfstate_channels
+  
+  lc = LocalChannel.get_channel_by_name 'Stanford'  
+  lc.each do |channel|
+    p "Channel: #{channel.channelID}"
+    ch = ["Lacrosse|Water Polo|Swimming|Football|Men's Volleyball|Golf|Tennis|Shopping|Gymnastics|Rugby|Circle|Promotions|Sailing|Rowing|Squash"]
+    if (channel.channel_name =~ /^.*\b(#{ch[0]})\b.*$/i).nil?
+      new_channel = LocalChannel.new channel.attributes
+      new_channel.channel_name.gsub!('Stanford', 'San Francisco State')
+      new_channel.channel_title = new_channel.channel_name
+      new_channel.localename = 'San Francisco' 
+      new_channel.cbody.gsub!('Stanford', 'San Francisco State')
+      new_channel.bbody = new_channel.cbody
+      p "Channel: #{new_channel.channel_name}"
+    
+      # define channel id based on timestamp
+      new_channel.channelID = 'PK' + Time.now.to_i.to_s
+      new_channel.save
+    end
+  end
+  
 end
     

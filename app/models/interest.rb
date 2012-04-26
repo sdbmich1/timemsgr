@@ -7,10 +7,13 @@ class Interest < KitsTsdModel
 	has_many :users, :through => :user_interests
 		
 	has_many :channel_interests
-	has_many :channels, :through => :channel_interests, 
-				:conditions => { :status.downcase => 'active'}
+	has_many :local_channels, :through => :channel_interests, 
+				:conditions => { :status.downcase => 'active'},
+				:finder_sql => proc { "SELECT l.* FROM `kitssubdb`.local_channels l " +
+           "INNER JOIN `kitsknndb`.channel_interests c ON c.channel_id=l.id " +
+           "WHERE l.id=#{id}" }
 	
-  has_many :events, :through => :channels
+  has_many :calendar_events, :through => :local_channels
     
   scope :unhidden, where(:hide.downcase => 'no')
 	default_scope :order => 'sortkey ASC'
@@ -24,8 +27,8 @@ class Interest < KitsTsdModel
   end
   
   def self.find_or_add_interest title
-    category = Category.select_category(title).first  
-    interest = Interest.find_or_create_by_name title, :category_id => category[0].id, :sortkey => category[0].interests.count+1
+    category = Category.select_category(title).first rescue nil
+    interest = Interest.find_or_create_by_name title, :category_id => category[0].id, :sortkey => category[0].interests.count+1 if category
     interest
   end
   
@@ -40,4 +43,5 @@ class Interest < KitsTsdModel
   def set_flds
     self.hide, self.status = "no", "active"
   end 
+  
 end

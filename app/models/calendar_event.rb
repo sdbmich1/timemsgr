@@ -17,6 +17,10 @@ class CalendarEvent < KitsCentralModel
   
   scope :active, where(:status.downcase => 'active')
   scope :unhidden, where(:hide.downcase => 'no')
+  
+  def self.holidays
+    where(:event_type => ['h','m'])
+  end
 
   def ssid
     subscriptionsourceID

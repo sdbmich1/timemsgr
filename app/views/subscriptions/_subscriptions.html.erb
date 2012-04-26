@@ -14,10 +14,10 @@
           <%= render :partial => 'shared/show_photo', :locals => {:model => sub.local_channel, :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= sub.local_channel.channel_name %></td>
-      <td><%= truncate(sub.local_channel.bbody, :length=>120, :omission=>"...") %></td>
+      <td><%= sub.channel_name %></td>
+      <td><%= truncate(sub.description, :length=>120, :omission=>"...") %></td>
       <td><%= get_nice_date(sub.created_at, 'List') %></td>
-	  <td><%= link_to "Unsubscribe", subscription_url(:id=>sub, :user_id=>@user, :channel_id => sub.local_channel.channelID), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %></td>
+	  <td><%= link_to "Unsubscribe", subscription_url(:id=>sub, :user_id=>@user, :channel_id => sub.channelID), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?', :remote=>true %></td>
     </tr>
     <% end %>
   <% end %>

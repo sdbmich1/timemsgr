@@ -1,9 +1,12 @@
+    ActionMailer::Base.delivery_method = :smtp
     ActionMailer::Base.smtp_settings = {  
-      :address              => "Starfleet3052V1@kitsus.rbca.net",  
+      :address              => "mail.rbca.net",  
       :port                 => 25,  
       :domain               => "kitsus.rbca.net",  
+      :user_name            => nil,  
+      :password             => nil,  
       :authentication       => nil,  
       :enable_starttls_auto => true  
     }  
     
-	ActionMailer::Base.default_url_options[:host] = "150.150.2.25" 
+	ActionMailer::Base.default_url_options[:host] = "Starfleet5152V2.kitsus.rbca.net" 

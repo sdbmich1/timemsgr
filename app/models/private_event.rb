@@ -211,7 +211,7 @@ class PrivateEvent < ActiveRecord::Base
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
-        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID"     
+        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, status"     
   end
    
   def self.where_dt

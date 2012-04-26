@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   include SetAssn
   
   def home
+    p 'In user controller...'
     redirect_to events_path unless mobile_device?
   end
  

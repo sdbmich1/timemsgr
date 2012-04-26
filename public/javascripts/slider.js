@@ -45,14 +45,17 @@ function count_items (cname) {
 }
 
 function event_slider () {
-    $(".opp-slider").jCarouselLite({
+  if ( $('.opp-slider').length != 0 )
+    {
+      $(".opp-slider").jCarouselLite({
 		visible: count_items(".opp-slider"),
 		auto: 60000,
     	speed: 1000,
     	scroll: 3, 
         btnNext: ".next",
         btnPrev: ".prev"
-    });
+      });
+    }
     $(".appt-slider").jCarouselLite({
 		visible: count_items(".appt-slider"),
         btnNext: ".next-btn",
@@ -68,10 +71,14 @@ function event_slider () {
         btnNext: ".sch-next-btn",
         btnPrev: ".sch-prev-btn"
     });  
-    $('#js-news').ticker({
-    	titleText: 'Observances & Milestones',
-    	displayType: 'fade'
-    });
+    
+    if ( $('#js-news').length != 0 )
+     	{
+    		$('#js-news').ticker({
+    			titleText: 'Observances & Milestones',
+    			displayType: 'fade'
+    		});
+    	}
 }
 
 jQuery.event.add(window, "load", resizeFrame);

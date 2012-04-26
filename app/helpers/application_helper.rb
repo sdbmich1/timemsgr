@@ -90,5 +90,9 @@ module ApplicationHelper
   def showphoto(gender)       
     @photo = gender == "Male" ? "headshot_male.jpg" : "headshot_female.jpg"
   end
+  
+  def spinner_tag id
+    image_tag("ajax-loader.gif", :id => id, :alt => "Loading....", :style => "display:none")
+  end  
     
 end

@@ -78,7 +78,7 @@ class HostProfile < KitsTsdModel
   end
   
   def self.find_promo_code(pcode)
-    where('LOWER(promoCode) = ?', pcode.downcase).first
+    where('LOWER(promoCode) = ?', pcode.downcase).first rescue nil
   end
           
 end

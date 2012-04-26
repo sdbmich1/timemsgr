@@ -39,6 +39,11 @@ namespace :loader do
     load_ics_feeds RAILS_ROOT + '/lib/feeds/MLBScheduleFeed022712.txt'
   end  
   
+  desc "Load database with data from NFL feeds"
+  task :process_nfl_feeds => :environment do
+    load_ics_feeds RAILS_ROOT + '/lib/feeds/NFLScheduleFeed022712.txt'
+  end  
+  
   desc "Load database with data from pro golf feeds"
   task :process_golf_feeds => :environment do
     load_golf_feeds    

@@ -150,7 +150,7 @@ module EventsHelper
 
   # determine correct observances to display on schedule
   def view_obs?(loc)
-    loc.blank? ? true : !(loc =~ /United States/i).nil?
+    loc.blank? ? true : !(loc =~ /^.*\b(United States|USA)\b.*$/i).nil?
   end
   
   def user_events?

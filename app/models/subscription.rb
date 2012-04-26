@@ -41,11 +41,14 @@ class Subscription < KitsTsdModel
   end
   
   def channel_name
-    channel = LocalChannel.find_by_channelID self.channelID
-    channel.channel_name if channel
+    local_channel.channel_name if local_channel
   end
   
-  def events
-    local_channel.calendar_events
+  def description
+    local_channel.bbody if local_channel
+  end
+  
+  def events sdt
+    local_channel.calendar_events.range(sdt) if local_channel
   end
 end

@@ -15,11 +15,12 @@ Timemsgr::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   
-  # set mailer to localhost
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.asset_host = "http://localhost:3000"
+  # set mailer host
+  config.action_mailer.default_url_options = { :host => 'Starfleet5152V2.kitsus.rbca.net' }
+  config.action_mailer.asset_host = "Starfleet5152V2.kitsus.rbca.net"
   
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log

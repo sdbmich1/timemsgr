@@ -18,7 +18,7 @@ class Channel < KitsTsdModel
   
 	has_many :channel_locations, :dependent => :destroy
 	has_many :locations, :through => :channel_locations,
-	:finder_sql => proc { "SELECT l.* FROM #{dbname}.locations l " +
+	   :finder_sql => proc { "SELECT l.* FROM #{dbname}.locations l " +
            "INNER JOIN channel_locations c ON c.location_id=l.id " +
            "WHERE c.id=#{id}" }
 	

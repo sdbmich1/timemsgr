@@ -33,7 +33,7 @@ $(function (){
     .bind("ajax:beforeSend", toggleLoading)
     .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
-      $("#response").html(data);
+      $("#response").html(data).toggleLoading();
     });
 }); 
 
@@ -211,4 +211,15 @@ $(function (){
   $("#start-time").live('change',function() {
      $("#end-time").val($(this).val());
   });
+});
+
+// show spinner for Rails ajax events
+$("*[data-spinner]").live('ajax:beforeSend', function(e){
+  $($(this).data('spinner')).show();
+  e.stopPropagation(); //Don't show spinner of parent elements.
+});
+
+// hide spinner
+$("*[data-spinner]").live('ajax:complete', function(){
+  $($(this).data('spinner')).hide();
 });

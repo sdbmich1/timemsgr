@@ -5,7 +5,7 @@
 		<ul data-role="listview" data-filter="true">
 			<% get_date_range(@event).each do |edate| %>
 		  		<%= render :partial => 'mobile/event_list_hdr', :locals => {:edate => edate } %> 
-				<%= render :partial => 'mobile/session_list', :collection => list_events(@event), :as => :event %>	
+				<%= render :partial => 'mobile/session_list', :collection => list_events(@event, edate), :as => :event %>	
 			<% end %>
 		</ul>	
 	</div>

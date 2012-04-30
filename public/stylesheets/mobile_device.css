@@ -2,3 +2,4 @@ body { background-color: #FFF; }
 
 /* .ui-header {position:absolute!important; top:0; z-index: 999;} */
 .ui-footer {position:absolute!important; bottom:0; z-index: 999;}
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}  

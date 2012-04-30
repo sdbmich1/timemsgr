@@ -7,7 +7,9 @@
 	</div><br />
 	<div class="clear-all"></div>
 <% end %>
-<div id="sch-slider"><%= render 'schedule' %></div>
+<div id="sch-slider">
+	<%= render :partial => 'slider', :locals => { :slider => "Scheduled Activities" } %>
+</div>
 <% if subscriptions? %>
 	<%= render :partial => 'slider', :locals => { :slider => "Tracked Activities" }  %>
 <% end %>

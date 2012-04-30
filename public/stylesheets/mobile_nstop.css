@@ -1,4 +1,4 @@
 body { background-color: #FFF; } 
 
 .ui-header {position:absolute!important; top:0; z-index: 999;}
-.ui-content { padding: 0!important; position:absolute !important; top: 4.75em !important;}
+.ui-content { padding: 0!important; position:absolute !important; top: 2.5em !important;}

@@ -5,7 +5,7 @@ class SearchesController < ApplicationController
   def index
     query = params[:search]
     page  = params[:page] || 1
-    @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event] #, :with => {:location_id => @user.location_id}
+    @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event], :conditions => {:mapcity => @location.city + '*'}, :page => params[:page], :per_page => 15
   end
   
   def page_layout 

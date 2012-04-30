@@ -31,7 +31,6 @@ function toggleLoading () {
 $(function (){ 
   $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .bind("ajax:beforeSend", toggleLoading)
-    .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
       $("#response").html(data).toggleLoading();
     });
@@ -213,13 +212,3 @@ $(function (){
   });
 });
 
-// show spinner for Rails ajax events
-$("*[data-spinner]").live('ajax:beforeSend', function(e){
-  $($(this).data('spinner')).show();
-  e.stopPropagation(); //Don't show spinner of parent elements.
-});
-
-// hide spinner
-$("*[data-spinner]").live('ajax:complete', function(){
-  $($(this).data('spinner')).hide();
-});

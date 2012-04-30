@@ -75,10 +75,12 @@ class CalendarEvent < KitsCentralModel
     where "(status = 'active' AND hide = 'no' AND event_type NOT IN ('es', 'h', 'm'))
           AND ((eventstartdate >= curdate() ) 
                 OR (eventstartdate <= curdate() and eventenddate >= curdate()) ) "
+    set_property :enable_star => 1
+    set_property :min_prefix_len => 3
   end
   
   sphinx_scope(:datetime_first) { 
-    {:order => 'eventstartdate, eventstarttime ASC'}
+    {:order => 'eventstartdate ASC'}
   }  
   
   default_sphinx_scope :datetime_first

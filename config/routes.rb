@@ -27,7 +27,7 @@ Timemsgr::Application.routes.draw do
   
   # controllers for user specific content
   resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
-    :search_users
+    :search_users, :search_private_events
     
   resources :local_subscriptions, :only => [:create, :new]
 

@@ -1,32 +1,32 @@
-http://sports.yahoo.com/nfl/teams/ari/ical.ics, Arizona Cardinals, -5
-http://sports.yahoo.com/nfl/teams/atl/ical.ics, Atlanta Falcons, -5
-http://sports.yahoo.com/nfl/teams/bal/ical.ics, Baltimore Ravens, -5
-http://sports.yahoo.com/nfl/teams/buf/ical.ics, Buffalo Bills, -5
-http://sports.yahoo.com/nfl/teams/car/ical.ics, Carolina Panthers, -5
-http://sports.yahoo.com/nfl/teams/chi/ical.ics, Chicago Bears, -5
-http://sports.yahoo.com/nfl/teams/cin/ical.ics, Cincinnati Bengals, -5
-http://sports.yahoo.com/nfl/teams/cle/ical.ics, Cleveland Browns, -5
-http://sports.yahoo.com/nfl/teams/dal/ical.ics, Dallas Cowboys, -5
-http://sports.yahoo.com/nfl/teams/den/ical.ics, Denver Broncos, -5
-http://sports.yahoo.com/nfl/teams/det/ical.ics, Detroit Lions, -5
-http://sports.yahoo.com/nfl/teams/gnb/ical.ics, Green Bay Packers, -5
-http://sports.yahoo.com/nfl/teams/hou/ical.ics, Houston Texans, -5
-http://sports.yahoo.com/nfl/teams/ind/ical.ics, Indianapolis Colts, -5
-http://sports.yahoo.com/nfl/teams/jac/ical.ics, Jacksonville Jaguars, -5
-http://sports.yahoo.com/nfl/teams/kan/ical.ics, Kansas City Chiefs, -5
-http://sports.yahoo.com/nfl/teams/mia/ical.ics, Miami Dolphins, -5
-http://sports.yahoo.com/nfl/teams/min/ical.ics, Minnesota Vikings, -5
-http://sports.yahoo.com/nfl/teams/nwe/ical.ics, New England Patriots, -5
-http://sports.yahoo.com/nfl/teams/nor/ical.ics, New Orleans Saints, -5
-http://sports.yahoo.com/nfl/teams/nyg/ical.ics, New York Giants, -5
-http://sports.yahoo.com/nfl/teams/nyj/ical.ics, New York Jets, -5
-http://sports.yahoo.com/nfl/teams/oak/ical.ics, Oakland Raiders, -5
-http://sports.yahoo.com/nfl/teams/phi/ical.ics, Philadelphia Eagles, -5
-http://sports.yahoo.com/nfl/teams/pit/ical.ics, Pittsburgh Steelers, -5
-http://sports.yahoo.com/nfl/teams/sdg/ical.ics, San Diego Chargers, -5
-http://sports.yahoo.com/nfl/teams/sfo/ical.ics, San Francisco 49ers, -5
-http://sports.yahoo.com/nfl/teams/sea/ical.ics, Seattle Seahawks, -5
-http://sports.yahoo.com/nfl/teams/stl/ical.ics, St. Louis Rams, -5
-http://sports.yahoo.com/nfl/teams/tam/ical.ics, Tampa Bay Buccaneers, -5
-http://sports.yahoo.com/nfl/teams/ten/ical.ics, Tennessee Titans, -5
-http://sports.yahoo.com/nfl/teams/was/ical.ics, Washington Redskins, -5
+http://sports.yahoo.com/nfl/teams/ari/ical.ics, Arizona Cardinals, -5, NFL
+http://sports.yahoo.com/nfl/teams/atl/ical.ics, Atlanta Falcons, -5, NFL
+http://sports.yahoo.com/nfl/teams/bal/ical.ics, Baltimore Ravens, -5, NFL
+http://sports.yahoo.com/nfl/teams/buf/ical.ics, Buffalo Bills, -5, NFL
+http://sports.yahoo.com/nfl/teams/car/ical.ics, Carolina Panthers, -5, NFL
+http://sports.yahoo.com/nfl/teams/chi/ical.ics, Chicago Bears, -5, NFL
+http://sports.yahoo.com/nfl/teams/cin/ical.ics, Cincinnati Bengals, -5, NFL
+http://sports.yahoo.com/nfl/teams/cle/ical.ics, Cleveland Browns, -5, NFL
+http://sports.yahoo.com/nfl/teams/dal/ical.ics, Dallas Cowboys, -5, NFL
+http://sports.yahoo.com/nfl/teams/den/ical.ics, Denver Broncos, -5, NFL
+http://sports.yahoo.com/nfl/teams/det/ical.ics, Detroit Lions, -5, NFL
+http://sports.yahoo.com/nfl/teams/gnb/ical.ics, Green Bay Packers, -5, NFL
+http://sports.yahoo.com/nfl/teams/hou/ical.ics, Houston Texans, -5, NFL
+http://sports.yahoo.com/nfl/teams/ind/ical.ics, Indianapolis Colts, -5, NFL
+http://sports.yahoo.com/nfl/teams/jac/ical.ics, Jacksonville Jaguars, -5, NFL
+http://sports.yahoo.com/nfl/teams/kan/ical.ics, Kansas City Chiefs, -5, NFL
+http://sports.yahoo.com/nfl/teams/mia/ical.ics, Miami Dolphins, -5, NFL
+http://sports.yahoo.com/nfl/teams/min/ical.ics, Minnesota Vikings, -5, NFL
+http://sports.yahoo.com/nfl/teams/nwe/ical.ics, New England Patriots, -5, NFL
+http://sports.yahoo.com/nfl/teams/nor/ical.ics, New Orleans Saints, -5, NFL
+http://sports.yahoo.com/nfl/teams/nyg/ical.ics, New York Giants, -5, NFL
+http://sports.yahoo.com/nfl/teams/nyj/ical.ics, New York Jets, -5, NFL
+http://sports.yahoo.com/nfl/teams/oak/ical.ics, Oakland Raiders, -5, NFL
+http://sports.yahoo.com/nfl/teams/phi/ical.ics, Philadelphia Eagles, -5, NFL
+http://sports.yahoo.com/nfl/teams/pit/ical.ics, Pittsburgh Steelers, -5, NFL
+http://sports.yahoo.com/nfl/teams/sdg/ical.ics, San Diego Chargers, -5, NFL
+http://sports.yahoo.com/nfl/teams/sfo/ical.ics, San Francisco 49ers, -5, NFL
+http://sports.yahoo.com/nfl/teams/sea/ical.ics, Seattle Seahawks, -5, NFL
+http://sports.yahoo.com/nfl/teams/stl/ical.ics, St. Louis Rams, -5, NFL
+http://sports.yahoo.com/nfl/teams/tam/ical.ics, Tampa Bay Buccaneers, -5, NFL
+http://sports.yahoo.com/nfl/teams/ten/ical.ics, Tennessee Titans, -5, NFL
+http://sports.yahoo.com/nfl/teams/was/ical.ics, Washington Redskins, -5, NFL

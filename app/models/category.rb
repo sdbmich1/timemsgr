@@ -1,13 +1,13 @@
 class Category < ActiveRecord::Base
   
   has_many :interests
-  has_many :channel_interests #, :through => :interests
+  has_many :channel_interests, :through => :interests
   has_many :local_channels, :through => :channel_interests,
   :finder_sql => proc { "SELECT c.* FROM `kitsknndb`.categories c " +
-           "INNER JOIN channel_interests ci ON ci.category_id=c.id " +
-           "INNER JOIN local_channels lc ON ci.channel_id=lc.id " +
+           "INNER JOIN `kitsknndb`.channel_interests ci ON ci.category_id=c.id " +
+           "INNER JOIN `kitscentraldb`.channels lc ON ci.channel_id=lc.id " +
            "WHERE c.id=#{id}" }
-#  has_many :events, :through => :channels
+#  has_many :events, :through => :local_channels
              
   scope :unhidden, where(:hide.downcase => 'no')
   default_scope :order => 'sortkey ASC'

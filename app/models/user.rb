@@ -223,6 +223,13 @@ class User < ActiveRecord::Base
     profile.private_events.extended_circle   
   end 
   
+  def interest_events *args
+    events = chanlist = []
+    interests.map {|interest| chanlist << LocalChannel.select_channel(interest.name, location, location)[0]}  
+    chanlist.map { |ch| ch.map {|channel| events << channel.calendar_events.range(args[0]) } } if channels
+    events.compact!
+  end
+  
   def profile_city
     profile.City
   end

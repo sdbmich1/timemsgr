@@ -180,7 +180,7 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date == dt }.sort_by {|x| x.eventstarttime}     
+    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
   end
   
   def get_appointments

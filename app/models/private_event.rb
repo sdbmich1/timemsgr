@@ -42,13 +42,14 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   sphinx_scope(:datetime_first) { 
-    {:order => 'eventstartdate, eventstarttime ASC'}
+    {:order => 'eventstartdate ASC'}
   }  
   
   default_sphinx_scope :datetime_first
 	
 	scope :active, where(:status.downcase => 'active')
 	scope :unhidden, where(:hide.downcase => 'no')
+  scope :current, where('eventenddate >= curdate()')
 
   def inactive?
     status == 'inactive'

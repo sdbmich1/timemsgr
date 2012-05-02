@@ -4,19 +4,19 @@
 	  	<%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event, :locals => {:edate => Date.today} %>
 	</div>			
 
-	<% [['Appointments & Reminders','Appointment'],['Scheduled Activities','Schedule'],['Tracked Activities','Tracked']].each do |etype| %>
+	<% [['Appointments & Reminders','Appointment'],['Scheduled Activities','Schedule'],['Tracked Activities','Tracked'], ['Suggested Opportunities', 'Suggested']].each do |etype| %>
 		<li data-role="list-divider" class="center-wrapper"><%= etype[0] %></li>
 		<% if etype[1] == 'Schedule' %>
 			<% get_date_range(@events, @enddate).each do |edate| %>
 				<%= render :partial => 'mobile/event_list', :collection => get_event_list(edate), :as => :event, :locals => {:edate => edate} %>
 			<% end %>
+		<% elsif etype[1] == 'Tracked' || etype[1] == 'Suggested' %>
+			<% get_date_range(@events, @enddate).each do |edate| %>
+				<%= render :partial => 'mobile/event_list', :collection => get_events(etype[0], edate), :as => :event, :locals => {:edate => edate} %>	
+			<% end %>	
 		<% else %>	
 			<%= render :partial => 'mobile/event_list', :collection => get_events(etype[1]), :as => :event, :locals => {:edate => Date.today} %>
 		<% end %>
     <% end %>
 
-	<li data-role="list-divider" class="center-wrapper">Suggested Opportunities</li>
-	<% get_date_range(@events, @enddate).each do |edate| %>
-		<%= render :partial => 'mobile/event_list', :collection => get_events('Suggested Opportunities', edate), :as => :event, :locals => {:edate => edate} %>	
-	<% end %>	
 </ul>

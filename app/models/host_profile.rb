@@ -14,7 +14,15 @@ class HostProfile < KitsTsdModel
   has_many :channels, :foreign_key => :HostProfileID
   
   has_many :events, :through => :channels 
-  has_many :scheduled_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID
+  has_many :scheduled_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
+    def range(sdt)
+      where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt) 
+    end
+    
+    def page(limit=10, offset=0, sdt=Date.today)
+      all(:limit=> limit, :offset=>offset).range(sdt)
+    end
+  end
   
   # used to access friends life schedule of events
   has_many :life_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
@@ -40,13 +48,21 @@ class HostProfile < KitsTsdModel
     
     def show_extended_circle
       where(:ShowWorldCircle => 'yes') & LifeEvent.current
-    end  
+    end 
+    
+    def range(sdt)
+      where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt) 
+    end
+    
+    def page(limit=10, offset=0, sdt=Date.today)
+      all(:limit=> limit, :offset=>offset).range(sdt)
+    end     
   end
   
   # used to access friends private schedule of events
   has_many :private_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def private_circle
-      where(:allowPrivCircle => 'yes')
+      where(:allowPrivCircle => 'yes') 
     end
     
     def social_circle
@@ -56,6 +72,14 @@ class HostProfile < KitsTsdModel
     def extended_circle
       where(:allowWorldCircle => 'yes')
     end
+    
+    def range(sdt)
+      where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt) 
+    end
+    
+    def page(limit=10, offset=0, sdt=Date.today)
+      all(:limit=> limit, :offset=>offset).range(sdt)
+    end    
   end
  
   # define channel relationships

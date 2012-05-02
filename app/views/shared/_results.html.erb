@@ -1,4 +1,4 @@
-<div class="span-20 last prepend-4">
+<div class="<%= controller_name != 'search_private_events' ? 'span-20 last prepend-4' : 'span-24 last' %>">
 <table>
   <tr>
     <th></th>
@@ -16,7 +16,7 @@
           <%= render :partial => 'shared/show_photo', :locals => {:model => event, :file_name => "headshot1.jpg", :psize => '48x48' } %>
 		</div>
       </td>
-      <td><%= link_to event.event_name, event_path(event, :etype=>event.event_type) %></td>
+      <td><%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></td>
       <td><%= truncate(event.bbody, :length => 60, :omission => "...") %></td>
       <td><%= get_nice_date(event.eventstartdate,'List') %></td>
       <td><%= get_nice_date(event.eventenddate,'List') %></td>

@@ -62,11 +62,12 @@ module EventsHelper
   
   def time_left?(*e)
     if e[0].eventenddate.to_date > Date.today 
-      if e[1].blank? 
-         e[0].eventstartdate.to_date <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
-      else  
-         e[1] <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
-      end
+#      if e[1].blank? 
+#         e[0].eventstartdate.to_date <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
+#      else  
+#         e[1] <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
+#      end
+      true
     else
       e[0].eventenddate.to_date == Date.today && compare_time(Time.now, e[0].eventendtime) ? true : false
     end    
@@ -179,15 +180,17 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date == dt }.sort_by {|x| x.eventstarttime}     
+    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
   end
   
   def get_appointments
     @events.select {|event| appt?(event.event_type) && time_left?(event)}
   end
   
-  def get_subscriptions
-    @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
+  def get_subscriptions *args
+    elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
+    elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]
+    elist    
   end
            
   def get_observances
@@ -195,15 +198,19 @@ module EventsHelper
   end
   
   def get_upcoming_events(sdt)
-    @trk_events ||= get_subscriptions
+    @trk_events ||= get_subscriptions sdt
     @user_events ||= get_user_events
     @events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
   end
   
   # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events
   def set_start_date(event, sdt)
-    event.eventstartdate = sdt if event.eventenddate >= sdt && event.eventstartdate < sdt
-    event
+    if event.eventenddate.to_date >= sdt && event.eventstartdate.to_date <= sdt
+      event.eventstartdate = sdt 
+      event
+    else
+      nil
+    end      
   end
    
   # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
@@ -257,7 +264,7 @@ module EventsHelper
     when !(args[0] =~ /Suggested/i).nil?; get_upcoming_events(args[1])
     when !(args[0] =~ /Scheduled/i).nil?; get_opportunities(args[1])
     when !(args[0] =~ /Appointment/i).nil?; get_appointments
-    when !(args[0] =~ /Tracked/i).nil?; get_subscriptions
+    when !(args[0] =~ /Tracked/i).nil?; get_subscriptions(args[1])
     else get_user_events
     end
   end    

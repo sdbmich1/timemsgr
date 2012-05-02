@@ -12,7 +12,7 @@ class ReoccurrenceType < KitsCentralModel
   end  
   
   def descr_title
-    try(:description).titleize
+    description.titleize rescue nil
   end
   
   def self.get_code(rtype)

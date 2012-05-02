@@ -1,31 +1,31 @@
-http://www.nba.com/pistons/schedule/2011/schedule.ics, Detroit Pistons, -5
-http://www.nba.com/hawks/schedule/2011/schedule.ics, Atlanta Hawks, -5
-http://www.nba.com/celtics/schedule/2011/schedule.ics, Boston Celtics, -5
-http://www.nba.com/bobcats/schedule/2011/schedule.ics, Charlotte Bobcats, -5
-http://www.nba.com/bulls/schedule/2011/schedule.ics, Chicago Bulls, -6
-http://www.nba.com/cavaliers/schedule/2011/schedule.ics, Cleveland Cavaliers, -5
-http://www.nba.com/mavericks/schedule/2011/schedule.ics, Dallas Mavericks, -6
-http://www.nba.com/nuggets/schedule/2011/schedule.ics, Denver Nuggets, -7
-http://www.nba.com/warriors/schedule/2011/schedule.ics, Golden State Warriors, -8
-http://www.nba.com/rockets/schedule/2011/schedule.ics, Houston Rockets, -6
-http://www.nba.com/pacers/schedule/2011/schedule.ics, Indiana Pacers, -6
-http://www.nba.com/clippers/schedule/2011/schedule.ics, Los Angeles Clippers, -8
-http://www.nba.com/lakers/schedule/2011/schedule.ics, Los Angeles Lakers, -8
-http://www.nba.com/grizzlies/schedule/2011/schedule.ics, Memphis Grizzlies, -6
-http://www.nba.com/heat/schedule/2011/schedule.ics, Miami Heat, -5
-http://www.nba.com/bucks/schedule/2011/schedule.ics, Milwaukee Bucks, -6
-http://www.nba.com/nets/schedule/2011/schedule.ics, New Jersey Nets, -5
-http://www.nba.com/hornets/schedule/2011/schedule.ics, New Orleans Hornets, -6
-http://www.nba.com/knicks/schedule/2011/schedule.ics, New York Knicks, -5
-http://www.nba.com/thunder/schedule/2011/schedule.ics, Oklahoma City Thunder, -6
-http://www.nba.com/magic/schedule/2011/schedule.ics, Orlando Magic, -5
-http://www.nba.com/sixers/schedule/2011/schedule.ics, Philadelphia 76ers, -5
-http://www.nba.com/suns/schedule/2011/schedule.ics, Phoenix Suns, -7
-http://www.nba.com/wizards/schedule/2011/schedule.ics, Washington Wizards, -5
-http://www.nba.com/blazers/schedule/2011/schedule.ics, Portland Trail Blazers, -8
-http://www.nba.com/kings/schedule/2011/schedule.ics, Sacramento Kings, -8
-http://www.nba.com/spurs/schedule/2011/schedule.ics, San Antonio Spurs, -6
-http://www.nba.com/raptors/schedule/2011/schedule.ics, Toronto Raptors, -5
-http://www.nba.com/jazz/schedule/2011/schedule.ics, Utah Jazz, -7
-http://www.nba.com/wizards/schedule/2011/schedule.ics, Washington Wizards, -5
-http://www.nba.com/timberwolves/schedule/2011/schedule.ics, Minnesota Timberwolves, -6
+http://www.nba.com/pistons/schedule/2011/schedule.ics, Detroit Pistons, -5, NBA
+http://www.nba.com/hawks/schedule/2011/schedule.ics, Atlanta Hawks, -5, NBA
+http://www.nba.com/celtics/schedule/2011/schedule.ics, Boston Celtics, -5, NBA
+http://www.nba.com/bobcats/schedule/2011/schedule.ics, Charlotte Bobcats, -5, NBA
+http://www.nba.com/bulls/schedule/2011/schedule.ics, Chicago Bulls, -6, NBA
+http://www.nba.com/cavaliers/schedule/2011/schedule.ics, Cleveland Cavaliers, -5, NBA
+http://www.nba.com/mavericks/schedule/2011/schedule.ics, Dallas Mavericks, -6, NBA
+http://www.nba.com/nuggets/schedule/2011/schedule.ics, Denver Nuggets, -7, NBA
+http://www.nba.com/warriors/schedule/2011/schedule.ics, Golden State Warriors, -8, NBA
+http://www.nba.com/rockets/schedule/2011/schedule.ics, Houston Rockets, -6, NBA
+http://www.nba.com/pacers/schedule/2011/schedule.ics, Indiana Pacers, -6, NBA
+http://www.nba.com/clippers/schedule/2011/schedule.ics, Los Angeles Clippers, -8, NBA
+http://www.nba.com/lakers/schedule/2011/schedule.ics, Los Angeles Lakers, -8, NBA
+http://www.nba.com/grizzlies/schedule/2011/schedule.ics, Memphis Grizzlies, -6, NBA
+http://www.nba.com/heat/schedule/2011/schedule.ics, Miami Heat, -5, NBA
+http://www.nba.com/bucks/schedule/2011/schedule.ics, Milwaukee Bucks, -6, NBA
+http://www.nba.com/nets/schedule/2011/schedule.ics, New Jersey Nets, -5, NBA
+http://www.nba.com/hornets/schedule/2011/schedule.ics, New Orleans Hornets, -6, NBA
+http://www.nba.com/knicks/schedule/2011/schedule.ics, New York Knicks, -5, NBA
+http://www.nba.com/thunder/schedule/2011/schedule.ics, Oklahoma City Thunder, -6, NBA
+http://www.nba.com/magic/schedule/2011/schedule.ics, Orlando Magic, -5, NBA
+http://www.nba.com/sixers/schedule/2011/schedule.ics, Philadelphia 76ers, -5, NBA
+http://www.nba.com/suns/schedule/2011/schedule.ics, Phoenix Suns, -7, NBA
+http://www.nba.com/wizards/schedule/2011/schedule.ics, Washington Wizards, -5, NBA
+http://www.nba.com/blazers/schedule/2011/schedule.ics, Portland Trail Blazers, -8, NBA
+http://www.nba.com/kings/schedule/2011/schedule.ics, Sacramento Kings, -8, NBA
+http://www.nba.com/spurs/schedule/2011/schedule.ics, San Antonio Spurs, -6, NBA
+http://www.nba.com/raptors/schedule/2011/schedule.ics, Toronto Raptors, -5, NBA
+http://www.nba.com/jazz/schedule/2011/schedule.ics, Utah Jazz, -7, NBA
+http://www.nba.com/wizards/schedule/2011/schedule.ics, Washington Wizards, -5, NBA
+http://www.nba.com/timberwolves/schedule/2011/schedule.ics, Minnesota Timberwolves, -6, NBA

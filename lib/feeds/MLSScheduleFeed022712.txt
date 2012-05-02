@@ -1,20 +1,20 @@
-http://e-qo.de/v2.ics, Chicago Fire, -6
+http://e-qo.de/v2.ics, Chicago Fire, -6, MLS
 http://www.cdchivasusa.com/schedule, Chivas USA, -8
 http://www.coloradorapids.com/schedule, Colorado Rapids, -7
 http://www.thecrew.com/schedule, Columbus Crew, -5
 http://www.dcunited.com/schedule.ical, D.C. United, -5
 http://www.fcdallas.com/schedule, FC Dallas, -6
-http://www.fcdallas.com/sites/dallas/files/2012%20FC%20Dallas%20Schedule.ics, FC Dallas, -6
-https://www.google.com/calendar/ical/c7h0rcgpol68l5dedhmtg4phhc%40group.calendar.google.com/public/basic.ics, Houston Dynamo, -6
-https://www.google.com/calendar/ical/0tc4natq8h5fnc9v1sv4nutsko%40group.calendar.google.com/public/basic.ics, LA Galaxy, -8
+http://www.fcdallas.com/sites/dallas/files/2012%20FC%20Dallas%20Schedule.ics, FC Dallas, -6, MLS
+https://www.google.com/calendar/ical/c7h0rcgpol68l5dedhmtg4phhc%40group.calendar.google.com/public/basic.ics, Houston Dynamo, -6, MLS
+https://www.google.com/calendar/ical/0tc4natq8h5fnc9v1sv4nutsko%40group.calendar.google.com/public/basic.ics, LA Galaxy, -8, MLS
 http://www.impactmontreal.com/en/schedule, Impact Montreal, -5
 http://www.revolutionsoccer.net/schedule, New England Revolution, -5
-https://www.google.com/calendar/ical/m9rhc26j7fuv8rfi97pu9qs298%40group.calendar.google.com/public/basic.ics, New York Red Bulls, -5
-https://www.google.com/calendar/ical/5djtkh95fuun5silsdksj8vd7s%40group.calendar.google.com/public/basic.ics, Philadelphia Union, -5
-https://www.google.com/calendar/ical/2q0b048irb1lfoerbmn00pssv8%40group.calendar.google.com/public/basic.ics, Portland Timbers, -8
-https://www.google.com/calendar/ical/5s5td8mv1c4rhffof2rdqur2b8%40group.calendar.google.com/public/basic.ics, Real Salt Lake, -7
+https://www.google.com/calendar/ical/m9rhc26j7fuv8rfi97pu9qs298%40group.calendar.google.com/public/basic.ics, New York Red Bulls, -5, MLS
+https://www.google.com/calendar/ical/5djtkh95fuun5silsdksj8vd7s%40group.calendar.google.com/public/basic.ics, Philadelphia Union, -5, MLS
+https://www.google.com/calendar/ical/2q0b048irb1lfoerbmn00pssv8%40group.calendar.google.com/public/basic.ics, Portland Timbers, -8, MLS
+https://www.google.com/calendar/ical/5s5td8mv1c4rhffof2rdqur2b8%40group.calendar.google.com/public/basic.ics, Real Salt Lake, -7, MLS
 http://bit.ly/AfRtA4, San Jose Earthquakes, -8
-http://www.trumba.com/calendars/seattle-sounders-fc-master-schedule.ics, Seattle Sounders, -8
-https://www.google.com/calendar/ical/0sepbduc4r0hphdqu44d6ocec0%40group.calendar.google.com/public/basic.ics, Kansas City Sporting, -6
+http://www.trumba.com/calendars/seattle-sounders-fc-master-schedule.ics, Seattle Sounders, -8, MLS
+https://www.google.com/calendar/ical/0sepbduc4r0hphdqu44d6ocec0%40group.calendar.google.com/public/basic.ics, Kansas City Sporting, -6, MLS
 http://www.torontofc.ca/schedule, Toronto FC, -5
-http://www.whitecapsfcdigital.com/schedule_ics/2012_whitecapsfc_schedule_feb10.ics, Vancouver Whitecaps, -8
+http://www.whitecapsfcdigital.com/schedule_ics/2012_whitecapsfc_schedule_feb10.ics, Vancouver Whitecaps, -8, MLS

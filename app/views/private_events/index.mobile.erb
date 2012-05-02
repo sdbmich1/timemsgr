@@ -1,7 +1,11 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'My Activities'} %>
 
+<% content_for :srch_content do %>
+	<%= render :partial => 'mobile/private_event_search' %>
+<% end %>
+
 <%= content_for :content do %>
-	<ul data-role="listview" data-filter="true">
+	<ul data-role="listview">
 		<% @events.each do |event| %>
 	  		<li>
 	  			 <% if life_event?(event.event_type) %>

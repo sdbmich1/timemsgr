@@ -1,15 +1,20 @@
 <% if model %>
   <% for pic in model.pictures %>
-    <%= image_tag pic.photo.url, :size => psize %>
+  	<% if pic.photo_file_name.blank? %>
+		<%= image_tag file_name, :alt => "none", :size => psize %> 
+	<% else %>   
+		<%= image_tag pic.photo.url, :size => psize %>
+	<% end %>
   <% end %>
-  <% if has_facebook_photo? && model.pictures.blank? %>
-  	<% if (controller_name == 'events' && action_name == 'index') || controller_name == 'users' %>
+  <% if model.pictures.blank? %>
+    <% if has_facebook_photo? %>
+  	  <% if (controller_name == 'events' && action_name == 'index') || controller_name == 'users' %>
    		<%= image_tag @facebook_user.picture, :size => psize %> 
-   	<% else %>
+   	  <% else %>
    		<%= image_tag file_name, :alt => "none", :size => psize %>
-   	<% end %> 
-   	
-  <% elsif model.try(:pictures).blank? %>
-    <%= image_tag file_name, :alt => "none", :size => psize %>
+   	  <% end %>    	
+  	<% else %>
+    	<%= image_tag file_name, :alt => "none", :size => psize %>
+  	<% end %>  	
   <% end %>
 <% end %>

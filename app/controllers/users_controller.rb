@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   private
   
   def user_layout 
-    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'list' : "users"
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'list_nosearch' : "users"
   end
   
   def load_data

@@ -7,7 +7,8 @@ class EventsController < ApplicationController
 	
 	def show
  		@event = Event.find_event params[:id], params[:etype], params[:eid], params[:sdt]
- 		@sponsor_pages, @presenters = @event.sponsor_pages, @event.presenters rescue nil
+ 		@sponsor_pages = @event.sponsor_pages rescue nil 
+ 		@presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) rescue nil
  		@notification = Notification.new
 	end
 	

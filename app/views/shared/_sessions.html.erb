@@ -10,7 +10,7 @@
   </tr>
   <% for session in @sessions %>
     <tr>
-      <td><%= link_to truncate(session.event_name, :length => 40, :omission =>"..."), event_path(session, :etype=>session.event_type, :sdate=>session.eventstartdate) %></td>
+      <td><%= link_to truncate(session.event_name, :length => 40, :omission =>"..."), event_path(session, :etype=>session.event_type, :eid=>session.eventid, :sdt=>session.eventstartdate) %></td>
       <td><%= get_nice_date(session.eventstartdate,'List') %></td>
       <td><%= get_nice_date(session.eventenddate,'List') %></td>
       <td><%= chk_offset(session.eventstarttime, session.localGMToffset) %></td>

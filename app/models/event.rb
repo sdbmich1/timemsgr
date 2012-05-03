@@ -66,10 +66,11 @@ class Event < KitsTsdModel
     find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events #{where_sid} )
+         UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_loc})
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_hol})
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, 
+         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt,
                                                        cid, edt, edt, edt, edt, loc, edt, edt, cid, edt, edt]) 
   end
 

@@ -5,12 +5,14 @@ class MajorEventsController < ApplicationController
   def show
     @event = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt])
     @notification = Notification.new
-    @sponsor_pages, @presenters, @sessions = @event.try(:sponsor_pages), @event.try(:presenters), @event.try(:sessions)
+    @sponsor_pages = @event.sponsor_pages rescue nil
+    @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) rescue nil
+    @sessions = @event.sessions.paginate(:page => params[:session_page], :per_page => 15) rescue nil
   end
   
   def about
     @event = Event.find(params[:id])
-    @event.try(:presenters)
+    @event.presenters rescue nil
   end
 
   private

@@ -15,8 +15,7 @@ class ApplicationController < ActionController::Base
     if @user.sign_in_count <= 1 # check for new users
       new_local_subscription_path
     else
-      p 'In app controller...'
-      events_path
+      params[:next] || events_path
     end 
   end
   

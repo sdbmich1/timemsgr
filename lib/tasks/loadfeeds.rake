@@ -77,8 +77,8 @@ end
 
 def load_golf_feeds
   feed = ImportGolfEvent.new
-  feed.parse_golf_events 'http://www.pgatour.com/r/schedule/', 'US Professional Golf Association Tour Tournaments', 54, 6 # pga tour
-  feed.parse_golf_events 'http://www.pgatour.com/s/schedule/', 'US Professional Golf Association Seniors Tour Tournaments', 25, 5 # champions tour
-  feed.parse_golf_events 'http://www.pgatour.com/h/schedule/', 'US Professional Golf Association Tour Tournaments',35, 5 # nationwide tour
-  feed.process_lpga_events 'http://www.golfchannel.com/tours/lpga/?t=schedule','US Ladies Professional Golf Association Tour Tournaments'  # lpga tour
+  feed.parse_golf_events 'http://www.pgatour.com/r/schedule/', 'US Professional Golf Association Tour Tournaments', 54, 6, 'PGA:' # pga tour
+  feed.parse_golf_events 'http://www.pgatour.com/s/schedule/', 'US Professional Golf Association Seniors Tour Tournaments', 25, 5, 'Golf:' # champions tour
+  feed.parse_golf_events 'http://www.pgatour.com/h/schedule/', 'US Professional Golf Association Tour Tournaments',35, 5, 'Golf:' # nationwide tour
+  feed.process_lpga_events 'http://www.golfchannel.com/tours/lpga/?t=schedule','US Ladies Professional Golf Association Tour Tournaments', 'LPGA:'  # lpga tour
 end

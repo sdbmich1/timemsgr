@@ -157,7 +157,7 @@ class PrivateEvent < ActiveRecord::Base
   def set_flds
     if new_record?
       self.hide, self.cformat, self.status = "no", "html", "active"
-      self.event_title = self.event_name
+      self.event_title, self.bbody = self.event_name, self.cbody
       self.postdate, self.CreateDateTime = Date.today, Time.now
       self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
     end

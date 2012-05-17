@@ -11,12 +11,11 @@
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script> 	
  
-	<%= yield :pre_mobile_load %>
     <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
     <% if !user_signed_in? %>
     	<%= stylesheet_link_tag "mobile_device" %>
     <% end %>
-  	<%= javascript_include_tag 'jquery.infieldlabel.min.js', 'jquery.pstrength-min.1.2.js', "autocomplete-rails.js", :cache => true %>
+  	<%= javascript_include_tag 'application.mobile.js','jquery.infieldlabel.min.js', "autocomplete-rails.js", :cache => true %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  

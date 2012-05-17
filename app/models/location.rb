@@ -3,7 +3,7 @@ class Location < ActiveRecord::Base
   acts_as_mappable 
   belongs_to :country
   
-  attr_accessible :lat, :lng
+  attr_accessible :lat, :lng, :city, :state, :status, :country_name, :time_zone, :localGMToffset, :hide, :country_id, :sortkey
   
   has_many :channel_locations
   has_many :channels, :through => :channel_locations
@@ -12,7 +12,7 @@ class Location < ActiveRecord::Base
   
   has_many :users
   
-  default_scope :order => 'sortkey ASC'
+  default_scope :order => 'city ASC'
   
   def self.find_location(loc)
     includes(:channels => [:subscriptions]).find(loc)

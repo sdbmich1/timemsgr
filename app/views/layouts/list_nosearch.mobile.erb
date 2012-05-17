@@ -12,9 +12,8 @@
 	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script> 	
  	<script src="http://cubiq.org/dropbox/iscroll/iscroll.js?v3.7.1"></script>
  
-	<%= yield :pre_mobile_load %>
     <%= stylesheet_link_tag "mobile", "calendar", "mobile_nstop", :cache => true %>  
-  	<%= javascript_include_tag 'jquery.infieldlabel.min.js','jquery.progressbar.min.js', "jquery.mobile.iscroll.js", "jQuery.ui.datepicker.js", :cache => true %>
+  	<%= javascript_include_tag 'application.mobile.js','jquery.infieldlabel.min.js',"jquery.mobile.iscroll.js", :cache => true %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  

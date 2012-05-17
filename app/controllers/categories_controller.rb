@@ -4,11 +4,11 @@ class CategoriesController < ApplicationController
   
   def index
     @categories = Category.get_active_list
-    @channels = LocalChannel.get_channel_by_loc(@location.city).paginate(:page => params[:page], :per_page => 15) 
+    @channels = LocalChannel.get_channel_by_loc(@location.city).paginate(:page => params[:page], :per_page => 10) 
   end
   
   def list
-    @channels = Category.get_channels(params[:category], @location.city)[0].paginate(:page => params[:page], :per_page => 15 )
+    @channels = Category.get_channels(params[:category], @location.city)[0].paginate(:page => params[:page], :per_page => 10 )
   end
 
   private

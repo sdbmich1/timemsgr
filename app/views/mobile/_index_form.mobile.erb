@@ -1,6 +1,4 @@
-<% content_for :pre_mobile_load do %>
-  	<%= render 'mobile/pre_load' %>
-<% end %>
+
 <% content_for :head do %>	<h3><%= "#{title}" %>
 	<% if controller_name == 'events' && action_name == 'index' %>
 		<%= link_to get_unread_count(@user), event_notices_url(:sid=>@user.ssid), :class=>"notice_id notice-btn round" %>

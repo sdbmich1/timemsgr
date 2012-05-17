@@ -22,8 +22,8 @@ class ScheduledEvent < ActiveRecord::Base
   validates :event_type, :presence => true
   validates_date :eventstartdate, :presence => true, :allow_blank => false #, :on_or_after => :today 
   validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
-  validates :eventstarttime, :presence => true, :allow_blank => false
-  validates :eventendtime, :presence => true, :allow_blank => false        
+#  validates :eventstarttime, :presence => true, :allow_blank => false
+#  validates :eventendtime, :presence => true, :allow_blank => false        
 				        
   belongs_to :host_profile, :foreign_key => :subscriptionsourceID, :primary_key => :contentsourceID
  

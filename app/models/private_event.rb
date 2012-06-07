@@ -10,7 +10,7 @@ class PrivateEvent < ActiveRecord::Base
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :contentsourceURL,
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :pageextsrc,
-				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes
+				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
@@ -27,7 +27,7 @@ class PrivateEvent < ActiveRecord::Base
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   
-  default_scope :order => 'eventstartdate, eventstarttime DESC'
+  default_scope :order => 'eventstartdate, eventstarttime ASC'
   
   define_index do
     indexes :event_name, :sortable => true

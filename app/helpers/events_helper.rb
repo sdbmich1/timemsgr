@@ -187,6 +187,14 @@ module EventsHelper
     @events.select {|event| appt?(event.event_type) && time_left?(event)}
   end
   
+  def get_past_events
+    @events.select {|event| event.eventstartdate.to_date < Date.today}
+  end
+
+  def get_current_events
+    @events.select {|event| event.eventstartdate.to_date >= Date.today}
+  end
+  
   def get_subscriptions *args
     elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
     elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]
@@ -372,5 +380,9 @@ module EventsHelper
   
   def get_local_time(tm)
     tm.utc.getlocal.strftime('%m/%d/%Y %I:%M%p')
+  end
+  
+  def has_reminder? event
+    event.remindflg == 'yes' ? true : false
   end  
 end

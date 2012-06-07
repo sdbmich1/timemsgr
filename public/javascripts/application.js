@@ -38,6 +38,9 @@ $(function (){
 }); 
 
 $(function (){ 
+	
+  // add accordion
+  $("#accordion").accordion({ collapsible: true });	
 
   // add date picker code and synch start & end dates
   if ( $('#start-date').length != 0 ) {
@@ -154,10 +157,12 @@ $(function () {
   $(".channel_menu").live('click',function() {
     var intid = $(this).attr("data-intid");
     var loc = $('#location_id').val();
+    var url = '/select.js?location=' + loc + "&interest_id=" + intid
     
     $('ul.menu li ul li a').css('background-color', '#ccc');
 	$(this).css('background-color', '#C2E1EF');
-    $.getScript('/select.js?location=' + loc + "&interest_id=" + intid);
+	
+    process_url(url);    
   })
 });
 
@@ -189,36 +194,13 @@ $(function (){
 	})
 });
 
-$(function (){
+function get_categories (loc) {
+	var url = '/categories.js?location=' + loc;
+	process_url(url);
+}
 
-  // when the #location id field changes
-  $("select[id*=location_id]").live('change',function() {
-
-     	// grab the selected location
-     	var loc = $(this).val().toLowerCase();
-
-     	// check if interest is selected to call appropriate script
-     	if ( $('#interest_id').length != 0 )
-     	{
-     		var intid = $('#interest_id').val();
-     		var url = '/select.js?location=' + loc + "&interest_id=" + intid;
-     	}
-     	else
-     	{
- 			// check channel page is current to call appropriate url
- 			if ( $('.chanlist').length != 0 )
- 				{
- 					var url = '/categories.js?location=' + loc;
- 					var Slider = false;
- 				}
- 			else
- 				{
- 					var url = '/events.js?location=' + loc;
- 					var Slider = true;
- 				}    		
-     	}
-     	
-		$.ajax({
+function process_url (url) {
+  		$.ajax({
   			url: url,
   			dataType: 'script',
   			'beforeSend': function() {
@@ -228,13 +210,49 @@ $(function (){
   				toggleLoading();
     		},
   			'success': function() {
+  				toggleLoading();	
   				if (Slider)
-  					{ 
-  					toggleLoading();	
-  					reset_slider();
-  						}
+  					{ reset_slider(); }
   			}  
 		});
+}
+
+$(function (){
+
+  // when the #location id field changes
+  $("select[id*=location_id]").live('change',function() {
+
+     	// grab the selected location
+     	var loc = $(this).val().toLowerCase();
+ 
+     	// check if interest is selected to call appropriate script
+     	if ( $('#interest_id').length != 0 )
+     	{
+     		var intid = $('#interest_id').val(); 
+      		var url = '/select.js?location=' + loc + "&interest_id=" + intid;
+     		process_url(url); 
+     	}
+     	else
+     	{
+ 			// check channel page is current to call appropriate url
+ 			if ( $('.chanlist').length != 0 )
+ 				{
+      				var Slider = false;
+     				var catid = $('.active').attr('data-catid');
+      				if (catid.length == 0)
+     					{ get_categories(loc) }
+     				else
+     					{ get_channels(catid, loc) } 										
+ 				}
+ 			else
+ 				{
+ 					var url = '/events.js?location=' + loc;
+ 					var Slider = true;
+ 					process_url(url); 
+ 				}    		
+     	}
+     	
+
 		return false;       
   })
 });
@@ -251,3 +269,13 @@ $(function (){
   });   
 });
 
+// check if reminder checkbox is selected
+$(function (){
+	$('#remflg').bind('change', function () {
+
+		if ($(this).attr("checked"))
+		  { $("#reminder-type").show('fast'); }      		
+   		else
+      	  { $("#reminder-type").hide('slow'); }
+	});
+});

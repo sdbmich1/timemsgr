@@ -1,3 +1,4 @@
+require 'will_paginate/array'
 class CategoriesController < ApplicationController
   before_filter :authenticate_user!
   layout :page_layout
@@ -8,7 +9,8 @@ class CategoriesController < ApplicationController
   end
   
   def list
-    @channels = Category.get_channels(params[:category], @location.city)[0].paginate(:page => params[:page], :per_page => 10 )
+    @interests = Category.find(params[:category_id]).interests
+    @channels = LocalChannel.pick_channels(@interests, @location.city, @user.location).paginate(:page => params[:page], :per_page => 10 )
   end
 
   private

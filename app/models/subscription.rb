@@ -48,7 +48,7 @@ class Subscription < KitsTsdModel
     local_channel.bbody if local_channel
   end
   
-  def events sdt
+  def events sdt=Date.today
     local_channel.calendar_events.range(sdt) if local_channel
   end
 end

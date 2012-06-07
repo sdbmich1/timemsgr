@@ -16,6 +16,8 @@ namespace :loader do
     load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'Denver', -7
     p 'Loading OC Register News Feed...'  
     load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'Orange County', -8
+    p 'Loading NY Daily News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/NYDailyNewsFeed020612.txt', 'New York', -5
   end 
   
   desc "Load database with data from Stanford feeds"

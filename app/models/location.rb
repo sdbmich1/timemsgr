@@ -34,5 +34,10 @@ class Location < ActiveRecord::Base
     location = Schedule::get_offset loc
     location.present? ? Location.closest(:origin => [location[:lat], location[:lng]]).first : nil
 #    Location.within(25, :origin => "San Rafael, CA")
+  end
+  
+  def self.nearest_city_by_ip ip
+    location = Geokit::Geocoders::IpGeocoder.geocode(ip)
+    location.present? ? Location.within(50, :origin => [location.city, location.state].join(', ')).first : nil
   end  
 end

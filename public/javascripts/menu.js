@@ -45,7 +45,8 @@ Free to use any way you like.
 
 // used to retrieve channels based on category selection
 function get_channels (category, loc) {
-  $.getScript('/list.js?location=' + loc + "&category=" + encodeURIComponent(category));
+  	var url = '/list.js?location=' + loc + "&category_id=" + category;
+  	process_url(url);
 }
 
 jQuery.fn.initMenu = function() {  
@@ -76,7 +77,10 @@ jQuery.fn.initMenu = function() {
                 else {
                    if(theElement.hasClass('acitem') && theElement.is(':visible')) {
                         if($(parent).hasClass('collapsible')) {
-                           get_channels($(this).text(), $('#location_id').val());
+                        	
+                        	// grabs location to get correct channels when menu category is deselected
+                           get_categories($('#location_id').val());
+                           
                            $('.acitem:visible', parent).first().slideUp('normal', 
                             function() {
                                 $(this).prev().removeClass('active');
@@ -92,11 +96,13 @@ jQuery.fn.initMenu = function() {
                     });
                     theElement.slideDown('normal', function() {
                         $(this).prev().addClass('active');
+                        $(this).prev().css('background-color', '#f08103');
                         
                         // grabs category text and location to get correct channels
-   						var category = $(this).prev().addClass('active').text();
+   						//var category = $(this).prev().addClass('active').text();   						
+   						var catid = $('.active').attr('data-catid');
   						var loc = $('#location_id').val();
-                        get_channels(category, loc);
+                        get_channels(catid, loc);
                     });
                     return false;
                 }

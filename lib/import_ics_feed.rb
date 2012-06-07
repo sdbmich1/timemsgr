@@ -5,7 +5,7 @@ class ImportICSFeed
     
   # read given file with list of ics filenames 
   def read_feeds(fname)
-    File.foreach(fname) {|line| process_feed(line.split(',')[0], line.split(',')[1], line.split(',')[2])}
+    File.foreach(fname) {|line| process_feed(line.split(',')[0], line.split(',')[1], line.split(',')[2], line.split(',')[3])}
   end  
     
   # open and read ics file

@@ -6,13 +6,6 @@ class EventObserver < ActiveRecord::Observer
     # clear cache
     Event.delete_cached
     
-    # check if event is longer than one day add additional days to schedule
-#    if model.eventstartdate < model.eventenddate
-#      model.class.to_s == 'PrivateEvent' ? code = get_code(model.reoccurencetype) : code = 'days'
-#      model.class.to_s == 'PrivateEvent' ? freq = get_freq(model.reoccurencetype) : freq = 1
-#      schedule_event(model, model.eventstartdate.to_date+freq.send(code), model.eventenddate.to_date, code, freq)
-#    end
-    
     # send notice as needed
     process_notice(model, 'new') unless model.class.to_s == 'ScheduledEvent'
   end
@@ -26,13 +19,19 @@ class EventObserver < ActiveRecord::Observer
       schedule_event(model, sdate+freq.send(period), edate, period)
     end
   end
-  
-  def get_code(rtype)
-    ReoccurenceType.get_code rtype
-  end
-  
-  def get_freq(rtype)
-    Frequency.get_code rtype
+
+  def set_reminder model
+    rm = Reminder.find_or_initialize_by_eventID model.eventid
+    rm.sourceID, rm.SubscriberID, rm.reminder_name, rm.remindertext, rm.localGMToffset = model.ssid, model.cid, model.event_name, model.bbody[0..249], model.localGMToffset
+    rm.reminder_type = ReminderType.get_description model.remindertype rescue nil
+    rm.startdate = rm.eventstartdate = model.eventstartdate
+    rm.starttime = rm.endtime = rm.set_start_time(model.eventstartdate, model.eventstarttime)
+    debugger
+    # queue reminder job
+    if rm.save
+      usr = User.get_user model.cid
+      Delayed::Job.enqueue(ReminderJob.new(usr, rm)) if usr
+    end
   end
   
   def after_update(model)
@@ -44,6 +43,10 @@ class EventObserver < ActiveRecord::Observer
   end
   
   def after_save(model)
+    # check for reminders  
+    set_reminder model if model.remindflg == 'yes'  
+
+    # add reward credits to user account
     save_credits(model.contentsourceID, 'Event', @reward_amt)
   end
   
@@ -51,4 +54,14 @@ class EventObserver < ActiveRecord::Observer
     @reward_amt = add_credits(model.changes)   
   end
   
+  private
+ 
+  def get_code(rtype)
+    ReoccurenceType.get_code rtype
+  end
+  
+  def get_freq(rtype)
+    Frequency.get_code rtype
+  end
+    
 end

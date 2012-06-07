@@ -115,11 +115,11 @@ class LocalChannel < KitsSubModel
      ['Business|Conferences|Seminars|Meetings|Trade Missions', 'Business'],
      ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto|Pops', 'Classical'],
      ['Cloud|Mobile|Technology|Software|Hardware|Server|Engineering|Social Media|SaaS|Enterprise|IaaS', 'Technology'],
-     ['Tennis|Boxing|Cricket|Wrestling', 'Sports'],['NFL|Football','NFL'],
+     ['Tennis|WTA|ATP', 'Tennis'],['NFL|Football','NFL'], ['Boxing|WBC|WBA|Fight|', 'Boxing'], ['Cricket', 'Cricket'], ['WWF|Wrestling', 'Wrestling'],
      ['NBA|Basketball', 'NBA'], ['NHL|Hockey', 'NHL'], ['MLB|Baseball', 'MLB'], ['MMA|Fighting', 'MMA'], ['PGA|Golf', 'PGA'], ["Women's Golf|LPGA|Golf", 'LPGA'],
-     ["WNBA|Women's Basketball", 'WNBA'],['MLS|Soccer|World Cup', 'Soccer'],
-     ['Pro Sports', 'NFL'],['Pro Sports','NBA'], ['Pro Sports','MLB'], ['Pro Sports','NHL'],
-     ['College Football|College Baseball|College Hockey|College Golf|College Tennis|College Basketball|Soccer|Softball|College Wrestling|Gymnastics|Track|Lacrosse|Water Polo|Rowing|Swimming|Fencing', 'College Sports'],
+     ["WNBA|Women's Basketball", 'WNBA'],['MLS|Soccer|World Cup', 'Soccer'], ['NASCAR|Formula One|CART|Indy Car|Auto Racing', 'Auto Racing'], 
+     ['Pro Sports', 'NFL'],['Pro Sports','NBA'], ['Pro Sports','MLB'], ['Pro Sports','NHL'], ['Pro Sports','MLS'], ['Pro Sports','WNBA'], ['Pro Sports', 'NASCAR'],
+     ['College Football|College Baseball|College Hockey|College Golf|College Tennis|College Basketball|College Soccer|Softball|College Wrestling|Gymnastics|Track|Lacrosse|Water Polo|Rowing|Swimming|Fencing', 'College Sports'],
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Founder', 'Startup'], 
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Financing|Venture|VC|IPO|M&A', 'Venture'],
      ['Sale|Offer|Deal','Promotions'],     
@@ -128,16 +128,28 @@ class LocalChannel < KitsSubModel
      ['Meeting|Conference', 'Meeting']]    
   end
   
-  def self.select_channel(title, cnty, loc)
+  def self.pick_channels int, cnty, loc
     channel = []
+    int.each do |i|
+      channel = build_channel_list channel, i.name, cnty, loc
+    end
+    channel.flatten 1
+  end
+  
+  def self.select_channel(title, cnty, loc)
+    build_channel_list [], title, cnty, loc  
+  end 
+  
+  def self.build_channel_list channel, title, cnty, loc
     parse_ary.each do |str|
       if !(title.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil? 
-        channel << get_channel(str[1],cnty, loc) 
+        found_channel = get_channel(str[1],cnty, loc)
+        channel << found_channel unless found_channel.blank? 
       end
     end 
-    channel << get_channel('Consolidated: All', cnty, loc) #if channel.blank?  
-    channel 
-  end  
+#    channel << get_channel('Consolidated: All', cnty, loc) #if channel.blank?  
+    channel    
+  end 
   
   # use regex to match key words in title & description to find right channels  
   def self.select_college_channel(title, school, descr)

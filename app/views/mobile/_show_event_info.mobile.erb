@@ -1,3 +1,4 @@
+<p class="item-descr"><%= link_to 'Host Site & More Event Details...', event.location unless (event.location =~ /http/i).nil? %></p>
 <% unless model.cbody.blank? %>
 	<ul data-role="listview" data-dividertheme="a">
 		<li data-role="list-divider">Description</li>

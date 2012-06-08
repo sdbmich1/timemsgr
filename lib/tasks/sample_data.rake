@@ -50,7 +50,10 @@ namespace :db do
   task :set_sfstate_channels => :environment do
     add_sfstate_channels
   end 
- 
+
+  task :set_city_locations => :environment do
+    add_city_locations
+  end 
 end 
 
 def add_lat_lng
@@ -221,5 +224,29 @@ def add_sfstate_channels
     end
   end
   
+end
+
+def add_city_locations
+  include Schedule
+  
+  ch = LocalChannel.where "channel_name like ?", 'About %'
+  ch.each do |channel|
+    loc = channel.channel_name.split('About ')[1]
+    addr = Schedule.get_offset loc if loc
+
+    if addr    
+      cntry = addr[:country] == 'USA'? 'United States' : addr[:country]    
+      country = Country.find_by_Description cntry if cntry
+      ccode = country.Code if country   
+      gmt = GmtTimezone.find_by_code addr[:offset] 
+      tzone = gmt.description if gmt
+    end
+    
+    p "#{addr[:city]} | #{addr[:state]} | #{cntry} | #{tzone} | Code #{ccode}" if addr && tzone
+    
+    # add location
+#    Location.find_or_create_by_city(:city=>addr[:city], :state=>addr[:state], :country=>cntry, :time_zone=>tzone, :localGMToffset=>addr[:offset],
+#      :country_id => ccode, :status=>'active', :hide=>'no', :lat=>addr[:lat], :lng=>addr[:lng]) if addr && tzone 
+  end
 end
     

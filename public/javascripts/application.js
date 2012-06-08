@@ -2,10 +2,10 @@
 // This file is automatically included by javascript_include_tag :defaults
 jQuery.ajaxSetup({  
     'beforeSend': function (xhr) {xhr.setRequestHeader("Accept", "text/javascript");
-    	$('#spinner').show()
+    	$('#spinner').show('fast')
     },
   	'complete': function(){
-     $('#spinner').hide()
+     $('#spinner').hide('slow')
   },
   	'success': function() {}  
 }); 
@@ -31,19 +31,28 @@ function toggleLoading () {
 $(function (){ 
   $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .bind("ajax:beforeSend", toggleLoading)
+    .bind("ajax:complete", toggleLoading)
     .bind("ajax:success", function(event, data, status, xhr) {
       $("#response").html(data).toggleLoading();
     });
 }); 
 
 $(function (){ 
+	
+  // add accordion
+  $("#accordion").accordion({ collapsible: true });	
 
   // add date picker code and synch start & end dates
-  var dateFormat = "mm/dd/yy";
+  if ( $('#start-date').length != 0 ) {
+
+  	var dateFormat = "mm/dd/yy";
 	
 	$('#start-date').datepicker({ 
  	  minDate:'-0d',
       dateFormat:dateFormat,
+      buttonImage: '../images/date_picker1.gif', 
+      buttonImageOnly: true, 
+      showOn: 'button',
       onSelect: function (dateText, inst) { 
           var nyd = $.datepicker.parseDate(dateFormat,dateText);
           $('#end-date').datepicker("option", 'minDate', nyd ).val($(this).val());
@@ -55,10 +64,13 @@ $(function (){
   
     $('#end-date').datepicker({ 
       onClose: function () { $(this).focus(); }, 
+ 	  minDate: '-0d',
       dateFormat:dateFormat,
-      onSelect: function(dateText, inst){ }                       
+      buttonImage: '../images/date_picker1.gif', 
+      buttonImageOnly: true, 
+      showOn: 'button'                       
     }); 
-    	
+  }  	
 });
 
 
@@ -89,7 +101,9 @@ function getSelectedValue(id) {
 
 // Used to check password strength
 $(function(){
+  if ( $('.password').length != 0 ) {
 	$('.password').pstrength();
+  }
 });
 
 $(function (){
@@ -113,8 +127,10 @@ $(function (){
 });
 
 $(function(){
+  if ( $('#mform label').length != 0 ) {
     $("#mform label").inFieldLabels();
-  });
+  }
+});
   
 $(function () {
    $("#ev-results .pagination a, #event_form .pagination a, #sub-list .pagination a,#channel_form .pagination a, #notice_list .pagination a, #pres-list .pagination a, #sess-list .pagination a").live('click', function () {
@@ -123,8 +139,9 @@ $(function () {
    });
 });
 
+// close light box pop-up window
 $(function () {
-   $("#submit-btn").live('click', function () {
+   $("#submit-btn, #notice-id").live('click', function () {
    	$.fancybox.close();
    });
 });
@@ -135,14 +152,17 @@ $(function () {
   })
 });
 
+// process channel selection changes
 $(function () {
   $(".channel_menu").live('click',function() {
     var intid = $(this).attr("data-intid");
     var loc = $('#location_id').val();
+    var url = '/select.js?location=' + loc + "&interest_id=" + intid
     
     $('ul.menu li ul li a').css('background-color', '#ccc');
 	$(this).css('background-color', '#C2E1EF');
-    $.getScript('/select.js?location=' + loc + "&interest_id=" + intid);
+	
+    process_url(url);    
   })
 });
 
@@ -155,36 +175,32 @@ $(function (){
 	})
 });
 
+// capitalize first letter
+function capitalize(string)
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// toggle city name in dropdown list where appropriate
 $(function (){
+   $("#search_btn").live('click', function () {
+   	 if ($("input[name='search']").length != 0) {
+   	 	var srchText = $("input[name='search']").val();
+   	 	if ( $('#location_id').length != 0 )
+ 		  {
+   	 		$("#location_id option:contains(" + capitalize(srchText) + ")").attr('selected', 'selected');
+   	 	 }
+   	 }
+	})
+});
 
-  // when the #location id field changes
-  $("select[id*=location_id]").live('change',function() {
+function get_categories (loc) {
+	var url = '/categories.js?location=' + loc;
+	process_url(url);
+}
 
-     	// grab the selected location
-     	var loc = $(this).val().toLowerCase();
-
-     	// check if interest is selected to call appropriate script
-     	if ( $('#interest_id').length != 0 )
-     	{
-     		var intid = $('#interest_id').val();
-     		var url = '/select.js?location=' + loc + "&interest_id=" + intid;
-     	}
-     	else
-     	{
- 			// check which dom is current to call appropriate url
- 			if ( $('.chanlist').length != 0 )
- 				{
- 					var url = '/categories.js?location=' + loc;
- 					var Slider = false;
- 				}
- 			else
- 				{
- 					var url = '/events.js?location=' + loc;
- 					var Slider = true;
- 				}    		
-     	}
-     	
-		$.ajax({
+function process_url (url) {
+  		$.ajax({
   			url: url,
   			dataType: 'script',
   			'beforeSend': function() {
@@ -194,13 +210,49 @@ $(function (){
   				toggleLoading();
     		},
   			'success': function() {
+  				toggleLoading();	
   				if (Slider)
-  					{ 
-  					toggleLoading();	
-  					reset_slider();
-  						}
+  					{ reset_slider(); }
   			}  
 		});
+}
+
+$(function (){
+
+  // when the #location id field changes
+  $("select[id*=location_id]").live('change',function() {
+
+     	// grab the selected location
+     	var loc = $(this).val().toLowerCase();
+ 
+     	// check if interest is selected to call appropriate script
+     	if ( $('#interest_id').length != 0 )
+     	{
+     		var intid = $('#interest_id').val(); 
+      		var url = '/select.js?location=' + loc + "&interest_id=" + intid;
+     		process_url(url); 
+     	}
+     	else
+     	{
+ 			// check channel page is current to call appropriate url
+ 			if ( $('.chanlist').length != 0 )
+ 				{
+      				var Slider = false;
+     				var catid = $('.active').attr('data-catid');
+      				if (catid.length == 0)
+     					{ get_categories(loc) }
+     				else
+     					{ get_channels(catid, loc) } 										
+ 				}
+ 			else
+ 				{
+ 					var url = '/events.js?location=' + loc;
+ 					var Slider = true;
+ 					process_url(url); 
+ 				}    		
+     	}
+     	
+
 		return false;       
   })
 });
@@ -210,5 +262,20 @@ $(function (){
   $("#start-time").live('change',function() {
      $("#end-time").val($(this).val());
   });
+  
+  $("#loc").live('click',function() {
+    $(this).text($(this).text() == 'Add Location' ? $('.ev-loc').show('fast') : $('.ev-loc').hide('fast') );
+    $(this).text($(this).text() == 'Add Location' ? 'Hide Location' : '+ Add Location');
+  });   
 });
 
+// check if reminder checkbox is selected
+$(function (){
+	$('#remflg').bind('change', function () {
+
+		if ($(this).attr("checked"))
+		  { $("#reminder-type").show('fast'); }      		
+   		else
+      	  { $("#reminder-type").hide('slow'); }
+	});
+});

@@ -99,7 +99,7 @@ class LifeEvent < ActiveRecord::Base
       self.eventstarttime, self.eventendtime = Time.parse('00:00'), Time.parse('11:59')
     end
      
-    self.postdate, self.event_title = Time.now, self.event_name
+    self.postdate, self.event_title, self.bbody = Time.now, self.event_name, self.cbody
     self.eventid = self.event_type[0..1] + Time.now.to_i.to_s 
  
     if new_record?     

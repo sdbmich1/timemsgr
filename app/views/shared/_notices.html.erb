@@ -23,7 +23,7 @@
       <td><%= get_local_time(notice.created_at) %></td>
       <td><%= notice.message %></td>
       <% unless notice.event_name.blank? %>
-      	<td><%= link_to notice.event_name, event_path(:id=>notice.event_id, :etype=>notice.event_type), :id=>'notice-id' %></td>
+      	<td><%= link_to notice.event_name, event_path(:id=>notice.event_id, :etype=>notice.event_type, :eid=>notice.eventid, :sdt=>notice.eventstartdate), :id=>'notice-id' %></td>
       	<td><%= notice.start_date %></td>
       	<td><%= notice.end_date %></td>
       	<td><%= notice.start_time %></td>

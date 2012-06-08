@@ -1,2 +1,5 @@
 $("#channel_form").html("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
-$("#spinner").toggle(); 
+
+$('ul.menu li a').css('background-color', '#0C6FCB');
+$('ul.menu li ul li a').css('background-color', '#ccc');
+$("#spinner").hide('fast'); 

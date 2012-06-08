@@ -8,6 +8,12 @@ $(document).bind("mobileinit", function(){
 	//reset type=date inputs to text
    	$.mobile.page.prototype.options.degradeInputs.date = true;
    	
+   	// hide toolbars
+   	$("#app").live('pageshow', function(event) {
+       $.mobile.fixedToolbars.hide(true)
+	});
+
+   	
    	// hides the date time as soon as the DOM is ready
     $('#timebox').hide();
     
@@ -28,4 +34,21 @@ $(document).bind("mobileinit", function(){
   	});
  	 
 });
+
+$(document).bind("pageinit", function(){
+    $("#mform label").inFieldLabels();
+});	
+   
+  // add iphone orientation change handler
+  $(function (){ 
+    if (navigator.userAgent.match(/iPhone/i)) {
+        $(window).bind('orientationchange', function(event) {
+            if (window.orientation == 90 || window.orientation == -90 || window.orientation == 270) {
+                $('meta[name="viewport"]').attr('content', 'height=device-width,width=device-height,initial-scale=1.0,maximum-scale=1.0');
+            } else {
+                $('meta[name="viewport"]').attr('content', 'height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0');
+            }
+        }).trigger('orientationchange');
+    }	
+  }); 	
 	 

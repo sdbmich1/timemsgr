@@ -30,7 +30,7 @@
   <% end %>
 </table>
 <% if @interest %>
-	<%= hidden_field_tag 'interest_id', @interest %>
+	<%= hidden_field_tag 'interest_id', @interest.id %>
 <% end %>
 <div class="nav-right">
   <%= will_paginate @channels %>

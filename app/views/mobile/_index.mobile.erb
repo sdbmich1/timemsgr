@@ -4,7 +4,7 @@
 	  	<%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event, :locals => {:edate => Date.today} %>
 	</div>			
 
-	<% [['Appointments & Reminders','Appointment'],['Scheduled Activities','Schedule'],['Tracked Activities','Tracked'], ['Suggested Opportunities', 'Suggested']].each do |etype| %>
+	<% [['Scheduled Activities','Schedule'],['Tracked Activities','Tracked'], ['Suggested Opportunities', 'Suggested']].each do |etype| %>
 		<li data-role="list-divider" class="center-wrapper"><%= etype[0] %></li>
 		<% if etype[1] == 'Schedule' %>
 			<% get_date_range(@events, @enddate).each do |edate| %>

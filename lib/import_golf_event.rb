@@ -5,7 +5,7 @@ require 'geokit'
 class ImportGolfEvent
   include Schedule
   
-  def parse_golf_events(feed_url, sport, oset, x)
+  def parse_golf_events(feed_url, sport, oset, x, tour)
     events, addr = [], {}
     doc = Nokogiri::HTML(open(feed_url)) 
     
@@ -46,12 +46,12 @@ class ImportGolfEvent
         addr = Schedule.get_offset [city, mstate].join(', ') unless city.blank? 
         
         # add event to calendar
-        cid.map {|channel| add_golf_event(event[:url], event[:name], details, Date.today, sdt, edt, channel.channelID, loc, addr)} if addr
+        cid.map {|channel| add_golf_event(event[:url], [tour, event[:name]].join(' '), details, Date.today, sdt, edt, channel.channelID, loc, addr)} if addr
       end
     end     
   end
   
-  def process_lpga_events(feed_url, sport)
+  def process_lpga_events(feed_url, sport, tour)
     addr = {}
     doc = Nokogiri::HTML(open(feed_url)) 
     cnt = doc.css('.scheduleDate').count  
@@ -74,7 +74,7 @@ class ImportGolfEvent
       addr = Schedule.get_offset loc unless loc.blank? 
       
       # add event to calendar
-      cid.map {|channel| add_golf_event(feed_url, event, details, Date.today, sdt, edt, channel.channelID, loc, addr)} if addr    
+      cid.map {|channel| add_golf_event(feed_url, [tour, event].join(' '), details, Date.today, sdt, edt, channel.channelID, loc, addr)} if addr    
     end
   end
   
@@ -89,6 +89,8 @@ class ImportGolfEvent
         :contentsourceURL => args[0][0..99], :location => args[7][0..254],
         :contentsourceID => args[6], :subscriptionsourceID => args[6])
         
+    event.eventstarttime = (args[4].to_date.to_s + ' 7:00 AM').to_datetime
+    event.eventendtime = (args[5].to_date.to_s + ' 6:00 PM').to_datetime
     event.localGMToffset = event.endGMToffset = args[8][:offset] if args[8]
     event.mapstate = args[8][:state][0..24] if args[8][:state]    
     event.mapcity, event.mapzip, event.mapcountry = args[8][:city], args[8][:zip], args[8][:country] if args[8] 

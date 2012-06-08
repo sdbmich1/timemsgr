@@ -15,8 +15,7 @@ class ApplicationController < ActionController::Base
     if @user.sign_in_count <= 1 # check for new users
       new_local_subscription_path
     else
-      p 'In app controller...'
-      events_path
+      params[:next] || events_path
     end 
   end
   
@@ -33,7 +32,8 @@ class ApplicationController < ActionController::Base
   def load_settings
     if signed_in?
       @user ||= current_user
-      @location ||= Location.find_location params[:location] || current_user.location_id
+      session[:location] = params[:location] if params[:location]
+      @location ||= Location.find_location session[:location] || current_user.location_id
       @facebook_user = @user.get_facebook_user session[:omniauth] if session[:omniauth]
     end
   end

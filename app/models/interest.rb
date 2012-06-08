@@ -7,11 +7,11 @@ class Interest < KitsTsdModel
 	has_many :users, :through => :user_interests
 		
 	has_many :channel_interests
-	has_many :local_channels, :through => :channel_interests, 
+	has_many :local_channels, # :through => :channel_interests, 
 				:conditions => { :status.downcase => 'active'},
-				:finder_sql => proc { "SELECT l.* FROM `kitssubdb`.local_channels l " +
-           "INNER JOIN `kitsknndb`.channel_interests c ON c.channel_id=l.id " +
-           "WHERE l.id=#{id}" }
+				:finder_sql => proc { "SELECT l.* FROM `kitssubdb`.channels l " +
+           "INNER JOIN `kitsknndb`.channel_interests c ON c.channel_id=l.ID " +
+           "WHERE c.interest_id=#{id}" }
 	
   has_many :calendar_events, :through => :local_channels
     

@@ -224,10 +224,10 @@ class User < ActiveRecord::Base
   end 
   
   def interest_events *args
-    events = chanlist = []
+    elist = chanlist = []
     interests.map {|interest| chanlist << LocalChannel.select_channel(interest.name, location, location)[0]}  
-    chanlist.map { |ch| ch.map {|channel| events << channel.calendar_events.range(args[0]) } } if channels
-    events.compact!
+    chanlist.map { |ch| ch.map {|channel| elist << channel.calendar_events.range(args[0]) } } if chanlist
+    elist
   end
   
   def profile_city

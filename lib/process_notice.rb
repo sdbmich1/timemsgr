@@ -7,7 +7,8 @@ module ProcessNotice
     
     # get trackers based on type    
     unless usr.blank? 
-      [['private_trackers', 'allowPrivCircle'], ['social_trackers', 'allowSocCircle'], ['extended_trackers', 'allowWorldCircle']].each do |method|
+      [['private_trackers', 'allowPrivCircle'], ['social_trackers', 'allowSocCircle'], ['extended_trackers', 'allowWorldCircle'], 
+       ['private_trackeds', 'allowPrivCircle'], ['social_trackeds', 'allowSocCircle'], ['extended_trackeds', 'allowWorldCircle']].each do |method|
         trkrs = usr.send(method[0]) if model.send(method[1])
         post_notice(trkrs, model, usr, ptype) if trkrs
       end
@@ -37,6 +38,16 @@ module ProcessNotice
 
     #also send email to person
     UserMailer.delay.send_request(trkr.email, enotice, usr) unless trkr.email.blank? 
+  end
+  
+  def reminder_notice model, ptype
+    # get profile info
+    usr = User.find model.ssid
+    
+    # add notice
+    enotice = EventNotice.create( :Notice_Type=>ptype,:Notice_Text=>usr.name + ' has ' + ptype + 'ed a connection with you.', 
+            :sourceID=>usr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )  
+    
   end
     
   def post_notice(ary, model, usr, ptype)

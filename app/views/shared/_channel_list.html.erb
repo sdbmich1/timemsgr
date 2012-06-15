@@ -1,7 +1,6 @@
 <div class="chanlist"></div>
 <table>
   <tr>
-    <th></th>
     <th>Name</th>
     <th>Summary</th>
     <th>Subscribers</th>
@@ -10,11 +9,6 @@
   <% @channels.each do |channel| %>
     <% unless channel.blank? %>
      <tr>
-      <td>
-        <div class="pic-size">
-	  		<%= render :partial => 'shared/show_photo', :locals => {:model => channel, :file_name => "headshot1.jpg", :psize => '48x48' } %>
-		</div>
-      </td>
       <td><%= channel.channel_name %></td>
       <td><%= channel.summary %></td>
       <td><center><%= channel.subscriptions.size %></center></td>
@@ -22,7 +16,7 @@
 	  	<% if subscribed?(channel.channelID)%>
 			<%= link_to "Unsubscribe", subscription_url(:id=>get_subscription(channel.subscriptions, channel.channelID), :user_id=>@user, :channel_id =>channel.channelID), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %>
 	  	<% else %>
-			<%= link_to "Subscribe", subscriptions_url(:user_id=>@user, :channel_id => channel.channelID), :id=>'subscribe_btn', :method=>:post, :remote=>true %>
+			<%= link_to "Subscribe", subscriptions_url(:user_id=>@user, :channel_id => channel.channelID), :id=>'subscribe_btn', :method=>:post, :confirm => 'Subscribe to this channel?', :remote=>true %>
 	  	<% end %>
 	  </td>
      </tr>

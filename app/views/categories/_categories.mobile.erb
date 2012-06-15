@@ -1,8 +1,8 @@
 <div data-role="collapsible">
-	<h3><%= getlogo(category.photo_file_name) %><%= "#{category.name.titleize}" %></h3>
+	<h3><%= "#{category.name.titleize}" %></h3>
 	<ul data-role="listview">
-	  <% category.interests.each do |interest| %>		
-		<li><%= link_to interest.name, select_url(:interest_id => interest), :remote=>true %></li>
+	  <% category.interests.reorder('name').each do |interest| %>		
+		<li><%= link_to interest.name, select_url(:interest_id=> interest, :location=> @location), :remote=>true %></li>
 	  <% end %>
 	</ul>	
 </div>

@@ -1,8 +1,8 @@
 	<div data-role="fieldcontain"> 
       <fieldset data-role="controlgroup"> 
 		<% if etype == 'event' %>
-		Frequency:
-			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:selected => 'O'}, :prompt => 'Select Frequency' %>
+		<label>Frequency:</label> 
+			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:selected => 'O', :prompt => 'Select Frequency'}, {'data-mini'=>"true"} %>
 		<% elsif etype == 'life' %>
      		<%= f.check_box :annualsamedate, {:id => "freq"}, "yes", "no" %>
 			<label for="freq">Annual</label>
@@ -10,7 +10,7 @@
 		<% end %>
       </fieldset> 
       <fieldset data-role="controlgroup" data-mini="true"> 
-		Share with:
+		<label>Share with:</label> 
      	<%= f.check_box :allowPrivCircle, {:id => "allowPriv"}, "yes", "no" %>
 		<label for="allowPriv">My Family</label>
      	<%= f.check_box :allowSocCircle, {:id => "allowSoc"}, "yes", "no" %>
@@ -21,7 +21,7 @@
 
       <% if controller_name == 'life_events' %> 
         <fieldset data-role="controlgroup" data-mini="true"> 
-			Show:
+			<label>Show:</label> 
      		<%= f.check_box :ShowPrivCircle, {:id => "showPriv"}, "yes", "no" %>
 			<label for="showPriv">My Family</label>
      		<%= f.check_box :ShowSocCircle, {:id => "showSoc"},  "yes",  "no" %>

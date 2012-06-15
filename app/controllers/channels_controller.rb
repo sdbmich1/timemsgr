@@ -17,7 +17,7 @@ class ChannelsController < ApplicationController
   
   def select
     @interest = Interest.find params[:interest_id]
-    @channels = LocalChannel.select_channel(@interest.name, @location.city, @user.location)[0].paginate(:page => params[:page], :per_page => 15 )
+    @channels = mobile_device? ? LocalChannel.select_channel(@interest.name, @location.city, @user.location)[0] : LocalChannel.select_channel(@interest.name, @location.city, @user.location)[0].paginate(:page => params[:page], :per_page => 15 )
   end
   
   private

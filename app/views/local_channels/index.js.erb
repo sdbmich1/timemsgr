@@ -1,0 +1,3 @@
+var content = "<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>"
+var content2 = "#{escape_javascript( raw render(:partial => "shared/channel_list") )}"
+insert_page("#{@location.id}", content, content2);

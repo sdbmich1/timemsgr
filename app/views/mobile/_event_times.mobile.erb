@@ -1,22 +1,22 @@
 <div data-role="fieldcontain">
 	<fieldset data-role="controlgroup" data-type="horizontal">
-		<legend>Start Date:</legend>
-		<div class="center-wrapper">	
-		<%= f.date_select :eventstartdate, :as => :date, :start_year => Date.today.year, :end_year => Date.today.year + 1, 
-						  :order => [:month, :day, :year], :required => true, :prompt => true, :id=>'start-date' %></div>
+		<label>Start Date:</label>
+		<%= f.date_select :eventstartdate, {:as => :date, :start_year => Date.today.year, :end_year => Date.today.year + 1, 
+						  :order => [:month, :day, :year], :prompt => true, :required => true}, {:id=>'start-date', 'data-mini'=>"true"} %>
    	</fieldset>
 </div>                             
-<span>Start Time </span><br /> <%= f.time_select :eventstarttime,{ :default => Time.now.change(:hour => 12), :simple_time_select => true, 
-		 		:minute_interval => 5, :time_separator => "" }, :value => chk_offset(@event.eventstarttime, @event.localGMToffset), :id=>'start-time' %>
-<span>Start Time Zone: </span><%= f.collection_select :localGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.localGMToffset)} %>
+<label>Start Time: </label><br /> <%= f.time_select :eventstarttime,{ :default => Time.now.change(:hour => 12), :simple_time_select => true, 
+		 		:minute_interval => 5, :time_separator => "" }, :value => chk_offset(@event.eventstarttime, @event.localGMToffset), :id=>'start-time', 'data-mini'=>"true" %>
+<label>Start Time Zone: </label><%= f.collection_select :localGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.localGMToffset)}, {'data-mini'=>"true"} %>
+<div class="ptop">
 <div data-role="fieldcontain">
 	<fieldset data-role="controlgroup" data-type="horizontal">
-		<legend>End Date:</legend>	
-		<div class="center-wrapper">	
-		<%= f.date_select :eventenddate, :as => :date, :start_year => Date.today.year, :end_year => Date.today.year + 2, 
-                          :order => [:month, :day, :year], :required => true, :prompt => true, :id=>'end-date' %></div>
+		<label>End Date:</label>	
+		<%= f.date_select :eventenddate, {:as => :date, :start_year => Date.today.year, :end_year => Date.today.year + 2, 
+                          :order => [:month, :day, :year], :required => true, :prompt => true}, {:id=>'end-date', 'data-mini'=>"true"} %>
     	</fieldset>
 </div>                                                    
-<span>End Time </span><br /><%= f.time_select :eventendtime, { :default => Time.now.change(:hour => 12), :simple_time_select => true, :minute_interval => 5, :time_separator => "" }, 
-     				:value => chk_offset(@event.eventendtime, @event.endGMToffset), :id=>'end-time' %>
-<span>End Time Zone: </span> <%= f.collection_select :endGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.endGMToffset)} %>
+<label>End Time: </label><br /><%= f.time_select :eventendtime, { :default => Time.now.change(:hour => 12), :simple_time_select => true, :minute_interval => 5, :time_separator => "" }, 
+     				:value => chk_offset(@event.eventendtime, @event.endGMToffset), :id=>'end-time', 'data-mini'=>"true" %>
+<label>End Time Zone: </label> <%= f.collection_select :endGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.endGMToffset)}, {'data-mini'=>"true"} %>
+</div>

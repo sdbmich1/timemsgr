@@ -46,7 +46,7 @@ Free to use any way you like.
 // used to retrieve channels based on category selection
 function get_channels (category, loc) {
   	var url = '/list.js?location=' + loc + "&category_id=" + category;
-  	process_url(url);
+  	process_url(url, false);
 }
 
 jQuery.fn.initMenu = function() {  
@@ -84,7 +84,8 @@ jQuery.fn.initMenu = function() {
                            $('.acitem:visible', parent).first().slideUp('normal', 
                             function() {
                                 $(this).prev().removeClass('active');
-                            }
+                       			$(this).prev().css('background-color', '#0C6FCB');
+                             }
                         );
                         return false;  
                     }

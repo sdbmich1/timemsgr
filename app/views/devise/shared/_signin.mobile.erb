@@ -7,12 +7,12 @@
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<%= render "mobile/error_messages", :target => resource %>  
 	<p><label for="user_login">Your Email or Username</label>
-    <%= f.text_field :login %></p>
+    <%= f.text_field :login, "data-mini"=>"true" %></p>
 
 	<p><label for="user_password">Your Password</label>
-    <%= f.password_field :password %></p>
+    <%= f.password_field :password, "data-mini"=>"true" %></p>
     
-    <p><%= f.submit "Sign In", "data-theme"=>"b" %></p>
+    <p><%= f.submit "Sign In", "data-theme"=>"b", "data-mini"=>"true" %></p>
   <% end %>
   <%= render :partial => "devise/shared/links" %>
  </div>

@@ -39,9 +39,6 @@ $(function (){
 
 $(function (){ 
 	
-  // add accordion
-  $("#accordion").accordion({ collapsible: true });	
-
   // add date picker code and synch start & end dates
   if ( $('#start-date').length != 0 ) {
 
@@ -194,12 +191,12 @@ $(function (){
 	})
 });
 
-function get_categories (loc) {
+function get_categories (loc, flg) {
 	var url = '/categories.js?location=' + loc;
-	process_url(url);
+	process_url(url, flg);
 }
 
-function process_url (url) {
+function process_url (url, Slider) {
   		$.ajax({
   			url: url,
   			dataType: 'script',
@@ -230,7 +227,7 @@ $(function (){
      	{
      		var intid = $('#interest_id').val(); 
       		var url = '/select.js?location=' + loc + "&interest_id=" + intid;
-     		process_url(url); 
+     		process_url(url, false); 
      	}
      	else
      	{
@@ -239,23 +236,30 @@ $(function (){
  				{
       				var Slider = false;
      				var catid = $('.active').attr('data-catid');
-      				if (catid.length == 0)
-     					{ get_categories(loc) }
+      				if (typeof catid === 'undefined') 
+     						{ get_categories(loc, Slider) }
      				else
-     					{ get_channels(catid, loc) } 										
- 				}
+     						{ get_channels(catid, loc) }
+  				}
  			else
  				{
  					var url = '/events.js?location=' + loc;
  					var Slider = true;
- 					process_url(url); 
+ 					process_url(url, Slider); 
  				}    		
      	}
      	
-
 		return false;       
   })
 });
+
+// add accordion
+$(function(){
+  if ( $('#accordian').length != 0 ) {
+  	$("#accordion").accordion({ collapsible: true });	
+  }
+});
+
 
 // when the #start time field changes
 $(function (){

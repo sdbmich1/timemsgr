@@ -96,7 +96,8 @@
     height: 44px; 
     width: 44px; 
     border: 1px solid #000000;
-    }    
+    }
+        
 .ptitle { margin-top: 0px; margin-bottom: 0px; font-weight: bold }    
 
 /*  event list items */
@@ -111,6 +112,8 @@
 	   
 .ui-li-desc {text-overflow: normal; overflow: visible; 
 			white-space: pre-wrap; font-size: 0.65em;}
+			
+label, label.ui-input-text { font-size:12px!important; margin-top:5px!important; }
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
@@ -143,6 +146,13 @@
 	position: relative;
 }
 
+/*  channel list styling */
+.chtitle h6 { font-size:0.8em; line-height: 1.05em; height: 50px; width: 100%; color: blue;}
+.ch-descr { position:absolute; top: 2.25em;  margin-bottom: 5px; width: 100%; }
+.ui-controlgroup, fieldset.ui-controlgroup {padding: 0!important; margin: 0 0 0!important;}
+.ui-controlgroup .ui-checkbox label {font-size: 14px;}
+.ui-field-contain, fieldset.ui-field-contain {padding: 0 0!important;}
+.ui-bar, .ui-body {padding: 0 0!important;}
 
 .mobile-slider { margin-bottom: 10px; padding: 0; margin-left:auto; margin-right: auto;  }
 .img-btm { position:absolute; bottom: 0.75em; width: 100%;  left: 4em; }

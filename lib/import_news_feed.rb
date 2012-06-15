@@ -23,7 +23,7 @@ class ImportNewsFeed
         :contentsourceID => args[4], :localGMToffset => args[6], :endGMToffset => args[6],
         :subscriptionsourceID => args[4]) 
     new_event.imagelink = doc.xpath("//item//images//url")[n].text rescue nil
-    new_event.save(false)
+    new_event.save(:validate=>false)
   end  
   
   # parse xml feeds from given url

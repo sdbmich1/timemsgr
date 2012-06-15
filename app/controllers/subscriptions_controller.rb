@@ -3,8 +3,8 @@ class SubscriptionsController < ApplicationController
   layout :page_layout
   
   def create
-    @channel = LocalChannel.find_by_channelID(params[:channel_id])
     @user ||= User.find(params[:user_id])
+    @channel = LocalChannel.find_by_channelID(params[:channel_id])
     @subscription = Subscription.new_member(@user, @channel)
     if @subscription.save
       redirect_to :back, :notice => "#{get_msg(@user, 'Subscription')}" 

@@ -38,7 +38,23 @@ $(document).bind("mobileinit", function(){
 $(document).bind("pageinit", function(){
     $("#mform label").inFieldLabels();
 });	
-   
+
+$(document).bind('pageshow', function() {
+    $($('.page.ui-page-active form :input:visible')[0]).focus();
+});
+
+$("#loc_id").live("change", function() {
+    var loc = $(this).val().toLowerCase(); // grab the selected location 
+    var url = '/categories.mobile?location=' + loc;  
+
+	// change the page
+    $.mobile.changePage(url, { reloadPage : true });
+
+    //prevent the default behavior of the click event
+    return false;
+});
+
+ 
   // add iphone orientation change handler
   $(function (){ 
     if (navigator.userAgent.match(/iPhone/i)) {
@@ -50,5 +66,13 @@ $(document).bind("pageinit", function(){
             }
         }).trigger('orientationchange');
     }	
-  }); 	
+  });
+  
+// when the #start date field changes
+$(function (){
+  $("#start-date").live('change',function() {
+     $("#end-date").val($(this).val());
+  });
+});
+ 	
 	 

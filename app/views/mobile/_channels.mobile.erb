@@ -1,5 +1,5 @@
-<ul data-role="listview">
-  <% @channels.each do |channel| %>
-  	<%= render :partial => 'mobile/channel', :locals => {:channel => channel } %>
-  <% end %>
+<ul data-role="listview" id="moblist">
+
+  	<%= render :partial => 'mobile/channel', :collection => @channels, :as => :channel %>
+
 </ul>

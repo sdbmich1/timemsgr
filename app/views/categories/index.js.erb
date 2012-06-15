@@ -1,2 +1,6 @@
-$("#channel_form").html("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
-$("#spinner").hide('fast'); 
+<% if mobile_device? %>
+	$("#moblist").mobile("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
+<% else %>
+	$("#channel_form").html("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
+	$("#spinner").hide('fast'); 
+<% end %>

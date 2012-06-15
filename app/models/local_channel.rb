@@ -73,7 +73,7 @@ class LocalChannel < KitsSubModel
   end
   
   def summary
-    bbody.blank? ? '' : bbody[0..95] + '...'
+    bbody.blank? ? '' : bbody[0..119] + '...'
   end
   
   def current_events

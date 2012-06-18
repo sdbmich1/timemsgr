@@ -267,9 +267,13 @@ $(function (){
      $("#end-time").val($(this).val());
   });
   
+  $("#start-dt").live('change',function() {
+     $("#end-dt").val($(this).val());
+  });
+  
   $("#loc").live('click',function() {
-    $(this).text($(this).text() == 'Add Location' ? $('.ev-loc').show('fast') : $('.ev-loc').hide('fast') );
-    $(this).text($(this).text() == 'Add Location' ? 'Hide Location' : '+ Add Location');
+    $(this).text($(this).text() == '+ Add Location' ?  $('.ev-loc').show('fast') : $('.ev-loc').hide('fast') );
+    $(this).text($(this).text() == '+ Add Location' ? '- Hide Location' : '+ Add Location');
   });   
 });
 

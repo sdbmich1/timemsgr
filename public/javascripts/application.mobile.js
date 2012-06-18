@@ -54,6 +54,19 @@ $("#loc_id").live("change", function() {
     return false;
 });
 
+$(function (){
+  $("#start-tm").live('change',function() {
+	var newTm = $(this).val();
+	$('#end-tm').val(newTm).selectmenu("refresh");
+	alert($("#end-tm").val());
+
+    // set the right element with the select value
+//	$('#end-tm option[value='+newTm+']').attr('selected', 'selected');	
+//    $("#end-tm").selectmenu('refresh', true);
+
+  });
+});
+
  
   // add iphone orientation change handler
   $(function (){ 

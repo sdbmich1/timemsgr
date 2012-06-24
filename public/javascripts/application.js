@@ -267,10 +267,6 @@ $(function (){
      $("#end-time").val($(this).val());
   });
   
-  $("#start-dt").live('change',function() {
-     $("#end-dt").val($(this).val());
-  });
-  
   $("#loc").live('click',function() {
     $(this).text($(this).text() == '+ Add Location' ?  $('.ev-loc').show('fast') : $('.ev-loc').hide('fast') );
     $(this).text($(this).text() == '+ Add Location' ? '- Hide Location' : '+ Add Location');
@@ -279,8 +275,7 @@ $(function (){
 
 // check if reminder checkbox is selected
 $(function (){
-	$('#remflg').bind('change', function () {
-
+	$('#remflg').live('change', function () {
 		if ($(this).attr("checked"))
 		  { $("#reminder-type").show('fast'); }      		
    		else

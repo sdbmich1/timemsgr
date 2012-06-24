@@ -6,10 +6,10 @@ $(document).bind("mobileinit", function(){
 	$.extend(  $.mobile, { ajaxFormsEnabled: false });
 				
 	//reset type=date inputs to text
-   	$.mobile.page.prototype.options.degradeInputs.date = true;
+//   	$.mobile.page.prototype.options.degradeInputs.date = true;
    	
    	// hide toolbars
-   	$("#app").live('pageshow', function(event) {
+   	$(document).bind('pageshow', function(event) {
        $.mobile.fixedToolbars.hide(true)
 	});
 
@@ -35,12 +35,8 @@ $(document).bind("mobileinit", function(){
  	 
 });
 
-$(document).bind("pageinit", function(){
-    $("#mform label").inFieldLabels();
-});	
-
 $(document).bind('pageshow', function() {
-    $($('.page.ui-page-active form :input:visible')[0]).focus();
+    $($('.ui-page-active form :input:visible')[0]).focus();
 });
 
 $("#loc_id").live("change", function() {
@@ -54,20 +50,14 @@ $("#loc_id").live("change", function() {
     return false;
 });
 
-$(function (){
-  $("#start-tm").live('change',function() {
-	var newTm = $(this).val();
-	$('#end-tm').val(newTm).selectmenu("refresh");
-	alert($("#end-tm").val());
-
-    // set the right element with the select value
-//	$('#end-tm option[value='+newTm+']').attr('selected', 'selected');	
-//    $("#end-tm").selectmenu('refresh', true);
-
-  });
-});
-
- 
+$(function() {    
+  $("#rflg").live('click',function() {
+    $(this).text($(this).text() == '+ Add Reminder' ? $('#reminder-type').show('fast') : $('#reminder-type').hide('fast'));    
+    $(this).text($(this).text() == '+ Add Reminder' ? $('#remflg').val('yes') : $('#remflg').val('no') );
+    $(this).text($(this).text() == '+ Add Reminder' ? '- Remove Reminder' : '+ Add Reminder');
+  });     
+}); 
+  
   // add iphone orientation change handler
   $(function (){ 
     if (navigator.userAgent.match(/iPhone/i)) {
@@ -80,12 +70,20 @@ $(function (){
         }).trigger('orientationchange');
     }	
   });
-  
-// when the #start date field changes
-$(function (){
-  $("#start-date").live('change',function() {
-     $("#end-date").val($(this).val());
-  });
-});
- 	
+
+// set enddate to startdate
+function dooffset() { 
+  var startdate = $('#start-dt').val(); 
+ 
+  $('#end-dt').val(startdate); 
+  $('#end-dt').trigger('datebox', {'method':'doset'});
+}
+
+// set endtime to start time
+function dotimeoffset() { 
+  var starttime = $('#start-tm').val(); 
+ 
+  $('#end-tm').val(starttime); 
+  $('#end-tm').trigger('datebox', {'method':'doset'});
+}
 	 

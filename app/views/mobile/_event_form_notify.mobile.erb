@@ -1,5 +1,5 @@
 	<div data-role="fieldcontain"> 
-      <fieldset data-role="controlgroup"> 
+      <fieldset data-role="controlgroup" data-mini="true"> 
 		<% if etype == 'event' %>
 		<label>Frequency:</label> 
 			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:selected => 'O'}, {'data-mini'=>"true"} %>

@@ -389,4 +389,8 @@ module EventsHelper
   def get_display_type(etype, tag)
     [etype == 'event' ? 'private_event' : 'life_event', tag].join('_')
   end 
+  
+  def get_etype_data(etype)
+    etype == 'event' || etype == 'private_events' ? EventType.all :  LifeEventType.all
+  end
 end

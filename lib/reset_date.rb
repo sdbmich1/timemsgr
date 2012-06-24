@@ -22,10 +22,10 @@ module ResetDate
       val.delete(:"eventendtime(5i)")
     end
 
-    unless mobile_device?
+#    unless mobile_device?
       val[:eventstartdate] = parse_date(val[:eventstartdate]) if val[:eventstartdate] 
       val[:eventenddate] = parse_date(val[:eventenddate]) if val[:eventenddate]
-    end 
+#    end 
     val
   end
 end

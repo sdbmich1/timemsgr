@@ -8,4 +8,8 @@ class LifeEventType < ActiveRecord::Base
   def self.get_type ptype
     where('Code = ?', ptype)
   end  
+  
+  def code
+    self.Code
+  end
 end

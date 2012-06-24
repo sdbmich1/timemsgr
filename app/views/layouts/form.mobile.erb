@@ -3,7 +3,6 @@
   <head>  
   	<%= yield :title %> 
 	<%= render 'layouts/jqm' %>
- 
     <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
     <% if !user_signed_in? %>
     	<%= stylesheet_link_tag "mobile_device" %>
@@ -12,7 +11,7 @@
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div id="app" data-role="page"> 
+  <div id="formapp" data-role="page"> 
     <div data-role="header" data-theme="b">
       <%= yield :head %>
     </div>

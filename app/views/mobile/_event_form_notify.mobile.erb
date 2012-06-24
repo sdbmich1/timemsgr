@@ -1,8 +1,8 @@
 	<div data-role="fieldcontain"> 
-      <fieldset data-role="controlgroup"> 
+      <fieldset data-role="controlgroup" data-mini="true"> 
 		<% if etype == 'event' %>
 		<label>Frequency:</label> 
-			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:selected => 'O', :prompt => 'Select Frequency'}, {'data-mini'=>"true"} %>
+			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:selected => 'O'}, {'data-mini'=>"true"} %>
 		<% elsif etype == 'life' %>
      		<%= f.check_box :annualsamedate, {:id => "freq"}, "yes", "no" %>
 			<label for="freq">Annual</label>

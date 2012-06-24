@@ -13,10 +13,11 @@ class PrivateEventsController < ApplicationController
   end
 
   def new
-    @event = PrivateEvent.new(:eventstartdate=>Date.today, :eventenddate=>Date.today)
+    @event = PrivateEvent.new #(:eventstartdate=>Date.today, :eventenddate=>Date.today)
   end
 
   def create
+    @user ||= current_user
     @event = PrivateEvent.new(reset_dates(params[:private_event]))
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
@@ -32,7 +33,7 @@ class PrivateEventsController < ApplicationController
   def update
     @event = PrivateEvent.find_event(params[:id])
     if @event.update_attributes(reset_dates(params[:private_event]))
-      redirect_to events_url, :notice  =>  "#{get_msg(@user, 'Event')}"
+      redirect_to events_url, :notice  => "#{get_msg(@user, 'Event')}"
     else
       render :action => 'edit'
     end

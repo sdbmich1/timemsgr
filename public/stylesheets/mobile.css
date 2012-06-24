@@ -255,3 +255,5 @@ a.notice-btn {
   background-color: #c00;
   color: #fff;
 }
+
+.ui-input-datebox input {width: 99%!important;}

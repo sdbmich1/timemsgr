@@ -71,10 +71,12 @@ function fixed(elm) {
 }
 $('[data-role="page"][data-iscroll="enable"]').live("pageshow", function() {
 	fixed($(this));
+	
+	if ($.mobile.activePage.data("iscroll") == "enable") {
+		fixed($.mobile.activePage);
+	}
+	
 });
-if ($.mobile.activePage.data("iscroll") == "enable") {
-	fixed($.mobile.activePage);
-}
 
 });
 })(jQuery);

@@ -6,13 +6,7 @@ $(document).bind("mobileinit", function(){
 	$.extend(  $.mobile, { ajaxFormsEnabled: false });
 				
 	//reset type=date inputs to text
-//   	$.mobile.page.prototype.options.degradeInputs.date = true;
-   	
-   	// hide toolbars
-   	$(document).bind('pageshow', function(event) {
-       $.mobile.fixedToolbars.hide(true)
-	});
-
+   	$.mobile.page.prototype.options.degradeInputs.date = true;
    	
    	// hides the date time as soon as the DOM is ready
     $('#timebox').hide();
@@ -35,16 +29,23 @@ $(document).bind("mobileinit", function(){
  	 
 });
 
-$(document).bind('pageshow', function() {
+// hide toolbars
+$(document).bind('pageshow', function(event) {
+     $.mobile.fixedToolbars.hide(true)
+});
+	
+$('#formapp').bind('pageshow', function() {
     $($('.ui-page-active form :input:visible')[0]).focus();
 });
 
+// check for location changes
 $("#loc_id").live("change", function() {
     var loc = $(this).val().toLowerCase(); // grab the selected location 
     var url = '/categories.mobile?location=' + loc;  
 
 	// change the page
-    $.mobile.changePage(url, { reloadPage : true });
+	window.location.href= url;
+    //$.mobile.changePage(url, { reloadPage : true });
 
     //prevent the default behavior of the click event
     return false;

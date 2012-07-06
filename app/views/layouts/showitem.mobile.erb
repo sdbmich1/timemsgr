@@ -7,7 +7,7 @@
  
     <%= render :partial => 'layouts/ga_head' if Rails.env.production? %>      
 
-    <%= stylesheet_link_tag "mobile", "calendar", "mobile_nohdr", "mobile_device", :cache => true %>  
+    <%= stylesheet_link_tag "mobile", "calendar", "mobile_device", :cache => true %>  
   	<%= javascript_include_tag 'application.mobile.js', 'jquery.infieldlabel.min.js', "jquery.mobile.iscroll.js", :cache => true %>
   	<%= csrf_meta_tag %>  	
   </head>

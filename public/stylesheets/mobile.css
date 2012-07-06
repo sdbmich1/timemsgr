@@ -2,14 +2,14 @@
 #app {}  
 [data-role=page]{ position:relative !important;}
 
-.app-content {min-width: 100%; height:100%; width:100%; padding: 0; }
+.app-content {min-width: 100%;  }
 
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 .ui-page, .ui-body-c, .ui-content {
 	background: #FFFFFF!important;
 }  
 
-.ui-page, .ui-content { min-height: 100%!important; height: 100%; }
+.ui-page, .ui-content { min-height: 100%!important; height: 100%; padding: 0!important;}
 
 #app-footer {bottom:0; position:fixed !important; top: auto !important; width:100%; z-index: 999}  
 .ui-header, .ui-navbar { width: 100%!important; }

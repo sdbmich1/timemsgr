@@ -12,7 +12,9 @@
    		<%= image_tag @facebook_user.picture, :size => psize %> 
    	  <% else %>
    		<%= image_tag file_name, :alt => "none", :size => psize %>
-   	  <% end %>    	
+   	  <% end %> 
+   	<% elsif !(model.class.to_s =~ /Event/i).nil? %>
+   		<%= image_tag model.imagelink, :class => vtype unless model.try(:imagelink).blank? %>  	
   	<% else %>
     	<%= image_tag file_name, :alt => "none", :size => psize %>
   	<% end %>  	

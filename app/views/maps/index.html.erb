@@ -1,0 +1,18 @@
+<%= set_title("Add Subscription") %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Channel' } %>
+
+<% content_for :subhead do -%>
+  <center><h3 class="grp-hdr">Select Channels</h3></center>
+  <div class="rpos">	
+	<span class="loc-hdr"><%= render "shared/locations" %></span>
+  </div><hr />
+<% end %>
+
+<%= content_for :left_sidebar do -%>
+	<div class="clear-all"></div>
+	<%= render :partial => 'shared/sub_nav_panel' %>
+<% end -%>
+
+<%= content_for :content do -%>
+  	<div id='channel_form' class="span-20 last"><%= render 'shared/channel_list' %></div>
+<% end -%>

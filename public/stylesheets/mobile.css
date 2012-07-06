@@ -2,18 +2,17 @@
 #app {}  
 [data-role=page]{ position:relative !important;}
 
-.app-content {min-width: 100%; padding: 0; }
+.app-content {min-width: 100%; height:100%; width:100%; padding: 0; }
 
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
-
 .ui-page, .ui-body-c, .ui-content {
 	background: #FFFFFF!important;
 }  
 
-.ui-page, .ui-content { min-height: 100%!important; }
+.ui-page, .ui-content { min-height: 100%!important; height: 100%; }
 
-#app-footer {bottom:0; position:absolute !important; top: auto !important; width:100%;}  
-.ui-navbar { width: 100%; }
+#app-footer {bottom:0; position:fixed !important; top: auto !important; width:100%; z-index: 999}  
+.ui-header, .ui-navbar { width: 100%!important; }
 .scrollable {height: 100%;}
 
 
@@ -65,7 +64,6 @@
 /* mobile form infield label */
 #mform p { position:relative; margin-bottom: 0}
 #mform label  { position:absolute; top:8px; left:5px; color:#CCCCCC; width:75%}
-
 
 /* major event image settings */
 .e-pic {width: 100%; height: auto; position:relative;}
@@ -147,8 +145,10 @@ label, label.ui-input-text { font-size:12px!important; margin-top:5px!important;
 }
 
 /*  channel list styling */
-.chtitle h6 { font-size:0.8em; line-height: 1.05em; height: 50px; width: 100%; color: blue;}
+.chtitle h6 { font-size:0.8em; line-height: 1.05em; height: 40px; width: 100%; color: blue;}
+.chan-title { font-size:0.8em; line-height: 1.05em; width: 100%; color: blue; font-weight:bold;}
 .ch-descr { position:absolute; top: 2.25em;  margin-bottom: 5px; width: 100%; }
+
 .ui-controlgroup, fieldset.ui-controlgroup {padding: 0!important; margin: 0 0 0!important;}
 .ui-controlgroup .ui-checkbox label {font-size: 14px;}
 .ui-field-contain, fieldset.ui-field-contain {padding: 0 0!important;}
@@ -214,6 +214,7 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #delete .ui-icon { background:  url("../images/ev-delete.png") 50% 50% no-repeat; size: 22px 27px; }
 #rsvp .ui-icon { background:  url("../images/ev-rsvp.png") 50% 50% no-repeat; size: 22px 27px; }
 #edit .ui-icon { background:  url("../images/ev-gear.png") 50% 50% no-repeat; size: 22px 27px; }
+#map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
 
 .progressBar { font-size: 14px; }
 .pb-offset { font-size: 14px; margin-top: 5px; }
@@ -257,3 +258,18 @@ a.notice-btn {
 }
 
 .ui-input-datebox input {width: 99%!important;}
+
+/* map details */
+#map_content {
+    padding: 0px;
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-shadow: none;
+}

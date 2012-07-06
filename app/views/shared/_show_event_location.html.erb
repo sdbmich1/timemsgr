@@ -1,4 +1,4 @@
-<% unless event.mapplacename.blank? && event.mapcity.blank? && event.location.blank? %>
+<% unless has_location?(event) %>
 	<div class="span-2"><%= 'Where:' %></div>	
 	<div class="span-18 last"><%= event.location if (event.location =~ /http/i).nil? %></div>
 	<div class="span-18 last">

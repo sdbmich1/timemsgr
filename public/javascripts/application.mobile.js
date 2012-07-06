@@ -61,7 +61,7 @@ $(function() {
   
   // add iphone orientation change handler
   $(function (){ 
-    if (navigator.userAgent.match(/iPhone/i)) {
+    if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i)) {
         $(window).bind('orientationchange', function(event) {
             if (window.orientation == 90 || window.orientation == -90 || window.orientation == 270) {
                 $('meta[name="viewport"]').attr('content', 'height=device-width,width=device-height,initial-scale=1.0,maximum-scale=1.0');
@@ -71,6 +71,17 @@ $(function() {
         }).trigger('orientationchange');
     }	
   });
+  
+// hide address bar 
+$(document).ready(function() { 
+  window.addEventListener("load", function () {
+    // Set a timeout...
+    setTimeout(function () {
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+    }, 0);
+  });  
+});
 
 // set enddate to startdate
 function dooffset() { 
@@ -87,4 +98,87 @@ function dotimeoffset() {
   $('#end-tm').val(starttime); 
   $('#end-tm').trigger('datebox', {'method':'doset'});
 }
-	 
+
+var map;
+var selectedLocation;
+var myLocation;
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+
+// initialize google map
+function NewInitialize(lat,lng) {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  selectedLocation = new google.maps.LatLng(lat,lng);
+  var myOptions = {
+	zoom: 16,
+	center: selectedLocation,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+  } 
+  
+  // determine browser type
+  //detectBrowser();
+	
+  if ( $('#map_canvas').length != 0 ) {
+	map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	directionsDisplay.setMap(map);
+ 	var marker = new google.maps.Marker({
+      position: selectedLocation,
+      map: map
+    });   
+  }
+  else 
+  	{ alert('no canvas'); }
+  	
+}
+
+function detectBrowser() {
+  var useragent = navigator.userAgent;
+
+  if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
+	$('#map_canvas').css('width', '320px');
+	$('#map_canvas').css('height', '480px');
+	} 
+  else {
+	$('#map_canvas').css('width', '600px');
+	$('#map_canvas').css('height', '800px');
+	}
+};
+
+function get_position(lat, lng) {
+    
+  // get user's current location 
+  if(navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(function(position){
+       myLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+     })  }  		
+  
+  // get specified location 
+  NewInitialize(lat,lng);
+}
+
+// get longitude & latitude
+function getLatLng() {
+  if ( $('.lnglat').length != 0 ) {
+	var lnglat = $('.lnglat').attr("data-lnglat");
+	if ( lnglat != 'undefined' ) {
+  		var lat = parseFloat(lnglat.split(', ')[0].split('["')[1]);
+  		var lng = parseFloat(lnglat.split(', "')[1].split('"]')[0]);  		
+  		get_position(lat, lng); // get position
+	}
+  } 
+}
+
+function calcRoute() {
+  var selectedMode = document.getElementById("mode").value;
+  var request = {
+      origin: myLocation,
+      destination: selectedLocation,
+      travelMode: google.maps.TravelMode[selectedMode]
+  };
+  
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}

@@ -27,5 +27,8 @@
 				<li><%= link_to "RSVP", new_rsvp_url(:eid=>event, :etype=>event.event_type), "data-icon"=>"custom", :id => "rsvp" %> </li>			
 			<% end %>
 	  	<% end %>
+	  	<% unless has_location?(event) %>
+	  		<li><%= link_to "Show Map", maps_url(:loc=>event.location_details, :lnglat=>get_lnglat(event), :title=>event.event_name), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
+	  	<% end %>
 	  </ul>
 	</div>

@@ -1,6 +1,5 @@
-<%= javascript_include_tag 'jquery.infieldlabel.min.js' %>
 <script>
-$('[data-role="page"]').live('pageshow', function () {
-    $("#mform label").inFieldLabels();
+  $(document).ready(function() {
+  	$("#mform label").inFieldLabels();
   });
 </script>

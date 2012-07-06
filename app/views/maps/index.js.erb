@@ -1,0 +1,6 @@
+<% if mobile_device? %>
+	$("#map_canvas").mobile("<%= escape_javascript( raw render(:partial => "mobile/map_index") ) %>");
+<% else %>
+	$("#channel_form").html("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
+	$("#spinner").hide('fast'); 
+<% end %>

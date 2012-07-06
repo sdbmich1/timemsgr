@@ -84,11 +84,11 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate, mapzip].compact.join(', ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
   end
   
   def location_details
-    get_location + csz
+    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
     
   def self.upcoming(start_dt, end_dt)

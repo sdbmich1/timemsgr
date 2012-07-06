@@ -73,7 +73,6 @@ $(function() {
   });
   
 // hide address bar 
-$(document).ready(function() { 
   window.addEventListener("load", function () {
     // Set a timeout...
     setTimeout(function () {
@@ -81,7 +80,7 @@ $(document).ready(function() {
         window.scrollTo(0, 1);
     }, 0);
   });  
-});
+
 
 // set enddate to startdate
 function dooffset() { 
@@ -135,8 +134,10 @@ function detectBrowser() {
   var useragent = navigator.userAgent;
 
   if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
-	$('#map_canvas').css('width', '320px');
-	$('#map_canvas').css('height', '480px');
+	$('.ui-content').css('height', '100%');
+
+	//$('#map_canvas').css('width', '320px');
+	//$('#map_canvas').css('height', '480px');
 	} 
   else {
 	$('#map_canvas').css('width', '600px');

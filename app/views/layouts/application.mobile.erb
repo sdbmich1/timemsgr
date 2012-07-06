@@ -3,7 +3,6 @@
   <head>  
   	<%= yield :title %> 
 	<%= render 'layouts/jqm' %>
-  	<script src="http://cubiq.org/dropbox/iscroll/iscroll.js?v3.7.1"></script>
     <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
    	<%= stylesheet_link_tag "mobile_device"  unless user_signed_in? %>
  	<%= javascript_include_tag 'application.mobile.js','jquery.infieldlabel.min.js', "jquery.mobile.iscroll.js", 'jquery.ui.map.min.js', :cache => true %>

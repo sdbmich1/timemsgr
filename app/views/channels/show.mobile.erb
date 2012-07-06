@@ -1,12 +1,8 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Channel Events'} %>
 
 <%= content_for :content do %>
-   	<div class="chtitle">
-		<h6><%= @channel.channel_name %></h6>
-	</div>
-	<div class="ch-descr">
-		<div class="ui-li-desc sdescr"><%= @channel.bbody %></div>
-	</div>
+	<p class="chan-title"><%= @channel.channel_name %></p>
+	<span class="item-descr"><%= @channel.bbody %></span>		
   	<ul data-role="listview">
 		<li data-role="list-divider" class="center-wrapper">Upcoming Events</li>
 		<%= render :partial => 'mobile/event_list', :collection => @events, :as => :event %>	

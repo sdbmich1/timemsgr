@@ -47,12 +47,12 @@ class CalendarEvent < KitsCentralModel
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : mapcity + ', ' + mapstate + ' ' + mapzip
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
   end
   
   def location_details
-    get_location + ', ' + csz
-  end
+    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
+  end    
   
   def set_flds
     if new_record?

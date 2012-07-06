@@ -150,12 +150,12 @@ class Event < KitsTsdModel
   end
   
   def csz
-    [[get_city, get_state].join(', '), get_zip].join(' ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
   end
   
   def location_details
-    get_location + ', ' + csz
-  end
+    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
+  end    
   
   def summary
     bbody.gsub("\\n",'').html_safe[0..74]

@@ -1,4 +1,5 @@
 require "simple_time_select"
+include Schedule
 module EventsHelper
   
   def life_observance?(etype)
@@ -391,6 +392,15 @@ module EventsHelper
   end 
   
   def get_etype_data(etype)
-    etype == 'event' || etype == 'private_events' ? EventType.all :  LifeEventType.all
+    etype == 'event' || etype == 'private_events' ? EventType.all : LifeEventType.all
+  end
+  
+  def has_location?(event)
+    event.mapplacename.blank? && event.mapcity.blank? && event.location.blank?
+  end
+  
+  def get_lnglat(event)
+    addr = Schedule.get_offset event.location_details if event.location_details
+    [addr[:lat], addr[:lng]] rescue nil 
   end
 end

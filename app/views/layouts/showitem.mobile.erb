@@ -21,11 +21,7 @@
     </div>
     
 	<div class="app-content" data-role="content">
-	  <% if user_signed_in? %>
 		<div data-iscroll="scroller" class="scroller">
-	  <% else %>	
-	  	<div>
-	  <% end %>	
       		<%= yield :content %>
       	</div>
      </div>
@@ -33,7 +29,6 @@
      <div id="app-footer" data-role="footer">		
        <%= yield :footer %>
      </div>
-    </div>   
    </div>
    <%= render :partial => 'layouts/ga_body' if Rails.env.production? %>        
   </body> 

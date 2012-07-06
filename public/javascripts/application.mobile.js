@@ -134,10 +134,11 @@ function detectBrowser() {
   var useragent = navigator.userAgent;
 
   if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
-	$('.ui-content').css('height', '100%');
+	$('.ui-page').css('height', '480px!important'); 
+	$('.app-content ui-content').css('height', '480px!important'); 
 
 	//$('#map_canvas').css('width', '320px');
-	//$('#map_canvas').css('height', '480px');
+	//$('.ui-content').css('height', '480px');
 	} 
   else {
 	$('#map_canvas').css('width', '600px');

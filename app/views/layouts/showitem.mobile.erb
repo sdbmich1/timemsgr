@@ -2,13 +2,10 @@
 <html>
   <head>  
   	<%= yield :title %> 
-	<%= render 'layouts/jqm' %>
- 	<script src="http://cubiq.org/dropbox/iscroll/iscroll.js?v3.7.1"></script>
- 
+	<%= render 'layouts/jqm' %> 
     <%= render :partial => 'layouts/ga_head' if Rails.env.production? %>      
 
     <%= stylesheet_link_tag "mobile", "calendar", "mobile_device", :cache => true %>  
-  	<%= javascript_include_tag 'application.mobile.js', 'jquery.infieldlabel.min.js', "jquery.mobile.iscroll.js", :cache => true %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  

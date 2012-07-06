@@ -3,9 +3,8 @@
   <head>  
   	<%= yield :title %> 
 	<%= render 'layouts/jqm' %>
-    <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
+   	<%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
    	<%= stylesheet_link_tag "mobile_device" unless user_signed_in? %>
- 	<%= javascript_include_tag 'application.mobile.js','jquery.infieldlabel.min.js', "autocomplete-rails.js", :cache => true %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
@@ -20,7 +19,7 @@
     	</div>
     </div>
     
-	<div class="app-content" data-role="content">
+	<div id='map_content' data-role="content">
 		<%= yield :subhead %>
       	<%= yield :content %>
     </div>

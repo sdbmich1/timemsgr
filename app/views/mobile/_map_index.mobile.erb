@@ -1,9 +1,6 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => @loc} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => @title} %>
 
 <%= content_for :content do %>
+	<div class="loc" data-loc="<%= @loc %>" data-title="<%= @title %>"></div>	
 	<div id="map_canvas" class="lnglat" data-lnglat="<%= @lnglat %>"></div>
-<% end %>
-
-<%= content_for :footer do %>
-	<script>getLatLng();</script>
 <% end %>

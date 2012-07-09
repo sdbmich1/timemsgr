@@ -400,7 +400,11 @@ module EventsHelper
   end
   
   def get_lnglat(event)
-    addr = Schedule.get_offset event.location_details if event.location_details
+    addr = Schedule.get_offset event.location_details || event.location
     [addr[:lat], addr[:lng]] rescue nil 
+  end
+  
+  def isLegacy?(event)
+    event.contentsourceURL == "http://KITSC.rbca.net" ? true : false
   end
 end

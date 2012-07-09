@@ -57,7 +57,7 @@ class Event < KitsTsdModel
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
   
-  # build dynamic union to pull event data from legacy dbs across different schemas
+  # build dynamic union to pull event data from dbs across different schemas
   def self.current(edt, cid, loc)
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
@@ -74,7 +74,7 @@ class Event < KitsTsdModel
                                                        cid, edt, edt, edt, edt, loc, edt, edt, cid, edt, edt]) 
   end
 
-  # build dynamic union to pull event data from legacy dbs across different schemas for specific event  
+  # build dynamic union to pull event data from dbs across different schemas for specific event  
   def self.get_event(eid, etype, evid)
     where_id = "where (ID = ? AND event_type = ? AND eventid = ?))"
     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
@@ -129,10 +129,14 @@ class Event < KitsTsdModel
     eventenddate.to_date
   end
   
-  def get_location
-    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  def isLegacy?
+    contentsourceURL == "http://KITSC.rbca.net"
   end
-  
+
+  def get_location
+    location.blank? || !(location =~ /http/i).nil? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+  end
+    
   def get_place
     mapplacename.blank? ? '' : mapplacename
   end
@@ -154,7 +158,7 @@ class Event < KitsTsdModel
   end
   
   def location_details
-    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
+    [get_location, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
   
   def summary

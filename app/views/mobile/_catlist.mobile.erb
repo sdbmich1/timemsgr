@@ -1,0 +1,1 @@
+	<div data-role="fieldcontain"> 		<%= collection_select(:category, :id, Category.get_active_list, :id, :name, {:prompt => 'Select Category', :selected=>@catid}, {:id=>'cat_id', 'data-mini'=>"true"}) %>	</div>

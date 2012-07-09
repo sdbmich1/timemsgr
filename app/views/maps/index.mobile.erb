@@ -1,1 +1,6 @@
 <%= render :partial => 'mobile/map_index' %>
+
+<%= content_for :footer do %>
+	<script>getLatLng(true);</script>
+	<%= render 'mobile/map_footer' %>
+<% end %>

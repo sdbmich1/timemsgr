@@ -51,6 +51,19 @@ $("#loc_id").live("change", function() {
     return false;
 });
 
+// check for category changes
+$("#cat_id").live("change", function() {
+    var category = $(this).val(); // grab the selected location 
+  	var loc = $('#loc_id').val();
+  	var url = '/list.mobile?location=' + loc + "&category_id=" + category;
+  	
+	// change the page
+	window.location.href= url;
+
+    //prevent the default behavior of the click event
+    return false;
+});
+
 $(function() {    
   $("#rflg").live('click',function() {
     $(this).text($(this).text() == '+ Add Reminder' ? $('#reminder-type').show('fast') : $('#reminder-type').hide('fast'));    
@@ -100,12 +113,11 @@ function dotimeoffset() {
 
 var map;
 var selectedLocation;
-var myLocation;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 
 // initialize google map
-function NewInitialize(lat,lng) {
+function NewInitialize(lat,lng, showMkr) {
   directionsDisplay = new google.maps.DirectionsRenderer();
   selectedLocation = new google.maps.LatLng(lat,lng);
   var myOptions = {
@@ -113,17 +125,21 @@ function NewInitialize(lat,lng) {
 	center: selectedLocation,
 	mapTypeId: google.maps.MapTypeId.ROADMAP
   } 
-  
-  // determine browser type
-  //detectBrowser();
-	
+  	
   if ( $('#map_canvas').length != 0 ) {
 	map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	directionsDisplay.setMap(map);
- 	var marker = new google.maps.Marker({
-      position: selectedLocation,
-      map: map
-    });   
+	
+	if ( $('#directionsPanel').length != 0 ) {
+		getDirections();
+	 }
+
+	if (showMkr) {
+ 	  var marker = new google.maps.Marker({
+        position: selectedLocation,
+        map: map
+      }); 
+    }  
   }
   else 
   	{ alert('no canvas'); }
@@ -135,10 +151,7 @@ function detectBrowser() {
 
   if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
 	$('.ui-page').css('height', '480px!important'); 
-	$('.app-content ui-content').css('height', '480px!important'); 
 
-	//$('#map_canvas').css('width', '320px');
-	//$('.ui-content').css('height', '480px');
 	} 
   else {
 	$('#map_canvas').css('width', '600px');
@@ -146,41 +159,58 @@ function detectBrowser() {
 	}
 };
 
-function get_position(lat, lng) {
-    
-  // get user's current location 
-  if(navigator.geolocation) {
-     navigator.geolocation.getCurrentPosition(function(position){
-       myLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-     })  }  		
-  
-  // get specified location 
-  NewInitialize(lat,lng);
-}
-
 // get longitude & latitude
-function getLatLng() {
+function getLatLng(showMkr) {
   if ( $('.lnglat').length != 0 ) {
 	var lnglat = $('.lnglat').attr("data-lnglat");
 	if ( lnglat != 'undefined' ) {
   		var lat = parseFloat(lnglat.split(', ')[0].split('["')[1]);
   		var lng = parseFloat(lnglat.split(', "')[1].split('"]')[0]);  		
-  		get_position(lat, lng); // get position
+  		NewInitialize(lat,lng, showMkr); // get position
 	}
   } 
 }
 
 function calcRoute() {
-  var selectedMode = document.getElementById("mode").value;
-  var request = {
-      origin: myLocation,
-      destination: selectedLocation,
-      travelMode: google.maps.TravelMode[selectedMode]
-  };
-  
-  directionsService.route(request, function(response, status) {
-    if (status == google.maps.DirectionsStatus.OK) {
-      directionsDisplay.setDirections(response);
-    }
+  getLatLng(false);
+  var geoOptions = {maximumAge: 60000, enableHighAccuracy: true, timeout: 20000 };
+  var selectedMode = $('#mode').val(); 
+  navigator.geolocation.getCurrentPosition(function(position){ // geoSuccess
+        var myLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+        var request = {origin: myLocation, destination: selectedLocation, travelMode: google.maps.TravelMode[selectedMode] };
+        
+        directionsService.route(request, function(response, status) {
+    		if (status == google.maps.DirectionsStatus.OK) {
+      		directionsDisplay.setDirections(response);
+    	}
+    }, function(error){ // geoError
+        navigator.notification.alert('error: ' + error.message + '\n' + 'code: ' + error.code);
+    }, geoOptions);
+ 
   });
 }
+
+// check for travel mode changes
+$("#mode").live("change", function() {
+	calcRoute();
+});
+
+function getDirections() {
+	$('#directionsPanel').empty();
+	directionsDisplay.setPanel(document.getElementById("directionsPanel"));	
+}
+
+// check for category changes
+$(".details").live("click", function() {
+    var loc = $('.loc').attr('data-loc');
+    var title = $('.loc').attr('data-title');
+  	var mode = $('#mode').val();
+	var lnglat = $('.lnglat').attr("data-lnglat");
+  	var url = '/details.mobile?loc=' + loc + "&lnglat=" + lnglat + "&title=" + encodeURIComponent(title) + "&mode=" + mode;
+  	
+	// change the page
+	window.location.href= url;
+
+    //prevent the default behavior of the click event
+    return false;
+});

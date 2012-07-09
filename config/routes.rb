@@ -89,6 +89,8 @@ Timemsgr::Application.routes.draw do
   match '/metrics', :to => 'users#metrics' 
   match '/notify', :to =>  "events#notify"
   match '/events/notice', :to =>  "events#notice"
+  match '/directions', :to =>  "maps#directions"  
+  match '/details', :to =>  "maps#details"  
   match '/select', :to =>  "channels#select"
   match '/list', :to =>  "categories#list"
     

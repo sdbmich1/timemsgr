@@ -28,7 +28,10 @@
 			<% end %>
 	  	<% end %>
 	  	<% unless has_location?(event) %>
-	  		<li><%= link_to "Show Map", maps_url(:loc=>event.location_details, :lnglat=>get_lnglat(event), :title=>event.event_name), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
+	  		<li><%= link_to "Show Map", maps_url(:loc=>event.location_details || event.location, :lnglat=>get_lnglat(event), :title=>event.mapplacename || event.location), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
 	  	<% end %>
+	  	<% unless (event.location =~ /http/i).nil? %>
+	  		<li><%= link_to 'View Source', event.location, { :id=>'website','rel'=>'external', "data-icon"=>"custom"} %></li>
+		<% end %>
 	  </ul>
 	</div>

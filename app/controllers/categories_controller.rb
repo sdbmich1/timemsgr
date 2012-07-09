@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
   end
   
   def list
+    @catid = params[:category_id]
     @interests = Category.find(params[:category_id]).interests
     @channels = LocalChannel.pick_channels(@interests, @location.city, @user.location).paginate(:page => params[:page], :per_page => 15 )
   end

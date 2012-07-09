@@ -1,0 +1,5 @@
+<div data-role="navbar">
+	<ul>
+  		<li><%= link_to "Get Directions", directions_url(:loc=>@loc, :lnglat=>@lnglat, :title=>@title), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
+	</ul>
+</div>

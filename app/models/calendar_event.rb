@@ -37,9 +37,13 @@ class CalendarEvent < KitsCentralModel
   def end_date
     eventenddate.to_date
   end
+  
+  def isLegacy?
+    contentsourceURL == "http://KITSC.rbca.net"
+  end
 
   def get_location
-    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+    location.blank? || !(location =~ /http/i).nil? ? '' : get_place.blank? ? location : get_place + ', ' + location 
   end
   
   def get_place
@@ -51,7 +55,7 @@ class CalendarEvent < KitsCentralModel
   end
   
   def location_details
-    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
+    [get_location, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
   
   def set_flds

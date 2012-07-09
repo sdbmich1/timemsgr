@@ -14,7 +14,7 @@
 
 #app-footer {bottom:0; position:fixed !important; top: auto !important; width:100%; z-index: 999}  
 .ui-header, .ui-navbar { width: 100%!important; }
-.scrollable {height: 100%;}
+.scrollable {height: 120%;}
 
 
 .ui-btn-inner.ui-li { max-height: 80px;}
@@ -216,6 +216,7 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #rsvp .ui-icon { background:  url("../images/ev-rsvp.png") 50% 50% no-repeat; size: 22px 27px; }
 #edit .ui-icon { background:  url("../images/ev-gear.png") 50% 50% no-repeat; size: 22px 27px; }
 #map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
+#website .ui-icon { background:  url("../images/website.png") 50% 50% no-repeat; size: 24px 24px; }
 
 .progressBar { font-size: 14px; }
 .pb-offset { font-size: 14px; margin-top: 5px; }
@@ -269,9 +270,11 @@ a.notice-btn {
     overflow: hidden;
 }
 
-#map_canvas {
+#map_canvas, #directionsPanel {
     width: 100%;
     height: 100%;
     padding: 0;
     text-shadow: none;
 }
+
+#directionsPanel {font-size: 0.75em}

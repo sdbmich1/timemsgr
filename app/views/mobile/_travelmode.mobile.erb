@@ -1,0 +1,1 @@
+<div data-role="fieldcontain"> 	<%= collection_select(:travel_mode, :travel_type, TravelMode.active, :descr_title, :details, {:selected => @mode || 'DRIVING'}, {:id=>'mode', 'data-mini'=>"true"}) %></div>

@@ -1,0 +1,10 @@
+<%= render :partial => 'mobile/map_index' %>
+
+<%= content_for :subhead do %>
+	<%= render 'mobile/travelmode' %>
+<% end %>
+
+<%= content_for :footer do %>
+	<script>calcRoute();</script>
+	<%= render 'mobile/directions_footer'%>
+<% end %>

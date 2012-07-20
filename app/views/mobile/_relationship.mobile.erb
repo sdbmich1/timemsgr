@@ -17,7 +17,7 @@
 	<% if @rel_type && controller_name == 'relationships' %>
 	  <div data-role="navbar">
 	  	<ul>
-			<li><%= link_to "Add", users_url(:id=>@user, :rel_type=>@rel_type), "data-icon"=>"plus" %> </li>
+			<li><%= link_to "Add Connection", users_url(:id=>@user, :rtype=>@rel_type), "data-icon"=>"plus" %> </li>
 		</ul>
 	  </div>
 	<% end %>

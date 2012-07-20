@@ -1,3 +1,4 @@
 <% unless mobile_device? %>
   $("#rel_form").html("<%= escape_javascript( raw render(:partial => 'shared/connections', :locals => { :model => get_trk_list(@trackers, @trackeds) }) ) %>");
+  $("#spinner").hide('fast');
 <% end %>

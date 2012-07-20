@@ -1,2 +1,3 @@
-$("#user_form").html("<%= escape_javascript( raw render(:partial => 'shared/suggested_users', :locals => { :model => @users }) ) %>");
-$("#spinner").toggle(); 
+$("#spinner").show('fast'); 
+$("#rel_form").html("<%= escape_javascript( raw render(:partial => 'shared/connections', :locals => { :model => chkConnections(@users) }) ) %>");
+$("#spinner").hide('fast'); 

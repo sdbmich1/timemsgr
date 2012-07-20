@@ -10,7 +10,7 @@ class NotificationObserver < ActiveRecord::Observer
     # send notification to email list
     (1..5).each do |i|
       method = 'email' + i.to_s + 'address'
-      model.send(method).blank? ? next : UserMailer.send_notice(model.send(method), model, usr).deliver     
+      model.send(method).blank? ? next : UserMailer.delay.send_notice(model.send(method), model, usr)     
     end   
     
     # process notifications

@@ -1,9 +1,13 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'Suggested Connections'} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Add ' + @rel_type + ' Connections'} %>
+
+<% content_for :srch_content do %>
+	<%= render :partial => 'mobile/user_search', :locals=>{:rel_type=>@rel_type} %>
+<% end %>
 
 <% content_for :content do %>
-	<% @subscriptions.each do |sub| %>
-		<% unless sub.try(:channel).blank? %>
-			<%= render :partial => 'mobile/user_list', :locals => {:model => sub.channel.subscriptions }%>
+	<ul data-role="listview">
+		<% chkConnections(@local_users).each do |usr| %>
+			<%= render :partial => 'mobile/user_item', :locals => {:model => usr} unless connected?(usr) %>
 		<% end %>
-	<% end %>
+	</ul>
 <% end %>

@@ -1,8 +1,5 @@
 <% model.each do |sub| %>
   <% unless sub.try(:user).blank?  %>
-    <% if !user_exists?(@user.trackeds | @user.trackers, sub.user) && !user_exists?(@user.pending_trackers | @user.pending_trackeds, sub.user) && !same_user?(sub.user, @user) %>
-    	<%= render :partial => 'shared/user_item', :locals => {:model => sub.user} %>
-    <% end %>
+    	<%= render :partial => 'shared/user_item', :locals => {:model => sub.user} unless connected?(sub.user) %>
   <% end %>
 <% end %>
-

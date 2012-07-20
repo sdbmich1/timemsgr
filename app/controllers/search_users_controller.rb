@@ -3,8 +3,7 @@ class SearchUsersController < ApplicationController
   layout :page_layout
 
   def index
-    query = params[:search]
-    page  = params[:page] || 1
+    @rel_type, query, page = params[:rtype], params[:search], params[:page] || 1
     @users = User.search query
   end
   

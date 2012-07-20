@@ -2,9 +2,8 @@ class ReminderJob < Struct.new(:usr, :remind_id)
   include ProcessNotice
   
   def perform
-    if run_time?
-      send_reminder usr, reminder
-    end
+    send_reminder usr, reminder
+    reminder.delete if reminder #delete reminder
   end
   
   def send_reminder usr, reminder
@@ -12,10 +11,11 @@ class ReminderJob < Struct.new(:usr, :remind_id)
   end
   
   def run_time?  
-    Time.now >= reminder.starttime ? true : false
+    Time.now >= reminder.starttime
   end
   
   private
+  
     def reminder
       @reminder ||= Reminder.find remind_id
     end

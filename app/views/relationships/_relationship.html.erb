@@ -2,7 +2,7 @@
 
 <%= content_for :subhead do -%>
   <div class="span-24 last" >  
-  	<center><h3 class="grp-hdr"><%= pg_hdr %></h3></center><hr />
+  	<div class="grp-hdr"><center><%= pg_hdr %></center></div><hr />
   </div>
 <% end %>
 
@@ -12,6 +12,8 @@
 <% end %>
 
 <%= content_for :content do -%>
-  <div id='rel_form' class="span-20 last"><%= render 'track_list' %></div>
+  <div id='rel_form' class="span-20 last">
+  	 <%= render :partial => 'shared/connections', :locals => {:model => get_trk_list(@trackers, @trackeds) } %>
+  </div>
 <% end -%>
 

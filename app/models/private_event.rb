@@ -10,6 +10,7 @@ class PrivateEvent < ActiveRecord::Base
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :contentsourceURL,
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :pageextsrc,
+				:remindstartdate, :remindenddate, :remindstarttime, :remindendtime,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
@@ -21,8 +22,7 @@ class PrivateEvent < ActiveRecord::Base
   validates :eventendtime, :presence => true, :allow_blank => false
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
 
-#  has_many :rsvps, :dependent => :destroy
-#  accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
+  has_many :reminders, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :eventid
 
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true

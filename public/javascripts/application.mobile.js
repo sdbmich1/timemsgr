@@ -3,7 +3,7 @@
  */
 $(document).bind("mobileinit", function(){
 	// set ajax to false
-	$.extend(  $.mobile, { ajaxFormsEnabled: false });
+//	$.extend(  $.mobile, { ajaxFormsEnabled: false });
 				
 	//reset type=date inputs to text
    	$.mobile.page.prototype.options.degradeInputs.date = true;
@@ -45,7 +45,6 @@ $("#loc_id").live("change", function() {
 
 	// change the page
 	window.location.href= url;
-    //$.mobile.changePage(url, { reloadPage : true });
 
     //prevent the default behavior of the click event
     return false;
@@ -123,7 +122,11 @@ function NewInitialize(lat,lng, showMkr) {
   var myOptions = {
 	zoom: 16,
 	center: selectedLocation,
-	mapTypeId: google.maps.MapTypeId.ROADMAP
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	zoomControl: true,
+    zoomControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+    }
   } 
   	
   if ( $('#map_canvas').length != 0 ) {

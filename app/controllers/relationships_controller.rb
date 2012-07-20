@@ -4,32 +4,33 @@ class RelationshipsController < ApplicationController
   layout :page_layout
 
   def create
-    @relationship = Relationship.new(:tracked_id => current_user.id, :tracker_id => params[:trk_id], :status=>'pending', :rel_type=> params[:rtype] )
+    @user = User.find(params[:id])
+    @relationship = Relationship.new(:tracked_id =>params[:id], :tracker_id =>params[:trkr_id], :status=>'pending', :rel_type=> params[:rtype] )
     if @relationship.save
-      redirect_to relationships_url(:id=>current_user), :notice => "Connection request sent."
+      redirect_to relationships_url(:id=>@user), :notice => "Connection request sent."
     else
-      redirect_to relationships_url(:id=>current_user), :notice => "Unable to send connection request."
+      redirect_to relationships_url(:id=>@user), :notice => "Unable to send connection request."
     end
   end
 
   def index
     @user = User.includes(:host_profiles).find(params[:id])
-    @trackers, @trackeds = @user.trackers, @user.trackeds
+    @trackers, @trackeds = @user.trackers, @user.trackeds | @user.pending_trackeds
   end
   
   def private
     @user = User.find(params[:id])
-    @trackers, @trackeds = @user.private_trackers, @user.private_trackeds  
+    @trackers, @trackeds = @user.private_trackers, @user.private_trackeds  | @user.pending_private_trackeds 
   end
   
   def social
     @user = User.find(params[:id])
-    @trackers, @trackeds = @user.social_trackers, @user.social_trackeds  
+    @trackers, @trackeds = @user.social_trackers, @user.social_trackeds  | @user.pending_social_trackeds 
   end
   
   def extended
     @user = User.find(params[:id])
-    @trackers, @trackeds = @user.extended_trackers, @user.extended_trackeds  
+    @trackers, @trackeds = @user.extended_trackers, @user.extended_trackeds | @user.pending_extended_trackeds
   end  
   
   def pending
@@ -38,19 +39,19 @@ class RelationshipsController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:id])
-    @relationship = Relationship.set_status(params[:tracker_id], params[:tracked_id], params[:status])
+#    @user = User.find(params[:id])
+    @relationship = Relationship.set_status(params[:trkr_id], params[:id])
     if @relationship.save
-      redirect_to relationships_url(:id=>@user) 
+      redirect_to relationships_url(:id=>params[:trkr_id]), :notice => "Updated relationship." 
     else
       render :action => 'pending'
     end  
   end
   
   def destroy
-    @relationship = Relationship.find_by_tracker_id(params[:trk_id])
+    @relationship = Relationship.get_relationship(params[:id], params[:trkr_id])
     @relationship.destroy
-    redirect_to relationships_path(:id=>params[:id]), :notice => "Removed relationship."
+    redirect_to relationships_url(:id=>params[:trkr_id]), :notice => "Removed relationship."
   end
   
   protected

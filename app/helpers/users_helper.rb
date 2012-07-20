@@ -26,7 +26,7 @@ module UsersHelper
   end
   
   def get_status(trkd_id, trkr_id)
-    Relationship.get_status(trkd_id, trkr_id) #|| Relationship.get_status(trkr_id, trkd_id)
+    Relationship.get_status(trkd_id, trkr_id) || Relationship.get_status(trkr_id, trkd_id)
   end
   
   def get_rel_type(trkd_id, trkr_id)
@@ -34,14 +34,26 @@ module UsersHelper
   end
   
   def trackers?
-    @user.trackers.count > 0 ? true : false
+    @user.trackers.count > 0 
   end
   
   def trackeds?
-    @user.trackeds.count > 0 ? true : false
+    @user.trackeds.count > 0 
   end
   
   def get_unread_count(usr)
     EventNotice.where(:user_id=>usr.id).unread_by(usr).count
+  end
+  
+  def connected?(usr)
+    user_exists?(@user.trackeds | @user.trackers, usr) || user_exists?(@user.pending_trackers | @user.pending_trackeds, usr) || same_user?(usr, @user)
+  end
+  
+  def getIconType(usr, trkr)
+    get_status(usr, trkr) == 'Pending' ? 'check' : get_status(usr, trkr) == 'Accepted' ? 'minus' : 'add'
+  end
+  
+  def chkConnections(ulist)
+    ulist.reject {|usr| connected?(usr)}
   end
 end

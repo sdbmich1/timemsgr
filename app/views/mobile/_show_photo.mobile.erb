@@ -10,7 +10,7 @@
    		<%= image_tag file_name, :alt => "none", :size => psize %>
    	<% end %> 
   <% elsif !(model.class.to_s =~ /Event/i).nil? %>
-   	<%= image_tag model.imagelink, :class => vtype unless model.try(:imagelink).blank? %>  	
+   	<%= image_tag model.imagelink, :class => vtype rescue nil %>  	
   <% elsif model.try(:pictures).blank? %>
     <%= image_tag file_name, :alt => "none", :size => psize %>
   <% end %>

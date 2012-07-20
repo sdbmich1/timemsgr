@@ -1,1 +1,1 @@
-<%= form_tag search_users_path, :method => :get do %> 	<%= render :partial => 'mobile/search_body' %><% end %>
+<%= form_tag search_users_path(:rtype=>@rel_type), :method => :get do %> 	<%= render :partial => 'mobile/search_body' %><% end %>

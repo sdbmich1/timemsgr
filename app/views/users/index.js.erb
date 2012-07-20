@@ -1,0 +1,4 @@
+$("#menuhead").html("<%= escape_javascript( raw render(:partial => 'shared/main_menu', :locals => { :main_menu => 'User' }) ) %>");
+$(".grp-hdr").html("<%= escape_javascript( raw render(:partial => 'shared/connection_hdr') ) %>");
+$("#rel_form").html("<%= escape_javascript( raw render(:partial => 'shared/connections', :locals => { :model => chkConnections(@local_users) }) ) %>");
+$("#spinner").hide('fast'); 

@@ -1,5 +1,5 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'Send Notice'} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Send Notifications'} %>
 
 <% content_for :content do %>
-	<%= render :partial => 'mobile/notify' %>
+	<%= render :partial => 'mobile/notify', :locals => {:event => @event} %>
 <% end %>

@@ -16,7 +16,7 @@ module ProcessNotice
   end
     
   def key_field?(fld)
-    (%w(eventstartdate eventenddate eventstarttime).detect { |x| x == fld})
+    (%w(eventstartdate eventenddate eventstarttime eventendtime).detect { |x| x == fld})
   end
   
   def newuser_notice(model)

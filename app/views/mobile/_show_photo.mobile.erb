@@ -4,7 +4,7 @@
    	<% end %>		
   <% end %>
   <% if has_facebook_photo? && model.pictures.blank? %>
-  	<% if controller_name == 'users' %>
+  	<% if controller_name == 'users' && action_name != 'index' %>
    		<%= image_tag @facebook_user.picture, :size => psize %> 
    	<% else %>
    		<%= image_tag file_name, :alt => "none", :size => psize %>

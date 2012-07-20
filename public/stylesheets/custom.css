@@ -153,10 +153,11 @@ footer nav {  float: none; }
 .pad-5 { padding: 5px; }
 .pad-10 { padding: 10px; }
 .margin-10 { margin-bottom: 10px; }
+.pad-bot {padding-bottom: 20px;}
 
 /* form infield label */
 #mform p { position:relative; margin-bottom: 0}
-#mform label  { position:absolute; top:12px; left:112px; font-weight: normal; color:#CCCCCC}
+#mform label  { position:absolute; top:10px; left:112px; font-weight: normal; color:#CCCCCC}
 
 .search-fld { height: 24px; }
 .search_button { width: 24px; height: 24px; margin-right:10px; margin-top: 7px; }
@@ -165,3 +166,4 @@ footer nav {  float: none; }
 .ui-datepicker-trigger {vertical-align:middle; padding-left: 5px;}
 
 .cbox-top {padding-top: 8px}
+.conn-user {margin-right: 10px;}

@@ -28,11 +28,11 @@ function toggleLoading () {
 }
 
 // add spinner to ajax events
-$(function (){ 
+$(document).ready(function() {
   $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
-    .bind("ajax:beforeSend", toggleLoading)
-    .bind("ajax:complete", toggleLoading)
-    .bind("ajax:success", function(event, data, status, xhr) {
+    .live("ajax:beforeSend", toggleLoading)
+    .live("ajax:complete", toggleLoading)
+    .live("ajax:success", function(event, data, status, xhr) {
       $("#response").html(data).toggleLoading();
     });
 }); 
@@ -145,8 +145,10 @@ $(function () {
 
 $(function () {
   $(".notice_id").live('click',function() {
-    $.getScript('/events/notice.js');
+    var url = '/events/notice.js?';
+    process_url(url, false);    
   })
+  return false;
 });
 
 // process channel selection changes
@@ -154,12 +156,12 @@ $(function () {
   $(".channel_menu").live('click',function() {
     var intid = $(this).attr("data-intid");
     var loc = $('#location_id').val();
-    var url = '/select.js?location=' + loc + "&interest_id=" + intid
+    var url = '/select.js?location=' + loc + "&interest_id=" + intid;
     
     $('ul.menu li ul li a').css('background-color', '#ccc');
 	$(this).css('background-color', '#C2E1EF');
 	
-    process_url(url);    
+    process_url(url, false);    
   })
 });
 
@@ -171,6 +173,28 @@ $(function (){
 	 $(this).css('background-color', '#f08103');
 	})
 });
+
+$(function (){
+   $(".add_prv_btn").live('click', function () {
+	 $('ul.menu li a').css('background-color', '#0C6FCB');
+	 $('.prv_btn').css('background-color', '#f08103');
+	});
+	
+   $(".add_soc_btn").live('click', function () {
+	 $('ul.menu li a').css('background-color', '#0C6FCB');
+	 $('.soc_btn').css('background-color', '#f08103');
+	});	
+	
+   $(".add_ext_btn").live('click', function () {
+	 $('ul.menu li a').css('background-color', '#0C6FCB');
+	 $('.ext_btn').css('background-color', '#f08103');
+	});	
+});
+
+$(document).ready(function() {
+  	$(".all_btn, .def_btn").css('background-color', '#f08103');
+});
+
 
 // capitalize first letter
 function capitalize(string)

@@ -29,10 +29,8 @@ class ScheduledEvent < ActiveRecord::Base
  
   has_many :session_relationships, :primary_key => :ID, :foreign_key=>:event_id, :dependent => :destroy
   has_many :sessions, :through => :session_relationships, :dependent => :destroy
-
   has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid, :dependent => :destroy
-  has_many :presenters, :through => :event_presenters, :dependent => :destroy
- 
+  has_many :presenters, :through => :event_presenters, :dependent => :destroy 
   has_many :sponsor_pages, :primary_key => :ID, :foreign_key=>:event_id, :dependent => :destroy
  
   has_many :pictures, :as => :imageable, :dependent => :destroy

@@ -1,1 +1,2 @@
-$("#rel_form").html("<%= escape_javascript( raw render(:partial => 'shared/connections', :locals => { :model => get_trk_list(@trackers, @trackeds) }) ) %>");
+$("#rel_form").html("<%= escape_javascript( raw render(:partial => 'shared/connections', :locals => { :model => @trackeds }) ) %>");
+$("#spinner").hide('fast');

@@ -169,7 +169,7 @@ body {
 
 #channel_form, #rel_form, .edit-usr {font-size: 12px;}
 
-.grp-hdr {font-weight:bold; color: #0C6FCB; }
+.grp-hdr {font-weight:bold; color: #0C6FCB; font-size: 18px; }
 .user_bkgd {
 	background: #C2E1EF;
 }
@@ -209,8 +209,6 @@ body {
 .nav-right {
   float: right;
 }
-
-.notice { width: 80%; }
 
 hr { height:0.25em; margin-top: 10px;}
 

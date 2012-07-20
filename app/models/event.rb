@@ -122,11 +122,11 @@ class Event < KitsTsdModel
   end
   
   def start_date
-    eventstartdate.to_date
+    eventstartdate.to_date if eventstartdate
   end
   
   def end_date
-    eventenddate.to_date
+    eventenddate.to_date if eventenddate
   end
   
   def isLegacy?
@@ -154,11 +154,11 @@ class Event < KitsTsdModel
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate, mapzip].compact.join(', ')
   end
   
   def location_details
-    [get_location, csz].join(', ') unless get_place.blank? && csz.blank?
+    [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
   
   def summary

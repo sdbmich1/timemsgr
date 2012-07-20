@@ -27,13 +27,13 @@ class UsersController < ApplicationController
   
   def index
     @user = User.find params[:id]
-    @subscriptions = @user.subscriptions
+    @local_users = @user.nearby_users
   end
   
   private
   
   def user_layout 
-    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'list_nosearch' : "users"
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : 'list' : "users"
   end
   
   def load_data

@@ -1,10 +1,10 @@
 <div class="nav-right">
   <% if @rel_type %>
-  	<%= link_to "+ Add", users_path(:id => @user, :rtype => @rel_type), :class=>"link-btn round" %>
+  	<%= link_to "+ Add", users_path(:id => @user, :rtype => @rel_type), :id=>'connect_btn', :class=>"link-btn round", :remote=>true %>
   <% else %>
-  	<%= link_to "+ Private", users_path(:id => @user, :rtype => 'Private'), :class=>"link-btn round" %>
-  	<%= link_to "+ Social", users_path(:id => @user, :rtype => 'Social'), :class=>"link-btn round" %>
-  	<%= link_to "+ World", users_path(:id => @user, :rtype => 'Extended'), :class=>"link-btn round" %>
+  	<%= link_to "+ Private", users_path(:id => @user, :rtype => 'Private'), :id=>'connect_btn', :class=>"link-btn round add_prv_btn", :remote=>true %>
+  	<%= link_to "+ Social", users_path(:id => @user, :rtype => 'Social'), :id=>'connect_btn', :class=>"link-btn round add_soc_btn", :remote=>true %>
+  	<%= link_to "+ World", users_path(:id => @user, :rtype => 'Extended'), :id=>'connect_btn', :class=>"link-btn round add_ext_btn", :remote=>true %>
   <% end %>
 </div>
-<div id="user_form"><%= render :partial => 'shared/suggested_users', :locals => {:model => model} %></div>
+<div id="user_form" class="span-18 last"><%= render :partial => 'shared/suggested_users', :locals => {:model => model} %></div>

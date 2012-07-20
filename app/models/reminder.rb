@@ -1,11 +1,14 @@
 class Reminder < ActiveRecord::Base
   set_table_name "reminders"
   set_primary_key "ID"
+  
+  belongs_to :private_event, :primary_key=>:eventID, :foreign_key => :eventid
 
   before_save :set_flds
   
   attr_accessible :reminder_type, :remindertext, :hide, :status, :CreateDateTime, :LastModifyDateTime, :LastModifyBy, :SubscriberID, :eventID, :eventstartdate,
-          :startdate, :endtime, :starttime, :advwarningdays, :advwarninghours, :sourceID, :sourceURL, :reminder_name, :reminderURL, :localGMToffset 
+          :startdate, :endtime, :starttime, :advwarningdays, :advwarninghours, :sourceID, :sourceURL, :reminder_name, :reminderURL, :localGMToffset,
+          :delayed_job_id 
 
   #validates_time :starttime, :presence => true, :allow_blank => false, :on_or_after => :now
              
@@ -16,7 +19,7 @@ class Reminder < ActiveRecord::Base
   def self.unhidden
     active.where(:hide => 'no')
   end
-  
+    
   def set_flds    
     self.hide, self.status, self.CreateDateTime = "no", "active", Time.now if new_record?
     self.LastModifyDateTime, self.LastModifyBy = Time.now, "system"
@@ -36,18 +39,19 @@ class Reminder < ActiveRecord::Base
   end
   
   def set_start_time sdt, tm
-    val = 0 - self.reminder_type.split(' ')[0].to_i rescue nil
+    val = 0 - self.reminder_type.split(' ')[0].to_i rescue 0
     rtype = self.reminder_type.split(' ')[1]
     
     # reset start date
     dt = [sdt.to_date.to_s, tm.to_time.to_s].join(' ').to_datetime
     
     case 
-    when !(rtype =~ /minute/i).nil?; dt.advance(:minutes=>val)
-    when !(rtype =~ /hour/i).nil?; dt.advance(:hours=>val)
-    when !(rtype =~ /day/i).nil?; dt.advance(:days=>val)
-    when !(rtype =~ /week/i).nil?; dt.advance(:weeks=>val)
+    when !(rtype =~ /minute/i).nil?; dt = dt.advance(:minutes=>val)
+    when !(rtype =~ /hour/i).nil?; dt = dt.advance(:hours=>val)
+    when !(rtype =~ /day/i).nil?; dt = dt.advance(:days=>val)
+    when !(rtype =~ /week/i).nil?; dt = dt.advance(:weeks=>val)
     end
+    dt
   end
   
   def getstarttime

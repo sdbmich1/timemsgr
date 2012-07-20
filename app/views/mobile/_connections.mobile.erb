@@ -1,5 +1,5 @@
 <ul data-role="listview">
   <% for usr in model %>
-		<%= render :partial => 'mobile/user_item', :locals => {:model => usr} %>
+		<%= render :partial => 'mobile/user_item', :locals => {:model => usr} unless same_user?(usr, @user)%>
   <% end %>
 </ul>

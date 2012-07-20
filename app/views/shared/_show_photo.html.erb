@@ -6,6 +6,7 @@
 		<%= image_tag pic.photo.url, :size => psize %>
 	<% end %>
   <% end %>
+  
   <% if model.pictures.blank? %>
     <% if has_facebook_photo? %>
   	  <% if (controller_name == 'events' && action_name == 'index') || controller_name == 'users' %>
@@ -13,10 +14,18 @@
    	  <% else %>
    		<%= image_tag file_name, :alt => "none", :size => psize %>
    	  <% end %> 
-   	<% elsif !(model.class.to_s =~ /Event/i).nil? %>
-   		<%= image_tag model.imagelink, :class => vtype unless model.try(:imagelink).blank? %>  	
-  	<% else %>
+   	<% else %>
+   	  <% if !(model.class.to_s =~ /Event/i).nil? %>
+   	    <% unless model.try(:imagelink).blank? %>
+   		  <%= image_tag model.imagelink, :size => psize  %>  
+   		<% else %>	
+   		  <%= image_tag file_name, :alt => "none", :size => psize %>
+   		<% end %>
+  	  <% else %>
     	<%= image_tag file_name, :alt => "none", :size => psize %>
-  	<% end %>  	
+  	  <% end %>  
+  	<% end %>
+  <% else %>		
+     <%= image_tag file_name, :alt => "none", :size => psize %>
   <% end %>
 <% end %>

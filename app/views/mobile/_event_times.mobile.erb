@@ -4,7 +4,7 @@
 		'data-options'=>'{"mode": "calbox", "dateFormat": "mm/dd/YYYY", "minDays": 0, "closeCallback":"dooffset();"}'} %>
 		                             
 	<label for='start-tm'>Start Time:</label>
-	<%= f.text_field :eventstarttime, {:size=>15, :id=>'start-tm', 'data-mini'=>"true", 'data-role'=>"datebox", 
+	<%= f.text_field :eventstarttime, {:value => get_nice_time(@event.eventstarttime), :size=>15, :id=>'start-tm', 'data-mini'=>"true", 'data-role'=>"datebox", 
 		'data-options'=>'{"mode": "timebox", "timeFormat": "12", "closeCallback":"dotimeoffset();"}'} %>
 </div>
 <label>Start Time Zone: </label><%= f.collection_select :localGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.localGMToffset)}, {'data-mini'=>"true"} %>
@@ -16,7 +16,8 @@
 		'data-options'=>'{"mode": "calbox", "dateFormat": "mm/dd/YYYY", "minDays": 0}'} %>
 
 	<label for='end-tm'>End Time:</label>
-	<%= f.text_field :eventendtime, {:size=>15, :id=>'end-tm', 'data-mini'=>"true", 'data-role'=>"datebox", 'data-options'=>'{"mode": "timebox", "timeFormat": "12"}'} %>
+	<%= f.text_field :eventendtime, {:value => get_nice_time(@event.eventendtime), :size=>15, :id=>'end-tm', 'data-mini'=>"true", 'data-role'=>"datebox", 
+		'data-options'=>'{"mode": "timebox", "timeFormat": "12"}'} %>
   	<label>End Time Zone: </label> <%= f.collection_select :endGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.endGMToffset)}, {'data-mini'=>"true"} %>
   </div>
 </div>

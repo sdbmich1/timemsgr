@@ -1,9 +1,7 @@
 <ul data-role="listview">
-<% model.each do |sub| %>
-  <% unless sub.try(:user).blank?  %>
-    <% if !user_exists?(@user.trackeds, sub.user) && !user_exists?(@user.trackers, sub.user) && !same_user?(sub.user, @user) %>
-    	<%= render :partial => 'mobile/user_item', :locals => {:model => sub.user} %>
-    <% end %>
-  <% end %>
-<% end %>	
+	<% model.each do |sub| %>
+  		<% unless sub.try(:user).blank?  %>
+    		<%= render :partial => 'mobile/user_item', :locals => {:model => sub.user} unless connected?(sub.user) %>
+  		<% end %>
+	<% end %>	
 </ul>

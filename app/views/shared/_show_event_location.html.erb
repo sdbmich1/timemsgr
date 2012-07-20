@@ -1,8 +1,10 @@
 <% unless has_location?(event) %>
-	<div class="span-2"><%= 'Where:' %></div>	
-	<div class="span-18 last"><%= event.location if (event.location =~ /http/i).nil? %></div>
+	<div class="span-2"><%= 'Where:' %></div>
+	<% if showLocation?(event) %>	
+		<div class="span-18 last"><%= event.location  %></div><br />
+	<% end %>
 	<div class="span-18 last">
-		<span class="<%= !event.location.blank? ? 'prepend-2' : 'none' %>"><%= event.mapplacename %></span>
+		<span class="<%= showLocation?(event) ? 'prepend-2' : 'none' %>"><%= event.mapplacename %></span>
 	</div>
 	<div class="span-18 last">	
   		<span class="<%= !event.mapplacename.blank? ? 'prepend-2' : 'none' %>"><%= event.mapstreet %></span>
@@ -12,8 +14,6 @@
 	<div class="span-20 last">
 		<span class="prepend-2"><%= event.csz %></span>	</div><br />
 <% end %>
-<div class="span-18 last"><%= link_to 'Host Site & More Event Details...', event.location unless (event.location =~ /http/i).nil? %></div>
-
 <% if !event.cbody.blank? %>
 	<div class="span-2"><%= 'Details:' %></div>
 	<div class="span-18 last"><%= auto_link(event.cbody.gsub("\\n","<br />")).html_safe %></div><br />

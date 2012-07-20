@@ -65,7 +65,7 @@ class User < ActiveRecord::Base
     
   # define friend relationships
   has_many :relationships, :foreign_key => "tracker_id", :class_name => "Relationship", :dependent => :destroy
-  has_many :trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'accepted'" 
+  has_many :trackeds, :through => :relationships, :source => :tracked, :conditions => "status = 'accepted'", :order=>:last_name 
   has_many :private_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'private' AND status = 'accepted'" 
   has_many :social_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'social' AND status = 'accepted'" 
   has_many :extended_trackeds, :through => :relationships, :source => :tracked, :conditions => "rel_type = 'extended' AND status = 'accepted'"
@@ -78,7 +78,7 @@ class User < ActiveRecord::Base
 
   # define reverse friend relationships
   has_many :reverse_relationships, :foreign_key => "tracked_id", :class_name => "Relationship", :dependent => :destroy
-  has_many :trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "status = 'accepted'"
+  has_many :trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "status = 'accepted'", :order=>:last_name
   has_many :private_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'private' AND status = 'accepted'"
   has_many :social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'accepted'"
   has_many :extended_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'extended' AND status = 'accepted'"
@@ -89,6 +89,8 @@ class User < ActiveRecord::Base
   has_many :pending_social_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'social' AND status = 'pending'"
   has_many :pending_extended_trackers, :through => :reverse_relationships, :source => :tracker, :conditions => "rel_type = 'extended' AND status = 'pending'"
 
+  default_scope :order => 'last_name, first_name ASC'
+  
   # Overrides the devise method find_for_authentication
   # Allow users to Sign In using their username or email address
   def self.find_for_authentication(conditions)
@@ -116,7 +118,6 @@ class User < ActiveRecord::Base
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token.extra.raw_info
-#    debugger
     if user = User.where(:email => data.email).first
       user
     else # Create a user with a stub password. 
@@ -211,6 +212,10 @@ class User < ActiveRecord::Base
     profile.life_events    
   end
   
+  def profile_type
+    profile.ProfileType
+  end
+  
   def private_circle_events
     profile.private_events.private_circle   
   end
@@ -242,13 +247,20 @@ class User < ActiveRecord::Base
       cid = LocalChannel.select_channel(interest, self.city, self.location).flatten 1 if interest
       cid.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(:user_id=>self.id, :channelID => channel.channelID, :contentsourceID => self.ssid) } if cid   
     end        
+  end
+  
+  def nearby_users
+   ulist = User.where("location_id = ?", self.location_id).limit(30)
+   ulist.reject{|usr| usr.profile_type != 'Individual'}
   end 
   
   # define sphinx search indexes and criteria
   define_index do
-    indexes first_name, :sortable => true
-    indexes last_name, :sortable => true
-#    indexes [first_name, last_name], :as => :name
+#    indexes first_name, :sortable => true
+#    indexes last_name, :sortable => true
+#    indexes [first_name, last_name], :as => :name, :sortable => true
+    indexes name, :sortable => true
+    indexes location, :sortable => true
     indexes email, :sortable => true
    
     has id, :as => :user_id

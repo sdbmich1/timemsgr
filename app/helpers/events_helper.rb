@@ -62,16 +62,11 @@ module EventsHelper
   end
   
   def time_left?(*e)
-    if e[0].eventenddate.to_date > Date.today 
-#      if e[1].blank? 
-#         e[0].eventstartdate.to_date <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
-#      else  
-#         e[1] <= Date.today ? compare_time(Time.now, e[0].eventendtime) : true 
-#      end
-      true
-    else
-      e[0].eventenddate.to_date == Date.today && compare_time(Time.now, e[0].eventendtime) ? true : false
-    end    
+    e[0].eventenddate.to_date > Date.today ? true : goneBy?(e)
+  end
+  
+  def goneBy?(e)
+    e[0].eventenddate.to_date == Date.today && compare_time(Time.now, e[0].eventendtime)
   end
   
   def rsvp?(val)
@@ -79,7 +74,8 @@ module EventsHelper
   end  
 
   def is_past?(ev)
-    return false if ev.blank? 
+    return false if ev.blank?
+    return false if ev.eventstartdate.blank?
     etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
     ev.eventstartdate <= Date.today && compare_time(Time.now, etm) ? true : false    
   end
@@ -207,9 +203,9 @@ module EventsHelper
   end
   
   def get_upcoming_events(sdt)
-    @trk_events ||= get_subscriptions sdt
-    @user_events ||= get_user_events
-    @events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(@user_events, e) || is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
+    @trk_events = get_subscriptions sdt
+    @events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(get_user_events, e) || 
+        is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
   end
   
   # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events
@@ -224,7 +220,7 @@ module EventsHelper
    
   # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
   def chk_user_events(elist, event)
-    elist.detect{|x| x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name}
+    elist.detect{|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) || x.eventid == event.eventid}
   end
   
   def chk_action(action, event)
@@ -338,7 +334,7 @@ module EventsHelper
       if start_dt == Date.today
         @date_s = "Today" 
       else
-        dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}"
+        dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}" rescue nil
       end
     else
      @date_s = start_dt.blank? ? "#{end_dt.strftime("%A, %B %e, %Y")}" : "#{start_dt.strftime("%D")} - #{end_dt.strftime("%D")}" 
@@ -384,7 +380,7 @@ module EventsHelper
   end
   
   def has_reminder? event
-    event.remindflg == 'yes' ? true : false
+    event.remindflg == 'yes'
   end 
   
   def get_display_type(etype, tag)
@@ -405,6 +401,10 @@ module EventsHelper
   end
   
   def isLegacy?(event)
-    event.contentsourceURL == "http://KITSC.rbca.net" ? true : false
+    event.contentsourceURL == "http://KITSC.rbca.net"
+  end
+  
+  def showLocation?(event)
+    !event.location.blank? && (event.location =~ /http/i).nil? && !isLegacy?(event)
   end
 end

@@ -13,6 +13,7 @@ class LifeEventsController < ApplicationController
   end
 
   def create
+    @user ||= current_user
     @event = LifeEvent.new(reset_dates(params[:life_event]))
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"

@@ -1,5 +1,14 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Notifications'} %>
 
 <% content_for :content do %>
-	<%= render "mobile/notice_list" %>
+  <div data-role="collapsible-set" data-mini="true">
+   	<div data-role="collapsible" data-collapsed="false">
+		<h3><%= "Recent Notices" %></h3>
+		<ul data-role="listview"><%= render :partial => 'mobile/notice_list', :collection => get_recent_notices, :as => :notice %></ul>
+	</div>	 	
+	<div data-role="collapsible" >
+		<h3><%= "Past Notices" %></h3>
+		<ul data-role="listview"><%= render :partial => 'mobile/notice_list', :collection => get_past_notices, :as => :notice %></ul>
+	</div>		  	
+  </div>
 <% end %>

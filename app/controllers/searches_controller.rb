@@ -3,9 +3,8 @@ class SearchesController < ApplicationController
   layout :page_layout
 
   def index
-    query = params[:search]
-    page  = params[:page] || 1
-    @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event], :conditions => {:mapcity => @location.city + '*'}, :page => params[:page], :per_page => 15
+    query, page, max_time = params[:search], params[:page] || 1, Time.now.advance(:days => 14)
+    @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event], :conditions => {:mapcity => @location.city + '*'}, :with => {:eventenddate => Time.now..max_time}, :page => params[:page], :per_page => 15
   end
   
   def page_layout 

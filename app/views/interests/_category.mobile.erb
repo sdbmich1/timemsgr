@@ -1,8 +1,8 @@
 <!-- list all categories and related interests -->
 
-<div data-role="collapsible">
-	<h3><%= getlogo(category.photo_file_name) %><%= "#{category.name.titleize}" %></h3>
-	<% category.interests.each do |sub| %>		
+<div data-role="collapsible" data-mini='true'>
+	<h3><%= "#{category.name.titleize}" %></h3>
+	<% category.interests.reorder('name').each do |sub| %>		
 		<fieldset data-role="controlgroup"> 
 			<%= check_box_tag :interest_ids, sub.id, @user.interests.include?(sub), :name => 'user[interest_ids][]' -%>
 			<label for="interest_ids"><%= sub.name %></label>

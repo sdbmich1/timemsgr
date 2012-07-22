@@ -16,22 +16,26 @@
 #app-header {bottom:auto; position:fixed !important; top:0 !important; width:100%; z-index: 999;}  
 
 .ui-header, .ui-navbar { width: 100%!important; }
-.scrollable {
+.scrollable, .scroller, .listpg, .home-pg, .form-top {
 	position: absolute;
-      top: 50px;
       left: 0;
       right: 0;
       padding: 0;
       height: 120%;
-      width: 100%;
-      bottom: 50px;
-      overflow: auto;
-      overflow-x: hidden;
+      width: 100%;           
 }
+
+.listpg {top: 78px;}
+.form-top, .scroller {top: 40px;}
+.scrollable {top: 50px!important; bottom: 50px; overflow: auto; overflow-x: hidden;}
+.home-pg {top: 113px;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
 /*.ui-btn-inner, .ui-li {width: 100%!important;} */
 .ui-br { border-bottom-style:none; }
+.ui-collapsible-content {padding: 5px 25px!important;}
+.ui-btn-icon-right {padding-right: 5px!important;}
+.ui-collapsible-set {margin-top: 0!important;}
 
 .mobile_container {  
       width: 100%;  
@@ -128,7 +132,7 @@ label, label.ui-input-text { font-size:12px!important; margin-top:5px!important;
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
-.sdescr { font-size: 0.625em; width: 80%; font-weight: normal; height: 30px; }
+.sdescr { font-size: 0.625em; width: 75%; font-weight: normal; height: 30px; }
 
 .sponsor-type { font-size: 0.75em;  }
 .sponsor-msg { color: blue; font-weight: bold; }

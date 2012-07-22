@@ -9,7 +9,7 @@
   </head>
   <body>  
   <div id="formapp" data-role="page"> 
-    <div data-role="header" data-theme="b">
+    <div data-role="header" data-theme="b" id="app-header">
       <%= yield :head %>
     </div>
     
@@ -20,8 +20,10 @@
     </div>
     
 	<div class="app-content" data-role="content">
-		<%= yield :subhead %>
-      	<%= yield :content %>
+		<div class="form-top">
+			<%= yield :subhead %>
+      		<%= yield :content %>
+      	</div>
     </div>
     
     <div id="app-footer" data-role="footer">		

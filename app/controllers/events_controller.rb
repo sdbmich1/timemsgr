@@ -31,7 +31,7 @@ class EventsController < ApplicationController
  	protected
  	
  	def page_layout 
-    mobile_device? ? action_name == 'show' ? 'showitem' : 'list' : action_name == 'show' ? 'showevent' : "events"
+    mobile_device? ? action_name == 'show' ? 'showitem' : 'events' : action_name == 'show' ? 'showevent' : "events"
   end    
   
   def chk_notices

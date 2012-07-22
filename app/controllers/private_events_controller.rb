@@ -69,7 +69,7 @@ class PrivateEventsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'list' : "showevent"
+    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'pages' : "showevent"
   end    
 
 end

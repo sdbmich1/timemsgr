@@ -13,6 +13,4 @@
 		<li><%= link_to "My Interests", edit_interest_path(@user, {:p => "Interests"}) %> </li>
 		<li><%= link_to "My Profile", edit_user_url(@user) %> </li>
 		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
-		<li data-role="list-divider" data-mini="true">Account</li>
-	 	<li><%= link_to "QOL Score", metrics_url(@user) %> </li>
 	</ul><% end -%>

@@ -26,7 +26,10 @@ class InterestsController < ApplicationController
     @user ||= User.find(params[:id])
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {}) 
     flash[:notice] = "#{get_msg(@user, 'Interest')}" if @user.update_attributes(params[:user])
-    respond_with(@user, :location => home_path) 
+    respond_to do |format|
+      format.mobile { redirect_to home_user_path }
+      format.html { redirect_to edit_user_path(@user, :p => "Profile") }
+    end
 	end
 
   def index

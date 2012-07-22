@@ -1,10 +1,12 @@
-<li>	
-  <%= link_to channel_url(channel) do %>
-   	<div class="chtitle">
-		<h6><%= channel.channel_name %></h6>
-	</div>
-	<div class="ch-descr">
-		<div class="ui-li-desc sdescr"><%= truncate(channel.bbody, :length=>80, :omission=>'...') %></div>
-	</div>
+<li data-icon="<%= getIcon(channel) %>">	
+<% if subscribed?(channel.channelID) %>
+  <%= link_to subscription_url(:id=>get_subscription(channel.subscriptions, channel.channelID),:user_id=>@user, :channel_id => channel.channelID), 
+					:confirm => 'Unsubscribe from this channel?', 'data-ajax'=>"false", :method=>:put do %> 
+	<%= render :partial => 'mobile/channel_item', :locals => {:channel => channel }%>
   <% end %>
+<% else %>
+  <%= link_to subscriptions_url(:user_id=>@user, :channel_id => channel.channelID), :confirm => 'Subscribe to this channel?', 'data-ajax'=>"false", :method=>:post  do %> 
+	<%= render :partial => 'mobile/channel_item', :locals => {:channel => channel }%>			
+  <% end %>
+<% end %>
 </li>

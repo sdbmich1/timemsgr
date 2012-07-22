@@ -12,4 +12,9 @@ module ChannelsHelper
     sub = slist.detect { |x| x.channelID == cid && x.status == 'active' } 
     sub  
   end  
+  
+  def getIcon(channel)
+    subscribed?(channel.channelID) ? 'minus' : 'add'
+  end
+  
 end

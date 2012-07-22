@@ -3,7 +3,7 @@ include Schedule
 module EventsHelper
   
   def life_observance?(etype)
-    (%w(birthday anniversary).detect { |x| x == etype})
+    LifeEventType.all.detect{ |x| x.code == etype}
   end
   
   def appt?(etype)
@@ -76,7 +76,7 @@ module EventsHelper
   def is_past?(ev)
     return false if ev.blank?
     return false if ev.eventstartdate.blank?
-    etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i)
+    etm = ev.eventendtime.advance(:hours => (0 - ev.endGMToffset).to_i) rescue nil
     ev.eventstartdate <= Date.today && compare_time(Time.now, etm) ? true : false    
   end
   
@@ -177,7 +177,7 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    get_trkr_schedule(@user, @events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
+    get_trkr_schedule(@user, get_user_events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
   end
   
   def get_appointments
@@ -388,7 +388,7 @@ module EventsHelper
   end 
   
   def get_etype_data(etype)
-    etype == 'event' || etype == 'private_events' ? EventType.all : LifeEventType.all
+    etype == 'event' || etype == 'private_events' ? EventType.unhidden : LifeEventType.unhidden
   end
   
   def has_location?(event)
@@ -406,5 +406,9 @@ module EventsHelper
   
   def showLocation?(event)
     !event.location.blank? && (event.location =~ /http/i).nil? && !isLegacy?(event)
+  end
+  
+  def reminderTitle
+    !has_reminder?(@event) ? "+ Add Reminder" : "- Remove Reminder"
   end
 end

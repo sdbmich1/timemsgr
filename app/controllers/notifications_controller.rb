@@ -9,7 +9,7 @@ class NotificationsController < ApplicationController
     @notification.save ? flash[:notice] = "Notification request sent." : flash[:notice] = "Unable to send notification request."
     respond_to do |format|
       format.mobile { redirect_to event_url(:id=>@event, :etype=>@event.event_type, :sdt=>@event.eventstartdate, :eid=>params[:eid]) }
-      format.js { render :nothing => true}
+      format.js { render :nothing => true }
     end
   end
   

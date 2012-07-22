@@ -217,3 +217,12 @@ $(".details").live("click", function() {
     //prevent the default behavior of the click event
     return false;
 });
+
+$(".loadmore").live("click", function() {
+    var page_num = $('.viewmore').attr('data-page') + 1;
+	alert('page = ' + page_num);
+    $.get('categories.js?page=' + page_num, function (data) {
+        $('#moblist > li.viewmore').remove();
+        $('#moblist').append(data);
+    });
+}); 

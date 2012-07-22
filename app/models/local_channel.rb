@@ -50,6 +50,10 @@ class LocalChannel < KitsSubModel
     where("channel_name like ? OR localename like ?", '%' + loc + '%', loc + '%')      
   end
   
+  def self.get_channels loc, offset, amt
+    get_channel_by_loc(loc).offset(offset).limit(amt)
+  end
+  
   def self.get_channel_by_name(title)
     where("channel_name like ?", '%' + title + '%')   
   end
@@ -71,7 +75,11 @@ class LocalChannel < KitsSubModel
     AND (cl.location_id = ?) 
     AND (i.interest_id in (?))) ORDER BY sortkey ASC"
   end
-  
+
+  def descr
+    bbody.blank? ? '' : bbody[0..79] + '...'    
+  end
+    
   def summary
     bbody.blank? ? '' : bbody[0..119] + '...'
   end

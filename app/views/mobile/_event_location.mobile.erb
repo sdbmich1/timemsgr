@@ -1,7 +1,7 @@
 <%= render 'mobile/infield_form_labels' %>
-<p><label for="<%= "#{get_display_type(etype,'mapplacename')}" %>">Place </label><%= f.text_field :mapplacename, :size => 60 %></p>
-<p><label for="<%= "#{get_display_type(etype,'mapstreet')}" %>">Street </label> <%= f.text_field :mapstreet, :size => 60 %></p>
-<p><label for="<%= "#{get_display_type(etype,'mapcity')}" %>">City </label> <%= f.text_field :mapcity, :size => 25 %></p>
+<p><label for="<%= "#{get_display_type(etype,'mapplacename')}" %>">Place </label><%= f.text_field :mapplacename, :size => 60, 'data-mini'=>'true' %></p>
+<p><label for="<%= "#{get_display_type(etype,'mapstreet')}" %>">Street </label> <%= f.text_field :mapstreet, :size => 60, 'data-mini'=>'true' %></p>
+<p><label for="<%= "#{get_display_type(etype,'mapcity')}" %>">City </label> <%= f.text_field :mapcity, :size => 25, 'data-mini'=>'true' %></p>
 <p><label>State </label> <%= f.collection_select :mapstate, StateCode.all, :StateAbbr, :State, {:prompt => 'Select State'}, {'data-mini'=>"true"} %></p>
-<p><label for="<%= "#{get_display_type(etype,'mapzip')}" %>">Zip </label> <%= f.text_field :mapzip, :size => 10 %></p>
+<p><label for="<%= "#{get_display_type(etype,'mapzip')}" %>">Zip </label> <%= f.text_field :mapzip, :size => 10, 'data-mini'=>'true' %></p>
 <p><label>Country </label> <%= f.country_select :mapcountry, ["United States"], {}, {'data-mini'=>"true"} %></p>

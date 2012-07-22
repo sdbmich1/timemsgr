@@ -2,11 +2,13 @@
   <%= form_for @user, :as => :user, :url => affiliation_path(@user), :validate => true do |f| %>
  	<div id="event_errors" style="display:none" class="error"></div>
 	<%= render :partial => 'mobile/affiliations', :locals => { :f => f } %>
+	<p>
 	<% if action_name == 'new' %>
-		<p><%= f.submit 'Finish', "data-theme"=>"b" %></p>
+		<%= f.submit 'Finish', "data-theme"=>"b", 'data-mini'=>'true' %>
 	<% else %>
-		<p><%= f.submit "Save", "data-theme"=>"b" %></p>
+		<%= f.submit "Save", "data-theme"=>"b", 'data-mini'=>'true' %>
 	<% end %>
-	<%= link_to "Cancel", home_url, "data-role" => "button" %>
+	<%= link_to "Cancel", :back, "data-role" => "button", 'data-mini'=>'true' %>
+  	</p>	
   <% end %>
 </div>

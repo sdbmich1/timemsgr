@@ -6,8 +6,8 @@
 			<%= render :partial => 'mobile/user_profile', :locals => { :f => f } %>
 			<%= render :partial => 'mobile/user_contact', :locals => { :f => f } %>
 		<p>
-			<%= f.submit "Save", "data-theme"=>"b", 'data-mini'=>'true' %>
-			<%= link_to "Cancel", :back, "data-role" => "button", 'data-mini'=>"true" %>
+			<%= f.submit "Save", "data-theme"=>"b" %>
+			<%= link_to "Cancel", :back, "data-role" => "button"%>
 		</p>
 	<% end %>
 <% end %>

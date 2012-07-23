@@ -1,5 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  layout :page_layout
   
   def after_sign_up_path_for(resource)
 #    if mobile_device? 
@@ -24,12 +23,4 @@ class RegistrationsController < Devise::RegistrationsController
       @user.valid?
     end
   end
-
-  def page_layout 
-    if mobile_device?
-      'form' 
-    else
-      "application"
-    end
-  end  
 end

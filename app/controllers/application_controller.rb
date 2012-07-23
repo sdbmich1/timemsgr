@@ -12,11 +12,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     @user ||= resource
-    if @user.sign_in_count <= 1 # check for new users
-      new_local_subscription_path
-    else
-      params[:next] || events_path
-    end 
+    @user.sign_in_count <= 1 ? new_local_subscription_path : params[:next] || events_path
   end
   
   protected

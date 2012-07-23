@@ -123,7 +123,7 @@ $(function (){
     });
 });
 
-$(function(){
+$(document).ready(function() {
   if ( $('#mform label').length != 0 ) {
     $("#mform label").inFieldLabels();
   }

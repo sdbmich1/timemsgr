@@ -7,7 +7,7 @@ class SearchChannelsController < ApplicationController
   end
   
   def page_layout 
-    mobile_device? ? 'list' : "users"
+    mobile_device? ? 'pages' : "users"
   end    
 
 end

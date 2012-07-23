@@ -1,27 +1,9 @@
 
-<% content_for :head do %>
-   <%= link_to 'Sign In', new_user_session_path, "class" => "ui-btn-right" %>
-<% end -%>
-
 <% content_for :content do %>
-  <h3 class="center-wrapper"><%= "Sign Up" %></h3> 
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
  	<%= devise_error_messages! %>
- 		<p>First Name <br /><%= f.text_field :first_name %></p> 
- 		<p>Last Name <br /><%= f.text_field :last_name %></p>
-		<p>Username <br /><%= f.text_field :username %></p>
-    	<p>Email <br /> <%= f.text_field :email %></p>
-    	<p>Password <br /><%= f.password_field :password %></p>
- 		<p>Location<br /><%= f.collection_select :location_id, Location.all, :id, :city, :prompt => 'Select' %></p>
-		<p>Gender<br /><%= f.select :gender, options_for_select( ['Male', 'Female'] ), :prompt => 'Select' %></p>
-   		<p>Birth Date<br />
-    		<%= f.date_select :birth_date, :as => :date, :start_year => Date.today.year - 13,
-                                :end_year => Date.today.year - 90, 
-                                :order => [:month, :day, :year], :required => true, 
-                                :prompt => true,
-                                :hint => "This helps find content for you."  %></p>
-
-    	<p><%= f.submit "Sign Up", "data-theme"=>"b" %></p>
+ 	<%= render :partial => 'mobile/user_profile', :locals => {:f=>f, :signup=>true}%>
+   	<p><%= f.submit "Sign Up", "data-theme"=>"b" %></p>
   <% end %>
 
   <%= render :partial => "devise/shared/links" %>

@@ -185,11 +185,11 @@ module EventsHelper
   end
   
   def get_past_events
-    @events.select {|event| event.eventstartdate.to_date < Date.today}
+    @events.reject {|event| chk_user_events(get_current_events, event)}
   end
 
   def get_current_events
-    @events.select {|event| event.eventstartdate.to_date >= Date.today}
+    @events.select {|event| event.eventstartdate.to_date >= Date.today || event.eventenddate.to_date >= Date.today}
   end
   
   def get_subscriptions *args
@@ -266,10 +266,10 @@ module EventsHelper
   def get_events(*args)
     case 
     when !(args[0] =~ /Observances/i).nil?; get_observances 
-    when !(args[0] =~ /Suggested/i).nil?; get_upcoming_events(args[1])
+    when !(args[0] =~ /Near/i).nil?; get_upcoming_events(args[1])
     when !(args[0] =~ /Scheduled/i).nil?; get_opportunities(args[1])
     when !(args[0] =~ /Appointment/i).nil?; get_appointments
-    when !(args[0] =~ /Tracked/i).nil?; get_subscriptions(args[1])
+    when !(args[0] =~ /Suggested/i).nil?; get_subscriptions(args[1])
     else get_user_events
     end
   end    
@@ -311,9 +311,9 @@ module EventsHelper
     case 
     when !(area =~ /Appointment/i).nil?
       sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "appt-slider" } 
-    when !(area =~ /Tracked/i).nil?
-      sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "sub-slider" } 
     when !(area =~ /Suggested/i).nil?
+      sclass = {:lnav => 'prev-btn', :rnav => "next-btn", :stype => "sub-slider" } 
+    when !(area =~ /Near/i).nil?
       sclass = {:lnav => 'prev', :rnav => "next", :stype => "opp-slider" } 
     else
       sclass = {:lnav => 'sch-prev-btn', :rnav => "sch-next-btn", :stype => "sch-slider" } 
@@ -410,5 +410,13 @@ module EventsHelper
   
   def reminderTitle
     !has_reminder?(@event) ? "+ Add Reminder" : "- Remove Reminder"
+  end
+  
+  def chk_photo cnlr, actn
+    cnlr == 'users' && actn != 'index' ? @facebook_user.picture : file_name
+  end 
+  
+  def image_exists? model
+    model.imagelink.blank? ? false : true rescue nil
   end
 end

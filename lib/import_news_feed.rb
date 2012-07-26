@@ -15,11 +15,11 @@ class ImportNewsFeed
         :contentsourceURL => args[5][0..99],   
         :location => doc.xpath("//item//xCal:location")[n].text,
         :mapplacename => doc.xpath("//item//xCal:adr//xCal:x-calconnect-venue-name")[n].text[0..59],
-        :mapstreet => doc.xpath("//item//xCal:adr//xCal:x-calconnect-street")[n].text,
-        :mapcity => doc.xpath("//item//xCal:adr//xCal:x-calconnect-city")[n].text,
+        :mapstreet => doc.xpath("//item//xCal:adr//xCal:x-calconnect-street")[n].text[0..39],
+        :mapcity => doc.xpath("//item//xCal:adr//xCal:x-calconnect-city")[n].text[0..39],
         :mapstate => doc.xpath("//item//xCal:adr//xCal:x-calconnect-region")[n].text[0..24],
-        :mapzip => doc.xpath("//item//xCal:adr//xCal:x-calconnect-postalcode")[n].text,
-        :mapcountry => doc.xpath("//item//xCal:adr//xCal:x-calconnect-country")[n].text,
+        :mapzip => doc.xpath("//item//xCal:adr//xCal:x-calconnect-postalcode")[n].text[0..9],
+        :mapcountry => doc.xpath("//item//xCal:adr//xCal:x-calconnect-country")[n].text[0..39],
         :contentsourceID => args[4], :localGMToffset => args[6], :endGMToffset => args[6],
         :subscriptionsourceID => args[4]) 
     new_event.imagelink = doc.xpath("//item//images//url")[n].text rescue nil

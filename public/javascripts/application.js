@@ -33,7 +33,8 @@ $(document).ready(function() {
     .live("ajax:beforeSend", toggleLoading)
     .live("ajax:complete", toggleLoading)
     .live("ajax:success", function(event, data, status, xhr) {
-      $("#response").html(data).toggleLoading();
+      $("#response").html(data);
+      toggleLoading();
     });
 }); 
 
@@ -130,7 +131,9 @@ $(document).ready(function() {
 });
   
 $(function () {
-   $("#ev-results .pagination a, #event_form .pagination a, #sub-list .pagination a,#channel_form .pagination a, #notice_list .pagination a, #pres-list .pagination a, #sess-list .pagination a").live('click', function () {
+  $("#ev-results .pagination a, #past_evnt .pagination a, #event_form .pagination a, #sub-list .pagination a, #channel_form .pagination a, #notice_list .pagination a, #pres-list .pagination a, #sess-list .pagination a")
+  	.live('click', function () {
+//   $("[id*=pagination]").live('click', function () {
          $.getScript(this.href);
          return false;   
    });
@@ -207,10 +210,10 @@ $(function (){
    $("#search_btn").live('click', function () {
    	 if ($("input[name='search']").length != 0) {
    	 	var srchText = $("input[name='search']").val();
-   	 	if ( $('#location_id').length != 0 )
+   	 	if ( $('#location_id').length != 0 && srchText.length != 0 )
  		  {
    	 		$("#location_id option:contains(" + capitalize(srchText) + ")").attr('selected', 'selected');
-   	 	 }
+   	 	  }   	 	  
    	 }
 	})
 });
@@ -278,11 +281,15 @@ $(function (){
 });
 
 // add accordion
-$(function(){
-  if ( $('#accordian').length != 0 ) {
-  	$("#accordion").accordion({ collapsible: true });	
-  }
+$(document).ready(function() {
+	set_accordion(0);
 });
+
+function set_accordion(element) {
+  if ( $('#accordion').length != 0 ) {
+ 	$("#accordion").accordion({ active: element, collapsible: true, header: '.clicker', clearStyle: true });	
+  }		
+}
 
 
 // when the #start time field changes
@@ -306,3 +313,15 @@ $(function (){
       	  { $("#reminder-type").hide('slow'); }
 	});
 });
+
+$(document).ready(function() {
+	
+  $("input[id^=user_affiliations_attributes]").autocomplete({
+    source: '/affiliations/list',
+    minLength: 3,
+    select: function (event, ui) { }
+  });
+    
+});
+
+

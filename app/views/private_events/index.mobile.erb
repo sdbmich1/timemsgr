@@ -8,11 +8,11 @@
   <div data-role="collapsible-set" data-mini="true">
    	<div data-role="collapsible" data-collapsed="false">
 		<h3><%= "Upcoming Activities" %></h3>
-		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => get_current_events, :as => :event %></ul>
+		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => @events, :as => :event %></ul>
 	</div>	 	
 	<div data-role="collapsible" >
 		<h3><%= "Past Activities" %></h3>
-		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => get_past_events, :as => :event %></ul>
+		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => @past_events, :as => :event %></ul>
 	</div>		  	
   </div>
 <% end -%>

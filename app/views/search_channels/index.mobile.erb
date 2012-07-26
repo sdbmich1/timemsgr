@@ -1,1 +1,6 @@
 <%= render :partial => 'mobile/channel_index', :locals => {:title => 'Search Results'} %>
+
+<%= content_for :footer do %>
+	<div class="srchText" data-query="<%= @query %>"></div>
+	<script>matchLocation();</script>
+<% end %>

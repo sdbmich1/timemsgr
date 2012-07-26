@@ -1,5 +1,8 @@
-$("#channel_form").html("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
-
-$('ul.menu li a').css('background-color', '#0C6FCB');
-$('ul.menu li ul li a').css('background-color', '#ccc');
-$("#spinner").hide('fast'); 
+<% unless mobile_device? %>
+	$("#channel_form").html("<%= escape_javascript( raw render(:partial => "shared/channel_list") ) %>");
+	$('ul.menu li a').css('background-color', '#0C6FCB');
+	$('ul.menu li ul li a').css('background-color', '#ccc');
+	$("#spinner").hide('fast'); 
+<% else %>
+	$(".channelList").html("<%= escape_javascript( raw render(:partial => "mobile/channel_index", :locals => {:title => 'Search Results'} ) ) %>");
+<% end %>

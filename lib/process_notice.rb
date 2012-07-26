@@ -68,7 +68,7 @@ module ProcessNotice
   end
   
   def get_notice_type(model, ptype)
-    notification?(model) ? model.Notice_Type : ptype == 'new'? 'schedule' : ptype == 'update'? 'reschedule' : ptype
+    notification?(model) ? model.Notice_Type : ptype == 'new'? 'schedule' : ptype == 'update'? 'reschedule' : ptype == 'delete' ? 'cancel' : ptype
   end
   
   def get_notice_text(model, ptype)

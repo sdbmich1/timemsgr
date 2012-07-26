@@ -12,7 +12,9 @@
  		<%= yield :left_sidebar %>
 	  	<%= yield :content %>
 		<%= yield :scripts %>
-		<%= yield :footer %>
+	</div>
+	<div id="footer" class="container">
+		<%= yield :footer %>		
 	</div>
 	<%= render 'shared/jsheets'%>
     <%= render :partial => 'layouts/ga' if Rails.env.production? %>      

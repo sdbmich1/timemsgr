@@ -1,0 +1,20 @@
+<% if flash.nil? %>
+	$("#flash_notice").hide(300);
+	$("#flash_error").hide(300);
+<% else %>
+	<% if !flash[:notice].nil? %>
+		$("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
+		$("#flash_notice").show(300);
+		$("#import").html("<%= escape_javascript( raw render('shared/show_import_event') ) %>");
+		<% debugger %>
+		<% if @pgType == 'past_page' %>
+			$("#past_evnt").html("<%= escape_javascript( raw render(:partial => 'shared/event_list', :locals => {:title=>'Past Activities', :model=>@past_events, :type=>@pgType}) ) %>");
+		<% else %>
+			$("#cur_evnt").html("<%= escape_javascript( raw render(:partial => 'shared/event_list', :locals => {:title=>'Upcoming Activities', :model=>@events, :type=>@pgType}) ) %>");
+		<% end %>
+	<% elsif !flash[:error].nil? %>
+		$("#flash_error").html("<%= escape_javascript(flash[:error])%>");
+		$("#flash_error").show(300);
+	<% end %>
+<% end %>
+$("#spinner").hide(300);

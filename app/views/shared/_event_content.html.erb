@@ -1,0 +1,7 @@
+		<table>
+  			<tr><th>Event Name</th><th>Overview</th><th>Start Date</th><th>End Date</th><th>Start</th><th>End</th><th></th><th></th><th></th></tr>	
+			<%= render :partial => 'shared/event_list_items', :collection => model, :as => :event %>
+		</table>
+		<div class="nav-right">
+  			<%= will_paginate model, :params => { :param_name => type } %>
+		</div>	

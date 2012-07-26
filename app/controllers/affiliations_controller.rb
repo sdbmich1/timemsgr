@@ -32,7 +32,14 @@ class AffiliationsController < ApplicationController
       @user.sign_in_count <= 1 ? (render :action => :new) : (render :action => :edit)
     end
   end
-     
+
+  def list
+    list = []
+    organizations = Organization.where('OrgName LIKE ?', "#{params[:term]}%").limit(10)
+    organizations.each { |org| list << { "label" => org.OrgName } }
+    render :json => list.to_json
+  end
+       
   protected
   
   def page_layout  

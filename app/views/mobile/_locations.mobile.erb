@@ -1,1 +1,1 @@
-	<div data-role="fieldcontain"> 		<%= collection_select(:location, :id, Location.active, :id, :city, {:prompt => true}, {:id=>'loc_id', 'data-mini'=>"true"}) %>	</div>
+	<div data-role="fieldcontain"> 		<%= collection_select(:location, :id, Location.active, :id, :city, {:prompt => true, :selected => @location.id}, {:id=>'loc_id', 'data-mini'=>"true"}) %>	</div>

@@ -1,4 +1,4 @@
-<div class="span-21 last prepend-5" id="flash_notice">
+<div class="span-21 last prepend-5">
 	<div id="event_errors" style="display:none" class="error"></div>
 </div>
 <% if observances? %>
@@ -7,12 +7,5 @@
 	</div><br />
 	<div class="clear-all"></div>
 <% end %>
-<div id="sch-slider">
-	<%= render :partial => 'slider', :locals => { :slider => "Scheduled Activities" } %>
-</div>
-<% if subscriptions? %>
-	<%= render :partial => 'slider', :locals => { :slider => "Tracked Activities" }  %>
-<% end %>
-<%= cache "events", :expires_in => 30.minutes do %>
-	<div class="bot-20"><%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" } %></div>
-<% end %>
+
+<%= render :partial => 'events/event_panels' %>

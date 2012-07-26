@@ -15,8 +15,11 @@
 		<%= yield :subhead %>
   		<div id="spinner" style="display:none"></div>
 	  	<%= yield :left_sidebar %>
-	  	<%= yield :content %>	  	
-		<%= render 'layouts/footer' %>
+	  	<%= yield :content %>	 
+		<div id="push"></div>		
 	</div> 
+	<div id="footer" class="container">	
+		<%= render 'layouts/footer' %>
+	</div>
  </body>
 </html>

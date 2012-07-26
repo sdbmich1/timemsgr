@@ -1,11 +1,11 @@
 class PrivateEventsController < ApplicationController
+  require 'will_paginate/array'
   before_filter :authenticate_user!
   include ResetDate, ImportEvent
   layout :page_layout
 
   def index
-    @start_date = params[:sdate]
-    @events = mobile_device? ? PrivateEvent.get_events(@user.ssid) : PrivateEvent.get_event_data(params[:page], @user.ssid, @start_date )
+    load_events
   end
 
   def show
@@ -13,7 +13,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def new
-    @event = PrivateEvent.new #(:eventstartdate=>Date.today, :eventenddate=>Date.today)
+    @event = PrivateEvent.new 
   end
 
   def create
@@ -41,12 +41,13 @@ class PrivateEventsController < ApplicationController
 
   def destroy
     @user ||= current_user
+    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page'
     @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]) : PrivateEvent.find(params[:id])
     @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
       format.html { redirect_to events_url } 
       format.mobile { redirect_to events_url }
-      format.js {@events = PrivateEvent.get_event_data(params[:current_page], @user.ssid, params[:sdate])}
+      format.js { load_events }
     end      
   end
     
@@ -70,6 +71,27 @@ class PrivateEventsController < ApplicationController
   
   def page_layout 
     mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'pages' : "showevent"
-  end    
+  end
+  
+  def offset
+    mobile_device? ? 30 : 15
+  end
+
+  def sdate
+    @start_date = params[:sdate]    
+  end  
+  
+  def pgType
+    params[:param_name] ? @pgType = params[:param_name] : @pgType   
+  end 
+  
+  def getPgType type
+    pgType ? pgType == type ? true : false : true
+  end
+  
+  def load_events
+    @events = PrivateEvent.current_events(@user.ssid).paginate(:page=>params[:page], :per_page => offset) if getPgType('upcoming_page')
+    @past_events = PrivateEvent.past_events(@user.ssid).paginate(:page=>params[:page], :per_page => offset) if getPgType('past_page')    
+  end
 
 end

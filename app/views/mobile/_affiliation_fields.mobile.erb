@@ -1,6 +1,6 @@
 <div class="fields">
  	<%= f.label :name, "Name" %>  
-    <%= f.autocomplete_field :name, autocomplete_organization_OrgName_affiliations_path, :size => 60, 'data-mini'=>'true' %>
+    <%= f.text_field :name, :size => 60, :class =>'query', 'data-mini'=>'true' %>
    	<%= f.label :affiliation_type, "Type" %> 
    	<%= f.collection_select :affiliation_type, AffiliationType.all, :name, :name, {:prompt => 'Select'}, {'data-mini'=>'true'}  %> 	
 </div>

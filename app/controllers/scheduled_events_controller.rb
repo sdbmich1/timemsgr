@@ -1,7 +1,5 @@
-class ScheduledEventsController < ApplicationController
+class ScheduledEventsController < PrivateEventsController
   before_filter :authenticate_user!, :except => [:create]
-  include ResetDate, SetAssn
-  layout :page_layout
 
   def create
     @user ||= current_user
@@ -26,12 +24,13 @@ class ScheduledEventsController < ApplicationController
 
   def destroy
     @user ||= current_user
+    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page'
     @event = params[:eid] ? ScheduledEvent.find_by_eventid(params[:eid]) : ScheduledEvent.find(params[:id])
     @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
       format.html { redirect_to events_url } 
       format.mobile { redirect_to events_url }
-      format.js {@events = PrivateEvent.get_event_data(params[:current_page], @user.ssid, params[:sdate])}
+      format.js { load_events }
     end    
   end
     
@@ -43,6 +42,6 @@ class ScheduledEventsController < ApplicationController
   
   def page_layout 
     mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'application' : "events"
-  end    
-
+  end
+  
 end

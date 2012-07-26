@@ -1,17 +1,7 @@
 <%= render 'shared/show_import_event' %>
 <div id="accordion">
-	<h3><%= link_to "Upcoming Activities", "#"%></h3>
-	<div>
-		<table>
-  			<tr><th>Event Name</th><th>Overview</th><th>Start Date</th><th>End Date</th><th>Start</th><th>End</th><th></th><th></th><th></th></tr>	
-			<%= render :partial => 'shared/event_list_items', :collection => get_current_events, :as => :event %>
-		</table>
-	</div>
-	<h3><%= link_to "Past Activities", "#"%></h3>
-	<div>
-		<table>
-  			<tr><th>Event Name</th><th>Overview</th><th>Start Date</th><th>End Date</th><th>Start</th><th>End</th><th></th><th></th><th></th></tr>	
-			<%= render :partial => 'shared/event_list_items', :collection => get_past_events, :as => :event %>
-		</table>
-	</div>	
+	<%= render :partial=>'shared/event_list_title', :locals=>{:title=>'Upcoming Activities'} unless @pgType %>
+	<div id="cur_evnt"><%= render :partial => 'shared/event_content', :locals => {:title=>'Upcoming Activities', :model=>@events, :type=>'upcoming_page'} unless @pgType == 'past_page'%></div> 
+	<%= render :partial=>'shared/event_list_title', :locals=>{:title=>'Past Activities'} unless @pgType %>
+	<div id="past_evnt"><%= render :partial => 'shared/event_content', :locals => {:title=>'Past Activities', :model=>@past_events, :type=>'past_page'} unless @pgType == 'upcoming_page'%></div>
 </div>

@@ -9,7 +9,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def show
-    @event = PrivateEvent.find_event(params[:id])
+    @event = PrivateEvent.find_event(params[:eid])
   end
 
   def new

@@ -183,13 +183,30 @@ class PrivateEvent < ActiveRecord::Base
          UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
          ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid]) 
   end
+  
+  def self.past_events(cid)
+     where_cid = "#{where_stmt} (contentsourceID = ?) #{pastSQL}"    
+     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid]) 
+  end
+  
+  def self.current_events(cid)
+     where_cid = "#{where_stmt} (contentsourceID = ?) #{currentSQL}"    
+     find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
+         UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
+         UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid]) 
+  end
+  
       
   def self.get_event_pages(page, cid)
      where_cid = "#{where_stmt} (contentsourceID = ?)"    
      paginate_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
          UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid], :page=>page, :per_page => 25) 
+         ORDER BY eventstartdate, eventstarttime DESC", cid, cid, cid], :page=>page, :per_page => 30) 
   end
   
   def self.get_event_data(page, cid, sdate)
@@ -201,7 +218,7 @@ class PrivateEvent < ActiveRecord::Base
      paginate_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_cid} ) 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_cid} )
          UNION #{getSQL} FROM #{dbname}.events #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime DESC", cid, sdate, cid, sdate, cid, sdate], :page=>page, :per_page => 25) 
+         ORDER BY eventstartdate, eventstarttime DESC", cid, sdate, cid, sdate, cid, sdate], :page=>page, :per_page => 30) 
   end 
   
   def self.where_stmt
@@ -219,11 +236,6 @@ class PrivateEvent < ActiveRecord::Base
       "#{where_stmt} ((eventstartdate >= curdate() and eventstartdate <= ?) 
                 or (eventstartdate <= curdate() and eventenddate >= ?)) "
   end 
-
-  def self.get_current_events
-     where('((eventstartdate >= curdate() and eventstartdate <= curdate()) 
-            or (eventstartdate <= curdate() and eventenddate >= curdate()))')
-  end
   
   def self.get_event(eid)
      where_id = "where (ID = ?))"
@@ -231,6 +243,16 @@ class PrivateEvent < ActiveRecord::Base
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id}       
          UNION #{getSQL} FROM #{dbname}.events #{where_id}", eid, eid, eid])        
   end
+  
+  def self.pastSQL
+    'AND eventenddate < curdate()' 
+  end
+  
+  def self.currentSQL
+    "AND ( (eventstartdate >= curdate() ) 
+            or (eventstartdate <= curdate() and eventenddate >= curdate()) )"
+  end
+  
   
   def self.set_status(eid)
     event = PrivateEvent.find_event(eid)

@@ -3,12 +3,8 @@
  	<div id="event_errors" style="display:none" class="error"></div>
 	<%= render :partial => 'mobile/affiliations', :locals => { :f => f } %>
 	<p>
-	<% if action_name == 'new' %>
-		<%= f.submit 'Finish', "data-theme"=>"b", 'data-mini'=>'true' %>
-	<% else %>
-		<%= f.submit "Save", "data-theme"=>"b", 'data-mini'=>'true' %>
-	<% end %>
-	<%= link_to "Cancel", :back, "data-role" => "button", 'data-mini'=>'true' %>
+	<%= f.submit getBtnTag(action_name), "data-theme"=>"b" %>
+	<%= link_to "Cancel", :back, "data-role" => "button" %>
   	</p>	
   <% end %>
 </div>

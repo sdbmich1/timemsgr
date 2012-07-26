@@ -1,0 +1,9 @@
+<div id="sch-slider">
+	<%= render :partial => 'slider', :locals => { :slider => "Scheduled Activities" } %>
+</div>
+<% if subscriptions? %>
+	<%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" }  %>
+<% end %>
+<%= cache "events", :expires_in => 30.minutes do %>
+	<%= render :partial => 'slider', :locals => { :slider => "Nearby Opportunities" } %>
+<% end %>

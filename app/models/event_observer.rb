@@ -38,7 +38,7 @@ class EventObserver < ActiveRecord::Observer
   end
   
   def before_destroy model
-    process_notice(model, 'delete')
+    process_notice(model, 'delete') if model.eventenddate.to_date >= Date.today && model.class.to_s != 'ScheduledEvent'
   end
   
   private

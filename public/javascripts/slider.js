@@ -25,6 +25,7 @@ $(function() {
 });
 
 function reset_slider () {
+	toggleLoading();
 	event_slider();
 	resizeFrame();
 	window.reset_slider=reset_slider;

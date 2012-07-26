@@ -50,6 +50,8 @@ $("#loc_id").live("change", function() {
     return false;
 });
 
+
+
 // check for category changes
 $("#cat_id").live("change", function() {
     var category = $(this).val(); // grab the selected location 
@@ -93,6 +95,15 @@ $(function() {
     }, 0);
   });  
 
+// toggle location selectmenu after search by city
+function matchLocation() {
+	var srchText = $('.srchText').attr("data-query");
+	if ( $('#loc_id').length != 0 && srchText.length != 0 )
+ 		  {
+   	 		var tmp = $("#loc_id option:contains(" + capitalize(srchText) + ")").val();
+   	 		$("#loc_id option[value='" + tmp + "']").attr('selected', 'selected');
+   	 	  }	
+}
 
 // set enddate to startdate
 function dooffset() { 

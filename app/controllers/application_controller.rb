@@ -17,19 +17,19 @@ class ApplicationController < ActionController::Base
   
   protected
   
-  def rescue_with_handler(exception)
-    redirect_to '/500.html'
-  end       
+#  def rescue_with_handler(exception)
+#    redirect_to '/500.html'
+#  end       
   
-  def method_missing(id, *args)
-    redirect_to '/404.html'
-  end
+#  def method_missing(id, *args)
+#    redirect_to '/404.html'
+#  end
 
   def load_settings
     if signed_in?
       @user ||= current_user
       session[:location] = params[:location] if params[:location]
-      @location ||= Location.find_location session[:location] || current_user.location_id
+      @location ||= Location.find_location session[:location] || @user.location_id
       @facebook_user = @user.get_facebook_user session[:omniauth] if session[:omniauth]
     end
   end

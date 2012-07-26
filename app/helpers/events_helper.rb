@@ -401,7 +401,7 @@ module EventsHelper
   end
   
   def isLegacy?(event)
-    event.contentsourceURL == "http://KITSC.rbca.net"
+    event.contentsourceURL == "http://KITSC.rbca.net" rescue nil
   end
   
   def showLocation?(event)

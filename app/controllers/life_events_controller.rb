@@ -1,7 +1,7 @@
 class LifeEventsController < PrivateEventsController
 
   def show
-    @event = LifeEvent.find(params[:id])
+    @event = LifeEvent.find_by_eventid(params[:eid])
   end
 
   def new

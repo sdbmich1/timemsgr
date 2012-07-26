@@ -238,7 +238,7 @@ class PrivateEvent < ActiveRecord::Base
   end 
   
   def self.get_event(eid)
-     where_id = "where (ID = ?))"
+     where_id = "where (eventID = ?))"
      find_by_sql(["#{getSQL} FROM #{dbname}.eventspriv #{where_id} 
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id}       
          UNION #{getSQL} FROM #{dbname}.events #{where_id}", eid, eid, eid])        

@@ -412,7 +412,7 @@ module EventsHelper
     !has_reminder?(@event) ? "+ Add Reminder" : "- Remove Reminder"
   end
   
-  def chk_photo cnlr, actn
+  def chk_photo cnlr, actn, file_name
     cnlr == 'users' && actn != 'index' ? @facebook_user.picture : file_name
   end 
   

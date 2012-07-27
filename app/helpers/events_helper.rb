@@ -413,7 +413,7 @@ module EventsHelper
   end
   
   def chk_photo cnlr, actn, file_name
-    (!(cnlr =~ /users/i).nil? && actn != 'index') || (!(cnlr =~ /events/i).nil? && actn == 'index') ? @facebook_user.picture : file_name
+    (!(cnlr =~ /users/i).nil? && actn == 'edit') || (!(cnlr =~ /events/i).nil? && actn == 'index') ? @facebook_user.picture : file_name
   end 
   
   def image_exists? model

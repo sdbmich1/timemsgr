@@ -316,7 +316,7 @@ $(function (){
 
 // autocomplete 
 $(document).ready(function() {	
-	$('.query').keyup(function (e, ui) {
+	$('.query').live('keyup', function (e, ui) {
 		 var nxtID = $(this).next();
  		 var text = $(this).val();
 		 if(text.length < 3) {

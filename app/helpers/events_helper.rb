@@ -409,7 +409,7 @@ module EventsHelper
   end
   
   def reminderTitle
-    !has_reminder?(@event) ? " Add Reminder" : " Remove Reminder"
+    !has_reminder?(@event) ? "+ Add Reminder" : "- Remove Reminder"
   end
   
   def reminderImage

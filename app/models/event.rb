@@ -60,7 +60,7 @@ class Event < KitsTsdModel
   def self.nearby_events(chlist, edt)
     events = []
     chlist.each do |channel|
-      events = events | channel.calendar_events(edt) 
+      events = events | channel.calendar_events(15, 0, edt) 
     end
     events.sort_by { |e| e.eventstartdate }
   end

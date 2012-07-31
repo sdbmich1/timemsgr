@@ -237,11 +237,13 @@ function getDirections() {
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));	
 }
 
-$(".nearby").live("click", function() {
+$(document).ready(function() {	
+  $(".nearby").live("click", function() {
   	getMyLocation(false, true);  // get user location
 
     //prevent the default behavior of the click event
     return false;  
+  });
 });
 
 // check for category changes

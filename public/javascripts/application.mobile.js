@@ -38,8 +38,9 @@ $('#formapp').bind('pageshow', function() {
     $($('.ui-page-active form :input:visible')[0]).focus();
 });
 
-// check for location changes
-$("#loc_id").live("change", function() {
+$(document).ready(function() {	
+  // check for location changes
+  $("#loc_id").live("change", function() {
     var loc = $(this).val().toLowerCase(); // grab the selected location 
     
     if ( $('#cat_id').length != 0 )
@@ -52,12 +53,10 @@ $("#loc_id").live("change", function() {
 
     //prevent the default behavior of the click event
     return false;
-});
+  });
 
-
-
-// check for category changes
-$("#cat_id").live("change", function() {
+  // check for category changes
+  $("#cat_id").live("change", function() {
     var category = $(this).val(); // grab the selected location 
   	var loc = $('#loc_id').val();
   	var url = '/list.mobile?location=' + loc + "&category_id=" + category;
@@ -67,18 +66,16 @@ $("#cat_id").live("change", function() {
 
     //prevent the default behavior of the click event
     return false;
-});
+  });
 
-$(function() {    
   $("#rflg").live('click',function() {
     $(this).text($(this).text() == '+ Add Reminder' ? $('#reminder-type').show('fast') : $('#reminder-type').hide('fast'));    
     $(this).text($(this).text() == '+ Add Reminder' ? $('#remflg').val('yes') : $('#remflg').val('no') );
     $(this).text($(this).text() == '+ Add Reminder' ? '- Remove Reminder' : '+ Add Reminder');
   });     
-}); 
+
 
 // used to toggle visible search bar
-$(function() {    
   $(".srchflg").live('click',function() {
 	$('.evsearch').toggle();
   });     
@@ -263,7 +260,7 @@ $(".details").live("click", function() {
 
 $(".loadmore").live("click", function() {
     var page_num = $('.viewmore').attr('data-page') + 1;
-	alert('page = ' + page_num);
+//	alert('page = ' + page_num);
     $.get('categories.js?page=' + page_num, function (data) {
         $('#moblist > li.viewmore').remove();
         $('#moblist').append(data);
@@ -272,9 +269,9 @@ $(".loadmore").live("click", function() {
 
 // select autocomplete text
 $(document).ready(function() {	
-  $('.suggestions').delegate('li', 'click', function() {
+  $('.suggestions li').live('click', function() {
 	var selectedText = $(this).text(); // grab the selected text
     $(this).parent().prev().val(selectedText);
     $('.suggestions').html("").hide('fast');
-  });
+ });
 });

@@ -8,8 +8,8 @@ class LocalChannel < KitsSubModel
 	     
 	belongs_to :host_profile, :foreign_key => :HostProfileID
   has_many :calendar_events, :foreign_key => :subscriptionsourceID, :primary_key => :channelID, :dependent => :destroy do
-    def range(sdt)
-      where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt) 
+    def range(limit=10, offset=0, sdt)
+      where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt).limit(limit).offset(offset) 
     end
     
     def page(limit=10, offset=0, sdt=Date.today)

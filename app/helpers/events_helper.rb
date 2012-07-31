@@ -409,9 +409,13 @@ module EventsHelper
   end
   
   def reminderTitle
-    !has_reminder?(@event) ? "+ Add Reminder" : "- Remove Reminder"
+    !has_reminder?(@event) ? " Add Reminder" : " Remove Reminder"
   end
   
+  def reminderImage
+    !has_reminder?(@event) ? "plus_blue.png" : "minus_blue.png"
+  end
+
   def chk_photo cnlr, actn, file_name
     (!(cnlr =~ /users/i).nil? && actn == 'edit') || (!(cnlr =~ /events/i).nil? && actn == 'index') ? @facebook_user.picture : file_name
   end 

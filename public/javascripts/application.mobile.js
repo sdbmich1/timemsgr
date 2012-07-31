@@ -41,7 +41,11 @@ $('#formapp').bind('pageshow', function() {
 // check for location changes
 $("#loc_id").live("change", function() {
     var loc = $(this).val().toLowerCase(); // grab the selected location 
-    var url = '/categories.mobile?location=' + loc;  
+    
+    if ( $('#cat_id').length != 0 )
+      { var url = '/categories.mobile?location=' + loc; }
+	else
+  	  { var url = '/nearby_events.mobile?location=' + loc; }    		
 
 	// change the page
 	window.location.href= url;
@@ -72,7 +76,14 @@ $(function() {
     $(this).text($(this).text() == '+ Add Reminder' ? '- Remove Reminder' : '+ Add Reminder');
   });     
 }); 
-  
+
+// used to toggle visible search bar
+$(function() {    
+  $(".srchflg").live('click',function() {
+	$('.evsearch').toggle();
+  });     
+}); 
+	  
   // add iphone orientation change handler
   $(function (){ 
     if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/Android/i)) {
@@ -107,22 +118,21 @@ function matchLocation() {
 
 // set enddate to startdate
 function dooffset() { 
-  var startdate = $('#start-dt').val(); 
- 
+  var startdate = $('#start-dt').val();  
   $('#end-dt').val(startdate); 
   $('#end-dt').trigger('datebox', {'method':'doset'});
 }
 
 // set endtime to start time
 function dotimeoffset() { 
-  var starttime = $('#start-tm').val(); 
- 
+  var starttime = $('#start-tm').val();  
   $('#end-tm').val(starttime); 
   $('#end-tm').trigger('datebox', {'method':'doset'});
 }
 
 var map;
 var selectedLocation;
+var myLocation;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 
@@ -162,10 +172,8 @@ function NewInitialize(lat,lng, showMkr) {
 
 function detectBrowser() {
   var useragent = navigator.userAgent;
-
   if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {
 	$('.ui-page').css('height', '480px!important'); 
-
 	} 
   else {
 	$('#map_canvas').css('width', '600px');
@@ -185,23 +193,38 @@ function getLatLng(showMkr) {
   } 
 }
 
-function calcRoute() {
-  getLatLng(false);
-  var geoOptions = {maximumAge: 60000, enableHighAccuracy: true, timeout: 20000 };
-  var selectedMode = $('#mode').val(); 
+function getMyLocation(dFlg, nearby) {
+  var geoOptions = {maximumAge: 60000, enableHighAccuracy: true, timeout: 20000 };  
   navigator.geolocation.getCurrentPosition(function(position){ // geoSuccess
-        var myLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-        var request = {origin: myLocation, destination: selectedLocation, travelMode: google.maps.TravelMode[selectedMode] };
+       myLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+       
+       if (nearby) {
+       	  	var url = '/nearby_events.mobile?loc=' + myLocation;
+
+			// change the page
+			window.location.href= url;
+       }
+       
+       // check for directions
+       if (dFlg) {     	
+  			var selectedMode = $('#mode').val(); 
+        	var request = {origin: myLocation, destination: selectedLocation, travelMode: google.maps.TravelMode[selectedMode] };
         
-        directionsService.route(request, function(response, status) {
-    		if (status == google.maps.DirectionsStatus.OK) {
-      		directionsDisplay.setDirections(response);
-    	}
-    }, function(error){ // geoError
-        navigator.notification.alert('error: ' + error.message + '\n' + 'code: ' + error.code);
-    }, geoOptions);
- 
-  });
+        	directionsService.route(request, function(response, status) {
+    			if (status == google.maps.DirectionsStatus.OK) 
+    				{ directionsDisplay.setDirections(response); }       	
+       			});       	
+       	} 
+    }, 
+    function(error){ // geoError
+     		navigator.notification.alert('error: ' + error.message + '\n' + 'code: ' + error.code);
+    }, geoOptions);  
+      
+}
+
+function calcRoute() {
+  getLatLng(false);  // get longitude & latitude of destination
+  getMyLocation(true, false);  // get user location 
 }
 
 // check for travel mode changes
@@ -213,6 +236,15 @@ function getDirections() {
 	$('#directionsPanel').empty();
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));	
 }
+
+$(document).ready(function() {	
+  $(".nearby").live("click", function() {
+  	getMyLocation(false, true);  // get user location
+
+    //prevent the default behavior of the click event
+    return false;  
+  });
+});
 
 // check for category changes
 $(".details").live("click", function() {
@@ -237,3 +269,12 @@ $(".loadmore").live("click", function() {
         $('#moblist').append(data);
     });
 }); 
+
+// select autocomplete text
+$(document).ready(function() {	
+  $('.suggestions').delegate('li', 'click', function() {
+	var selectedText = $(this).text(); // grab the selected text
+    $(this).parent().prev().val(selectedText);
+    $('.suggestions').html("").hide('fast');
+  });
+});

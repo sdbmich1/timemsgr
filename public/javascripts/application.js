@@ -314,14 +314,26 @@ $(function (){
 	});
 });
 
-$(document).ready(function() {
-	
-  $("input[id^=user_affiliations_attributes]").autocomplete({
-    source: '/affiliations/list',
-    minLength: 3,
-    select: function (event, ui) { }
-  });
-    
+// autocomplete 
+$(document).ready(function() {	
+	$('.query').keyup(function (e, ui) {
+		 var nxtID = $(this).next();
+ 		 var text = $(this).val();
+		 if(text.length < 3) {
+ 		 	$(nxtID).html("");
+ 		 	$(nxtID).hide('fast');
+  		 }
+ 		 else {
+		 	$.get("/suggestions.js", {search:text}, function(res,code) {
+ 		 		var str = "";
+ 		 		for(var i=0, len=res.length; i<len; i++) {
+                    str += "<li><a href='#'>"+res[i]+"</a></li>";
+                }
+                $(nxtID).html(str);
+ 		 		$(nxtID).show('fast');
+ 		 	},"json");
+ 		 }
+  	}); 
 });
 
 

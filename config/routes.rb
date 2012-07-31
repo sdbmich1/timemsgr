@@ -27,7 +27,7 @@ Timemsgr::Application.routes.draw do
   
   # controllers for user specific content
   resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
-    :search_users, :search_private_events, :local_channels, :maps
+    :search_users, :search_private_events, :local_channels, :maps, :nearby_events
     
   resources :local_subscriptions, :only => [:create, :new]
 
@@ -93,7 +93,7 @@ Timemsgr::Application.routes.draw do
   match '/details', :to =>  "maps#details"  
   match '/select', :to =>  "channels#select"
   match '/list', :to =>  "categories#list"
-  match "/affiliations/list" => "affiliations#list"
+  match "/suggestions" => "affiliations#suggestions"
     
   # route custom event actions
   match '/outlook', :to => 'private_events#outlook', :as => "outlook"

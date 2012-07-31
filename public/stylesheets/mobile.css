@@ -15,21 +15,23 @@
 #app-header {bottom:auto; position:fixed !important; top:0 !important; width:100%; z-index: 999;}  
 
 .ui-header, .ui-navbar { width: 100%!important; }
-.scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .channel-pg {
+.scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .channel-pg, .nearby-pg {
 	position: absolute;
       left: 0;
       right: 0;
       padding: 0;
-      height: 120%;
+      height: 140%;
       width: 100%;           
 }
 
-.subhead, .listpg {top: 78px;}
+.subhead, .listpg {top: 76px;}
 .subhead {height: 30px;}
 .form-top, .scroller {top: 40px;}
-.scrollable {top: 50px!important; bottom: 50px; overflow: auto; overflow-x: hidden;}
-.home-pg {top: 113px;}
-.channel-pg {top:145px;}
+.scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
+.home-pg {top: 81px; height:150%!important;}
+.channel-pg {top:145px;} 
+.nearby-pg {top:113px;}
+.scrollable {top: 50px!important;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
 /*.ui-btn-inner, .ui-li {width: 100%!important;} */
@@ -134,10 +136,11 @@ label, label.ui-input-text { font-size:12px!important; margin-top:5px!important;
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
 .sdescr { font-size: 0.625em; width: 75%; font-weight: normal; height: 30px; }
+.fm-link { font-size: 0.825em; width: 75%; font-weight: normal; height: 30px; }
 
 .sponsor-type { font-size: 0.75em;  }
 .sponsor-msg { color: blue; font-weight: bold; }
-.close-lnk { font-size: 0.75em; }
+.close-lnk, .suggestions { font-size: 0.75em; }
 .hdescr { font-size: 0.875em; }
 
 /* add event styling */
@@ -336,4 +339,21 @@ a.notice-btn {
   text-decoration: none;
   color: black;
   font-family: Helvetica,Arial,sans-serif;
+}
+
+.img {padding-top: 5px}
+.ui-mini {margin: 0 0!important}
+
+.suggestions li a { text-decoration: none; }
+.suggestions { margin-left: 5px!important; width: 97%; }
+.suggestions li {
+    background    : #ccc;
+    border-bottom : 1px solid #000;
+    padding       : 5px;	
+}
+
+.suggestions li:hover {
+    background  : #C2E1EF;
+    padding     : 7px;
+    color 		: #ffffff;
 }

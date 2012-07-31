@@ -3,7 +3,7 @@
   <head>  
   	<%= yield :title %> 
 	<%= render 'layouts/jqm' %>
-    <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
+    <%= stylesheet_link_tag "mobile", "calendar", 'styles', :cache => true %>  
    	<%= stylesheet_link_tag "mobile_device" unless user_signed_in? %>
   	<%= csrf_meta_tag %>  	
   </head>

@@ -1,24 +1,18 @@
   <div data-role="navbar">
 	  <ul>
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
-			<li><%= link_to "Schedule", scheduled_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
-					"data-icon"=>"custom", "rel"=>"external",'data-ajax'=>"false", :id => "move", :method => :post %> </li>
-		<% elsif private_event?(event.event_type) %>
-		
-			<% if chk_action(action_name, event) %>
-				<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
-				<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Delete this event?','data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>
-			<% else %>
-				<li><%= link_to "Delete", scheduled_event_url(event), :method => 'delete',  :confirm => 'Delete this event?','data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>
-			<% end %>	
-					
+			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
+					"data-icon"=>"add", "rel"=>"external",'data-ajax'=>"false", :method => :post %> </li>
+		<% elsif private_event?(event.event_type) %>		
+			<li><%= link_to "Edit", edit_private_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
+			<li><%= link_to "Delete", private_event_url(event), :method => 'delete',  :confirm => 'Delete this event?',"rel"=>"external",'data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>					
 		<% elsif life_event?(event.event_type) %>
 			<li><%= link_to "Edit", edit_life_event_url(event), "data-icon"=>"custom", :id => "edit" %> </li>
-			<li><%= link_to "Delete", life_event_url(event), :method => 'delete', :confirm => 'Delete this event?','data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>
+			<li><%= link_to "Delete", life_event_url(event), :method => 'delete', :confirm => 'Delete this event?',"rel"=>"external",'data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>
 		<% end %>
 
 		<% if life_event?(event.event_type) || private_event?(event.event_type) %>
-			<li><%= link_to "Notify", new_notification_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), "data-icon"=>"custom", :id => "notify" if event.end_date >= Date.today %> </li>
+			<li><%= link_to "Share", new_notification_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), "data-icon"=>"custom", :id => "notify" if event.end_date >= Date.today %> </li>
 		<% end %>
 						
 		<% if rsvp?(event.rsvp) %>
@@ -29,10 +23,10 @@
 			<% end %>
 	  	<% end %>
 	  	<% unless has_location?(event) %>
-	  		<li><%= link_to "Show Map", maps_url(:loc=>event.location_details || event.location, :lnglat=>get_lnglat(event), :title=>event.mapplacename || event.location), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
+	  		<li><%= link_to "Map", maps_url(:loc=>event.location_details || event.location, :lnglat=>get_lnglat(event), :title=>event.mapplacename || event.location), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
 	  	<% end %>
 	  	<% unless (event.location =~ /http/i).nil? %>
-	  		<li><%= link_to 'View Source', event.location, { :id=>'website','rel'=>'external', "data-icon"=>"custom"} %></li>
+	  		<li><%= link_to 'Website', event.location, { :id=>'website','rel'=>'external', "data-icon"=>"custom"} %></li>
 		<% end %>
 	  </ul>
 	</div>

@@ -1,0 +1,17 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => "Nearby Events"} %>
+
+<% content_for :srch_content do %>
+	<%= render :partial => 'mobile/event_search' %>
+<% end %>
+
+<% content_for :subhead do %>
+	<%= render :partial => 'mobile/locations' %>
+<% end %>
+
+<%= content_for :content do %>
+  <ul data-role="listview">
+	<% get_date_range(@events, @enddate).each do |edate| %>
+		<%= render :partial => 'mobile/event_list', :collection => get_events('Near', edate), :as => :event, :locals => {:edate => edate} %>	
+	<% end %>	
+  </ul>
+<% end -%>

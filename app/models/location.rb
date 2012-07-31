@@ -1,6 +1,6 @@
 class Location < ActiveRecord::Base
   include Schedule 
-  acts_as_mappable 
+  acts_as_mappable :distance_field_name => :distance
   belongs_to :country
   
   attr_accessible :lat, :lng, :city, :state, :status, :country_name, :time_zone, :localGMToffset, :hide, :country_id, :sortkey
@@ -31,13 +31,11 @@ class Location < ActiveRecord::Base
   end
   
   def self.nearest_city loc
-    location = Schedule::get_offset loc
-    location.present? ? Location.closest(:origin => [location[:lat], location[:lng]]).first : nil
-#    Location.within(25, :origin => "San Rafael, CA")
+    Location.within(40, :origin => loc).sort_by { |e| e.distance }.first 
   end
   
   def self.nearest_city_by_ip ip
     location = Geokit::Geocoders::IpGeocoder.geocode(ip)
-    location.present? ? Location.within(50, :origin => [location.city, location.state].join(', ')).first : nil
+    location.present? ? nearest_city([location.city, location.state].join(', ')) : nil
   end  
 end

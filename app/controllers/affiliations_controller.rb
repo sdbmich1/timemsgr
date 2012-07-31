@@ -33,11 +33,11 @@ class AffiliationsController < ApplicationController
     end
   end
 
-  def list
+  def suggestions
     list = []
-    organizations = Organization.where('OrgName LIKE ?', "#{params[:term]}%").limit(10)
-    organizations.each { |org| list << { "label" => org.OrgName } }
-    render :json => list.to_json
+    organizations = Organization.where('OrgName LIKE ?', "#{params[:search]}%").limit(10)
+    organizations.each { |org| list << org.OrgName }
+    render :text => list #:json => list.to_json
   end
        
   protected

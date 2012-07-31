@@ -123,6 +123,24 @@ class PrivateEvent < ActiveRecord::Base
     new_event
   end
   
+  def self.add_event(eid, etype, ssid, evid, sdt)
+    selected_event = Event.find_event(eid, etype, evid, sdt)
+    new_event = PrivateEvent.new(selected_event.attributes)    
+    new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil 
+
+    # reset event type
+    [['ue','other'],['cnf','conf'],['prf','perform'],['fst','fest'],['tmnt','tourn'],['cnv','conv'],['mtg','meeting'], 
+     ['te','match'], ['es','session'], ['fr','fund'], ['ce', 'other']].each do |i|
+      new_event.event_type = i[1] if selected_event.event_type == i[0]
+    end
+
+    selected_event.pictures.each do |p|
+      new_event.pictures.build(:photo => p.photo)
+    end             
+     
+    new_event
+  end  
+  
   def self.add_facebook_events(fb_user, usr)
     if fb_user
       fb_user.events.each do |event|

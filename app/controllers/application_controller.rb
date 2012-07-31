@@ -17,13 +17,13 @@ class ApplicationController < ActionController::Base
   
   protected
   
-  def rescue_with_handler(exception)
-    redirect_to '/500.html'
-  end       
+#  def rescue_with_handler(exception)
+#    redirect_to '/500.html'
+#  end       
   
-  def method_missing(id, *args)
-    redirect_to '/404.html'
-  end
+#  def method_missing(id, *args)
+#    redirect_to '/404.html'
+#  end
 
   def load_settings
     if signed_in?

@@ -57,6 +57,14 @@ class Event < KitsTsdModel
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
   
+  def self.nearby_events(chlist, edt)
+    events = []
+    chlist.each do |channel|
+      events = events | channel.calendar_events(edt) 
+    end
+    events.sort_by { |e| e.eventstartdate }
+  end
+  
   # build dynamic union to pull event data from dbs across different schemas
   def self.current(edt, cid, loc)
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 

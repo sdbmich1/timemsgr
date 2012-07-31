@@ -1,6 +1,6 @@
 class PrivateEventsController < ApplicationController
   require 'will_paginate/array'
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :unless => :mobile_create?
   include ResetDate, ImportEvent
   layout :page_layout
 
@@ -18,7 +18,7 @@ class PrivateEventsController < ApplicationController
 
   def create
     @user ||= current_user
-    @event = PrivateEvent.new(reset_dates(params[:private_event]))
+    @event = params[:private_event] ? PrivateEvent.new(reset_dates(params[:private_event])) : PrivateEvent.add_event(params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
@@ -94,4 +94,7 @@ class PrivateEventsController < ApplicationController
     @past_events = PrivateEvent.past_events(@user.ssid).paginate(:page=>params[:page], :per_page => offset) if getPgType('past_page')    
   end
 
+  def mobile_create?
+    mobile_device? && action_name == 'create'
+  end
 end

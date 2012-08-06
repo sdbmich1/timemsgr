@@ -11,10 +11,6 @@ class LocalChannel < KitsSubModel
     def range(limit=10, offset=0, sdt)
       where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt).limit(limit).offset(offset) 
     end
-    
-    def page(limit=10, offset=0, sdt=Date.today)
-      all(:limit=> limit, :offset=>offset).range(sdt)
-    end
   end
   
 	has_many :channel_interests, :foreign_key => :channel_id, :dependent => :destroy
@@ -138,8 +134,8 @@ class LocalChannel < KitsSubModel
   
   def self.pick_channels int, cnty, loc
     channel = []
-    int.each do |i|
-      channel = build_channel_list channel, i.name, cnty, loc
+    int.each do |interest|
+      channel = build_channel_list channel, interest.name, cnty, loc if interest
     end
     channel.flatten 1
   end

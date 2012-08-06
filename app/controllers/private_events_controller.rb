@@ -41,7 +41,7 @@ class PrivateEventsController < ApplicationController
 
   def destroy
     @user ||= current_user
-    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page'
+    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page' rescue nil
     @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]) : PrivateEvent.find(params[:id])
     @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|

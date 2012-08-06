@@ -8,12 +8,14 @@ class EventsController < ApplicationController
 	def show
  		@event = Event.find_event params[:id], params[:etype], params[:eid], params[:sdt]
  		@sponsor_pages = @event.sponsor_pages rescue nil 
+    @sessions = @event.sessions.paginate(:page => params[:session_page], :per_page => 15) rescue nil
  		@presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) rescue nil
  		@notification = Notification.new
 	end
 	
 	def index
-    @events = Event.find_events @enddate, @user, @location
+    @events = Event.find_events @enddate, @user
+    @nearby_events = @user.nearby_events location, @enddate
   end
   
   def notify
@@ -42,6 +44,10 @@ class EventsController < ApplicationController
     @credits, @meters = get_credits(current_user.id), get_meter_info  
     @enddate = params[:end_date] ? Date.today+params[:end_date].to_i.days : Date.today+7.days 
     PrivateEvent.add_facebook_events @facebook_user, @user if @facebook_user
+	end
+	
+	def location
+	  @location.city
 	end
 
 end

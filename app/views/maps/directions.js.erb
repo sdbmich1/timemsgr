@@ -1,0 +1,4 @@
+$("#map_content").html("<%= escape_javascript( raw render(:partial => "shared/map_index") ) %>");
+calcRoute();
+getDirections();
+$("#spinner").hide('fast'); 

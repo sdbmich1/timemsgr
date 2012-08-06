@@ -97,10 +97,11 @@ class Channel < KitsTsdModel
     indexes :channel_name, :sortable => true
     indexes :bbody
     indexes :cbody
-    indexes channel_locations(:location_id), :as => :location_id
    
     has :id, :as => :channel_id
     where "(status = 'active' AND hide = 'no') "
+    set_property :enable_star => 1
+    set_property :min_prefix_len => 3
   end    
 
 end

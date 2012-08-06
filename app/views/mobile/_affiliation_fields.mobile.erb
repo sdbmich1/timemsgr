@@ -3,5 +3,5 @@
     <%= f.text_field :name, :size => 60, :class =>'query', 'data-mini'=>'true' %>
     <ul class="suggestions" data-role="listview" data-inset="true"></ul>
    	<%= f.label :affiliation_type, "Type" %> 
-   	<%= f.collection_select :affiliation_type, AffiliationType.all, :name, :name, {:prompt => 'Select'}, {'data-mini'=>'true'}  %> 	
+   	<%= f.collection_select :affiliation_type, AffiliationType.all, :name, :name, {:prompt => 'Select'} %> 	
 </div>

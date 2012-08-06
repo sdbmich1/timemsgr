@@ -20,6 +20,26 @@ namespace :loader do
     load_news_feeds RAILS_ROOT + '/lib/feeds/NYDailyNewsFeed020612.txt', 'New York', -5
   end 
   
+  task :process_sf_feeds => :environment do
+    p 'Loading SF Chronicle Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
+  end
+  
+  task :process_atlanta_feeds => :environment do
+    p 'Loading Atlanta News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/AtlantaJournalConstitutionFeed020612.txt', 'Atlanta', -5    
+  end
+  
+  task :process_ny_feeds => :environment do
+    p 'Loading NY Daily News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/NYDailyNewsFeed020612.txt', 'New York', -5
+  end
+  
+  task :process_sj_feeds => :environment do
+    p 'Loading SJ Mercury News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Jose', -8
+  end
+  
   desc "Load database with data from Stanford feeds"
   task :process_stanford_feeds => :environment do
     p 'Loading Stanford General Events Feed...'  

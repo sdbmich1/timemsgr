@@ -1,4 +1,5 @@
 class MajorEventsController < ApplicationController
+  require 'will_paginate/array'
   before_filter :authenticate_user!, :load_data
   layout :page_layout
   
@@ -11,8 +12,7 @@ class MajorEventsController < ApplicationController
   end
   
   def about
-    @event = Event.find(params[:id])
-    @event.presenters rescue nil
+    @event = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt])
   end
 
   private

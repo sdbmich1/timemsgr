@@ -1,1 +1,1 @@
-	<div id="etype" data-etype="<%= event.event_type %>"></div> 	<%= link_to "Notify", "#modal", :id => "modalGroup", :class=>"edit-btn round nav-right" if event.end_date >= Date.today %>
+<div id="etype" data-etype="<%= event.event_type %>"></div> <%= link_to "Notify", "#modal", :id => "modalGroup", :class=>"edit-btn round nav-right" if event.end_date >= Date.today %>

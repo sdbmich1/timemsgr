@@ -4,19 +4,19 @@ class Event < KitsTsdModel
   
   belongs_to :channel
   
-  has_many :session_relationships, :dependent => :destroy
-  has_many :sessions, :through => :session_relationships, :dependent => :destroy
+  has_many :session_relationships #, :primary_key => :eventid, :foreign_key=>:eventid
+  has_many :sessions, :through => :session_relationships
 
-  has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid, :dependent => :destroy
-  has_many :presenters, :through => :event_presenters, :dependent => :destroy
+  has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid
+  has_many :presenters, :through => :event_presenters
 
-  has_many :event_sites, :dependent => :destroy
-  has_many :event_tracks, :dependent => :destroy
+  has_many :event_sites
+  has_many :event_tracks
   has_many :pictures, :as => :imageable, :dependent => :destroy
   has_many :rsvps, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :EventID
   accepts_nested_attributes_for :rsvps, :reject_if => :all_blank 
 
-  has_many :sponsor_pages, :dependent => :destroy
+  has_many :sponsor_pages
   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
 
@@ -58,28 +58,33 @@ class Event < KitsTsdModel
   end  
   
   def self.nearby_events(chlist, edt)
-    events = []
-    chlist.each do |channel|
-      events = events | channel.calendar_events(15, 0, edt) 
+    events = []        
+    chlist.sort_by{rand}[0..9].each do |channel|
+      list = channel.calendar_events.range(edt) 
+      events = events | list if list
     end
     events.sort_by { |e| e.eventstartdate }
   end
   
+  def self.get_local_events loc, edt 
+    where_loc = where_dt + " AND (mapcity = ?)"
+    find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_loc} ) 
+         ORDER BY eventstartdate, eventstarttime ASC LIMIT 30", edt, edt, loc])     
+  end
+  
   # build dynamic union to pull event data from dbs across different schemas
-  def self.current(edt, cid, loc)
+  def self.current(edt, cid)
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
-    where_loc = where_dte + " AND (e.mapcity = ?)"
     where_hol = where_dte + " AND (e.event_type in ('h','m'))"
     find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events #{where_sid} )
          UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
-         UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_loc})
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_hol})
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt,
-                                                       cid, edt, edt, edt, edt, loc, edt, edt, cid, edt, edt]) 
+                                                       cid, edt, edt, edt, edt, cid, edt, edt]) 
   end
 
   # build dynamic union to pull event data from dbs across different schemas for specific event  
@@ -98,10 +103,9 @@ class Event < KitsTsdModel
     event
   end 
   
-  def self.find_events(edate, usr, loc) 
-    locale = Location.find(loc)
+  def self.find_events(edate, usr) 
     edate.blank? ? edate = Date.today+7.days : edate 
-    usr.blank? ? current_events(edate) : current(edate, usr.ssid, locale.city)    
+    usr.blank? ? current_events(edate) : current(edate, usr.ssid)    
   end
   
   # used to get friends schedule when shared
@@ -141,14 +145,6 @@ class Event < KitsTsdModel
     contentsourceURL == "http://KITSC.rbca.net"
   end
 
-  def get_location
-    location.blank? || !(location =~ /http/i).nil? ? '' : get_place.blank? ? location : get_place + ', ' + location 
-  end
-    
-  def get_place
-    mapplacename.blank? ? '' : mapplacename
-  end
-  
   def get_zip
     mapzip.blank? ? '' : mapzip
   end
@@ -161,22 +157,38 @@ class Event < KitsTsdModel
     mapstate.blank? ? '' : mapstate
   end
   
+  def get_location
+    location.blank? || !(location =~ /http/i).nil? ? get_place.blank? ? '' : get_place : location
+  end
+  
+  def get_place
+    mapplacename.blank? ? '' : mapplacename
+  end
+  
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate, mapzip].compact.join(', ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + mapzip
   end
   
   def location_details
-    [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
+    get_location.blank? ? csz : [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
   
   def summary
-    bbody.gsub("\\n",'').html_safe[0..74]
+    bbody.gsub("\\n",'').html_safe[0..59] + '...' rescue nil
+  end
+  
+  def listing
+    event_name.length < 45 ? event_name.html_safe : event_name.html_safe[0..44] + '...' rescue nil
   end
   
   def details
-    cbody.html_safe
+    cbody.gsub("\\n","<br />")[0..499]
   end
   
+  def full_details
+    cbody.gsub("\\n","<br />")
+  end
+    
   # action caching for SELECT UNION query
   def self.upcoming_events(edate, hp, loc)
     Rails.cache.fetch("find_events", :expires_in => 30.minutes) do 

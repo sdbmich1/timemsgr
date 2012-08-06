@@ -15,6 +15,21 @@
 		<span class="prepend-2"><%= event.csz %></span>	</div><br />
 <% end %>
 <% if !event.cbody.blank? %>
+	<div class="cbody">
 	<div class="span-2"><%= 'Details:' %></div>
-	<div class="span-18 last"><%= auto_link(event.cbody.gsub("\\n","<br />")).html_safe %></div><br />
+	<div class="span-18 last">
+		<div class="span-10">
+			<span id="edetails"><%= auto_link(event.details).html_safe %><%= link_to ' more...', '#', :id=>'more-btn' if event.cbody.length > 500 %></span>
+			<span id='fdetails' style="display: none"><%= auto_link(event.full_details).html_safe %></span>
+		</div>
+	</div></div>
 <% end %>
+
+<%= render :partial => 'shared/load_map_data' %>
+<div id='map_content' class="boxed"><%= render :partial => 'shared/map_index' %></div>
+<%= link_to "Get Directions", "#modal1", :id => "modalGroup", :class=>"map-btn nav-right" %>
+
+<div id="trvlmode" style="display:none"><div id='modal1'>
+	<%= render 'shared/directions' %>
+</div></div>
+

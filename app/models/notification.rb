@@ -3,11 +3,11 @@ class Notification < ActiveRecord::Base
   
   before_save :set_flds
   
+  attr_accessor :fbCircle
   attr_accessible :event_type, :email1address, :email2address, :email3address, :email4address, :email5address, 
-  :eventid, :event_id, :event_name,
-  :eventstartdate, :eventstarttime, :eventenddate, :eventendtime, :Notice_Type, :Notice_Text, 
+  :eventid, :event_id, :event_name, :eventstartdate, :eventstarttime, :eventenddate, :eventendtime, :Notice_Type, :Notice_Text, 
   :allowPrivCircle, :allowSocCircle, :allowWorldCircle, :status, :hide, :sortkey, :CreateDateTime,
-  :LastModifyBy, :LastModifyDateTime, :contentsourceID, :subscriptionsourceID, :location
+  :LastModifyBy, :LastModifyDateTime, :contentsourceID, :subscriptionsourceID, :location, :fbCircle
   
   email_regex = /[\w-]+@([\w-]+\.)+[\w-]+/i
 

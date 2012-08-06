@@ -4,8 +4,7 @@ class NearbyEventsController < ApplicationController
   layout :page_layout
   
   def index
-    @channels = LocalChannel.pick_channels(@user.interests, location.city, @user.location).paginate(:page => params[:page], :per_page => offset)
-    @events = Event.nearby_events @channels, @enddate
+    @events = @user.nearby_events(location, @enddate)
   end
   
   protected
@@ -19,7 +18,8 @@ class NearbyEventsController < ApplicationController
   end 
   
   def location
-    @location ||= Location.nearest_city(params[:loc]) 
+    @location = params[:loc] ? Location.nearest_city(params[:loc]) : @location
+    @location.city 
   end
   
   def load_data

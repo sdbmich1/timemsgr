@@ -12,7 +12,7 @@
 	</div>	 	
 	<div data-role="collapsible" >
 		<h3><%= "Past Activities" %></h3>
-		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => @past_events, :as => :event %></ul>
+		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => @past_events.sort{|a,b| b.eventstartdate <=> a.eventstartdate}, :as => :event %></ul>
 	</div>		  	
   </div>
 <% end -%>

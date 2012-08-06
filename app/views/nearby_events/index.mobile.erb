@@ -10,8 +10,6 @@
 
 <%= content_for :content do %>
   <ul data-role="listview">
-	<% get_date_range(@events, @enddate).each do |edate| %>
-		<%= render :partial => 'mobile/event_list', :collection => get_events('Near', edate), :as => :event, :locals => {:edate => edate} %>	
-	<% end %>	
+		<%= render :partial => 'mobile/event_list', :collection => @events, :as => :event, :locals => {:edate => Date.today} %>	
   </ul>
 <% end -%>

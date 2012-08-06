@@ -331,7 +331,7 @@ module EventsHelper
 	# parse date ranges
 	def get_start_date(start_dt, end_dt, dtype)	  
     if start_dt == end_dt
-      if start_dt == Date.today
+      if start_dt.to_date == Date.today
         @date_s = "Today" 
       else
         dtype == "List" ? @date_s = " #{start_dt.strftime("%D")}" : @date_s = "#{start_dt.strftime("%A, %B %e, %Y")}" rescue nil
@@ -422,5 +422,13 @@ module EventsHelper
   
   def image_exists? model
     model.imagelink.blank? ? false : true rescue nil
+  end
+  
+  def map_loc event
+    @loc || event.location_details || event.location
+  end
+  
+  def map_title event
+    @title || event.mapplacename || event.location
   end
 end

@@ -23,7 +23,7 @@
 			<% end %>
 	  	<% end %>
 	  	<% unless has_location?(event) %>
-	  		<li><%= link_to "Map", maps_url(:loc=>event.location_details || event.location, :lnglat=>get_lnglat(event), :title=>event.mapplacename || event.location), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
+	  		<li><%= link_to "Map", maps_url(:loc=>map_loc(event), :lnglat=>get_lnglat(event), :title=>map_title(event)), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
 	  	<% end %>
 	  	<% unless (event.location =~ /http/i).nil? %>
 	  		<li><%= link_to 'Website', event.location, { :id=>'website','rel'=>'external', "data-icon"=>"custom"} %></li>

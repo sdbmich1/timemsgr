@@ -68,23 +68,7 @@ class ScheduledEvent < ActiveRecord::Base
   def ssurl
     subscriptionsourceURL
   end
-      
-  def get_location
-    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
-  end
-  
-  def get_place
-    mapplacename.blank? ? '' : mapplacename + ' '
-  end
-  
-  def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
-  end
-  
-  def location_details
-    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
-  end    
-
+        
   def start_date
     eventstartdate.to_date
   end
@@ -92,6 +76,39 @@ class ScheduledEvent < ActiveRecord::Base
   def end_date
     eventenddate.to_date
   end
+  
+  def get_location
+    location.blank? || !(location =~ /http/i).nil? ? get_place.blank? ? '' : get_place : location
+  end
+  
+  def get_place
+    mapplacename.blank? ? '' : mapplacename
+  end
+  
+  def csz
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + mapzip
+  end
+  
+  def location_details
+    get_location.blank? ? csz : [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
+  end    
+  
+  def summary
+    bbody.gsub("\\n",'').html_safe[0..74]
+  end
+  
+  def listing
+    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..30] + '...' rescue nil
+  end
+  
+  def details
+    cbody.gsub("\\n","<br />")[0..499]
+  end
+  
+  def full_details
+    cbody.gsub("\\n","<br />")
+  end
+  
    
   def self.find_event(eid)
     get_event(eid).first

@@ -27,7 +27,10 @@ class AffiliationsController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      redirect_to home_path, :notice => "#{get_msg(@user, 'Profile')}" 
+      respond_to do |format|
+        format.mobile { redirect_to home_user_path }
+        format.html { redirect_to edit_user_path(@user, :p => "Profile") }
+      end
     else
       @user.sign_in_count <= 1 ? (render :action => :new) : (render :action => :edit)
     end
@@ -35,9 +38,9 @@ class AffiliationsController < ApplicationController
 
   def suggestions
     list = []
-    organizations = Organization.where('OrgName LIKE ?', "#{params[:search]}%").limit(10)
+    organizations = Organization.search query, :page => params[:page], :per_page => 10
     organizations.each { |org| list << org.OrgName }
-    render :text => list #:json => list.to_json
+    render :text => list 
   end
        
   protected
@@ -45,5 +48,10 @@ class AffiliationsController < ApplicationController
   def page_layout  
     mobile_device? ? 'form' : params[:p].blank? ? "application" : "users"  
   end  
+  
+  def query
+    @query = params[:search]
+  end    
+  
 
 end

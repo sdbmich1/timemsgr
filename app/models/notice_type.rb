@@ -2,10 +2,10 @@ class NoticeType < ActiveRecord::Base
   
   before_save :set_flds
   
-  default_scope :order => "sortkey ASC"
+  default_scope :order => "code ASC"
   
   def self.active
-    where(:status => 'active')
+    where(:status => 'active') 
   end
   
   def self.unhidden

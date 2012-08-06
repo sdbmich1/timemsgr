@@ -1,6 +1,7 @@
 class CalendarEvent < KitsCentralModel
   set_table_name 'events'
   set_primary_key 'ID'
+  acts_as_mappable
   
   before_save :set_flds
 

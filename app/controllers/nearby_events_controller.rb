@@ -18,8 +18,8 @@ class NearbyEventsController < ApplicationController
   end 
   
   def location
-    @location = params[:loc] ? Location.nearest_city(params[:loc]) : @location
-    @location.city 
+    loc = params[:loc] ? Location.nearest_city(params[:loc]) : @location
+    loc ? loc.city : @location.city
   end
   
   def load_data

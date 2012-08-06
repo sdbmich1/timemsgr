@@ -1,6 +1,7 @@
 class Event < KitsTsdModel  
   include ResetDate
   set_primary_key 'ID' 
+  acts_as_mappable
   
   belongs_to :channel
   

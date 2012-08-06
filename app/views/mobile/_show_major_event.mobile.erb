@@ -1,8 +1,12 @@
-<%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'e-pic'}%>
+<%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'show-pic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
 
   <ul data-role="listview">
-	<li><%= link_to "About", about_major_event_url(event) %></li>
+	<li><%= link_to "About", about_major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></li>
 	<li><%= link_to "Schedule", event_sessions_url(:event_id => event) %></li>
-	<li><%= link_to get_label(event.event_type), presenters_url(:event_id => event) %></li>	
- 	<li><%= link_to "Register", new_transaction_url(:eid => event, :etype => event.event_type) %> </li>
+	<li><%= link_to get_label(event.event_type), presenters_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></li>	
+ 	<li><%= link_to "Hotels",'#' %> </li>
+ 	<li><%= link_to "Exhibitors",'#' %> </li>
+ 	<li><%= link_to "Vendors",'#' %> </li>
+ 	<li><%= link_to "Transportation",'#' %> </li>
+ 	<li><%= link_to "Register",'#' %> </li>
   </ul>

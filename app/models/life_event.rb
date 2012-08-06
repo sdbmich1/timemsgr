@@ -6,17 +6,16 @@ class LifeEvent < ActiveRecord::Base
   
   before_save :set_flds
   
-  attr_accessor :allday, :loc
+  attr_accessor :allday, :loc, :fbCircle
   attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
         :eventendtime, :event_type, :eventid, :subscriptionsourceID,
-        :contentsourceID, :localGMToffset, :endGMToffset,
-        :allowSocCircle, :allowPrivCircle, :allowWorldCircle,
+        :contentsourceID, :localGMToffset, :endGMToffset, :allowSocCircle, :allowPrivCircle, :allowWorldCircle,
         :ShowSocCircle, :ShowPrivCircle, :ShowWorldCircle, :mapplacename,
         :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
         :eventday, :eventmonth, :eventgday, :eventgmonth,:obscaltype,
         :annualsamedate, :speaker, :speakertopic, :rsvp, :contentsourceURL, :subscriptionsourceURL,
         :postdate, :status, :hide, :pictures_attributes,
-        :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate
+        :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate, :fbCircle
   
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
@@ -67,20 +66,36 @@ class LifeEvent < ActiveRecord::Base
   end
     
   def get_location
-    location.blank? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+    location.blank? || !(location =~ /http/i).nil? ? get_place.blank? ? '' : get_place : location
   end
   
   def get_place
-    mapplacename.blank? ? '' : mapplacename + ' '
+    mapplacename.blank? ? '' : mapplacename
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + mapzip
   end
   
   def location_details
-    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
+    get_location.blank? ? csz : [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
+  
+  def summary
+    bbody.gsub("\\n",'').html_safe[0..59] + '...' rescue nil
+  end
+  
+  def listing
+    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..30] + '...' rescue nil
+  end
+  
+  def details
+    cbody.gsub("\\n","<br />")[0..499] rescue nil
+  end
+  
+  def full_details
+    cbody.gsub("\\n","<br />")
+  end
     
   protected
   

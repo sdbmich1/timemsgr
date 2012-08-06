@@ -6,7 +6,7 @@ class EventType < ActiveRecord::Base
   end
   
   def self.unhidden
-    active.where(:hide => 'no')
+    active.where(:hide => 'no').sort_by{|desc| desc.description }
   end
 
   def descr_title

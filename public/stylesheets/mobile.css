@@ -28,16 +28,16 @@
 .subhead {height: 30px;}
 .form-top, .scroller {top: 40px;}
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
-.home-pg {top: 81px; height:150%!important;}
+.home-pg {top: 79px; height:150%!important;}
 .channel-pg {top:145px;} 
-.nearby-pg {top:113px;}
-.scrollable {top: 50px!important;}
+.nearby-pg {top:110px;}
+.scrollable {top: 43px!important;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
 /*.ui-btn-inner, .ui-li {width: 100%!important;} */
 .ui-br { border-bottom-style:none; }
-.ui-collapsible-content {padding: 5px 25px!important;}
-.ui-btn-icon-right {padding-right: 5px!important;}
+.ui-collapsible-content {padding: 0px 10px!important;}
+.ui-btn-icon-right {padding-right: 5px;}
 .ui-collapsible-set {margin-top: 0!important;}
 
 .mobile_container {  
@@ -82,13 +82,13 @@
 .ptop { margin-top: 8px; }
 
 /* mobile form infield label */
-#mform p { position:relative; margin-bottom: 0}
+#mform p { position:relative; margin-bottom: 0; margin-top: 0.5em}
 #mform label  { position:absolute; top:7px; left:10px; color:#CCCCCC; width:75%}
 
 /* major event image settings */
 .e-pic {width: 100%; height: auto; position:relative;}
 .c-pic {width: 50%; height: 30%; position:relative; margin-bottom: 10px;}
-.show-pic {width: 40%; height:auto; }
+.show-pic {width: 100%; height:auto; }
 
 /*   session list settings */
 .etime { position: absolute; top: 0.25em; left: 1.5em; width: 50px;
@@ -131,7 +131,7 @@
 .ui-li-desc {text-overflow: normal; overflow: visible; 
 			white-space: pre-wrap; font-size: 0.65em;}
 			
-label, label.ui-input-text { font-size:12px!important; margin-top:5px!important; }
+label, label.ui-input-text { font-size:12px!important; margin-top:5px!important; line-height: 0.8em!important}
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
@@ -263,6 +263,18 @@ a.notice-btn {
   text-decoration: none;
 }
 
+a.msg-btn {
+  display: inline;
+  text-align: center;
+  color: #ffffff!important;
+  background: #990000;
+  font-weight: bold;
+  z-index: 999;
+  padding: 3px 8px 3px 8px;
+  font-size: 10px; 
+  text-decoration: none;	
+}
+
 /* error handling */
 .error, .alert p {
   border: 2px solid red;
@@ -315,32 +327,6 @@ a.notice-btn {
 	display:inline-block;
  }
  
-
-.ui-autocomplete{
-  position: absolute;
-  background: #FFF;
-  border: solid 1px #DDDDDD;
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding: 2px;
-}
-.ui-autocomplete .ui-menu-item {
-  clear: left;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.ui-autocomplete .ui-menu-item a {
-  display: block;
-  line-height: 1.5;
-  padding: 0.2em 0.4em;
-  text-decoration: none;
-  color: black;
-  font-family: Helvetica,Arial,sans-serif;
-}
-
 .img {padding-top: 5px}
 .ui-mini {margin: 0 0!important}
 

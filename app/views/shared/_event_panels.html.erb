@@ -4,6 +4,8 @@
 <% if subscriptions? %>
 	<%= render :partial => 'slider', :locals => { :slider => "Suggested Opportunities" }  %>
 <% end %>
-<%= cache "events", :expires_in => 30.minutes do %>
-	<%= render :partial => 'slider', :locals => { :slider => "Nearby Opportunities" } %>
-<% end %>
+<div id="nearby-slider">
+	<%= cache "events", :expires_in => 30.minutes do %>
+		<%= render :partial => 'slider', :locals => { :slider => "Nearby Opportunities" } %>
+	<% end %>
+</div>

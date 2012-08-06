@@ -228,11 +228,10 @@ class User < ActiveRecord::Base
     profile.private_events.extended_circle   
   end 
   
-  def interest_events *args
-    elist = chanlist = []
-    interests.map {|interest| chanlist << LocalChannel.select_channel(interest.name, location, location)[0]}  
-    chanlist.map { |ch| ch.map {|channel| elist << channel.calendar_events.range(args[0]) } } if chanlist
-    elist
+  def nearby_events *args
+    chanlist = LocalChannel.pick_channels(self.interests.sort_by{rand}[0..4], args[0], args[0]) 
+    elist = Event.nearby_events chanlist, args[1] if chanlist
+    elist || Event.get_local_events(args[0], args[1])
   end
   
   def profile_city
@@ -256,9 +255,6 @@ class User < ActiveRecord::Base
   
   # define sphinx search indexes and criteria
   define_index do
-#    indexes first_name, :sortable => true
-#    indexes last_name, :sortable => true
-#    indexes [first_name, last_name], :as => :name, :sortable => true
     indexes name, :sortable => true
     indexes location, :sortable => true
     indexes email, :sortable => true

@@ -2,13 +2,14 @@
 <% content_for :head do %>	<h3><%= "#{title}" %>
 	<% if controller_name == 'events' && action_name == 'index' %>
 		<%= link_to get_unread_count(@user), event_notices_url(:sid=>@user.ssid), :class=>"notice-btn round" %></h3>
-		<%= link_to 'Add Activity', new_private_event_path, "class"=>"ui-btn-left", "data-icon"=>"plus", "data-iconpos"=>"notext" %>
 	<% else %>
 		</h3><%= link_to 'Home', events_url, "class"=>"ui-btn-left", "data-icon"=>"home", "data-iconpos"=>"notext" %>
 	<% end %>
 		<% if user_signed_in? %>
 		<% unless title == 'Manage Account' %>
-       		<%= link_to 'Manage Account', home_user_path, "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
+			<% unless controller_name == 'events' && action_name == 'index' %>
+       			<%= link_to 'Manage Account', home_user_path, "class" => "ui-btn-right", "data-icon"=>"gear", "data-iconpos"=>"notext" %>
+       		<% end %>
 		<% else %>
 			<%= link_to "Sign Out", destroy_user_session_path, "class" => "ui-btn-right" %>
 		<% end %>

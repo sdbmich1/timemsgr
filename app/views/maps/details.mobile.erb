@@ -8,8 +8,5 @@
 	<div class="loc" data-loc="<%= @loc %>"></div>
 	<div id="map_canvas" class="lnglat" data-lnglat="<%= @lnglat %>" style="display: none"></div>
 	<div id="directionsPanel"></div>
-<% end %>
-
-<%= content_for :footer do %>
-	<script>calcRoute();</script>
+	<div id='map_details'></div>
 <% end %>

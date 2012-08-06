@@ -1,0 +1,7 @@
+	<% if @facebook_user %>
+       	<label>Social Web:</label>
+    	<fieldset data-role="controlgroup" 'data-mini'='true'> 		
+     		<%= f.check_box :fbCircle, {:id => "fbCircle"}, "yes", "no" %>
+			<label for="fbCircle">Facebook</label>
+    	</fieldset> <br />
+	<% end %>

@@ -3,7 +3,7 @@ class SearchChannelsController < ApplicationController
   layout :page_layout
 
   def index    
-    @channels = LocalChannel.search query, :conditions => {:localename => @location.city + '*'}, :page => params[:page] || 1, :per_page => offset
+    @channels = ThinkingSphinx.search query, :classes => [LocalChannel, Channel], :conditions => {:localename => @location.city + '*'}, :page => params[:page] || 1, :per_page => offset
   end
   
   private

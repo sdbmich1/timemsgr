@@ -3,7 +3,7 @@ class PresentersController < ApplicationController
   layout :page_layout
   
   def index
-    @presenters = Event.find(params[:event_id]).try(:presenters)
+    @presenters = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt]).presenters rescue nil
   end
 
   def show
@@ -13,7 +13,7 @@ class PresentersController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? 'application' : 'events'
+    mobile_device? && (action_name == 'show') ? 'showitem' : "list" 
   end    
 
 end

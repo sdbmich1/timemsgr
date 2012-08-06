@@ -43,7 +43,7 @@ class CalendarEvent < KitsCentralModel
   end
 
   def get_location
-    location.blank? || !(location =~ /http/i).nil? ? '' : get_place.blank? ? location : get_place + ', ' + location 
+    location.blank? || !(location =~ /http/i).nil? ? get_place.blank? ? '' : get_place : location
   end
   
   def get_place
@@ -51,13 +51,29 @@ class CalendarEvent < KitsCentralModel
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + mapzip
   end
   
   def location_details
-    [get_location, csz].join(', ') unless get_place.blank? && csz.blank?
-  end    
+    get_location.blank? ? csz : [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
+  end   
   
+  def details
+    cbody.gsub("\\n","<br />")[0..499]
+  end
+  
+  def full_details
+    cbody.gsub("\\n","<br />")
+  end   
+  
+  def summary
+    bbody.gsub("\\n",'').html_safe[0..59] + '...' rescue nil
+  end
+  
+  def listing
+    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..30] + '...' rescue nil
+  end
+    
   def set_flds
     if new_record?
       self.hide, self.cformat, self.status, self.LastModifyBy, self.rsvp = "no", "html", "active", "system", "No"

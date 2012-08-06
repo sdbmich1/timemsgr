@@ -29,7 +29,7 @@ function toggleLoading () {
 
 // add spinner to ajax events
 $(document).ready(function() {
-  $("#connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
+  $("#map, #connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .live("ajax:beforeSend", toggleLoading)
     .live("ajax:complete", toggleLoading)
     .live("ajax:success", function(event, data, status, xhr) {
@@ -336,4 +336,37 @@ $(document).ready(function() {
   	}); 
 });
 
+$(document).ready(function() {	
+  if ( $('#map_canvas').length != 0 ) {  
+	getLatLng(true);
+  }
 
+  if ( $('#map_details').length != 0 ) {   
+  	calcRoute();
+  }
+});
+
+// check for travel mode changes
+$("#mode").live("change", function() {
+	calcRoute();
+});
+
+// check for directions display
+$("#map").live("click", function() {
+	$('#trvlmode').show('fast');
+	toggleLoading();
+});
+
+$(".map-btn").live("click", function() {
+    var loc = $('.loc').attr('data-loc');
+    var title = $('.loc').attr('data-title');
+	var lnglat = $('.lnglat').attr("data-lnglat");
+  	var url = '/directions?loc=' + loc + "&lnglat=" + lnglat + "&title=" + encodeURIComponent(title) + "&mode=" + mode;
+	process_url(url, false);  	
+});
+
+// check for text display toggle
+$("#more-btn").live("click", function() {
+	$('#edetails').hide('fast');
+	$('#fdetails').show('fast') 
+});	

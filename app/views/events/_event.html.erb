@@ -17,9 +17,9 @@
  		<div class="slider-title">
 			<h1>
   			<% unless major_event?(event.event_type) %>
-			  	<%= link_to event.event_name.html_safe, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
+			  	<%= link_to event.listing, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
 			<% else %>
-			  	<%= link_to event.event_name.html_safe, major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
+			  	<%= link_to event.listing, major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :class => "show-item" %>
 			<% end %>
 			</h1><br />
 		</div>

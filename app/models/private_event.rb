@@ -4,14 +4,14 @@ class PrivateEvent < ActiveRecord::Base
 
   before_save :set_flds
   
-  attr_accessor :allday, :loc
+  attr_accessor :allday, :loc, :fbCircle
  	attr_accessible :allday, :event_name, :event_title, :eventstartdate, :eventenddate, :eventstarttime,
 				:eventendtime, :event_type, :reoccurrencetype, :ID, :eventid, :subscriptionsourceID, :pageexttype,
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :contentsourceURL,
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :pageextsrc,
 				:remindstartdate, :remindenddate, :remindstarttime, :remindendtime,
-				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype
+				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype, :fbCircle
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
@@ -23,7 +23,7 @@ class PrivateEvent < ActiveRecord::Base
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
 
   has_many :reminders, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :eventid
-
+  
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
   
@@ -76,20 +76,36 @@ class PrivateEvent < ActiveRecord::Base
   end  
   
   def get_location
-    location.blank? ? '' : get_place.blank? ? location : [get_place, location].join(', ')
+    location.blank? || !(location =~ /http/i).nil? ? get_place.blank? ? '' : get_place : location
   end
   
   def get_place
-    mapplacename.blank? ? '' : mapplacename + ' '
+    mapplacename.blank? ? '' : mapplacename
   end
   
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapstreet, mapcity, mapstate, mapzip].compact.join(', ')
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + mapzip
   end
   
   def location_details
-    [get_place, csz].join(', ') unless get_place.blank? && csz.blank?
+    get_location.blank? ? csz : [get_location, mapstreet, csz].join(', ') unless get_place.blank? && csz.blank?
   end    
+  
+  def summary
+    bbody.gsub("\\n",'').html_safe[0..59] + '...' rescue nil
+  end
+  
+  def listing
+    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..30] + '...' rescue nil
+  end
+  
+  def details
+    cbody.gsub("\\n","<br />")[0..499]
+  end
+  
+  def full_details
+    cbody.gsub("\\n","<br />")
+  end
     
   def self.upcoming(start_dt, end_dt)
     active.unhidden.where("(eventstartdate >= date(?) and eventenddate <= date(?)) or (eventstartdate <= date(?) and eventenddate >= date(?))", start_dt, end_dt, start_dt, end_dt)

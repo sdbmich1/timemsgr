@@ -14,8 +14,8 @@
 	</div>
 
  	<div class="slider-title">
-		<h6><%= event.event_name.html_safe %></h6>
+		<h6><%= event.listing %></h6>
 	</div>
 	<div class="sl-descr">
-		<div class="ui-li-desc sdescr"><%= raw truncate(event.bbody, :length=>75, :omission=>'...') %></div>
+		<div class="ui-li-desc sdescr"><%= event.summary %></div>
 	</div>

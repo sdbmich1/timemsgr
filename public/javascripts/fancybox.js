@@ -14,6 +14,7 @@ $(document).ready(function() {
 	$("a#modalGroup").fancybox({
     	'width'			:   '560',
     	'height'		: 	'340',
+    	'autoscale'		:   true,
 		'transitionIn'	:	'elastic',
 		'transitionOut'	:	'elastic',
 		'speedIn'		:	600, 

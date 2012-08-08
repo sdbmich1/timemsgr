@@ -9,6 +9,10 @@
 }  
 
 .ui-page, .ui-content { min-height: 100%!important; padding: 0!important;}
+.ui-select .ui-btn select { opacity: 0; }
+@-moz-document url-prefix() {.ui-select .ui-btn select { opacity: 0.0001; }}
+.ui-page { -webkit-backface-visibility:visible !important; }
+
 #mapPage {height: 100%;}
 
 #app-footer {bottom:0; position:fixed !important; top: auto !important; width:100%; z-index: 999; }  

@@ -9,9 +9,8 @@
 }  
 
 .ui-page, .ui-content { min-height: 100%!important; padding: 0!important;}
-.ui-select .ui-btn select { opacity: 0; }
+.ui-select .ui-btn select { opacity: 0!important; }
 @-moz-document url-prefix() {.ui-select .ui-btn select { opacity: 0.0001; }}
-.ui-page { -webkit-backface-visibility:visible !important; }
 
 #mapPage {height: 100%;}
 

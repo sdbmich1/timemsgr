@@ -9,6 +9,7 @@
 		<% else %>
 		<% end %>
       </fieldset> 
+      <div class="ptop"></div>
       <fieldset data-role="controlgroup" data-mini="true"> 
 		<label>Share with:</label> 
      	<%= f.check_box :allowPrivCircle, {:id => "allowPriv"}, "yes", "no" %>
@@ -30,6 +31,7 @@
 			<label for="showWorld">My World</label>
         </fieldset>        
       <% end %>
-      
-      <%= render :partial => 'mobile/share_fb_user', :locals => {:f => f} %>
+      <div class="ptop">
+      	<%= render :partial => 'mobile/share_fb_user', :locals => {:f => f} %>
+      </div>
     </div> 	

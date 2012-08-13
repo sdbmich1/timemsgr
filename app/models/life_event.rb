@@ -12,10 +12,9 @@ class LifeEvent < ActiveRecord::Base
         :contentsourceID, :localGMToffset, :endGMToffset, :allowSocCircle, :allowPrivCircle, :allowWorldCircle,
         :ShowSocCircle, :ShowPrivCircle, :ShowWorldCircle, :mapplacename,
         :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
-        :eventday, :eventmonth, :eventgday, :eventgmonth,:obscaltype,
+        :eventday, :eventmonth, :eventgday, :eventgmonth,:obscaltype, :remindflg, :remindertype, :reoccurrenceenddate,
         :annualsamedate, :speaker, :speakertopic, :rsvp, :contentsourceURL, :subscriptionsourceURL,
-        :postdate, :status, :hide, :pictures_attributes,
-        :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate, :fbCircle
+        :postdate, :status, :hide, :pictures_attributes, :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate, :fbCircle
   
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
@@ -96,6 +95,10 @@ class LifeEvent < ActiveRecord::Base
   def full_details
     cbody.gsub("\\n","<br />")
   end
+  
+  def self.find_event id, eid
+    LifeEvent.find_by_ID_and_eventid(id, eid)
+  end
     
   protected
   
@@ -110,7 +113,7 @@ class LifeEvent < ActiveRecord::Base
     if self.annualsamedate == 'no'
       self.eventmonth, self.eventday = self.eventstartdate.month, self.eventstartdate.day
     else
-      self.eventgmonth, self.eventgday, self.eventenddate = self.eventstartdate.month, self.eventstartdate.day, self.eventstartdate+120.years
+      self.eventgmonth, self.eventgday = self.eventstartdate.month, self.eventstartdate.day
       self.eventstarttime, self.eventendtime = Time.parse('00:00'), Time.parse('11:59')
     end
      

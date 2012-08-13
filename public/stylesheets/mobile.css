@@ -3,7 +3,7 @@
 
 .app-content {min-width: 100%; }
 
-.ui-content { overflow-x: visible!important }
+body.ui-mobile-viewport, div.ui-mobile-viewport, .ui-content { overflow-x: visible!important }
 
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 .ui-page, .ui-body-c, .ui-content {
@@ -282,16 +282,31 @@ a.msg-btn {
 .error, .alert p {
   border: 2px solid red;
 /*  padding: 7px; */
-  padding-bottom: 5px;
+  padding: 5px 0 5px 0;
   margin: 7px;
-  width: 70%;
-  height: 20px;
+  width: 95%;
+  height: 30px;
   margin-bottom: 15px;
   text-align: center;
   font-weight: bold;
   font-size: 12px;
   background-color: #c00;
   color: #fff;
+}
+
+.notice p {
+  border: 2px solid green;
+/*  padding: 7px; */
+  padding: 5px 0 5px 0;
+  margin: 7px;
+  width: 95%;
+  height: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #C6D880;
+  color: #000;	
 }
 
 .ui-input-datebox input {width: 99%!important;}

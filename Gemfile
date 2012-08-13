@@ -37,9 +37,6 @@ gem 'client_side_validations'
 # add date validation
 gem 'validates_timeliness', '~> 3.0.2'
 
-# add google maps
-gem 'gmaps4rails'
-
 # add unread 
 gem 'unread'
 
@@ -81,6 +78,9 @@ gem 'whenever', "~> 0.7.3"
 
 #add timezone
 gem 'timezone', "~> 0.1.4"
+
+#add recurrence
+gem "recurrence", :require => "recurrence/namespace"
 
 # add geokit
 gem 'geokit', "~> 1.6.5"

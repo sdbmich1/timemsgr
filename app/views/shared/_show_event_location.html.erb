@@ -25,11 +25,13 @@
 	</div></div>
 <% end %>
 
-<%= render :partial => 'shared/load_map_data' %>
-<div id='map_content' class="boxed"><%= render :partial => 'shared/map_index' %></div>
-<%= link_to "Get Directions", "#modal1", :id => "modalGroup", :class=>"map-btn nav-right" %>
+<% unless has_location?(event) %>
+	<%= render :partial => 'shared/load_map_data' %>
+	<div id='map_content' class="boxed"><%= render :partial => 'shared/map_index' %></div>
+	<%= link_to "Get Directions", "#modal1", :id => "modalGroup", :class=>"map-btn nav-right" %>
 
-<div id="trvlmode" style="display:none"><div id='modal1'>
-	<%= render 'shared/directions' %>
-</div></div>
+	<div id="trvlmode" style="display:none"><div id='modal1'>
+		<%= render 'shared/directions' %>
+	</div></div>
+<% end %>
 

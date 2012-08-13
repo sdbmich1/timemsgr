@@ -231,7 +231,7 @@ class User < ActiveRecord::Base
   def nearby_events *args
     chanlist = LocalChannel.pick_channels(self.interests.sort_by{rand}[0..4], args[0], args[0]) 
     elist = Event.nearby_events chanlist, args[1] if chanlist
-    elist.blank? ? Event.get_local_events(args[0], args[1]) : elist
+    elist.blank? ? Event.get_local_events(args[0], args[1]) : elist.uniq
   end
   
   def profile_city

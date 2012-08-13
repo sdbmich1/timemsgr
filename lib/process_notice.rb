@@ -9,7 +9,7 @@ module ProcessNotice
     unless usr.blank? 
       [['private_trackers', 'allowPrivCircle'], ['social_trackers', 'allowSocCircle'], ['extended_trackers', 'allowWorldCircle'], 
        ['private_trackeds', 'allowPrivCircle'], ['social_trackeds', 'allowSocCircle'], ['extended_trackeds', 'allowWorldCircle']].each do |method|
-        trkrs = usr.send(method[0]) if model.send(method[1])
+        trkrs = usr.send(method[0]) if model.send(method[1]) == 'yes'
         post_notice(trkrs, model, usr, ptype) if trkrs
       end
     end

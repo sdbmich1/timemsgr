@@ -2,37 +2,17 @@
  * @author Sean Brown
  */
 $(document).bind("mobileinit", function(){
-	// set ajax to false
-//	$.extend(  $.mobile, { ajaxFormsEnabled: false });
 				
 	//reset type=date inputs to text
    	$.mobile.page.prototype.options.degradeInputs.date = true;
-   	
-   	// hides the date time as soon as the DOM is ready
-    $('#timebox').hide();
-    
- 	// shows the date & time fields on clicking the check box  
-  	$('#freq').click(function() {
-	
-		// If checked
-		if ($("#freq").is(":checked"))
-			{
-    			$('#timebox').show('slow');
-    			return false;
-    		}
-    	else
-    		{
-    			$('#timebox').hide('fast');
-    			return false;
-    		}
-  	});
  	 
 });
 
-// hide toolbars
+/* hide toolbars
 $(document).bind('pageshow', function(event) {
      $.mobile.fixedToolbars.hide(true)
 });
+*/
 	
 $('#formapp').bind('pageshow', function() {
     $($('.ui-page-active form :input:visible')[0]).focus();
@@ -67,7 +47,7 @@ $(document).ready(function() {
     //prevent the default behavior of the click event
     return false;
   });
-
+    
   // used to toggle reminder
   $("#rflg").live('click',function() {
     $(this).text($(this).text() == '+ Add Reminder' ? $('#reminder-type').show('fast') : $('#reminder-type').hide('fast'));    
@@ -102,10 +82,8 @@ $(document).ready(function() {
   
 // hide address bar 
   window.addEventListener("load", function () {
-    // Set a timeout...
-    setTimeout(function () {
-        // Hide the address bar!
-        window.scrollTo(0, 1);
+    setTimeout(function () {        
+        window.scrollTo(0, 1); // Hide the address bar!
     }, 0);
   });  
 
@@ -121,16 +99,24 @@ function matchLocation() {
 
 // set enddate to startdate
 function dooffset() { 
-  var startdate = $('#start-dt').val();  
-  $('#end-dt').val(startdate); 
+  var startdate = $('#start-dt').val();     
+  var enddate = new Date(startdate);
+  $('#end-dt').data('datebox').theDate = enddate;
   $('#end-dt').trigger('datebox', {'method':'doset'});
+  setRecurEndDate();
 }
 
-// set endtime to start time
+// set endtime to start time + 1 hour
 function dotimeoffset() { 
-  var starttime = $('#start-tm').val();  
-  $('#end-tm').val(starttime); 
-  $('#end-tm').trigger('datebox', {'method':'doset'});
+  var endtime = set_end_time($('#start-tm').val());
+  $('#end-tm').val(endtime); 
+  $('#end-tm').trigger('datebox', {'method':'set', 'value':endtime});
+}
+
+function setRecurEndDate() {
+  var sdt = set_reoccur_date($('#start-dt').val()); 
+  $('#reoccur-dt').val(sdt);
+  $('#reoccur-dt').trigger('datebox', {'method':'set', 'value':sdt});	
 }
 
 $(document).ready(function() {	
@@ -172,5 +158,10 @@ $(document).ready(function() {
 	var selectedText = $(this).text(); // grab the selected text
     $(this).parent().prev().val(selectedText);
     $('.suggestions').html("").hide('fast');
- });
+  });
+ 
+  $("#start-tm").live('change',function() {
+     dotimeoffset();
+  });
+  
 });

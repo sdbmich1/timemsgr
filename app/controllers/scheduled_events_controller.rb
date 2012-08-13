@@ -1,5 +1,4 @@
 class ScheduledEventsController < PrivateEventsController
-  before_filter :authenticate_user!, :except => [:create]
 
   def create
     @user ||= current_user
@@ -24,8 +23,7 @@ class ScheduledEventsController < PrivateEventsController
 
   def destroy
     @user ||= current_user
-    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page'
-    @event = params[:eid] ? ScheduledEvent.find_by_eventid(params[:eid]) : ScheduledEvent.find(params[:id])
+    @event = ScheduledEvent.locate_event(params[:id], params[:eid])
     @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
       format.html { redirect_to events_url } 

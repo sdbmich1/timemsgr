@@ -2,10 +2,11 @@ var map;
 var selectedLocation;
 var myLocation;
 var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
+var directionsService;
 
 // initialize google map
 function NewInitialize(lat,lng, showMkr) {
+  directionsService = new google.maps.DirectionsService();	
   directionsDisplay = new google.maps.DirectionsRenderer();
   selectedLocation = new google.maps.LatLng(lat,lng);
   var myOptions = {

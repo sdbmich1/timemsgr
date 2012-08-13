@@ -1,4 +1,5 @@
 class PrivateEvent < ActiveRecord::Base
+  include ResetDate
   set_table_name 'eventspriv'
   set_primary_key 'ID'
 
@@ -10,19 +11,21 @@ class PrivateEvent < ActiveRecord::Base
 				:mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :contentsourceURL,
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :pageextsrc,
-				:remindstartdate, :remindenddate, :remindstarttime, :remindendtime,
+				:remindstartdate, :remindenddate, :remindstarttime, :remindendtime, :reoccurrenceenddate,
 				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype, :fbCircle
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
-        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?
+        :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :frequent?
   validates :event_type, :presence => true
   validates_date :eventstartdate, :presence => true #, :on_or_after => :today 
   validates_date :eventenddate, :presence => true, :allow_blank => false, :on_or_after => :eventstartdate
   validates :eventstarttime, :presence => true, :allow_blank => false
   validates :eventendtime, :presence => true, :allow_blank => false
   validates_time :eventendtime, :after => :eventstarttime, :if => :same_day?
+  validates_date :reoccurrenceenddate, :presence => true, :allow_blank => false, :between => [:eventenddate, :max_end_date], :if => :frequent?
 
-  has_many :reminders, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :eventid
+  has_many :reminders, :dependent => :destroy, :primary_key=>:eventid, :foreign_key => :eventid, 
+      :conditions => proc {"eventstartdate = '#{self.eventstartdate}'"} 
   
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
@@ -54,6 +57,10 @@ class PrivateEvent < ActiveRecord::Base
   def inactive?
     status == 'inactive'
   end	
+  
+  def max_end_date
+    eventenddate + 5.years
+  end
 
 	def ssid
     subscriptionsourceID
@@ -92,7 +99,7 @@ class PrivateEvent < ActiveRecord::Base
   end    
   
   def summary
-    bbody.gsub("\\n",'').html_safe[0..59] + '...' rescue nil
+    bbody.gsub("\\n",'').gsub("\n",'')[0..69] + '...' rescue nil
   end
   
   def listing
@@ -123,6 +130,14 @@ class PrivateEvent < ActiveRecord::Base
     eventstartdate == eventenddate
   end
   
+  def frequent?
+    reoccurrencetype != 'once' && !reoccurrencetype.blank?
+  end
+  
+  def self.locate_event id, eid
+    PrivateEvent.find_by_ID_and_eventid(id, eid) 
+  end
+  
   def self.move_event(eid, etype, ssid)
     selected_event = Event.find_event(eid, etype)
     selected_event.ID, selected_event.contentsourceID = nil, ssid
@@ -137,6 +152,11 @@ class PrivateEvent < ActiveRecord::Base
       new_event.event_type = i[1] if selected_event.event_type == i[0]
     end
     new_event
+  end
+  
+  def self.new_event(*args)
+    pe, *elem = args 
+    pe ? PrivateEvent.new(ResetDate::reset_dates(pe)) : PrivateEvent.add_event(elem)
   end
   
   def self.add_event(eid, etype, ssid, evid, sdt)

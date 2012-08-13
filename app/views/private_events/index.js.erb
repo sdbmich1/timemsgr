@@ -1,8 +1,10 @@
 $("#flash_notice").hide(300);
-$("#import").html("<%= escape_javascript( raw render('shared/show_import_event') ) %>");
+<% if @pgType %>
+	$("#import").html("<%= escape_javascript( raw render('shared/show_import_event') ) %>");
+<% end %>
 <% if @pgType == 'past_page' %>
 	$("#past_evnt").html("<%= escape_javascript( raw render(:partial => 'shared/event_list', :locals => {:title=>'Past Activities', :model=>@past_events, :type=>@pgType}) ) %>");
-<% else %>
+<% elsif @pgType == 'upcoming_page'  %>
 	$("#cur_evnt").html("<%= escape_javascript( raw render(:partial => 'shared/event_list', :locals => {:title=>'Upcoming Activities', :model=>@events, :type=>@pgType}) ) %>");
 <% end %>	
 $("#spinner").hide(300);

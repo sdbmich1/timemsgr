@@ -109,7 +109,10 @@ class ScheduledEvent < ActiveRecord::Base
     cbody.gsub("\\n","<br />")
   end
   
-   
+  def self.locate_event id, eid
+    eid ? ScheduledEvent.find_by_eventid(eid) : ScheduledEvent.find(id)
+  end  
+  
   def self.find_event(eid)
     get_event(eid).first
   end 

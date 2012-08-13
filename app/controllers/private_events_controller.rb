@@ -1,6 +1,7 @@
 class PrivateEventsController < ApplicationController
   require 'will_paginate/array'
   before_filter :authenticate_user!, :unless => :mobile_create?
+  before_filter :set_page_type, :if => :html_destroy?
   include ResetDate, ImportEvent
   layout :page_layout
 
@@ -9,7 +10,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def show
-    @event = PrivateEvent.find_event(params[:eid])
+    @event = PrivateEvent.find(params[:id])
   end
 
   def new
@@ -18,7 +19,7 @@ class PrivateEventsController < ApplicationController
 
   def create
     @user ||= current_user
-    @event = params[:private_event] ? PrivateEvent.new(reset_dates(params[:private_event])) : PrivateEvent.add_event(params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
+    @event = PrivateEvent.new_event(params[:private_event], params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
     if @event.save
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
@@ -27,12 +28,12 @@ class PrivateEventsController < ApplicationController
   end
 
   def edit
-    @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]) : PrivateEvent.find(params[:id])
+    @event = PrivateEvent.locate_event(params[:id], params[:eid])
   end
 
   def update
-    @event = PrivateEvent.find_event(params[:id])
-    if @event.update_attributes(reset_dates(params[:private_event]))
+    @event = PrivateEvent.find(params[:id])
+    if @event.update_attributes(ResetDate::reset_dates(params[:private_event]))
       redirect_to events_url, :notice  => "#{get_msg(@user, 'Event')}"
     else
       render :action => 'edit'
@@ -41,8 +42,7 @@ class PrivateEventsController < ApplicationController
 
   def destroy
     @user ||= current_user
-    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page' rescue nil
-    @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]) : PrivateEvent.find(params[:id])
+    @event = PrivateEvent.locate_event(params[:id], params[:eid])
     @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|
       format.html { redirect_to events_url } 
@@ -52,7 +52,7 @@ class PrivateEventsController < ApplicationController
   end
     
   def clone 
-    @event = params[:eid] ? PrivateEvent.find_by_eventid(params[:eid]).clone_event : PrivateEvent.find(params[:id]).clone_event 
+    @event = PrivateEvent.clone_event(params[:id], params[:eid]) 
   end
   
   def gcal_import
@@ -70,7 +70,11 @@ class PrivateEventsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'pages' : "showevent"
+    if mobile_device? 
+      action_name == 'show' ? 'showitem' : action_name == 'index' ? 'events' : 'form' 
+    else
+      action_name == 'show' ? "showevent" : 'events'
+    end
   end
   
   def offset
@@ -96,5 +100,13 @@ class PrivateEventsController < ApplicationController
 
   def mobile_create?
     mobile_device? && action_name == 'create'
+  end
+  
+  def html_destroy?
+    !mobile_device? && action_name == 'destroy'
+  end
+  
+  def set_page_type
+    @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page' rescue nil
   end
 end

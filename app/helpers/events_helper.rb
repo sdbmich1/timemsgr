@@ -138,7 +138,6 @@ module EventsHelper
   # adjusts time display by v1.0 time zone offset when appropriate
   def chk_offset(*tm)
     return Time.now unless tm[0]
-#    return tm[0].getlocal if tm[0] && !( tm[2].to_s =~ /^.*\b(facebook|twitter)\b.*$/i).nil?
     unless @user.blank?
       offset = tm[1] - @user.localGMToffset if tm[1]
       @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
@@ -177,7 +176,9 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    get_trkr_schedule(@user, get_user_events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
+    elist = get_trkr_schedule(@user, get_user_events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
+    elist.map! {|e| set_start_date(e,dt)}.compact! 
+    elist    
   end
   
   def get_appointments
@@ -204,7 +205,7 @@ module EventsHelper
   
   def get_upcoming_events(sdt)
     @trk_events = get_subscriptions sdt
-    @events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(get_user_events, e) || 
+    @nearby_events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(get_user_events, e) || 
         is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
   end
   
@@ -343,8 +344,8 @@ module EventsHelper
 	
   def set_header(form)
     case 
-    when !(form =~ /add_event/i).nil?; "Add Activity"
-    when !(form =~ /edit_event/i).nil?; @form = "shared/add_event"; "Edit Activity"
+    when !(form =~ /add_event/i).nil?; controller_name == 'life_events' ? 'Add Life Event' : "Add Activity"
+    when !(form =~ /edit_event/i).nil?; @form = "shared/add_event"; controller_name == 'life_events' ? 'Edit Life Event' : "Edit Activity"
     when !(form =~ /event_list/i).nil?; "My Activities"
     when !(form =~ /show_event/i).nil?; "Event Details"
     end
@@ -367,8 +368,9 @@ module EventsHelper
 	  event.event_type == 'other' ? event.location : event.location_details
 	end
 	
-	def get_nice_date(*args) 
-    args[0].blank? ? '' : args[1].blank? ? args[0].strftime("%D") : args[0].strftime('%m/%d/%Y') 
+	def get_nice_date(*args)
+	  newdt = args[0].blank? ? Date.today : args[0]
+    args[1].blank? ? newdt.strftime("%D") : newdt.strftime('%m/%d/%Y') 
   end  
   
   def get_nice_time(val)
@@ -393,6 +395,10 @@ module EventsHelper
   
   def has_location?(event)
     event.mapplacename.blank? && event.mapcity.blank? && event.location.blank?
+  end
+  
+  def reoccurring? event
+    event.reoccurrencetype != 'once' && !event.reoccurrencetype.blank?
   end
   
   def get_lnglat(event)

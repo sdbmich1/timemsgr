@@ -48,23 +48,25 @@ $(function (){
 	$('#start-date').datepicker({ 
  	  minDate:'-0d',
       dateFormat:dateFormat,
-      buttonImage: '../images/date_picker1.gif', 
+      buttonImage: '/images/date_picker1.gif', 
       buttonImageOnly: true, 
       showOn: 'button',
       onSelect: function (dateText, inst) { 
           var nyd = $.datepicker.parseDate(dateFormat,dateText);
-          $('#end-date').datepicker("option", 'minDate', nyd ).val($(this).val());
+          $('#end-date').datepicker("option", 'minDate', nyd ).val($(this).val());          
+  	 	  $('#reoccur-dt').datepicker("option", 'minDate', nyd ).val(set_reoccur_date($(this).val()));
       }, 
-      onClose: function () { $(this).focus() } 
+      onClose: function (dateText, e) { $(this).focus() } 
   	 }).change(function () {  
-  	 	$('#end-date').val($(this).val())
-     }); 
+  	 	$('#end-date').val($(this).val());
+ 	 	$('#reoccur-dt').val(set_reoccur_date($(this).val()));
+    }); 
   
-    $('#end-date').datepicker({ 
+    $('#end-date, #reoccur-dt').datepicker({ 
       onClose: function () { $(this).focus(); }, 
  	  minDate: '-0d',
       dateFormat:dateFormat,
-      buttonImage: '../images/date_picker1.gif', 
+      buttonImage: '/images/date_picker1.gif', 
       buttonImageOnly: true, 
       showOn: 'button'                       
     }); 
@@ -104,24 +106,12 @@ $(function(){
   }
 });
 
+// when the #event type field changes
 $(function (){
-
-  // when the #event type field changes
   $("select[id*=event_type]").live('change',function() {
-
-     // make a POST call and replace the content
-     var etype = $(this).val().toLowerCase();
-     if(etype == "anniversary" || etype == "birthday")
-        {
-         $('#end-dt').hide('fast');
-         return false;
-        }
-     else
-        {
-         $('#end-dt').show('slow');
-         return false;
-        }
-    });
+    var etype = $(this).val().toLowerCase();
+	chkAnnualEvent(etype);
+   });
 });
 
 $(document).ready(function() {
@@ -138,6 +128,32 @@ $(function () {
          return false;   
    });
 });
+
+function chkAnnualEvent(etype) {
+  if(etype == "anniversary" || etype == "birthday")
+      { 
+      	$('#end-dt, #enddt').hide('fast');  
+		if ($('#annual').length != 0) {  $('#annual').prop("checked", true); }
+  		if ($('#annualflg').length != 0) { $('#annualflg').attr("checked", true).checkboxradio('refresh'); }
+  		
+  		var sdt = $("#start-time").prop('selectedIndex', 0).val();  
+  		var edt = $("#end-time").prop('selectedIndex', 287).val();  
+
+  		$("#start-time").val(sdt);
+  		$("#end-time").val(edt);
+  		
+  		$('#start-tm').val('12:00 AM');
+  		$('#end-tm').val('11:59 PM');
+      }
+  else
+      { 
+      	$('#end-dt, #enddt').show('slow'); 
+		if ($('#annual').length != 0) {  $('#annual').prop("checked", false); }
+  		if ($('#annualflg').length != 0) { $('#annualflg').attr("checked", false).checkboxradio('refresh'); }
+  		$('#start-tm, #start-time').val('');
+  		$('#end-tm, #end-time').val('');
+	  }	
+}
 
 // close light box pop-up window
 $(function () {
@@ -292,10 +308,13 @@ function set_accordion(element) {
 }
 
 
-// when the #start time field changes
+// when the #start time field changes by toggling select index
 $(function (){
   $("#start-time").live('change',function() {
-     $("#end-time").val($(this).val());
+  	var idx = this.selectedIndex + 12;  
+  	if (idx > 287) {idx -= 288}     
+    var edt = $("#end-time").prop('selectedIndex', idx).val();  
+    $("#end-time").val(edt);
   });
   
   $("#loc").live('click',function() {
@@ -370,3 +389,57 @@ $("#more-btn").live("click", function() {
 	$('#edetails').hide('fast');
 	$('#fdetails').show('fast') 
 });	
+
+// check for category changes
+$("#etype").live("change", function() {
+  var etype = $(this).val();
+	
+  chkAnnualEvent(etype);
+});
+
+function set_end_time(starttime) {
+  var parts = starttime.split(':'); 
+  var ampm = parts[1].split(' ');
+  
+  if (parts[0][0] == '0') 
+  	{var hour = parseInt(parts[0][1]);}
+  else 
+  	{var hour = parseInt($.trim(parts[0]));}
+
+  if(ampm[1].match(/(AM|am)/) && hour == 11) { ampm[1] = 'PM'; }
+  if(hour == 12) { hour -= 12; }
+  if(ampm[1].match(/(PM|pm)/) && hour == 11) { ampm[1] = 'AM'; }
+  hour += 1;
+  
+  if(hour < 10) {hour = '0' + hour}
+  var result = hour + ':' + ampm[0] + ' ' + ampm[1];
+  return result 
+}
+
+function set_reoccur_date(startdt) {
+  var newdt = new Date(startdt).add({months: 1});  
+  return newdt.toString('MM/dd/yyyy')
+}
+
+  // check for reoccurrence type change
+$(function (){
+  $("#reoccur-type").live("change", function() {
+	var rtype = $(this).val(); 
+	if (rtype != 'once') 
+	  { 
+	  	if ($('#start-dt').length != 0) 
+	  	  { setRecurEndDate(); }
+	  	else 
+	  	  { 
+	  	  	var sdt = set_reoccur_date($('#start-date').val()); 
+	  	  	$('#reoccur-dt').val(sdt);
+	  	  }
+	  	$('#reoccur').show('fast'); 
+	  }
+	else 
+	  { 
+	  	$('#reoccur').hide('fast'); 
+	  }  
+  });
+});
+

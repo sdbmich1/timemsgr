@@ -119,7 +119,7 @@ $(function() {
    				var etype = $(ui.draggable).find(".etype").attr("data-etype");
    				var evid = $(ui.draggable).find(".evid").attr("data-evid");
     			$.ajax({
-  						url: '/scheduled_events.js?sdate=' + sdt + "&id=" + eid + '&etype=' + etype +'&eid=' + evid,
+  						url: '/private_events.js?sdate=' + sdt + "&id=" + eid + '&etype=' + etype +'&eid=' + evid,
   						type: 'POST',
   						dataType: 'script',
   						success:  function() {  				

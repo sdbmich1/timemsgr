@@ -6,7 +6,7 @@ class LifeEventType < ActiveRecord::Base
   end
   
   def self.unhidden
-    active.where(:hide => 'no').sort_by{|desc| desc.description }
+    active.where(:hide => 'no').sort_by{|x| x.code }
   end
 
   def descr_title

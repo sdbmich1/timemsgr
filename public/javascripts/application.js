@@ -132,7 +132,7 @@ $(function () {
 function chkAnnualEvent(etype) {
   if(etype == "anniversary" || etype == "birthday")
       { 
-      	$('#end-dt, #enddt').hide('fast');  
+      	$('#end-dt, #enddt, #stime').hide('fast');  
 		if ($('#annual').length != 0) {  $('#annual').prop("checked", true); }
   		if ($('#annualflg').length != 0) { $('#annualflg').attr("checked", true).checkboxradio('refresh'); }
   		
@@ -147,7 +147,7 @@ function chkAnnualEvent(etype) {
       }
   else
       { 
-      	$('#end-dt, #enddt').show('slow'); 
+      	$('#end-dt, #enddt, #stime').show('fast'); 
 		if ($('#annual').length != 0) {  $('#annual').prop("checked", false); }
   		if ($('#annualflg').length != 0) { $('#annualflg').attr("checked", false).checkboxradio('refresh'); }
   		$('#start-tm, #start-time').val('');

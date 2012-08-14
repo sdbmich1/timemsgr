@@ -9,13 +9,10 @@
     <th>Start</th>
     <th>End</th>
   </tr>
-  <% for event in @results %>
+  <% (Date.today..Date.today+7.days).each do |edate| %>
+
+   <% for event in parse_list(@results, edate) %>
     <tr>
-      <td>
-        <div class="pic-size">
-          <%= render :partial => 'shared/show_photo', :locals => {:model => event, :file_name => "headshot1.jpg", :psize => '48x48' } %>
-		</div>
-      </td>
       <td><%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></td>
       <td><%= truncate(event.bbody, :length => 60, :omission => "...") %></td>
       <td><%= get_nice_date(event.eventstartdate,'List') %></td>
@@ -23,6 +20,7 @@
       <td><%= chk_offset(event.eventstarttime, event.localGMToffset) %></td>
       <td><%= chk_offset(event.eventendtime, event.endGMToffset) %></td>
     </tr>
+   <% end %>
   <% end %>
 </table>
 </div>

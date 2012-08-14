@@ -1,12 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
   
   def after_sign_up_path_for(resource)
-#    if mobile_device? 
-#      events_url
-#    else
-      flash[:notice] = "#{get_msg(@user,'Welcome')}"
-      new_interest_path
-#    end
+    flash[:notice] = "#{get_msg(@user,'Welcome')}"
+    new_interest_path
   end
   
   def create  

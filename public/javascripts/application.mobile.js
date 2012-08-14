@@ -1,11 +1,25 @@
 /**
  * @author Sean Brown
  */
+
+jQuery.ajaxSetup ({
+  // Disable caching of AJAX responses
+  cache: false
+});
+
 $(document).bind("mobileinit", function(){
 				
 	//reset type=date inputs to text
    	$.mobile.page.prototype.options.degradeInputs.date = true;
  	 
+});
+
+jQuery('div').live('pagehide', function(event, ui){
+  var page = jQuery(event.target);
+
+  if(page.attr('data-cache') == 'never'){
+    page.remove();
+  };
 });
 
 /* hide toolbars
@@ -19,6 +33,9 @@ $('#formapp').bind('pageshow', function() {
 });
 
 $(document).ready(function() {	
+	
+  $("input[type='checkbox']").checkboxradio();
+  
   // check for location changes
   $("#loc_id").live("change", function() {
     var loc = $(this).val().toLowerCase(); // grab the selected location 
@@ -26,7 +43,7 @@ $(document).ready(function() {
     if ( $('#cat_id').length != 0 )
       { var url = '/categories.mobile?location=' + loc; }
 	else
-  	  { var url = '/nearby_events.mobile?location=' + loc; }    		
+  	  {	var url = '/nearby_events.mobile?location=' + loc; }    		
 
 	// change the page
 	window.location.href= url;

@@ -188,7 +188,7 @@ class EventObserver < ActiveRecord::Observer
   end
   
   def set_annual_event model
-    r = Recurrence.yearly(:on => [model.eventstartdate.month, model.eventstartdate.day], :repeat => 3) if model.annualsamedate == 'yes'
+    r = Recurrence.yearly(:starts => mdate(model, 12), :on => [model.eventstartdate.month, model.eventstartdate.day], :repeat => 5) if model.annualsamedate == 'yes'
     add_future_events r, model
   end
   

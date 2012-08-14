@@ -4,6 +4,7 @@ class NearbyEventsController < ApplicationController
   layout :page_layout
   
   def index
+    @user ||= current_user
     @events = Event.find_events @enddate, @user
     @nearby_events = @user.nearby_events(location, @enddate)
   end

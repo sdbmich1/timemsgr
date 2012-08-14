@@ -2,18 +2,6 @@
  * @author Sean Brown
  */
 
-jQuery.ajaxSetup ({
-  // Disable caching of AJAX responses
-  cache: false
-});
-
-$(document).bind("mobileinit", function(){
-				
-	//reset type=date inputs to text
-   	$.mobile.page.prototype.options.degradeInputs.date = true;
- 	 
-});
-
 jQuery('div').live('pagehide', function(event, ui){
   var page = jQuery(event.target);
 

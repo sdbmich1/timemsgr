@@ -32,7 +32,7 @@
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; height:150%!important;}
 .channel-pg {top:145px;} 
-.nearby-pg {top:110px;}
+.nearby-pg {top:107px;}
 .scrollable {top: 43px!important;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}

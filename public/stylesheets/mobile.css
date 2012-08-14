@@ -3,7 +3,7 @@
 
 .app-content {min-width: 100%; }
 
-body.ui-mobile-viewport, div.ui-mobile-viewport, .ui-content { overflow-x: visible!important }
+.ui-content { overflow-x: visible!important }
 
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 .ui-page, .ui-body-c, .ui-content {
@@ -22,14 +22,13 @@ body.ui-mobile-viewport, div.ui-mobile-viewport, .ui-content { overflow-x: visib
 	position: absolute;
       left: 0;
       right: 0;
-      padding: 0;
-      height: 140%;
+      padding: 0;     
       width: 100%;           
 }
 
 .subhead, .listpg {top: 76px;}
-.subhead {height: 30px;}
-.form-top, .scroller {top: 40px;}
+.subhead {height: 30px; overflow-x: visible!important}
+.form-top, .scroller {top: 40px; height: 140%;}
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; height:150%!important;}
 .channel-pg {top:145px;} 

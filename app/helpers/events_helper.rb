@@ -181,6 +181,11 @@ module EventsHelper
     elist    
   end
   
+  def parse_list elist, dt
+    elist.map! {|e| set_start_date(e,dt)}.compact! 
+    elist    
+  end
+  
   def get_appointments
     @events.select {|event| appt?(event.event_type) && time_left?(event)}
   end

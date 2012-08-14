@@ -2,12 +2,13 @@
 	<label for='start-dt'>Start Date:</label>
 	<%= f.text_field :eventstartdate, {:value => get_nice_date(@event.eventstartdate, 'Edit'), :size=>15, :type => 'date', :id=>'start-dt', 'data-mini'=>"true", 'data-role'=>"datebox", 
 		'data-options'=>'{"mode": "calbox", "dateFormat": "mm/dd/YYYY", "minDays": 0, "closeCallback":"dooffset();"}'} %>
-		                             
+  <div id="stime">  	                             
 	<label for='start-tm'>Start Time:</label>
 	<%= f.text_field :eventstarttime, {:value => get_nice_time(@event.eventstarttime), :size=>15, :id=>'start-tm', 'data-mini'=>"true", 'data-role'=>"datebox", 
 		'data-options'=>'{"mode": "timebox", "timeFormat": "12"}'} %>
+	<label>Start Time Zone: </label><%= f.collection_select :localGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.localGMToffset)}, {'data-mini'=>"true"} %>
+  </div>
 </div>
-<label>Start Time Zone: </label><%= f.collection_select :localGMToffset, GmtTimezone.all, :code, :description, {:selected => set_offset(@event.localGMToffset)}, {'data-mini'=>"true"} %>
 
 <div class="ptop" id='enddt'>
   <div data-role="fieldcontain">	

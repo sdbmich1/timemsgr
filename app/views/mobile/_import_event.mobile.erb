@@ -1,0 +1,10 @@
+	<p>Import your events from other programs.  Enter your email, password then click on the program you want to import from below to begin.</p><br />
+	<%= form_for([@event, @user], :id => 'import_form', :url => { :action =>"gcal_import", :controller=>'private_events'}, :remote=>true) do |f| %>
+		<div id="newreg">
+			<p><span>Email</span></p><p><%= f.text_field :email %></p> 		
+			<p><span>Password</span></p><p><%= f.password_field :password, :size => 20 %></p> 
+		</div>
+		<%= image_submit_tag("google1.jpg", :alt => "Import Google", :id=>'submit-btn') %>
+		<%= link_to "Cancel", :back, "data-role" => "button" %>
+
+	<% end %>  

@@ -1,5 +1,5 @@
 class RelationshipsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create] 
+  before_filter :authenticate_user! #, :except => [:create, :update] 
   before_filter :load_data
   layout :page_layout
 

@@ -42,8 +42,7 @@ class LifeEvent < ActiveRecord::Base
   def inactive?
     status == 'inactive'
   end
-  
-  
+    
   def ssid
     subscriptionsourceID
   end
@@ -99,8 +98,25 @@ class LifeEvent < ActiveRecord::Base
   def self.find_event id, eid
     LifeEvent.find_by_ID_and_eventid(id, eid)
   end
+  
+  def self.set_rel_birth_date model
+    trkr = User.find model.tracker_id
+    trkd = User.find model.tracked_id
+    
+    add_birth_date trkr, trkd
+    add_birth_date trkd, trkr
+  end
     
   protected
+  
+  def self.add_birth_date usr1, usr2
+    new_event = LifeEvent.new
+    new_event.eventstartdate = new_event.eventenddate = usr2.birth_date
+    new_event.event_type, new_event.annualsamedate = 'birthday', 'yes'
+    new_event.event_name = usr2.name + ' Birthday'
+    new_event.contentsourceID = new_event.subscriptionsourceID = usr1.ssid
+    new_event.save(:validate=>false)    
+  end
   
   def clone_event
     new_event = self.clone
@@ -114,7 +130,7 @@ class LifeEvent < ActiveRecord::Base
       self.eventmonth, self.eventday = self.eventstartdate.month, self.eventstartdate.day
     else
       self.eventgmonth, self.eventgday = self.eventstartdate.month, self.eventstartdate.day
-      self.eventstarttime, self.eventendtime = Time.parse('00:00'), Time.parse('11:59')
+      self.eventstarttime, self.eventendtime = Time.parse('00:00'), Time.parse('23:59')
     end
      
     self.postdate, self.event_title, self.bbody = Time.now, self.event_name, self.cbody

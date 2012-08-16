@@ -1,6 +1,6 @@
 class PrivateEventsController < ApplicationController
   require 'will_paginate/array'
-  before_filter :authenticate_user!, :unless => :mobile_create?
+  before_filter :authenticate_user!
   before_filter :set_page_type, :if => :html_destroy?
   include ResetDate, ImportEvent
   layout :page_layout

@@ -442,4 +442,8 @@ module EventsHelper
   def map_title event
     @title || event.mapplacename || event.location
   end
+  
+  def celebration? etype
+    (%w(anniversary birthday).detect { |x| x == etype})
+  end
 end

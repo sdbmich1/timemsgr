@@ -7,7 +7,14 @@ class RelationshipObserver < ActiveRecord::Observer
   end
 
   def after_update(model)
-    model.status == 'accepted' ? other_notice(model, 'accept') : other_notice(model, 'reject') 
+    if model.status == 'accepted' 
+      other_notice(model, 'accept') 
+      
+      # add birth dates to each persons calendar
+      LifeEvent.set_rel_birth_date model
+    else 
+      other_notice(model, 'reject')
+    end  
   end 
   
   def after_destroy model

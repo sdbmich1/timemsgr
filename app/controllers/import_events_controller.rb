@@ -1,0 +1,2 @@
+class ImportEventsController < ApplicationController
+end

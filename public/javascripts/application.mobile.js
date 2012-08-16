@@ -62,8 +62,8 @@ $(document).ready(function() {
   
   // used to toggle sponsor logos
   $("#close-btn").live('click', function() {
-    	$("#sponsor-pg").hide();
-    	$("#event-pg").show();
+   	$("#sponsor-pg").hide();
+   	$("#event-pg").show();
   });	 
 
   // used to toggle visible search bar

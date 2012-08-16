@@ -2,7 +2,7 @@
 	<label for='start-dt'>Start Date:</label>
 	<%= f.text_field :eventstartdate, {:value => get_nice_date(@event.eventstartdate, 'Edit'), :size=>15, :type => 'date', :id=>'start-dt', 'data-mini'=>"true", 'data-role'=>"datebox", 
 		'data-options'=>'{"mode": "calbox", "dateFormat": "mm/dd/YYYY", "minDays": 0, "closeCallback":"dooffset();"}'} %>
-  <div id="stime">  	                             
+  <div id="stime" style="<%= celebration?(@event.event_type) ? 'display:none' : '' %>">  	                             
 	<label for='start-tm'>Start Time:</label>
 	<%= f.text_field :eventstarttime, {:value => get_nice_time(@event.eventstarttime), :size=>15, :id=>'start-tm', 'data-mini'=>"true", 'data-role'=>"datebox", 
 		'data-options'=>'{"mode": "timebox", "timeFormat": "12"}'} %>
@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<div class="ptop" id='enddt'>
+<div class="ptop" style="<%= celebration?(@event.event_type) ? 'display:none' : '' %>" id='enddt'>
   <div data-role="fieldcontain">	
 	<label for='end-dt'>End Date:</label>
 	<%= f.text_field :eventenddate, {:value => get_nice_date(@event.eventenddate, 'Edit'), :size=>15, :type => 'date', :id=>'end-dt', 'data-mini'=>"true", 'data-role'=>"datebox", 

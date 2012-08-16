@@ -299,12 +299,12 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   def self.pastSQL
-    'AND eventenddate < curdate()' 
+    'AND eventenddate BETWEEN DATE_SUB(curdate(),INTERVAL 3 MONTH) AND curdate()' 
   end
   
   def self.currentSQL
     "AND ( (eventstartdate >= curdate() ) 
-            or (eventstartdate <= curdate() and eventenddate >= curdate()) )"
+            or (eventstartdate <= curdate() and eventenddate BETWEEN curdate() AND DATE_ADD(curdate(), INTERVAL 1 YEAR)) )"
   end
   
   

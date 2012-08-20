@@ -4,6 +4,7 @@ class PrivateEventsController < ApplicationController
   before_filter :set_page_type, :if => :html_destroy?
   include ResetDate, ImportEvent
   layout :page_layout
+  respond_to :html, :xml, :js, :mobile, :json
 
   def index
     load_events
@@ -56,12 +57,12 @@ class PrivateEventsController < ApplicationController
   end
   
   def gcal_import
-    email, pwd = params[:user][:email], params[:user][:password] # grab login parameters
+    email, pwd = params[:uid], params[:pwd] # grab login parameters
 
     # import events from google calendar    
     if ImportEvent.gcal_import(email, pwd, @user)
-      redirect_to private_events_url 
       flash[:notice] = "Your google calendar events have been successfully imported." 
+      load_events
     else
       flash[:error] = "Import events authentication failed.  Please re-enter your email and password." 
     end

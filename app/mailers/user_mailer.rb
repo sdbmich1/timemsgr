@@ -25,5 +25,11 @@ class UserMailer < ActionMailer::Base
     @reminder = reminder; @user = usr
     mail(:to => "#{email}", :subject => "Reminder: #{reminder.reminder_name} @ #{reminder.starttime} - #{reminder.endtime} ")        
   end
+
+  def send_sms_reminder email, reminder, usr
+    @tz = GmtTimezone.get_timezone reminder.localGMToffset
+    @reminder = reminder; @user = usr
+    mail(:to => "#{email}", :subject => "Reminder: #{reminder.reminder_name} @ #{reminder.starttime} - #{reminder.endtime} ")        
+  end
  
 end

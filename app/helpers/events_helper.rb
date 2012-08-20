@@ -446,4 +446,8 @@ module EventsHelper
   def celebration? etype
     (%w(anniversary birthday).detect { |x| x == etype})
   end
+  
+  def sort_list elist
+    elist.sort{|a,b| b.eventstartdate <=> a.eventstartdate} if elist
+  end
 end

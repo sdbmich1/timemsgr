@@ -7,7 +7,7 @@ class HostProfile < KitsTsdModel
         :StartMonth, :StartDay, :StartYear, :HostName, :EntityCategory, :EducationalInst, :PoliticalAffiliation1,
         :Address1, :Address2, :City, :State, :PostalCode, :Phone_Home, :Phone_Work, :Religion, 
         :Phone_cell, :wirelessservice, :Country, :promoCode, :pictures_attributes
-        
+                
   text_regex = /^[-\w\,. _\/&@]+$/i
           
   belongs_to :user, :foreign_key => :ProfileID
@@ -83,10 +83,11 @@ class HostProfile < KitsTsdModel
   end
  
   # define channel relationships
-  has_many :subscriptions, :through => :channels, :conditions => { :status => 'active'}
-          
+  has_many :subscriptions, :through => :channels, :conditions => { :status => 'active'}          
   has_many :pictures, :as => :imageable, :dependent => :destroy
   accepts_nested_attributes_for :pictures, :allow_destroy => true
+  
+  validates :Phone_cell, :length => {:minimum => 10, :maximum => 12}, :unless => Proc.new {|object| object.Phone_cell.blank?}
   
   def self.get_user(ssid)
     hp = HostProfile.includes(:user).find_by_subscriptionsourceID(ssid) || HostProfile.includes(:user).find_by_ID(ssid)

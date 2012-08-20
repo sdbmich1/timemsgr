@@ -69,8 +69,22 @@ $(document).ready(function() {
   // used to toggle visible search bar
   $(".srchflg").live('click',function() {
 	$('.evsearch').toggle();
-  });     
+  });   
+
 }); 
+
+// import events from 3rd party services
+$(document).bind('pageinit', function() {
+	
+  $("#google-btn").live("click", function() {
+    var uid = $('#email').val();
+    var pwd = $('#password').val();
+  	var url = '/gcal_import.mobile?uid=' + uid + "&pwd=" + pwd; 
+
+  	$.mobile.changePage( url, { transition: "flip", reload: true} ); 	  		
+	return false;
+  });
+});
 	  
   // add iphone orientation change handler
   $(function (){ 

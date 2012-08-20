@@ -9,7 +9,7 @@
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div id="app" data-role="page" data-iscroll="enable"> 
+  <div id="app" data-role="page" data-iscroll="enable" data-cache="never"> 
     <div data-role="header" data-theme="b">
       <%= yield :head %>
     </div>
@@ -22,12 +22,7 @@
     <%= yield :subhead %>
     
 	<div class="app-content" data-role="content">
- 	   	<% unless notice.nil? %>
-  	   		<p class="notice"><%= notice %></p>
-  	   	<% end %>
-       	<% unless alert.nil? %>
-            <p class="alert"><%= alert %></p>     
-       	<% end %>  	  
+		<%= render 'mobile/notice_alert'%>
   		<%= yield :content %>
   
     	<div id="app-footer" data-role="footer">		

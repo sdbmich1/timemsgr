@@ -1,0 +1,22 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'My Activities'} %>
+
+<% content_for :srch_content do %>
+	<%= render :partial => 'mobile/private_event_search' %>
+<% end %>
+
+<%= content_for :content do %>
+  <div data-role="collapsible-set" data-mini="true" id='activity_form'>
+   	<div data-role="collapsible" data-collapsed="false">
+		<h3><%= "Upcoming Activities" %></h3>
+		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => @events, :as => :event %></ul>
+	</div>	 	
+	<div data-role="collapsible" >
+		<h3><%= "Past Activities" %></h3>
+		<ul data-role="listview"><%= render :partial => 'mobile/event_items', :collection => sort_list(@past_events), :as => :event %></ul>
+	</div>		  	
+  </div>
+<% end -%>
+
+<%= content_for :footer do %>
+	<%= render 'mobile/import_event_footer' %>
+<% end %>

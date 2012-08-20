@@ -447,3 +447,19 @@ $(function (){
   });
 });
 
+// check for google import
+$(document).ready(function() {	
+  $("#googlebtn").live("click", function() {
+    var uid = $('#email').val();
+    var pwd = $('#password').val();
+    
+    if ($('imp-item').length == 0)
+  	  { 
+  	  	var url = '/gcal_import?uid=' + uid + "&pwd=" + pwd; 
+  	  	process_url(url);
+  	  }
+  	  
+    //prevent the default behavior of the click event
+    return false;
+  });
+});

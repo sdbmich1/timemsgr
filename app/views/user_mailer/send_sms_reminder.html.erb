@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <style type="text/css"></style>
+  </head>
+  <body>
+	<%= @reminder.reminder_name %><br />
+    
+    <p>When: <%= @reminder.startdate %> <%= "#{@reminder.getstarttime} - #{@reminder.endtime}" %> <%= @tz %></p><br /> 
+    <p>Details: <%= @reminder.remindertext %> </p>
+  </body>
+</html>

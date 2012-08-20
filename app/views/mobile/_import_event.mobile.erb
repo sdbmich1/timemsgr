@@ -1,10 +1,21 @@
-	<p>Import your events from other programs.  Enter your email, password then click on the program you want to import from below to begin.</p><br />
-	<%= form_for([@event, @user], :id => 'import_form', :url => { :action =>"gcal_import", :controller=>'private_events'}, :remote=>true) do |f| %>
-		<div id="newreg">
-			<p><span>Email</span></p><p><%= f.text_field :email %></p> 		
-			<p><span>Password</span></p><p><%= f.password_field :password, :size => 20 %></p> 
-		</div>
-		<%= image_submit_tag("google1.jpg", :alt => "Import Google", :id=>'submit-btn') %>
-		<%= link_to "Cancel", :back, "data-role" => "button" %>
-
-	<% end %>  
+<p>Import your events from other services.  Enter your email and password then click on the program you want to import from below to begin.</p>
+<div id="newreg">
+	<p><label>Email</label><%= text_field_tag(:email, @user.email) %></p> 		
+	<p><label>Password</label><%= password_field_tag(:password, nil, :size => 20) %></p> 
+</div>
+<p>
+	<ul data-role='listview' data-inset="true">
+		<li class="imp-item">
+			<%= link_to "#", :id=>'google-btn' do %>
+				<%= image_tag('google.jpg', :alt=>"g-icon", :class=>"imp-icon") %>Google
+			<% end %>
+		</li>
+		<% unless @facebook_user %>
+		  <li class="imp-item">
+			<%= link_to "#",  :id=>'fb-btn' do %>
+				<%= image_tag('facebook.png', :alt=>"fb-icon", :class=>"imp-icon") %>Facebook
+			<% end %>
+		  </li>
+		<% end %>
+	</ul>
+</p>

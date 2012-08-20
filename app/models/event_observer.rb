@@ -3,12 +3,7 @@ class EventObserver < ActiveRecord::Observer
   include ProcessNotice, Rewards, UserInfo
   observe :event, :private_event, :scheduled_event, :life_event
     
-  def before_create model   
-     # check for social network sharing & publish to user public events via oauth api
-    if model.fbCircle == 'yes' && oauth_user
-      event = oath_user.event!(:name => model.event_name, :start_time => model.eventstarttime, :end_time => model.eventendtime, :location => model.location)
-    end
-    
+  def before_create model       
     # check for reoccuring events
     if model.class.to_s == 'LifeEvent'
       set_annual_event model if model.annualsamedate == 'yes'
@@ -18,6 +13,11 @@ class EventObserver < ActiveRecord::Observer
   end
 
   def after_create(model)
+     # check for social network sharing & publish to user public events via oauth api
+    if model.fbCircle == 'yes' && oauth_user
+      event = oath_user.event!(:name => model.event_name, :start_time => model.eventstarttime, :end_time => model.eventendtime, :location => model.location)
+    end
+
     # clear cache
     Event.delete_cached
     

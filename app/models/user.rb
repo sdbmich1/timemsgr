@@ -179,6 +179,19 @@ class User < ActiveRecord::Base
     profile.HostName
   end
   
+  def cellphone
+    profile.Phone_cell
+  end
+  
+  def wireless
+    wp = WirelessProvider.find_by_code profile.wirelessservice
+    wp.email if wp
+  end
+  
+  def sms_email
+    cellphone + '@' + wireless if cellphone && wireless 
+  end
+  
   def name
     [first_name, last_name].join(' ')
   end

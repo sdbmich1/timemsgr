@@ -13,15 +13,16 @@ module ImportEvent
   
   def self.add_import_events usr
     @events.each do |e|
-      if !e.title.blank? && e.start_time >= Time.now && (e.attendees[0][:name] =~ /Holidays/i).nil?    
-        start_offset, end_offset = e.start_time.getlocal.utc_offset/3600, e.end_time.getlocal.utc_offset/3600           
-        new_event = PrivateEvent.new(:event_name => e.title, :event_type => 'other', :cbody => e.content,                                      
-                                     :bbody => e.content, :location => e.where)
+      stime, etime = e.start_time.to_time, e.end_time.to_time rescue nil
+      if !e.title.blank? && stime >= Time.now && (e.attendees[0][:name] =~ /Holidays/i).nil?    
+        start_offset, end_offset = stime.getlocal.utc_offset/3600, etime.getlocal.utc_offset/3600           
+        new_event = PrivateEvent.find_or_initialize_by_event_name_and_eventstartdate(e.title, stime)
         new_event.pageexttype, new_event.pageextsrc = 'Google','html'
         new_event.contentsourceID = new_event.subscriptionsourceID = usr.ssid
+        new_event.cbody, new_event.event_type, new_event.location = e.content, 'other', e.where
         new_event.localGMToffset = new_event.endGMToffset = usr.localGMToffset
-        new_event.eventstartdate = new_event.eventstarttime = e.start_time.advance(:hours=>start_offset)
-        new_event.eventenddate = new_event.eventendtime = e.end_time.advance(:hours=>end_offset)
+        new_event.eventstartdate = new_event.eventstarttime = stime.advance(:hours=>start_offset)
+        new_event.eventenddate = new_event.eventendtime = etime.advance(:hours=>end_offset)
         new_event.save
       end
     end

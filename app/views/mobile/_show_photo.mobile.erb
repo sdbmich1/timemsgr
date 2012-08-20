@@ -1,16 +1,8 @@
+<% if model %>
   <% for pic in model.pictures %>
 	<% if pic %>
    		<%= image_tag pic.photo.url, :class => vtype %>
    	<% end %>		
   <% end %>
-  <% if has_facebook_photo? && model.pictures.blank? %>
-  	<% if controller_name == 'users' && action_name != 'index' %>
-   		<%= image_tag @facebook_user.picture, :size => psize %> 
-   	<% else %>
-   		<%= image_tag file_name, :alt => "none", :size => psize %>
-   	<% end %> 
-  <% elsif !(model.class.to_s =~ /Event/i).nil? && image_exists?(model) %>
-   	<%= image_tag model.imagelink.html_safe, :class => vtype rescue nil %>  	
-  <% elsif model.try(:pictures).blank? %>
-    <%= image_tag file_name, :alt => "none", :size => psize %>
-  <% end %>
+  <%= render :partial => 'mobile/photo_item', :locals => {:file_name=>file_name, :model=>model, :psize=>psize, :vtype=>vtype} %>
+<% end %>

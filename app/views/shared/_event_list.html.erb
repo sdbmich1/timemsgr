@@ -3,5 +3,5 @@
 	<%= render :partial=>'shared/event_list_title', :locals=>{:title=>'Upcoming Activities'} unless @pgType %>
 	<div id="cur_evnt"><%= render :partial => 'shared/event_content', :locals => {:title=>'Upcoming Activities', :model=>@events, :type=>'upcoming_page'} unless @pgType == 'past_page'%></div> 
 	<%= render :partial=>'shared/event_list_title', :locals=>{:title=>'Past Activities'} unless @pgType %>
-	<div id="past_evnt"><%= render :partial => 'shared/event_content', :locals => {:title=>'Past Activities', :model=>@past_events.sort{|a,b| b.eventstartdate <=> a.eventstartdate}, :type=>'past_page'} unless @pgType == 'upcoming_page'%></div>
+	<div id="past_evnt"><%= render :partial => 'shared/event_content', :locals => {:title=>'Past Activities', :model=>sort_list(@past_events), :type=>'past_page'} unless @pgType == 'upcoming_page'%></div>
 </div>

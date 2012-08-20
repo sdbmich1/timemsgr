@@ -7,7 +7,8 @@ class ReminderJob < Struct.new(:usr, :remind_id)
   end
   
   def send_reminder usr, reminder
-    UserMailer.send_reminder usr.email, reminder, usr
+    UserMailer.send_reminder usr.email, reminder, usr if usr.email
+    UserMailer.send_sms_reminder usr.sms_email, reminder, usr if usr.sms_email 
   end
   
   def run_time?  

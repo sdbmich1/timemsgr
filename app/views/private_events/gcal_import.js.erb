@@ -1,7 +1,3 @@
-<% if flash.nil? %>
-	$("#flash_notice").hide(300);
-	$("#flash_error").hide(300);
-<% else %>
 	<% if !flash[:notice].nil? %>
 		$("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
 		$("#flash_notice").show(300);
@@ -11,4 +7,4 @@
 		$("#flash_error").html("<%= escape_javascript(flash[:error])%>");
 		$("#flash_error").show(300);
 	<% end %>
-<% end %>
+

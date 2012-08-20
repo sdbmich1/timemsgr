@@ -347,6 +347,7 @@ a.msg-btn {
 .img {padding-top: 5px}
 .ui-mini {margin: 0 0!important}
 
+/* for autocomplete */
 .suggestions li a { text-decoration: none; }
 .suggestions { margin-left: 5px!important; width: 97%; }
 .suggestions li {
@@ -360,3 +361,6 @@ a.msg-btn {
     padding     : 7px;
     color 		: #ffffff;
 }
+
+.imp-icon { width: 18px; height: 18px; padding-left: 5px; padding-top: 8px;}
+.imp-item .ui-btn-text { height: 40px!important;}

@@ -174,7 +174,7 @@ label, label.ui-input-text { font-size:12px!important; margin-top:5px!important;
 
 .ui-controlgroup, fieldset.ui-controlgroup {padding: 0!important; margin: 0 0 0!important;}
 .ui-controlgroup .ui-checkbox label {font-size: 14px;}
-.ui-field-contain, fieldset.ui-field-contain {padding: 0 0!important;}
+.ui-field-contain, fieldset.ui-field-contain {padding: 0 0!important; overflow-x: visible!important;}
 .ui-bar, .ui-body {padding: 0 0!important;}
 
 .mobile-slider { margin-bottom: 10px; padding: 0; margin-left:auto; margin-right: auto;  }

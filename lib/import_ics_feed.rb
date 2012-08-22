@@ -27,7 +27,7 @@ class ImportICSFeed
       start_offset, end_offset = cal.dtstart.to_time.getlocal.utc_offset/3600, cal.dtend.to_time.getlocal.utc_offset/3600  
       uid = cal.uid =~ /[\)]/i ? cal.uid.split(')')[1] : cal.uid
                
-      new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(uid, :event_type => 'ce', :event_title => etype + ': ' + cal.summary, 
+      new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(uid[0..49], :event_type => 'ce', :event_title => etype + ': ' + cal.summary, 
         :cbody => cal.description, :contentsourceID => cid, :localGMToffset => offset, :endGMToffset => offset, :subscriptionsourceID => cid) 
       new_event.eventstartdate = new_event.eventstarttime = cal.dtstart.to_datetime
       new_event.eventenddate = new_event.eventendtime = cal.dtend.to_datetime  

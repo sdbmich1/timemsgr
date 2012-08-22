@@ -1,4 +1,4 @@
-#app {}  
+#app { -webkit-backface-visibility:visible !important; } 
 [data-role=page]{ position:relative !important;}
 
 .app-content {min-width: 100%; }
@@ -31,7 +31,7 @@
 .form-top, .scroller {top: 40px; height: 140%;}
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; height:150%!important;}
-.channel-pg {top:145px!important;} 
+.channel-pg {top:138px!important;} 
 .nearby-pg {top:107px;}
 .scrollable {top: 43px!important;}
 

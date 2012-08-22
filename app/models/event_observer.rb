@@ -15,7 +15,8 @@ class EventObserver < ActiveRecord::Observer
   def after_create(model)
      # check for social network sharing & publish to user public events via oauth api
     if model.fbCircle == 'yes' && oauth_user
-      event = oath_user.event!(:name => model.event_name, :start_time => model.eventstarttime, :end_time => model.eventendtime, :location => model.location)
+      event = oath_user.event!(:name => model.event_name, :start_time => model.eventstarttime, :end_time => model.eventendtime, :location => model.location,
+              :description => model.bbody)
     end
 
     # clear cache

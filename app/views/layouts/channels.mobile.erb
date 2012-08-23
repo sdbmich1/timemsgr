@@ -22,10 +22,10 @@
 	  <div class="app-content" data-role="content">
 	  	<div class="subhead">
     		<%= yield :subhead %>
+    		<div class="channel-pg">
+      			<%= yield :content %>
+      		</div>
     	</div>
-		<div class="channel-pg">
-      		<%= yield :content %>
-      	</div>
       </div>
     
       <div id="app-footer" data-role="footer">		

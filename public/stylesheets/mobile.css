@@ -27,7 +27,7 @@
 }
 
 .subhead, .listpg {top: 76px;}
-.subhead {height: 30px; }
+.subhead {height: 150% }
 .form-top, .scroller {top: 40px; height: 140%;}
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; }

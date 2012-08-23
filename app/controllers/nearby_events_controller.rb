@@ -12,7 +12,7 @@ class NearbyEventsController < ApplicationController
   protected
   
   def page_layout 
-    mobile_device? ? 'nearby' : "events"
+    mobile_device? ? 'form' : "events"
   end    
   
   def offset

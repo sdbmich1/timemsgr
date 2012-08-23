@@ -18,7 +18,7 @@
 #app-header {bottom:auto; position:fixed !important; top:0 !important; width:100%; z-index: 999;}  
 
 .ui-header, .ui-navbar { width: 100%!important; }
-.scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .channel-pg, .nearby-pg {
+.scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .channel-pg, .nearby-pg, .channelList {
 	position: absolute;
       left: 0;
       right: 0;
@@ -26,13 +26,13 @@
       width: 100%;           
 }
 
-.subhead, .listpg {top: 76px;}
+.subhead, .listpg {top: 35px;}
 .subhead {height: 150% }
 .form-top, .scroller {top: 40px; height: 140%;}
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; }
-.channel-pg, .channelList {top:138px!important;} 
-.nearby-pg {top:107px;}
+.channel-pg, .channelList {top:100px!important;} 
+.nearby-pg {top:70px;}
 .scrollable {top: 43px!important;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
@@ -79,6 +79,9 @@
     position: absolute;
     top: 0;
 }
+
+#search-mform .ui-btn {width: 30%; float: right}
+.search-fld {}
 
 .mtop { margin-top: 12px;}
 .ptop { margin-top: 8px; }

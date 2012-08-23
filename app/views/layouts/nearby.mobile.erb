@@ -21,11 +21,12 @@
     
 	  <div class="app-content" data-role="content">
 	  	<div class="subhead">
-    		<%= yield :subhead %>
+    		<%= yield :subhead %>		
+    		<div class="nearby-pg">
+      			<%= yield :content %>
+      		</div>
     	</div>
-		<div class="nearby-pg">
-      		<%= yield :content %>
-      	</div>
+
       </div>
     
       <div id="app-footer" data-role="footer">		

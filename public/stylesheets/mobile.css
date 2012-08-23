@@ -3,16 +3,12 @@
 
 .app-content {min-width: 100%; }
 
-#loc_id, .ui-content { overflow-x: visible!important }
+.ui-content { overflow-x: visible!important }
 
 .ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 .ui-page, .ui-body-c, .ui-content {
 	background: #FFFFFF!important;
 }  
-
-.ui-page, .ui-content {
-	-webkit-backface-visibility: visible!important;
-}
 
 .ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: 100%;}
 

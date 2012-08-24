@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? 'form' : "users"
+    mobile_device? ? 'channels' : "users"
   end
   
   def offset

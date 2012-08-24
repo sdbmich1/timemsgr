@@ -80,8 +80,8 @@
     top: 0;
 }
 
-#search-mform .ui-btn {width: 30%; float: right}
-.search-fld {}
+#search-mform .ui-btn {width: 25%; float: right}
+#search-mform {margin: 5px 0 2px 0}
 
 .mtop { margin-top: 12px;}
 .ptop { margin-top: 8px; }

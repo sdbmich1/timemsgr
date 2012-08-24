@@ -26,12 +26,12 @@
       width: 100%;           
 }
 
-.subhead, .listpg {top: 35px;}
+.subhead, .listpg {top: 75px;}
 .subhead {height: 150% }
 .form-top, .scroller {top: 40px; height: 140%;}
 .scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; }
-.channel-pg, .channelList {top:100px!important;} 
+.channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:70px;}
 .scrollable {top: 43px!important;}
 

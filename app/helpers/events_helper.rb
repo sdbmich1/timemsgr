@@ -229,11 +229,7 @@ module EventsHelper
    
   # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
   def chk_user_events(elist, event)
-    unless mobile_device?
-      elist.detect{|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) || x.eventid == event.eventid}
-    else
-      elist
-    end
+    elist.detect{|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) || x.eventid == event.eventid}
   end
   
   def chk_action(action, event)

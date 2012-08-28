@@ -15,16 +15,16 @@
 
 <%= content_for :footer do %>
   <div data-role="navbar">
-	<% if @rel_type && controller_name == 'relationships' %>
-	  	<ul>
-			<li><%= link_to "New Connection", users_url(:id=>@user, :rtype=>@rel_type), "data-icon"=>"plus" %> </li>
-		</ul>
-	 <% else %>
-	 	<ul>
+	<ul>
+		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
+		<% if @rel_type && controller_name == 'relationships' %>
+			<li><%= link_to "Connection", users_url(:id=>@user, :rtype=>@rel_type), "data-icon"=>"plus" %> </li>
+	 	<% else %>
 			<li><%= link_to "Private", users_url(:id=>@user, :rtype=>'Private'), "data-icon"=>"plus" %> </li>
 			<li><%= link_to "Social", users_url(:id=>@user, :rtype=>'Social'), "data-icon"=>"plus" %> </li>
 			<li><%= link_to "World", users_url(:id=>@user, :rtype=>'Extended'), "data-icon"=>"plus" %> </li>	 		
-	 	</ul>
-	<% end %>
+		<% end %>
+		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
+	</ul>
   </div>
 <% end %>

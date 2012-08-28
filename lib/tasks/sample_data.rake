@@ -47,8 +47,8 @@ namespace :db do
     set_channel_interests
   end 
   
-  task :set_sfstate_channels => :environment do
-    add_sfstate_channels
+  task :add_college_channels => :environment do
+    create_college_channels
   end 
 
   task :set_city_locations => :environment do
@@ -203,18 +203,27 @@ def set_presenter_eventid
   end
 end
 
-def add_sfstate_channels
+def create_college_channels
+  # set school environment variables
+  school = ENV['SCHOOL_NAME'] || 'San Francisco State'
+  city = ENV['CITY_NAME'] || 'San Francisco'
+  school_size = ENV['SCHOOL_SIZE'] || 'medium'
   
   lc = LocalChannel.get_channel_by_name 'Stanford'  
-  lc.each do |channel|
-    p "Channel: #{channel.channelID}"
-    ch = ["Lacrosse|Water Polo|Swimming|Football|Men's Volleyball|Golf|Tennis|Shopping|Gymnastics|Rugby|Circle|Promotions|Sailing|Rowing|Squash"]
+  lc.each do |channel|  
+    # check school size to determine which channels not to create
+    if school_size == 'medium'
+      ch = ["Lacrosse|Water Polo|Swimming|Football|Men's Volleyball|Golf|Tennis|Shopping|Gymnastics|Rugby|Circle|Sailing|Rowing|Squash"]
+    else
+      ch = ['Circle|Shopping']
+    end
+    
     if (channel.channel_name =~ /^.*\b(#{ch[0]})\b.*$/i).nil?
       new_channel = LocalChannel.new channel.attributes
-      new_channel.channel_name.gsub!('Stanford', 'San Francisco State')
+      new_channel.channel_name.gsub!('Stanford', school)
       new_channel.channel_title = new_channel.channel_name
-      new_channel.localename = 'San Francisco' 
-      new_channel.cbody.gsub!('Stanford', 'San Francisco State') rescue nil
+      new_channel.localename = city 
+      new_channel.cbody.gsub!('Stanford', school) rescue nil
       new_channel.bbody = new_channel.cbody
       p "Channel: #{new_channel.channel_name}"
     

@@ -81,10 +81,14 @@ module EventsHelper
   end
   
   def compare_time(ctime, etime)
-    if etime.blank? || ctime.hour > etime.hour
+    if etime.blank? || ctime.day == etime.day && ctime.hour > etime.hour 
       false
     else
-      ctime.hour == etime.hour && ctime.min > etime.min ? false : true
+      if ctime.day == etime.day && ctime.hour == etime.hour 
+        ctime.min > etime.min ? false : true
+      else
+        false
+      end
     end
   end
   
@@ -164,11 +168,11 @@ module EventsHelper
   end
 
   def subscriptions?
-    get_subscriptions.count > 0
+    get_subscriptions.count > 0 rescue nil
   end
   
   def observances?
-    get_observances.count > 0
+    get_observances.count > 0 rescue nil
   end
   
   def get_user_events
@@ -177,8 +181,7 @@ module EventsHelper
   
   def get_event_list(dt)
     elist = get_trkr_schedule(@user, get_user_events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
-    elist.map! {|e| set_start_date(e,dt)}.compact! 
-    elist    
+    elist = parse_list elist, dt    
   end
   
   def parse_list elist, dt
@@ -200,8 +203,8 @@ module EventsHelper
   
   def get_subscriptions *args
     elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
-    elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]
-    elist    
+    elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]  
+    elist
   end
            
   def get_observances
@@ -449,5 +452,22 @@ module EventsHelper
   
   def sort_list elist
     elist.sort{|a,b| b.eventstartdate <=> a.eventstartdate} if elist
+  end
+  
+  def events_index?
+    controller_name == 'events' && action_name == 'index'
+  end
+
+  def back_btn?
+    (%w(maps directions).detect { |x| x == controller_name})
+  end
+  
+  def data_form?
+    (%w(new edit create update).detect { |x| x == action_name})
+  end
+  
+  
+  def map_btn?
+    controller_name == 'events' && action_name != 'index'
   end
 end

@@ -21,7 +21,7 @@ class PrivateEventsController < ApplicationController
   def create
     @user ||= current_user
     @event = PrivateEvent.new_event(params[:private_event], params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
-    if @event.save
+    if @event.save(:validate=>myEvent?)
       redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
     else
       render :action => 'new'
@@ -106,6 +106,10 @@ class PrivateEventsController < ApplicationController
   def html_destroy?
     !mobile_device? && action_name == 'destroy'
   end
+
+  def myEvent?
+    !params[:private_event].blank?
+  end  
   
   def set_page_type
     @pgType = params[:edate].to_date < Date.today ? 'past_page' : 'upcoming_page' rescue nil

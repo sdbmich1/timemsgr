@@ -1,0 +1,7 @@
+<div data-role="navbar">
+  	<ul>
+		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
+		<li><%= link_to "Profile", edit_user_url(@user), "data-icon"=>"star" %> </li>
+		<li><%= link_to 'Quit', destroy_user_session_path, "data-icon"=>"gear" %></li>    
+	</ul>
+</div>

@@ -74,27 +74,27 @@ end
 
 def load_news_feeds(*args)
   feed = ImportNewsFeed.new
-  feed.read_feeds *args
+  feed.read_feeds(*args)
 end
 
 def load_stanford_feed(*args)
   feed = ImportCollegeFeed.new
-  feed.read_stanford_feed *args
+  feed.read_stanford_feed(*args)
 end
 
 def load_stanford_data(*args)
   feed = ImportCollegeFeed.new
-  feed.read_feeds *args
+  feed.read_feeds(*args)
 end
 
 def load_sfstate_feed(*args)
   feed = ImportCollegeFeed.new
-  feed.read_sfstate_feed *args
+  feed.read_sfstate_feed(*args)
 end
 
 def load_ics_feeds(*args)
   feed = ImportICSFeed.new
-  feed.read_feeds *args
+  feed.read_feeds(*args)
 end
 
 def load_golf_feeds

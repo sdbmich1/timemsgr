@@ -1,13 +1,22 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Add ' + @rel_type + ' Connections'} %>
 
 <% content_for :srch_content do %>
-	<%= render :partial => 'mobile/user_search', :locals=>{:rel_type=>@rel_type} %>
+
 <% end %>
 
 <% content_for :content do %>
-	<ul data-role="listview">
+	<div class="evsearch" style="display:none">
+		<%= render :partial => 'mobile/user_search', :locals=>{:rel_type=>@rel_type} %>
+	</div>  
+	<div id="connections">
+	  <ul data-role="listview">
 		<% chkConnections(@local_users).each do |usr| %>
 			<%= render :partial => 'mobile/user_item', :locals => {:model => usr} unless connected?(usr) %>
 		<% end %>
-	</ul>
+	 </ul>
+  	</div>
+<% end %>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/page_footer', :locals => {:sflg => true} %> 
 <% end %>

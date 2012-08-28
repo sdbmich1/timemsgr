@@ -99,7 +99,7 @@ class Event < KitsTsdModel
   end
   
   def self.find_event(id, etype, eid, sdt)
-    event = get_event(id, etype, eid).try(:first)
+    event = get_event(id, etype, eid).first rescue nil
     event.eventenddate, event.eventstartdate = sdt, sdt if event
     event
   end 
@@ -175,7 +175,7 @@ class Event < KitsTsdModel
   end    
   
   def summary
-    bbody.gsub("\\n",' ').gsub("\n",' ')[0..69] + '...' rescue nil
+    bbody.gsub("\\n",' ').gsub("\n",' ').gsub("<br />", ' ').html_safe[0..64] + '...' rescue nil
   end
   
   def listing
@@ -183,11 +183,11 @@ class Event < KitsTsdModel
   end
   
   def details
-    cbody.gsub("\\n","<br />")[0..499]
+    cbody.gsub("\\n","<br />").html_safe[0..499]
   end
   
   def full_details
-    cbody.gsub("\\n","<br />")
+    cbody.gsub("\\n","<br />").html_safe
   end
     
   # action caching for SELECT UNION query

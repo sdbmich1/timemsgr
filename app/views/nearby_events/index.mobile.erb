@@ -1,17 +1,22 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => "Nearby Events"} %>
 
-<% content_for :srch_content do %>
-<% end %>
-
-<% content_for :subhead do %>
-	<%= render :partial => 'mobile/event_search' %>
+<%= content_for :subhead do %>
+	<div class="evsearch" style="display:none">
+		<%= render :partial => 'mobile/event_search' %>
+	</div>
 	<%= render :partial => 'mobile/locations' %>
 <% end %>
 
 <%= content_for :content do %>
   <div class='nearby-pg'>
     <ul data-role="listview">
-		<%= render :partial => 'mobile/event_list', :collection => @nearby_events, :as => :event, :locals => {:edate => Date.today} %>
+		<% get_date_range(@nearby_events, @enddate).each do |edate| %>
+			<%= render :partial => 'mobile/event_list', :collection => get_events('Near', edate), :as => :event, :locals => {:edate => edate} %>	
+		<% end %>
     </ul>
   </div>
 <% end -%>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/page_footer', :locals => {:sflg => true} %> 
+<% end %>

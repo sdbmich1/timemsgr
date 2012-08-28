@@ -8,11 +8,4 @@
 		<%= link_to get_unread_count(@user), event_notices_url(:sid=>@user.ssid), :class=>"notice-btn round" %>
 	<% end %>
 	</h3>
-	<% if map_btn? %>
-	  <% unless has_location?(@event) %>
-	    <div class="tmp">
-		  <%= link_to "Map", maps_url(:loc=>map_loc(@event), :lnglat=>get_lnglat(@event), :title=>map_title(@event)), { :id=>'map','rel'=>'external', :class => "map-btn ui-btn-right"} %>	
-		</div>
-	  <% end %>
-	<% end %>
 <% end %>

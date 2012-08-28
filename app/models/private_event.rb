@@ -156,12 +156,12 @@ class PrivateEvent < ActiveRecord::Base
   
   def self.new_event(*args)
     pe, *elem = args 
-    pe ? PrivateEvent.new(ResetDate::reset_dates(pe)) : PrivateEvent.add_event(elem)
+    pe ? PrivateEvent.new(ResetDate::reset_dates(pe)) : PrivateEvent.add_event(*elem)
   end
   
   def self.add_event(eid, etype, ssid, evid, sdt)
     selected_event = Event.find_event(eid, etype, evid, sdt)
-    new_event = PrivateEvent.new(selected_event.attributes)    
+    new_event = PrivateEvent.new(selected_event.attributes) 
     new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil 
 
     # reset event type

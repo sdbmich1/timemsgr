@@ -1,10 +1,12 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Select Channels'} %>
 
 <% content_for :srch_content do %>
-	<%= render :partial => 'mobile/channel_search' %>
 <% end %>
 
 <% content_for :subhead do %>
+	<div class="evsearch" style="display:none">
+		<%= render :partial => 'mobile/channel_search' %>
+	</div>
 	<%= render :partial => 'mobile/locations' %>
 	<%= render :partial => 'mobile/catlist' %>
 <% end %>
@@ -15,4 +17,8 @@
 		<%= render :partial => 'mobile/channels' %>
 	</div>
   </div>
+<% end %>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/page_footer', :locals => {:sflg => true} %> 
 <% end %>

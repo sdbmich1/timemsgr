@@ -5,7 +5,7 @@ include ResetDate
 class ImportCollegeFeed
     
   # parse xml feeds from given url
-  def read_stanford_feed(feed_url, school, offset)
+  def read_stanford_feed(feed_url, school, offset, etype)
     doc = Nokogiri::XML(open(feed_url))
     doc.xpath("//item").count.times do |n|
       
@@ -66,7 +66,7 @@ class ImportCollegeFeed
       doc.css(".row-text")[n*4].text.blank? ? dt = prev_dt : dt = doc.css(".row-text")[n*4].text
       
       # parse date according to string
-      (dt =~ /.,/i).nil? ? (sdt = edt = parse_date(dt)) : (sdt = edt = get_date(dt)) unless dt.blank?
+      (dt =~ /.,/i).nil? ? (sdt = edt = ResetDate::parse_date(dt)) : (sdt = edt = get_date(dt)) unless dt.blank?
       
       #set event title
       etitle = doc.css(".row-text")[n*4+1].text.split("\n")[0]
@@ -134,8 +134,7 @@ class ImportCollegeFeed
       cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime, host)}      
     end 
   end
-  
-  
+    
   # check day of week to ensure correct year for date
   def get_date(dt)
     Date.parse(dt).strftime('%A')[0..2] == dt[0..2] ? Date.parse(dt) : Date.parse(dt) - 1.year

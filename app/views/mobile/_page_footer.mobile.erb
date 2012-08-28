@@ -1,7 +1,9 @@
-<script type="text/javascript">
-    $('#app').live('pagecreate', function (event) {
-
-        $.fixedToolbars.setTouchToggleEnabled(false);
-
-    });
-</script>
+<div data-role="navbar">
+  	<ul>
+		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
+		<% if sflg %>
+			<li><%= link_to 'Search', '#', :class=>"srchflg", "data-icon"=>"search" %></li>
+		<% end %>
+		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
+	</ul>
+</div>

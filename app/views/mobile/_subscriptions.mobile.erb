@@ -1,7 +1,9 @@
 <ul data-role="listview" data-filter="true">
   <% @subscriptions.each do |sub| %>
 	<% unless sub.local_channel.blank? %>
-		  <%= render :partial => 'mobile/channel', :locals => {:channel => sub.local_channel }%>
+		<%= render :partial => 'mobile/channel', :locals => {:channel => sub.local_channel }%>
+	<% else %>
+		<div class="stitle center-wrapper"><h6><%= 'No subscriptions found.' %></h6></div>
 	<% end %>
   <% end %>
 </ul>

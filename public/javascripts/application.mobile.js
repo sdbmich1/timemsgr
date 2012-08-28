@@ -69,13 +69,19 @@ $(document).ready(function() {
   // used to toggle visible search bar
   $(".srchflg").live('click',function() {
 	$('.evsearch').toggle();
+	if ($('.evsearch').is(':visible')) {
+		$(".home-pg, .nearby-pg, .channelList").css('margin-top', '35px');
+	}
+	else {
+		$(".home-pg, .nearby-pg, .channelList").css('margin-top', 0);		
+	}
   });   
 
 }); 
 
 // import events from 3rd party services
 $(document).bind('pageinit', function() {
-	
+		
   $("#google-btn").live("click", function() {
     var uid = $('#email').val();
     var pwd = $('#password').val();

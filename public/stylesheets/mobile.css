@@ -26,13 +26,12 @@
       width: 100%;           
 }
 
-.subhead, .listpg {top: 75px;}
-.subhead {height: 150% }
-.form-top, .scroller {top: 40px; height: 140%;}
-.scrollable, .home-pg {bottom: 50px; overflow: auto; overflow-x: hidden;}
+.subhead, .listpg {top: 75px; height: 150% }
+.form-top, .scroller {top: 44px; height: 150%;}
+.scrollable, .home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; }
 .channel-pg, .channelList {top:65px!important;} 
-.nearby-pg {top:70px;}
+.nearby-pg {top:35px;}
 .scrollable {top: 43px!important;}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
@@ -251,33 +250,50 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 .auth_provr {margin-top: 10px}
 
 a.notice-btn {
+  background: #990000!important;
+  line-height: 18px;
+  font-weight: bold;
+  height: 18px;
+  width: 24px;
+  margin-left: 15px;	
+}
+
+a.map-btn {
+  background: #0C6FCB!important;
+  padding: 6px 8px 6px 8px;
+  height: 18px;
+  width: 24px;
+  margin-left: 15px;	
+  font-weight: normal!important;
+}
+
+a.msg-btn {
+  background: #990000;
+  font-weight: bold;
+}
+
+a.msg-btn, a.notice-btn, a.map-btn, a.nobtn {
   display: inline;
   text-align: center;
   color: #ffffff!important;
-  background: #990000;
-  font-weight: bold;
   z-index: 999;
   vertical-align: middle;
   line-height: 18px;
   padding: 3px 8px 3px 8px;
-  height: 18px;
-  width: 24px;
   font-size: 10px; 
   margin-bottom: 0;
-  margin-left: 15px;	
-  text-decoration: none;
+  text-decoration: none;			
 }
 
-a.msg-btn {
-  display: inline;
-  text-align: center;
-  color: #ffffff!important;
-  background: #990000;
-  font-weight: bold;
-  z-index: 999;
-  padding: 3px 8px 3px 8px;
-  font-size: 10px; 
-  text-decoration: none;	
+a.map-btn {
+  font-size: 14px!important;
+  font-weight: bold!important;
+  background: none!important;
+  padding: 9px 8px 3px 12px;
+  border-left:thin solid #CCCCCC;
+  top: 0!important;
+  height: 30px;
+
 }
 
 /* error handling */
@@ -367,3 +383,7 @@ a.msg-btn {
 
 .imp-icon { width: 18px; height: 18px; padding-left: 5px; padding-top: 8px;}
 .imp-item .ui-btn-text { height: 40px!important;}
+
+.nav-right {
+	float: right;
+}

@@ -33,7 +33,11 @@ class UsersController < ApplicationController
   private
   
   def user_layout 
-    mobile_device? ? (%w(edit new create update).detect { |x| x == action_name}) ? 'form' : action_name == 'home' ? 'list' : 'pages' : "users"
+    if mobile_device? 
+      action_name == 'home' ? 'list' : 'form' 
+    else 
+      "users"
+    end
   end
   
   def load_data

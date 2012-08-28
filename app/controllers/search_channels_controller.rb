@@ -9,7 +9,7 @@ class SearchChannelsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? 'channels' : "users"
+    mobile_device? ? 'form' : "users"
   end  
   
   def offset

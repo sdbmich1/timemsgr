@@ -1,5 +1,7 @@
   <div data-role="navbar">
 	  <ul>
+		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
+
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
 			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
 					"data-icon"=>"add", "rel"=>"external",'data-ajax'=>"false", :method => :post %> </li>
@@ -22,11 +24,10 @@
 				<li><%= link_to "RSVP", new_rsvp_url(:eid=>event, :etype=>event.event_type), "data-icon"=>"custom", :id => "rsvp" %> </li>			
 			<% end %>
 	  	<% end %>
-	  	<% unless has_location?(event) %>
-	  		<li><%= link_to "Map", maps_url(:loc=>map_loc(event), :lnglat=>get_lnglat(event), :title=>map_title(event)), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
-	  	<% end %>
-	  	<% unless (event.location =~ /http/i).nil? %>
+	  	<% unless (event.location =~ /http/i).nil? || private_event?(event.event_type) %>
 	  		<li><%= link_to 'Website', event.location, { :id=>'website','rel'=>'external', "data-icon"=>"custom"} %></li>
 		<% end %>
+		
+		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
 	  </ul>
 	</div>

@@ -74,7 +74,7 @@ gem 'ics', "~> 0.1"
 gem "ice_cube", "~> 0.7.8"
 
 #add whenever for cron jobs
-gem 'whenever', "~> 0.7.3"
+gem 'whenever', :require => false
 
 #add timezone
 gem 'timezone', "~> 0.1.4"

@@ -1,0 +1,2 @@
+http://grfx.cstv.com/schools/stan/graphics/ics/12-ical-schedule-mfootbl.ics, Stanford Football, -8, NCAA
+http://grfx.cstv.com/schools/stan/graphics/ics/12-ical-schedule-baseball.ics, Stanford Baseball, -8, NCAA

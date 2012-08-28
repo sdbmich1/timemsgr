@@ -3,15 +3,11 @@
 $.ajaxSetup({  
     'beforeSend': function (xhr) {
     	xhr.setRequestHeader("Accept", "text/javascript");
-        xhr.setRequestHeader('X-CSRF-Token',
-                             $('meta[name="csrf-token"]').attr('content'));
-
-    	$('#spinner').show('fast')
+    	var token = $("meta[name=’csrf-token’]").attr("content");
+		xhr.setRequestHeader("X-CSRF-Token", token);
     },
-  	'complete': function(){
-     $('#spinner').hide('slow')
-  },
-  	'success': function() {}  
+  	'complete': function(){ },
+  	'success': function() {}
 }); 
 
 // add iphone orientation change handler
@@ -359,6 +355,7 @@ $(document).ready(function() {
   	}); 
 });
 
+// check for map functions
 $(document).ready(function() {	
   if ( $('#map_canvas').length != 0 ) {  
 	getLatLng(true);
@@ -380,6 +377,7 @@ $("#map").live("click", function() {
 	toggleLoading();
 });
 
+// check for directions request
 $(".map-btn").live("click", function() {
     var loc = $('.loc').attr('data-loc');
     var title = $('.loc').attr('data-title');
@@ -401,6 +399,7 @@ $("#etype").live("change", function() {
   chkAnnualEvent(etype);
 });
 
+// set end time for private/life events
 function set_end_time(starttime) {
   var parts = starttime.split(':'); 
   var ampm = parts[1].split(' ');
@@ -410,6 +409,7 @@ function set_end_time(starttime) {
   else 
   	{var hour = parseInt($.trim(parts[0]));}
 
+  // set hour based on time of day
   if(ampm[1].match(/(AM|am)/) && hour == 11) { ampm[1] = 'PM'; }
   if(hour == 12) { hour -= 12; }
   if(ampm[1].match(/(PM|pm)/) && hour == 11) { ampm[1] = 'AM'; }

@@ -3,10 +3,15 @@
 <% content_for :srch_content do %>
 	<%= render :partial => 'mobile/event_search' %>
 <% end %>
+
 <%= content_for :content do -%>
-<ul data-role="listview">
+  <ul data-role="listview">
 	<% (Date.today..Date.today+7.days).each do |edate| %>
 		<%= render :partial => 'mobile/event_list', :collection => parse_list(@results, edate), :as => :event, :locals => {:edate => edate} %>
 	<% end %>
-</ul>
+  </ul>
 <% end -%>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/page_footer', :locals => {:sflg => false} %> 
+<% end %>

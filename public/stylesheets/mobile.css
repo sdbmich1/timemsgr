@@ -27,7 +27,7 @@
 }
 
 .subhead, .listpg {top: 75px; height: 150% }
-.form-top, .scroller {top: 44px; height: 150%; margin-bottom:50px;}
+.form-top, .scroller {top: 44px; height: 150%;}
 .scrollable {bottom: 50px;}
 .home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
 .home-pg {top: 79px; height: 150%;}

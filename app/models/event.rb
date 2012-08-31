@@ -8,7 +8,7 @@ class Event < KitsTsdModel
   has_many :session_relationships #, :primary_key => :eventid, :foreign_key=>:eventid
   has_many :sessions, :through => :session_relationships
 
-  has_many :event_presenters, :primary_key => :eventid, :foreign_key=>:eventid
+  has_many :event_presenters #, :primary_key => :eventid, :foreign_key=>:eventid
   has_many :presenters, :through => :event_presenters
 
   has_many :event_sites

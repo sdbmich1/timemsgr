@@ -6,9 +6,9 @@ class MajorEventsController < ApplicationController
   def show
     @event = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt])
     @notification = Notification.new
-    @sponsor_pages = @event.sponsor_pages 
-    @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) 
-    @sessions = @event.sessions.paginate(:page => params[:session_page], :per_page => 15) 
+    @sponsor_pages = @event.sponsor_pages rescue nil
+    @presenters = @event.presenters.paginate(:page => params[:presenter_page], :per_page => 15) rescue nil
+    @sessions = @event.sessions.paginate(:page => params[:session_page], :per_page => 15) rescue nil
   end
   
   def about
@@ -18,7 +18,11 @@ class MajorEventsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? && action_name == 'show' ? 'showitem' : "list"
+    if mobile_device? 
+      action_name == 'show' ? 'showitem' : "list"
+    else
+      'showevent'
+    end
   end    
 
   def load_data

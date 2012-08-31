@@ -2,7 +2,7 @@
   	<% for presenter in @presenters.uniq %>
 	<li>
 		<%= link_to presenter_url(presenter) do %>
-		  <%= render :partial => 'mobile/show_photo', :locals => {:model => presenter, :vtype => 'ppic' }%>
+		  <%= render :partial => 'mobile/show_photo', :locals => {:model => presenter, :vtype => 'ppic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
 
    		  <div class="pstr">
 		  	<h6><%= presenter.name %></h6>

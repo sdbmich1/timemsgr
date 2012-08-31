@@ -1,0 +1,2 @@
+module SearchNearbyEventsHelper
+end

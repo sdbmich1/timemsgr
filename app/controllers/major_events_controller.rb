@@ -18,7 +18,11 @@ class MajorEventsController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? && action_name == 'show' ? 'showitem' : "list"
+    if mobile_device? 
+      action_name == 'show' ? 'showitem' : "list"
+    else
+      'showevent'
+    end
   end    
 
   def load_data

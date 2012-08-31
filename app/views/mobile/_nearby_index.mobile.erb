@@ -1,0 +1,22 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => "Nearby Events"} %>
+
+<%= content_for :subhead do %>
+	<div class="evsearch" style="display:none">
+		<%= render :partial => 'mobile/nearby_search' %>
+	</div>
+	<%= render :partial => 'mobile/locations' %>
+<% end %>
+
+<%= content_for :content do %>
+  <div class='nearby-pg'>
+    <ul data-role="listview">
+		<% get_date_range(@nearby_events, @enddate).each do |edate| %>
+			<%= render :partial => 'mobile/event_list', :collection => parse_list(@nearby_events, edate), :as => :event, :locals => {:edate => edate} %>
+		<% end %>
+    </ul>
+  </div>
+<% end -%>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/page_footer', :locals => {:sflg => true} %> 
+<% end %>

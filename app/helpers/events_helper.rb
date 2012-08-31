@@ -62,16 +62,22 @@ module EventsHelper
   end
   
   def time_left?(*e)
-    e[0].eventenddate.to_date > Date.today ? true : goneBy?(e)
+    e[0].eventenddate.to_date > Date.today ? true : !goneBy?(e)
   end
   
   def goneBy?(e)
-    e[0].eventenddate.to_date == Date.today && compare_time(Time.now, e[0].eventendtime)
+    e[0].eventenddate.to_date < Date.today && compare_time(adjust_time(Time.now, e[0].endGMToffset), e[0].eventendtime)
   end
   
   def rsvp?(val)
     val.blank? ? false : val.downcase == 'yes' 
-  end  
+  end 
+  
+  def adjust_time val, tz_offset
+    offset = tz_offset - @user.localGMToffset if tz_offset
+    tm = offset ? val.advance(:hours => (0 - offset).to_i) : val
+    tm
+  end 
 
   def is_past?(ev)
     return false if ev.blank?
@@ -81,13 +87,13 @@ module EventsHelper
   end
   
   def compare_time(ctime, etime)
-    if etime.blank? || ctime.day == etime.day && ctime.hour > etime.hour 
-      false
+    if etime.blank? || ctime.day == etime.day && ctime < etime 
+      true
     else
-      if ctime.day == etime.day && ctime.hour == etime.hour 
-        ctime.min > etime.min ? false : true
-      else
+      if ctime.day == etime.day && ctime > etime 
         false
+      else
+        true
       end
     end
   end
@@ -141,11 +147,8 @@ module EventsHelper
 
   # adjusts time display by v1.0 time zone offset when appropriate
   def chk_offset(*tm)
-    return Time.now unless tm[0]
-    unless @user.blank?
-      offset = tm[1] - @user.localGMToffset if tm[1]
-      @tm = tm[0].advance(:hours => (0 - offset).to_i) if offset
-    end 
+    return Time.now unless tm[0]    
+    @tm = adjust_time(tm[0], tm[1]) unless @user.blank?
     @tm.blank? ? tm[0].strftime("%l:%M %p") : @tm.strftime("%l:%M %p")
   end 
 

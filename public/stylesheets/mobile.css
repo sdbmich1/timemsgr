@@ -27,7 +27,8 @@
 }
 
 .subhead, .listpg {top: 75px; height: 150% }
-.form-top, .scroller {top: 44px; height: 150%;}
+.form-top {top: 44px; height: 150%;}
+.scroller {top: 44px; min-height: 150%;}
 .evscroller {top:0; height: 150%;}
 .scrollable {bottom: 50px; height: 150%;}
 .home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
@@ -243,6 +244,7 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #edit .ui-icon { background:  url("../images/ev-gear.png") 50% 50% no-repeat; size: 22px 27px; }
 #map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
 #website .ui-icon { background:  url("../images/website.png") 50% 50% no-repeat; size: 24px 24px; }
+#msg .ui-icon { background:  url("../images/messages.png") 50% 50% no-repeat; size: 24px 24px; }
 
 .progressBar { font-size: 14px; }
 .pb-offset { font-size: 14px; margin-top: 5px; }

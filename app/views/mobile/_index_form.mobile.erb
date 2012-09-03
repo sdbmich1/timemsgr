@@ -2,6 +2,8 @@
 <% content_for :head do %>	<% if data_form? %>
 		<%= link_to 'Home', home_path, :class=>'ui-btn-left', "data-icon"=>"home", "data-iconpos"=>'notext' %>
 		<%= link_to 'Menu', home_user_path, :class=>'ui-btn-right', "data-icon"=>"gear", "data-iconpos"=>'notext' %>
+	<% elsif action_name == 'show' %>
+		<%= link_to "Back", :back, "data-role" => "button" %>
 	<% end %>
 	<h3><%= "#{title}" %>
 	<% if events_index? %>

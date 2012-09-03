@@ -9,9 +9,7 @@
     <th>Start</th>
     <th>End</th>
   </tr>
-  <% (Date.today..Date.today+7.days).each do |edate| %>
-
-   <% for event in parse_list(@results, edate) %>
+   <% for event in build_list(@results, @enddate) %>
     <tr>
       <td><%= link_to event.event_name, event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></td>
       <td><%= truncate(event.bbody, :length => 60, :omission => "...") %></td>
@@ -21,7 +19,6 @@
       <td><%= chk_offset(event.eventendtime, event.endGMToffset) %></td>
     </tr>
    <% end %>
-  <% end %>
 </table>
 </div>
 <div class="nav-right">

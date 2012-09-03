@@ -189,7 +189,15 @@ module EventsHelper
   
   def parse_list elist, dt
     elist.map! {|e| set_start_date(e,dt)}.compact! 
-    elist    
+    elist.select { |e| time_left?(e) }    
+  end
+  
+  def build_list elist, edt
+    newlist = []
+    (Date.today..edt).each do |edate|
+      newlist << parse_list(elist, edate)       
+    end
+    newlist.flatten(1).sort! {|a, b| a.eventstartdate <=> b.eventstartdate}.uniq
   end
   
   def get_appointments
@@ -205,9 +213,8 @@ module EventsHelper
   end
   
   def get_subscriptions *args
-    elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || !time_left?(e) || is_session?(e.event_type) }
-    elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]  
-    elist
+    elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || is_session?(e.event_type) }
+    args[0] ? elist : parse_list(elist, args[0]) 
   end
            
   def get_observances
@@ -224,10 +231,8 @@ module EventsHelper
   def set_start_date(event, sdt)
     if event.eventenddate.to_date >= sdt && event.eventstartdate.to_date <= sdt
       event.eventstartdate = sdt 
-      event
-    else
-      nil
-    end      
+    end
+    event
   end
    
   # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 

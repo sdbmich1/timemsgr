@@ -6,9 +6,7 @@
 
 <%= content_for :content do -%>
   <ul data-role="listview">
-	<% (Date.today..Date.today+7.days).each do |edate| %>
-		<%= render :partial => 'mobile/event_list', :collection => parse_list(@results, edate), :as => :event, :locals => {:edate => edate} %>
-	<% end %>
+	<%= render :partial => 'mobile/event_list', :collection => build_list(@events, @enddate), :as => :event, :locals => {:edate => Date.today} %>
   </ul>
 <% end -%>
 

@@ -2,7 +2,7 @@
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "delayed/recipes"
 require 'rvm/capistrano'
-set :rvm_ruby_string, '1.9.2-p180'
+set :rvm_ruby_string, '1.9.2-p290'
 set :rvm_type, :user
 
 set :application, "koncierge"
@@ -10,26 +10,30 @@ set :application, "koncierge"
 # server details
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-set :deploy_to, "/var/www/koncierge"
+set :deploy_to, "~/sites/#{application}"
+#set :deploy_to, "/var/www/koncierge"
 set :deploy_via, :remote_cache
-set :user, "passenger"
+set :user, "deploy"
 set :use_sudo, false
 set :rails_env, "production" 
-set :domain, 'kitsus.rbca.net'
+set :domain, 'Starfleet5152V1.kitsus.rbca.net'
+set :web_domain, "Starfleet5152V2.kitsus.rbca.net" 
 
 # repo details
 set :scm, :git
-set :scm_username, "sdbmich1"
-set :scm_passphrase, "sdb91mse"
-set :repository, "git@gitserver:timemsgr.git"
+set :repository,  "git@github.com:sdbmich1/timemsgr.git"
 set :branch, "master"
-set :git_enable_submodules, 1
+#set :scm_username, "sdbmich1"
+#set :scm_passphrase, "sdb91mse"
+#set :repository,  "~/#{application}/.git"
+#set :repository, "git@gitserver:timemsgr.git"
+#set :git_enable_submodules, 1
 
 # roles
-role :web, "your web-server here"                          # Your HTTP server, Apache/etc
-role :app, "your app-server here"                          # This may be the same as your `Web` server
+role :web, web_domain                      # Your HTTP server, Apache/etc
+role :app, domain                          # This may be the same as your `Web` server
 role :db,  domain, :primary => true # This is where Rails migrations will run
-role :db,  "your slave db-server here"
+#role :db,  "your slave db-server here"
 
 # tasks
 namespace :deploy do

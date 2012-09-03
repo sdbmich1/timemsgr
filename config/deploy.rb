@@ -16,8 +16,8 @@ set :deploy_via, :remote_cache
 set :user, "deploy"
 set :use_sudo, false
 set :rails_env, "production" 
-set :domain, 'Starfleet5152V1.kitsus.rbca.net'
-set :web_domain, "Starfleet5152V2.kitsus.rbca.net" 
+set :domain, '150.150.2.44'
+set :web_domain, "150.150.2.44" 
 
 # repo details
 set :scm, :git

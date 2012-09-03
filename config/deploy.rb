@@ -11,7 +11,6 @@ set :application, "koncierge"
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :deploy_to, "~/sites/#{application}"
-#set :deploy_to, "/var/www/koncierge"
 set :deploy_via, :remote_cache
 set :user, "deploy"
 set :use_sudo, false
@@ -23,11 +22,6 @@ set :web_domain, "150.150.2.44"
 set :scm, :git
 set :repository,  "git@github.com:sdbmich1/timemsgr.git"
 set :branch, "master"
-#set :scm_username, "sdbmich1"
-#set :scm_passphrase, "sdb91mse"
-#set :repository,  "~/#{application}/.git"
-#set :repository, "git@gitserver:timemsgr.git"
-#set :git_enable_submodules, 1
 
 # roles
 role :web, web_domain                      # Your HTTP server, Apache/etc
@@ -53,10 +47,17 @@ namespace :deploy do
   desc "Symlink shared resources on each release - not used"
   task :symlink_shared, :roles => :app do
     #run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-  end   
+    run "cp  #{current_path}/config/database.yml #{release_path}/config/database.yml"
+  end 
+  
+  desc "Recreate symlink"
+  task :resymlink, :roles => :app do
+    run "rm -f #{current_path} && ln -s #{release_path} #{current_path}"
+  end
 end
 
-after 'deploy:update_code', 'deploy:symlink_shared'
+after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink"
+#after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  

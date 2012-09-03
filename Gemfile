@@ -119,8 +119,12 @@ gem 'yaml_db'
 # rss feed reader
 gem "feedzirra", "~> 0.1.1"
  
-# google analytics 
+ 
 group :production do
+  # handle exceptions
+  gem 'exception_notification' 
+
+  # google analytics
   gem 'rack-google_analytics', :require => "rack/google_analytics"
 end 
  

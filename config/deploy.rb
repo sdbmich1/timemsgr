@@ -52,7 +52,7 @@ namespace :deploy do
   
   desc "Recreate symlink"
   task :resymlink, :roles => :app do
-    run "ln -s #{release_path}/public #{current_path}/public"
+    run "ln -s #{release_path} #{current_path}"
   end
 end
 
@@ -123,7 +123,7 @@ before 'deploy:setup', 'sphinx:create_yaml'
 
 # Sphinx
 #before 'deploy:update_code', 'sphinx:stop'
-after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink"
+after 'deploy:update_code', 'deploy:symlink_shared'#, "deploy:resymlink"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 after 'deploy:update_code', "sphinx:sphinx_symlink"
 after 'deploy:update_code', "sphinx:configure"

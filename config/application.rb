@@ -1,6 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
-
+require 'exception_notifier'
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
@@ -41,6 +41,13 @@ module Timemsgr
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
+    # add google analytics
     config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-28841665-1") if Rails.env.production?
+    
+    # exception notification
+    config.middleware.use ExceptionNotifier,
+      :email_prefix => "Koncierge: ",
+      :sender_address => %{"Koncierge Admin" <koncierge@rbca.net>},
+      :exception_recipients => %w{sdbmich1@gmail.com}
   end
 end

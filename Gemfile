@@ -122,8 +122,8 @@ gem "feedzirra", "~> 0.1.1"
  
 group :production do
   # handle exceptions
-  gem 'exception_notification' 
-
+  gem 'exception_notification', :require => 'exception_notifier'
+  
   # google analytics
   gem 'rack-google_analytics', :require => "rack/google_analytics"
 end 

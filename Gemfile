@@ -98,7 +98,7 @@ group :development, :test do
   gem 'nokogiri', ">= 1.4.4.1", "<=1.5.0.beta.2" 
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
-  gem 'faker', '0.3.1'
+  gem 'faker', '0.3.1', :require => false
 end
 
 group :test do

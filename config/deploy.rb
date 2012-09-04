@@ -46,8 +46,8 @@ namespace :deploy do
 
   desc "Symlink shared resources on each release - not used"
   task :symlink_shared, :roles => :app do
-    #run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "cp  #{current_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    #run "cp  #{previous_release}/config/database.yml #{release_path}/config/database.yml"
   end 
   
   desc "Recreate symlink"
@@ -56,7 +56,7 @@ namespace :deploy do
   end
 end
 
-before 'deploy:setup', 'rvm:install_rvm'
+#before 'deploy:setup', 'rvm:install_rvm'
 after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 

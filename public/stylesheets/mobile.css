@@ -1,7 +1,7 @@
 #app {}  
 [data-role=page]{ position:relative !important;}
 
-.app-content {min-width: 100%; }
+.app-content {min-width: 100%; min-height: 150%;}
 
 .ui-content { overflow-x: visible!important }
 

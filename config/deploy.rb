@@ -2,6 +2,7 @@
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "delayed/recipes"
 require 'rvm/capistrano'
+require 'thinking_sphinx/deploy/capistrano'
 set :rvm_ruby_string, '1.9.2'
 #set :rvm_type, :user
 
@@ -47,7 +48,6 @@ namespace :deploy do
   desc "Symlink shared resources on each release - not used"
   task :symlink_shared, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    #run "cp  #{previous_release}/config/database.yml #{release_path}/config/database.yml"
   end 
   
   desc "Recreate symlink"
@@ -55,6 +55,71 @@ namespace :deploy do
     run "ln -s #{release_path}/public #{current_path}/public"
   end
 end
+
+namespace :sphinx do
+  desc 'create sphinx directory'
+  task :create_sphinx_dir, :roles => :app do
+    run "mkdir -p #{shared_path}/sphinx"
+  end
+  
+  desc 'create sphinx yaml file in shared folder'
+  task :create_yaml, :roles => :app do
+    sphinx_yaml = <<-EOF
+      development: &base
+        bin_path: "/usr/local/bin"
+        config_file: "#{shared_path}/config/sphinx.yml"
+      production: 
+        <<: *base
+      test: 
+        <<: *base
+    EOF
+    run "mkdir -p #{shared_path}/config"
+    put sphinx_yaml, "#{shared_path}/config/sphinx.yml"  
+  end
+  
+  desc 'Symlink sphinx files and create db directory for indexes'
+  task :sphinx_symlink, :roles => :app do
+    run "ln -nfs #{shared_path}/sphinx #{release_path}/db/sphinx"
+    run "ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml"
+    run "ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf"    
+  end
+   
+  desc "Stop the sphinx server"
+  task :stop, :roles => [:app], :only => {:sphinx => true} do
+    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:stop"
+  end
+
+  desc "Reindex the sphinx server"
+  task :index, :roles => [:app], :only => {:sphinx => true} do
+    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:index"
+  end
+
+  desc "Configure the sphinx server"
+  task :configure, :roles => [:app], :only => {:sphinx => true} do
+    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:configure"
+  end
+
+  desc "Start the sphinx server"
+  task :start, :roles => [:app], :only => {:sphinx => true} do
+    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:start"
+  end
+
+  desc "Rebuild the sphinx server"
+  task :rebuild, :roles => [:app], :only => {:sphinx => true} do
+    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:rebuild"
+  end  
+  
+  desc "Activate the sphinx server"
+  task :activate_sphinx, :roles => [:app] do
+    sphinx_symlink
+    thinking_sphinx.configure
+    thinking_sphinx.start
+  end 
+end
+
+before 'deploy:setup', 'sphinx:create_db_dir'
+before 'deploy:setup', 'sphinx:create_yaml'
+after 'deploy:update_code', "sphinx:activate_symlink"
 
 #before 'deploy:setup', 'rvm:install_rvm'
 after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink"

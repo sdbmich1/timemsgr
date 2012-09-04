@@ -62,7 +62,7 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'paperclip'
 
 # add thinking sphinx
-gem 'thinking-sphinx', '2.0.3'
+gem 'thinking-sphinx', '2.0.10'
 
 # add google calendar
 gem "gcal4ruby"

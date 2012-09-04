@@ -81,7 +81,7 @@ namespace :sphinx do
   task :sphinx_symlink, :roles => :app do
     run "ln -nfs #{shared_path}/sphinx #{release_path}/db/sphinx"
     run "ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml"
-    run "ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf"    
+#    run "ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf"    
   end
    
   desc "Stop the sphinx server"

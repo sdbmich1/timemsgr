@@ -1,9 +1,9 @@
 # RVM bootstrap
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+#$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "delayed/recipes"
 require 'rvm/capistrano'
 set :rvm_ruby_string, '1.9.2'
-set :rvm_type, :user
+#set :rvm_type, :user
 
 set :application, "koncierge"
 
@@ -56,6 +56,7 @@ namespace :deploy do
   end
 end
 
+before 'deploy:setup', 'rvm:install_rvm'
 after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 

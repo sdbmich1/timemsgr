@@ -86,6 +86,8 @@ gem "recurrence", :require => "recurrence/namespace"
 gem 'geokit', "~> 1.6.5"
 gem "geokit-rails3", "~> 0.1.5"
 
+gem 'rvm-capistrano'
+
 group :development, :test do
 #  gem 'capybara'
   gem 'spork', '~> 0.9.0.rc'

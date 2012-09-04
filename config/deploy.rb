@@ -52,7 +52,7 @@ namespace :deploy do
   
   desc "Recreate symlink"
   task :resymlink, :roles => :app do
-    run "rm -f #{current_path} && ln -s #{release_path} #{current_path}"
+    run "ln -s #{release_path}/public #{current_path}/public"
   end
 end
 

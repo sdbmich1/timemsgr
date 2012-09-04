@@ -112,18 +112,22 @@ namespace :sphinx do
   desc "Activate the sphinx server"
   task :activate_sphinx, :roles => [:app] do
     sphinx_symlink
-    thinking_sphinx.configure
+    configure thinking_sphinx.configure
     thinking_sphinx.start
   end 
 end
 
 before 'deploy:setup', 'sphinx:create_db_dir'
 before 'deploy:setup', 'sphinx:create_yaml'
-after 'deploy:update_code', "sphinx:activate_symlink"
-
 #before 'deploy:setup', 'rvm:install_rvm'
+
+# Sphinx
+#before 'deploy:update_code', 'sphinx:stop'
 after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
+after 'deploy:update_code', "sphinx:sphinx_symlink"
+after 'deploy:update_code', "sphinx:configure"
+after 'deploy:update_code', "sphinx:rebuild"
 
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  

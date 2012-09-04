@@ -1,21 +1,26 @@
 <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Start Date</th>
     <th></th>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Company</th>
+    <th>Bio</th>
   </tr>
-  <% for sub in @subscriptions %>
-    <% unless sub.local_channel.blank? %>
+  <% for presenter in @presenters.uniq %>
     <tr>
-      <td><%= sub.channel_name %></td>
-      <td><%= truncate(sub.description, :length=>120, :omission=>"...") %></td>
-      <td><%= get_nice_date(sub.created_at, 'List') %></td>
-	  <td><%= link_to "Unsubscribe", subscription_url(:id=>sub, :user_id=>@user, :channel_id => sub.channelID), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %></td>
+      <td>
+        <div class="pic-size">
+          <%= render :partial => 'shared/show_photo', :locals => {:model => presenter, :file_name => "headshot1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+
+      <td><%= link_to presenter.name, presenter_url(presenter) %></td>
+      <td><%= presenter.title %></td>
+      <td><%= presenter.org_name %></td>
+      <td><%= truncate(presenter.bio, :length=>120, :omission=>"...") %></td>
     </tr>
-    <% end %>
   <% end %>
 </table>
 <div class="nav-right">
-  <%= will_paginate @subscriptions %>
-</div>
+  <%= will_paginate @presenters, :param_name => 'presenter_page' %>
+</div> 

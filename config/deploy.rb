@@ -85,49 +85,44 @@ namespace :sphinx do
   end
    
   desc "Stop the sphinx server"
-  task :stop, :roles => [:app], :only => {:sphinx => true} do
+  task :stop, :roles => :app do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:stop"
   end
 
   desc "Reindex the sphinx server"
-  task :index, :roles => [:app], :only => {:sphinx => true} do
+  task :index, :roles => :app do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:index"
   end
 
   desc "Configure the sphinx server"
-  task :configure, :roles => [:app], :only => {:sphinx => true} do
+  task :configure, :roles => :app do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:configure"
   end
 
   desc "Start the sphinx server"
-  task :start, :roles => [:app], :only => {:sphinx => true} do
+  task :start, :roles => :app do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:start"
   end
 
   desc "Rebuild the sphinx server"
-  task :rebuild, :roles => [:app], :only => {:sphinx => true} do
+  task :rebuild, :roles => :app do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:rebuild"
   end  
   
   desc "Activate the sphinx server"
-  task :activate_sphinx, :roles => [:app] do
+  task :activate_sphinx, :roles => :app do
     sphinx_symlink
     configure thinking_sphinx.configure
     thinking_sphinx.start
   end 
 end
 
-before 'deploy:setup', 'sphinx:create_db_dir'
-before 'deploy:setup', 'sphinx:create_yaml'
-#before 'deploy:setup', 'rvm:install_rvm'
+#before 'deploy:setup', 'rvm:install_rvm', 'sphinx:create_db_dir', 'sphinx:create_yaml'
 
 # Sphinx
 #before 'deploy:update_code', 'sphinx:stop'
-after 'deploy:update_code', 'deploy:symlink_shared'#, "deploy:resymlink"
+after 'deploy:update_code', 'deploy:symlink_shared', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
-after 'deploy:update_code', "sphinx:sphinx_symlink"
-after 'deploy:update_code', "sphinx:configure"
-after 'deploy:update_code', "sphinx:rebuild"
 
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  

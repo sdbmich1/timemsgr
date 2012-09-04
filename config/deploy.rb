@@ -3,6 +3,7 @@
 require "delayed/recipes"
 require 'rvm/capistrano'
 require 'thinking_sphinx/deploy/capistrano'
+require "bundler/capistrano"
 set :rvm_ruby_string, '1.9.2@koncierge'
 #set :rvm_type, :user
 

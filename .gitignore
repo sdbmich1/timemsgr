@@ -1,8 +1,7 @@
 .bundle
 db/*.sqlite3
 log/
-config/database.yml
-config/sphinx.yml
+config/*.yml
 config/development.sphinx.conf
 db/sphinx/
 db/schema.rb

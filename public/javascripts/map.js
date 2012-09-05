@@ -39,6 +39,7 @@ function NewInitialize(lat,lng, showMkr) {
   	
 }
 
+// detect browser to set map layout
 function detectBrowser() {
   var useragent = navigator.userAgent;
   if (useragent.indexOf('iPhone') != -1 || useragent.indexOf('Android') != -1 ) {

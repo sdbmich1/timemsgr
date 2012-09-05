@@ -87,6 +87,7 @@ gem 'geokit', "~> 1.6.5"
 gem "geokit-rails3", "~> 0.1.5"
 
 gem 'rvm-capistrano'
+gem 'nokogiri', ">= 1.4.4.1", "<=1.5.0.beta.2" 
 
 group :development, :test do
 #  gem 'capybara'
@@ -95,7 +96,6 @@ group :development, :test do
   gem "hpricot", "0.8.3", :platform => :mswin
   gem 'mocha'
   gem 'ruby-debug19'
-  gem 'nokogiri', ">= 1.4.4.1", "<=1.5.0.beta.2" 
   gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.2'
 end
@@ -109,7 +109,7 @@ end
  gem 'capistrano'
  
 # add caching
- gem "dalli"
+gem "dalli"
  
 # add asynchronous processing
 gem 'delayed_job_active_record'

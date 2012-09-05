@@ -10,12 +10,7 @@ jQuery('div').live('pagehide', function(event, ui){
   };
 });
 
-/* hide toolbars
-$(document).bind('pageshow', function(event) {
-     $.mobile.fixedToolbars.hide(true)
-});
-*/
-	
+// set focus
 $('#formapp').bind('pageshow', function() {
     $($('.ui-page-active form :input:visible')[0]).focus();
 });

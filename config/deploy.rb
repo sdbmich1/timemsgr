@@ -46,9 +46,10 @@ namespace :deploy do
     run "touch #{current_path}/tmp/restart.txt"
   end
 
-  desc "Symlink shared resources on each release - not used"
+  desc "Symlink shared resources on each release"
   task :symlink_shared, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/api_keys.yml #{release_path}/config/api_keys.yml"    
   end 
   
   desc "Recreate symlink"
@@ -62,27 +63,11 @@ namespace :sphinx do
   task :create_sphinx_dir, :roles => :app do
     run "mkdir -p #{shared_path}/sphinx"
   end
-  
-  desc 'create sphinx yaml file in shared folder'
-  task :create_yaml, :roles => :app do
-    sphinx_yaml = <<-EOF
-      development: &base
-        bin_path: "/usr/local/bin"
-        config_file: "#{shared_path}/config/sphinx.yml"
-      production: 
-        <<: *base
-      test: 
-        <<: *base
-    EOF
-    run "mkdir -p #{shared_path}/config"
-    put sphinx_yaml, "#{shared_path}/config/sphinx.yml"  
-  end
-  
+   
   desc 'Symlink sphinx files and create db directory for indexes'
   task :sphinx_symlink, :roles => :app do
     run "ln -nfs #{shared_path}/sphinx #{release_path}/db/sphinx"
     run "ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml"
-#    run "ln -nfs #{shared_path}/config/sphinx.conf #{release_path}/config/sphinx.conf"    
   end
    
   desc "Stop the sphinx server"
@@ -110,18 +95,12 @@ namespace :sphinx do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:rebuild"
   end  
   
-  desc "Activate the sphinx server"
-  task :activate_sphinx, :roles => :app do
-    sphinx_symlink
-    configure thinking_sphinx.configure
-    thinking_sphinx.start
-  end 
 end
 
-#before 'deploy:setup', 'rvm:install_rvm', 'sphinx:create_db_dir', 'sphinx:create_yaml'
+#before 'deploy:setup', 'rvm:install_rvm', 'sphinx:create_db_dir'
 
 # Sphinx
-#before 'deploy:update_code', 'sphinx:stop'
+before 'deploy:update_code', 'sphinx:stop'
 after 'deploy:update_code', 'deploy:symlink_shared', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 

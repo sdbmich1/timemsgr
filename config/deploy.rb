@@ -68,7 +68,7 @@ namespace :sphinx do
    
   desc 'Symlink sphinx files and create db directory for indexes'
   task :sphinx_symlink, :roles => :app do
-    run "ln -nfs #{shared_path}/sphinx #{release_path}/db/sphinx"
+#    run "ln -nfs #{shared_path}/sphinx #{release_path}/db/sphinx"
     run "ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml"
   end
    

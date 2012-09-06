@@ -121,6 +121,9 @@ gem 'yaml_db'
 gem "feedzirra", "~> 0.1.1"
  
 gem 'faker', '0.3.1'
+
+# for delayed jobs
+gem 'daemons'
  
 group :production do
   # handle exceptions

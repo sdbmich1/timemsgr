@@ -1,5 +1,6 @@
 # RVM bootstrap
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
+require "whenever/capistrano"
 require "delayed/recipes"
 require 'rvm/capistrano'
 require 'thinking_sphinx/deploy/capistrano'
@@ -19,6 +20,7 @@ set :use_sudo, false
 set :rails_env, "production" 
 set :domain, '150.150.2.44'
 set :web_domain, "150.150.2.44" 
+set :whenever_command, "bundle exec whenever"
 
 # repo details
 set :scm, :git
@@ -72,7 +74,7 @@ namespace :sphinx do
    
   desc "Stop the sphinx server"
   task :stop, :roles => :app do
-    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:stop"
+    run "cd #{current_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:stop"
   end
 
   desc "Reindex the sphinx server"

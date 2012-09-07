@@ -93,7 +93,8 @@ Timemsgr::Application.routes.draw do
   match '/details', :to =>  "maps#details"  
   match '/select', :to =>  "channels#select"
   match '/list', :to =>  "categories#list"
-  match "/suggestions" => "affiliations#suggestions"
+  match "/suggestions", :to => "affiliations#suggestions"
+  match "/auth/failure", :to => "sessions#failure"   
     
   # route custom event actions
   match '/outlook', :to => 'private_events#outlook', :as => "outlook"

@@ -95,15 +95,21 @@ namespace :sphinx do
   desc "Rebuild the sphinx server"
   task :rebuild, :roles => :app do
     run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:rebuild"
-  end  
-  
+  end    
+end
+
+namespace :rvm do
+  desc 'Trust rvmrc file'
+  task :trust_rvmrc do
+    run "rvm rvmrc trust #{current_release}"
+  end
 end
 
 #before 'deploy:setup', 'rvm:install_rvm', 'sphinx:create_db_dir'
 
 # Sphinx
 before 'deploy:update_code', 'sphinx:stop'
-after 'deploy:update_code', 'deploy:symlink_shared', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild"
+after 'deploy:update_code', 'deploy:symlink_shared', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 
 # Delayed Job  

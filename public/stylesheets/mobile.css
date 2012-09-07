@@ -11,6 +11,9 @@
 }  
 
 .ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: 100%;}
+.ui-page {
+    -webkit-backface-visibility: hidden!important;
+}
 
 #mapPage {height: 100%;}
 

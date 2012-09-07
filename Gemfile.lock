@@ -46,6 +46,7 @@ GEM
     columnize (0.3.4)
     curb (0.7.18)
     daemon_controller (0.2.6)
+    daemons (1.1.9)
     dalli (1.1.4)
     delayed_job (3.0.1)
       activesupport (~> 3.0)
@@ -299,6 +300,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   client_side_validations
+  daemons
   dalli
   delayed_job_active_record
   devise (= 1.5.3)

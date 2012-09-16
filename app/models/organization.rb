@@ -1,4 +1,4 @@
-class Organization < KitsSubModel
+class Organization < KitsTsdModel
   set_table_name 'allorg'
   set_primary_key 'ID'
   

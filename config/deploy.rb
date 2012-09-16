@@ -15,6 +15,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :deploy_to, "~/sites/#{application}"
 set :deploy_via, :remote_cache
+set :keep_releases, 3
 set :user, "deploy"
 set :use_sudo, false
 set :rails_env, "production" 
@@ -28,9 +29,9 @@ set :repository,  "git@github.com:sdbmich1/timemsgr.git"
 set :branch, "master"
 
 # roles
-role :web, web_domain                      # Your HTTP server, Apache/etc
-role :app, domain                          # This may be the same as your `Web` server
-role :db,  domain, :primary => true # This is where Rails migrations will run
+role :web, web_domain, '150.150.2.45'                      # Your HTTP server, Apache/etc
+role :app, domain, '150.150.2.45'                          # This may be the same as your `Web` server
+role :db, '150.150.2.45', :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 
 # tasks
@@ -103,6 +104,15 @@ namespace :rvm do
   task :trust_rvmrc do
     run "rvm rvmrc trust #{current_release}"
   end
+end
+
+namespace :whenever do
+    
+  desc "Update the crontab file for the Whenever Gem."
+  task :update_crontab, :roles => :db do
+    puts "\n\n=== Updating the Crontab! ===\n\n"
+    run "cd #{release_path} && whenever --update-crontab #{domain}"
+  end    
 end
 
 #before 'deploy:setup', 'rvm:install_rvm', 'sphinx:create_db_dir'

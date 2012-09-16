@@ -1,32 +1,32 @@
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/arizona-cardinals.ics, Arizona Cardinals, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/atlanta-falcons.ics, Atlanta Falcons, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/baltimore-ravens.ics, Baltimore Ravens, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/buffalo-bills.ics, Buffalo Bills, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/carolina-panthers.ics, Carolina Panthers, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/chicago-bears.ics, Chicago Bears, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/cincinnati-bengals.ics, Cincinnati Bengals, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/cleveland-browns.ics, Cleveland Browns, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/dallas-cowboys.ics, Dallas Cowboys, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/denver-broncos.ics, Denver Broncos, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/detroit-lions.ics, Detroit Lions, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/green-bay-packers.ics, Green Bay Packers, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/houston-texans.ics, Houston Texans, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/indianapolis-colts.ics, Indianapolis Colts, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/jacksonville-jaguars.ics, Jacksonville Jaguars, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/kansas-city-chiefs.ics, Kansas City Chiefs, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/miami-dolphins.ics, Miami Dolphins, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/minnesota-vikings.ics, Minnesota Vikings, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-england-patriots.ics, New England Patriots, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-orleans-saints.ics, New Orleans Saints, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-york-giants.ics, New York Giants, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-york-jets.ics, New York Jets, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/oakland-raiders.ics, Oakland Raiders, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/philadelphia-eagles.ics, Philadelphia Eagles, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/pittsburgh-steelers.ics, Pittsburgh Steelers, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/san-diego-chargers.ics, San Diego Chargers, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/san-francisco-49ers.ics, San Francisco 49ers, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/seattle-seahawks.ics, Seattle Seahawks, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/st-louis-rams.ics, St. Louis Rams, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/tampa-bay-buccaneers.ics, Tampa Bay Buccaneers, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/tennessee-titans.ics, Tennessee Titans, -5, NFL
-http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/washington-redskins.ics, Washington Redskins, -5, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/arizona-cardinals.ics, Arizona Cardinals, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/atlanta-falcons.ics, Atlanta Falcons, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/baltimore-ravens.ics, Baltimore Ravens, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/buffalo-bills.ics, Buffalo Bills, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/carolina-panthers.ics, Carolina Panthers, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/chicago-bears.ics, Chicago Bears, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/cincinnati-bengals.ics, Cincinnati Bengals, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/cleveland-browns.ics, Cleveland Browns, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/dallas-cowboys.ics, Dallas Cowboys, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/denver-broncos.ics, Denver Broncos, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/detroit-lions.ics, Detroit Lions, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/green-bay-packers.ics, Green Bay Packers, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/houston-texans.ics, Houston Texans, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/indianapolis-colts.ics, Indianapolis Colts, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/jacksonville-jaguars.ics, Jacksonville Jaguars, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/kansas-city-chiefs.ics, Kansas City Chiefs, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/miami-dolphins.ics, Miami Dolphins, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/minnesota-vikings.ics, Minnesota Vikings, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-england-patriots.ics, New England Patriots, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-orleans-saints.ics, New Orleans Saints, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-york-giants.ics, New York Giants, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/new-york-jets.ics, New York Jets, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/oakland-raiders.ics, Oakland Raiders, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/philadelphia-eagles.ics, Philadelphia Eagles, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/pittsburgh-steelers.ics, Pittsburgh Steelers, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/san-diego-chargers.ics, San Diego Chargers, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/san-francisco-49ers.ics, San Francisco 49ers, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/seattle-seahawks.ics, Seattle Seahawks, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/st-louis-rams.ics, St. Louis Rams, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/tampa-bay-buccaneers.ics, Tampa Bay Buccaneers, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/tennessee-titans.ics, Tennessee Titans, -8, NFL
+http://www.mysportscal.com/Files_iCal_CSV/iCal_NFL_2012/washington-redskins.ics, Washington Redskins, -8, NFL

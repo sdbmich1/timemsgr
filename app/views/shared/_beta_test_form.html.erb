@@ -1,0 +1,24 @@
+ <div class="span-20 last round outer-shadow"> 
+ 	<div class="pg-title padtop"> 
+ 		<center><h3>Beta Test Task List</h3></center>
+ 	</div> 
+	<%= form_for @beta_feedback, :validate => true do |f| %>
+  		<div class="span-16 edit-usr" id="new-event">  
+			<div class="prepend-1">
+			<h6>Tasks</h6>
+			<p> Please enter your name and complete all tasks below.  Make sure to select a rating from the list below and add any comments.</p> 
+			</div> 
+			<p><span>First Name </span><%= f.text_field :name %></p>
+			<% (1..15).each do |i| %>
+				<p class="prepend-1"><%= i.to_s + '. ' %><%= @beta_questions.send('question' + i.to_s) %></p>
+        		<p><span>Rating:</span> 
+       			<p><%= f.select 'rating' + i.to_s, options_for_select( [['Easy',0], ['Not So Easy',1], ['Hard',2], ['Too Hard',3]] ), {:prompt => 'Select Rating'} %></p>
+        		<p><span><%= 'Comments:' %></span></p>
+      			<%= f.text_area 'comment' + i.to_s %><br />
+      			<div class="clear-all"></div>
+    		<% end %>			
+			<p><%= f.submit "Submit" %></p>
+ 		</div>
+ 	<% end %>
+ </div>
+ 

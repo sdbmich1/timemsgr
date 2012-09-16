@@ -12,6 +12,7 @@ class HostProfile < KitsTsdModel
           
   belongs_to :user, :foreign_key => :ProfileID
   has_many :channels, :foreign_key => :HostProfileID
+  has_many :local_channels, :foreign_key => :HostProfileID
   
   has_many :events, :through => :channels 
   has_many :scheduled_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
@@ -102,8 +103,24 @@ class HostProfile < KitsTsdModel
     ProfileID
   end
   
-  def self.find_promo_code(pcode)
-    where('LOWER(promoCode) = ?', pcode.downcase).first rescue nil
+  def self.find_promo_code(pcode, channelID)
+    where('LOWER(promoCode) = ? and HostChannelID != ?', pcode.downcase, channelID) rescue nil
   end
+  
+  def self.create_channel_profile channel_name, channelID, city, pCode
+    hp = HostProfile.new
+    hp.HostName = hp.Company = channel_name 
+    hp.StartMonth, hp.StartDay, hp.StartYear  = Date.today.month, Date.today.day, Date.today.year
+    hp.ProfileType, hp.EntityCategory, hp.EntityType, hp.status, hp.hide = 'Provider','provider', 'A', 'active', 'no'       
+    hp.promoCode = pCode if pCode
+    hp.HostChannelID = hp.subscriptionsourceID = channelID
+  
+    # get city & state
+    loc = Location.nearest_city(city)
+    hp.City, hp.State = loc.city, loc.state if loc
+    hp.save
+        
+    hp.id
+  end  
           
 end

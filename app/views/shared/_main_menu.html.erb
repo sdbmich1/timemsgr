@@ -8,6 +8,7 @@
 			</div>
 		<% when "Home" %>
 			<div class="span-24 last rpos">
+ 				<%= link_to "Feedback", new_beta_feedbacks_path, :class => "signin_button round" %>
  				<%= link_to "Login", new_user_session_path, :class => "signin_button round" %>
 			</div>
 		<% when "Event" %>

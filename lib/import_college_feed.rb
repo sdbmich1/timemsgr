@@ -90,7 +90,11 @@ class ImportCollegeFeed
   end
   
   # process SF State pages
-  def read_sfstate_feed(feed_url, school, offset)
+  def read_sfstate_feed(site_url, pg_html, school, offset)
+    # set url string
+    feed_url = site_url + pg_html
+    
+    # get link
     agent = Mechanize.new
     agent.get(feed_url)
     
@@ -105,7 +109,7 @@ class ImportCollegeFeed
       str = CGI.parse(pg.href)
       event_id = str["webcalendar.detail?p_id"][0]
       
-      etitle = target_page.search('.summary').text
+      etitle = target_page.search('.sitebox').text
       sdt = target_page.search('.dtstart').text.split(': ')[1] rescue nil
       stm = target_page.search('.dtstart').text.split(': ')[2].split("\n")[0] rescue nil
       edt = target_page.search('.dtend').text rescue nil
@@ -115,7 +119,7 @@ class ImportCollegeFeed
       start_time = sdt && stm ? (sdt + stm).to_datetime : sdt.to_datetime 
       etime = (sdt + edt).to_datetime if sdt && edt 
       
-#      p "Event : #{etitle} | #{sdt} | #{start_time} | #{etime}"
+      # p "Event : #{etitle} | #{sdt} | #{start_time} | #{etime}"
       
       # get event details
       loc = target_page.search('.location').text.split(': ')[1] 
@@ -126,12 +130,13 @@ class ImportCollegeFeed
       details = target_page.search('.description').text 
       contact ? details += ' <br /> Contact: ' + contact : details
       phone ? details += ' <br /> ' + phone : details
+      cs_url = site_url + pg.href
       
       # find correct channel and location
       cid = LocalChannel.select_college_channel(etitle, school, details).flatten 1
 
       # add event to calendar
-      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime, host)}      
+      cid.map {|channel| add_college_event(url, etitle[0..199], details, Date.today, start_time, start_time, etime, channel.channelID, offset, loc, event_id, etime, host, cs_url)}      
     end 
   end
     
@@ -142,12 +147,12 @@ class ImportCollegeFeed
 
   # add to system
   def add_college_event(*args)
-    new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(args[10], 
-        :event_type => 'ce', :event_title => args[1][0..199], :cbody => args[2], :postdate => args[3],
-        :eventstartdate => args[4], :eventstarttime => args[5], :eventenddate => args[6], 
-        :contentsourceURL => args[0], :location => args[9][0..254],
-        :contentsourceID => args[7], :localGMToffset => args[8], :endGMToffset => args[8],
-        :subscriptionsourceID => args[7], :pageextsourceID => args[10])
+    new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(args[10]) 
+    new_event.event_type, new_event.event_title, new_event.cbody, new_event.postdate = 'ce', args[1][0..199], args[2], args[3]
+    new_event.eventstartdate, new_event.eventstarttime, new_event.eventenddate = args[4], args[5], args[6]
+    new_event.contentsourceURL, new_event.location, new_event.contentsourceURL = args[0], args[9][0..254], args[13]
+    new_event.contentsourceID = new_event.subscriptionsourceID = args[7]
+    new_event.localGMToffset = new_event.endGMToffset = args[8]
     new_event.eventendtime = args[11] if args[11]
     new_event.host = args[12] if args[12]
     new_event.save

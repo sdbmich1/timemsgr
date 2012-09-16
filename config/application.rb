@@ -1,33 +1,17 @@
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 require 'exception_notifier'
-# If you have a Gemfile, require the gems listed there, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Timemsgr
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Custom directories with classes and modules you want to be autoloadable.
-    #config.autoload_paths += %W(#{config.root}/lib)
+     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths << "#{config.root}/lib"
 
-    # Only load the plugins named here, in the order given (default is alphabetical).
-    # :all can be used as a placeholder for all plugins not explicitly named.
-    # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
-
     # Activate observers that should always be running.
-    # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
     config.active_record.observers = :user_observer, :affiliation_observer, :notification_observer, :event_observer, 
-          :relationship_observer, :reminder_observer
+          :relationship_observer, :reminder_observer, :host_profile_observer
     
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
@@ -45,9 +29,11 @@ module Timemsgr
     config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-28841665-1") if Rails.env.production?
     
     # exception notification
-    config.middleware.use ExceptionNotifier,
-      :email_prefix => "Koncierge: ",
-      :sender_address => %{"Koncierge Admin" <koncierge@rbca.net>},
-      :exception_recipients => %w{sdbmich1@gmail.com}
+    if Rails.env.production?
+      config.middleware.use ExceptionNotifier,
+        :email_prefix => "Koncierge: ",
+        :sender_address => %{"Koncierge Admin" <koncierge@rbca.net>},
+        :exception_recipients => %w{sdbmich1@gmail.com}
+    end  
   end
 end

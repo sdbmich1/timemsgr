@@ -1,8 +1,13 @@
 <%= render 'mobile/infield_form_labels' %>
-<div class="center-wrapper mtop">
-	<%= link_to image_tag("facebook-login-button-lg.png", :size => "154x22", :alt => "Facebook", :class => 'auth-provr'), user_omniauth_authorize_path(:facebook), :rel => "external"  %> 
-</div> 
+<div class="center-wrapper">
+  	<h3>Discovery. At Your Service.</h3>
+  	<p class="hdescr">A new way to discover, plan and schedule things to do near you.</p>
 
+</div> 
+<div class="ptop center-wrapper">
+	<%= link_to image_tag("facebook-login-button-lg.png", :size => "154x22", :alt => "Facebook", :class => 'auth-provr'), user_omniauth_authorize_path(:facebook), :rel => "external"  %> 
+</div>
+<div class="mtop">
 <div id="mform">
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 	<%= render "mobile/error_messages", :target => resource %>  
@@ -11,7 +16,8 @@
 	  
     <p><%= f.submit "Sign In", "data-theme"=>"b" %></p>
   <% end %>
-</div>  
+</div> 
+</div>
 <%= render :partial => "devise/shared/links" %>
 
  

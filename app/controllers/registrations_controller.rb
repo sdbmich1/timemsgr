@@ -1,4 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
+  layout :page_layout
   
   def after_sign_up_path_for(resource)
     flash[:notice] = "#{get_msg(@user,'Welcome')}"
@@ -11,6 +12,10 @@ class RegistrationsController < Devise::RegistrationsController
   end 
   
   private
+  
+  def page_layout
+    mobile_device? ? 'reg' : 'application'
+  end
   
   def build_resource(*args)
     super

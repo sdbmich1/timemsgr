@@ -1,0 +1,20 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Beta Test Tasklist'} %>
+
+ <div class="mtop"> 
+	<%= form_for @beta_feedback, :validate => true do |f| %>
+		<p><h4>Please enter your name and complete all tasks below.  Make sure to select a rating from the list below and add any comments.</h4></p> 
+		<div class="clear-right mtop">
+		<%= f.hidden_field :name, :value => @user.first_name %>
+		<% (1..5).each do |i| %>
+			<label><%= 'Task ' + i.to_s + ': ' %><%= @beta_questions.send('question' + i.to_s) %></label>
+       		<p><%= f.select 'rating' + i.to_s, options_for_select( [['Easy',0], ['Not So Easy',1], ['Hard',2], ['Too Hard',3]] ), {:prompt => 'Select Rating'}, {'data-mini'=>"true"} %></p>
+       		<p><label><%= 'Comments:' %></label><%= f.text_area 'comment' + i.to_s %></p>
+   			<div class="clear-all"></div>
+   		<% end %>	
+   		</div>		
+		<div class="mtop"></div>
+		<%= f.submit "Save", "data-theme"=>"b" %>
+		<%= link_to "Cancel", :back, "data-role" => "button" %>
+ 	<% end %>
+ </div>
+ 

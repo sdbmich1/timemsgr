@@ -17,7 +17,11 @@ $('#formapp').bind('pageshow', function() {
 
 $(document).ready(function() {	
 	
+  // set checkbox	
   $("input[type='checkbox']").checkboxradio();
+  
+  // toggle location dropdown text
+  matchLocation();
   
   // check for location changes
   $("#loc_id").live("change", function() {
@@ -82,7 +86,7 @@ $(document).bind('pageinit', function() {
     var pwd = $('#password').val();
   	var url = '/gcal_import.mobile?uid=' + uid + "&pwd=" + pwd; 
 
-  	$.mobile.changePage( url, { transition: "flip", reload: true} ); 	  		
+  	$.mobile.changePage( url, { transition: "none", reload: true} ); 	  		
 	return false;
   });
 });

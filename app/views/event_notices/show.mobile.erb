@@ -10,9 +10,9 @@
 		<label>Sent: </label><span class="item-detail"><%= get_local_time(@notice.created_at) %></span><br />
 		<label>Message: </label><span class="item-detail"><%= @notice.message %></span><br />
       <% unless @notice.event_name.blank? %>
-		<label>Name: </label><span class="item-detail"><%= link_to @notice.event_name, event_path(:id=>@notice.event_id, :etype=>@notice.event_type), :id=>'notice-id' %></span><br />
-		<label>Date: </label><span class="item-detail"><%= "#{@notice.start_date} - #{@notice.end_date}" %></span><br />	
-		<label>Time: </label><span class="item-detail"><%= "#{@notice.start_time} - #{@notice.end_time}" %></span><br />     	
+		<label>Event: </label><span class="item-detail"><%= link_to @notice.event_name, event_path(:id=>@notice.event_id, :etype=>@notice.event_type), :id=>'notice-id' %></span><br />
+		<p><label>Date: </label><span class="item-detail"><%= "#{@notice.start_date} - #{@notice.end_date}" %></span><br />	
+		<label>Time: </label><span class="item-detail"><%= "#{@notice.start_time} - #{@notice.end_time}" %></span></p><br />     	
       <% end %>
   	</div>	
 <% end %>

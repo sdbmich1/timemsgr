@@ -27,14 +27,18 @@ class ImportICSFeed
       start_offset, end_offset = cal.dtstart.to_time.getlocal.utc_offset/3600, cal.dtend.to_time.getlocal.utc_offset/3600  
       uid = cal.uid =~ /[\)]/i ? cal.uid.split(')')[1] : cal.uid
                
-      new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(uid[0..49], :event_type => 'ce', :event_title => etype + ': ' + cal.summary, 
-        :cbody => cal.description, :contentsourceID => cid, :localGMToffset => offset, :endGMToffset => offset, :subscriptionsourceID => cid) 
-      new_event.eventstartdate = new_event.eventstarttime = cal.dtstart.to_datetime
-      new_event.eventenddate = new_event.eventendtime = cal.dtend.to_datetime  
+      new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(uid[0..49]) 
+      new_event.event_type, new_event.event_title, new_event.cbody = 'ce', etype + ': ' + cal.summary, cal.description  
+      new_event.contentsourceID = new_event.subscriptionsourceID = cid
+      new_event.localGMToffset = new_event.endGMToffset = offset
+      new_event.eventstartdate = new_event.eventstarttime = cal.dtstart.to_time.advance(:hours => start_offset)
+      new_event.eventenddate = new_event.eventendtime = cal.dtend.to_time.advance(:hours => end_offset)  
        
-      new_event.postdate = cal.created.to_datetime rescue nil
+      new_event.postdate = cal.created.to_time rescue nil
       new_event.contentsourceURL = cal.url rescue nil
       loc = cal.location rescue nil
+
+      #p "Event: #{new_event.event_title} | Descr: #{new_event.cbody}"
       
       # check if location exists          
       if loc

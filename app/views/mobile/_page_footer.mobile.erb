@@ -1,3 +1,6 @@
+<% if controller_name == 'channels' || controller_name == 'nearby_events' %>
+	<div class="srchText" data-query="<%= @query %>"></div>
+<% end %>
 <div data-role="navbar">
   	<ul>
 		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>

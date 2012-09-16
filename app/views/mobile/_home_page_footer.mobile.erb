@@ -1,7 +1,7 @@
 <div data-role="navbar">
   	<ul>
 		<li><%= link_to 'Activity', new_private_event_path, "data-icon"=>"plus" %></li>
-		<li><%= link_to 'Search', '#', :class=>"srchflg", "data-icon"=>"search" %></li>
+		<li><%= link_to 'Messages', event_notices_url(:sid=>@user.ssid), :id => "msg", "data-icon"=>"custom"  %></li>
 		<li><%= link_to "Near Me", '#', :class=>'nearby', "data-icon"=>"custom", :id => "map", "rel"=>"external",'data-ajax'=>"false" %> </li>
 		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
 	</ul>

@@ -214,8 +214,8 @@ module EventsHelper
   
   def get_subscriptions *args
     elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || is_session?(e.event_type) || !time_left?(e) }
-    elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]
-    elist.sort! {|a, b| a.eventstartdate <=> b.eventstartdate}.uniq
+    elist = build_list elist, args[0] if args[0]
+    elist
   end
            
   def get_observances

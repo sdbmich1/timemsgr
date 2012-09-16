@@ -6,7 +6,7 @@ class LocalChannel < KitsSubModel
 	     :channel_name, :channel_title, :HostProfileID, :channel_class,
 	     :channel_type
 	     
-	belongs_to :host_profile, :foreign_key => :HostProfileID
+	belongs_to :host_profile, :foreign_key => :HostProfileID #, :primary_key => :channelID
   has_many :calendar_events, :foreign_key => :subscriptionsourceID, :primary_key => :channelID, :dependent => :destroy do
     def range(limit=10, offset=0, sdt)
       where("(eventstartdate >= curdate() and eventstartdate <= ?) OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)", sdt, sdt).limit(limit).offset(offset) 
@@ -111,11 +111,13 @@ class LocalChannel < KitsSubModel
      ['Volunteer|Charity|Fundraiser|Gala|Benefit|Luncheon|Fundraising|Nonprofit', 'Charity'], 
      ['Speaker|Lecture|Discussion|Talk|Author|Panel|Book|Reading|Literature|Stories', 'Speaker'],
      ['Screening|Film|Movie|Cinema|3D|Documentary|Flick', 'Film'], ['Science|History','Science'],
+     ['Cars|Camping|Biking', 'Recreation'], ['Cars|Auto|Antique Cars', 'Cars'],
      ['Civic|Government|Policy|Politics|Civics', 'Government'],
      ['Church|Religion|Baptist|Islam|Catholic|Christ|Episcopal|Evangelical|Buddist|Hindu|Mormon|Christian|Methodist|Congregational|Presbyterian|Quaker|Lutheran', 'Church'],
-     ['R&B|Hip-Hop|Soul','Hip-Hop'], ['Rock|Pop', 'Rock'], ['Medical|Health|Medicine','Health'],
-     ['Book|Reading|Literature|Stories|Author', 'Book'],['Senior', 'Senior'], 
+     ['R&B|Hip-Hop|Soul','Hip-Hop'], ['Rock|Pop', 'Rock'], ['Medical|Health|Medicine|Cancer|Disease|Cure|Drug|Wellness','Health'],
+     ['Book|Reading|Literature|Stories|Author|Storytime|Story', 'Book'],['Senior', 'Senior'], 
      ['Career|Job|Job Fair|Hiring|Employer|Employee|Employment','Job'],
+     ['Dating|Romance|Love|Hookup|Sex|Mating', 'Dating'],
      ['Business|Conferences|Seminars|Meetings|Trade Missions', 'Business'],
      ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto|Pops', 'Classical'],
      ['Cloud|Mobile|Technology|Software|Hardware|Server|Engineering|Social Media|SaaS|Enterprise|IaaS', 'Technology'],
@@ -125,11 +127,13 @@ class LocalChannel < KitsSubModel
      ['Pro Sports', 'NFL'],['Pro Sports','NBA'], ['Pro Sports','MLB'], ['Pro Sports','NHL'], ['Pro Sports','MLS'], ['Pro Sports','WNBA'], ['Pro Sports', 'NASCAR'],
      ['College Football|College Baseball|College Hockey|College Golf|College Tennis|College Basketball|College Soccer|Softball|College Wrestling|Gymnastics|Track|Lacrosse|Water Polo|Rowing|Swimming|Fencing', 'College Sports'],
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Founder', 'Startup'], 
+     ['Marathon|Race|5K|10K|Track Meet', 'Amateur Sports'], ['Gay|Lesbian|LGBT|Transgender|Bisexual|Bi-sexual|Queer', 'Gay'], 
+     ['Baby|Pre-natal|Toddler', 'Baby'], ['Wedding|Bridal|Marital|Engagement', 'Bridal'],
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Financing|Venture|VC|IPO|M&A', 'Venture'],
      ['Sale|Offer|Deal','Promotions'],     
      ['Opera|Choir|Theater|Symphony|Ballet|Concerto|Theatre|Play|Choregraphy|Dance|Orchestra|Piano|Violin|Cello|Musical|Recital|Pops', 'Performing Arts'],
      ['Zoo|Animals|Aquarium', 'Zoo'], ['Park', 'Parks'], 
-     ['Meeting|Conference', 'Meeting']]    
+     ['Meeting|Conference|Meetup', 'Meeting']]    
   end
   
   def self.pick_channels int, cnty, loc
@@ -147,7 +151,7 @@ class LocalChannel < KitsSubModel
   def self.build_channel_list channel, title, cnty, loc
     parse_ary.each do |str|
       if !(title.downcase =~ /^.*\b(#{str[0].downcase})\b.*$/i).nil? 
-        found_channel = get_channel(str[1],cnty, loc)
+        found_channel = get_channel(str[1], cnty, loc)
         channel << found_channel unless found_channel.blank? 
       end
     end 

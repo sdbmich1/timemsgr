@@ -51,7 +51,7 @@ namespace :loader do
   desc "Load database with data from SF State feeds"
   task :process_sfstate_feeds => :environment do
     p 'Loading SF State General Events Feed...'  
-    load_sfstate_feed "http://apps.sfsu.edu/cgi-bin/student/webcalendar.htm", "San Francisco State", -8   
+    load_sfstate_feed "http://apps.sfsu.edu/cgi-bin/student/", "webcalendar.htm", "San Francisco State", -8   
     p "Loading SF State Sports Events Feeds..."  
     load_ics_feeds RAILS_ROOT + '/lib/feeds/SFStateSportsFeed022612.txt'
   end  

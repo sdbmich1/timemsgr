@@ -1,9 +1,6 @@
 Timemsgr::Application.routes.draw do
 
-  devise_for :users, :controllers => { :registrations => "registrations" , :omniauth_callbacks => "users/omniauth_callbacks", :sessions => 'sessions' } do
-    get 'sign_in', :to => 'users/sessions#new', :as => :new_user_session
-    get 'sign_out', :to => 'users/sessions#destroy', :as => :destroy_user_session
-  end
+  devise_for :users, :controllers => { :registrations => "registrations" , :omniauth_callbacks => "users/omniauth_callbacks", :sessions => 'sessions' } 
   
   devise_scope :user do
     get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
@@ -58,7 +55,7 @@ Timemsgr::Application.routes.draw do
   end 
     
   # controllers for event related content
-  resources :members, :promotions, :presenters, :event_sessions, :transactions, :subscriptions, :notifications, :event_notices
+  resources :presenters, :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks
   
   resources :relationships do
     collection do
@@ -70,7 +67,7 @@ Timemsgr::Application.routes.draw do
     get :autocomplete_organization_OrgName, :on => :collection
   end  
   
-  resources :users 
+  resources :users, :except => [:new, :create] 
   
   # specify routes for devise user after sign-in
   namespace :user do

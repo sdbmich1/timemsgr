@@ -175,7 +175,7 @@ class Event < KitsTsdModel
   end    
   
   def summary
-    bbody.gsub("\\n",' ').gsub("\n",' ').gsub("<br />", ' ').html_safe[0..64] + '...' rescue nil
+    bbody.gsub("\\n",' ').gsub("\r\n",' ').gsub("\n",' ').gsub("<br />", ' ').html_safe[0..64] + '...' rescue nil
   end
   
   def listing

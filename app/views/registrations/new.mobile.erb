@@ -1,32 +1,11 @@
-<%= render 'mobile/infield_form_labels' %>
-<% content_for :content do %>
-  	<div class="center-wrapper">
-		<%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %>
-		<h3>Be in the Know. Join Now.</h3>
-  	</div> 
-  	<div id="mform">
-    <%= form_for(resource, resource.with_host_profile, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
- 		<%= devise_error_messages! %> 			
- 			<p><label for="user_first_name">First Name</label><%= f.text_field :first_name %></p> 
- 			<p><label for="user_last_name">Last Name</label><%= f.text_field :last_name %></p>
- 			<p><label for="user_username">Username</label><%= f.text_field :username %></p>
-  			<p><label for="user_email">Email</label><%= f.text_field :email %></p>
-  			<p><label for="user_password">Password</label><%= f.password_field :password %></p>
-		<p><%= f.select :gender, options_for_select( ['Male', 'Female'], :prompt => 'Select Gender' ), {}, {'data-mini'=>'true'} %></p>
-   		<p><div data-role="fieldcontain">
-			<fieldset data-role="controlgroup" data-type="horizontal">
-			<span class="sdescr">Birthdate:</span>	
-			    			<%= f.date_select :birth_date, {:as => :date, :start_year => Date.today.year - 13, :end_year => Date.today.year - 90, 
-                                :order => [:month, :day, :year], :required => true, :prompt => true,
-                                :hint => "This helps find content for you."}, {'data-mini'=>'true'}  %>
-        	</fieldset>
-        </div></p>               
- 		<p><%= f.collection_select :location_id, Location.all, :id, :city, {:prompt => 'Select Home City'}, {'data-mini'=>'true'} %></p>
-		<p><label for="user_promo_code">Enter promo code</label><%= f.text_field :promo_code %></p>
-		
- 		<p><%= f.submit "Sign Up", "data-theme"=>"b" %></p>
- 		<%= render :partial => "devise/shared/links" %>
-  <% end %>
-  </div>	
+<%= content_for :subhead do %>
+  <div class="center-wrapper">
+	<p><%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %></p><br />
+  </div> 
+<% end %>
 
- <% end %>
+<%= content_for :content do %>
+  	<%= render :partial => "devise/shared/signup" %>
+<% end %>
+
+	

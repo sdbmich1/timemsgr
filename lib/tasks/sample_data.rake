@@ -208,6 +208,11 @@ def create_college_channels
   school = ENV['SCHOOL_NAME'] || 'San Francisco State'
   city = ENV['CITY_NAME'] || 'San Francisco'
   school_size = ENV['SCHOOL_SIZE'] || 'medium'
+  promo_code = ENV['PROMO_CODE']
+  
+  # remove old channels
+  ch = LocalChannel.where 'channel_name like ?', '%' + school + '%'
+  ch.map {|c| c.destroy}
   
   lc = LocalChannel.get_channel_by_name 'Stanford'  
   lc.each do |channel|  
@@ -225,14 +230,15 @@ def create_college_channels
       new_channel.localename = city 
       new_channel.cbody.gsub!('Stanford', school) rescue nil
       new_channel.bbody = new_channel.cbody
-      p "Channel: #{new_channel.channel_name}"
+#      p "Channel: #{new_channel.channel_name}"
     
       # define channel id based on timestamp
       new_channel.channelID = 'PK' + Time.now.to_i.to_s
+      p "Channel: #{new_channel.channel_name} #{new_channel.channelID}"
+      new_channel.HostProfileID = HostProfile.create_channel_profile new_channel.channel_name, new_channel.channelID, city, promo_code
       new_channel.save
     end
   end
-  
 end
 
 def add_city_locations

@@ -68,7 +68,7 @@ class CalendarEvent < KitsCentralModel
   end   
   
   def summary
-    bbody.gsub("\\n",'').html_safe[0..59] + '...' rescue nil
+    bbody.gsub("\\n",' ').gsub("\r\n",' ').gsub("\n",' ').gsub("<br />", ' ').html_safe[0..64] + '...' rescue nil
   end
   
   def listing
@@ -78,10 +78,12 @@ class CalendarEvent < KitsCentralModel
   def set_flds
     if new_record?
       self.hide, self.cformat, self.status, self.LastModifyBy, self.rsvp = "no", "html", "active", "system", "No"
-      self.event_name,self.bbody  = self.event_title[0..99], self.cbody
-      self.CreateDateTime, self.LastModifyDateTime = Time.now, Time.now
+      self.CreateDateTime = Time.now
       self.eventid = self.event_type[0..1].upcase + Time.now.to_i.to_s if self.eventid.blank? 
     end
+
+    self.LastModifyDateTime = Time.now  
+    self.event_name,self.bbody = self.event_title[0..99], self.cbody
   end
     
   define_index do

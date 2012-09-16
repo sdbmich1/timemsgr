@@ -12,6 +12,9 @@
 		<li><%= link_to "My Connections", relationships_url(:id=>@user) %> </li>
 		<li><%= link_to "My Interests", edit_interest_path(@user, {:p => "Interests"}) %> </li>
 		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
+		<li data-role="list-divider" data-mini="true">Beta</li>
+		<li><%= link_to "Feedback", new_beta_feedback_path %></li>
+		<li><%= link_to "Promo Code", edit_host_profile_path(@user) %></li>
 	</ul><% end -%>
 
 <% content_for :footer do %>

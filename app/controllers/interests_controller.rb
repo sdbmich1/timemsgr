@@ -1,19 +1,22 @@
 class InterestsController < ApplicationController
-  before_filter :authenticate_user!, :load_data	
+  before_filter :authenticate_user!, :unless => :mobile_create?
+  before_filter :load_data	
   layout :page_layout
 	respond_to :html, :json, :xml, :js
   
 	def new
 		@categories = Category.get_active_list  # get category data
-		respond_with(@interest = @user.interests.build)	
+		@interest = @user.interests.build	
 	end
 	
 	def create
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {})
     if @user.update_attributes(params[:user])
       add_credits; @user.add_initial_subscriptions
+      redirect_to events_path
+    else
+      render :action => 'new'
     end
-    respond_with(@user, :location => new_local_subscription_path) 
 	end
 	
 	def edit
@@ -52,5 +55,9 @@ class InterestsController < ApplicationController
 	def page_layout  
     mobile_device? ? 'form' : params[:p].blank? ? "application" : "users" 
   end  
+  
+  def mobile_create?
+    mobile_device? && (action_name == 'create' || action_name == 'new')
+  end
 
 end

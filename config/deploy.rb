@@ -75,7 +75,7 @@ namespace :sphinx do
    
   desc "Stop the sphinx server"
   task :stop, :roles => :app do
-    unless previous_release == ''
+    unless previous_release
       run "cd #{previous_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:stop"
     end
   end

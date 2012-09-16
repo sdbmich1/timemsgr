@@ -75,7 +75,7 @@ namespace :sphinx do
    
   desc "Stop the sphinx server"
   task :stop, :roles => :app do
-    unless previous_release
+    unless :previous_release
       run "cd #{previous_release} && RAILS_ENV=#{rails_env} rake thinking_sphinx:stop"
     end
   end
@@ -120,8 +120,8 @@ end
 before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 
 # Sphinx
-before 'deploy:update_code', 'sphinx:stop'
-after 'deploy:update_code', 'deploy:symlink_shared', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc"
+#before 'deploy:update_code'
+after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 
 # Delayed Job  

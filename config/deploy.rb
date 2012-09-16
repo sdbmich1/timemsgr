@@ -6,7 +6,7 @@ require 'rvm/capistrano'
 require 'thinking_sphinx/deploy/capistrano'
 require "bundler/capistrano"
 set :rvm_ruby_string, '1.9.2'
-#set :rvm_type, :user
+set :rvm_type, :system
 
 set :application, "koncierge"
 
@@ -115,7 +115,7 @@ namespace :whenever do
   end    
 end
 
-#before 'deploy:setup', 'rvm:install_rvm', 'sphinx:create_db_dir'
+before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 
 # Sphinx
 before 'deploy:update_code', 'sphinx:stop'

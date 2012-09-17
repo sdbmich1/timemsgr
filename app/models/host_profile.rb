@@ -104,7 +104,7 @@ class HostProfile < KitsTsdModel
   end
   
   def self.find_promo_code(pcode, channelID)
-    where('LOWER(promoCode) = ? and HostChannelID != ?', pcode.downcase, channelID) rescue nil
+    where('LOWER(promoCode) = ? and LOWER(ProfileType) != ?', pcode.downcase, 'individual') rescue nil
   end
   
   def self.create_channel_profile channel_name, channelID, city, pCode

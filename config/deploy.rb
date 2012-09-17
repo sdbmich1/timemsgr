@@ -104,7 +104,7 @@ end
 namespace :rvm do
   desc 'Trust rvmrc file'
   task :trust_rvmrc do
-    run "rvm rvmrc trust #{current_release}"
+    run "rvm rvmrc trust #{latest_release}"
   end
 end
 

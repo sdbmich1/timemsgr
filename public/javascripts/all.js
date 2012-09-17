@@ -10300,7 +10300,7 @@ function extendRemove(target, props) {
 $.timepicker = new Timepicker(); // singleton instance
 $.timepicker.version = "0.9.3";
 
-})(jQuery);
+});
 
 
 /*
@@ -13850,4 +13850,4 @@ $(document).bind('click', function(e) {
 
 function getSelectedValue(id) {
     return $("#" + id).find("dt a span.value").html();
-}
+};

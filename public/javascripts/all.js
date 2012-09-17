@@ -10300,8 +10300,6 @@ function extendRemove(target, props) {
 $.timepicker = new Timepicker(); // singleton instance
 $.timepicker.version = "0.9.3";
 
-});
-
 
 /*
  * jQuery File Upload Plugin 5.0

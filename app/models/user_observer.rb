@@ -90,7 +90,7 @@ class UserObserver < ActiveRecord::Observer
   end
   
   def check_promo_code user   
-    hp_promo = HostProfile.find_promo_code user.promo_code      
+    hp_promo = HostProfile.find_promo_code user.promo_code, user.ssid      
     hp_promo.channels.map {|channel| Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid)} unless hp_promo.blank?              
   end
 end

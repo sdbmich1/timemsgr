@@ -246,8 +246,8 @@ def add_city_locations
   
   ch = LocalChannel.where "channel_name like ?", 'About %'
   ch.each do |channel|
-    loc = channel.channel_name.split('About ')[1]
-    addr = Schedule.get_offset loc if loc
+    location = channel.channel_name.split('About ')[1]
+    addr = Schedule.get_offset location if location
 
     if addr    
       cntry = addr[:country] == 'USA'? 'United States' : addr[:country]    
@@ -260,8 +260,13 @@ def add_city_locations
     p "#{addr[:city]} | #{addr[:state]} | #{cntry} | #{tzone} | Code #{ccode}" if addr && tzone
     
     # add location
-#    Location.find_or_create_by_city(:city=>addr[:city], :state=>addr[:state], :country=>cntry, :time_zone=>tzone, :localGMToffset=>addr[:offset],
-#      :country_id => ccode, :status=>'active', :hide=>'no', :lat=>addr[:lat], :lng=>addr[:lng]) if addr && tzone 
+    loc = Location.find_by_city(:city=>addr[:city]) # find_or_create_by_city
+    if loc && addr && tzone
+      loc.state, loc.country, loc.time_zone, loc.localGMToffset = addr[:state], cntry, tzone, addr[:offset]
+      loc.country_id, loc.status, loc.hide = ccode, 'active', 'no'
+      loc.lat, loc.lng = addr[:lat], addr[:lng] 
+      loc.save
+    end 
   end
 end
     

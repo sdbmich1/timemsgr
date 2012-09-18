@@ -11,7 +11,7 @@ class HostProfilesController < ApplicationController
   def update
     @host_profile = HostProfile.find params[:id]              
     @host_profile.update_attributes(params[:host_profile])
-    respond_with(@host_profile, :location => events_path)   
+    respond_with(@user, :location => events_path)   
   end
   
   private

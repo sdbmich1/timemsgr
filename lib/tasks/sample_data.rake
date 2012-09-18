@@ -262,7 +262,7 @@ def add_city_locations
     # add location
     loc = Location.find_by_city(addr[:city]) if addr # find_or_create_by_city
     if loc && addr && tzone
-      loc.state, loc.country, loc.time_zone, loc.localGMToffset = addr[:state], cntry, tzone, addr[:offset]
+      loc.state, loc.country_name, loc.time_zone, loc.localGMToffset = addr[:state], cntry, tzone, addr[:offset]
       loc.country_id, loc.status, loc.hide = ccode, 'active', 'no'
       loc.lat, loc.lng = addr[:lat], addr[:lng] 
       loc.save

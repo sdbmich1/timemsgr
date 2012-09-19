@@ -410,9 +410,16 @@ function set_end_time(starttime) {
   	{var hour = parseInt($.trim(parts[0]));}
 
   // set hour based on time of day
-  if(ampm[1].match(/(AM|am)/) && hour == 11) { ampm[1] = 'PM'; }
+  if(hour == 11) 
+    { 
+  	  if(ampm[1] == 'AM') { ampm[1] = 'PM'; }
+	  else { ampm[1] = 'AM'; }
+  	}
+  
+  // adjust hour for 12 hour day
   if(hour == 12) { hour -= 12; }
-  if(ampm[1].match(/(PM|pm)/) && hour == 11) { ampm[1] = 'AM'; }
+  
+  // increment end time by one hour
   hour += 1;
   
   if(hour < 10) {hour = '0' + hour}

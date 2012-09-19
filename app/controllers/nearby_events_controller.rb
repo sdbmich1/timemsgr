@@ -1,7 +1,7 @@
-require 'will_paginate/array'
 class NearbyEventsController < ApplicationController
   before_filter :authenticate_user!, :load_data
   layout :page_layout
+  respond_to :html, :json, :xml, :js, :mobile
   
   def index
     @user ||= current_user
@@ -9,16 +9,12 @@ class NearbyEventsController < ApplicationController
     @nearby_events = @user.nearby_events(location, @enddate)
   end
   
-  protected
+  private
   
   def page_layout 
     mobile_device? ? 'form' : "events"
   end    
-  
-  def offset
-    mobile_device? ? 30 : 15
-  end 
-  
+    
   def location
     loc = Location.nearest_city(params[:loc]) if params[:loc]
     loc ? loc.city : @location.city

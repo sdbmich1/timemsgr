@@ -31,10 +31,10 @@
 .form-top {top: 44px; height: 175%;}
 .reg-top {top: 5px; height: 150%;}
 .scroller {top: 44px; min-height: 150%;}
-.evscroller {top:0; height: 175%;}
+.evscroller {top:0; height: auto;}
 .scrollable {bottom: 50px; height: 175%;}
 .home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
-.home-pg {top: 114px; height: 175%;}
+.home-pg {top: 114px; height: auto;}
 .channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:35px;}
 .scrollable {top: 43px!important;}
@@ -304,7 +304,7 @@ a.map-btn {
 }
 
 /* error handling */
-.error, .alert p {
+.error, .alert {
   border: 2px solid red;
 /*  padding: 7px; */
   padding: 5px 0 5px 0;
@@ -319,7 +319,7 @@ a.map-btn {
   color: #fff;
 }
 
-.notice p {
+.notice {
   border: 2px solid green;
 /*  padding: 7px; */
   padding: 5px 0 5px 0;

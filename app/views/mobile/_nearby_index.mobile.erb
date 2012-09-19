@@ -1,5 +1,9 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => "Nearby Opportunities"} %>
 
+<%= content_for :head do %>
+	<%= render :partial => 'mobile/nearby_header', :locals => { :theme=>get_theme(@enddate) } %>
+<% end %>
+
 <%= content_for :subhead do %>
 	<div class="evsearch" style="display:none">
 		<%= render :partial => 'mobile/nearby_search' %>

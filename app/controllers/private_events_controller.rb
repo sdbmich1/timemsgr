@@ -48,7 +48,7 @@ class PrivateEventsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to events_url } 
       format.mobile { redirect_to events_url }
-      format.js { load_events }
+      format.js { mobile_device? ? redirect_to(events_url) : load_events }
     end      
   end
     

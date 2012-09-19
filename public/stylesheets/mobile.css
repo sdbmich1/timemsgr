@@ -19,7 +19,7 @@
 #app-header {bottom:auto; position:fixed !important; top:0 !important; width:100%; z-index: 999;}  
 
 .ui-header, .ui-navbar { width: 100%!important; }
-.scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .reg-top, .channel-pg, .nearby-pg, .channelList {
+.scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .reg-top, .channel-pg, .nearby-pg, .nearby-top, .channelList {
 	position: absolute;
       left: 0;
       right: 0;
@@ -29,6 +29,7 @@
 
 .subhead, .listpg {top: 75px; height: 175% }
 .form-top {top: 44px; height: 175%;}
+.nearby-top {top: 82px; height: 175%}
 .reg-top {top: 5px; height: 150%;}
 .scroller {top: 44px; min-height: 150%;}
 .evscroller {top:0; height: 175%;}

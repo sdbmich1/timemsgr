@@ -195,7 +195,7 @@ module EventsHelper
   def build_list elist, edt
     newlist = []
     (Date.today..edt).each do |edate|
-      newlist << parse_list(elist, edate)       
+      newlist << parse_list(chk_dup_events(elist, edate), edate)       
     end
     newlist.flatten(1).sort! {|a, b| a.eventstartdate <=> b.eventstartdate}.uniq
   end
@@ -226,6 +226,11 @@ module EventsHelper
     @trk_events = get_subscriptions sdt
     @nearby_events.reject {|e| observance?(e.event_type) || e.start_date > sdt || e.end_date < sdt || e.cid == @user.ssid || chk_user_events(get_user_events, e) || 
         is_session?(e.event_type) || !time_left?(e, sdt) || chk_user_events(@trk_events, e)}.map {|e| set_start_date(e,sdt) }
+  end
+  
+  def chk_dup_events elist, sdt
+    elist.reject {|e| observance?(e.event_type) || chk_user_events(get_user_events, e) || is_session?(e.event_type) }
+    elist
   end
   
   # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events

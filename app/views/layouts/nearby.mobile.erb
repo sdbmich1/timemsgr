@@ -3,35 +3,33 @@
   <head>  
   	<%= yield :title %> 
 	<%= render 'layouts/jqm' %>
-    <%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
+    <%= stylesheet_link_tag "mobile", "calendar", 'styles' %>  
+   	<%= stylesheet_link_tag "mobile_device" unless user_signed_in? %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-    <div id="app" data-role="page" data-cache="never"> 
-      <div data-role="header" data-theme="b" id="app-header">
-      	<%= yield :head %>
-      	<%= yield :srch_content %>
-  	  </div>
+  <div id="formapp" data-role="page"> 
+    <div data-role="header" data-theme="b" id="app-header">
+      <%= yield :head %>
+    </div>
     
-      <div id="banner_ad_top">
+    <div id="banner_ad_top">
     	<div class="center-wrapper">
     		<%= yield :ad_content %>
     	</div>
-      </div>
+    </div>
     
-	  <div class="app-content" data-role="content">
-	  	<div class="subhead">
-    		<%= yield :subhead %>		
-    		<div class="nearby-pg">
-      			<%= yield :content %>
-      		</div>
-    	</div>
-
-      </div>
+	<div class="app-content" data-role="content">
+		<div class="nearby-top">
+			<%= yield :subhead %>
+      		<%= yield :content %>
+      	</div>
+    </div>
     
-      <div id="app-footer" data-role="footer">		
-      	<%= yield :footer %>
-      </div>
-    </div>  
+    <div id="app-footer" data-role="footer">		
+      <%= yield :footer %>
+    </div>
+   </div>   
+     
   </body> 
 </html>

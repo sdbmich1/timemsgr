@@ -72,7 +72,7 @@ class PrivateEventsController < ApplicationController
   
   def page_layout 
     if mobile_device? 
-      action_name == 'show' ? 'showitem' : action_name == 'index' ? 'events' : 'form' 
+      action_name == 'show' ? 'showitem' : action_name == 'index' ? 'activities' : 'form' 
     else
       action_name == 'show' ? "showevent" : 'events'
     end

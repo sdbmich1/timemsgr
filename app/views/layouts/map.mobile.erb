@@ -3,12 +3,12 @@
   <head>  
   	<%= yield :title %> 
 	<%= render 'layouts/jqm' %>
-   	<%= stylesheet_link_tag "mobile", "calendar", :cache => true %>  
+   	<%= stylesheet_link_tag "mobile", "calendar" %>  
    	<%= stylesheet_link_tag "mobile_device" unless user_signed_in? %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  
-  <div id="mapPage" data-role="page"> 
+  <div id="mapPage" data-role="page" data-cache="never"> 
     <div data-role="header" data-theme="b">
       <%= yield :head %>
     </div>

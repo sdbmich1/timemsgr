@@ -378,8 +378,12 @@ module EventsHelper
 	end
 	
 	# get color theme for mobile nav bar tabs - a => black; b=> blue; blue is current tab
-	def get_theme(val)
-	  val.blank? ? 'baaa' : (val.to_date - Date.today).to_i == 7 ? 'abaa' : (val.to_date - Date.today).to_i == 14 ? 'aaba' : 'baaa'
+	def get_theme *val
+    if val[1]
+      val[0].blank? ? 'baaa' : (val[0].to_date - Date.today).to_i == 14 ? 'abaa' : (val[0].to_date - Date.today).to_i == 30 ? 'aaba' : 'baaa'
+    else
+      val[0].blank? ? 'baaa' : (val[0].to_date - Date.today).to_i == 7 ? 'abaa' : (val[0].to_date - Date.today).to_i == 14 ? 'aaba' : 'baaa'
+    end
 	end
 	
 	def bbody?(event)

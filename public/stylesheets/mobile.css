@@ -29,7 +29,7 @@
 
 .subhead, .listpg {top: 75px; height: 175% }
 .form-top {top: 44px; height: 175%;}
-.nearby-top {top: 82px; height: 175%}
+.nearby-top {top: 82px; height: auto; min-height:175%}
 .reg-top {top: 5px; height: 150%;}
 .scroller {top: 44px; min-height: 150%;}
 .evscroller {top:0; height: 175%;}

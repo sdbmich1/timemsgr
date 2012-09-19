@@ -24,16 +24,18 @@ class Event < KitsTsdModel
   # define sphinx search criteria and indexes
   define_index do
     indexes :event_name, :sortable => true
-    indexes :bbody, :sortable => true
-    indexes :cbody, :sortable => true
-    indexes :eventstartdate, :sortable => true
-    indexes :eventenddate, :sortable => true
+    indexes :bbody
+    indexes :cbody
    
     has :ID, :as => :event_id
     has :event_type
+    has :eventstartdate
+    has :mapcity
     where "(status = 'active' AND hide = 'no' AND event_type != 'es')
           AND ((eventstartdate >= curdate() ) 
                 OR (eventstartdate <= curdate() and eventenddate >= curdate()) ) "
+    set_property :enable_star => 1
+    set_property :min_prefix_len => 3
   end
   
   sphinx_scope(:datetime_first) { 

@@ -14,7 +14,11 @@
 <%= content_for :content do %>
   <div class='nearby-pg'>
     <ul data-role="listview">
-		<%= render :partial => 'mobile/event_list', :collection => build_list(@nearby_events, @enddate), :as => :event, :locals => {:edate => Date.today} %>
+		<% if @nearby_events %>
+			<%= render :partial => 'mobile/event_list', :collection => build_list(@nearby_events, @enddate), :as => :event, :locals => {:edate => Date.today} %>
+		<% else %>
+			<div class="stitle center-wrapper"><h6><%= 'No events found. Please try again.'  %></h6></div>		
+  		<% end %>
     </ul>
   </div>
 <% end -%>

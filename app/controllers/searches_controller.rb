@@ -3,11 +3,12 @@ class SearchesController < ApplicationController
   layout :page_layout
 
   def index
-    @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event], :conditions => {:mapcity => @location.city + '*'}, 
-         :order => :eventstartdate, :page => params[:page], :per_page => offset
+    @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event], :conditions => {:mapcity => @location.city}, 
+        :order => :eventstartdate, :page => params[:page] || 1, :per_page => offset
+    @enddate ||= Date.today+7.days
   end
   
-  private
+  protected
   
   def page_layout 
     mobile_device? ? 'pages' : "events"

@@ -94,6 +94,7 @@ class CalendarEvent < KitsCentralModel
     has :ID, :as => :event_id
     has :event_type
     has :eventstartdate
+    has :mapcity
     where "(status = 'active' AND hide = 'no' AND event_type NOT IN ('es', 'h', 'm'))
           AND ((eventstartdate >= curdate() ) 
                 OR (eventstartdate <= curdate() and eventenddate >= curdate()) ) "

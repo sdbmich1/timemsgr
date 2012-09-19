@@ -195,7 +195,7 @@ module EventsHelper
   def build_list elist, edt
     newlist = []
     (Date.today..edt).each do |edate|
-      newlist << parse_list(chk_dup_events(elist, edate), edate)       
+      newlist << parse_list(elist, edate)       
     end
     newlist.flatten(1).sort! {|a, b| a.eventstartdate <=> b.eventstartdate}.uniq
   end

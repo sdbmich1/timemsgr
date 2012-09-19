@@ -4,12 +4,13 @@ class SearchNearbyEventsController < ApplicationController
 
   def index    
     @nearby_events = CalendarEvent.search query, :conditions => {:mapcity => @location.city + '*'}, :page => params[:page] || 1, :per_page => offset
+    @enddate ||= Date.today+7.days
   end
   
   private
   
   def page_layout 
-    mobile_device? ? 'form' : "users"
+    mobile_device? ? 'nearby' : "users"
   end  
   
   def offset

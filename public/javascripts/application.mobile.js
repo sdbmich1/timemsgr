@@ -114,7 +114,7 @@ $(document).bind('pageinit', function() {
 // toggle location selectmenu after search by city
 function matchLocation() {
 	var srchText = $('.srchText').attr("data-query");
-	if ( $('#loc_id').length != 0 && srchText.length != 0 )
+	if ( $('#loc_id').length != 0 && (typeof srchText != 'undefined'))
  		  {
    	 		var tmp = $("#loc_id option:contains(" + capitalize(srchText) + ")").val();
    	 		$("#loc_id option[value='" + tmp + "']").attr('selected', 'selected');

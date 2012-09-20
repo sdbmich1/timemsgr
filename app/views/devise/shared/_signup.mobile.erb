@@ -11,10 +11,10 @@
   			<p><label for="user_email">Email</label><%= f.text_field :email %></p>
   			<p><label for="user_password">Password</label><%= f.password_field :password %></p>
 		<p><%= f.select :gender, options_for_select( ['Male', 'Female'], :prompt => 'Select Gender' ), {}, {'data-mini'=>'true'} %></p>
-   		<p><div data-role="fieldcontain">
+		<p><span>Birthdate</span></p>	
+   		<p><div data-role="fieldcontain" class="center-wrapper">
 			<fieldset data-role="controlgroup" data-type="horizontal">
-			<span class="sdescr">Birthdate:</span>	
-			    			<%= f.date_select :birth_date, {:as => :date, :start_year => Date.today.year - 13, :end_year => Date.today.year - 90, 
+    			<%= f.date_select :birth_date, {:as => :date, :start_year => Date.today.year - 13, :end_year => Date.today.year - 90, 
                                 :order => [:month, :day, :year], :required => true, :prompt => true,
                                 :hint => "This helps find content for you."}, {'data-mini'=>'true'}  %>
         	</fieldset>

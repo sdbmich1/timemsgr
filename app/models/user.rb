@@ -268,9 +268,11 @@ class User < ActiveRecord::Base
   
   # define sphinx search indexes and criteria
   define_index do
-    indexes name, :sortable => true
-    indexes location, :sortable => true
-    indexes email, :sortable => true
+    indexes :first_name
+    indexes :last_name
+    indexes :name, :sortable => true
+    indexes :location, :sortable => true
+    indexes :email, :sortable => true
    
     has id, :as => :user_id
   end 

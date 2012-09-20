@@ -6,7 +6,8 @@
       :user_name            => nil,  
       :password             => nil,  
       :authentication       => nil,  
-      :enable_starttls_auto => true  
+      :enable_starttls_auto => true,
+      :openssl_verify_mode  => 'none'  
     }  
     
 	ActionMailer::Base.default_url_options[:host] = "Starfleet5152V2.kitsus.rbca.net" 

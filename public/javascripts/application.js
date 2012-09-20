@@ -2,8 +2,8 @@
 // This file is automatically included by javascript_include_tag :defaults
 $.ajaxSetup({  
     'beforeSend': function (xhr) {
-    	xhr.setRequestHeader("Accept", "text/javascript");
-    	var token = $("meta[name=’csrf-token’]").attr("content");
+//    	xhr.setRequestHeader("Accept", "text/javascript");
+    	var token = $("meta[name='csrf-token']").attr("content");
 		xhr.setRequestHeader("X-CSRF-Token", token);
     },
   	'complete': function(){ },

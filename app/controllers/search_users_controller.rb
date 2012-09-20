@@ -10,7 +10,7 @@ class SearchUsersController < ApplicationController
   private
   
   def page_layout 
-    mobile_device? ? 'list' : "users"
+    mobile_device? ? 'nearby' : "users"
   end    
   
   def query

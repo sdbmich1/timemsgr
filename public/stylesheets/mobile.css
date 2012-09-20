@@ -35,7 +35,7 @@
 .evscroller {top:0; height: 175%;}
 .scrollable {bottom: 50px; height: 175%;}
 .home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
-.home-pg {top: 114px; height: 175%;}
+.home-pg {top: 114px; height: auto; min-height: 175%;}
 .channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:35px;}
 .scrollable {top: 43px!important;}

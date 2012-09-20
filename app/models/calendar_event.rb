@@ -72,7 +72,7 @@ class CalendarEvent < KitsCentralModel
   end
   
   def listing
-    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..30] + '...' rescue nil
+    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..29] + '...' rescue nil
   end
     
   def set_flds

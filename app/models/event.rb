@@ -181,7 +181,7 @@ class Event < KitsTsdModel
   end
   
   def listing
-    event_name.length < 45 ? event_name.html_safe : event_name.html_safe[0..44] + '...' rescue nil
+    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..29] + '...' rescue nil
   end
   
   def details

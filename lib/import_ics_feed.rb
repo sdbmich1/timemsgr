@@ -26,9 +26,10 @@ class ImportICSFeed
     if cal.dtstart.to_date >= Date.today
       start_offset, end_offset = cal.dtstart.to_time.getlocal.utc_offset/3600, cal.dtend.to_time.getlocal.utc_offset/3600  
       uid = cal.uid =~ /[\)]/i ? cal.uid.split(')')[1] : cal.uid
+      ename = etype + ': ' + cal.summary
                
-      new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(uid[0..99]) 
-      new_event.event_type, new_event.event_title, new_event.cbody = 'ce', etype + ': ' + cal.summary, cal.description  
+      new_event = CalendarEvent.find_or_initialize_by_event_title_and_subscriptionsourceID(ename, cid) 
+      new_event.event_type, new_event.event_title, new_event.cbody = 'ce', ename, cal.description  
       new_event.contentsourceID = new_event.subscriptionsourceID = cid
       new_event.localGMToffset = new_event.endGMToffset = offset
       new_event.eventstartdate = new_event.eventstarttime = cal.dtstart.to_time.advance(:hours => start_offset)

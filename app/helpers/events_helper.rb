@@ -158,7 +158,7 @@ module EventsHelper
   end
   
   def user_events?
-    get_user_events.count > 0
+    get_user_events.count > 0 || @trkd
   end
   
   def appointments?
@@ -272,6 +272,7 @@ module EventsHelper
     (usr.private_trackers | usr.private_trackeds).each do |pt|
       elist = elist | pt.private_events.map {|e| set_event_text(e, pt.first_name, dt)}
     end
+    @trkd = elist ? true : false
     elist
   end
     

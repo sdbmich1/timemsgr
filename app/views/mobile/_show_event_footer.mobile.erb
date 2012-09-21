@@ -4,7 +4,7 @@
 
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
 			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
-					"data-icon"=>"add", 'data-ajax'=>"false", :method => :post %> </li>
+					"data-icon"=>"add", 'data-ajax'=>"false", :class=>'sch-event', :method => :post %> </li>
 		<% elsif private_event?(event.event_type) %>		
 			<li><%= link_to "Edit", edit_private_event_url(event, :eid=>event.eventid), "data-icon"=>"custom", :id => "edit" %> </li>
 			<li><%= link_to "Delete", private_event_url(event, :eid=>event.eventid), :method => 'delete', :confirm => 'Delete this event?','data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>					

@@ -24,10 +24,10 @@ $(document).ready(function() {
 	
   // set checkbox	
 //  $("input[type='checkbox']").checkboxradio();
-  
+ 
   // toggle location dropdown text
   matchLocation();
-  
+
   // check for location changes
   $("#loc_id").live("change", function() {
     var loc = $(this).val().toLowerCase(); // grab the selected location 
@@ -63,7 +63,7 @@ $(document).ready(function() {
     $(this).text($(this).text() == '+ Add Reminder' ? $('#remflg').val('yes') : $('#remflg').val('no') );
     $(this).text($(this).text() == '+ Add Reminder' ? '- Remove Reminder' : '+ Add Reminder');
   });  
-  
+ 
   // used to toggle sponsor logos
   $("#close-btn").live('click', function() {
    	$("#sponsor-pg").hide();
@@ -119,12 +119,13 @@ $(document).bind('pageinit', function() {
 // toggle location selectmenu after search by city
 function matchLocation() {
 	var srchText = $('.srchText').attr("data-query");
-	if (typeof srchText != 'undefined') {
-	   if ( $('#loc_id').length != 0 )
+	if (srchText !== undefined) {
+	   if ( $('#loc_id').length != 0 && srchText.length != 0 )
  		  {
    	 		var tmp = $("#loc_id option:contains(" + capitalize(srchText) + ")").val();
    	 		$("#loc_id option[value='" + tmp + "']").attr('selected', 'selected');
-   	 	  }	}
+   	 	  }	
+   	 }
 }
 
 // set enddate to startdate

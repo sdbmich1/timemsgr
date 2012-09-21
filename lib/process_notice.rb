@@ -37,7 +37,6 @@ module ProcessNotice
             :sourceID=>trkr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )
 
     #also send email to person
-    #UserMailer.delay.send_request(trkr.email, enotice, usr) unless trkr.email.blank? 
     DelayClassMethod.new("UserMailer", "send_request", :params=>[trkr.email, enotice, usr]).delay unless trkr.email.blank?
   end
   
@@ -47,8 +46,7 @@ module ProcessNotice
     
     # add notice
     enotice = EventNotice.create( :Notice_Type=>ptype,:Notice_Text=>usr.name + ' has ' + ptype + 'ed a connection with you.', 
-            :sourceID=>usr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )  
-    
+            :sourceID=>usr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )      
   end
     
   def post_notice(ary, model, usr, ptype)
@@ -60,7 +58,8 @@ module ProcessNotice
             :event_id=>get_event_id(model) )
       
       #also send email to each person
-      trkr.email.blank? ? next : UserMailer.delay.send_notice(trkr.email, enotice, usr)     
+      DelayClassMethod.new("UserMailer", "send_notice", :params=>[trkr.email, enotice, usr]).delay unless trkr.email.blank?
+      #UserMailer.delay.send_notice(trkr.email, enotice, usr) unless trkr.email.blank?
     end
   end
   

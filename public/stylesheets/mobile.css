@@ -34,7 +34,7 @@
 .scroller {top: 44px; height: auto; min-height: 150%;}
 .evscroller {top:0; height: auto; min-height: 175%;}
 .scrollable {bottom: 50px; height: auto; min-height: 175%;}
-.home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
+.home-pg, .nearby-pg, .channelList {overflow: auto; overflow-x: hidden;}
 .home-pg {top: 111px; height: auto; min-height: 175%;}
 .channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:35px;}

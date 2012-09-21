@@ -2,7 +2,7 @@ class NotificationObserver < ActiveRecord::Observer
   observe Notification
   include ProcessNotice, UserInfo
 
-  def before_create(model)
+  def after_create(model)
     
     # get profile info
     usr = User.get_user(model.cid)
@@ -10,7 +10,9 @@ class NotificationObserver < ActiveRecord::Observer
     # send notification to email list
     (1..5).each do |i|
       method = 'email' + i.to_s + 'address'
-      model.send(method).blank? ? next : UserMailer.delay.send_notice(model.send(method), model, usr)     
+      unless model.send(method).blank? #? next : UserMailer.delay.send_notice(model.send(method), model, usr)  
+        DelayClassMethod.new("UserMailer", "send_notice", :params=>[model.send(method), model, usr]).delay 
+      end  
     end   
     
     # check for social network sharing & publish to user public events via oauth api

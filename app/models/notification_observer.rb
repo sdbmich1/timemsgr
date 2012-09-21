@@ -11,8 +11,8 @@ class NotificationObserver < ActiveRecord::Observer
     (1..5).each do |i|
       method = 'email' + i.to_s + 'address'
       email = model.send(method)
-      unless email.blank? #? next : UserMailer.delay.send_notice(model.send(method), model, usr)  
-        DelayClassMethod.new("UserMailer", "send_notice", :params=>[email, model, usr]).delay 
+      unless email.blank?   
+        DelayClassMethod.new("UserMailer", "send_notice", :params=>[email, model, usr]).delay if usr
       end  
     end   
     

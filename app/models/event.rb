@@ -76,7 +76,7 @@ class Event < KitsTsdModel
   end
   
   # build dynamic union to pull event data from dbs across different schemas
-  def self.current(edt, cid)
+  def self.current(edt, cid, limit=60, offset=0)
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
     where_hol = where_dte + " AND (e.event_type in ('h','m'))"
@@ -86,7 +86,8 @@ class Event < KitsTsdModel
          UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_hol})
-         ORDER BY eventstartdate, eventstarttime ASC", edt, edt, cid, edt, edt, cid, cid, edt, edt,
+         ORDER BY eventstartdate, eventstarttime ASC 
+         LIMIT #{limit} OFFSET #{offset}", edt, edt, cid, edt, edt, cid, cid, edt, edt,
                                                        cid, edt, edt, edt, edt, cid, edt, edt]) 
   end
 

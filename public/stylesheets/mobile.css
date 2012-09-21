@@ -27,15 +27,15 @@
       width: 100%;           
 }
 
-.subhead, .listpg {top: 75px; height: 175% }
-.form-top {top: 44px; height: 175%;}
-.nearby-top {top: 82px; height: auto; min-height:175%}
-.reg-top {top: 5px; height: 150%;}
-.scroller {top: 44px; min-height: 150%;}
-.evscroller {top:0; height: 175%;}
-.scrollable {bottom: 50px; height: 175%;}
+.subhead, .listpg {top: 75px; height: auto; min-height: 175% }
+.form-top {top: 44px; height: auto; min-height: 175%;}
+.nearby-top {top: 80px; height: auto; min-height:175%}
+.reg-top {top: 5px; height: auto; min-height: 150%;}
+.scroller {top: 44px; height: auto; min-height: 150%;}
+.evscroller {top:0; height: auto; min-height: 175%;}
+.scrollable {bottom: 50px; height: auto; min-height: 175%;}
 .home-pg, .nearby-pg, .channelList {bottom: 50px; overflow: auto; overflow-x: hidden;}
-.home-pg {top: 114px; height: auto; min-height: 175%;}
+.home-pg {top: 111px; height: auto; min-height: 175%;}
 .channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:35px;}
 .scrollable {top: 43px!important;}

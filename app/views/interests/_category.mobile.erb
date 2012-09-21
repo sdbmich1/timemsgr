@@ -1,6 +1,6 @@
 <!-- list all categories and related interests -->
 
-<div data-role="collapsible" data-mini='true'>
+<div data-role="collapsible">
 	<h3><%= "#{category.name.titleize}" %></h3>
 	<% category.interests.reorder('name').each do |sub| %>		
 		<fieldset data-role="controlgroup"> 

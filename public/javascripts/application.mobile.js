@@ -10,6 +10,11 @@ jQuery('div').live('pagehide', function(event, ui){
   };
 });
 
+// load for rails to handle non-GET HTTP requests
+$.rails.href = function(element) {
+  return element.data('href') || element.attr('href');
+}
+
 // set focus
 $('#formapp').bind('pageshow', function() {
     $($('.ui-page-active form :input:visible')[0]).focus();
@@ -18,7 +23,7 @@ $('#formapp').bind('pageshow', function() {
 $(document).ready(function() {	
 	
   // set checkbox	
-  $("input[type='checkbox']").checkboxradio();
+//  $("input[type='checkbox']").checkboxradio();
   
   // toggle location dropdown text
   matchLocation();
@@ -33,7 +38,8 @@ $(document).ready(function() {
   	  {	var url = '/nearby_events.mobile?location=' + loc; }    		
 
 	// change the page
-	window.location.href= url;
+//	window.location.href= url;
+  	$.mobile.changePage( url, { transition: "none", reload: true} ); 	  		
 
     //prevent the default behavior of the click event
     return false;
@@ -145,7 +151,9 @@ function setRecurEndDate() {
 
 $(document).ready(function() {	
   $(".nearby").live("click", function() {
-  	getMyLocation(false, true);  // get user location
+ 	
+  	// get user location	  		
+  	getMyLocation(false, true);   		
 
     //prevent the default behavior of the click event
     return false;  
@@ -169,7 +177,6 @@ $(".details").live("click", function() {
 
 $(".loadmore").live("click", function() {
     var page_num = $('.viewmore').attr('data-page') + 1;
-//	alert('page = ' + page_num);
     $.get('categories.js?page=' + page_num, function (data) {
         $('#moblist > li.viewmore').remove();
         $('#moblist').append(data);

@@ -127,5 +127,5 @@ after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphi
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  
 after "deploy:start",   "delayed_job:start"  
-after "deploy:restart", "delayed_job:restart" 
- 
+after "deploy:restart", "delayed_job:restart", "deploy:cleanup" 
+

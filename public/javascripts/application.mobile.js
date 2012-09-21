@@ -38,8 +38,7 @@ $(document).ready(function() {
   	  {	var url = '/nearby_events.mobile?location=' + loc; }    		
 
 	// change the page
-//	window.location.href= url;
-  	$.mobile.changePage( url, { transition: "none", reload: true} ); 	  		
+	window.location.href= url;
 
     //prevent the default behavior of the click event
     return false;
@@ -120,11 +119,12 @@ $(document).bind('pageinit', function() {
 // toggle location selectmenu after search by city
 function matchLocation() {
 	var srchText = $('.srchText').attr("data-query");
-	if ( $('#loc_id').length != 0 && (typeof srchText != 'undefined'))
+	if (typeof srchText != 'undefined') {
+	   if ( $('#loc_id').length != 0 )
  		  {
    	 		var tmp = $("#loc_id option:contains(" + capitalize(srchText) + ")").val();
    	 		$("#loc_id option[value='" + tmp + "']").attr('selected', 'selected');
-   	 	  }	
+   	 	  }	}
 }
 
 // set enddate to startdate

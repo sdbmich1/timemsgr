@@ -1,5 +1,5 @@
 class InterestsController < ApplicationController
-  before_filter :authenticate_user!, :unless => :mobile_create?
+  before_filter :authenticate_user!#, :unless => :mobile_create?
   before_filter :load_data	
   layout :page_layout
 	respond_to :html, :json, :xml, :js

@@ -256,7 +256,7 @@ class User < ActiveRecord::Base
       interest = Interest.find(i) rescue nil
       
       # find correct channel based on location
-      BuildUserSubscriptions.new interest.name, self if interest
+      BuildUserSubscriptions.new(interest.name, self).create if interest
     end        
   end
   

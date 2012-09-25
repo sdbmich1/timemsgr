@@ -39,8 +39,7 @@ class UserObserver < ActiveRecord::Observer
     newuser_notice(user)
     
     # send welcome email
-    DelayClassMethod.new("UserMailer", "welcome_email", :params=>[user]).delay
-    #UserMailer.delay.welcome_email(user)    
+    DelayClassMethod.new("UserMailer", "welcome_email", :params=>[user]).perform.delay
   end
   
   def after_update user
@@ -50,6 +49,7 @@ class UserObserver < ActiveRecord::Observer
       hp.promoCode = user.promo_code
       hp.save
       
+      # check promo code add subscriptions if found
       check_promo_code(user) unless user.promo_code.blank?
     end
   end
@@ -65,17 +65,17 @@ class UserObserver < ActiveRecord::Observer
         UserInterest.create :user_id=>user.id, :interest_id=>int.id
         
         # find correct channel based on location
-        BuildUserSubscriptions.new interest.name, user
+        BuildUserSubscriptions.new(interest.name, user).create
       end
       
       # match education to channels
       oauth_user.education.each do |ed|
-        BuildUserSubscriptions.new ed.school.name, user if ed.school
+        BuildUserSubscriptions.new(ed.school.name, user).create if ed.school
       end
 
       # match likes to channels
       oauth_user.likes.each do |lk|
-        BuildUserSubscriptions.new lk.name, user
+        BuildUserSubscriptions.new(lk.name, user).create        
       end
     end
     

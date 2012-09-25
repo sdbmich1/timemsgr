@@ -48,7 +48,7 @@ class InterestsController < ApplicationController
   end
   
   def complete_user_registration
-    add_credits 
+#    add_credits 
     @user.add_initial_subscriptions
   end
 	

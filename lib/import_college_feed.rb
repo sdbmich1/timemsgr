@@ -113,7 +113,7 @@ class ImportCollegeFeed
       sdt = target_page.search('.dtstart').text.split(': ')[1] rescue nil
       stm = target_page.search('.dtstart').text.split(': ')[2].split("\n")[0] rescue nil
       edt = target_page.search('.dtend').text rescue nil
-      url = target_page.search('.url').text
+      url = target_page.search('.url').text rescue nil
       
       # set event times
       start_time = sdt && stm ? (sdt + stm).to_datetime : sdt.to_datetime 
@@ -122,12 +122,12 @@ class ImportCollegeFeed
       # p "Event : #{etitle} | #{sdt} | #{start_time} | #{etime}"
       
       # get event details
-      loc = target_page.search('.location').text.split(': ')[1] 
-      host = target_page.search('.organiser').text.split(': ')[1].strip
-      contact = target_page.search('.contact').text.split(': ')[1].strip
-      email = target_page.search('.email').text.split(': ')[1].strip
-      phone = target_page.search('.phone').text.split(': ')[1].strip
-      details = target_page.search('.description').text 
+      loc = target_page.search('.location').text.split(': ')[1] rescue nil
+      host = target_page.search('.organiser').text.split(': ')[1].strip rescue nil
+      contact = target_page.search('.contact').text.split(': ')[1].strip rescue nil
+      email = target_page.search('.email').text.split(': ')[1].strip rescue nil
+      phone = target_page.search('.phone').text.split(': ')[1].strip rescue nil
+      details = target_page.search('.description').text rescue nil
       contact ? details += ' <br /> Contact: ' + contact : details
       phone ? details += ' <br /> ' + phone : details
       cs_url = site_url + pg.href

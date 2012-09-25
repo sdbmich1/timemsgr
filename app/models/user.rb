@@ -123,11 +123,12 @@ class User < ActiveRecord::Base
     else # Create a user with a stub password. 
       user = User.new(:first_name => data.first_name, :last_name => data.last_name, 
         :username => data.username ? data.username : data.nickname, :birth_date => ResetDate.convert_date(data.birthday),
-        :location_id => get_location(data.location.name.split(', ')[0]), :city => data.location.name,
         :localGMToffset => data.timezone.to_i, :gender => data.gender.capitalize, :email => data.email, 
         :password => Devise.friendly_token[0,20]) 
-      UserInfo.oauth_user = user.get_facebook_user access_token          
+      user.location_id, user.city = get_location(data.location.name.split(', ')[0]), data.location.name if data.location       
       user.save(:validate => false)  
+      
+      UserInfo.oauth_user = user.get_facebook_user access_token          
       user
     end
   end

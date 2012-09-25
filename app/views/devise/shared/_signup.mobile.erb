@@ -12,13 +12,14 @@
   			<p><label for="user_password">Password</label><%= f.password_field :password %></p>
 		<p><%= f.select :gender, options_for_select( ['Male', 'Female'], :prompt => 'Select Gender' ) %></p>
 		<p><span>Birthdate</span></p>	
-   		<p><div data-role="fieldcontain" class="center-wrapper">
+   		<p><div class="center-wrapper">
+   			<div data-role="fieldcontain">
 			<fieldset data-role="controlgroup" data-type="horizontal">
     			<%= f.date_select :birth_date, {:as => :date, :start_year => Date.today.year - 13, :end_year => Date.today.year - 90, 
                                 :order => [:month, :day, :year], :required => true, :prompt => true,
-                                :hint => "This helps find content for you."}  %>
+                                :use_short_month => true}  %>
         	</fieldset>
-        </div></p>               
+        </div></div></p>               
  		<p><%= f.collection_select :location_id, Location.all, :id, :city, {:prompt => 'Select Home City'} %></p>
 		<p><label for="user_promo_code">Enter promo code</label><%= f.text_field :promo_code %></p>
 		

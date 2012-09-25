@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
   protected
    
   def rescue_with_handler(exception)
+    ExceptionNotifier::Notifier.exception_notification(request.env, exception).deliver
     redirect_to '/500.html'
   end       
   

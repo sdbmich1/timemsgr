@@ -35,7 +35,7 @@ module ProcessNotice
             :sourceID=>trkr.ssid, :subscriberID=>usr.ssid, :Notice_ID=>'cr' + model.id.to_s )
 
     #also send email to person
-    DelayClassMethod.new("UserMailer", "send_request", :params=>[trkr.email, enotice, usr]).perform.delay unless trkr.email.blank?
+    DelayClassMethod.new("UserMailer", "send_request", :params=>[trkr.email, enotice, usr]).delay.perform unless trkr.email.blank?
   end
   
   def reminder_notice model, ptype
@@ -56,7 +56,7 @@ module ProcessNotice
             :event_id=>get_event_id(model) )
       
       #also send email to each person
-      DelayClassMethod.new("UserMailer", "send_notice", :params=>[trkr.email, enotice, usr]).perform.delay unless trkr.email.blank?
+      DelayClassMethod.new("UserMailer", "send_notice", :params=>[trkr.email, enotice, usr]).delay.perform unless trkr.email.blank?
     end
   end
   

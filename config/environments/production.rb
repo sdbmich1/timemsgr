@@ -25,7 +25,7 @@ Timemsgr::Application.configure do
   config.action_mailer.asset_host = "Starfleet5152V2.kitsus.rbca.net"
 
   # Disable delivery errors, bad email addresses will be ignored
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_deliveries = true
 
   # Enable threaded mode

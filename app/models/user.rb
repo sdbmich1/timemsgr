@@ -125,7 +125,8 @@ class User < ActiveRecord::Base
         :username => data.username ? data.username : data.nickname, :birth_date => ResetDate.convert_date(data.birthday),
         :localGMToffset => data.timezone.to_i, :gender => data.gender.capitalize, :email => data.email, 
         :password => Devise.friendly_token[0,20]) 
-      user.location_id, user.city = get_location(data.location.name.split(', ')[0]), data.location.name if data.location       
+      user.location_id, user.city = get_location(data.location.name.split(', ')[0]), data.location.name if data.location 
+      user.location_id, user.city = 4, 'San Francisco' unless user.city      
       user.save(:validate => false)  
       
       UserInfo.oauth_user = user.get_facebook_user access_token          

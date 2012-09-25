@@ -253,17 +253,16 @@ class User < ActiveRecord::Base
   
   def add_initial_subscriptions
     self.interest_ids.each do |i|
-      interest = Interest.find(i).name rescue nil
+      interest = Interest.find(i) rescue nil
       
       # find correct channel based on location
-      cid = LocalChannel.select_channel(interest, self.city, self.location).flatten 1 if interest
-      cid.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(:user_id=>self.id, :channelID => channel.channelID, :contentsourceID => self.ssid) } if cid   
+      BuildUserSubscriptions.new interest.name, self if interest
     end        
   end
   
   def nearby_users
-   ulist = User.where("location_id = ?", self.location_id).limit(30)
-   ulist.reject{|usr| usr.profile_type != 'Individual'}
+    ulist = User.where("location_id = ?", self.location_id).limit(30)
+    ulist.reject{|usr| usr.profile_type != 'Individual'}
   end 
   
   # define sphinx search indexes and criteria

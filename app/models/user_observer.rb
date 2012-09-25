@@ -43,7 +43,7 @@ class UserObserver < ActiveRecord::Observer
     #UserMailer.delay.welcome_email(user)    
   end
   
-  def before_update user
+  def after_update user
     # add subscriptions if promo code is valid    
     if user.changes[:promo_code]
       hp = user.profile 
@@ -53,7 +53,7 @@ class UserObserver < ActiveRecord::Observer
       check_promo_code(user) unless user.promo_code.blank?
     end
   end
-  
+      
   private
   
   def add_subscriptions user
@@ -65,20 +65,17 @@ class UserObserver < ActiveRecord::Observer
         UserInterest.create :user_id=>user.id, :interest_id=>int.id
         
         # find correct channel based on location
-        cid = LocalChannel.select_channel(interest.name, user.city, user.location)
-        cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+        BuildUserSubscriptions.new interest.name, user
       end
       
       # match education to channels
       oauth_user.education.each do |ed|
-        cid = LocalChannel.select_channel ed.school.name, user.city, user.location
-        cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+        BuildUserSubscriptions.new ed.school.name, user if ed.school
       end
 
       # match likes to channels
       oauth_user.likes.each do |lk|
-        cid = LocalChannel.select_channel lk.name, user.city, user.location
-        cid.map { |ch| ch.map {|channel| Subscription.find_or_create_by_user_id_and_channelID(user.id, channel.channelID) {|u| u.contentsourceID = user.ssid}} } if cid   
+        BuildUserSubscriptions.new lk.name, user
       end
     end
     

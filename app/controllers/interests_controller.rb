@@ -12,7 +12,7 @@ class InterestsController < ApplicationController
 	def create
     @user.attributes = {'interest_ids' => []}.merge(params[:user] || {})
     if @user.update_attributes(params[:user])
-      add_credits; @user.add_initial_subscriptions
+      complete_user_registration
       redirect_to events_path
     else
       render :action => 'new'
@@ -45,6 +45,11 @@ class InterestsController < ApplicationController
 	  if user_signed_in? && !mobile_device?
       @selected_ids = @user.interest_ids  # check interest ids
     end
+  end
+  
+  def complete_user_registration
+    add_credits 
+    @user.add_initial_subscriptions
   end
 	
 	def add_credits

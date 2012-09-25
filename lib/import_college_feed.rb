@@ -150,7 +150,8 @@ class ImportCollegeFeed
     new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(args[10]) 
     new_event.event_type, new_event.event_title, new_event.cbody, new_event.postdate = 'ce', args[1][0..199], args[2], args[3]
     new_event.eventstartdate, new_event.eventstarttime, new_event.eventenddate = args[4], args[5], args[6]
-    new_event.contentsourceURL, new_event.location, new_event.contentsourceURL = args[0], args[9][0..254], args[13]
+    new_event.contentsourceURL, new_event.contentsourceURL = args[0], args[13]
+    new_event.location = args[9][0..254] if args[9]
     new_event.contentsourceID = new_event.subscriptionsourceID = args[7]
     new_event.localGMToffset = new_event.endGMToffset = args[8]
     new_event.eventendtime = args[11] if args[11]

@@ -11,7 +11,7 @@
 	background: #FFFFFF!important;
 }  
 
-.ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: 100%;}
+.ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: auto;}
 
 #mapPage {height: 100%;}
 

@@ -1,6 +1,5 @@
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
-require 'exception_notifier'
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Timemsgr
@@ -27,13 +26,5 @@ module Timemsgr
     
     # add google analytics
     config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-28841665-1") if Rails.env.production?
-    
-    # exception notification
-    if Rails.env.production?
-      config.middleware.use ExceptionNotifier,
-        :email_prefix => "Koncierge: ",
-        :sender_address => %{"Koncierge Admin" <koncierge@rbca.net>},
-        :exception_recipients => %w{sdbmich1@gmail.com}
-    end  
   end
 end

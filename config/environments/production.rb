@@ -1,3 +1,4 @@
+require 'exception_notifier'
 Timemsgr::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -9,14 +10,6 @@ Timemsgr::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # If you have no front-end server that supports something like X-Sendfile,
-  # just comment this out and Rails will serve the files
-  # Specifies the header that your server uses for sending files
-  # config.action_dispatch.x_sendfile_header = "X-Sendfile"
-
-  # For nginx:
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
-
   # See everything in the log (default is :info)
   # config.log_level = :debug
 
@@ -26,9 +19,6 @@ Timemsgr::Application.configure do
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
   config.serve_static_assets = true
-
-  # Enable serving of images, stylesheets, and javascripts from an asset server
-  # config.action_controller.asset_host = "http://assets.example.com"
 
   # set mailer host
   config.action_mailer.default_url_options = { :host => 'Starfleet5152V2.kitsus.rbca.net' }
@@ -48,8 +38,14 @@ Timemsgr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
-    # added for memcached
+  # added for memcached
   config.cache_store = :dalli_store #, '127.0.0.1', '127.0.0.1:11211', { :namespace => 'dev' }
+      
+  # exception notification
+  config.middleware.use ExceptionNotifier,
+        :email_prefix => "Koncierge: ",
+        :sender_address => %{"Koncierge Admin" <koncierge@rbca.net>},
+        :exception_recipients => %w{sdbmich1@gmail.com}
   
   if defined?(PhusionPassenger)
     PhusionPassenger.on_event(:starting_worker_process) do |forked|

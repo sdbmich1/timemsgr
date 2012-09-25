@@ -73,8 +73,7 @@
 .cvv { width: 50px!important; clear:right;}
 .cc-date { width: 80px!important; }
 .info { color: #FFFFFF; }
-.nav-right { float: right; }
-
+.pad-left {padding-left: 10px}
 .slider-etime { position: absolute; top: 4em!important; margin: 0; height: 2.5em; }
 
 .ui-li-thumb, .ui-li-icon {

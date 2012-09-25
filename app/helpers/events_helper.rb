@@ -270,9 +270,9 @@ module EventsHelper
   
   def get_trkr_schedule(usr, elist, dt)
     (usr.private_trackers | usr.private_trackeds).each do |pt|
-      elist = elist | pt.private_events.map {|e| set_event_text(e, pt.first_name, dt)}
+      elist = elist | pt.private_events.map {|e| set_event_text(e, pt.first_name, dt); @trkd = true}
     end
-    @trkd = elist ? true : false
+#    @trkd = elist ? true : false
     elist
   end
     

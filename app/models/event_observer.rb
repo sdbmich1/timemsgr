@@ -8,7 +8,7 @@ class EventObserver < ActiveRecord::Observer
     if model.class.to_s == 'LifeEvent'
       set_annual_event model if model.annualsamedate == 'yes'
     else
-      set_frequency(model) unless model.reoccurrencetype == 'once'
+      set_frequency(model) unless once?(model)
     end
   end
 
@@ -195,9 +195,9 @@ class EventObserver < ActiveRecord::Observer
   
   # add events to db
   def add_future_events rc, model  
-    rc.each do |date| 
+    rc.each do |dte| 
       new_event = model.clone
-      new_event.eventstartdate = new_event.eventenddate = date
+      new_event.eventstartdate = new_event.eventenddate = dte
       new_event.eventstarttime, new_event.eventendtime = model.eventstarttime, model.eventendtime       
       new_event.reoccurrencetype, new_event.reoccurrenceenddate = 'once', nil if model.class.to_s == 'PrivateEvent' 
       new_event.annualsamedate = nil if model.class.to_s == 'LifeEvent' 
@@ -223,5 +223,9 @@ class EventObserver < ActiveRecord::Observer
   
   def wkday model
     model.eventstartdate.wday
+  end
+  
+  def once? model
+    model.reoccurrencetype == 'once' || model.reoccurrencetype.blank?
   end
 end

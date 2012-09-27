@@ -41,7 +41,7 @@ class EventsController < ApplicationController
   end
  	
  	def load_data
-    @credits, @meters = get_credits(current_user.id), get_meter_info  
+    @credits, @meters, @trkd = get_credits(current_user.id), get_meter_info, false  
     @enddate = params[:end_date] ? Date.today+params[:end_date].to_i.days : Date.today+7.days 
     PrivateEvent.add_facebook_events @facebook_user, @user if @facebook_user
 	end

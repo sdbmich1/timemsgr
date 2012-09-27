@@ -247,7 +247,7 @@ module EventsHelper
   end
   
   def chk_action(action, event)
-    action == 'new' ? true : event.cid == event.ssid ? true : false
+    action == 'new' || action == 'edit' ? true : event.cid == event.ssid ? true : false
   end
   
   def get_sponsor_type(ary)
@@ -268,11 +268,19 @@ module EventsHelper
     event    
   end
   
+  def shared? e
+    if e.allowPrivCircle == 'yes'
+      @trkd = true
+      true
+    else
+      false
+    end
+  end
+  
   def get_trkr_schedule(usr, elist, dt)
     (usr.private_trackers | usr.private_trackeds).each do |pt|
-      elist = elist | pt.private_events.map {|e| set_event_text(e, pt.first_name, dt); @trkd = true}
+      elist = elist | pt.private_events(@enddate).map {|e| set_event_text(e, pt.first_name, dt) if shared?(e) }
     end
-#    @trkd = elist ? true : false
     elist
   end
     

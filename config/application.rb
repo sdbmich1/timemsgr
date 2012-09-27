@@ -1,5 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
+require 'yaml'
+YAML::ENGINE.yamler= 'syck'
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Timemsgr

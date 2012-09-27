@@ -211,8 +211,8 @@ class User < ActiveRecord::Base
     profile.HostName
   end
   
-  def private_events
-    profile.private_events
+  def private_events sdt=Date.today+7.days
+    profile.private_events.range sdt
   end
   
   def promoCode

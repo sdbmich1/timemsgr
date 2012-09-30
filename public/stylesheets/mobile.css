@@ -20,10 +20,10 @@
 .ui-header .ui-btn-corner-all,
 .ui-listview-filter .ui-btn-corner-all
 {
-
-border-radius:0.2em!important;
-
+	border-radius:0.2em!important;
 }
+
+.menu_options {background:#C2E1EF; font-weight:bold!important;}
 
 .ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: auto;}
 

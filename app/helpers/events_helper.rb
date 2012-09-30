@@ -498,7 +498,8 @@ module EventsHelper
   end
   
   def select_options action
-    action == 'Yes' ? %W(Go Home Menu) : %W(Go Home Menu Website)    
+#    action == 'Yes' ? %W(Go Home Menu) : %W(Go Home Menu Website)
+    action == 'Yes' ? [['Go', {:class=>'menu_options'}], ['Home'], ['Menu']] : [['Go', {:class=>'menu_options'}], ['Home'], ['Menu'], ['Website']]   
   end
   
   def event_cntr?

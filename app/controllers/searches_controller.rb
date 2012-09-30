@@ -4,7 +4,7 @@ class SearchesController < ApplicationController
 
   def index
     @results = ThinkingSphinx.search query, :classes => [CalendarEvent, Event], :conditions => {:mapcity => @location.city}, 
-        :order => :eventstartdate, :page => params[:page] || 1, :per_page => offset
+        :order => :eventstartdate, :page => params[:page] || 1, :per_page => offset unless query.blank?
     @enddate ||= Date.today+7.days
   end
   

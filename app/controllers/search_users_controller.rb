@@ -4,7 +4,7 @@ class SearchUsersController < ApplicationController
 
   def index
     @rel_type, page = params[:rtype], params[:page] || 1
-    @users = User.search query
+    @users = User.search query unless query.blank?
   end
   
   private

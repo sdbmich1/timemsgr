@@ -123,12 +123,14 @@ function chkAnnualEvent(etype) {
 		if ($('#annual').length != 0) {  $('#annual').prop("checked", true); }
   		if ($('#annualflg').length != 0) { $('#annualflg').attr("checked", true).checkboxradio('refresh'); }
   		
+  		// set time for web app
   		var sdt = $("#start-time").prop('selectedIndex', 0).val();  
   		var edt = $("#end-time").prop('selectedIndex', 287).val();  
 
   		$("#start-time").val(sdt);
   		$("#end-time").val(edt);
   		
+  		// set time for mobile device
   		$('#start-tm').val('12:00 AM');
   		$('#end-tm').val('11:59 PM');
       }
@@ -295,7 +297,7 @@ function set_accordion(element) {
 }
 
 
-// when the #start time field changes by toggling select index
+// when the #start time field changes by toggling select index on web app
 $(function (){
   $("#start-time").live('change',function() {
   	var idx = this.selectedIndex + 12;  

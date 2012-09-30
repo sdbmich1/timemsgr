@@ -6,9 +6,13 @@
 
 <%= content_for :content do -%>
 	<ul data-role="listview">
-		<% chkConnections(@users).each do |usr| %>
-			<%= render :partial => 'mobile/user_item', :locals => {:model => usr} unless connected?(usr) %>
-		<% end %>	
+		<% if @users %>
+			<% chkConnections(@users).each do |usr| %>
+				<%= render :partial => 'mobile/user_item', :locals => {:model => usr} unless connected?(usr) %>
+			<% end %>
+		<% else %>
+			<div class="stitle center-wrapper"><h6><%= 'No users found. Please try again.'  %></h6></div>		
+  		<% end %>		
 	</ul>
 <% end -%>
 

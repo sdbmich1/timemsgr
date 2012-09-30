@@ -38,7 +38,7 @@ $(document).ready(function() {
   	  {	var url = '/nearby_events.mobile?location=' + loc; }    		
 
 	// change the page
-	window.location.href= url;
+	goToUrl(url);
 
     //prevent the default behavior of the click event
     return false;
@@ -51,11 +51,36 @@ $(document).ready(function() {
   	var url = '/list.mobile?location=' + loc + "&category_id=" + category;
   	
 	// change the page
-	window.location.href= url;
+	goToUrl(url);
 
     //prevent the default behavior of the click event
     return false;
   });
+  
+  $("#menu_id").live("change", function() {
+    var menu = $(this).val(); // grab the selected location 
+    
+    if ( menu.length != 0 ) {
+    	switch(menu) {
+    		case 'Home': 
+    			goToUrl('/events.mobile');
+    			break;
+    		case 'Menu': 
+    			goToUrl('/home/user');
+    			break;
+    		case 'Website': 
+    			var url = $('.ev-loc').attr('data-loc');
+   				if ( url.length != 0 ) {	
+					goToUrl(url);
+   				}   
+   				break; 	
+   	 }
+  }
+  
+    //prevent the default behavior of the click event
+    return false;
+  });
+  
     
   // used to toggle reminder
   $("#rflg").live('click',function() {
@@ -74,7 +99,7 @@ $(document).ready(function() {
   $(".srchflg").live('click',function() {
 	$('.evsearch').toggle();
 	if ($('.evsearch').is(':visible')) {
-		$(".home-pg, .nearby-pg, .channelList").css('margin-top', '35px');
+		$(".home-pg, .nearby-pg, .channelList").css('margin-top', '30px');
 	}
 	else {
 		$(".home-pg, .nearby-pg, .channelList").css('margin-top', 0);		
@@ -91,7 +116,7 @@ $(document).bind('pageinit', function() {
     var pwd = $('#password').val();
   	var url = '/gcal_import.mobile?uid=' + uid + "&pwd=" + pwd; 
 
-  	$.mobile.changePage( url, { transition: "none", reload: true} ); 	  		
+	goToUrl(url);	
 	return false;
   });
 });
@@ -115,6 +140,10 @@ $(document).bind('pageinit', function() {
         window.scrollTo(0, 1); // Hide the address bar!
     }, 0);
   });  
+
+function goToUrl(url) {
+	window.location.href= url;
+}
 
 // toggle location selectmenu after search by city
 function matchLocation() {
@@ -170,7 +199,7 @@ $(".details").live("click", function() {
   	var url = '/details.mobile?loc=' + loc + "&lnglat=" + lnglat + "&title=" + encodeURIComponent(title) + "&mode=" + mode;
   	
 	// change the page
-	window.location.href= url;
+	goToUrl(url);	
 
     //prevent the default behavior of the click event
     return false;

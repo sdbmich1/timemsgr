@@ -1,20 +1,21 @@
+<div class='ev-loc' data-loc="<%= event.location %>"></div>
   <div data-role="navbar">
 	  <ul>
-		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
-
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
 			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
 					"data-icon"=>"add", 'data-ajax'=>"false", :class=>'sch-event', :method => :post %> </li>
 		<% elsif private_event?(event.event_type) %>		
 			<li><%= link_to "Edit", edit_private_event_url(event, :eid=>event.eventid), "data-icon"=>"custom", :id => "edit" %> </li>
+      		<li><%= link_to "Clone", clone_private_event_path(event, :eid=>event.eventid), :confirm => 'Clone this event?', "data-icon"=>"custom", :id => "clone" %></li>
 			<li><%= link_to "Delete", private_event_url(event, :eid=>event.eventid), :method => 'delete', :confirm => 'Delete this event?','data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>					
 		<% elsif life_event?(event.event_type) %>
 			<li><%= link_to "Edit", edit_life_event_url(event, :eid=>event.eventid), "data-icon"=>"custom", :id => "edit" %> </li>
+      		<li><%= link_to "Clone", clone_life_event_path(event, :eid=>event.eventid), :id => "clone", :confirm => 'Clone this event?', "data-icon"=>"custom" %></li>
 			<li><%= link_to "Delete", life_event_url(event, :eid=>event.eventid), :method => 'delete', :confirm => 'Delete this event?','data-ajax'=>"false", "data-icon"=>"custom", :id => "delete" %> </li>
 		<% end %>
 
-		<% if life_event?(event.event_type) || private_event?(event.event_type) %>
-			<li><%= link_to "Share", new_notification_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), "data-icon"=>"custom", :id => "notify" if event.end_date >= Date.today %> </li>
+		<% if (life_event?(event.event_type) || private_event?(event.event_type)) && event.end_date >= Date.today %>
+			<li><%= link_to "Share", new_notification_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), "data-icon"=>"custom", :id => "notify" %> </li>
 		<% end %>
 						
 		<% if rsvp?(event.rsvp) %>
@@ -29,8 +30,6 @@
 		<% end %>
 		<% unless has_location?(event) %>
 		 <li><%= link_to "Map", maps_url(:loc=>map_loc(event), :lnglat=>get_lnglat(event), :title=>map_title(event)), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li> 	
-		<% else %>
-			<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>   		
 	  	<% end %>
  
 	  </ul>

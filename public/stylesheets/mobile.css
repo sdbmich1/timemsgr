@@ -11,6 +11,20 @@
 	background: #FFFFFF!important;
 }  
 
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-bottom,
+.ui-corner-tl,
+.ui-corner-tr,
+.ui-corner-bl,
+.ui-header .ui-btn-corner-all,
+.ui-listview-filter .ui-btn-corner-all
+{
+
+border-radius:0.2em!important;
+
+}
+
 .ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: auto;}
 
 #mapPage {height: 100%;}
@@ -35,7 +49,7 @@
 .evscroller {top:0; height: auto; min-height: 175%;}
 .scrollable {bottom: 50px; height: auto; min-height: 175%;}
 .home-pg, .nearby-pg, .channelList {overflow: auto; overflow-x: hidden;}
-.home-pg {top: 111px; height: auto; min-height: 175%;}
+.home-pg {top: 109px; height: auto; min-height: 175%;}
 .channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:35px;}
 .scrollable {top: 43px!important;}
@@ -222,7 +236,7 @@ a:hover, a:visited {
   text-decoration: none;
   }
   
-#search-mform { display: block; }
+#search-mform { display: inline; margin-bottom: 5px;}
 
 .search-fld {width: 65%!important; background-color:#FFFFFF!important; display:inline!important;}
 .search_button {width: 24px; height: 24px; }
@@ -245,6 +259,7 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #delete .ui-icon { background:  url("../images/ev-delete.png") 50% 50% no-repeat; size: 22px 27px; }
 #rsvp .ui-icon { background:  url("../images/ev-rsvp.png") 50% 50% no-repeat; size: 22px 27px; }
 #edit .ui-icon { background:  url("../images/ev-gear.png") 50% 50% no-repeat; size: 22px 27px; }
+#clone .ui-icon { background:  url("../images/ev-copy.png") 50% 50% no-repeat; size: 24px 24px; }
 #map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
 #website .ui-icon { background:  url("../images/website.png") 50% 50% no-repeat; size: 24px 24px; }
 #msg .ui-icon { background:  url("../images/icon_mail.png") 50% 50% no-repeat; size: 24px 22px; }

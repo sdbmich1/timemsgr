@@ -53,7 +53,7 @@ class PrivateEventsController < ApplicationController
   end
     
   def clone 
-    @event = PrivateEvent.clone_event(params[:id], params[:eid]) 
+    @event = PrivateEvent.locate_event(params[:id], params[:eid]).clone_event 
   end
   
   def gcal_import

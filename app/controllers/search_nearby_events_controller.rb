@@ -3,7 +3,8 @@ class SearchNearbyEventsController < ApplicationController
   layout :page_layout
 
   def index    
-    @nearby_events = CalendarEvent.search query, :conditions => {:mapcity => @location.city + '*'}, :page => params[:page] || 1, :per_page => offset
+    @nearby_events = CalendarEvent.search query, :conditions => {:mapcity => @location.city + '*'}, :page => params[:page] || 1, 
+        :per_page => offset unless query.blank?
     @enddate ||= Date.today+7.days
   end
   

@@ -214,7 +214,7 @@ class PrivateEvent < ActiveRecord::Base
       self.event_title, self.bbody = self.event_name, self.cbody
       self.postdate, self.CreateDateTime = Date.today, Time.now
       self.eventid = self.event_type[0..1] + Time.now.to_i.to_s if self.eventid.blank? 
-      self.reoccurrencetype ||= 'once'
+      self.reoccurrencetype = 'once' if self.reoccurrencetype.blank?
     end
   end
   

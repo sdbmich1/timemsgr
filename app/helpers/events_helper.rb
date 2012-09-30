@@ -183,7 +183,7 @@ module EventsHelper
   end
   
   def get_event_list(dt)
-    elist = get_trkr_schedule(@user, get_user_events, dt).select {|e| (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
+    elist = get_trkr_schedule(@user, get_user_events, dt).select {|e| e && (e.cid == @user.ssid || trkr_event?(e.cid)) && e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}     
     elist = parse_list elist, dt    
   end
   
@@ -493,8 +493,15 @@ module EventsHelper
     (%w(new edit create update).detect { |x| x == action_name})
   end
   
-  
   def map_btn?
     controller_name == 'events' && action_name != 'index'
+  end
+  
+  def select_options action
+    action == 'Yes' ? %W(Go Home Menu) : %W(Go Home Menu Website)    
+  end
+  
+  def event_cntr?
+    !(controller_name =~ /events/i).nil? && action_name != 'index' ? true : false
   end
 end

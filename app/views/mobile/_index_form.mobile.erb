@@ -1,13 +1,19 @@
 
-<% content_for :head do %>	<% if data_form? %>
-		<%= link_to 'Home', home_path, :class=>'ui-btn-left', "data-icon"=>"home", "data-iconpos"=>'notext' %>
-		<%= link_to 'Menu', home_user_path, :class=>'ui-btn-right', "data-icon"=>"gear", "data-iconpos"=>'notext' %>
-	<% elsif action_name == 'show' || controller_name == 'maps' %>
-		<%= link_to "Back", :back, "data-role" => "button" %>
+<% content_for :head do %>  <div>
+	<% if data_form? %>
+		<% unless controller_name == 'interests' && action_name == 'new' %>
+		  <%= select_tag 'Go', options_for_select( select_options('Yes') ), {:class=>'ui-btn-right', 'data-mini'=>"true", :id=>'menu_id', 'data-icon'=>"arrow-d", 
+				'data-iconpos'=>"right"} %>
+		<% end %>
+	<% elsif event_cntr? %>
+		<%= select_tag 'Go', options_for_select( select_options('No') ), {:class=>'ui-btn-right', 'data-mini'=>"true", :id=>'menu_id', 'data-icon'=>"arrow-d", 
+				'data-iconpos'=>"right"} %>
 	<% end %>
-	<h3><%= "#{title}" %>
+  </div>
+	
+  <h3><%= "#{title}" %>
 	<% if events_index? %>
 		<%= link_to get_unread_count(@user), event_notices_url(:sid=>@user.ssid), :class=>"notice-btn round" %>
 	<% end %>
-	</h3>
+  </h3>
 <% end %>

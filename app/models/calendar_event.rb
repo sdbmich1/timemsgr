@@ -74,7 +74,34 @@ class CalendarEvent < KitsCentralModel
   def listing
     event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..29] + '...' rescue nil
   end
-    
+
+  def self.view_obs?(loc, val)
+    if val == 'USA'
+      loc.blank? ? true : !(loc =~ /^.*\b(United States|USA)\b.*$/i).nil?
+    else
+      !(loc =~ /^.*\b(val)\b.*$/i).nil?
+    end
+  end
+  
+  # need to override the json view to return what full_calendar is expecting.
+  # http://arshaw.com/fullcalendar/docs/event_data/Event_Object/
+  def as_json(options = {})
+    {
+      :id => self.ID,
+      :title => self.event_name,
+      :description => self.bbody || "",
+      :start => self.eventstartdate.to_i,
+      :end => self.eventenddate.to_i,
+      :allDay => holiday?,
+      :recurring => false,
+      :url => Rails.application.routes.url_helpers.event_path(id),
+    }
+  end
+  
+  def holiday?
+    (%w(h m).detect { |x| x == self.event_type})
+  end
+     
   def set_flds
     if new_record?
       self.hide, self.cformat, self.status, self.LastModifyBy, self.rsvp = "no", "html", "active", "system", "No"
@@ -85,6 +112,20 @@ class CalendarEvent < KitsCentralModel
     self.LastModifyDateTime = Time.now  
     self.event_name,self.bbody = self.event_title[0..99], self.cbody
   end
+  
+  def self.cal_events edt, loc='USA'
+    get_calendar(edt).select {|e| view_obs?(e.location, loc)}
+  end
+  
+  def self.get_calendar edt
+    select('ID, event_name, eventstartdate, eventenddate, bbody, event_type, eventid, location').where(where_dt, edt, edt)
+  end  
+  
+  def self.where_dt
+      "(LOWER(status) = 'active' AND LOWER(hide) = 'no' AND event_type IN ('h', 'm') ) 
+        AND ((eventstartdate >= curdate() and eventstartdate <= ?) 
+        OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)) "
+  end  
     
   define_index do
     indexes :event_name, :sortable => true

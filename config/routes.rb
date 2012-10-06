@@ -24,7 +24,7 @@ Timemsgr::Application.routes.draw do
   
   # controllers for user specific content
   resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
-    :search_users, :search_private_events, :local_channels, :maps, :import_events, :search_nearby_events
+    :search_users, :search_private_events, :local_channels, :maps, :import_events, :search_nearby_events, :calendars
     
   resources :local_subscriptions, :only => [:create, :new]
   resources :nearby_events, :only => [:index]

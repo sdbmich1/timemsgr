@@ -1,8 +1,8 @@
 html, body {  }
 
-table { border: 1px solid blue!important; }
+#channel_form table { border: 1px solid blue!important; }
 
-th { background: #000000; color: #ffffff; font-weight: bold }
+th { background: #0C6FCB; color: #ffffff; font-weight: bold }
 
 .container {
 /*  width: 710px; */  

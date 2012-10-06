@@ -63,7 +63,7 @@ $(document).ready(function() {
     if ( menu.length != 0 ) {
     	switch(menu) {
     		case 'Home': 
-    			goToUrl('/events.mobile');
+    			goToUrl('/events');
     			break;
     		case 'Menu': 
     			goToUrl('/home/user');

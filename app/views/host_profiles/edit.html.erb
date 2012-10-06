@@ -1,0 +1,14 @@
+<%= set_title("Edit Affiliations") %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Profile' } %>
+
+<% content_for :content do %>
+	<div id="user-prefs">		
+  	<%= form_for @host_profile, :validate => true do |f| %>
+		<%= render "shared/error_messages", :target => @host_profile %> 
+		<p><h4>Please enter your optional promo code.</h4></p> 
+		<p><%= f.text_field :promoCode %></p>
+		<%= f.submit "Finish", "data-theme"=>"b" %>
+		<%= link_to "Skip", :back, "data-role" => "button" %>
+	<% end %>
+	</div>
+<% end %>

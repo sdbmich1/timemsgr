@@ -48,6 +48,77 @@ class Event < KitsTsdModel
     Rails.env.development? ? "`kits_development`" : "`kits_production`"
   end
   
+  def self.cal_events edt, cid, loc='USA'
+    current(edt, cid).select {|e| (chk_holiday?(e) && view_obs?(e.location, loc)) || !chk_holiday?(e)}
+  end
+  
+  def self.view_obs?(loc, val)
+    if val == 'USA'
+      loc.blank? ? true : !(loc =~ /^.*\b(United States|USA)\b.*$/i).nil?
+    else
+      !(loc =~ /^.*\b(val)\b.*$/i).nil?
+    end
+  end
+  
+  # need to override the json view to return what full_calendar is expecting.
+  # http://arshaw.com/fullcalendar/docs/event_data/Event_Object/
+  def as_json(options = {})
+    {
+      :id => self.ID,
+      :title => self.event_name,
+      :description => self.bbody || "",
+      :start => setTimes(self.eventstartdate, self.eventstarttime),
+      :end => setTimes(self.eventenddate, self.eventendtime),
+      :allDay => holiday?,
+      :recurring => false,
+      :url => get_url,
+      :color => get_color,
+      :textColor => get_text_color
+    }
+  end
+  
+  def get_url
+    unless holiday?
+      Rails.application.routes.url_helpers.event_path(self.id, :eid=>self.eventid, :etype=>self.event_type, :sdt=>self.eventstartdate)
+    end
+  end
+  
+  def setTimes dt, tm
+    unless holiday?
+      newdt = dt.strftime('%Y-%m-%d')
+      newtm = tm.strftime('%H:%M:%S')
+      DateTime.strptime(newdt + ' '+ newtm, '%Y-%m-%d %H:%M:%S').to_time.iso8601
+    else
+      dt.to_i
+    end
+  end
+  
+  def get_color
+    if holiday?
+      '#CCCCCC'
+    elsif self.cid == @@userCid
+      '#0C6FCB'
+    else
+      '#339999'
+    end    
+  end
+  
+  def get_text_color
+    if holiday?
+      '#000000'
+    else
+      '#ffffff'
+    end
+  end
+  
+  def holiday? 
+    (%w(h m).detect { |x| x == self.event_type})
+  end 
+  
+  def self.chk_holiday? e
+    (%w(h m).detect { |x| x == e.event_type})    
+  end   
+
   def self.channel_events(edt, ssid)
     where_ssid = where_dt + " AND (subscriptionsourceID = ?)" 
     find_by_sql(["#{getSQL} FROM `kitsknndb`.events WHERE #{where_ssid}) 
@@ -69,6 +140,23 @@ class Event < KitsTsdModel
     events.sort_by { |e| e.eventstartdate }
   end
   
+  def self.calendar edt
+    where(where_dt, edt, edt)
+  end
+  
+  def self.load_calendar(edt, cid, limit=60, offset=0)
+    where_cid = where_dte + " AND (e.contentsourceID = ?)" 
+    where_sid = where_subscriber_id + ' AND ' + where_dte   
+    find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
+         UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
+         UNION #{getSQLefee} FROM `kitscentraldb`.events #{where_sid} )
+         UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
+         UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
+         ORDER BY eventstartdate, eventstarttime ASC 
+         LIMIT #{limit} OFFSET #{offset}", edt, edt, cid, edt, edt, cid, 
+                        cid, edt, edt, cid, edt, edt, edt, edt, cid])  
+  end
+    
   def self.get_local_events loc, edt 
     where_loc = where_dt + " AND (mapcity = ?)"
     find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_loc} ) 
@@ -76,7 +164,8 @@ class Event < KitsTsdModel
   end
   
   # build dynamic union to pull event data from dbs across different schemas
-  def self.current(edt, cid, limit=60, offset=0)
+  def self.current(edt, cid, sdt=Date.today, limit=180, offset=0)
+    @@userCid = cid
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
     where_hol = where_dte + " AND (e.event_type in ('h','m'))"
@@ -87,8 +176,13 @@ class Event < KitsTsdModel
          UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_hol})
          ORDER BY eventstartdate, eventstarttime ASC 
-         LIMIT #{limit} OFFSET #{offset}", edt, edt, cid, edt, edt, cid, cid, edt, edt,
-                                                       cid, edt, edt, edt, edt, cid, edt, edt]) 
+         LIMIT #{limit} OFFSET #{offset}", 
+              sdt, edt, sdt, edt, edt, cid, 
+              sdt, edt, sdt, edt, edt, cid, 
+              cid, sdt, edt, sdt, edt, edt,
+              cid, sdt, edt, sdt, edt, edt,
+              sdt, edt, sdt, edt, edt, cid, 
+              sdt, edt, sdt, edt, edt]) 
   end
 
   # build dynamic union to pull event data from dbs across different schemas for specific event  
@@ -260,13 +354,18 @@ class Event < KitsTsdModel
   # define SQL WHERE clause for SELECT UNION statements 
   def self.where_dte
       "( LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no') 
-         AND ((e.eventstartdate >= curdate() and e.eventstartdate <= ?) 
-         OR (e.eventstartdate <= curdate() and e.eventenddate BETWEEN curdate() and ?)) "
+         AND ((e.eventstartdate >= ? and e.eventstartdate <= ?) 
+         OR (e.eventstartdate <= ? and e.eventenddate BETWEEN ? and ?)) "
   end
    
   def self.where_subscriber_id 
      "e,`kitsknndb`.subscriptions s 
         WHERE s.contentsourceID = ?
         AND s.channelID = e.subscriptionsourceID "
+  end
+  
+  def self.calSQL
+#    '(SELECT e.ID, e.event_name as "title", Unix_Timestamp(e.eventstartdate) as "start", Unix_Timestamp(e.eventenddate) as "end" '
+    "(SELECT e.ID, e.eventid, e.event_name, e.eventstartdate, e.eventenddate "
   end    
 end

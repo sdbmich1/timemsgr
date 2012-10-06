@@ -16,7 +16,7 @@ function toggleLoading () {
 
 // add spinner to ajax events
 $(document).ready(function() {
-  $("#map, #connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
+  $("#map, #cal-btn, #connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .live("ajax:beforeSend", toggleLoading)
     .live("ajax:complete", toggleLoading)
     .live("ajax:success", function(event, data, status, xhr) {
@@ -105,6 +105,36 @@ $(document).ready(function() {
   if ( $('#mform label').length != 0 ) {
     $("#mform label").inFieldLabels();
   }
+  
+  // full calendar display
+  var calndr = $('#calendar').fullCalendar({
+    // put your options and callbacks here
+  	header: {
+		left:   'today',
+    	center: 'prev title next',
+    	right:  'agendaDay,agendaWeek,month'  		
+//    	right:  'basicDay,basicWeek,month'  		
+  	},
+  	eventSources: [
+  		{
+  			url: 	'/calendars.json',
+        }
+  	],
+  	endParam: 'enddt',
+	eventRender: function(event, element) {
+        element.attr("description",event.bbody)
+    }, 
+    dayClick: function(date, allDay, jsEvent, view) {
+        calndr.fullCalendar('gotoDate', date);
+        calndr.fullCalendar( 'changeView', 'agendaDay' );       
+    },
+	loading: function(bool){
+        if (bool) 
+            toggleLoading();
+        else 
+            toggleLoading();
+    }      	 
+  })
 });
   
 $(function () {
@@ -458,4 +488,5 @@ $(document).ready(function() {
     //prevent the default behavior of the click event
     return false;
   });
+    
 });

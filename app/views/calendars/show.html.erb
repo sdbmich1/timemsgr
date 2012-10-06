@@ -1,0 +1,12 @@
+<%= set_title("Event Calendar") %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Event' } %>
+
+<% content_for :subhead do -%>
+  <center><h3 class="grp-hdr">My Calendar</h3></center><br />
+<% end %>
+
+<%= content_for :content do %>
+<div id="calendar">
+	
+</div>
+<% end %>

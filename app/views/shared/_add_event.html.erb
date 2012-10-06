@@ -13,7 +13,7 @@
 		<%= render :partial => 'shared/event_show', :locals => { :f => f } %>
 	<% end %>
 
-	<% if action_name == 'new' %>	
+	<% if data_form? %>	
     	<%= f.hidden_field :contentsourceID, :value => @user.ssid %>
     	<%= f.hidden_field :subscriptionsourceID, :value => @user.ssid %>
     <% end %>

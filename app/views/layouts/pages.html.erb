@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= stylesheet_link_tag 'custom', :media => 'screen', :cache => true %>   
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>   
   <%= render 'shared/initialize' %>
-  <%= stylesheet_link_tag 'home', :media => 'screen', :cache => true %>   	
-  <%= stylesheet_link_tag 'mobile' if mobile_device? %>  
+  <%= stylesheet_link_tag 'home', :media => 'screen' %>   	
 
   <%= yield :head %>		
 </head>

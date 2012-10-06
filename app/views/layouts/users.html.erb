@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>	
-   		<%= stylesheet_link_tag 'custom', :media => 'screen', :cache => true %>     		
+   		<%= stylesheet_link_tag 'custom', :media => 'screen' %>     		
  	  	<%= render 'shared/initialize' %>
 
    		<% if user_signed_in? %>
-   			<%= javascript_include_tag "autocomplete-rails.js",'menu.js', :cache => true %>
+   			<%= javascript_include_tag "autocomplete-rails.js",'menu.js' %>
    		<% end %>
-		<%= stylesheet_link_tag 'layout','screen','users','style', :media => 'screen', :cache => true %> 
+		<%= stylesheet_link_tag 'layout','screen','users','style', :media => 'screen' %> 
  	  	<%= yield :head %>
   </head>
   <body>

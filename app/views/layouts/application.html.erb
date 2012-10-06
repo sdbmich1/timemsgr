@@ -6,7 +6,7 @@
    <%= stylesheet_link_tag 'screen', :media => 'screen' %>   
  
    <% if user_signed_in? %>
-   		<%= javascript_include_tag 'formfield.js', "autocomplete-rails.js", :cache => true %>
+   		<%= javascript_include_tag 'formfield.js', "autocomplete-rails.js" %>
   		<%= stylesheet_link_tag 'breadcrumb', :media => 'screen' %>  
    <% else %>
   		<%= stylesheet_link_tag 'session', :media => 'screen' %>     		

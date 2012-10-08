@@ -189,7 +189,8 @@ module EventsHelper
   
   def parse_list elist, dt
     elist.map! {|e| set_start_date(e,dt)}.compact! 
-    elist.select { |e| time_left?(e) }    
+    elist = elist.select { |e| time_left?(e) } 
+    elist   
   end
   
   def build_list elist, edt
@@ -213,7 +214,7 @@ module EventsHelper
   end
   
   def get_subscriptions *args
-    elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || is_session?(e.event_type) || !time_left?(e) }
+    elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || is_session?(e.event_type) || !is_past?(e) }
     elist = build_list elist, args[0] if args[0]
     elist
   end
@@ -498,11 +499,10 @@ module EventsHelper
   end
   
   def select_options action
-#    action == 'Yes' ? %W(Go Home Menu) : %W(Go Home Menu Website)
     action == 'Yes' ? [['Go', {:class=>'menu_options'}], ['Home'], ['Menu']] : [['Go', {:class=>'menu_options'}], ['Home'], ['Menu'], ['Website']]   
   end
   
   def event_cntr?
-    !(controller_name =~ /events/i).nil? && action_name != 'index' ? true : false
+    !(controller_name =~ /event/i).nil? && action_name != 'index' ? true : false
   end
 end

@@ -1,7 +1,7 @@
 <div class='ev-loc' data-loc="<%= event.location %>"></div>
   <div data-role="navbar">
 	  <ul>
-		<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
+		<% if !life_event?(event.event_type) && !private_event?(event.event_type) && !is_past?(event) %>
 			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
 					"data-icon"=>"add", 'data-ajax'=>"false", :class=>'sch-event', :method => :post %> </li>
 		<% elsif private_event?(event.event_type) %>		
@@ -16,6 +16,10 @@
 
 		<% if (life_event?(event.event_type) || private_event?(event.event_type)) && event.end_date >= Date.today %>
 			<li><%= link_to "Share", new_notification_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), "data-icon"=>"custom", :id => "notify" %> </li>
+		<% end %>
+		
+		  <% if is_session?(event.event_type) %>
+			<li><%= link_to 'Event', major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
 		<% end %>
 						
 		<% if rsvp?(event.rsvp) %>

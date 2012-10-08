@@ -4,9 +4,10 @@
 	<li><%= link_to "About", about_major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></li>
 	<li><%= link_to "Schedule", event_sessions_url(:event_id => event) %></li>
 	<li><%= link_to get_label(event.event_type), presenters_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></li>	
- 	<li><%= link_to "Hotels",'#' %> </li>
  	<li><%= link_to "Exhibitors",'#' %> </li>
+ 	<li><%= link_to "Sponsors",'#' %> </li>
  	<li><%= link_to "Vendors",'#' %> </li>
- 	<li><%= link_to "Transportation",'#' %> </li>
  	<li><%= link_to "Register",'#' %> </li>
+ 	<li><%= link_to "Hotels",'#' %> </li>
+ 	<li><%= link_to "Transportation",'#' %> </li>
   </ul>

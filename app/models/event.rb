@@ -48,8 +48,8 @@ class Event < KitsTsdModel
     Rails.env.development? ? "`kits_development`" : "`kits_production`"
   end
   
-  def self.cal_events edt, cid, loc='USA'
-    current(edt, cid).select {|e| (chk_holiday?(e) && view_obs?(e.location, loc)) || !chk_holiday?(e)}
+  def self.cal_events edt, cid, sdt=Date.today, loc='USA'
+    current(edt, cid, sdt).select {|e| (chk_holiday?(e) && view_obs?(e.location, loc)) || !chk_holiday?(e)}
   end
   
   def self.view_obs?(loc, val)
@@ -86,7 +86,7 @@ class Event < KitsTsdModel
   def setTimes dt, tm
     unless holiday?
       newdt = dt.strftime('%Y-%m-%d')
-      newtm = tm.strftime('%H:%M:%S')
+      newtm = tm.strftime('%H:%M:%S') if tm
       DateTime.strptime(newdt + ' '+ newtm, '%Y-%m-%d %H:%M:%S').to_time.iso8601
     else
       dt.to_i
@@ -99,7 +99,7 @@ class Event < KitsTsdModel
     elsif self.cid == @@userCid
       '#0C6FCB'
     else
-      '#339999'
+      'green'
     end    
   end
   
@@ -130,7 +130,8 @@ class Event < KitsTsdModel
          UNION #{getSQL} FROM `kitsknndb`.events WHERE #{where_dt} )
          ORDER BY eventstartdate, eventstarttime ASC", edt, edt, edt, edt]) 
   end  
-  
+
+  # find events based on random selection of given channels  
   def self.nearby_events(chlist, edt)
     events = []        
     chlist.sort_by{rand}[0..9].each do |channel|
@@ -143,28 +144,15 @@ class Event < KitsTsdModel
   def self.calendar edt
     where(where_dt, edt, edt)
   end
-  
-  def self.load_calendar(edt, cid, limit=60, offset=0)
-    where_cid = where_dte + " AND (e.contentsourceID = ?)" 
-    where_sid = where_subscriber_id + ' AND ' + where_dte   
-    find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
-         UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
-         UNION #{getSQLefee} FROM `kitscentraldb`.events #{where_sid} )
-         UNION #{getSQLefee} FROM `kitsknndb`.events #{where_sid} )
-         UNION #{getSQLe} FROM #{dbname}.events e WHERE #{where_cid} )
-         ORDER BY eventstartdate, eventstarttime ASC 
-         LIMIT #{limit} OFFSET #{offset}", edt, edt, cid, edt, edt, cid, 
-                        cid, edt, edt, cid, edt, edt, edt, edt, cid])  
-  end
-    
-  def self.get_local_events loc, edt 
+      
+  def self.get_local_events loc, edt, limit=90 
     where_loc = where_dt + " AND (mapcity = ?)"
     find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_loc} ) 
-         ORDER BY eventstartdate, eventstarttime ASC LIMIT 30", edt, edt, loc])     
+         ORDER BY eventstartdate, eventstarttime ASC LIMIT #{limit}", edt, edt, loc])     
   end
   
   # build dynamic union to pull event data from dbs across different schemas
-  def self.current(edt, cid, sdt=Date.today, limit=180, offset=0)
+  def self.current(edt, cid, sdt=Date.today, limit=240, offset=0)
     @@userCid = cid
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
     where_sid = where_subscriber_id + ' AND ' + where_dte   
@@ -177,12 +165,12 @@ class Event < KitsTsdModel
          UNION #{getSQLefee} FROM `kitscentraldb`.events e WHERE #{where_hol})
          ORDER BY eventstartdate, eventstarttime ASC 
          LIMIT #{limit} OFFSET #{offset}", 
-              sdt, edt, sdt, edt, edt, cid, 
-              sdt, edt, sdt, edt, edt, cid, 
-              cid, sdt, edt, sdt, edt, edt,
-              cid, sdt, edt, sdt, edt, edt,
-              sdt, edt, sdt, edt, edt, cid, 
-              sdt, edt, sdt, edt, edt]) 
+              sdt, edt, sdt, sdt, edt, cid, 
+              sdt, edt, sdt, sdt, edt, cid, 
+              cid, sdt, edt, sdt, sdt, edt,
+              cid, sdt, edt, sdt, sdt, edt,
+              sdt, edt, sdt, sdt, edt, cid, 
+              sdt, edt, sdt, sdt, edt]) 
   end
 
   # build dynamic union to pull event data from dbs across different schemas for specific event  
@@ -192,7 +180,10 @@ class Event < KitsTsdModel
          UNION #{getSQL} FROM #{dbname}.eventsobs #{where_id} 
          UNION #{getSQL} FROM #{dbname}.events #{where_id} 
          UNION #{getSQLfee} FROM `kitsknndb`.events #{where_id} 
-         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", eid, etype, evid, eid, etype, evid, eid, etype, evid, eid, etype, evid, eid, etype, evid])        
+         UNION #{getSQL} FROM `kitscentraldb`.events #{where_id}", 
+         eid, etype, evid, eid, etype, evid, 
+         eid, etype, evid, eid, etype, evid, 
+         eid, etype, evid])        
   end
   
   def self.find_event(id, etype, eid, sdt)
@@ -201,9 +192,9 @@ class Event < KitsTsdModel
     event
   end 
   
-  def self.find_events(edate, usr) 
+  def self.find_events(edate, usr, sdt=Date.today, limit=90, offset=0) 
     edate.blank? ? edate = Date.today+7.days : edate 
-    usr.blank? ? current_events(edate) : current(edate, usr.ssid)    
+    usr.blank? ? current_events(edate) : current(edate, usr.ssid, Date.today, limit, offset)    
   end
   
   # used to get friends schedule when shared
@@ -263,8 +254,18 @@ class Event < KitsTsdModel
     mapplacename.blank? ? '' : mapplacename
   end
   
+  def cityState
+    if mapcity && mapstate
+      [mapcity, mapstate].compact.join(', ')
+    elsif !get_city.blank?
+      mapcity
+    else
+      ''     
+    end
+  end
+  
   def csz
-    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + mapzip
+    mapcity.blank? ? '' : mapstate.blank? ? mapcity : [mapcity, mapstate].compact.join(', ') + ' ' + get_zip
   end
   
   def location_details
@@ -353,7 +354,8 @@ class Event < KitsTsdModel
   
   # define SQL WHERE clause for SELECT UNION statements 
   def self.where_dte
-      "( LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no') 
+      "( LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no' ) 
+         AND (e.eventstarttime IS NOT NULL AND e.eventendtime IS NOT NULL)
          AND ((e.eventstartdate >= ? and e.eventstartdate <= ?) 
          OR (e.eventstartdate <= ? and e.eventenddate BETWEEN ? and ?)) "
   end

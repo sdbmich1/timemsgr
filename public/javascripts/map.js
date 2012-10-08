@@ -96,9 +96,7 @@ function getMyLocation(dFlg, nearby) {
        	} 
     }, 
     function(error){ // geoError
-		if (navigator !== undefined) {
-     		navigator.notification.alert('error: ' + error.message + '\n' + 'code: ' + error.code);
-     	}	
+  		alert('error: ' + error.message + '\n' + 'code: ' + error.code);
     }, geoOptions);  
       
 }

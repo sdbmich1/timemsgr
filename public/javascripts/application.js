@@ -105,36 +105,11 @@ $(document).ready(function() {
   if ( $('#mform label').length != 0 ) {
     $("#mform label").inFieldLabels();
   }
-  
+
   // full calendar display
-  var calndr = $('#calendar').fullCalendar({
-    // put your options and callbacks here
-  	header: {
-		left:   'today',
-    	center: 'prev title next',
-    	right:  'agendaDay,agendaWeek,month'  		
-//    	right:  'basicDay,basicWeek,month'  		
-  	},
-  	eventSources: [
-  		{
-  			url: 	'/calendars.json',
-        }
-  	],
-  	endParam: 'enddt',
-	eventRender: function(event, element) {
-        element.attr("description",event.bbody)
-    }, 
-    dayClick: function(date, allDay, jsEvent, view) {
-        calndr.fullCalendar('gotoDate', date);
-        calndr.fullCalendar( 'changeView', 'agendaDay' );       
-    },
-	loading: function(bool){
-        if (bool) 
-            toggleLoading();
-        else 
-            toggleLoading();
-    }      	 
-  })
+  if ( $('#calendar').length != 0 ) {
+	showCalendar(true);
+  }
 });
   
 $(function () {
@@ -145,6 +120,65 @@ $(function () {
          return false;   
    });
 });
+
+var calndr;
+function showCalendar(vFlg) {
+  var lStr = '';
+  var rStr = '';
+  
+  // set parameters as needed
+  if (vFlg) {
+  	lStr = 'today';
+  	rStr = 'agendaDay,agendaWeek,month' 
+  }
+  	
+  calndr = $('#calendar').fullCalendar({
+  	  header: {
+		left:   lStr,
+    	center: 'prev title next',
+    	right:  rStr  		
+  	  },
+  	  eventSources: [
+  		{
+  			url: 	'/calendars.json',
+        }
+  	  ],
+ 	  startParam: 'startdt',
+  	  endParam: 'enddt',
+	  eventRender: function(event, element) {
+        element.attr("description",event.bbody)
+      }, 
+      dayClick: function(date, allDay, jsEvent, view) {
+      	// go to agenda day if allday else add event 
+      	 if (allDay) {
+        	calndr.fullCalendar('gotoDate', date);
+        	if (!vFlg) {
+    			calndr.fullCalendar('option', 'contentHeight', 650);  }   
+        	calndr.fullCalendar( 'changeView', 'agendaDay' ); 
+         } 
+         else {
+         	var url = '/private_events/new?sdt=' + date;
+         	if (vFlg)
+         		processUrl(url);
+         	else
+         		goToUrl(url);
+         }    
+      },
+	  loading: function(bool){
+         if (bool)  
+         	if (vFlg)
+            	toggleLoading();
+            else
+            	$('body').addClass('ui-loading');
+         else 
+            if (vFlg)
+            	toggleLoading();
+            else
+            	$('body').removeClass('ui-loading');
+      }      	 
+   	})	
+	
+}
 
 function chkAnnualEvent(etype) {
   if(etype == "anniversary" || etype == "birthday")

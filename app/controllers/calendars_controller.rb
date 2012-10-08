@@ -4,9 +4,8 @@ class CalendarsController < ApplicationController
   layout :page_layout
   
   def index
-#    @events = CalendarEvent.cal_events enddt 
-    @events = Event.cal_events enddt, @user.ssid
-    respond_with(@events)
+    @events = Event.cal_events enddt, @user.ssid, sdt
+    render :json => @events.to_json
   end
 
   def show
@@ -16,12 +15,17 @@ class CalendarsController < ApplicationController
   private
 
   def page_layout 
-    "events"
+    mobile_device? ? 'pages' : "events"
   end    
 
   def location
     @location.city
   end   
+  
+  def sdt
+    sdt = Time.at(params[:startdt].to_i).utc.to_date if params[:startdt]
+    sdt ||= Date.today    
+  end
 
   def enddt
     enddt = Time.at(params[:enddt].to_i).utc.to_date if params[:enddt]

@@ -3,3 +3,13 @@
 <%= content_for :content do %>	    
   <%= render 'mobile/presenter_list' %>
 <% end %>
+
+<%= content_for :footer do %>
+  <div data-role="navbar">
+  	<ul>
+		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
+		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
+		<li><%= link_to 'Event', major_event_url(@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
+	</ul>
+  </div>	
+<% end %>

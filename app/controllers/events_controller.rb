@@ -14,7 +14,7 @@ class EventsController < ApplicationController
 	end
 	
 	def index
-    @events = Event.find_events @enddate, @user
+    @events = Event.find_events @enddate, @user, Date.today, limit, offset
     @nearby_events = @user.nearby_events location, @enddate
   end
   
@@ -48,6 +48,14 @@ class EventsController < ApplicationController
 	
 	def location
 	  @location.city
+	end
+	
+	def limit
+	  mobile_device? ? 60 : 90
+	end
+	
+	def offset
+	  mobile_device? ? 0 : 0
 	end
 
 end

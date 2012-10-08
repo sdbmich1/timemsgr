@@ -3,7 +3,8 @@ class PresentersController < ApplicationController
   layout :page_layout
   
   def index
-    @presenters = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt]).presenters rescue nil
+    @event = Event.find_event(params[:id], params[:etype], params[:eid], params[:sdt])
+    @presenters = @event.presenters rescue nil
   end
 
   def show

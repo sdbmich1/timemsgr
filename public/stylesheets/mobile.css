@@ -1,4 +1,5 @@
-#app {}  
+#app {} 
+ 
 [data-role=page]{ position:relative !important;}
 
 .app-content {min-width: 100%; min-height: 150%;}
@@ -30,7 +31,7 @@
 #mapPage {height: 100%;}
 
 #app-footer {bottom:0; position:fixed !important; top: auto !important; width:100%; z-index: 999; }  
-#app-header {position:fixed !important; top:0 !important; width:100%; }  
+#app-header {position:fixed !important; top:0 !important; width:100%; z-index: 999;}  
 
 .ui-header, .ui-navbar { width: 100%!important; }
 .scrollable, .scroller, .listpg, .home-pg, .form-top, .subhead, .reg-top, .channel-pg, .nearby-pg, .nearby-top, .channelList {
@@ -60,6 +61,12 @@
 .ui-collapsible-content {padding: 0px 10px!important;}
 .ui-btn-icon-right {padding-right: 5px;}
 .ui-collapsible-set {margin-top: 0!important; }
+
+/* full calendar settings */
+.ui-body-c, .ui-overlay-c { text-shadow: none; }
+.fc-header-title { margin-top: 7px; }
+.fc, .fc table { font-size: 0.825em!important; }
+#calendar { height: 150%!important; }
 
 .mobile_container {  
       width: 100%;  
@@ -151,15 +158,15 @@
 .sl-descr { position:absolute; top: 2.25em; left: 4.35em; width: 80%;
 			margin-bottom: 10px; }
 	   
-.ui-li-desc {text-overflow: normal; overflow: visible; 
-			white-space: pre-wrap; font-size: 0.65em;}
+.ui-li-desc {text-overflow: normal; overflow: visible; margin: .1em 0 .1em .2em!important;
+			white-space: pre-wrap; font-size: 0.675em!important;}
 			
 label, label.ui-input-text { font-size:12px!important; margin-top:5px!important; line-height: 0.8em!important}
 
 .stitle h6 {font-size: 0.8em; }
 .sgrp { line-height: 1em; }
-.sdescr { font-size: 0.625em; width: 75%; font-weight: normal; height: 30px; }
-.fm-link { font-size: 0.825em; width: 75%; font-weight: normal; height: 30px; }
+.sdescr { font-size: 0.625em!important; width: 75%; font-weight: normal; height: 30px; }
+.fm-link { font-size: 0.825em!important; width: 75%; font-weight: normal; height: 30px; }
 
 .sponsor-type { font-size: 0.75em;  }
 .sponsor-msg { color: blue; font-weight: bold; }
@@ -198,6 +205,7 @@ label, label.ui-input-text { font-size:12px!important; margin-top:5px!important;
 .ui-controlgroup .ui-checkbox label {font-size: 14px;}
 .ui-field-contain, fieldset.ui-field-contain {padding: 5px 0 5px 0!important; overflow-x: visible!important;}
 .ui-bar, .ui-body {padding: 0 0!important;}
+.ui-li-heading {margin: 0.4em 0 0.2em -0.2em!important;}
 
 .mobile-slider { margin-bottom: 10px; padding: 0; margin-left:auto; margin-right: auto;  }
 .img-btm { position:absolute; bottom: 0.75em; width: 100%;  left: 4em; }
@@ -263,6 +271,7 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
 #website .ui-icon { background:  url("../images/website.png") 50% 50% no-repeat; size: 24px 24px; }
 #msg .ui-icon { background:  url("../images/icon_mail.png") 50% 50% no-repeat; size: 24px 22px; }
+#cal .ui-icon { background:  url("../images/cal.png") 50% 50% no-repeat; size: 24x 24px; }
 
 .progressBar { font-size: 14px; }
 .pb-offset { font-size: 14px; margin-top: 5px; }
@@ -320,23 +329,18 @@ a.map-btn {
 
 /* error handling */
 .error, .alert {
-  border: 2px solid red;
-/*  padding: 7px; */
   padding: 5px 0 5px 0;
   margin: 7px;
   width: 95%;
-  height: 30px;
+  height: 20px;
   margin-bottom: 10px;
   text-align: center;
-  font-weight: bold;
   font-size: 12px;
-  background-color: #c00;
-  color: #fff;
+  text-shadow: none!important;
 }
 
 .alert {
-  border: 2px solid orange;
-/*  padding: 7px; */
+ /*  padding: 7px; */
   padding: 5px 0 5px 0;
   margin: 7px;
   width: 95%;
@@ -344,14 +348,9 @@ a.map-btn {
   margin-bottom: 10px;
   text-align: center;
   font-size: 12px;
-  background-color: #F08103;
-  text-shadow: none!important;
-  color: #000;		
 }
 
 .notice {
-  border: 2px solid green;
-/*  padding: 7px; */
   padding: 5px 0 5px 0;
   margin: 7px;
   width: 95%;
@@ -360,9 +359,12 @@ a.map-btn {
   text-align: center;
   font-size: 12px;
   text-shadow: none!important;
-  background-color: #C6D880;
-  color: #000;	
 }
+.error, .alert, .notice, .success, .info {margin-bottom:1em;border:2px solid #ddd;}
+.error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
+.notice {background:#fff6bf;color:#514721;border-color:#ffd324;}
+.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+.error, .alert, .notice, .success {border: 2px solid;}
 
 .ui-input-datebox input {width: 99%!important;}
 

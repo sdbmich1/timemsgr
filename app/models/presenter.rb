@@ -15,5 +15,9 @@ class Presenter < KitsTsdModel
   validates :bio, :presence => true
 
   default_scope :order => "name ASC"
+  
+  def company
+    org_name.length > 25 ? org_name[0..25] + '...' : org_name
+  end
 
 end

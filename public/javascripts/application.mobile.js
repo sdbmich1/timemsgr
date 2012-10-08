@@ -33,9 +33,9 @@ $(document).ready(function() {
     var loc = $(this).val().toLowerCase(); // grab the selected location 
     
     if ( $('#cat_id').length != 0 )
-      { var url = '/categories.mobile?location=' + loc; }
+      { var url = '/categories?location=' + loc; }
 	else
-  	  {	var url = '/nearby_events.mobile?location=' + loc; }    		
+  	  {	var url = '/nearby_events?location=' + loc; }    		
 
 	// change the page
 	goToUrl(url);
@@ -48,7 +48,7 @@ $(document).ready(function() {
   $("#cat_id").live("change", function() {
     var category = $(this).val(); // grab the selected location 
   	var loc = $('#loc_id').val();
-  	var url = '/list.mobile?location=' + loc + "&category_id=" + category;
+  	var url = '/list?location=' + loc + "&category_id=" + category;
   	
 	// change the page
 	goToUrl(url);
@@ -59,10 +59,13 @@ $(document).ready(function() {
   
   $("#menu_id").live("change", function() {
     var menu = $(this).val(); // grab the selected location 
+
+    // load spinner
+    uiLoading(true); 
     
     if ( menu.length != 0 ) {
     	switch(menu) {
-    		case 'Home': 
+    		case 'Home':
     			goToUrl('/events');
     			break;
     		case 'Menu': 
@@ -75,6 +78,9 @@ $(document).ready(function() {
    				}   
    				break; 	
    	 }
+   	 
+   	// toggle spinner 
+	uiLoading(false);
   }
   
     //prevent the default behavior of the click event
@@ -119,6 +125,40 @@ $(document).bind('pageinit', function() {
 	goToUrl(url);	
 	return false;
   });
+  
+  $("#addEvent").live("click", function() {
+  	var sdt = calndr.fullCalendar( 'getDate' );
+  	var url = '/private_events/new?sdt=' + sdt; 
+
+	goToUrl(url);	
+	return false;
+  });
+  
+  $("#cal-aday").live("click", function() {
+    calndr.fullCalendar( 'changeView', 'agendaDay' );  
+    calndr.fullCalendar('option', 'contentHeight', 650);     
+  });
+  
+  $("#cal-week").live("click", function() {
+    calndr.fullCalendar( 'changeView', 'agendaWeek' );       
+  });
+  
+  $("#cal-month").live("click", function() {
+    calndr.fullCalendar( 'changeView', 'month' );       
+  });      
+});
+
+$('[data-role="page"]').live('pageshow', function () {
+  
+  // full calendar display
+  if ( $('#calendar').length != 0 ) {
+	showCalendar(false);
+  }
+  
+  if ( $('#mform').length != 0 ) {
+    $("#mform label").inFieldLabels();
+  }
+  
 });
 	  
   // add iphone orientation change handler
@@ -140,6 +180,13 @@ $(document).bind('pageinit', function() {
         window.scrollTo(0, 1); // Hide the address bar!
     }, 0);
   });  
+
+function uiLoading(bool) {
+  if (bool)
+    $('body').addClass('ui-loading');
+  else
+    $('body').removeClass('ui-loading');
+}
 
 function goToUrl(url) {
 	window.location.href= url;

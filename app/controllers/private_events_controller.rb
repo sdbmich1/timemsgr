@@ -15,7 +15,7 @@ class PrivateEventsController < ApplicationController
   end
 
   def new
-    @event = PrivateEvent.new 
+    @event = PrivateEvent.build_event(params[:sdt])
   end
 
   def create
@@ -42,7 +42,6 @@ class PrivateEventsController < ApplicationController
   end
 
   def destroy
-    @user ||= current_user
     @event = PrivateEvent.locate_event(params[:id], params[:eid])
     @event.destroy ? flash[:notice] = "Removed event from schedule." : flash[:error] = "Unable to remove event from schedule."
     respond_to do |format|

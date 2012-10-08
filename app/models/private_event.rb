@@ -154,6 +154,14 @@ class PrivateEvent < ActiveRecord::Base
     new_event
   end
   
+  def self.build_event sdt
+    if sdt.blank? || sdt.to_datetime < Time.now 
+       PrivateEvent.new
+    else
+       PrivateEvent.new :eventstartdate => sdt.to_date, :eventenddate => sdt.to_date, :eventstarttime => sdt.to_datetime, :eventendtime => sdt.to_datetime+1.hour
+    end
+  end
+  
   def self.new_event(*args)
     pe, *elem = args 
     pe ? PrivateEvent.new(ResetDate::reset_dates(pe)) : PrivateEvent.add_event(*elem)

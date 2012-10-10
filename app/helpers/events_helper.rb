@@ -187,16 +187,16 @@ module EventsHelper
     elist = parse_list elist, dt    
   end
   
-  def parse_list elist, dt
-    elist.map! {|e| set_start_date(e,dt)}.compact! 
+  def parse_list elist, dt, *args
+    elist.map! {|e| set_start_date(e,dt, args)}.compact! 
     elist = elist.select { |e| time_left?(e) } 
     elist   
   end
   
-  def build_list elist, edt
+  def build_list elist, edt, *args
     newlist = []
     (Date.today..edt).each do |edate|
-      newlist << parse_list(elist, edate)       
+      newlist << parse_list(elist, edate, args)       
     end
     newlist.flatten(1).sort! {|a, b| a.eventstartdate <=> b.eventstartdate}.uniq
   end
@@ -235,12 +235,12 @@ module EventsHelper
   end
   
   # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events
-  def set_start_date(event, sdt)
+  def set_start_date(event, sdt, *args)
     if event.eventenddate.to_date >= sdt && event.eventstartdate.to_date <= sdt
       event.eventstartdate = sdt 
       event
     else
-      nil
+      args[0] ? event : nil
     end 
   end
    

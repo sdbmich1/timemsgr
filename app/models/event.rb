@@ -65,8 +65,8 @@ class Event < KitsTsdModel
   def as_json(options = {})
     {
       :id => self.ID,
-      :title => self.event_name,
-      :description => self.bbody || "",
+      :title => self.listing,
+      :description => self.summary,
       :start => setTimes(self.eventstartdate, self.eventstarttime),
       :end => setTimes(self.eventenddate, self.eventendtime),
       :allDay => holiday?,
@@ -154,8 +154,9 @@ class Event < KitsTsdModel
   # build dynamic union to pull event data from dbs across different schemas
   def self.current(edt, cid, sdt=Date.today, limit=240, offset=0)
     @@userCid = cid
+    newDt = edt >= Date.today ? edt : Date.today+30.days
     where_cid = where_dte + " AND (e.contentsourceID = ?)" 
-    where_sid = where_subscriber_id + ' AND ' + where_dte   
+    where_sid = where_subscriber_id + ' AND ' + where_edt   
     where_hol = where_dte + " AND (e.event_type in ('h','m'))"
     find_by_sql(["#{getSQLe} FROM #{dbname}.eventspriv e WHERE #{where_cid} ) 
          UNION #{getSQLe} FROM #{dbname}.eventsobs e WHERE #{where_cid} )
@@ -167,8 +168,8 @@ class Event < KitsTsdModel
          LIMIT #{limit} OFFSET #{offset}", 
               sdt, edt, sdt, sdt, edt, cid, 
               sdt, edt, sdt, sdt, edt, cid, 
-              cid, sdt, edt, sdt, sdt, edt,
-              cid, sdt, edt, sdt, sdt, edt,
+              cid, newDt, newDt,
+              cid, newDt, newDt,
               sdt, edt, sdt, sdt, edt, cid, 
               sdt, edt, sdt, sdt, edt]) 
   end
@@ -351,7 +352,13 @@ class Event < KitsTsdModel
         AND ((eventstartdate >= curdate() and eventstartdate <= ?) 
         OR (eventstartdate <= curdate() and eventenddate BETWEEN curdate() and ?)) "
   end
-  
+
+  def self.where_edt
+      "(LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no') 
+        AND ( (e.eventstartdate >= curdate() and e.eventstartdate <= ?) 
+        OR (e.eventstartdate <= curdate() and e.eventenddate BETWEEN curdate() AND ? )) "
+  end
+    
   # define SQL WHERE clause for SELECT UNION statements 
   def self.where_dte
       "( LOWER(e.status) = 'active' AND LOWER(e.hide) = 'no' ) 

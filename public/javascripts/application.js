@@ -125,11 +125,13 @@ var calndr;
 function showCalendar(vFlg) {
   var lStr = '';
   var rStr = '';
+  var dView = 'agendaDay';
   
   // set parameters as needed
   if (vFlg) {
   	lStr = 'today';
-  	rStr = 'agendaDay,agendaWeek,month' 
+  	rStr = 'agendaDay,agendaWeek,month';
+  	dView = 'month'; 
   }
   	
   calndr = $('#calendar').fullCalendar({
@@ -145,30 +147,38 @@ function showCalendar(vFlg) {
   	  ],
  	  startParam: 'startdt',
   	  endParam: 'enddt',
-	  eventRender: function(event, element) {
-        element.attr("description",event.bbody)
-      }, 
+  	  defaultView: dView,
+  	  eventRender: function (event, element) {
+    	element.find('span.fc-event-title').html(element.find('span.fc-event-title').text());           
+	  },
       dayClick: function(date, allDay, jsEvent, view) {
       	// go to agenda day if allday else add event 
       	 if (allDay) {
         	calndr.fullCalendar('gotoDate', date);
-        	if (!vFlg) {
-    			calndr.fullCalendar('option', 'contentHeight', 650);  }   
         	calndr.fullCalendar( 'changeView', 'agendaDay' ); 
          } 
          else {
-         	var url = '/private_events/new?sdt=' + date;
-         	if (vFlg)
-         		processUrl(url);
-         	else
-         		goToUrl(url);
+			if (date >= Date.today()) {
+			  var title = prompt('Event Title:');
+			  if (title) {
+       			calndr.fullCalendar('renderEvent',
+           			{
+		                title: title,
+        			    start: date,
+                		allDay: allDay
+            		},
+            		true // make the event "stick"
+        		);
+         		jQuery.post( "/private_events?title=" + title  + '&sdate=' + date );        		
+         	  } 
+         	}
          }    
       },
 	  loading: function(bool){
          if (bool)  
          	if (vFlg)
             	toggleLoading();
-            else
+            else 
             	$('body').addClass('ui-loading');
          else 
             if (vFlg)
@@ -176,8 +186,10 @@ function showCalendar(vFlg) {
             else
             	$('body').removeClass('ui-loading');
       }      	 
-   	})	
-	
+   	});
+   		
+	if (!vFlg)
+	  calndr.fullCalendar('option', 'contentHeight', 1200);	
 }
 
 function chkAnnualEvent(etype) {

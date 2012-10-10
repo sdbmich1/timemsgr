@@ -75,10 +75,10 @@ function getMyLocation(dFlg, nearby) {
        myLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
        
        if (nearby) {
-       	  	var url = '/nearby_events.mobile?loc=' + myLocation;
+       	  	var url = '/nearby_events?loc=' + myLocation;
 
 			// change the page
-			window.location.href= url;
+			goToUrl(url);
        }
        
        // check for directions
@@ -110,5 +110,3 @@ function getDirections() {
 	$('#directionsPanel').empty();
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));	
 }
-
-

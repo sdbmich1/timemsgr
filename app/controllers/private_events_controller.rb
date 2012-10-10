@@ -20,9 +20,13 @@ class PrivateEventsController < ApplicationController
 
   def create
     @user ||= current_user
-    @event = PrivateEvent.new_event(params[:private_event], params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
+    @event = PrivateEvent.new_event(params[:private_event], params[:title], params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
     if @event.save(:validate=>myEvent?)
-      redirect_to events_url, :notice => "#{get_msg(@user, 'Event')}"
+      respond_to do |format|
+        format.html { redirect_to events_url } 
+        format.mobile { redirect_to events_url }
+        format.js { render :nothing => true }
+      end      
     else
       render :action => 'new'
     end

@@ -57,12 +57,10 @@ $(document).ready(function() {
     return false;
   });
   
+  // change page based on menu selection
   $("#menu_id").live("change", function() {
     var menu = $(this).val(); // grab the selected location 
-
-    // load spinner
-    uiLoading(true); 
-    
+   
     if ( menu.length != 0 ) {
     	switch(menu) {
     		case 'Home':
@@ -78,16 +76,12 @@ $(document).ready(function() {
    				}   
    				break; 	
    	 }
-   	 
-   	// toggle spinner 
-	uiLoading(false);
   }
   
     //prevent the default behavior of the click event
     return false;
   });
-  
-    
+      
   // used to toggle reminder
   $("#rflg").live('click',function() {
     $(this).text($(this).text() == '+ Add Reminder' ? $('#reminder-type').show('fast') : $('#reminder-type').hide('fast'));    
@@ -128,7 +122,7 @@ $(document).bind('pageinit', function() {
   
   $("#addEvent").live("click", function() {
   	var sdt = calndr.fullCalendar( 'getDate' );
-  	var url = '/private_events/new?sdt=' + sdt; 
+  	var url = '/private_events/new.mobile?sdt=' + sdt; 
 
 	goToUrl(url);	
 	return false;
@@ -136,7 +130,6 @@ $(document).bind('pageinit', function() {
   
   $("#cal-aday").live("click", function() {
     calndr.fullCalendar( 'changeView', 'agendaDay' );  
-    calndr.fullCalendar('option', 'contentHeight', 650);     
   });
   
   $("#cal-week").live("click", function() {
@@ -189,7 +182,8 @@ function uiLoading(bool) {
 }
 
 function goToUrl(url) {
-	window.location.href= url;
+	// window.location.href= url;
+	$.mobile.changePage( url, { transition: "none", reverse: false, changeHash: false });
 }
 
 // toggle location selectmenu after search by city

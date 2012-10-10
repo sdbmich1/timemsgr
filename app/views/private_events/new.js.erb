@@ -1,0 +1,7 @@
+<% unless mobile_device? %>
+	<%= set_title("Add Activity") %>
+	<%= set_form_type("shared/add_event") %>
+	$("#calendar").replaceWith("<%= escape_javascript( raw render(:partial => 'shared/form') ) %>");
+
+<% else %>
+<% end %>

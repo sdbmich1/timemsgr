@@ -18,7 +18,7 @@
 			<li><%= link_to "Share", new_notification_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), "data-icon"=>"custom", :id => "notify" %> </li>
 		<% end %>
 		
-		  <% if is_session?(event.event_type) %>
+		  <% if is_session?(event.event_type) || major_event?(event.event_type) %>
 			<li><%= link_to 'Event', major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
 		<% end %>
 						

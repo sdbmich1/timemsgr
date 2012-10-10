@@ -1,4 +1,4 @@
-<!-- main form for events -->
+<div id="form">
 <% if controller_name == 'private_events' %>
 	<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'PrivateEvent' } %>
 <% else %>
@@ -22,3 +22,4 @@
 <%= content_for :footer do %>
 	<%= render 'layouts/footer' %>
 <% end %>
+</div>

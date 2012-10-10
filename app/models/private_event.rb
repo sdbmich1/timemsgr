@@ -163,11 +163,24 @@ class PrivateEvent < ActiveRecord::Base
   end
   
   def self.new_event(*args)
-    pe, *elem = args 
-    pe ? PrivateEvent.new(ResetDate::reset_dates(pe)) : PrivateEvent.add_event(*elem)
+    pe, title, *elem = args 
+    if title
+      newEvent = PrivateEvent.build_event args[6]
+      offset = args[6].to_time.utc.getlocal.utc_offset/3600
+      
+      newEvent.eventstarttime = newEvent.eventstarttime.advance(:hours=>offset)
+      newEvent.eventendtime = newEvent.eventendtime.advance(:hours=>offset)
+      newEvent.subscriptionsourceID = newEvent.contentsourceID = args[4]
+      newEvent.event_title = newEvent.event_name = title
+      newEvent.localGMToffset = newEvent.endGMToffset = User.get_user(args[4]).localGMToffset  
+      newEvent.event_type =  'OT'
+      newEvent
+    else    
+      pe ? PrivateEvent.new(ResetDate::reset_dates(pe)) : PrivateEvent.add_event(*elem)
+    end
   end
   
-  def self.add_event(eid, etype, ssid, evid, sdt)
+  def self.add_event(eid, etype, ssid, evid, sdt, title='')
     selected_event = Event.find_event(eid, etype, evid, sdt)
     new_event = PrivateEvent.new(selected_event.attributes) 
     new_event.contentsourceID, new_event.eventstartdate, new_event.ID = ssid, sdt, nil 

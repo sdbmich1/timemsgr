@@ -1,4 +1,4 @@
-<div class="files"> 
+<div id="addEvent" class="files"> 
 <%= form_for @event, :html => { :class => "upload", :multipart => true }, :validate => true  do |f| %>
 	<%= render "shared/error_messages", :target => @event %>  
 	<%= render :partial => 'shared/event_info', :locals => { :f => f } %>

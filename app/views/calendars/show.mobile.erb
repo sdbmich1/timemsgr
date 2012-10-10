@@ -10,3 +10,6 @@
 </div>
 <% end %>
 
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/page_footer', :locals => {:sflg => false} %> 
+<% end %>

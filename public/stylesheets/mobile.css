@@ -255,7 +255,7 @@ a:hover, a:visited {
 
 footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: normal; font-size: 0.75em;}
 
-#show-item { position: relative; width: 100%; }
+#show-item, #calendar { position: relative; width: 100%; }
 #show-item label { font-weight: bold; font-size: 0.75em; }
 .item-detail { position: absolute; left: 5.25em; font-size: 0.75em; margin-top: 0.25em; }
 .item-descr {font-size: 0.75em}

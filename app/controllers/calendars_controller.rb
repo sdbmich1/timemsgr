@@ -15,7 +15,7 @@ class CalendarsController < ApplicationController
   private
 
   def page_layout 
-    mobile_device? ? 'showitem' : "events"
+    mobile_device? ? 'noscroll' : "events"
   end    
 
   def location

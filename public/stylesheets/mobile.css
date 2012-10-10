@@ -2,7 +2,7 @@
  
 [data-role=page]{ position:relative !important;}
 
-.app-content {min-width: 100%; min-height: 150%;}
+.app-content {min-width: 100%; min-height: 175%;}
 
 .ui-content { overflow-x: visible!important }
 .ui-listview { margin: -10px!important}
@@ -26,7 +26,7 @@
 
 .menu_options {background:#C2E1EF; font-weight:bold!important;}
 
-.ui-page, .ui-content { min-height: 100%!important; padding: 0!important; height: auto;}
+.ui-page, .ui-content { min-height: 175%!important; padding: 0!important; height: auto;}
 
 #mapPage {height: 100%;}
 
@@ -49,7 +49,7 @@
 .scroller {top: 44px; height: auto; min-height: 150%;}
 .evscroller {top:0; height: auto; min-height: 175%;}
 .scrollable {bottom: 50px; height: auto; min-height: 175%;}
-.home-pg, .nearby-pg, .channelList {overflow: auto; overflow-x: hidden;}
+.home-pg, .nearby-pg, .listpg, .channelList {overflow: auto; overflow-x: hidden;}
 .home-pg {top: 109px; height: auto; min-height: 175%;}
 .channel-pg, .channelList {top:65px!important;} 
 .nearby-pg {top:35px;}

@@ -72,7 +72,7 @@ $(document).ready(function() {
     		case 'Website': 
     			var url = $('.ev-loc').attr('data-loc');
    				if ( url.length != 0 ) {	
-					goToUrl(url);
+					window.location.href= url;
    				}   
    				break; 	
    	 }

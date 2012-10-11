@@ -7,7 +7,7 @@ class ProcessReoccurrence
   
   def chk_reoccurring_event model, action    
     remove_future_events model if action == 'update' # remove existing future events since parent event has changed
-    set_frequency model if reoccur_type?(model)
+    set_frequency model if model.reoccurrencetype != 'once' && !model.reoccurrencetype.blank?
   end
   
   def remove_future_events model    

@@ -22,6 +22,17 @@ module Schedule
     get_county str["results"][0]["address_components"] if str
   end
   
+  def self.getLatLng(loc)   
+    url = ['http://maps.googleapis.com/maps/api/geocode/json?address=', loc.gsub!(/\s+/, "+"),'&sensor=false'].join('')
+    str = JSON.parse(open(url).read) # rescue nil   
+    if str
+      [str["results"][0]["geometry"]["location"]["lat"], str["results"][0]["geometry"]["location"]["lng"]]  
+    else
+      'none'
+    end    
+#    [lat, lng] if lat
+  end
+  
   # grabs county name from json hash returned from google api
   def self.get_county(item)
     result = item.detect { |addr| !(addr["types"][0] =~ /level_2/i).nil? }

@@ -1,21 +1,30 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => "Nearby Opportunities"} %>
 
 <%= content_for :head do %>
-	<%= render :partial => 'mobile/nearby_header', :locals => { :theme=>get_theme(@enddate, 'Nearby') } %>
+<script type="text/javascript">
+  $(document).on('pageinit', '#nearby-page', function() {
+  	if ( $('#nearby-map').length != 0 ) { 
+  		var locations = <%= raw build_lnglat_ary(@nearby_events) %>;
+		loadLocations(locations, false);
+  	} 
+  });
+</script>
 <% end %>
 
 <%= content_for :subhead do %>
+  	<div id='nearby-map'>
+		<div id="map_canvas"></div>
+  	</div>
 	<div class="evsearch" style="display:none">
 		<%= render :partial => 'mobile/nearby_search' %>
 	</div>
-	<%= render :partial => 'mobile/locations' %>
 <% end %>
 
-<%= content_for :content do %>
+<%= content_for :content do %>  
   <div class='nearby-pg'>
     <ul data-role="listview">
 		<% if @nearby_events %>
-			<%= render :partial => 'mobile/event_list', :collection => build_list(@nearby_events, @enddate, true), :as => :event, :locals => {:edate => Date.today} %>
+			<%= render :partial => 'mobile/event_list', :collection => @nearby_events, :as => :event, :locals => {:edate => Date.today} %>
 		<% else %>
 			<div class="stitle center-wrapper"><h6><%= 'No events found. Please try again.'  %></h6></div>		
   		<% end %>

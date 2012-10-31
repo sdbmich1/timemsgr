@@ -1,20 +1,21 @@
 # Use this file to easily define all of your cron jobs.
-#
-# It's helpful, but not entirely necessary to understand cron before proceeding.
-# http://en.wikipedia.org/wiki/Cron
 
-# Example:
-#
-# set :output, "/path/to/my/cron_log.log"
-#
-# every 2.hours do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
-#   rake "some:great:rake:task"
-# end
-#
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
+# set output file location
+set :output, "~/sites/koncierge/shared/log/cron_log.log"
 
-# Learn more: http://github.com/javan/whenever
+# process news feeds
+every :sunday, :tuesday, :thursday, :at => '12:00am', :roles => [:app] do
+  rake "loader:process_sf_feeds"
+  rake "loader:process_ny_feeds"
+  rake "loader:process_atlanta_feeds"
+  rake "loader:process_denver_feeds"
+  rake "loader:process_sj_feeds"
+  rake "loader:process_oc_feeds"
+end
+
+# process college feeds
+every :sunday, :tuesday, :thursday, :at => '2:00am', :roles => [:app] do
+  rake "loader:process_stanford_feeds"
+  rake "loader:process_sfstate_feeds"
+end
+

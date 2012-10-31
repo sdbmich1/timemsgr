@@ -422,8 +422,8 @@ $(document).ready(function() {
 
 // check for map functions
 $(document).ready(function() {	
-  if ( $('#map_canvas').length != 0 ) {  
-	getLatLng(true);
+  if ( $('#map_canvas').length != 0 ) { 
+	getLatLng(true);		
   }
 
   if ( $('#map_details').length != 0 ) {   

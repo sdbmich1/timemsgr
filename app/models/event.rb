@@ -1,7 +1,8 @@
 class Event < KitsTsdModel  
   include ResetDate
   set_primary_key 'ID' 
-  acts_as_mappable
+  acts_as_mappable :lat_column_name => :latitude,
+                   :lng_column_name => :longitude
   
   belongs_to :channel
   
@@ -48,8 +49,15 @@ class Event < KitsTsdModel
     Rails.env.development? ? "`kits_development`" : "`kits_production`"
   end
   
-  def self.cal_events edt, cid, sdt=Date.today, loc='USA'
-    current(edt, cid, sdt).select {|e| (chk_holiday?(e) && view_obs?(e.location, loc)) || !chk_holiday?(e)}
+  def self.cal_events edt, cid, sdt=Date.today, loc='USA'    
+    events = current(edt, cid, sdt).select {|e| (chk_holiday?(e) && view_obs?(e.location, loc)) || !chk_holiday?(e) }
+    sub_events = events.select {|e| e.cid == @@userCid}
+    events.reject{|e| chk_user_events(sub_events, e)} 
+  end
+  
+  # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
+  def self.chk_user_events(elist, event)
+    elist.detect{|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) && x.cid != event.cid}
   end
   
   def self.view_obs?(loc, val)
@@ -335,7 +343,7 @@ class Event < KitsTsdModel
         e.eventendtime,  e.bbody, e.mapplacename, e.localGMToffset, e.endGMToffset,
         e.mapstreet, e.mapcity, e.mapstate, e.mapzip, e.mapcountry, e.location, e.subscriptionsourceID, 
         e.speaker, e.RSVPemail, e.speakertopic, e.host, e.rsvp, e.eventid, e.contentsourceID,         
-        e.contentsourceURL, e.subscriptionsourceURL, e.imagelink "
+        e.contentsourceURL, e.subscriptionsourceURL, e.imagelink, e.longitude, e.latitude "
   end
   
   def self.getSQLhdr
@@ -343,7 +351,7 @@ class Event < KitsTsdModel
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
         speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, 
-        contentsourceURL, subscriptionsourceURL, imagelink "
+        contentsourceURL, subscriptionsourceURL, imagelink, longitude, latitude "
   end
    
   # define SQL WHERE clause for SELECT UNION statements 
@@ -372,9 +380,4 @@ class Event < KitsTsdModel
         WHERE s.contentsourceID = ?
         AND s.channelID = e.subscriptionsourceID "
   end
-  
-  def self.calSQL
-#    '(SELECT e.ID, e.event_name as "title", Unix_Timestamp(e.eventstartdate) as "start", Unix_Timestamp(e.eventenddate) as "end" '
-    "(SELECT e.ID, e.eventid, e.event_name, e.eventstartdate, e.eventenddate "
-  end    
 end

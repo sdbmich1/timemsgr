@@ -14,7 +14,8 @@ class LifeEvent < ActiveRecord::Base
         :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, 
         :eventday, :eventmonth, :eventgday, :eventgmonth,:obscaltype, :remindflg, :remindertype, :reoccurrenceenddate,
         :annualsamedate, :speaker, :speakertopic, :rsvp, :contentsourceURL, :subscriptionsourceURL,
-        :postdate, :status, :hide, :pictures_attributes, :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate, :fbCircle
+        :postdate, :status, :hide, :pictures_attributes, :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :LastModifyDate, :fbCircle,
+        :latitude, :longitude
   
   validates :event_name, :presence => true, :length => { :maximum => 100 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :inactive?

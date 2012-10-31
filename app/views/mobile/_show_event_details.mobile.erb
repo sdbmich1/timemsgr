@@ -1,6 +1,6 @@
 <div class="event-image center-wrapper">
 	<div class="event-image center-wrapper">
-	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'show-pic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
+	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => picSize(event.event_type), :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
   	</div>
 </div>
 

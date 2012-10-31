@@ -40,6 +40,17 @@ namespace :loader do
     load_news_feeds RAILS_ROOT + '/lib/feeds/SJMercuryNewsFeed020612.txt', 'San Jose', -8
   end
   
+  desc "Load database with data from OC News feeds"
+  task :process_oc_feeds => :environment do
+    p 'Loading OC News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/OCRegisterFeed020612.txt', 'Orange County', -8
+  end  
+
+  task :process_denver_feeds => :environment do
+    p 'Loading Denver Post News Feed...'  
+    load_news_feeds RAILS_ROOT + '/lib/feeds/DenverPostFeed020612.txt', 'Denver', -7
+  end
+  
   desc "Load database with data from Stanford feeds"
   task :process_stanford_feeds => :environment do
     p 'Loading Stanford General Events Feed...'  

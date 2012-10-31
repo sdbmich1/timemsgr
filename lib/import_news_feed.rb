@@ -9,7 +9,7 @@ class ImportNewsFeed
 #    p 'Add event ' + args[1][0..199]
     new_event = CalendarEvent.find_or_initialize_by_pageextsourceID(:pageextsourceID => doc.xpath("//item//id")[n].text, 
         :event_type => 'ce', :event_title => args[1][0..199],
-        :cbody => doc.xpath("//item//description")[n].text + ' ' + doc.xpath("//item//phone")[n].text,
+        :cbody => doc.xpath("//item//description")[n].text, 
         :postdate => DateTime.parse(doc.xpath("//item//pubDate")[n].text),
         :eventstartdate => args[2], :eventstarttime => args[2], :eventenddate => args[3], :eventendtime => args[3],
         :contentsourceURL => args[5][0..99],   
@@ -20,8 +20,10 @@ class ImportNewsFeed
         :mapstate => doc.xpath("//item//xCal:adr//xCal:x-calconnect-region")[n].text[0..24],
         :mapzip => doc.xpath("//item//xCal:adr//xCal:x-calconnect-postalcode")[n].text[0..9],
         :mapcountry => doc.xpath("//item//xCal:adr//xCal:x-calconnect-country")[n].text[0..39],
+        :contactphone => doc.xpath("//item//phone")[n].text[0..14],
         :contentsourceID => args[4], :localGMToffset => args[6], :endGMToffset => args[6],
         :subscriptionsourceID => args[4]) 
+    new_event.longitude, new_event.latitude = doc.xpath("//item//geo:long")[n].text.to_f, doc.xpath("//item//geo:lat")[n].text.to_f     
     new_event.imagelink = doc.xpath("//item//images//url")[n].text rescue nil
     new_event.save(:validate=>false)
   end  

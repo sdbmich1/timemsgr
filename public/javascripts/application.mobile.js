@@ -96,10 +96,10 @@ $(document).ready(function() {
   });	 
 
   // used to toggle visible search bar
-  $(".srchflg").live('click',function() {
+  $("#srchflg").live('click',function() {
 	$('.evsearch').toggle();
 	if ($('.evsearch').is(':visible')) {
-		$(".home-pg, .nearby-pg, .channelList").css('margin-top', '30px');
+		$(".home-pg, .nearby-pg, .channelList").css('margin-top', '35px');
 	}
 	else {
 		$(".home-pg, .nearby-pg, .channelList").css('margin-top', 0);		
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
 // import events from 3rd party services
 $(document).bind('pageinit', function() {
-		
+
   $("#google-btn").live("click", function() {
     var uid = $('#email').val();
     var pwd = $('#password').val();
@@ -138,7 +138,27 @@ $(document).bind('pageinit', function() {
   
   $("#cal-month").live("click", function() {
     calndr.fullCalendar( 'changeView', 'month' );       
-  });      
+  });     
+  
+  // check for category changes
+  $(".details").live("click", function() {
+    var loc = $('.loc').attr('data-loc');
+    var title = $('.loc').attr('data-title');
+    var id = $('.loc').attr('data-id');
+    var eid = $('.loc').attr('data-eid');
+    var etype = $('.loc').attr('data-etype');
+    var sdt = $('.loc').attr('data-sdt');
+	var lnglat = $('.lnglat').attr("data-lnglat");
+  	var mode = $('#mode').val();
+  	var url = '/details.mobile?loc=' + loc + "&lnglat=" + lnglat + "&title=" + encodeURIComponent(title) + "&mode=" + mode + "&id=" + id 
+  		+ "&eid=" + eid + "&sdt=" + sdt + "&etype=" + etype;
+  	
+	// change the page
+	window.location.href= url;
+
+    //prevent the default behavior of the click event
+    return false;
+  });   
 });
 
 $('[data-role="page"]').live('pageshow', function () {
@@ -231,20 +251,6 @@ $(document).ready(function() {
   });
 });
 
-// check for category changes
-$(".details").live("click", function() {
-    var loc = $('.loc').attr('data-loc');
-    var title = $('.loc').attr('data-title');
-	var lnglat = $('.lnglat').attr("data-lnglat");
-  	var mode = $('#mode').val();
-  	var url = '/details.mobile?loc=' + loc + "&lnglat=" + lnglat + "&title=" + encodeURIComponent(title) + "&mode=" + mode;
-  	
-	// change the page
-	goToUrl(url);	
-
-    //prevent the default behavior of the click event
-    return false;
-});
 
 $(".loadmore").live("click", function() {
     var page_num = $('.viewmore').attr('data-page') + 1;

@@ -5,7 +5,7 @@
   	<ul>
 		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
 		<% if sflg %>
-			<li><%= link_to 'Search', '#', :class=>"srchflg", "data-icon"=>"search" %></li>
+			<li><%= link_to 'Search', '#', :id=>"srchflg", "data-icon"=>"search" %></li>
 		<% end %>
 		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
 	</ul>

@@ -1,8 +1,9 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => "#{get_name_or_logo}"} %>
 
 <% content_for :srch_content do %>
-	<%= render :partial => 'mobile/event_search' %>
-	<%= render :partial => 'mobile/event_header', :locals => { :theme=>get_theme(@enddate) } %>
+	<div class="evsearch" style="display:none">
+		<%= render :partial => 'mobile/event_search' %>
+	</div>
 <% end %>
 
 <%= content_for :content do %>

@@ -1,5 +1,9 @@
   <div id="knnmenu">
-  	<span class="menu-offset <%= main_menu == 'Home' ? 'none' : '' %>" id="titlebar"><%= link_to get_name_or_logo, root_url %></span> 
+  	<span class="menu-offset <%= main_menu == 'Home' ? 'none' : '' %>" id="titlebar">
+  		<%= link_to root_url do %>
+			<%= image_tag("#{get_name_or_logo('title')}", :class =>"logo") %>
+		<% end %>
+  	</span> 
 
 	<% case main_menu %>		
 		<% when "Register" %>

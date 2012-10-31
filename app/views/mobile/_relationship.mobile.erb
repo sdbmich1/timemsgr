@@ -2,8 +2,8 @@
 	<div data-role="navbar">
 	  	<ul>
 			<li><%= link_to "All", relationships_url(:id=>@user), "data-theme"=>theme[0]%> </li>
-			<li><%= link_to "Private", private_relationships_url(:id=>@user, :rtype => 'Private'), "data-theme"=>theme[1] %> </li>
-			<li><%= link_to "Social", social_relationships_url(:id=>@user, :rtype => 'Social'), "data-theme"=>theme[2] %> </li>
+			<li><%= link_to "Family", private_relationships_url(:id=>@user, :rtype => 'Private'), "data-theme"=>theme[1] %> </li>
+			<li><%= link_to "Friend", social_relationships_url(:id=>@user, :rtype => 'Social'), "data-theme"=>theme[2] %> </li>
 			<li><%= link_to "World", extended_relationships_url(:id=>@user, :rtype => 'Extended'), "data-theme"=>theme[3] %> </li>
 		</ul>
 	</div>
@@ -20,8 +20,8 @@
 		<% if @rel_type && controller_name == 'relationships' %>
 			<li><%= link_to "Connection", users_url(:id=>@user, :rtype=>@rel_type), "data-icon"=>"plus" %> </li>
 	 	<% else %>
-			<li><%= link_to "Private", users_url(:id=>@user, :rtype=>'Private'), "data-icon"=>"plus" %> </li>
-			<li><%= link_to "Social", users_url(:id=>@user, :rtype=>'Social'), "data-icon"=>"plus" %> </li>
+			<li><%= link_to "Family", users_url(:id=>@user, :rtype=>'Private'), "data-icon"=>"plus" %> </li>
+			<li><%= link_to "Friend", users_url(:id=>@user, :rtype=>'Social'), "data-icon"=>"plus" %> </li>
 			<li><%= link_to "World", users_url(:id=>@user, :rtype=>'Extended'), "data-icon"=>"plus" %> </li>	 		
 		<% end %>
 		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>  
-  	<%= yield :title %> 
+	<div id="pg-hdr">
+  		<%= yield :title %> 
+  	</div>
 	<%= render 'layouts/jqm' %>
     <%= stylesheet_link_tag "mobile", "calendar" %>  
    	<%= stylesheet_link_tag "mobile_device" unless user_signed_in? %>

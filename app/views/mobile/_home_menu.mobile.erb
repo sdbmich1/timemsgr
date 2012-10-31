@@ -3,7 +3,7 @@
 <% content_for :content do %>
 	<div class="mtop center-wrapper">	<p><%= render :partial => 'mobile/show_photo', :locals => {:model=>@user.profile, :vtype=>"ppic",:file_name => 'headshot2.jpg', :psize => '80x80' }%>
 		<h3><%= @user.name %></h3></p><br />
-	</div>	<ul data-role="listview" data-dividertheme="a">		<li data-role="list-divider">Add</li>
+	</div>	<ul data-role="listview" data-dividertheme="b">		<li data-role="list-divider">Add</li>
 		<li><%= link_to "Add Activity", new_private_event_url %> </li>
 		<li><%= link_to "Add Life Event", new_life_event_url %> </li>
 		<li><%= link_to "Add Subscription", categories_url %> </li>
@@ -13,9 +13,9 @@
 		<li><%= link_to "My Connections", relationships_url(:id=>@user) %> </li>
 		<li><%= link_to "My Interests", edit_interest_path(@user, {:p => "Interests"}) %> </li>
 		<li><%= link_to "My Subscriptions", subscriptions_url(:id=>@user) %> </li>
-		<li data-role="list-divider">Beta</li>
-		<li><%= link_to "Feedback", new_beta_feedback_path %></li>
 		<li><%= link_to "Promo Code", edit_host_profile_path(@user) %></li>
+		<li data-role="list-divider">Discover</li>
+		<li><%= link_to "Near Me", '#', :class=>'nearby', 'data-ajax'=>"false" %> </li>
 	</ul><% end -%>
 
 <% content_for :footer do %>

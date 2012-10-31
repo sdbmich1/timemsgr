@@ -1,7 +1,8 @@
 <div data-role="navbar">
 	<ul>
 		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
-  		<li><%= link_to "Directions", directions_url(:loc=>@loc, :lnglat=>@lnglat, :title=>@title), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
+		<li id="home_footer"><%= link_to 'Event', event_url(:id=>@id, :etype=>@etype, :eid=>@eid, :sdt=>@sdt), :id=>'cal', "data-icon"=>"custom" %></li>
+  		<li><%= link_to "Directions", directions_url(:id=>@id, :etype=>@etype, :eid=>@eid, :sdt=>@sdt, :loc=>@loc, :lnglat=>@lnglat, :title=>@title), { :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li>
 		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
 	</ul>
 </div>

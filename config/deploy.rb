@@ -22,6 +22,7 @@ set :rails_env, "production"
 set :domain, '150.150.2.44'
 set :web_domain, "150.150.2.44" 
 set :whenever_command, "bundle exec whenever"
+set :whenever_roles, :app 
 
 # repo details
 set :scm, :git

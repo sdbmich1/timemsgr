@@ -5,8 +5,12 @@
 <% end %>
 
 <%= content_for :content do %>
-	<div class="loc" data-loc="<%= @loc %>"></div>
+	<div class="loc" data-loc="<%= @loc %>" data-id="<%= @id %>" data-eid="<%= @eid %>" data-sdt="<%= @sdt %>" data-etype="<%= @etype %>"></div>
 	<div id="map_canvas" class="lnglat" data-lnglat="<%= @lnglat %>" style="display: none"></div>
 	<div id="directionsPanel"></div>
 	<div id='map_details'></div>
+<% end %>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/directions_footer', :locals => { :directionsFlg => false } %>
 <% end %>

@@ -2,6 +2,8 @@ class PrivateEvent < ActiveRecord::Base
   include ResetDate
   set_table_name 'eventspriv'
   set_primary_key 'ID'
+  acts_as_mappable :lat_column_name => :latitude,
+                   :lng_column_name => :longitude
 
   before_save :set_flds
   
@@ -12,7 +14,8 @@ class PrivateEvent < ActiveRecord::Base
 				:mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
 				:allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :pageextsrc,
 				:remindstartdate, :remindenddate, :remindstarttime, :remindendtime, :reoccurrenceenddate,
-				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype, :fbCircle
+				:host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :remindflg, :remindertype, :fbCircle,
+				:longitude, :latitude, :contactphone
 				        
   validates :event_name, :presence => true, :length => { :maximum => 255 },
         :uniqueness => { :scope => [:contentsourceID,:eventstartdate, :eventstarttime] }, :unless => :frequent?
@@ -305,7 +308,7 @@ class PrivateEvent < ActiveRecord::Base
       "(SELECT ID, event_name, event_type, eventstartdate, eventenddate, eventstarttime, 
         eventendtime, event_title, cbody, bbody, mapplacename, localGMToffset, endGMToffset,
         mapstreet, mapcity, mapstate, mapzip, mapcountry, location, subscriptionsourceID, 
-        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, status"     
+        speaker, RSVPemail, speakertopic, host, rsvp, eventid, contentsourceID, status, longitude, latitude"     
   end
    
   def self.where_dt

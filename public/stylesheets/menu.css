@@ -1,5 +1,5 @@
 #knnmenu {
-    background-color: #0c6fcb;
+    background-color: #3d76b0;
     width: 950px;
     height:30px;
     display:inline-block;
@@ -18,8 +18,8 @@
 	height:20px;
 }
 
-.menu-offset {
-   background-color: #0c6fcb;
+.menu-offset { top: -0.5em!important; height: 30px;
+   background-color: #3d76b0;
 /*    margin-left:15%; */
     margin-bottom: 0px; 
 }
@@ -103,7 +103,7 @@
 
 #knnmenu li:hover li a:hover { background: #f08103; }
 
-.menu-bkgd {position: absolute; top: 0; width: 100%; background-color: #0c6fcb; height: 30px;
+.menu-bkgd {position: absolute; top: 0; width: 100%; background-color: #3d76b0; height: 30px;
  }
 
 .welcomebar {
@@ -135,3 +135,4 @@ a.signin_button {
 .sign-in-btn { position: absolute; top: 0; right: 1em; color: #FFFFFF; background-color: #006600; margin-top: 1px; height: 28px; font-weight: bold; }
 .menu-search { margin-left: 30%; position: absolute; top: 0; }
 .nav-menu { position: absolute; top: 0; right: 1em;  }
+.logo {height: 40px!important; width: 180px!important;}

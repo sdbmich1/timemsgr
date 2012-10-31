@@ -4,15 +4,15 @@ class MapsController < ApplicationController
   layout :page_layout  
   
   def index
-    @loc, @title, @lnglat = params[:loc], params[:title], params[:lnglat]
+    @id, @etype, @eid, @sdt, @loc, @title, @lnglat = params[:id], params[:etype], params[:eid], params[:sdt], params[:loc], params[:title], params[:lnglat]
   end
   
   def directions
-    @loc, @title, @lnglat, @mode = params[:loc], params[:title], params[:lnglat], params[:mode]    
+    @id, @etype, @eid, @sdt, @loc, @title, @lnglat, @mode = params[:id], params[:etype], params[:eid], params[:sdt], params[:loc], params[:title], params[:lnglat], params[:mode]    
   end
   
   def details
-    @loc, @title, @lnglat, @mode = params[:loc], params[:title], params[:lnglat], params[:mode]    
+    @id, @etype, @eid, @sdt, @loc, @title, @lnglat, @mode = params[:id], params[:etype], params[:eid], params[:sdt], params[:loc], params[:title], params[:lnglat], params[:mode]    
   end
 
   protected

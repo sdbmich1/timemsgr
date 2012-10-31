@@ -19,7 +19,7 @@
 .ui-corner-tr,
 .ui-corner-bl,
 .ui-header .ui-btn-corner-all,
-.ui-listview-filter .ui-btn-corner-all
+.ui-listview-filter .ui-btn-corner-all, .ui-btn-corner-all
 {
 	border-radius:0.2em!important;
 }
@@ -44,16 +44,17 @@
 
 .subhead, .listpg {top: 75px; height: auto; min-height: 175% }
 .form-top {top: 44px; height: auto; min-height: 175%;}
-.nearby-top {top: 80px; height: auto; min-height:175%}
+.nearby-top {top: 44px; height: auto; min-height:175%}
 .reg-top {top: 5px; height: auto; min-height: 150%;}
-.scroller {top: 44px; height: auto; min-height: 150%;}
+.scroller {top: 44px; height: auto; min-height: 175%;}
 .evscroller {top:0; height: auto; min-height: 175%;}
 .scrollable {bottom: 50px; height: auto; min-height: 175%;}
 .home-pg, .nearby-pg, .listpg, .channelList {overflow: auto; overflow-x: hidden;}
-.home-pg {top: 109px; height: auto; min-height: 175%;}
+.home-pg {top: 42px; height: auto; min-height: 175%;}
 .channel-pg, .channelList {top:65px!important;} 
-.nearby-pg {top:35px;}
+.nearby-pg {top:200px;}
 .scrollable {top: 43px!important;}
+.evsearch {margin: 0 0 3px 0}
 
 .ui-btn-inner.ui-li { max-height: 80px;}
 /*.ui-btn-inner, .ui-li {width: 100%!important;} */
@@ -61,6 +62,9 @@
 .ui-collapsible-content {padding: 0px 10px!important;}
 .ui-btn-icon-right {padding-right: 5px;}
 .ui-collapsible-set {margin-top: 0!important; }
+
+#pg-hdr .ui-dialog > .ui-header { display : none } /*hide the whole header*/
+#nearby-map {width:100%; height:200px!important;}
 
 /* full calendar settings */
 .ui-body-c, .ui-overlay-c { text-shadow: none; }
@@ -79,7 +83,8 @@
 
 .tmsize {width: 80px; font-size: 0.875em; clear: both;}
 .dtsize {width: 80%;} 
-.logo { margin-top: 40px;}   
+.logo { margin-top: 40px; width: 300px!important; height: 75px!important}   
+.hdr-logo { height: 35px!important; width: 150px!important;}
 .sborder {
 	border: 1px solid #CCCCCC;
 	padding: 0;
@@ -103,6 +108,15 @@
     max-width: 80px; 
     position: absolute;
     top: 0;
+}
+
+#home_footer .ui-icon {
+    background-color: transparent;
+    width: 22px;
+    height: 22px;
+   -moz-border-radius:0px;
+   -webkit-border-radius:0px;
+   border-radius:0px;
 }
 
 #search-mform .ui-btn {width: 25%; float: right}
@@ -137,6 +151,7 @@
     height: 80px; 
     width: 80px; 
     border: 1px solid #000000;
+    margin-top: 10px!important;
     }
 
 .cpic {    
@@ -272,7 +287,7 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #clone .ui-icon { background:  url("../images/ev-copy.png") 50% 50% no-repeat; size: 24px 24px; }
 #map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
 #website .ui-icon { background:  url("../images/website.png") 50% 50% no-repeat; size: 24px 24px; }
-#msg .ui-icon { background:  url("../images/icon_mail.png") 50% 50% no-repeat; size: 24px 22px; }
+#msg .ui-icon { background:  url("../images/icon_mail.png") 50% 50% no-repeat; size: 24px 24px; }
 #cal .ui-icon { background:  url("../images/cal.png") 50% 50% no-repeat; size: 24x 24px; }
 
 .progressBar { font-size: 14px; }

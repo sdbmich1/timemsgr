@@ -30,7 +30,8 @@ module UsersHelper
   end
   
   def get_rel_type(trkd_id, trkr_id)
-    Relationship.get_rel_type(trkd_id, trkr_id) || Relationship.get_rel_type(trkr_id, trkd_id)
+    rtype = Relationship.get_rel_type(trkd_id, trkr_id) || Relationship.get_rel_type(trkr_id, trkd_id)
+    rtype == 'Private' ? 'Family' : rtype == 'Social' ? 'Friend' : rtype
   end
   
   def trackers?

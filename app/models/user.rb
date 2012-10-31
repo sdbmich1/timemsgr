@@ -118,9 +118,7 @@ class User < ActiveRecord::Base
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token.extra.raw_info
-    if user = User.where(:email => data.email).first
-      user
-    else # Create a user with a stub password. 
+    unless user = User.where(:email => data.email).first
       user = User.new(:first_name => data.first_name, :last_name => data.last_name, 
         :username => data.username ? data.username : data.nickname, :birth_date => ResetDate.convert_date(data.birthday),
         :localGMToffset => data.timezone.to_i, :gender => data.gender.capitalize, :email => data.email, 
@@ -128,10 +126,11 @@ class User < ActiveRecord::Base
       user.location_id, user.city = get_location(data.location.name.split(', ')[0]), data.location.name if data.location 
       user.location_id, user.city = 4, 'San Francisco' unless user.city      
       user.save(:validate => false)  
-      
-      UserInfo.oauth_user = user.get_facebook_user access_token          
-      user
     end
+    
+    # set fb acct  
+    UserInfo.oauth_user = user.get_facebook_user access_token rescue nil         
+    user
   end
    
   def self.new_with_session(params, session)

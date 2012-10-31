@@ -246,7 +246,7 @@ module EventsHelper
    
   # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
   def chk_user_events(elist, event)
-    elist.detect{|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) || x.eventid == event.eventid}
+    elist.detect{|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) || (x.eventid == event.eventid && x.eventstartdate == event.eventstartdate)}
   end
   
   def chk_action(action, event)
@@ -440,8 +440,28 @@ module EventsHelper
   end
   
   def get_lnglat(event)
-    addr = Schedule.get_offset event.location_details || event.location
-    [addr[:lat], addr[:lng]] rescue nil 
+    if event.longitude && event.latitude
+      [event.latitude, event.longitude]
+    else 
+      addr = Schedule.get_offset event.location_details || event.location
+      [addr[:lat], addr[:lng]] rescue nil 
+    end 
+  end
+  
+  def build_lnglat_ary elist
+    ary = []
+    elist.map { |e| ary << (e.location_details || e.location)}
+    ary.flatten(1).to_json       
+  end
+  
+  def get_lnglat_ary elist
+    ary, cnt = [], 0
+    elist.each do |event|
+      cnt += 1
+      lat, lng = get_lnglat(event)
+      ary << [event.location_details, lng, lat, cnt]
+    end
+    ary.to_json
   end
   
   def isLegacy?(event)
@@ -506,5 +526,9 @@ module EventsHelper
   
   def event_cntr?
     !(controller_name =~ /event/i).nil? && action_name != 'index' ? true : false
+  end
+  
+  def picSize etype
+    major_event?(etype) ? 'show-pic' : 'ppic'
   end
 end

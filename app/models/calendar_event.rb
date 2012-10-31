@@ -1,7 +1,8 @@
 class CalendarEvent < KitsCentralModel
   set_table_name 'events'
   set_primary_key 'ID'
-  acts_as_mappable
+  acts_as_mappable :lat_column_name => :latitude,
+                   :lng_column_name => :longitude
   
   before_save :set_flds
 
@@ -10,7 +11,8 @@ class CalendarEvent < KitsCentralModel
         :mapstreet, :mapcity, :mapstate, :mapzip, :mapcountry, :bbody, :cbody, :location, :postdate,
         :mapplacename, :contentsourceID, :localGMToffset, :endGMToffset, :status, :hide, :pageextsourceID,
         :allowPrivCircle, :allowSocCircle, :allowWorldCircle, :speaker, :speakertopic, :rsvp, :LastModifyDateTime,
-        :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :contentsourceURL
+        :host, :RSVPemail, :imagelink, :LastModifyBy, :CreateDateTime, :pictures_attributes, :contentsourceURL, :latitude, :longitude,
+        :contactphone
                   
   default_scope :order => 'eventstartdate, eventstarttime ASC'
   
@@ -116,7 +118,7 @@ class CalendarEvent < KitsCentralModel
   def self.cal_events edt, loc='USA'
     get_calendar(edt).select {|e| view_obs?(e.location, loc)}
   end
-  
+   
   def self.get_calendar edt
     select('ID, event_name, eventstartdate, eventenddate, bbody, event_type, eventid, location').where(where_dt, edt, edt)
   end  

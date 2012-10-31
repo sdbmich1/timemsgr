@@ -114,7 +114,7 @@ namespace :whenever do
   desc "Update the crontab file for the Whenever Gem."
   task :update_crontab, :roles => :db do
     puts "\n\n=== Updating the Crontab! ===\n\n"
-    run "cd #{release_path} && whenever --update-crontab #{domain}"
+    run "cd #{release_path} && #{whenever_command} --update-crontab #{domain}"
   end    
 end
 

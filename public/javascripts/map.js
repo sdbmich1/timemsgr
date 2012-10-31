@@ -94,7 +94,7 @@ function loadLocations(addrs, tFlg) {
   if (tFlg)
   	getLocCenter(addrs, tFlg);
   else {
-    processLocations(addrs, tFlg, false);
+    processLocations(addrs, tFlg);
   }
       	
 }
@@ -117,7 +117,7 @@ function getLocCenter(addrs, tFlg) {
 }
 
 // process long/lat array for nearby events based on full address
-function processLocations(addrs, tFlg, renderFlg) {	
+function processLocations(addrs, tFlg) {	
   markers = [];
   marker_num = 0;
   geocoder = new google.maps.Geocoder();
@@ -135,9 +135,7 @@ function processLocations(addrs, tFlg, renderFlg) {
             marker_num++;
                         
             // actually display the map and markers, this is only done the last time
-            if(k == addrs.length && !renderFlg) {
-				renderFlg = true;
-				
+            if(k == addrs.length) {
                 // It's the last address so we can display the map
 				displayMap(centerPt.getCenter(), false, true, tFlg); 
           	} 

@@ -1,5 +1,5 @@
 #knnmenu {
-    background-color: #3d76b0;
+    background-color: #0c6fcb;
     width: 950px;
     height:30px;
     display:inline-block;
@@ -19,7 +19,7 @@
 }
 
 .menu-offset { top: -0.5em!important; height: 30px;
-   background-color: #3d76b0;
+   background-color: #0c6fcb;
 /*    margin-left:15%; */
     margin-bottom: 0px; 
 }
@@ -103,7 +103,7 @@
 
 #knnmenu li:hover li a:hover { background: #f08103; }
 
-.menu-bkgd {position: absolute; top: 0; width: 100%; background-color: #3d76b0; height: 30px;
+.menu-bkgd {position: absolute; top: 0; width: 100%; background-color: #0c6fcb; height: 30px;
  }
 
 .welcomebar {

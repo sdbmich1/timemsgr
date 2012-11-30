@@ -1,0 +1,20 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Event Calendar'} %>
+
+<%= content_for :head do %>
+<script type="text/javascript">
+  var minDt = <%= raw @event.eventstartdate.to_json %>;
+  var maxDt = <%= raw @event.eventenddate.to_json %>;
+  var eid = <%= raw @event.id.to_json %>;
+ 		
+</script>
+<% end %>
+
+<%= content_for :content do %>
+<div id="eventcal">
+	
+</div>
+<% end %>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/major_event_footer' %> 
+<% end %>

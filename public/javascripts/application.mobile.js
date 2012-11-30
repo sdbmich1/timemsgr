@@ -165,7 +165,11 @@ $('[data-role="page"]').live('pageshow', function () {
   
   // full calendar display
   if ( $('#calendar').length != 0 ) {
-	showCalendar(false);
+	showCalendar(false, true, (3).months().ago(), (12).months().fromNow(), '');
+  }
+  
+  if ( $('#eventcal').length != 0 ) {
+	showCalendar(false, false, minDt, maxDt, eid);
   }
   
   if ( $('#mform').length != 0 ) {

@@ -1,0 +1,33 @@
+<% title "Presenters" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Email</th>
+    <th>Fb Address</th>
+    <th>Tw Address</th>
+    <th>Work Phone</th>
+    <th>Mobile Phone</th>
+    <th>Title</th>
+    <th>Company</th>
+  </tr>
+  <% for presenter in @presenters %>
+    <tr>
+      <td><%= presenter.name %></td>
+      <td><%= presenter.bio %></td>
+      <td><%= presenter.email %></td>
+      <td><%= presenter.fb_address %></td>
+      <td><%= presenter.tw_address %></td>
+      <td><%= presenter.work_phone %></td>
+      <td><%= presenter.mobile_phone %></td>
+      <td><%= presenter.title %></td>
+      <td><%= presenter.company %></td>
+      <td><%= link_to "Show", presenter %></td>
+      <td><%= link_to "Edit", edit_presenter_path(presenter) %></td>
+      <td><%= link_to "Destroy", presenter, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Presenter", new_presenter_path %></p>

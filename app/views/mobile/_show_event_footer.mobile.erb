@@ -19,7 +19,7 @@
 		<% end %>
 		
 		<% if is_session?(event.event_type) || major_event?(event.event_type) %>
-			<li><%= link_to 'Event', major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
+			<li id="home_footer"><%= link_to 'Event', major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
 		<% end %>
 						
 		<% if rsvp?(event.rsvp) %>

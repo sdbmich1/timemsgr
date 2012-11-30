@@ -1,0 +1,14 @@
+  <ul data-role="listview" data-filter="true">
+  	<% for sponsor in @sponsors.uniq %>
+	<li id="plist">
+		<%= link_to sponsor_url(sponsor, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) do %>
+		  <%= render :partial => 'mobile/show_photo', :locals => {:model => sponsor, :vtype => 'ppic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
+
+   		  <div class="pstr">
+		  	<h6><%= sponsor.sponsor_name %></h6>
+		  </div>
+		  <p class="ptitle"><%= sponsor.sponsor_type %></p>		  
+		<% end %>
+	</li>
+	<% end %>
+  </ul>

@@ -1,0 +1,14 @@
+  	<% if any_details?(contact) %> 	
+  	  <div class="mtop"></div>
+ 	  <ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider">Contact Details</li>
+	  </ul> 
+ 	  <div class="mtop"></div>
+   	  <% [['work_phone', 'Work Phone:'], ['work_email', 'Email:'], ['website', 'Website:'], ['facebook_name', 'Facebook:'],
+      	 ['twitter_name', 'Twitter:'], ['linkedin_name', 'LinkedIn:'], ['skype_name', 'Skype:']].each do |fld| %>	
+  	 	<% unless contact.send(fld[0]).blank? %>	
+  			<label><%= fld[1] %></label>
+  			<span class="item-detail"><%= contact.send(fld[0]) %></span><br />
+  	 	<% end %>
+  	  <% end %>
+    <% end %>

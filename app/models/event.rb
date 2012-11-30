@@ -12,6 +12,12 @@ class Event < KitsTsdModel
   has_many :event_presenters #, :primary_key => :eventid, :foreign_key=>:eventid
   has_many :presenters, :through => :event_presenters
 
+  has_many :event_sponsors #, :primary_key => :eventid, :foreign_key=>:eventid
+  has_many :sponsors, :through => :event_sponsors
+  
+  has_many :event_exhibitors #, :primary_key => :eventid, :foreign_key=>:eventid
+  has_many :exhibitors, :through => :event_exhibitors
+
   has_many :event_sites
   has_many :event_tracks
   has_many :pictures, :as => :imageable, :dependent => :destroy
@@ -120,7 +126,7 @@ class Event < KitsTsdModel
   end
   
   def holiday? 
-    (%w(h m).detect { |x| x == self.event_type})
+    !(%w(h m).detect { |x| x == self.event_type}).nil?
   end 
   
   def self.chk_holiday? e
@@ -215,7 +221,8 @@ class Event < KitsTsdModel
     elist   
   end
   
-  def self.get_event_details(eid)
+  def self.get_event_details(eid, cid)
+    @@userCid = cid
     joins(:sessions).find(eid) 
   end
   
@@ -307,6 +314,32 @@ class Event < KitsTsdModel
   def self.delete_cached
     Rails.cache.delete('find_events')
   end
+  
+  def self.list_events(eid, ssid)
+    elist = []
+    sel_event = Event.get_event_details(eid, ssid)
+    (sel_event.start_date..sel_event.end_date).each do |edate|
+      elist = parse_list(sel_event.sessions, edate)      
+    end
+    elist
+  end
+
+  def self.get_dates(val)
+    drange = (val.start_date..val.end_date).collect { |x| x }
+  end
+  
+  def self.set_start_date(event, sdt, *args)
+    if event.eventenddate.to_date >= sdt && event.eventstartdate.to_date <= sdt
+      event.eventstartdate = sdt 
+      event
+    else
+      args[0] ? event : nil
+    end 
+  end
+    
+  def self.parse_list elist, dt, *args
+    elist.map! {|e| set_start_date(e,dt, args)}.compact! 
+  end 
   
   # define SQL field for SELECT UNION statements without fee and title fields
   def self.getSQL

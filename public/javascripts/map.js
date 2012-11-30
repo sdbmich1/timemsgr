@@ -41,6 +41,10 @@ function displayMap(centerLoc, showMkr, multiMkr, tFlg) {
 
 // show markers
 function showMarkers(map, centerLoc, showMkr, multiMkr, tFlg) {
+  if (markers.length > 10)
+  	var mcnt = 10;
+  else
+  	var mcnt = markers.length;
   	
   // show marker
   if (showMkr) {	  
@@ -52,7 +56,7 @@ function showMarkers(map, centerLoc, showMkr, multiMkr, tFlg) {
   
   // show multiple location markers
   if (multiMkr) {
-    for(i = 0; i < markers.length; i++) {
+    for(i = 0; i < mcnt; i++) {
       var mark = markers[i];
     
       // use toggle to determine which lat/lng is being used

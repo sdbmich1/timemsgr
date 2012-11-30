@@ -1,13 +1,13 @@
-  <ul data-role="listview">
+  <ul data-role="listview" data-filter="true">
   	<% for presenter in @presenters.uniq %>
 	<li id="plist">
-		<%= link_to presenter_url(presenter) do %>
+		<%= link_to presenter_url(presenter, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) do %>
 		  <%= render :partial => 'mobile/show_photo', :locals => {:model => presenter, :vtype => 'ppic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
 
    		  <div class="pstr">
 		  	<h6><%= presenter.name %></h6>
 		  </div>
-		  <p><%= presenter.title %></p>
+		  <p><%= presenter.occupation %></p>
 		  <p class="ptitle"><%= presenter.company %></p>		  
 		<% end %>
 	</li>

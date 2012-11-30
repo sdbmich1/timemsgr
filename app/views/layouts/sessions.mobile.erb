@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+  	<%= yield :title %> 
+	<%= render 'layouts/jqm' %> 
+    <%= render :partial => 'layouts/ga_head' if Rails.env.production? %>      
+
+    <%= stylesheet_link_tag "mobile", "calendar", "mobile_device" %>  
+  	<%= csrf_meta_tag %>  	
+  </head>
+  <body>  
+  <div id="sesspg" data-role="page" data-iscroll="enable" data-cache="never"> 
+    <div data-role="header" data-theme="b" >
+      <%= yield :head %>
+    </div>
+    
+    <div id="banner_ad_top">
+    	<div class="center-wrapper">
+    		<%= yield :ad_content %>
+    	</div>
+    </div>
+    
+	<div class="app-content" data-role="content">
+		<div data-iscroll="scroller" class="scrollable">
+      		<%= yield :content %>
+      	</div>
+     </div>
+    
+     <div id="app-footer" data-role="footer">		
+       <%= yield :footer %>
+     </div>
+   </div>
+   <%= render :partial => 'layouts/ga_body' if Rails.env.production? %>        
+  </body> 
+</html>

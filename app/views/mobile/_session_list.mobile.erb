@@ -2,7 +2,7 @@
 	<li data-role="list-divider">
 		<div class="etime"><%= chk_offset(event.eventstarttime, event.localGMToffset) %> <%= chk_offset(event.eventendtime, event.endGMToffset) %></div>
  		<div class="center-wrapper">
-			<%= truncate(event.event_name, :length=>30, :omission=>'...') %>
+			<%= event.listing %>
 		</div>
 	</li>
 <% else %>

@@ -1,0 +1,12 @@
+<%= set_title("Presenter Details") %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'User' } %>
+
+<%= content_for :content do -%>
+  <div class="span-24 last" >  
+  	<center><h3 class="grp-hdr">Presenter Details</h3></center><hr />
+	<div class="span-4">
+		<%= render :partial => 'shared/show_photo', :locals => {:model => @presenter, :file_name => "headshot1.jpg", :psize => '120x120' } %>
+	</div>
+	<%= render 'shared/show_presenter' %>
+  </div>
+<% end -%>

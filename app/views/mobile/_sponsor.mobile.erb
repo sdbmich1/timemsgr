@@ -1,0 +1,24 @@
+  <div class="mtop">
+    <div class="center-wrapper"> 
+		<%= render :partial => 'mobile/show_photo', :locals => {:model => @sponsor, :vtype => 'ppic', :file_name => 'headshot2.jpg', :psize=>'80x80' }%>
+		<h3><%= @sponsor.sponsor_name %></h3>
+    </div>
+  </div>
+<p>  
+<div id="show-item">
+  <% unless @sponsor.sponsor_type.blank? %>
+	<label><%= "Type: " %></label> 
+	<span class="item-detail"><%= @sponsor.sponsor_type %></span>
+  <% end %>
+  
+  <% for contact in @sponsor.contact_details %>
+	<%= render :partial => 'mobile/contact_details', :locals => { :contact => contact } %>
+  <% end %>
+</p>  
+</div>   
+<% unless @sponsor.description.blank? %>
+  	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider">Description</li>
+	</ul>
+	<p class="item-descr"><%= @sponsor.description %></p>
+<% end %>

@@ -1,0 +1,24 @@
+  <div class="mtop">
+    <div class="center-wrapper"> 
+		<%= render :partial => 'mobile/show_photo', :locals => {:model => @exhibitor, :vtype => 'ppic', :file_name => 'headshot2.jpg', :psize=>'80x80' }%>
+		<h3><%= @exhibitor.name %></h3>
+    </div>
+  </div>
+<p>  
+<div id="show-item">
+  <% unless @exhibitor.location.blank? %>
+	<label><%= "Location: " %></label> 
+	<span class="item-detail"><%= @exhibitor.location %></span>
+  <% end %>
+  
+  <% for contact in @exhibitor.contact_details %>
+	<%= render :partial => 'mobile/contact_details', :locals => { :contact => contact } %>
+  <% end %>
+</p>  
+</div>   
+<% unless @exhibitor.description.blank? %>
+  	<ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider">Description</li>
+	</ul>
+	<p class="item-descr"><%= @exhibitor.description %></p>
+<% end %>

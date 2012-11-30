@@ -408,14 +408,14 @@ function Calendar(element, options, eventSources) {
 			}
 			
 			// added to specify range for previous months
-			var minDate = (3).months().ago();
+//			var minDate = (3).months().ago();
 			if (currentView.start <= minDate){
   				header.disableButton('prev');
 			} else {
   				header.enableButton('prev');
 			}
 			
-			var maxDate = (12).months().fromNow();
+//			var maxDate = (12).months().fromNow();
 			if (currentView.end >= maxDate){
   				header.disableButton('next');
 			} else {

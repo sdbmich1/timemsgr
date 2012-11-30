@@ -9,6 +9,10 @@ module EventsHelper
   def appt?(etype)
     (%w(appt med remind).detect { |x| x == etype})
   end
+  
+  def logistical?(etype)
+    etype == 'log' 
+  end 
     
   def is_break?(session_type)
     (%w(wkshp cls ue mtg key brkout panel).detect { |x| x == session_type }).blank?
@@ -132,6 +136,7 @@ module EventsHelper
   # used to build each day's schedule of events
   def list_events(elist, start_date)
     elist.select {|event| event.start_date == start_date && time_left?(event)}   
+    elist = parse_list elist, start_date
   end
   
   # determines date range to build schedule view
@@ -178,8 +183,12 @@ module EventsHelper
     get_observances.count > 0 rescue nil
   end
   
+  def logistics?
+    get_log_events.count > 0 rescue nil
+  end
+    
   def get_user_events
-    @events.select {|e| e.cid == @user.ssid && !observance?(e.event_type) && !appt?(e.event_type) && time_left?(e)}
+    @events.select {|e| e.cid == @user.ssid && !observance?(e.event_type) && !logistical?(e.event_type) && !appt?(e.event_type) && time_left?(e)}
   end
   
   def get_event_list(dt)
@@ -203,6 +212,10 @@ module EventsHelper
   
   def get_appointments
     @events.select {|event| appt?(event.event_type) && time_left?(event)}
+  end
+  
+  def get_log_events
+    @events.select {|event| logistical?(event.event_type) && time_left?(event)}
   end
   
   def get_past_events
@@ -305,6 +318,7 @@ module EventsHelper
     when !(args[0] =~ /Scheduled/i).nil?; get_opportunities(args[1])
     when !(args[0] =~ /Appointment/i).nil?; get_appointments
     when !(args[0] =~ /Suggested/i).nil?; get_subscriptions(args[1])
+    when !(args[0] =~ /Logistic/i).nil?; get_log_events
     else get_user_events
     end
   end    
@@ -525,7 +539,7 @@ module EventsHelper
   end
   
   def event_cntr?
-    !(controller_name =~ /event/i).nil? && action_name != 'index' ? true : false
+    !(controller_name =~ /events/i).nil? && action_name != 'index' ? true : false
   end
   
   def picSize etype

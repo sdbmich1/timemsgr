@@ -101,6 +101,7 @@ $(function (){
    });
 });
 
+var minDate, maxDate;
 $(document).ready(function() {
   if ( $('#mform label').length != 0 ) {
     $("#mform label").inFieldLabels();
@@ -108,7 +109,7 @@ $(document).ready(function() {
 
   // full calendar display
   if ( $('#calendar').length != 0 ) {
-	showCalendar(true);
+	showCalendar(true, true, (3).months().ago(), (12).months().fromNow(), '');
   }
 });
   
@@ -122,7 +123,7 @@ $(function () {
 });
 
 var calndr;
-function showCalendar(vFlg) {
+function showCalendar(vFlg, stndCal, minDt, maxDt, eid) {
   var lStr = '';
   var rStr = '';
   var dView = 'agendaDay';
@@ -133,8 +134,15 @@ function showCalendar(vFlg) {
   	rStr = 'agendaDay,agendaWeek,month';
   	dView = 'month'; 
   }
+    
+  // determine url based on flag
+  if (stndCal)
+  	var url = '/calendars.json';
+  else
+  	var url = '/calinfo.json?event_id=' + eid;
   	
-  calndr = $('#calendar').fullCalendar({
+  // load calendar	
+  calndr = $('#calendar, #eventcal').fullCalendar({
   	  header: {
 		left:   lStr,
     	center: 'prev title next',
@@ -142,7 +150,7 @@ function showCalendar(vFlg) {
   	  },
   	  eventSources: [
   		{
-  			url: 	'/calendars.json',
+  			url: 	url,
         }
   	  ],
  	  startParam: 'startdt',
@@ -175,6 +183,16 @@ function showCalendar(vFlg) {
          }    
       },
 	  loading: function(bool){
+		 // set calendar min & max dates if standard or event-specific calendar 
+		 if (stndCal) {
+		 	minDate = new Date(minDt);
+		  	maxDate = new Date(maxDt);			
+		 } else {
+		 	minDate = calndr.formatDate( minDt, "MM/dd/yy");
+		 	maxDate = calndr.formatDate( maxDt, "MM/dd/yy");		 	
+		 }
+		 	 		 
+		 // toggle spinner based on mobile or web client
          if (bool)  
          	if (vFlg)
             	toggleLoading();

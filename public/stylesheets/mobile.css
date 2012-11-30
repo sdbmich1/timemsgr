@@ -62,6 +62,7 @@
 .ui-collapsible-content {padding: 0px 10px!important;}
 .ui-btn-icon-right {padding-right: 5px;}
 .ui-collapsible-set {margin-top: 0!important; }
+.ui-page-footer-fixed {padding-top: 4.5em;}
 
 #pg-hdr .ui-dialog > .ui-header { display : none } /*hide the whole header*/
 #nearby-map {width:100%; height:200px!important;}
@@ -151,7 +152,6 @@
     height: 80px; 
     width: 80px; 
     border: 1px solid #000000;
-    margin-top: 10px!important;
     }
 
 .cpic {    

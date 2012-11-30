@@ -23,11 +23,14 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :searches, :search_channels, 
-    :search_users, :search_private_events, :local_channels, :maps, :import_events, :search_nearby_events, :calendars
+  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :local_channels, :maps, :import_events
+    
+  # controllers for event related content
+  resources :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks
+  resources :presenters, :calendars, :exhibitors, :sponsors, :only => [:show, :index]
     
   resources :local_subscriptions, :only => [:create, :new]
-  resources :nearby_events, :only => [:index]
+  resources :search_users, :search_private_events, :searches, :search_channels, :search_nearby_events, :nearby_events, :only => [:index]
 
   resources :events do 
     member do
@@ -54,10 +57,7 @@ Timemsgr::Application.routes.draw do
       get 'clone', 'add', 'notify', 'share'
     end
   end 
-    
-  # controllers for event related content
-  resources :presenters, :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks
-  
+      
   resources :relationships do
     collection do
       get 'private', 'social', 'pending', 'extended'
@@ -93,6 +93,8 @@ Timemsgr::Application.routes.draw do
   match '/list', :to =>  "categories#list"
   match "/suggestions", :to => "affiliations#suggestions"
   match "/auth/failure", :to => "sessions#failure"   
+  match '/schedule', :to =>  "event_sessions#schedule"
+  match '/calinfo', :to =>  "event_sessions#calinfo"
     
   # route custom event actions
   match '/outlook', :to => 'private_events#outlook', :as => "outlook"

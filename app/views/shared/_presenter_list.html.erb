@@ -1,3 +1,4 @@
+<strong><%= "#{get_label(@event.event_type)}:"%></strong>
 <table>
   <tr>
     <th></th>
@@ -14,7 +15,7 @@
 		</div>
       </td>
 
-      <td><%= link_to presenter.name, presenter_url(presenter) %></td>
+      <td><%= link_to presenter.name, presenter_url(presenter, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) %></td>
       <td><%= presenter.title %></td>
       <td><%= presenter.org_name %></td>
       <td><%= truncate(presenter.bio, :length=>120, :omission=>"...") %></td>

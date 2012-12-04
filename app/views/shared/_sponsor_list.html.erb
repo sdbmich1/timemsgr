@@ -1,0 +1,24 @@
+<strong>Sponsor(s):</strong>
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <% for sponsor in @sponsors %>
+    <tr>
+      <td>
+        <div class="pic-size">
+          <%= render :partial => 'shared/show_photo', :locals => {:model => sponsor, :file_name => "schedule1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+      <td><%= link_to sponsor.sponsor_name, sponsor_url(sponsor, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) %></td>
+      <td><%= sponsor.sponsor_type %></td>
+      <td><%= sponsor.description %></td>
+   </tr>
+  <% end %>
+</table>
+<div class="nav-right">
+  <%= will_paginate @sponsors, :param_name => 'sponsor_page' %>
+</div> 

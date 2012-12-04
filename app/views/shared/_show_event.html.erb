@@ -11,11 +11,19 @@
 	
 	  <% unless @presenters.blank? %>
 		<div class="clear-all"></div>
-		<p><strong><%= "#{get_label(@event.event_type)}:"%></strong>
-		<div id="pres-list"><%= render 'shared/presenter_list' %></div></p>
+		<p><div id="pres-list"><%= render 'shared/presenter_list' %></div></p>
 	  <% end %>	
+	  
+	  <% unless @sponsors.blank? %>
+		<div class="clear-all"></div>
+		<p><div id="spon-list"><%= render 'shared/sponsor_list' %></div></p>
+	  <% end %>	
+	  
+	  <% unless @exhibitors.blank? %>
+		<div class="clear-all"></div>
+		<p><div id="ex-list"><%= render 'shared/exhibitor_list' %></div></p>
+	  <% end %>		  
 	<% end %>
 		
-   	<%= render :partial => 'shared/show_sponsor_page', :locals => {:event => @event} %>	
  <% end %>
 </div>

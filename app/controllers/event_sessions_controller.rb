@@ -1,21 +1,13 @@
 class EventSessionsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user! 
+  before_filter :load_info, :only => [:index, :calinfo, :schedule] 
   respond_to :html, :xml, :js, :mobile, :json
   layout :page_layout
-
-  def index
-    @event = Event.get_event_details(params[:event_id], @user.ssid)
-  end
-  
+ 
   def calinfo
-    @event = Event.get_event_details(params[:event_id], @user.ssid)
     render :json => @event.sessions.to_json
   end  
   
-  def schedule
-    @event = Event.get_event_details(params[:event_id], @user.ssid)   
-  end
-
   def show
     @event = Event.find(params[:id])
     @notification = Notification.new
@@ -27,6 +19,10 @@ class EventSessionsController < ApplicationController
   
   def page_layout 
     mobile_device? ? action_name == 'show' ? 'sessions' : 'list' : "events"
-  end    
+  end   
+  
+  def load_info
+    @event = Event.get_event_details(params[:event_id], @user.ssid)      
+  end 
 
 end

@@ -11,6 +11,9 @@
 <% end -%>
 
 <%= content_for :content do %>
+	<div class="mtop center-wrapper">
+		<p><%= image_tag("#{get_name_or_logo('logo')}", :class =>"logo") %></p>
+	</div>
    	<%= render :partial => "devise/shared/signin" %><br />
  	<div class="mtop">
   		<div class="version nav-right"><%= "Build: #{get_version}" if Rails.env.production? %></div>

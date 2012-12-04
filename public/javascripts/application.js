@@ -111,11 +111,17 @@ $(document).ready(function() {
   if ( $('#calendar').length != 0 ) {
 	showCalendar(true, true, (3).months().ago(), (12).months().fromNow(), '');
   }
+  
+  // show conference calendar
+  if ( $('#eventcal').length != 0 ) {
+  	showConfCalendar();
+  }
+    
 });
   
 $(function () {
-  $("#ev-results .pagination a, #past_evnt .pagination a, #event_form .pagination a, #sub-list .pagination a, #channel_form .pagination a, #notice_list .pagination a, #pres-list .pagination a, #sess-list .pagination a")
-  	.live('click', function () {
+  $("#ev-results .pagination a, #past_evnt .pagination a, #event_form .pagination a, #sub-list .pagination a, #channel_form .pagination a, #notice_list .pagination a, #pres-list .pagination a, #sess-list .pagination a, #spon-list .pagination a, #ex-list .pagination a")
+    .live('click', function () {
 //   $("[id*=pagination]").live('click', function () {
          $.getScript(this.href);
          return false;   
@@ -188,8 +194,8 @@ function showCalendar(vFlg, stndCal, minDt, maxDt, eid) {
 		 	minDate = new Date(minDt);
 		  	maxDate = new Date(maxDt);			
 		 } else {
-		 	minDate = calndr.formatDate( minDt, "MM/dd/yy");
-		 	maxDate = calndr.formatDate( maxDt, "MM/dd/yy");		 	
+		 	minDate = minDt;
+		 	maxDate = maxDt;			 	
 		 }
 		 	 		 
 		 // toggle spinner based on mobile or web client
@@ -205,9 +211,24 @@ function showCalendar(vFlg, stndCal, minDt, maxDt, eid) {
             	$('body').removeClass('ui-loading');
       }      	 
    	});
-   		
+   	
+   	// adjust calendar display height	
 	if (!vFlg)
 	  calndr.fullCalendar('option', 'contentHeight', 1200);	
+	  
+	// reset start date   
+	if (!stndCal)
+	  $('#calendar, #eventcal').fullCalendar('gotoDate', minDt);	  
+}
+
+function showConfCalendar(){
+    var eid = $('.major_evnt').attr('data-eid');
+    var minDayNum = $('.major_evnt').attr('data-sdt');
+    var maxDayNum = $('.major_evnt').attr('data-edt');
+    
+    var minDate = Date.today().add(parseInt(minDayNum)).days();
+    var maxDate = Date.today().add(parseInt(maxDayNum)).days();
+	showCalendar(false, false, minDate, maxDate, eid);
 }
 
 function chkAnnualEvent(etype) {
@@ -250,6 +271,7 @@ $(function () {
     var url = '/events/notice.js?';
     process_url(url, false);    
   })
+  
   return false;
 });
 
@@ -276,6 +298,7 @@ $(function (){
 	})
 });
 
+// change item color based on click actions
 $(function (){
    $(".add_prv_btn").live('click', function () {
 	 $('ul.menu li a').css('background-color', '#0C6FCB');
@@ -322,6 +345,7 @@ function get_categories (loc, flg) {
 	process_url(url, flg);
 }
 
+// process url call and toggle loading spinners
 function process_url (url, Slider) {
   		$.ajax({
   			url: url,

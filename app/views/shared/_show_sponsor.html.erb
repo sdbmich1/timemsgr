@@ -1,0 +1,11 @@
+ <% [['sponsor_name', 'Name:'],	['sponsor_type', 'Type:'], ['description', 'Description:']].each do |fld| %>
+   	<% unless @sponsor.send(fld[0]).blank? %>	
+   	  	<div class="span-2"><%= fld[1] %></div>
+ 	  	<div class="span-18 last"><%= @sponsor.send(fld[0]) %></div>
+   		<% if fld[0] == 'description' %>
+  			<div class="prepend-4">
+   				<%= render :partial => 'shared/presenter_details', :locals => {:presenter => @sponsor } %>
+   			</div>
+		<% end %>
+ 	<% end %>
+ <% end %>

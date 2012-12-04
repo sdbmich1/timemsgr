@@ -1,4 +1,4 @@
-  <ul data-role="listview" data-filter="true">
+  <ul data-role="listview" data-filter="true" class="sponsorList">
   	<% for sponsor in @sponsors.uniq %>
 	<li id="plist">
 		<%= link_to sponsor_url(sponsor, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) do %>

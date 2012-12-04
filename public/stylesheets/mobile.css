@@ -5,9 +5,12 @@
 .app-content {min-width: 100%; min-height: 175%;}
 
 .ui-content { overflow-x: visible!important }
-.ui-listview { margin: -10px!important}
+.ui-listview-filter {margin-top:0px!important; margin-bottom:0px!important; margin-left:0px!important; margin-right: 0!important} 
+.ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
+.mainPg .ui-listview {margin-top:-10px!important; margin-left:-10px!important; 	margin-right:-10px!important;  }
+.major_evnt { margin-top: -4px!important; }
+.sponsorList {margin-left: 0!important; margin-right: -10px!important;}	
 
-.ui-listview-filter, .ui-listview {margin-top:0px!important; margin-bottom:0px!important; }
 .ui-page, .ui-body-c, .ui-content {
 	background: #FFFFFF!important;
 }  

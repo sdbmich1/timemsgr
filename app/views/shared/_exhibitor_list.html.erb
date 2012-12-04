@@ -1,0 +1,25 @@
+<strong>Exhibitor(s):</strong>
+<table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th>Location</th>    
+    <th>Description</th>
+  </tr>
+  <% for exhibitor in @exhibitors.uniq %>
+    <tr>
+      <td>
+        <div class="pic-size">
+          <%= render :partial => 'shared/show_photo', :locals => {:model => exhibitor, :file_name => "headshot1.jpg", :psize => '48x48' } %>
+		</div>
+      </td>
+      <td><%= link_to exhibitor.name, exhibitor_url(exhibitor, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) %></td>
+      <td><%= exhibitor.location %></td>
+      <td><%= exhibitor.description %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="nav-right">
+  <%= will_paginate @exhibitors, :param_name => 'exhibitor_page' %><br />
+</div>

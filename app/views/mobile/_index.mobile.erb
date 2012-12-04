@@ -1,4 +1,4 @@
-<ul data-role="listview">
+<ul data-role="listview" class="mainPg">
 	<% if observances? %>
 		<li data-role="list-divider" class="center-wrapper">Observances & Milestones</li>
 		<div class="center-wrapper"><%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event, :locals => {:edate => Date.today} %></div>			

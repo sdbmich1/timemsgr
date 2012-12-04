@@ -168,8 +168,9 @@ $('[data-role="page"]').live('pageshow', function () {
 	showCalendar(false, true, (3).months().ago(), (12).months().fromNow(), '');
   }
   
+  // show conference calendar
   if ( $('#eventcal').length != 0 ) {
-	showCalendar(false, false, minDt, maxDt, eid);
+  	showConfCalendar();
   }
   
   if ( $('#mform').length != 0 ) {

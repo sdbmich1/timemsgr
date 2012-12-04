@@ -1,0 +1,11 @@
+ <% [['name', 'Name:'],	['location', 'Location'], ['description', 'Description:']].each do |fld| %>
+   	<% unless @exhibitor.send(fld[0]).blank? %>	
+  	  	<div class="span-2"><%= fld[1] %></div>
+ 	  	<div class="span-18 last"><%= @exhibitor.send(fld[0]) %></div>
+   		<% if fld[0] == 'description' %>
+  			<div class="prepend-4">
+   				<%= render :partial => 'shared/presenter_details', :locals => {:presenter => @exhibitor } %>
+   			</div>
+		<% end %>
+ 	<% end %>
+ <% end %>

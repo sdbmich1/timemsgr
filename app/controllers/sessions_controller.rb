@@ -1,4 +1,5 @@
 class SessionsController < Devise::SessionsController
+  layout :page_layout
   
   def destroy
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
@@ -8,5 +9,10 @@ class SessionsController < Devise::SessionsController
   def failure
     redirect_to root_url, :flash => {:error => "Could not log you in. #{params[:message]}"}
   end
-      
+  
+  protected
+  
+  def page_layout 
+    'application'
+  end          
 end

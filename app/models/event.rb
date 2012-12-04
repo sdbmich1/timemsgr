@@ -108,26 +108,24 @@ class Event < KitsTsdModel
   end
   
   def get_color
-    if holiday?
-      '#CCCCCC'
-    elsif self.cid == @@userCid
-      '#0C6FCB'
+    unless is_session?
+      holiday? ? '#CCCCCC' : self.cid == @@userCid ? '#0C6FCB' : 'green'
     else
-      'green'
-    end    
+      EventTrack.get_color self.id, self.track
+    end        
   end
   
   def get_text_color
-    if holiday?
-      '#000000'
-    else
-      '#ffffff'
-    end
+    holiday? ? '#000000' : '#ffffff'   
   end
   
   def holiday? 
     !(%w(h m).detect { |x| x == self.event_type}).nil?
   end 
+  
+  def is_session?
+    (%w(es se sm session).detect { |x| x == self.event_type }) 
+  end   
   
   def self.chk_holiday? e
     (%w(h m).detect { |x| x == e.event_type})    

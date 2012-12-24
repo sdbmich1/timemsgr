@@ -1,6 +1,6 @@
 <div class="clear-all"></div>
 <% if any_prices?(event) %>
-  <p><div class="span-2">Prices:</span></div></p>
+  <div class="span-2">Prices:</span></div>
   <div class="span-18 last">
   	<% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'],
       ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:']].each do |fld| %>
@@ -11,8 +11,8 @@
     <% end %>
   	<% (1..6).each do |i| %>
     	<% if price_exists?(event, 'Other' + i.to_s + 'Fee' ) %>
-        	<div class="span-4"><%= event.send('Other' + i.to_s + 'Title') + ':' %></div>
-        	<div class="span-14 last"><%= number_to_currency(event.send('Other' + i.to_s + 'Fee')) %></div>
+        	<div class="span-2"><%= event.send('Other' + i.to_s + 'Title') + ':' %></div>
+        	<div class="span-16 last"><%= number_to_currency(event.send('Other' + i.to_s + 'Fee')) %></div>
     	<% end %>
   	<% end %>
   </div>

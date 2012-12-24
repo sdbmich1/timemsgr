@@ -124,6 +124,10 @@ gem 'faker', '0.3.1'
 
 # for delayed jobs
 gem 'daemons'
+
+# add payment gateways
+gem 'activemerchant'
+gem 'stripe'
  
 group :production do
   # handle exceptions

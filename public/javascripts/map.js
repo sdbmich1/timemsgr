@@ -41,10 +41,12 @@ function displayMap(centerLoc, showMkr, multiMkr, tFlg) {
 
 // show markers
 function showMarkers(map, centerLoc, showMkr, multiMkr, tFlg) {
-  if (markers.length > 10)
-  	var mcnt = 10;
-  else
-  	var mcnt = markers.length;
+  if (markers !== undefined) {
+  	if (markers.length > 10)
+  		var mcnt = 10;
+  	else
+  		var mcnt = markers.length;
+  }
   	
   // show marker
   if (showMkr) {	  

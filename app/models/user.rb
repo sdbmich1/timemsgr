@@ -48,9 +48,7 @@ class User < ActiveRecord::Base
   has_many :subscriptions, :dependent => :destroy, :conditions => { :status => 'active'}
   has_many :channels, :through => :subscriptions, 
   				:conditions => { :status => 'active'}
-  
-  has_many :transactions
-  
+    
   belongs_to :location
   
   has_many :affiliations, :dependent => :destroy 

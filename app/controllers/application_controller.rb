@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     @user ||= resource
-    @user.sign_in_count <= 1 ? edit_host_profile_path(@user) : params[:next] || events_path
+    @user.sign_in_count <= 1 ? edit_host_profile_path(@user) : session[:return_to] || events_path
   end
   
   protected

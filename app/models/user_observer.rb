@@ -40,7 +40,7 @@ class UserObserver < ActiveRecord::Observer
     
     # send welcome email
     #DelayClassMethod.new("UserMailer", "welcome_email", :params=>[user]).delay.perform
-    UserMailer.welcome_email user   
+    UserMailer.welcome_email(user).deliver    
   end
   
   def after_update user

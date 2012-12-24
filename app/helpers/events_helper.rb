@@ -172,7 +172,7 @@ module EventsHelper
   
   def subscribed?(ssid)
     slist = @user.subscriptions rescue nil
-    slist.blank? ? false : slist.detect {|u| u.channelID == ssid && u.status == 'active' }
+    slist.blank? ? false : slist.detect {|u| u.channelID == ssid && u.status.downcase == 'active' }
   end
 
   def subscriptions?
@@ -227,8 +227,9 @@ module EventsHelper
   end
   
   def get_subscriptions *args
-    elist = @events.reject {|e| !subscribed?(e.ssid) || chk_user_events(get_user_events, e) || is_session?(e.event_type) || !time_left?(e) }
-    elist.map! {|e| set_start_date(e,args[0])}.compact! if args[0]
+    sdt = args[0]
+    elist = @events.select {|e| subscribed?(e.ssid) && !chk_user_events(get_user_events, e) && !is_session?(e.event_type) && time_left?(e) }
+    elist.map! {|e| set_start_date(e,sdt)}.compact! if sdt
     elist
   end
            

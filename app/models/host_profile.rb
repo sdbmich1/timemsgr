@@ -14,6 +14,8 @@ class HostProfile < KitsTsdModel
   has_many :channels, :foreign_key => :HostProfileID
   has_many :local_channels, :foreign_key => :HostProfileID
   
+  has_many :transactions, :foreign_key => :HostProfileID
+  
   has_many :events, :through => :channels 
   has_many :scheduled_events, :dependent => :destroy, :primary_key => :subscriptionsourceID, :foreign_key => :contentsourceID do
     def range(sdt)

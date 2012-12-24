@@ -1,0 +1,8 @@
+<div id="orderForm" class="span-12">
+  <h3 class="grp-hdr"><center>Order Summary</center><hr /></h3>
+  <%= render :partial=>'shared/order_details', :locals=>{:order=>@order} %>
+	
+  <div class="right">
+  	<%= link_to "Change Order", new_transaction_path(:order=>@order), :class => "change-btn round", :remote=>true %><br />
+  </div>
+</div>

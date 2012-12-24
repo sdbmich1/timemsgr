@@ -1,0 +1,9 @@
+<% if @transaction.errors.any? %>
+    $("#stripe_error").html("<%= escape_javascript(error_messages_for(@transaction))%>");
+	$('#stripe_error').show(300);
+	$('#payForm').attr('disabled', false);
+<% else %>
+	$('#stripe_error').hide(300);
+	$("#pmtForm").html("<%= escape_javascript( raw render(:partial => "shared/payment_success_form") ) %>");
+<% end %>
+$("#spinner").hide(300);

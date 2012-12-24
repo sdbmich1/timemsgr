@@ -1,6 +1,6 @@
 class MajorEventsController < ApplicationController
   require 'will_paginate/array'
-  before_filter :authenticate_user!, :load_data
+  before_filter :authenticate_user!, :load_items
   layout :page_layout
   
   def show
@@ -26,7 +26,7 @@ class MajorEventsController < ApplicationController
     end
   end    
 
-  def load_data
+  def load_items
     @notice_types = NoticeType.find_types(params[:etype]) if params[:etype]
   end
 end

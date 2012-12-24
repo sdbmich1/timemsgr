@@ -31,5 +31,10 @@ class UserMailer < ActionMailer::Base
     @reminder = reminder; @user = usr
     mail(:to => "#{email}", :subject => "Reminder: #{reminder.reminder_name} @ #{reminder.starttime} - #{reminder.endtime} ")        
   end
+  
+  def send_transaction_receipt transaction
+    @transaction = transaction
+    mail(:to => "#{transaction.email}", :subject => "Your Purchase Receipt: #{transaction.confirmation_no} ") 
+  end
  
 end

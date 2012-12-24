@@ -1,0 +1,8 @@
+$('#buyFormError').hide(300);
+<% if @order[:qtyCnt].to_i > 0 %>
+	$("#buyTxtForm").html("<%= escape_javascript( raw render(:partial => "shared/ticket_purchase", :locals=>{:event=>@event}) ) %>");
+<% else %>
+	$('#buyFormError').show(300)
+    $('#buyFormError').text('Error loading order form. Please submit order.')
+<% end %>
+$("#spinner").hide(300);

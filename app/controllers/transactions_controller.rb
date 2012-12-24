@@ -1,10 +1,11 @@
 class TransactionsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user! 
+  before_filter :load_vars, :only => [:index, :create, :new]
   layout :page_layout
 
   def new
-    @event = Event.find_event(params[:eid], params[:etype])
-    @transaction = Transaction.new(@user.attributes)
+    @event = Event.find_event(@order[:id], @order[:etype], @order[:eid], @order[:sdt])
+    @transaction = Transaction.load_new(@user)
   end
   
   def show
@@ -13,26 +14,13 @@ class TransactionsController < ApplicationController
   
   def create
     @transaction = Transaction.new(params[:transaction])
-    if @transaction.save
-      redirect_to events_url, :notice => "#{get_msg(@user, 'Transaction')}"
-    else
-      render :action => 'new'
-    end
-  end
-  
-  def edit
-    @transaction = Transaction.find(params[:id])
+    @transaction.save_transaction
   end
 
-  def update
-    @transaction = Transaction.find(params[:id])
-    if @transaction.update_attributes(reset_dates(params[:transaction]))
-      redirect_to events_url, :notice  =>  "#{get_msg(@user, 'Event')}"
-    else
-      render :action => 'edit'
-    end
+  def index    
+    @transaction = Transaction.load_new(@user)
   end
-  
+    
   private
   
   def page_layout 
@@ -42,5 +30,11 @@ class TransactionsController < ApplicationController
       "application"
     end
   end  
+  
+  def load_vars
+    @total = 0   
+    @order = action_name == 'index' ? params : params[:order]
+    @qtyCnt = action_name == 'new' ? @order[:qtyCnt].to_i : 0
+  end
       
 end

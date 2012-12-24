@@ -16,7 +16,7 @@ function toggleLoading () {
 
 // add spinner to ajax events
 $(document).ready(function() {
-  $("#map, #cal-btn, #connect_btn, #search_btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
+  $("#map, #cal-btn, #connect_btn, #payment_form, #payForm, #search_btn, #purchase_btn, .change-btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .live("ajax:beforeSend", toggleLoading)
     .live("ajax:complete", toggleLoading)
     .live("ajax:success", function(event, data, status, xhr) {
@@ -261,11 +261,12 @@ function chkAnnualEvent(etype) {
 
 // close light box pop-up window
 $(function () {
-   $("#submit-btn, #notice-id").live('click', function () {
+   $("#submit-btn, #notice-id, #print-btn, #cancel-btn").live('click', function () {
    	$.fancybox.close();
    });
 });
 
+// process notifications
 $(function () {
   $(".notice_id").live('click',function() {
     var url = '/events/notice.js?';
@@ -561,6 +562,69 @@ $(function (){
   });
 });
 
+// checks ticket order form quantity fields to ensure selections are made prior to submission 
+var qtyCnt=0;
+
+ // when the #quantity field changes
+  $("select[id*=quantity]").live('change',function() {
+     
+     var qty = parseInt($(this).val());
+	 
+	 // use variable to track if any quantity on item purchase page is > 0
+	 if (qty > 0)
+	 	qtyCnt += 1;
+	 else
+	 	qtyCnt -= 1;
+	 	
+	// set hidden field on client form 	
+	$("input[name='qtyCnt']").val(qtyCnt);	
+	return false                 
+  });
+  
+// process Stripe payment form for credit card payments
+$(document).ready(function() {	
+  $("#payForm").live("click", function() {
+
+	toggleLoading();
+	
+	Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
+	processCard();
+  });  
+    
+});
+
+// create token if credit card info is valid
+function processCard() {
+	$('#payForm').attr('disabled', true);
+
+	Stripe.createToken({
+      number: $('#card_number').val(),
+      cvc: $('#card_code').val(),
+      expMonth: $('#card_month').val(),
+      expYear: $('#card_year').val()    
+      }, stripeResponseHandler);
+
+    // prevent the form from submitting with the default action
+    return false;
+}
+
+// handle credit card response
+function stripeResponseHandler(status, response) {
+	if(status == 200) {
+      toggleLoading();
+	  $('#stripe_error').hide(300);
+	  
+      // insert the token into the form so it gets submitted to the server
+	  $('#transaction_token').val(response.id);
+      $("#payment_form").trigger("submit.rails");	
+	}
+    else {
+      $('#stripe_error').show(300).text(response.error.message)
+      $('#payForm').attr('disabled', false);
+      toggleLoading();
+    }
+}
+
 // check for google import
 $(document).ready(function() {	
   $("#googlebtn").live("click", function() {
@@ -576,5 +640,25 @@ $(document).ready(function() {
     //prevent the default behavior of the click event
     return false;
   });
+  
+  $('input:text').bind('focus blur', function() {
+    $(this).toggleClass('fld_bkgnd');
+  });  
     
 });
+
+// print page
+$('#print-btn').live("click", function() {
+	printIt($('#printable').html());
+	return false;
+});
+
+var win=null;
+function printIt(printThis)
+{
+	win = window.open();
+	self.focus();
+	win.document.write(printThis);	
+	win.print();
+	win.close();	
+}

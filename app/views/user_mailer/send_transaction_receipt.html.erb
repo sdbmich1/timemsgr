@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+  <body> 	
+  	<center>
+    	<h3>
+    	<span style="background-color:#0C6FCB;height:30px;font-weight:bolder;font-size:medium;color:#FFFFFF;">
+  		Your order has been processed.</span></h3>
+  	</center>
+
+	<%= render :partial=>'shared/transaction_details', :locals=>{:transaction=>@transaction} %>
+
+	<span style="margin-top:20px;">Thanks for your business.</span><br /><br />
+	<span>The KITS Team</span>
+  	<br /><br />
+  	<table>
+  		<tr style="height:36px;"></tr>
+  		<tr><center><span style="color:grey;font-size:10px;">You are receiving this because your e-mail address was used to register at kits.rbca.net</span></center></tr>
+  		<tr><center><span style="color:grey;font-size:10px;">&copy; 2004-12 KITS, Inc. PO Box 3900 Palo Alto, CA 94306 USA. All rights reserved.</span></center></tr>
+  	</table>
+  </body>
+</html>
+

@@ -23,7 +23,7 @@ Timemsgr::Application.routes.draw do
   end
   
   # controllers for user specific content
-  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :local_channels, :maps, :import_events
+  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :local_channels, :maps, :import_events, :transactions
     
   # controllers for event related content
   resources :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks

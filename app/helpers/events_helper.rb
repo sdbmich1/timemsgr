@@ -250,8 +250,11 @@ module EventsHelper
   
   # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events
   def set_start_date(event, sdt, *args)
+    unless event
+      return nil
+    end
     if event.eventenddate.to_date >= sdt && event.eventstartdate.to_date <= sdt
-      event.eventstartdate = sdt 
+      event.eventstartdate = sdt
       event
     else
       args[0] ? event : nil

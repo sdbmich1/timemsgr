@@ -10,11 +10,8 @@
     
     <p>When: <%= @reminder.startdate %> <%= "#{@reminder.getstarttime} - #{@reminder.endtime}" %> <%= @tz %></p><br /> 
     <p>Details: <%= @reminder.remindertext %> </p>
+  	<br /><br />
+    <%= render :partial=>'mail_footer' %>
 
   </body>
-  <footer>
-  	<center><span style="color:grey;font-size:10px;">You are receiving this message at <%= @email %> because you set a reminder on Koncierge.</span></center>
-  	<center><span style="color:grey;font-size:10px;">You can change your reminders for specific events in the event details at <%= @url %>.</span></center><br />
-  	<center><span style="color:grey;font-size:10px;">&copy; 2012 KITS, Inc. 3597 South Court, Palo Alto, CA 94306 USA. All rights reserved.</span></center> 	
-  </footer>
 </html>

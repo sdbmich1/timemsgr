@@ -8,6 +8,8 @@ class Transaction < KitsTsdModel
   
   belongs_to :host_profile, :foreign_key => :HostProfileID
   
+  has_many :transaction_details
+  
   name_regex =  /^[A-Z]'?['-., a-zA-Z]+$/i
   text_regex = /^[-\w\,. _\/&@]+$/i
   money_regex = /^\$?(?:\d+)(?:.\d{1,2}){0,1}$/
@@ -38,19 +40,27 @@ class Transaction < KitsTsdModel
   validates :amt, :presence => true  
   
   def self.load_new(usr)
-    new_transaction = Transaction.new usr.profile.attributes
+    new_transaction = usr.profile.transactions.build usr.profile.attributes
     new_transaction.user_id = usr.id
     new_transaction.first_name = usr.first_name
     new_transaction.last_name = usr.last_name
     new_transaction.email = usr.email
     new_transaction.BillingAddr = usr.profile.Address1
-    new_transaction.HostProfileID = usr.profile.id
-    new_transaction.currency = 'USD'
+#    new_transaction.HostProfileID = usr.profile.id
     new_transaction
   end
-
-  def save_transaction
+  
+  def save_transaction order
     if valid?
+      (1..order[:cnt].to_i).each do |i| 
+        if order['quantity'+i.to_s].to_i > 0 
+          item_detail = self.transaction_details.build
+          item_detail.item_name = order['item'+i.to_s]
+          item_detail.quantity = order['quantity'+i.to_s] 
+          item_detail.price = order['price'+i.to_s].to_f * order['quantity'+i.to_s].to_i
+        end 
+      end 
+    
       self.confirmation_no = Stripe::Charge.create(
         :amount => (amt * 100).to_i, # amount in cents, again
         :currency => "usd",

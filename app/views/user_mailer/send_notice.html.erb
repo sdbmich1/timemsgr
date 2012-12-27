@@ -15,10 +15,7 @@
       <% end %></p><br />
 
     Regards,	
-    <p><%= "#{@user.name}"%> </p>
+    <p><%= "#{@user.name}"%> </p>  	<br /><br />
+    <%= render :partial=>'mail_footer' %>
   </body>
-  <footer>
-  	<center><span style="color:grey;font-size:10px;">This automated message is brought to you by Koncierge. Join at <%= @url %>.</span></center>
-  	<center><span style="color:grey;font-size:10px;">&copy; 2011-12 KITS, Inc., PO Box 3900, Palo Alto, CA 94306 USA. All rights reserved.</span></center> 	
-  </footer>
 </html>

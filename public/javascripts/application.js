@@ -564,6 +564,7 @@ $(function (){
 
 // checks ticket order form quantity fields to ensure selections are made prior to submission 
 var qtyCnt=0;
+var formError, formTxtForm, pmtForm, payForm; 
 
  // when the #quantity field changes
   $("select[id*=quantity]").live('change',function() {
@@ -580,13 +581,16 @@ var qtyCnt=0;
 	$("input[name='qtyCnt']").val(qtyCnt);	
 	return false                 
   });
-  
+ 
+function getFormID(fld) { 
+	return $('#fancybox-content').find(fld);
+}  
+
 // process Stripe payment form for credit card payments
 $(document).ready(function() {	
-  $("#payForm").live("click", function() {
-
-	toggleLoading();
+  $('#payForm').live("click", function() {
 	
+	// get stripe key	
 	Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
 	processCard();
   });  
@@ -595,13 +599,13 @@ $(document).ready(function() {
 
 // create token if credit card info is valid
 function processCard() {
-	$('#payForm').attr('disabled', true);
+	payForm.attr('disabled', true);
 
 	Stripe.createToken({
-      number: $('#card_number').val(),
-      cvc: $('#card_code').val(),
-      expMonth: $('#card_month').val(),
-      expYear: $('#card_year').val()    
+      number: getFormID('#card_number').val(),
+      cvc: getFormID('#card_code').val(),
+      expMonth: getFormID('#card_month').val(),
+      expYear: getFormID('#card_year').val()    
       }, stripeResponseHandler);
 
     // prevent the form from submitting with the default action
@@ -610,20 +614,28 @@ function processCard() {
 
 // handle credit card response
 function stripeResponseHandler(status, response) {
+    var stripeError = getFormID('#stripe_error'); 
+  
 	if(status == 200) {
       toggleLoading();
-	  $('#stripe_error').hide(300);
+	  stripeError.hide(300);
 	  
       // insert the token into the form so it gets submitted to the server
-	  $('#transaction_token').val(response.id);
-      $("#payment_form").trigger("submit.rails");	
+	  getFormID('#transaction_token').val(response.id);
+      getFormID("#payment_form").trigger("submit.rails");	
 	}
     else {
-      $('#stripe_error').show(300).text(response.error.message)
-      $('#payForm').attr('disabled', false);
+      stripeError.show(300).text(response.error.message)
+      payForm.attr('disabled', false);
       toggleLoading();
     }
 }
+
+$(document).ready(function() {	
+	if ($('#pmtForm').length == 0 || $('#buyTxtForm').length == 0) {
+		payForm = getFormID('#payForm');		
+	} 
+});
 
 // check for google import
 $(document).ready(function() {	

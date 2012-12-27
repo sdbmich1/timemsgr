@@ -22,4 +22,20 @@ module TransactionsHelper
   def get_fname event, fname, flg
     flg ? fname : event.send(fname)
   end
+  
+  def get_processing_fee val
+    @fees = val * (KITS_PERCENT.to_f / 100)
+  end
+  
+  def grand_total
+    @total + @fees + KITS_FEE.to_f
+  end
+  
+  def convenience_fee?
+    KITS_FEE.to_f > 0.0
+  end
+  
+  def processing_fee?
+    KITS_PERCENT.to_f > 0.0
+  end
 end

@@ -16,10 +16,8 @@
     	
     	I hope you can make it.  </p><br />
     	
-    <p><%= "#{@user.name}"%> </p>
+    <p><%= "#{@user.name}"%> </p>  	<br /><br />
+    <%= render :partial=>'mail_footer' %>
+
   </body>
-  <footer>
-  	<center><span style="color:grey;font-size:10px;">This automated message is brought to you by Koncierge. Join at <%= @url %>.</span></center>
-  	<center><span style="color:grey;font-size:10px;">&copy; <%= Date.today.year %> KITS, Inc. 3597 S. Court, Palo Alto, CA 94306 USA. All rights reserved.</span></center> 	
-  </footer>
 </html>

@@ -1,8 +1,12 @@
-$('#buyFormError').hide(300);
+var formError = getFormID('#buyFormError');
+var formTxtForm = getFormID('#buyTxtForm');
+
 <% if @order[:qtyCnt].to_i > 0 %>
-	$("#buyTxtForm").html("<%= escape_javascript( raw render(:partial => "shared/ticket_purchase", :locals=>{:event=>@event}) ) %>");
+	formError.hide(300);
+	formTxtForm.html("<%= escape_javascript( raw render(:partial => "shared/ticket_purchase", :locals=>{:event=>@event}) ) %>");
 <% else %>
-	$('#buyFormError').show(300)
-    $('#buyFormError').text('Error loading order form. Please submit order.')
+	formError.show(300)
+    formError.text('Error loading order form. Please submit order.')
 <% end %>
+
 $("#spinner").hide(300);

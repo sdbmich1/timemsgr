@@ -14,7 +14,7 @@ class TransactionsController < ApplicationController
   
   def create
     @transaction = Transaction.new(params[:transaction])
-    @transaction.save_transaction
+    @transaction.save_transaction(params[:order])
   end
 
   def index    
@@ -32,7 +32,7 @@ class TransactionsController < ApplicationController
   end  
   
   def load_vars
-    @total = 0   
+    @total = @fees = 0   
     @order = action_name == 'index' ? params : params[:order]
     @qtyCnt = action_name == 'new' ? @order[:qtyCnt].to_i : 0
   end

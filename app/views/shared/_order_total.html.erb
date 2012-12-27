@@ -1,0 +1,16 @@
+<% if processing_fee? %>
+  <tr><td>Processing Fee</td><td></td>
+  	<td class="price"><%= number_to_currency(get_processing_fee(@total)) %></td>
+  </tr>
+<% end %>
+<% if convenience_fee? %>
+  <tr>
+  	<td>Convenience Fee</td><td></td>
+  	<td class="price"><%= number_to_currency(KITS_FEE)%></td>
+  </tr>
+<% end %>
+  <tr>
+  	<td style='font-weight: bolder; font-size: medium'>Total</td>
+  	<td></td>
+  	<td style='font-weight: bolder; text-align: right; font-size: medium'><%= number_to_currency(grand_total) %></td>
+  </tr>

@@ -2,10 +2,15 @@
 <%= image_tag("#{get_etype_icon(event.event_type)}", :class => "etype-img rsz-img") %>   	
 <div class="img-btm">
 	<% if !life_event?(event.event_type) && !private_event?(event.event_type) %>
-		<%= link_to image_tag("ev-move.png", :class => " rsz-img"), private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), 
+		<%= link_to image_tag("ev-move.png", :class => "rsz-img"), private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), 
 				:id=>'schedule_btn' , :confirm => 'Add to your schedule?', :title => "Schedule", :method => :post, :remote => true %>
 	<% else %>	
 	<% end %>
+	
+	<% if any_prices?(event) %>
+		<%= link_to image_tag("ev-shop.png", :class => "rsz-img"), "#modal_buy", :id => "modalGroup" %>	
+		<%= render :partial => 'shared/show_order_form', :locals => {:event => event} %>
+	<% end %>	
 	
 	<% if rsvp?(event.rsvp) %>
 		<% if private_event?(event.event_type) %>			

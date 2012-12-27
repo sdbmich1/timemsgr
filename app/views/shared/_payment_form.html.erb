@@ -1,5 +1,5 @@
 <div id="pmtForm">
-<%= render 'shared/purchase_summary' %><br />
+<%= render 'shared/purchase_summary' %>
 <div class="mtop span-12 last">	
 <h3 class="grp-hdr"><center>Billing Information</center><hr /></h3>
 <%= form_for @transaction, :url => transactions_url(:order=>@order), :html => {:id => 'payment_form'}, :validate => true, :remote => true do |f| %>
@@ -28,6 +28,8 @@
   </div>
 	
   <%= f.hidden_field :token %>
+  <%= f.hidden_field :user_id, :value=>@transaction.user_id %>
+  <%= f.hidden_field :HostProfileID, :value => @transaction.HostProfileID %>
   <%= f.hidden_field :amt, :value => @total %>
   <%= f.hidden_field :description, :value => @order[:event_name] %>
   <div class="order-btn">

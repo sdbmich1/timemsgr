@@ -1,5 +1,6 @@
 class UserMailer < ActionMailer::Base
   default :from => "koncierge@rbca.net"
+  helper :transactions
     
   def welcome_email(user)
     @user = user
@@ -33,6 +34,7 @@ class UserMailer < ActionMailer::Base
   end
   
   def send_transaction_receipt transaction
+    @total = @fees = 0
     @transaction = transaction
     mail(:to => "#{transaction.email}", :subject => "Your Purchase Receipt: #{transaction.confirmation_no} ") 
   end

@@ -13,9 +13,5 @@
   	  </tr>
   	<% end %>
   <% end %>
-  <tr>
-  	<td class="total_amt">Total</td>
-  	<td></td>
-  	<td class="price total_amt"><%= number_to_currency(@total) %></td>
-  </tr>
+  <%= render :partial => 'shared/order_total' %>
 </table>

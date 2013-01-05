@@ -1,5 +1,5 @@
-<%= render :partial => 'mobile/index_form', :locals => {:title => 'Add Transaction'} %>
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Select Items'} %>
 
-<% content_for :content do %>
-	<%= render :partial => 'mobile/add_transaction' %>
+<%= content_for :content do %>
+	<%= render :partial => 'mobile/ticket_purchase', :locals=>{:event=>@event} %>
 <% end %>

@@ -291,7 +291,8 @@ footer { height: 0.5em; background-color: #FFFFFF; color:#0C6FCB; font-weight: n
 #map .ui-icon { background:  url("../images/map_icon.png") 50% 50% no-repeat; size: 24px 24px; }
 #website .ui-icon { background:  url("../images/website.png") 50% 50% no-repeat; size: 24px 24px; }
 #msg .ui-icon { background:  url("../images/icon_mail.png") 50% 50% no-repeat; size: 24px 24px; }
-#cal .ui-icon { background:  url("../images/cal.png") 50% 50% no-repeat; size: 24x 24px; }
+#cal .ui-icon { background:  url("../images/cal.png") 50% 50% no-repeat; size: 24px 24px; }
+#buy .ui-icon { background:  url("../images/ev-shop.png") 50% 50% no-repeat; size: 22px 27px; }
 
 .progressBar { font-size: 14px; }
 .pb-offset { font-size: 14px; margin-top: 5px; }
@@ -446,3 +447,90 @@ a.map-btn {
 .nav-right {
 	float: right;
 }
+
+.buy-btn, .order-btn {
+	background: green;
+	color: #FFFFFF;
+}
+
+table.items {
+	border: 1px solid blue;
+	width:100%;
+}
+
+table.items th.price, td.price {
+  text-align: right;
+  padding: 6px;
+}
+
+.qty-col {
+	width: 30px!important;
+}
+
+table.items thead th { text-align:left; border-bottom-width:1px; border-top-width:1px; }
+table.items tr.row-item { border: 1px solid blue; }
+
+table.items th.col-item, td.col-item {
+	padding: 6px;
+}
+
+.total_amt {
+  font-weight: bolder;
+  font-size: medium;  
+}
+
+.cc-logo {
+	width: 128px!important; height: 23px!important; vertical-align: middle;
+}
+
+.cvv-logo {
+	width: 32px; height: 22px; vertical-align: middle;
+}
+
+#printable p, p + p {
+	text-indent: 0!important
+}
+
+.purchase_title {
+	  font-weight: bolder;
+  	  font-size: medium;
+  	  background: #0C6FCB;
+      line-height: 30px;
+  	  color: #ffffff;
+}
+
+a.change-btn, a.close-btn {
+  display: inline;
+  text-align: center;
+  color: #ffffff!important;
+  font-weight: bold;
+  z-index: 999;
+  vertical-align: middle;
+  line-height: 18px;
+  width: 60px;
+  height: 40px;
+  text-decoration: none;
+  margin-bottom: 0;
+  margin-left: 5px;	
+   -moz-border-radius:0px;
+   -webkit-border-radius:0px;
+	border-radius:0.2em!important;
+}    
+
+a.close-btn, a.change-btn {
+	background: #0C6FCB; 	
+    padding: 8px 8px 8px 8px;
+    margin-bottom: 10px;
+}
+
+.card-code {
+	width: 60px!important;
+}
+
+.field_with_errors .message {
+    color: #D00;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.ui-input-datebox { width: 96%!important; border: 1px solid #AAAAAA;  box-shadow: 1px 1px 1px 2px #ccc; }

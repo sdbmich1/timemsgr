@@ -28,10 +28,11 @@ body {
 
 #fancybox-wrap {top: 2em!important; 
     max-height: 100%!important;
-    padding: 0;
+    max-width: 40%!important;
     margin: 0;
-    overflow: auto; overflow-x: hidden;	
+    overflow: auto; overflow-x: hidden!important;	
 }
+
 
 /* Event page settings */
 
@@ -456,4 +457,6 @@ select {
 	text-indent: 0!important
 }
 
-
+#cancel-btn { 
+	margin-bottom: 20px;
+	}

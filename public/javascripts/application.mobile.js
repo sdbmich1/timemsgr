@@ -138,7 +138,7 @@ $(document).bind('pageinit', function() {
   
   $("#cal-month").live("click", function() {
     calndr.fullCalendar( 'changeView', 'month' );       
-  });     
+  });    
   
   // check for category changes
   $(".details").live("click", function() {
@@ -173,6 +173,16 @@ $('[data-role="page"]').live('pageshow', function () {
   	showConfCalendar();
   }
   
+  if ($('#pmtForm').length != 0 || $('#buyTxtForm').length != 0) {
+  	uiLoading(false);
+	payForm = getFormID('#payForm');		
+  }  
+  
+  if ( $('#printable').length != 0 ) {
+  	uiLoading(false);
+  }
+    
+  // initialize infield labels
   if ( $('#mform').length != 0 ) {
     $("#mform label").inFieldLabels();
   }
@@ -254,6 +264,12 @@ $(document).ready(function() {
     //prevent the default behavior of the click event
     return false;  
   });
+  
+  $("#payForm").live("click", function() { 	
+  	uiLoading(true);  	
+    return false;  
+  });
+    
 });
 
 

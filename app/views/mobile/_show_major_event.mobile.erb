@@ -7,7 +7,9 @@
 	<li><%= link_to get_label(event.event_type), presenters_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></li>	
  	<li><%= link_to "Exhibitors", exhibitors_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %> </li>
  	<li><%= link_to "Sponsors", sponsors_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %> </li>
-  	<li><%= link_to "Register",'#' %> </li>
- 	<li><%= link_to "Hotels",'#' %> </li>
+	<% if any_prices?(event) %>
+	 	<li><%= link_to 'Register', new_transaction_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate, :qtyCnt=>'0'), :id => "buy", "data-icon"=>"custom" %></li>
+	<% end %>
+  	<li><%= link_to "Hotels",'#' %> </li>
  	<li><%= link_to "Transportation",'#' %> </li>
   </ul>

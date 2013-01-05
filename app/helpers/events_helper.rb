@@ -382,7 +382,10 @@ module EventsHelper
 	end
 	
 	# parse date ranges
-	def get_start_date(start_dt, end_dt, dtype)	  
+	def get_start_date(start_dt, end_dt, dtype)
+	  if start_dt.blank? && end_dt.blank?
+	    return nil
+	  end	  
     if start_dt == end_dt
       if start_dt.to_date == Date.today
         @date_s = "Today" 
@@ -435,6 +438,14 @@ module EventsHelper
   
   def get_local_time(tm)
     tm.utc.getlocal.strftime('%m/%d/%Y %I:%M%p')
+  end
+
+  def get_local_date(tm)
+    tm.utc.getlocal.strftime('%m/%d/%Y')
+  end
+    
+  def local_time tm
+    tm.utc.getlocal.strftime('%I:%M%p')
   end
   
   def has_reminder? event
@@ -539,7 +550,7 @@ module EventsHelper
   end
   
   def select_options action
-    action == 'Yes' ? [['Go', {:class=>'menu_options'}], ['Home'], ['Menu']] : [['Go', {:class=>'menu_options'}], ['Home'], ['Menu'], ['Website']]   
+    action == 'Yes' ? [[' ', {:class=>'menu_options'}], ['Home'], ['Menu']] : [[' ', {:class=>'menu_options'}], ['Home'], ['Menu'], ['Website']]   
   end
   
   def event_cntr?

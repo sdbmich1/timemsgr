@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Confirmation #</th>
+    <th>Amount</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+<% for transaction in @transactions %>
+    <% unless transaction.id.blank? %>
+    <tr>
+      <td><%= get_local_date transaction.created_at %></td>
+      <td><%= local_time(transaction.created_at) %></td>
+      <td><%= transaction.confirmation_no %></td>
+      <td><%= number_to_currency(transaction.amt) %></td>
+      <td><%= transaction.description %></td>
+      <td><%= link_to 'Details', "#modal_txn", :id => "modalGroup" %></td>
+    </tr>
+    <%= render :partial=>'shared/show_transaction_details', :locals=>{:transaction=>transaction} %>
+	<% end %>
+  <% end %>
+</table>    
+
+

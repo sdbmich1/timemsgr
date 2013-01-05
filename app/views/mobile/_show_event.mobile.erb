@@ -1,8 +1,14 @@
+<div class="event-image center-wrapper">
+	<div class="event-image center-wrapper">
+	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => picSize(event.event_type), :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
+  	</div>
+</div>
+
 <%= render :partial => 'mobile/show_event_details', :locals => {:event => event} %>
 <%= render :partial => 'mobile/show_event_contact', :locals => {:event => event} %>
 <%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
 <%= render :partial => 'mobile/show_event_info', :locals => {:model => event} %> 
-<% if tsd_event?(event.event_type) %>
+<% if any_prices?(event) %>
 	<%= render :partial => 'mobile/show_event_fees', :locals => {:event => event} %> 
 <% end %>
 <% unless @presenters.blank? %>

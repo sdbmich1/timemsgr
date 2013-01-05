@@ -6,6 +6,7 @@
     <%= render :partial => 'layouts/ga_head' if Rails.env.production? %>      
 
     <%= stylesheet_link_tag "mobile", "calendar", "mobile_device" %>  
+    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
   	<%= csrf_meta_tag %>  	
   </head>
   <body>  

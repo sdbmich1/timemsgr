@@ -1,0 +1,13 @@
+var formError = getFormID('#stripe_error');
+var pmtForm = getFormID('#txnID');
+
+<% if @transaction.errors.any? %>
+    formError.html("<%= escape_javascript(error_messages_for(@transaction))%>");
+	formError.show(300);
+	$('#cancel-btn').attr('disabled', false);
+<% else %>
+	formError.hide(300);
+	pmtForm.html("<%= escape_javascript( raw render(:partial => "shared/payment_success_form") ) %>");
+<% end %>
+
+$("#spinner").hide(300);

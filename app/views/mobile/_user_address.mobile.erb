@@ -1,0 +1,13 @@
+	<p><span>Address 1* </span>	
+	<% if toggle %>
+		<%= form.text_field :Address1 %></p>
+	<% else %>
+		<%= form.text_field :BillingAddr %></p>
+	<% end %>
+	<p><span>Address 2 </span><%= form.text_field :Address2 %></p>
+	<p><span>City* </span><%= form.text_field :City %></p>
+	<p><span>State/Province*</span>
+		<%= form.collection_select :State, StateCode.all, :StateAbbr, :State, {:prompt => 'Select State'} %></p>
+	<p><span>Zip* </span><%= form.text_field :PostalCode, :size => 10 %></p>
+	<p><span>Country </span><%= form.country_select :Country, ["United States"], :class => 'country' %></p>	  
+	<p><span>Home Phone* </span><%= form.text_field :Phone_Home %></p>

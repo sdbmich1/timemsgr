@@ -9,12 +9,10 @@
   			<span class="item-detail"><%= number_to_currency(event.send(fld[0])) %></span><br />
         <% end %>
   <% end %>
-  <div class="item-descr">
   <% (1..6).each do |i| %>
     <% if price_exists?(event, 'Other' + i.to_s + 'Fee' ) %>
-        <%= event.send('Other' + i.to_s + 'Title') + ':' %>
-        <%= number_to_currency(event.send('Other' + i.to_s + 'Fee')) %><br />
+        <label><%= event.send('Other' + i.to_s + 'Title') + ':' %></label>
+        <span class="item-detail"><%= number_to_currency(event.send('Other' + i.to_s + 'Fee')) %></span><br />
     <% end %>
   <% end %>
-  </div>
 <% end %>	

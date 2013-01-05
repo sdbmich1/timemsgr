@@ -1,0 +1,17 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => 'Order Complete'} %>
+  <div id="printable">
+  	<center>
+  		<h3><div class="purchase_title">Your order has been processed.</div></h3>
+  	</center>
+  	<%= render :partial => 'mobile/show_event_details', :locals => {:event => @event} %>
+  	<%= render :partial => 'mobile/show_event_location', :locals => {:event => @event} %> 
+  	<%= render :partial=>'mobile/order_details', :locals=>{:order=>@order, :paid=>true} %>
+  	<%= render :partial=>'mobile/transaction_details', :locals=>{:transaction=>@transaction, :showAmt=>false} %>
+  </div>
+  <div class="clear-all"></div>
+  <div class="mtop">Thank you for your business.</div>
+  <div class="mtop">
+	  <center>
+		<%= link_to "Done",'#', :class => "change-btn round", :id => 'cancel-btn' %>
+	  </center>
+  </div>

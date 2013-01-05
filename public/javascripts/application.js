@@ -290,7 +290,6 @@ $(function () {
   })
 });
 
-
 // toggle navigation menu background color to denote active selection
 $(function (){
    $(".all_btn, .prv_btn, .soc_btn, .ext_btn, .pend_btn, .def_btn, .nav_btn").live('click', function () {
@@ -566,24 +565,33 @@ $(function (){
 var qtyCnt=0;
 var formError, formTxtForm, pmtForm, payForm; 
 
- // when the #quantity field changes
-  $("select[id*=quantity]").live('change',function() {
+// when the #quantity field changes
+$("select[id*=quantity]").live('change',function() {
      
-     var qty = parseInt($(this).val());
-	 
+  var qty = parseInt($(this).val());
+  setQtyCnt(qty);
+
+  return false                 
+});
+  
+function setQtyCnt(qty) {
 	 // use variable to track if any quantity on item purchase page is > 0
 	 if (qty > 0)
 	 	qtyCnt += 1;
 	 else
 	 	qtyCnt -= 1;
-	 	
+	 			
 	// set hidden field on client form 	
-	$("input[name='qtyCnt']").val(qtyCnt);	
-	return false                 
-  });
+	$("input[name*='qtyCnt']").val(qtyCnt);		
+}
  
 function getFormID(fld) { 
+  if ($('#fancybox-content').length > 0) {
 	return $('#fancybox-content').find(fld);
+	}		
+  else {
+  	return $(fld);   
+  }
 }  
 
 // process Stripe payment form for credit card payments
@@ -599,8 +607,8 @@ $(document).ready(function() {
 
 // create token if credit card info is valid
 function processCard() {
-	payForm.attr('disabled', true);
-
+	$('#payForm').attr('disabled', true);
+	
 	Stripe.createToken({
       number: getFormID('#card_number').val(),
       cvc: getFormID('#card_code').val(),
@@ -627,7 +635,8 @@ function stripeResponseHandler(status, response) {
     else {
       stripeError.show(300).text(response.error.message)
       payForm.attr('disabled', false);
-      toggleLoading();
+      
+  	  $('html, body').animate({scrollTop:0}, 100); 
     }
 }
 

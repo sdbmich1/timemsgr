@@ -25,6 +25,10 @@
 		<% if is_session?(event.event_type) %>
 			<li id="home_footer"><%= link_to 'Event', :back, :id=>'cal', "data-icon"=>"custom" %></li>
 		<% end %>
+		
+		<% if any_prices?(event) %>
+		 	<li><%= link_to 'Buy', new_transaction_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate), "data-icon"=>"custom", :id => "buy" %></li>
+		<% end %>
 						
 		<% if rsvp?(event.rsvp) %>
 			<% if private_event?(event.event_type) %>			

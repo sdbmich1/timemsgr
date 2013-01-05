@@ -1,0 +1,40 @@
+<div id="buyTxtForm">
+	<%= render :partial => 'mobile/show_event_details', :locals => {:event => event} %>
+	<%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
+
+<div id="buyFormError" style="display:none" class="error"></div>
+<%= form_tag build_transactions_path(:id=>event, :eid=>event.eventid, :sdt=>event.eventstartdate, :etype=>event.event_type), :method => :get, :id => 'purchase_btn' do %> 
+<table class="items">
+  <thead class="items">
+   <tr class="row-item">
+    <th class="center-wrapper">Item</th>
+    <th class="center-wrapper">Price</th>
+    <th class="center-wrapper">Quantity</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% if any_prices?(event) %>
+    <% @cnt = 0 %> 
+  	<% [['MemberFee', 'Member'], ['NonMemberFee', 'General'], ['AffiliateFee', 'Affiliate'],
+      ['SpouseFee', 'Spouse'], ['AtDoorFee', 'At Door'], ['GroupFee', 'Group']].each do |fld| %>
+        <% if price_exists?(event, fld[0] ) %>
+        	<%= render :partial => 'mobile/ticket_row', :locals => {:event => event, :target => fld[0], :fname => fld[1], :useFldName => true }%>
+        <% end %>
+    <% end %>
+  	<% (1..6).each do |i| %>
+    	<% if price_exists?(event, 'Other' + i.to_s + 'Fee' ) %>
+        	<%= render :partial => 'mobile/ticket_row', :locals => {:event => event, :target => 'Other' + i.to_s + 'Fee', :fname => 'Other' + i.to_s + 'Title', :useFldName => false }%>
+    	<% end %>
+  	<% end %>
+  <% end %>  
+  </tbody>
+</table>
+</h3>
+	<%= hidden_field_tag 'event_name', event.event_name %>
+	<%= hidden_field_tag 'cnt', @cnt %>
+	<%= hidden_field_tag 'qtyCnt', @qtyCnt %>
+	<div class="order-btn">
+		<center><%= submit_tag("Buy Now", {"data-theme"=>"b"} ) %></center>
+	</div>
+<% end %>
+

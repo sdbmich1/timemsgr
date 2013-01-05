@@ -1,8 +1,3 @@
-<div class="event-image center-wrapper">
-	<div class="event-image center-wrapper">
-	  <%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => picSize(event.event_type), :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
-  	</div>
-</div>
 
 <h3 class="center-wrapper"><%= event.event_title.html_safe %></h3>
 <label>Date: </label><span class="item-detail"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %></span><br />	

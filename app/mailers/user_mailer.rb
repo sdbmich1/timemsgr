@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   default :from => "koncierge@rbca.net"
-  helper :transactions
+  helper :transactions, :events
     
   def welcome_email(user)
     @user = user

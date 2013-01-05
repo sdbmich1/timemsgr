@@ -1,0 +1,13 @@
+<div id='txnID' class="span-12">
+	<h3 class="grp-hdr"><center>Transaction Details</center><hr /></h3>
+	<%= render :partial=>'shared/transaction_details', :locals=>{:transaction=>transaction, :showAmt=> true} %>
+</div>	
+<div class="mtop span-12 last">
+  	<center>
+  		<% if refundable?(transaction) %>
+      		<%= link_to 'Refund', refund_transaction_path(transaction), :remote=>true, :class => "change-btn round", :id=>'refund-btn' %>
+        <% end %>
+
+		<%= link_to "Done",'#', :class => "change-btn round", :id => 'cancel-btn' %>
+  	</center>
+</div>	

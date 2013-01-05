@@ -1,0 +1,14 @@
+var formError = getFormID('#buyFormError');
+var formTxtForm = getFormID('#buyTxtForm');
+
+formError.hide(300);	
+
+<% if @order[:qtyCnt].to_i > 0 %>
+	formTxtForm.html("<%= escape_javascript( raw render(:partial => "shared/payment_form") ) %>");
+<% else %>
+	formError.show(300);	
+    formError.text("Error submitting order form. No quantity amount entered.");
+	formTxtForm.attr("disabled", false);	
+<% end %>
+
+$("#spinner").hide(300);

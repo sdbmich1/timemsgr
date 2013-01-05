@@ -1,7 +1,14 @@
-<div id="orderForm" class="span-12">
+<div id="orderForm" class="span-12 last">
   <h3 class="grp-hdr"><center>Order Summary</center><hr /></h3>
-  <%= render :partial=>'shared/order_details', :locals=>{:order=>@order} %>
-	
+  <p><center><span class="event-title"><%= @event.event_name %></span></center></p>
+  <div class="show-item">
+  	<%= render :partial => 'shared/show_event_info', :locals => {:event => @event, :buyFlg=>true} %>
+  	<%= render :partial => 'shared/show_event_location', :locals => {:event => @event, :buyFlg=>true} %>
+  </div>
+  <div class="clear-all"></div>
+  <div class="mtop">
+  	<%= render :partial=>'shared/order_details', :locals=>{:order=>@order, :paid=>false} %>
+  </div>
   <div class="right">
   	<%= link_to "Change Order", new_transaction_path(:order=>@order), :class => "change-btn round", :remote=>true %><br />
   </div>

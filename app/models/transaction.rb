@@ -50,14 +50,28 @@ class Transaction < KitsTsdModel
     new_transaction
   end
   
+  def add_details item, qty, val
+    item_detail = self.transaction_details.build
+    item_detail.item_name = item
+    item_detail.quantity = qty
+    item_detail.price = val
+
+  end
+  
+  def refund_transaction
+    charge = Stripe::Charge.retrieve confirmation_no
+    charge.refund if charge
+    
+    # add refund to transaction details
+    add_details 'Refund', 1, 0-amt
+    save!
+  end
+  
   def save_transaction order
     if valid?
       (1..order[:cnt].to_i).each do |i| 
         if order['quantity'+i.to_s].to_i > 0 
-          item_detail = self.transaction_details.build
-          item_detail.item_name = order['item'+i.to_s]
-          item_detail.quantity = order['quantity'+i.to_s] 
-          item_detail.price = order['price'+i.to_s].to_f * order['quantity'+i.to_s].to_i
+          add_details order['item'+i.to_s], order['quantity'+i.to_s], order['price'+i.to_s].to_f * order['quantity'+i.to_s].to_i
         end 
       end 
     

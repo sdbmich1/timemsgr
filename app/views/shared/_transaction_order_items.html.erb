@@ -5,11 +5,13 @@
     <th>Price</th>
   </tr>
   <% items.each do |item| %>
+ 	 <% unless item.price.blank? %>
   	  <tr>
   		<td><%= item.item_name %></td>
   		<td><%= item.quantity %></td>
   		<td style='text-align: right'><%= number_to_currency(calc_price(item.price, item.quantity)) %></td>
   	  </tr>
+  	 <% end %>
   <% end %>
-  <%= render :partial => 'shared/order_total' %>
+  <%= render :partial => 'shared/order_total', :locals=>{:paid=>true} %>
 </table>

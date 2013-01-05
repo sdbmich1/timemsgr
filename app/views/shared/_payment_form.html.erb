@@ -6,7 +6,7 @@
   <div id="stripe_error" style="display:none" class="error"></div>
   <%= render :partial => 'shared/error_messages', :locals => { :target => @transaction } %>
   <div id="new-event">  
-	<label>Ticket Buyer</label>   
+	<label>Buyer Information</label>   
 	<div class="prepend-2">
 		<p><span>First Name* </span><%= f.text_field :first_name %></p>
 		<p><span>Last Name* </span><%= f.text_field :last_name %></p>
@@ -33,7 +33,7 @@
   <%= f.hidden_field :amt, :value => @total %>
   <%= f.hidden_field :description, :value => @order[:event_name] %>
   <div class="order-btn">
-  	<center><%= f.submit "Purchase", :id => 'payForm' %></center>
+  	<center><%= f.submit "Purchase", :confirm => "Your credit card will be processed.  Would you like to proceed?", :id => 'payForm' %></center>
   </div>
 <% end %></div>
 </div>

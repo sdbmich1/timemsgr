@@ -1,0 +1,10 @@
+<div id="orderForm" class="span-12">
+  <h3 class="grp-hdr"><center>Order Summary</center><hr /></h3>
+  <%= render :partial => 'mobile/show_event_details', :locals => {:event => @event} %>
+  <%= render :partial => 'mobile/show_event_location', :locals => {:event => @event} %> 
+  <%= render :partial=>'mobile/order_details', :locals=>{:order=>@order, :paid=>false} %>
+	
+  <div class="mtop nav-right">
+  	<%= link_to "Change Order", new_transaction_path(:order=>@order), :class => "change-btn round" %><br />
+  </div>
+</div>

@@ -1,4 +1,4 @@
-  <ul data-role="listview" data-filter="true">
+  <ul data-role="listview" data-filter="true" data-autodividers="true">
   	<% for presenter in @presenters.uniq %>
 	<li id="plist">
 		<%= link_to presenter_url(presenter, {:event_id=>@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate}) do %>

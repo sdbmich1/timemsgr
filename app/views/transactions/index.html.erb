@@ -1,19 +1,12 @@
-<% title "Rsvps" %>
+<%= set_title("My Transactions") %>
+<%= render :partial => 'shared/menu_head', :locals => { :menu_type => 'Transaction' } %>
 
-<table>
-  <tr>
-    <th>Eventid</th>
-    <th>Subscriptionsourceid</th>
-  </tr>
-  <% for rsvp in @rsvps %>
-    <tr>
-      <td><%= rsvp.eventid %></td>
-      <td><%= rsvp.subscriptionsourceID %></td>
-      <td><%= link_to "Show", rsvp %></td>
-      <td><%= link_to "Edit", edit_rsvp_path(rsvp) %></td>
-      <td><%= link_to "Destroy", rsvp, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<% content_for :subhead do -%>
+  <center><h3 class="grp-hdr">My Transactions</h3></center><hr />
+<% end %>
 
-<p><%= link_to "New Rsvp", new_rsvp_path %></p>
+<%= content_for :content do -%>
+  	<div id='transaction_form' class="span-24 last">
+  		<%= render 'shared/transaction_list' %>
+  	</div>  	
+<% end -%>

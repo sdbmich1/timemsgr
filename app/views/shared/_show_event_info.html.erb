@@ -1,0 +1,12 @@
+	<div class="span-2"><%= 'Date:' %></div>
+	<div class="<%= buyFlg ? 'span-10 last' : 'span-18 last' %>"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %><br /></div>	
+	<div class="span-2"><%= 'Time:'%></div>
+	<div class="<%= buyFlg ? 'span-10 last' : 'span-18 last' %>">
+	  <% if holiday?(event.event_type) %>
+		<%= "All Day" %>
+	  <% else %>
+			<%= " #{chk_offset(event.eventstarttime, event.localGMToffset, event.eventid)} " if event.eventstarttime %>
+			<%= " - #{chk_offset(event.eventendtime, event.endGMToffset, event.eventid)}" if event.eventendtime %>
+			<%= "TBD" unless event.eventstarttime || event.eventendtime %>
+	  <% end %>
+	</div>

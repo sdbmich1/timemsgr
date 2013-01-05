@@ -51,7 +51,7 @@ class EventsController < ApplicationController
 	end
 	
 	def limit
-	  mobile_device? ? 60 : 90
+	  mobile_device? ? 240 : 240
 	end
 	
 	def offset

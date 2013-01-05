@@ -21,9 +21,21 @@ Timemsgr::Application.routes.draw do
     end
     get 'list', :on => :collection
   end
+
+  class AjaxOnlyRequest
+    def matches?(request)
+      request.xhr?
+    end
+  end  
+
+  resources :transactions do
+    get 'build', :on => :collection #, :constraints => AjaxOnlyRequest.new
+    get 'refund', :on => :collection
+  end
+  
   
   # controllers for user specific content
-  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :local_channels, :maps, :import_events, :transactions
+  resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :local_channels, :maps, :import_events
     
   # controllers for event related content
   resources :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks
@@ -100,6 +112,7 @@ Timemsgr::Application.routes.draw do
   match '/outlook', :to => 'private_events#outlook', :as => "outlook"
   match '/gcal_import', :to => 'private_events#gcal_import', :as => "gcal_import"
   match '/system/photos/:id/:style/:basename.:extension', :to => 'pictures#asset'
+#  match '/build', :to => "transactions#build", :constraints => AjaxOnlyRequest.new
 
   root :to => 'pages#home'
 end

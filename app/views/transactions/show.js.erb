@@ -1,0 +1,3 @@
+var pmtForm = getFormID('#pmtForm');
+
+pmtForm.html("<%= escape_javascript( raw render(:partial => "payment_success_form") ) %>");

@@ -27,8 +27,12 @@ module TransactionsHelper
     @fees = val * (KITS_PERCENT.to_f / 100)
   end
   
+  def get_convenience_fee
+    KITS_FEE
+  end
+  
   def grand_total
-    @total + @fees + KITS_FEE.to_f
+    @total += @fees + KITS_FEE.to_f
   end
   
   def convenience_fee?
@@ -37,5 +41,14 @@ module TransactionsHelper
   
   def processing_fee?
     KITS_PERCENT.to_f > 0.0
+  end
+  
+  def refundable? t
+    new_dt = t.created_at + 30.days rescue nil
+    new_dt ? new_dt > Date.today() : false
+  end
+  
+  def show_title paid
+    paid ? 'Total Paid' : 'Total Due'
   end
 end

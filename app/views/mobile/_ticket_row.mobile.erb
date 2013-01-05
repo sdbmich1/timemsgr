@@ -1,0 +1,7 @@
+<tr class="row-item">
+  <% @cnt += 1 %>	
+  <td class="col-item"><%= get_fname(event, fname, useFldName) %></td>
+  <%= hidden_field_tag 'item' + @cnt.to_s, get_fname(event, fname, useFldName) %>
+  <td class="col-item center-wrapper"><%= number_to_currency(event.send(target)) %></td><%= hidden_field_tag 'price' + @cnt.to_s, event.send(target) %>
+  <td class="col-item qty-col"><%= select_tag 'quantity' + @cnt.to_s, options_for_select(get_ary, :selected => set_qty('quantity' + @cnt.to_s)) %></td>
+</tr>

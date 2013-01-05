@@ -1,11 +1,11 @@
 
-<% content_for :head do %>	<% if data_form? || controller_name == 'sessions' %>
+<% content_for :head do %>	<% if data_form? || controller_name == 'sessions' || controller_name == 'transactions' %>
 		<% unless controller_name == 'interests' && action_name == 'new' %>
-		  <%= select_tag 'Go', options_for_select( select_options('Yes') ), {:class=>'ui-btn-right', 'data-mini'=>"true", :id=>'menu_id', 'data-icon'=>"arrow-d", 
+		  <%= select_tag ' ', options_for_select( select_options('Yes') ), {:class=>'ui-btn-right', 'data-mini'=>"true", :id=>'menu_id', 'data-icon'=>"arrow-d", 
 				'data-iconpos'=>"right"} %>
 		<% end %>
 	<% elsif event_cntr? %>
-		<%= select_tag 'Go', options_for_select( select_options('No') ), {:class=>'ui-btn-right', 'data-mini'=>"true", :id=>'menu_id', 'data-icon'=>"arrow-d", 
+		<%= select_tag ' ', options_for_select( select_options('No') ), {:class=>'ui-btn-right', 'data-mini'=>"true", :id=>'menu_id', 'data-icon'=>"arrow-d", 
 				'data-iconpos'=>"right"} %>
 	<% end %>
 	  

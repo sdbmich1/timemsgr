@@ -22,14 +22,8 @@ Timemsgr::Application.routes.draw do
     get 'list', :on => :collection
   end
 
-  class AjaxOnlyRequest
-    def matches?(request)
-      request.xhr?
-    end
-  end  
-
   resources :transactions do
-    get 'build', :on => :collection #, :constraints => AjaxOnlyRequest.new
+    get 'build', :on => :collection
     get 'refund', :on => :collection
   end
   
@@ -42,7 +36,7 @@ Timemsgr::Application.routes.draw do
   resources :presenters, :calendars, :exhibitors, :sponsors, :only => [:show, :index]
     
   resources :local_subscriptions, :only => [:create, :new]
-  resources :search_users, :search_private_events, :searches, :search_channels, :search_nearby_events, :nearby_events, :only => [:index]
+  resources :search_users, :search_private_events, :searches, :search_channels, :search_nearby_events, :nearby_events, :discounts, :only => [:index]
 
   resources :events do 
     member do
@@ -107,12 +101,12 @@ Timemsgr::Application.routes.draw do
   match "/auth/failure", :to => "sessions#failure"   
   match '/schedule', :to =>  "event_sessions#schedule"
   match '/calinfo', :to =>  "event_sessions#calinfo"
+  match '/discount', :to => "transactions#discount"
     
   # route custom event actions
   match '/outlook', :to => 'private_events#outlook', :as => "outlook"
   match '/gcal_import', :to => 'private_events#gcal_import', :as => "gcal_import"
   match '/system/photos/:id/:style/:basename.:extension', :to => 'pictures#asset'
-#  match '/build', :to => "transactions#build", :constraints => AjaxOnlyRequest.new
 
   root :to => 'pages#home'
 end

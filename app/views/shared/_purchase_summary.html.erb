@@ -10,6 +10,6 @@
   	<%= render :partial=>'shared/order_details', :locals=>{:order=>@order, :paid=>false} %>
   </div>
   <div class="right">
-  	<%= link_to "Change Order", new_transaction_path(:order=>@order), :class => "change-btn round", :remote=>true %><br />
+  	<%= link_to "Change Order", new_transaction_path(:order=>@order, :promo_code=>get_promo_code), :class => "change-btn round", :remote=>true %><br />
   </div>
 </div>

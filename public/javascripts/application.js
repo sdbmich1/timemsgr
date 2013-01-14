@@ -16,7 +16,7 @@ function toggleLoading () {
 
 // add spinner to ajax events
 $(document).ready(function() {
-  $("#map, #cal-btn, #connect_btn, #payment_form, #payForm, #search_btn, #purchase_btn, .change-btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
+  $("#map, #cal-btn, #connect_btn, #payment_form, #payForm, #discount_btn, #search_btn, #purchase_btn, .change-btn, #notify_form, #schedule_btn, #import_form, #rel_id, #chlist_btn, #edit_btn, #subscribe_btn, #unsub_btn, #remove_btn")
     .live("ajax:beforeSend", toggleLoading)
     .live("ajax:complete", toggleLoading)
     .live("ajax:success", function(event, data, status, xhr) {
@@ -600,9 +600,16 @@ $(document).ready(function() {
 	
 	// get stripe key	
 	Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
-	processCard();
+	
+	// check card # to avoid resubmitting form twice
+	if (getFormID('#card_number').length > 0) {
+      processCard();
+      return false; 
+      }
+    else
+      return true;
   });  
-    
+   
 });
 
 // create token if credit card info is valid
@@ -623,27 +630,34 @@ function processCard() {
 // handle credit card response
 function stripeResponseHandler(status, response) {
     var stripeError = getFormID('#stripe_error'); 
-  
-	if(status == 200) {
+      
+	if(status == 200 || status == '200') {
       toggleLoading();
 	  stripeError.hide(300);
 	  
       // insert the token into the form so it gets submitted to the server
 	  getFormID('#transaction_token').val(response.id);
-      getFormID("#payment_form").trigger("submit.rails");	
-	}
+   	  getFormID("#payment_form").trigger("submit.rails");    	  
+ 	}
     else {
       stripeError.show(300).text(response.error.message)
       payForm.attr('disabled', false);
       
   	  $('html, body').animate({scrollTop:0}, 100); 
     }
+    
+    return false;
 }
 
 $(document).ready(function() {	
-	if ($('#pmtForm').length == 0 || $('#buyTxtForm').length == 0) {
-		payForm = getFormID('#payForm');		
-	} 
+  if ($('#pmtForm').length == 0 || $('#buyTxtForm').length == 0) {
+	payForm = getFormID('#payForm');		
+  } 
+	
+  // used to toggle promo codes
+  $(".promo-cd").live('click', function() {
+   	$(".promo-code").show();
+  });	
 });
 
 // check for google import
@@ -666,6 +680,17 @@ $(document).ready(function() {
     $(this).toggleClass('fld_bkgnd');
   });  
     
+});
+
+// process discount
+$('#discount_btn').live("click", function() {
+    var cd = $('#promo_code').val();
+    if (cd.length > 0) {
+  		var url = '/discount.js?promo_code=' + cd; 
+  		process_url(url);
+  	}
+  	
+	return false;
 });
 
 // print page

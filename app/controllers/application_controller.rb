@@ -17,14 +17,14 @@ class ApplicationController < ActionController::Base
   
   protected
    
-  def rescue_with_handler(exception)
-    ExceptionNotifier::Notifier.exception_notification(request.env, exception).deliver if Rails.env.production?
-    redirect_to '/500.html'
-  end       
+#  def rescue_with_handler(exception)
+#    ExceptionNotifier::Notifier.exception_notification(request.env, exception).deliver if Rails.env.production?
+#    redirect_to '/500.html'
+#  end       
   
-  def method_missing(id, *args)
-    redirect_to '/404.html'
-  end
+#  def method_missing(id, *args)
+#    redirect_to '/404.html'
+#  end
 
   def load_settings
     if signed_in?
@@ -56,7 +56,7 @@ class ApplicationController < ActionController::Base
     session[:mobile_param] = params[:mobile] if params[:mobile]  
     if mobile_device? and request.format.to_s == "text/html"
         request.format = :mobile
-    elsif mobile_device? and request.format.to_s == "text/javascript"
+    elsif request.format.to_s == "text/javascript"
         request.format = :js
     end
   end 

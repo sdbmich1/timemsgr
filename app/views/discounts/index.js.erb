@@ -1,15 +1,15 @@
 var formError = getFormID('#stripe_error');
 var pmtForm = getFormID('#pmtForm');
 
-<% if @transaction.errors.any? %>
-    formError.html("<%= escape_javascript(error_messages_for(@transaction))%>");
+<% if @discount.blank? %>
+    formError.text("Discount code not found. Please re-enter.");
 	formError.show(300);
-	getFormID('#payForm').attr('disabled', false);
 <% else %>
 	formError.hide(300);
-	pmtForm.html("<%= escape_javascript( raw render(:partial => 'shared/payment_success_form') ) %>"); 
+	pmtForm.html("<%= escape_javascript( raw render(:partial => 'payment_form') ) %>"); 
 <% end %>
 
+// toggle spinner
 <% if mobile_device? %>
 	uiLoading(false);
 <% else %>

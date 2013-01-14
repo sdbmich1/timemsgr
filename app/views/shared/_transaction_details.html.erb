@@ -1,4 +1,5 @@
   	<p><span class="span-3">Confirmation #: </span><span class="span-9 last"><%= transaction.confirmation_no %></span></p>
+  	<p><span class="span-3">Payment Type: </span><span class="span-9 last"><%= transaction.payment_type %></span></p>
   	<p><span class="span-3">Date & Time: </span><span class="span-9 last"><%= get_local_time(transaction.created_at) %></span></p>  	
   	<p><span class="span-3">First Name: </span><span class="span-9 last"><%= transaction.first_name %></span></p>
 	<p><span class="span-3">Last Name: </span><span class="span-9 last"><%= transaction.last_name %></span></p>

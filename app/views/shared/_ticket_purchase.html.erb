@@ -1,6 +1,7 @@
 <div id="buyTxtForm" class="span-12">
 <h3 class="grp-hdr"><center>Select Items</center><hr /></h3>
 <div id="buyFormError" style="display:none" class="error"></div>
+<div id="dCode" style="display:none" class="notice"></div>
 <%= form_tag build_transactions_path(:id=>event, :eid=>event.eventid, :sdt=>event.eventstartdate, :etype=>event.event_type), :method => :get, :remote=>true, :id => 'purchase_btn' do %> 
 <table>
    <tr>
@@ -22,7 +23,10 @@
         	<%= render :partial => 'shared/ticket_row', :locals => {:event => event, :target => 'Other' + i.to_s + 'Fee', :fname => 'Other' + i.to_s + 'Title', :useFldName => false }%>
     	<% end %>
   	<% end %>
-  <% end %>  
+  <% end %>
+  <div id="discForm">
+  	<%= render :partial => 'shared/discount_code' %> 
+  </div>
 </table>
 
 	<%= hidden_field_tag 'event_name', event.event_name %>

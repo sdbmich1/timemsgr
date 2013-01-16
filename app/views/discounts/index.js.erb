@@ -6,7 +6,11 @@ var pmtForm = getFormID('#pmtForm');
 	formError.show(300);
 <% else %>
 	formError.hide(300);
-	pmtForm.html("<%= escape_javascript( raw render(:partial => 'payment_form') ) %>"); 
+	<% if mobile_device? %>
+		pmtForm.html("<%= escape_javascript( raw render(:partial => 'mobile/payment_form') ) %>"); 
+	<% else %>
+		pmtForm.html("<%= escape_javascript( raw render(:partial => 'shared/payment_form') ) %>"); 
+	<% end %>
 <% end %>
 
 // toggle spinner

@@ -1,13 +1,25 @@
-	<p><span>Address 1* </span>	
+
+<tr><td>Address 1* </td>
+	<td>
 	<% if toggle %>
-		<%= form.text_field :Address1 %></p>
+		<%= form.text_field :Address1 %>
 	<% else %>
-		<%= form.text_field :BillingAddr %></p>
+		<%= form.text_field :BillingAddr %>
 	<% end %>
-	<p><span>Address 2 </span><%= form.text_field :Address2 %></p>
-	<p><span>City* </span><%= form.text_field :City %></p>
-	<p><span>State/Province*</span>
-		<%= form.collection_select :State, StateCode.all, :StateAbbr, :State, {:prompt => 'Select State'} %></p>
-	<p><span>Zip* </span><%= form.text_field :PostalCode, :size => 10 %></p>
-	<p><span>Country </span><%= form.country_select :Country, ["United States"], :class => 'country' %></p>	  
-	<p><span>Home Phone* </span><%= form.text_field :Phone_Home %></p>
+	</td>
+</tr>
+<tr><td>Address 2 </td><td><%= form.text_field :Address2 %></td></tr>
+<tr><td>City* </td><td><%= form.text_field :City %></td></tr>
+<tr><td>State/Prov*</td>
+	<td><%= form.collection_select :State, StateCode.all, :StateAbbr, :State, {:prompt => 'Select State'} %></td>
+</tr>
+<tr><td>Zip* </td><td><%= form.text_field :PostalCode, :size => 10 %></td></tr>
+<tr><td>Country </td><td><%= form.country_select :Country, ["United States"], :class => 'country' %></td></tr>
+<tr><td>Home Phone* </td><td><%= form.text_field :Phone_Home %></td></tr>
+<% if toggle %>
+	<tr><td>Work Phone </td><td><%= form.telephone_field :Phone_Work %></td></tr>
+	<tr><td>Cell Phone </td><td><%= form.telephone_field :Phone_cell %></td></tr>
+	<tr><td>Wireless Provider  </td><td>
+		<%= form.collection_select :wirelessservice, WirelessProvider.unhidden, :code, :description, {:prompt => 'Select Provider'} %></td></tr>
+<% end %>
+	

@@ -44,7 +44,7 @@ module TransactionsHelper
   end
   
   def get_promo_code
-    @discount ? @discount.code : nil
+    @order ? @order[:promo_code] ? @order[:promo_code] : nil : nil
   end
   
   def get_processing_fee 
@@ -52,11 +52,11 @@ module TransactionsHelper
   end
   
   def get_convenience_fee
-    KITS_FEE
+    @total + calc_discount > 0.0 ? KITS_FEE.to_f : 0.0
   end
   
   def grand_total
-    @total += @fees + KITS_FEE.to_f + calc_discount
+    @total += @fees + get_convenience_fee + calc_discount
   end
   
   def convenience_fee?
@@ -74,5 +74,13 @@ module TransactionsHelper
   
   def show_title paid
     paid ? 'Total Paid' : 'Total Due'
+  end
+  
+  def confirm_msg
+    if @total > 0
+      "Your credit card will be processed.  Would you like to proceed?"
+    else
+      "Your order will be processed.  Would you like to proceed?"
+    end
   end
 end

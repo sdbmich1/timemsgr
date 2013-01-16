@@ -1,7 +1,7 @@
 var formError = getFormID('#buyFormError');
 var formTxtForm = getFormID('#buyTxtForm');
 
-<% if @order[:qtyCnt].to_i > 0 %>
+<% if (1..@order[:cnt].to_i).detect {|i| @order['quantity'+i.to_s].to_i > 0} %>	
 	formError.hide(300);
 	formTxtForm.html("<%= escape_javascript( raw render(:partial => "shared/ticket_purchase", :locals=>{:event=>@event}) ) %>");
 <% else %>

@@ -119,7 +119,13 @@ $(document).bind('pageinit', function() {
 	goToUrl(url);	
 	return false;
   });
-  
+
+  $("#discount_btn").live("click", function() {
+    var cd = $('#promo_code').val();
+    if (cd.length > 0) 
+    	uiLoading(true);  
+  });
+    
   $("#addEvent").live("click", function() {
   	var sdt = calndr.fullCalendar( 'getDate' );
   	var url = '/private_events/new.mobile?sdt=' + sdt; 

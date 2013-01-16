@@ -1,6 +1,8 @@
+<%= render :partial => 'mobile/show_discount' %> 
+
 <% if processing_fee? %>
   <tr><td>Processing Fee</td><td></td>
-  	<td class="price"><%= number_to_currency(get_processing_fee(@total)) %></td>
+  	<td class="price"><%= number_to_currency(get_processing_fee) %></td>
   </tr>
 <% end %>
 <% if convenience_fee? %>

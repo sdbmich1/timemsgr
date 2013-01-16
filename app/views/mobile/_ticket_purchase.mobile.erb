@@ -1,8 +1,9 @@
 <div id="buyTxtForm">
+	<div id="buyFormError" style="display:none" class="error"></div>
+	<div id="dCode" style="display:none" class="notice"></div>
 	<%= render :partial => 'mobile/show_event_details', :locals => {:event => event} %>
 	<%= render :partial => 'mobile/show_event_location', :locals => {:event => event} %> 
 
-<div id="buyFormError" style="display:none" class="error"></div>
 <%= form_tag build_transactions_path(:id=>event, :eid=>event.eventid, :sdt=>event.eventstartdate, :etype=>event.event_type), :method => :get, :id => 'purchase_btn' do %> 
 <table class="items">
   <thead class="items">
@@ -27,6 +28,9 @@
     	<% end %>
   	<% end %>
   <% end %>  
+    <div id="discForm">
+  		<%= render :partial => 'mobile/discount_code' %> 
+  	</div>
   </tbody>
 </table>
 </h3>

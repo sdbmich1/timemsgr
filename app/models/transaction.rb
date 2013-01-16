@@ -1,10 +1,10 @@
 class Transaction < KitsTsdModel
   attr_accessible :code, :description, :amt, :currency, :transaction_date, 
   :channelID, :HostProfileID, :user_id, :status, :hide, :BillingAddr,
-  :first_name, :last_name, :City, :State, :PostalCode, :Phone_Home, :token,
+  :first_name, :last_name, :City, :State, :PostalCode, :Phone_Home, :token, :credit_card_no,
   :Phone_Work, :payment_type,  :Address2, :confirmation_no, :email, :expiration_date, :Country, :promo_code
   
-  attr_accessor :cvv, :credit_card_no, :promo_code
+  attr_accessor :cvv, :promo_code
   
   belongs_to :host_profile, :foreign_key => :HostProfileID
   
@@ -40,7 +40,7 @@ class Transaction < KitsTsdModel
   validates :amt, :presence => true  
     
   def self.load_new(usr)
-    new_transaction = usr.profile.transactions.build usr.profile.attributes
+    new_transaction = usr.profile.transactions.build usr.profile.attributes if usr.profile
     new_transaction.user_id = usr.id
     new_transaction.first_name = usr.first_name
     new_transaction.last_name = usr.last_name
@@ -52,18 +52,13 @@ class Transaction < KitsTsdModel
   
   def add_details item, qty, val
     item_detail = self.transaction_details.build
-    item_detail.item_name = item
-    item_detail.quantity = qty
-    item_detail.price = val
-
+    item_detail.item_name, item_detail.quantity, item_detail.price= item, qty, val
   end
   
   def refund_transaction
     charge = Stripe::Charge.retrieve confirmation_no
-    charge.refund if charge
-    
-    # add refund to transaction details
-    add_details 'Refund', 1, 0-amt
+    charge.refund if charge   
+    add_details 'Refund', 1, 0-amt  # add refund to transaction details
     save!
   end
   
@@ -77,22 +72,37 @@ class Transaction < KitsTsdModel
       end 
     
       # charge the credit card using Stripe
-      result = Stripe::Charge.create(
-        :amount => (amt * 100).to_i, # amount in cents, again
-        :currency => "usd",
-        :card => token,
-        :description => description)  
-        
+      if amt > 0.0 then
+        result = Stripe::Charge.create(:amount => (amt * 100).to_i, :currency => "usd", :card => token, :description => description)  
+      end
+      
       if result
-        self.confirmation_no, self.payment_type = result.id, result.card[:type]     
+        self.confirmation_no, self.payment_type, self.credit_card_no = result.id, result.card[:type], result.card[:last4] 
+      else
+        self.confirmation_no = Time.now.to_i.to_s   
       end  
       save!  
     end
     
+    rescue Stripe::CardError => e
+      process_error e
+    rescue Stripe::AuthenticationError => e
+      process_error e
     rescue Stripe::InvalidRequestError => e
-      logger.error "Stripe error while processing this transaction: #{e.message}"
-      errors.add :base, "There was a problem with your credit card. #{e.message}"
-      false
+      process_error e
+    rescue Stripe::APIConnectionError => e
+      process_error e
+    rescue Stripe::StripeError => e
+      ExceptionNotifier::Notifier.exception_notification('StripeError', e).deliver if Rails.env.production?
+      process_error e
+    rescue => e
+      process_error e
+    false
+  end
+  
+  def process_error e
+    logger.error "Stripe error while processing this transaction: #{e.message}"
+    errors.add :base, "There was a problem with your credit card. #{e.message}"    
   end
   
   def check_for_stripe_error

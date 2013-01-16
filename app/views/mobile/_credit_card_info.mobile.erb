@@ -1,0 +1,17 @@
+	<h3 class="mtop">Credit Card <hr /></h3>   
+	<table>
+		<tr>
+			<td>Credit Card #* </td><td><%= text_field_tag :card_number, nil, name: nil, :size => 16 %></td>
+			<td><%= image_tag('cc_logos.jpeg', :class=>'cc-logo') %></td>
+		</tr>
+		<tr>
+			<td>Code (CVV)* </td><td><%= text_field_tag :card_code, nil, name: nil, :maxlength => 4, :size => 4, :class=>'card-code' %></td>
+			<td><%= image_tag('cvv.png', :class=>'cvv-logo') %></td>
+		</tr>
+		<tr>
+			<td>Exp Date*</td>
+			<td><%= select_month nil, {use_short_month: true}, {name: nil, id: "card_month"}%></td>
+    		<td><%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %></td>			
+		</tr>
+	</table>
+ 

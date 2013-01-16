@@ -350,10 +350,10 @@ a.map-btn {
 
 /* error handling */
 .error, .alert {
-  padding: 5px 0 5px 0;
+  padding: 5px 5px 5px 0;
   margin: 7px;
   width: 95%;
-  height: 20px;
+  min-height: 20px;
   margin-bottom: 10px;
   text-align: center;
   font-size: 12px;
@@ -525,6 +525,10 @@ a.close-btn, a.change-btn {
 
 .card-code {
 	width: 60px!important;
+}
+
+.cc-number {
+	width: 240px!important;	
 }
 
 .field_with_errors .message {

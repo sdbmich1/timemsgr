@@ -1,10 +1,14 @@
 var formError = getFormID('#buyFormError');
 var formTxtForm = getFormID('#buyTxtForm');
 
-formError.hide(300);	
+formError.hide(300);
 
-<% if @order[:qtyCnt].to_i > 0 %>
-	formTxtForm.html("<%= escape_javascript( raw render(:partial => "shared/payment_form") ) %>");
+<% if (1..@order[:cnt].to_i).detect {|i| @order['quantity'+i.to_s].to_i > 0} %>	
+	<% if mobile_device? %>
+		formTxtForm.html("<%= escape_javascript( raw render(:partial => "mobile/payment_form") ) %>");
+	<% else %>
+		formTxtForm.html("<%= escape_javascript( raw render(:partial => "shared/payment_form") ) %>");
+	<% end %>
 <% else %>
 	formError.show(300);	
     formError.text("Error submitting order form. No quantity amount entered.");

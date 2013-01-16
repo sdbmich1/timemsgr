@@ -16,25 +16,17 @@
 	<div class="prepend-2">
   			<%= render :partial => 'shared/user_address', :locals => { :form => f, :toggle => false } %>
   	</div>
-	<label>Credit Card</label>   
-	<div class="prepend-2">  	
-		<p><span>Credit Card #* </span><%= text_field_tag :card_number, nil, name: nil, :size => 16 %> <%= image_tag('cc_logos.jpeg', :class=>'cc-logo') %></p>
-    	<p><span>Code (CVV)* </span><%= text_field_tag :card_code, nil, name: nil, :maxlength => 4, :size => 4 %> <%= image_tag('cvv.png', :class=>'cvv-logo') %></p>
-    	<p><span>Card Expiration* </span>	  
-    		<%= select_month nil, {add_month_numbers_true: true}, {name: nil, id: "card_month"}%>
-    		<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"}%>
-  		</p>
-  	</div>
+  	<%= render :partial => 'mobile/credit_card_info' if @total > 0.0 %>
   </div>
 	
   <%= f.hidden_field :token %>
   <%= f.hidden_field :promo_code, :value=>get_promo_code %>
   <%= f.hidden_field :user_id, :value=>@transaction.user_id %>
   <%= f.hidden_field :HostProfileID, :value => @transaction.HostProfileID %>
-  <%= f.hidden_field :amt, :value => @total %>
+  <%= f.hidden_field :amt, :value => @total, :id=>'amt' %>
   <%= f.hidden_field :description, :value => @order[:event_name] %>
   <div class="order-btn">
-  	<center><%= f.submit "Purchase", :confirm => "Your credit card will be processed.  Would you like to proceed?", :id => 'payForm' %></center>
+  	<center><%= f.submit "Purchase", :confirm => confirm_msg, :id => 'payForm' %></center>
   </div>
 <% end %></div>
 </div>

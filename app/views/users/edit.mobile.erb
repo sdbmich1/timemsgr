@@ -2,9 +2,11 @@
 
 <% content_for :content do %>
   	<%= form_for @user, :id=> "usr_form", :validate => true do |f| %>
-		<%= render "mobile/error_messages", :target => @user %>  
+		<%= render "mobile/error_messages", :target => @user %> 
+		<table>
 			<%= render :partial => 'mobile/user_profile', :locals => { :f => f } %>
 			<%= render :partial => 'mobile/user_contact', :locals => { :f => f } %>
+		</table> 	
 		<p>
 			<%= f.submit "Save", "data-theme"=>"b" %>
 			<%= link_to "Cancel", :back, "data-role" => "button"%>

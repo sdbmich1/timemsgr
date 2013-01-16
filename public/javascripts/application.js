@@ -562,28 +562,9 @@ $(function (){
 });
 
 // checks ticket order form quantity fields to ensure selections are made prior to submission 
-var qtyCnt=0;
+
 var formError, formTxtForm, pmtForm, payForm; 
 
-// when the #quantity field changes
-$("select[id*=quantity]").live('change',function() {
-     
-  var qty = parseInt($(this).val());
-  setQtyCnt(qty);
-
-  return false                 
-});
-  
-function setQtyCnt(qty) {
-	 // use variable to track if any quantity on item purchase page is > 0
-	 if (qty > 0)
-	 	qtyCnt += 1;
-	 else
-	 	qtyCnt -= 1;
-	 			
-	// set hidden field on client form 	
-	$("input[name*='qtyCnt']").val(qtyCnt);		
-}
  
 function getFormID(fld) { 
   if ($('#fancybox-content').length > 0) {
@@ -598,16 +579,19 @@ function getFormID(fld) {
 $(document).ready(function() {	
   $('#payForm').live("click", function() {
 	
-	// get stripe key	
-	Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
-	
 	// check card # to avoid resubmitting form twice
-	if (getFormID('#card_number').length > 0) {
-      processCard();
+	if (getFormID('#card_number').length > 0) {	  
+	  Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));  // get stripe key		
+      processCard(); // process card
       return false; 
       }
-    else
+    else {
+      var amt = parseFloat(getFormID('#amt').val());	
+      if (amt == 0.0)
+      	getFormID("#payment_form").trigger("submit.rails");    	  
+
       return true;
+      }
   });  
    
 });

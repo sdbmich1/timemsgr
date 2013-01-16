@@ -6,6 +6,7 @@ var pmtForm = getFormID('#pmtForm');
 	formError.show(300);
 	getFormID('#payForm').attr('disabled', false);
 <% else %>
+	$("#spinner").show(300);
 	formError.hide(300);
 	pmtForm.html("<%= escape_javascript( raw render(:partial => 'shared/payment_success_form') ) %>"); 
 <% end %>

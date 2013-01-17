@@ -23,7 +23,7 @@ gem 'omniauth'
 #gem "oa-core", "~> 0.3.2"
 
 # add facebook & twitter
-gem "omniauth-facebook"
+gem "omniauth-facebook", '1.4.0'
 gem "omniauth-twitter"
 gem "omniauth-github"
 gem "omniauth-openid"

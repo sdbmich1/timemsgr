@@ -39,7 +39,7 @@ Devise.setup do |config|
   require "omniauth-facebook"
   require 'openid/store/filesystem'
   API_KEYS = YAML::load_file("#{Rails.root}/config/api_keys.yml")[Rails.env]
-  config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret'], { :client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}} }
+  #config.omniauth :facebook, API_KEYS['facebook']['api_key'], API_KEYS['facebook']['api_secret'], { :client_options => {:ssl => {:ca_path => "/etc/ssl/certs"}} }
   config.omniauth :twitter , API_KEYS['twitter']['api_key'], API_KEYS['twitter']['api_secret']
   config.omniauth :open_id, :store => OpenID::Store::Filesystem.new('/tmp'), :require => 'omniauth-openid'      
 end

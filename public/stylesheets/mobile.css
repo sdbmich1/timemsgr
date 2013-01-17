@@ -365,7 +365,7 @@ a.map-btn {
   padding: 5px 0 5px 0;
   margin: 7px;
   width: 95%;
-  height: 20px;
+  min-height: 20px;
   margin-bottom: 10px;
   text-align: center;
   font-size: 12px;

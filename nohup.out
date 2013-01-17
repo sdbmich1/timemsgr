@@ -1,5 +1,0 @@
-rake aborted!
-Could not find rake-0.9.2.2 in any of the sources
-/home/sbrown/timemsgr/Rakefile:4:in `<top (required)>'
-(See full trace by running task with --trace)
-(in /home/sbrown/timemsgr)

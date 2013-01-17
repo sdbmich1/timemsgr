@@ -1,4 +1,4 @@
-<%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => 'show-pic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
+<%= render :partial => 'mobile/show_photo', :locals => {:model => event, :vtype => picSize(event.event_type), :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
 
   <ul data-role="listview" class="major_evnt">
 	<li><%= link_to "About", about_major_event_url(event, :etype=>event.event_type, :eid=>event.eventid, :sdt=>event.eventstartdate) %></li>

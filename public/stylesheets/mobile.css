@@ -538,3 +538,7 @@ a.close-btn, a.change-btn {
 }
 
 .ui-input-datebox { width: 96%!important; border: 1px solid #AAAAAA;  box-shadow: 1px 1px 1px 2px #ccc; }
+
+.fld-size {
+	width: 286px!important;
+}

@@ -54,7 +54,6 @@ namespace :deploy do
   task :symlink_shared, :roles => :app do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/api_keys.yml #{release_path}/config/api_keys.yml"    
-    run "ln -nfs #{shared_path}/config/gateway.yml #{release_path}/config/gateway.yml"    
   end 
   
   desc "Recreate symlink"
@@ -73,6 +72,7 @@ namespace :sphinx do
   task :sphinx_symlink, :roles => :app do
 #    run "ln -nfs #{shared_path}/sphinx #{release_path}/db/sphinx"
     run "ln -nfs #{shared_path}/config/sphinx.yml #{release_path}/config/sphinx.yml"
+    run "ln -nfs #{shared_path}/config/gateway.yml #{release_path}/config/gateway.yml"        
   end
    
   desc "Stop the sphinx server"

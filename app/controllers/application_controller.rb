@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
    
   def rescue_with_handler(exception)
     ExceptionNotifier::Notifier.exception_notification(request.env, exception).deliver if Rails.env.production?
-#    redirect_to '/500.html'
+    redirect_to '/500.html'
   end       
   
   def method_missing(id, *args)

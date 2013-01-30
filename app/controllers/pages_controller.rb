@@ -34,6 +34,10 @@ class PagesController < ApplicationController
   private  
   
   def user_layout 
-    mobile_device? || current_user ? "application" : "pages"
+    if mobile_device? || current_user 
+      action_name == 'splash' ? 'splash' : "application" 
+    else
+      "pages"
+    end
   end  
 end

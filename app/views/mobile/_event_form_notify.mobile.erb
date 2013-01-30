@@ -1,26 +1,7 @@
 	<div data-role="fieldcontain"> 
-      <fieldset data-role="controlgroup"> 
-		<% if etype == 'event' %>
-			<label>Frequency:</label><%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:prompt => true}, { :id=>'reoccur-type'} %>
-		<% elsif etype == 'life' %>
-     		<%= f.check_box :annualsamedate, {:id => "annualflg"}, "yes", "no" %>
-			<label for="annualflg">Annual</label>
-		<% else %>
-		<% end %>
-      </fieldset> 
-	</div>
-	<% if etype == 'event' %>
-	  <div id="reoccur" style="<%= reoccurring?(@event) ? '' : 'display:none' %>" class='ptop'>
-		<label for='reoccur-dt'>Reoccurrence End Date:</label>
-		<%= f.text_field :reoccurrenceenddate, {:value => get_nice_date(@event.reoccurrenceenddate, 'Edit'), :size=>15, :type => 'date', :id=>'reoccur-dt', 'data-role'=>"datebox", 
-					'data-options'=>'{"mode": "calbox", "dateFormat": "mm/dd/YYYY", "minDays": 0}'} %>
-	  </div>
-	<% end %>
-
-	<div data-role="fieldcontain"> 
       <div class="mtop"></div>
       <fieldset data-role="controlgroup"> 
-		<label>Share with:</label> 
+		<span>Share with:</span> 
      	<%= f.check_box :allowPrivCircle, {:id => "allowPriv"}, "yes", "no" %>
 		<label for="allowPriv">My Family</label>
      	<%= f.check_box :allowSocCircle, {:id => "allowSoc"}, "yes", "no" %>

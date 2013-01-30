@@ -433,7 +433,7 @@ module EventsHelper
   end  
   
   def get_nice_time(val)
-    val.blank? ? '' : val.strftime('%l:%M %p')
+    val.blank? ? Time.now.strftime('%l:%M %p') : val.strftime('%l:%M %p')
   end
   
   def get_local_time(tm)

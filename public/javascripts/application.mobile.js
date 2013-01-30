@@ -208,6 +208,18 @@ $('[data-role="page"]').live('pageshow', function () {
     }	
   });
   
+// manage page splash for logos  
+$(document).on('pageinit', '#splash', function() {
+
+  $(function() {
+  	setTimeout(hideSplash, 1000);
+  });
+
+  function hideSplash() {
+   $.mobile.changePage("/apphome", { transition: "fade" });
+  }  
+});
+  
 // hide address bar 
   window.addEventListener("load", function () {
     setTimeout(function () {        

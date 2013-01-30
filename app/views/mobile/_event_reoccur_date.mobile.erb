@@ -1,0 +1,19 @@
+	<div data-role="fieldcontain"> 
+      <fieldset data-role="controlgroup"> 
+		<% if etype == 'event' %>
+		<tr><td>Frequency</td><td>
+			<%= f.collection_select :reoccurrencetype, ReoccurrenceType.all, :code, :descr_title, {:prompt => 'Select'}, { :id=>'reoccur-type'} %>
+		</td></tr>
+		<% elsif etype == 'life' %>
+		<tr><td>Annual</td><td>
+     		<%= f.check_box :annualsamedate, {:id => "annualflg"}, "yes", "no" %>
+		</td></tr>	
+		<% end %>
+      </fieldset> 
+	</div>
+	<% if etype == 'event' %>
+	  	<tr id="reoccur" style="<%= reoccurring?(@event) ? '' : 'display:none' %>"><td>Reoccur End Date</td><td>
+			<%= f.text_field :reoccurrenceenddate, {:value => get_nice_date(@event.reoccurrenceenddate, 'Edit'), :size=>15, :type => 'date', :id=>'reoccur-dt', 'data-role'=>"datebox", 
+					'data-options'=>'{"mode": "calbox", "dateFormat": "mm/dd/YYYY", "minDays": 0}'} %>
+		</td></tr>
+	<% end %>

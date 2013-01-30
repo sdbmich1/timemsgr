@@ -87,6 +87,8 @@ Timemsgr::Application.routes.draw do
   match '/company', :to => 'pages#company'
   match '/privacy', :to => 'pages#privacy' 
   match '/browse', :to => 'pages#browse' 
+  match '/splash', :to => 'pages#splash'  
+  match '/apphome', :to => 'pages#home' 
   match '/welcome', :to => 'users#new'
   match '/home', 	:to => 'events#index'
   match '/home/user', :to => 'users#home' 
@@ -108,5 +110,5 @@ Timemsgr::Application.routes.draw do
   match '/gcal_import', :to => 'private_events#gcal_import', :as => "gcal_import"
   match '/system/photos/:id/:style/:basename.:extension', :to => 'pictures#asset'
 
-  root :to => 'pages#home'
+  root :to => 'pages#splash'
 end

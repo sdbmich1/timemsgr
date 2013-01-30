@@ -1,16 +1,16 @@
 <% unless has_location?(event) %>
 	<div class="span-2"><%= 'Where:' %></div>
 	<% if showLocation?(event) %>	
-		<div class="<%= buyFlg ? 'span-10 last' : 'span-18 last' %>"><%= event.location  %></div><br />
+		<div class="<%= mobile_device? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>"><%= event.location  %></div><br />
 	<% end %>
-	<div class="<%= buyFlg ? 'span-10 last' : 'span-18 last' %>">
+	<div class="<%= mobile_device? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>">
 		<span class="<%= showLocation?(event) ? 'prepend-2' : 'none' %>"><%= event.mapplacename %></span>
 	</div>
-	<div class="<%= buyFlg ? 'span-10 last' : 'span-18 last' %>">	
+	<div class="<%= mobile_device? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>">	
   		<span class="<%= !event.mapplacename.blank? ? 'prepend-2' : 'none' %>"><%= event.mapstreet %></span>
 	</div>
 <% end %>
 <% if !event.mapcity.blank? %>	
-	<div class="span-20 last">
+	<div class="<%= mobile_device ? '' : 'span-20 last' %>">
 		<span class="prepend-2"><%= event.csz %></span>	</div><br />
 <% end %>

@@ -16,8 +16,8 @@ class NearbyEventsController < ApplicationController
   end    
     
   def location
-    loc = Location.nearest_city(params[:loc]) if params[:loc] rescue nil
-    @location = loc ? loc : @location
+   # loc = Location.nearest_city(params[:loc]) if params[:loc] rescue nil
+   # @location = loc ? loc : @location
     @location.city
   end
   

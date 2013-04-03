@@ -186,7 +186,6 @@ function getMyLocation(dFlg, nearby) {
     	if (myLocation !== undefined) {    		
   			var parts = myLocation.toString().split(')'); 
   			var newLoc = parts[0].split('(');
-  			alert(newLoc[1]);
       		url = url + '?loc=' + newLoc[1];
       	}
        	  	 

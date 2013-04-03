@@ -17,14 +17,14 @@ class ApplicationController < ActionController::Base
   
   protected
    
-#  def rescue_with_handler(exception)
-#    ExceptionNotifier::Notifier.exception_notification(request.env, exception).deliver if Rails.env.production?
-#    redirect_to '/500.html'
-#  end       
+  def rescue_with_handler(exception)
+    ExceptionNotifier::Notifier.exception_notification(request.env, exception).deliver if Rails.env.production?
+    redirect_to '/500.html'
+  end       
   
-#  def method_missing(id, *args)
-#    redirect_to '/404.html'
-#  end
+  def method_missing(id, *args)
+    redirect_to '/404.html'
+  end
 
   def load_settings
     if signed_in?

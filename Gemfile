@@ -87,7 +87,7 @@ gem 'geokit', "~> 1.6.5"
 gem "geokit-rails3", "~> 0.1.5"
 
 gem 'rvm-capistrano'
-gem 'nokogiri', ">= 1.4.4.1", "<=1.5.0.beta.2" 
+gem 'nokogiri', ">= 1.4.4.1" #, "<=1.5.0.beta.2" 
 
 group :development, :test do
 #  gem 'capybara'

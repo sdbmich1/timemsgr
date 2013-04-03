@@ -110,5 +110,5 @@ Timemsgr::Application.routes.draw do
   match '/gcal_import', :to => 'private_events#gcal_import', :as => "gcal_import"
   match '/system/photos/:id/:style/:basename.:extension', :to => 'pictures#asset'
 
-  root :to => 'pages#splash'
+  root :to => 'pages#home'
 end

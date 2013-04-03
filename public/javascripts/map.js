@@ -183,9 +183,11 @@ function getMyLocation(dFlg, nearby) {
 
     // display nearby events?
     if (nearby) {
-    	if (myLocation !== undefined) {
-  			var parts = myLocation.toString().split(']'); 
-      		url = url + '?loc=' + parts[0];
+    	if (myLocation !== undefined) {    		
+  			var parts = myLocation.toString().split(')'); 
+  			var newLoc = parts[0].split('(');
+  			alert(newLoc[1]);
+      		url = url + '?loc=' + newLoc[1];
       	}
        	  	 
       	// change the page              

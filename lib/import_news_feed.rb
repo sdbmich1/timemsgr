@@ -58,6 +58,7 @@ class ImportNewsFeed
 
         # add event to calendar
         cid.map {|channel| add_event(doc, n, sid, etitle[0..199], sdt, enddt, channel.channelID, url, offset)} if cid
+#        add_event(doc, n, sid, etitle[0..199], sdt, enddt, cid[0].channelID, url, offset) if cid
       end
     end     
   end

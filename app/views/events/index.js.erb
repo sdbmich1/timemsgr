@@ -1,3 +1,7 @@
-<%= set_form_type("event_slider") %>
-$("#event_form").html("<%= escape_javascript( raw render(:partial => "shared/event_panels") ) %>");
-reset_slider();
+<% if mobile_device? %>
+  $("#events").append("<%= escape_javascript( raw render(:partial => "mobile/index") ) %>");
+<% else %>
+  <%= set_form_type("event_slider") %>
+  $("#event_form").html("<%= escape_javascript( raw render(:partial => "shared/event_panels") ) %>");
+  reset_slider();
+<% end %>

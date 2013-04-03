@@ -205,8 +205,8 @@ end
 
 def create_college_channels
   # set school environment variables
-  school = ENV['SCHOOL_NAME'] || 'San Francisco State'
-  city = ENV['CITY_NAME'] || 'San Francisco'
+  school = ENV['SCHOOL_NAME'] || 'San Jose State University'
+  city = ENV['CITY_NAME'] || 'San Jose'
   school_size = ENV['SCHOOL_SIZE'] || 'medium'
   promo_code = ENV['PROMO_CODE']
   
@@ -218,9 +218,9 @@ def create_college_channels
   lc.each do |channel|  
     # check school size to determine which channels not to create
     if school_size == 'medium'
-      ch = ["Lacrosse|Water Polo|Swimming|Football|Men's Volleyball|Golf|Tennis|Shopping|Gymnastics|Rugby|Circle|Sailing|Rowing|Squash"]
+      ch = ["Lacrosse|Water Polo|Swimming|Football|Men's Volleyball|Golf|Tennis|Gymnastics|Rugby|Circle|Sailing|Rowing|Squash"]
     else
-      ch = ['Circle|Shopping']
+      ch = ['Circle']
     end
     
     if (channel.channel_name =~ /^.*\b(#{ch[0]})\b.*$/i).nil?

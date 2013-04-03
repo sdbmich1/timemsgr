@@ -193,6 +193,20 @@ $('[data-role="page"]').live('pageshow', function () {
     $("#mform label").inFieldLabels();
   }
   
+  if( $('#event-container').length > 0 ) {
+    var $container = $('#event-container');
+
+	$container.infinitescroll({
+      navSelector  : '#px-nav',                 // selector for the paged navigation (it will be hidden)
+      nextSelector : '#px-nav a',  		// selector for the NEXT link (ie. page 2)
+      itemSelector : '#events .item',           // selector for all items you'll retrieve
+      loading: {
+         msgText: "<em>Loading the next set of events...</em>",
+         finishedMsg: "<em>No more events to load.</em>"
+        }
+    })
+  }
+  
 });
 	  
   // add iphone orientation change handler

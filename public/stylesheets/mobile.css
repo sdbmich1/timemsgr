@@ -557,3 +557,5 @@ a.close-btn, a.change-btn {
 #reoccur-dt, #start-dt, #end-dt, #start-tm, #end-tm {
 	width:140px!important;
 }
+
+.nxt-pg { display:none; }

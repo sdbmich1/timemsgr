@@ -2,7 +2,7 @@
 <div id="pmtForm">
 <%= render 'mobile/purchase_summary' %>
 <div class="clear-all"></div>
-<%= form_for @transaction, :url => transactions_url(:order=>@order), :html => {:id => 'payment_form'}, :remote=>true, :validate => true do |f| %> 
+<%= form_for @transaction, :url => transactions_url(:order=>@order), :html => {:id => 'payment_form'}, :remote=>true do |f| %> 
   <div class="mtop"><div id="stripe_error" style="display:none" class="error"></div></div>
   <%= render :partial => 'mobile/error_messages', :locals => { :target => @transaction } %>
   <div id="new-event" class="mtop">  

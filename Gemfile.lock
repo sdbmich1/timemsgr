@@ -42,6 +42,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (2.0.10)
     attr_required (0.0.5)
+    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (2.1.2)
     capistrano (2.14.2)
@@ -51,7 +52,7 @@ GEM
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
     chronic (0.9.0)
-    client_side_validations (3.2.1)
+    client_side_validations (3.2.5)
     cocaine (0.4.2)
     columnize (0.3.6)
     curb (0.7.18)
@@ -157,6 +158,7 @@ GEM
       json
     multi_json (1.6.1)
     multipart-post (1.1.5)
+    mysql2 (0.2.6)
     mysql2 (0.2.6-x86-mingw32)
     net-http-digest_auth (1.2.1)
     net-http-persistent (2.8)
@@ -168,6 +170,7 @@ GEM
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     nifty-generators (0.4.6)
+    nokogiri (1.5.6)
     nokogiri (1.5.6-x86-mingw32)
     ntlm-http (0.1.1)
     oauth (0.4.7)
@@ -301,6 +304,7 @@ GEM
     tzinfo (0.3.35)
     unf (0.0.5)
       unf_ext
+    unf_ext (0.0.6)
     unf_ext (0.0.6-x86-mingw32)
     unread (0.1.2)
       activerecord (>= 2.3.6)
@@ -321,6 +325,7 @@ GEM
     yaml_db (0.2.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES

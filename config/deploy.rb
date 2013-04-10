@@ -13,7 +13,7 @@ set :application, "koncierge"
 # server details
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-set :deploy_to, "~/sites/#{application}"
+set :deploy_to, lambda { capture("echo -n ~/sites/#{application}") }
 set :deploy_via, :remote_cache
 set :keep_releases, 3
 set :user, "deploy"

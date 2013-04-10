@@ -10,17 +10,20 @@ every "0 0 * * 0,3,5", :roles => [:app] do
   rake "loader:process_sj_feeds", :output => {:error => "#{log_path}/sjfeeds_error.log", :standard => "#{log_path}/sjfeeds.log"}
   rake "loader:process_denver_feeds", :output => {:error => "#{log_path}/denfeeds_error.log", :standard => "#{log_path}/denfeeds.log"}
   rake "loader:process_oc_feeds", :output => {:error => "#{log_path}/ocfeeds_error.log", :standard => "#{log_path}/ocfeeds.log"}
+  rake "ts:rebuild", :output => {:error => "#{log_path}/ts_error.log", :standard => "#{log_path}/ts.log"}  
 end
 
 # process east coast news feeds
 every "0 3 * * 0,3,5", :roles => [:app] do
   rake "loader:process_ny_feeds", :output => {:error => "#{log_path}/nyfeeds_error.log", :standard => "#{log_path}/nyfeeds.log"}
   rake "loader:process_atlanta_feeds", :output => {:error => "#{log_path}/atlfeeds_error.log", :standard => "#{log_path}/atlfeeds.log"}
+  rake "ts:rebuild", :output => {:error => "#{log_path}/ts_error.log", :standard => "#{log_path}/ts.log"}  
 end
 
 # process college feeds
 every "0 2 * * 2,4,6", :roles => [:app] do
   rake "loader:process_stanford_feeds"
   rake "loader:process_sfstate_feeds"
+  rake "ts:rebuild", :output => {:error => "#{log_path}/ts_error.log", :standard => "#{log_path}/ts.log"}  
 end
 

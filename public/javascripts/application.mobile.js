@@ -99,13 +99,40 @@ $(document).ready(function() {
   $("#srchflg").live('click',function() {
 	$('.evsearch').toggle();
 	if ($('.evsearch').is(':visible')) {
-		$(".home-pg, .nearby-pg, .channelList").css('margin-top', '35px');
+		if ($('.evloc').is(':visible')) {
+		   $(".home-pg, .nearby-pg, .channelList").css('margin-top', '70px'); 
+		  }
+		else {
+		   $(".home-pg, .nearby-pg, .channelList").css('margin-top', '35px'); 
+		  }
 	}
 	else {
-		$(".home-pg, .nearby-pg, .channelList").css('margin-top', 0);		
+   		if ($('.evloc').is(':visible')) { 
+		  $(".home-pg").css('margin-top', '35px'); }
+		else {
+		  $(".home-pg, .nearby-pg, .channelList").css('margin-top', 0);		
+		}	
 	}
   });   
 
+  // used to toggle visible search bar
+  $("#chgflg").live('click',function() {
+	$('.evloc').toggle();
+	if ($('.evloc').is(':visible')) {
+		if ($('.evsearch').is(':visible')) { 
+		  $(".home-pg").css('margin-top', '70px'); }
+		else {
+		  $(".home-pg").css('margin-top', '35px'); 	
+		}
+	}
+	else {
+		if ($('.evsearch').is(':visible')) { 
+		  $(".home-pg").css('margin-top', '35px'); }
+		else {
+		  $(".home-pg").css('margin-top', 0); 	
+		}
+	}
+  });   
 }); 
 
 // import events from 3rd party services

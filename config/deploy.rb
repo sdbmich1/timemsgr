@@ -107,7 +107,7 @@ end
 namespace :rvm do
   desc 'Trust rvmrc file'
   task :trust_rvmrc do
-    run "rvm rvmrc trust #{latest_release}"
+    run "rvm rvmrc trust #{current_release}"
   end
 end
 
@@ -124,8 +124,7 @@ before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 # Sphinx
 #before 'deploy:update_code'
 after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild"
-after "deploy:create_symlink", "deploy:resymlink", "rvm:trust_rvmrc", "whenever:update_crontab"
-
+after "deploy:create_symlink", "rvm:trust_rvmrc", "whenever:update_crontab"
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  
 after "deploy:start",   "delayed_job:start"  

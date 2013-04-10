@@ -13,7 +13,7 @@ set :application, "koncierge"
 # server details
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-set :deploy_to, "~/sites/#{application}"
+set :deploy_to, lambda { capture("echo -n ~/sites/#{application}") }
 set :deploy_via, :remote_cache
 set :keep_releases, 3
 set :user, "deploy"
@@ -123,7 +123,7 @@ before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 
 # Sphinx
 #before 'deploy:update_code'
-after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc"
+after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc", "whenever:update_crontab"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 
 # Delayed Job  

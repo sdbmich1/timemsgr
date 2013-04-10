@@ -13,6 +13,7 @@
 		<div class="center-wrapper">
 			<%= image_tag("#{get_name_or_logo('title')}", :class =>"hdr-logo") %>
 		</div>
+		<%= link_to 'Change', '#', :id=>"chgflg", "data-icon"=>"info", :class => "ui-btn-left", 'data-iconpos'=>'notext' %>
 		<%= link_to 'Search', '#', :id=>"srchflg", "data-icon"=>"search", :class => "ui-btn-right", 'data-iconpos'=>'notext' %>
 	<% else %>
 		<h3><%= "#{title}" %>  </h3>

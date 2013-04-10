@@ -58,6 +58,7 @@ namespace :deploy do
   
   desc "Recreate symlink"
   task :resymlink, :roles => :app do
+    puts "\n\n=== Updating the symlink! ===\n\n"
     run "ln -s #{release_path} #{current_path}"
   end
 end
@@ -123,7 +124,7 @@ before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 
 # Sphinx
 #before 'deploy:update_code'
-after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc", "whenever:update_crontab"
+after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink", 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc", "whenever:update_crontab"
 #after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
 
 # Delayed Job  

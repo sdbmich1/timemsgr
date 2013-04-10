@@ -111,8 +111,7 @@ namespace :rvm do
   end
 end
 
-namespace :whenever do
-    
+namespace :whenever do    
   desc "Update the crontab file for the Whenever Gem."
   task :update_crontab, :roles => :db do
     puts "\n\n=== Updating the Crontab! ===\n\n"
@@ -124,8 +123,8 @@ before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 
 # Sphinx
 #before 'deploy:update_code'
-after 'deploy:update_code', 'deploy:symlink_shared', "deploy:resymlink", 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild", "rvm:trust_rvmrc", "whenever:update_crontab"
-#after "deploy:symlink", "deploy:resymlink", "deploy:update_crontab"
+after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild"
+after "deploy:symlink", "rvm:trust_rvmrc", "whenever:update_crontab"
 
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  

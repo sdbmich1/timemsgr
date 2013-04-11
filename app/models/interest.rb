@@ -28,7 +28,7 @@ class Interest < KitsTsdModel
   
   def self.find_or_add_interest title
     category = Category.select_category(title).first rescue nil
-    interest = Interest.find_or_create_by_name title, :category_id => category[0].id, :sortkey => category[0].interests.count+1 if category
+    interest = Interest.find_or_create_by_name title, :category_id => category[0].id, :sortkey => category[0].interests.count+1 if category rescue nil
     interest
   end
   

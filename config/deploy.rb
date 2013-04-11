@@ -16,7 +16,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 set :deploy_to, lambda { capture("echo -n ~/sites/#{application}") }
 set :deploy_via, :remote_cache
-set :keep_releases, 3
+set :keep_releases, 2
 set :user, "deploy"
 set :use_sudo, false
 set :rails_env, "production" 

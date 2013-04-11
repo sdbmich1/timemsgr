@@ -7,6 +7,7 @@ require 'thinking_sphinx/deploy/capistrano'
 require "bundler/capistrano"
 set :rvm_ruby_string, '1.9.2'
 set :rvm_type, :system
+set :rvm_trust_rvmrcs_flag, 1
 
 set :application, "koncierge"
 

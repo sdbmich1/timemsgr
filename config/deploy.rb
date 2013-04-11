@@ -125,6 +125,7 @@ before 'deploy:setup', 'sphinx:create_sphinx_dir' #, 'rvm:install_rvm'
 #before 'deploy:update_code'
 after 'deploy:update_code', 'deploy:symlink_shared', 'sphinx:stop', "sphinx:sphinx_symlink", "sphinx:configure", "sphinx:rebuild"
 after "deploy:create_symlink", "rvm:trust_rvmrc"
+
 # Delayed Job  
 after "deploy:stop",    "delayed_job:stop"  
 after "deploy:start",   "delayed_job:start"  

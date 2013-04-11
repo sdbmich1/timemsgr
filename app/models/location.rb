@@ -30,8 +30,9 @@ class Location < ActiveRecord::Base
     active.where(:hide => 'no')
   end
   
-  def self.nearest_city loc
-    Location.within(40, :origin => loc).sort_by { |e| e.distance }.first 
+  def self.nearest_city city
+    loc = Schedule::getLatLng city
+    Location.within(40, :origin => loc).sort_by { |e| e.distance }.first if loc 
   end
   
   def self.nearest_city_by_ip ip

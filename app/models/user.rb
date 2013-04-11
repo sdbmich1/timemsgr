@@ -153,8 +153,8 @@ class User < ActiveRecord::Base
   end  
   
   def self.get_location(city)
-    loc = Location.find_by_city city
-    loc.id if loc
+    loc = Location.nearest_city city rescue nil
+    result = loc ? loc.id : 4
   end
 
   def profile

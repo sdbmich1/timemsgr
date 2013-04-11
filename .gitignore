@@ -1,4 +1,5 @@
 .bundle
+*.bak
 db/*.sqlite3
 log/
 config/*.yml

@@ -111,7 +111,7 @@ module EventsHelper
   end
   
   def price_exists?(event, method)
-    event.send(method).blank? ? false : event.send(method) > 0 ? true : false
+    event.send(method).blank? ? false : event.send(method) > 0 ? true : false rescue nil
   end
   
   def notice_count(sid)

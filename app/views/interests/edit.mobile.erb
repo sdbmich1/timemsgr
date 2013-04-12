@@ -2,7 +2,7 @@
 
 <% content_for :content do %>
   <div data-role="collapsible-set">
-  	<%= form_for @user, :as => :user, :url => interest_path(@user), :validate => true do |f| %>
+  	<%= form_for @user, :as => :user, :url => interest_path(@user) do |f| %>
  	<div id="event_errors" style="display:none" class="error"></div>
 		<%= render :partial => 'category', :as => :category, :collection => @categories %><br />
 		<%= f.submit "Save", "data-theme"=>"b" %>

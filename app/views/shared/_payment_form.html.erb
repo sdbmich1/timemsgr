@@ -2,7 +2,7 @@
 <%= render 'shared/purchase_summary' %>
 <div class="mtop span-12 last">	
 <h3 class="grp-hdr"><center>Billing Information</center><hr /></h3>
-<%= form_for @transaction, :url => transactions_url(:order=>@order), :html => {:id => 'payment_form'}, :validate => true, :remote => true do |f| %>
+<%= form_for @transaction, :url => transactions_url(:order=>@order), :html => {:id => 'payment_form'}, :remote => true do |f| %>
   <div id="stripe_error" style="display:none" class="error"></div>
   <%= render :partial => 'shared/error_messages', :locals => { :target => @transaction } %>
   <div id="new-event">  

@@ -1,7 +1,7 @@
 <%= render :partial => 'mobile/index_form', :locals => {:title => 'Edit Profile'} %>
 
 <% content_for :content do %>
-  	<%= form_for @user, :id=> "usr_form", :validate => true do |f| %>
+  	<%= form_for @user, :id=> "usr_form" do |f| %>
 		<%= render "mobile/error_messages", :target => @user %> 
 		<table>
 			<%= render :partial => 'mobile/user_profile', :locals => { :f => f } %>

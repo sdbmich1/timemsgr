@@ -4,7 +4,7 @@
 <% end %>
 
 <% content_for :content do %>
-  	<%= form_for @host_profile, :validate => true do |f| %>
+  	<%= form_for @host_profile do |f| %>
 		<%= render "mobile/error_messages", :target => @host_profile %> 
 		<p><h4>Please enter your optional promo code.</h4></p> 
 		<p><%= f.text_field :promoCode %></p>

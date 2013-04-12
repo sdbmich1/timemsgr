@@ -4,7 +4,7 @@
 
 <% content_for :content do %>
   	<div id="mform">	
-  	<%= form_for @transaction, :validate => true do |f| %>
+  	<%= form_for @transaction do |f| %>
  		<%= render "mobile/error_messages", :target => @transaction %>  
 
 		<ul data-role="listview">

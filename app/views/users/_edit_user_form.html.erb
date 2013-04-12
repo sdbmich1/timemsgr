@@ -2,7 +2,7 @@
 
 <% content_for :content do -%>
   <div class="span-18 last boxed" id="user-prefs">  
-	<%= form_for setup_user(@user), :validate => true do |f| %>
+	<%= form_for setup_user(@user) do |f| %>
   		<div id="new-event">  
 			<%= render "shared/error_messages", :target => @user %>  
 			<%= render :partial => set_area, :locals => { :f => f } %>

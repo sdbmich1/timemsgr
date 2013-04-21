@@ -325,7 +325,19 @@ module EventsHelper
     when !(args[0] =~ /Logistic/i).nil?; get_log_events
     else get_user_events
     end
-  end    
+  end 
+  
+  def get_db_events *args
+    case 
+    when !(args[0] =~ /Observances/i).nil?; Event.observances 
+    when !(args[0] =~ /Near/i).nil?; Event.upcoming_events @user, @enddate, @user.location
+    when !(args[0] =~ /Scheduled/i).nil?; Event.schedule @enddate, @user
+    when !(args[0] =~ /Appointment/i).nil?; Event.appointments @user
+    when !(args[0] =~ /Suggested/i).nil?; Event.subscriptions @enddate, @user
+    when !(args[0] =~ /Logistic/i).nil?; Event.logistics @user
+    else Event.get_user_events
+    end    
+  end   
 
 	def showtime
 		@time = Time.now

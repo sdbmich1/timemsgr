@@ -2,7 +2,7 @@
   <div data-role="navbar">
 	  <ul>
 		<% if !life_event?(event.event_type) && !private_event?(event.event_type) && !is_past?(event) %>
-			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate), :confirm => 'Add to your schedule?', 
+			<li><%= link_to "Schedule", private_events_url(:id=>event, :etype=>event.event_type, :eid=>event.eventid, :sdate=>event.eventstartdate, :ssid=>@user.ssid), :confirm => 'Add to your schedule?', 
 					"data-icon"=>"add", 'data-ajax'=>"false", :class=>'sch-event', :method => :post %> </li>
 		<% elsif private_event?(event.event_type) %>		
 			<li><%= link_to "Edit", edit_private_event_url(event, :eid=>event.eventid), "data-icon"=>"custom", :id => "edit" %> </li>

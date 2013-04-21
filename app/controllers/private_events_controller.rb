@@ -1,6 +1,6 @@
 class PrivateEventsController < ApplicationController
   require 'will_paginate/array'
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:create]
   before_filter :set_page_type, :if => :html_destroy?
   include ResetDate, ImportEvent
   layout :page_layout
@@ -19,8 +19,8 @@ class PrivateEventsController < ApplicationController
   end
 
   def create
-    @user ||= current_user
-    @event = PrivateEvent.new_event(params[:private_event], params[:title], params[:id], params[:etype], @user.ssid, params[:eid], params[:sdate])
+#    @user ||= current_user
+    @event = PrivateEvent.new_event(params[:private_event], params[:title], params[:id], params[:etype], params[:ssid], params[:eid], params[:sdate])
     if @event.save(:validate=>myEvent?)
       respond_to do |format|
         format.html { redirect_to events_url } 

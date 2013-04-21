@@ -157,7 +157,7 @@ class Event < KitsTsdModel
     where(where_dt, edt, edt)
   end
       
-  def self.get_local_events loc, edt, limit=90 
+  def self.get_local_events loc, edt, limit=30 
     where_loc = where_dt + " AND (mapcity = ?)"
     find_by_sql(["#{getSQL} FROM `kitscentraldb`.events WHERE #{where_loc} ) 
          ORDER BY eventstartdate, eventstarttime ASC LIMIT #{limit}", edt, edt, loc])     
@@ -205,11 +205,43 @@ class Event < KitsTsdModel
     event
   end 
   
-  def self.find_events(edate, usr, sdt=Date.today, limit=90, offset=0) 
-    edate.blank? ? edate = Date.today+7.days : edate 
-    usr.blank? ? current_events(edate) : current(edate, usr.ssid, Date.today, limit, offset)    
+  def self.find_events(edate, usr, loc, sdt=Date.today, limit=90, offset=0) 
+    edate = edate.blank? ? Date.today+7.days : edate 
+    @elist = usr.blank? ? current_events(edate) : current(edate, usr.ssid, Date.today, limit, offset)
+    
+    # get user schedule data by sections
+    @user_events = get_user_events(usr, @elist)
+    @elist    
   end
   
+  def self.appointments usr
+    get_appointments(usr, @elist)
+  end
+  
+  def self.observances
+    get_observances @elist
+  end
+  
+  def self.logistics usr
+    get_log_events usr, @elist
+  end
+  
+  def self.schedule edate, usr
+    build_schedule edate, @elist, usr
+  end
+  
+  def self.subscriptions edate, usr
+    @subscriptions = build_subscriptions edate, @elist, usr
+  end
+
+  def self.upcoming_events(usr, edate, loc, sdt=Date.today)
+    @upcoming_events = build_upcoming_events(usr, sdt, @elist, edate, loc)
+  end
+  
+  def self.user_events
+    @user_events
+  end
+      
   # used to get friends schedule when shared
   def self.get_schedule(edate, usr)
     elist = Event.find_events(edate, usr.profile)
@@ -291,7 +323,7 @@ class Event < KitsTsdModel
   end
   
   def listing
-    event_name.length < 30 ? event_name.html_safe : event_name.html_safe[0..29] + '...' rescue nil
+    event_name.length < 35 ? event_name.html_safe : event_name.html_safe[0..34] + '...' rescue nil
   end
   
   def details
@@ -303,9 +335,9 @@ class Event < KitsTsdModel
   end
     
   # action caching for SELECT UNION query
-  def self.upcoming_events(edate, hp, loc)
+  def self.find_schedule(edate, usr, loc)
     Rails.cache.fetch("find_events", :expires_in => 30.minutes) do 
-      find_events(edate, hp, loc)
+      find_events(edate, usr, loc)
     end 
   end
   
@@ -322,23 +354,6 @@ class Event < KitsTsdModel
     elist
   end
 
-  def self.get_dates(val)
-    drange = (val.start_date..val.end_date).collect { |x| x }
-  end
-  
-  def self.set_start_date(event, sdt, *args)
-    if event.eventenddate.to_date >= sdt && event.eventstartdate.to_date <= sdt
-      event.eventstartdate = sdt 
-      event
-    else
-      args[0] ? event : nil
-    end 
-  end
-    
-  def self.parse_list elist, dt, *args
-    elist.map! {|e| set_start_date(e,dt, args)}.compact! 
-  end 
-  
   # define SQL field for SELECT UNION statements without fee and title fields
   def self.getSQL
     "(#{getSQLhdr}, #{otherSQLstr}"     
@@ -411,4 +426,225 @@ class Event < KitsTsdModel
         WHERE s.contentsourceID = ?
         AND s.channelID = e.subscriptionsourceID "
   end
+  
+  def life_observance?
+    LifeEventType.all.detect{ |x| x.code == event_type}
+  end
+  
+  def appt?
+    (%w(appt med remind).detect { |x| x == event_type})
+  end
+  
+  def logistical?
+    event_type == 'log' 
+  end 
+    
+  def is_break?
+    (%w(wkshp cls ue mtg key brkout panel).detect { |x| x == session_type }).blank?
+  end
+  
+  def major_event?
+    (%w(cnf conf cnv fest crs sem prf trmt).detect { |x| x == event_type})
+  end  
+  
+  # check time
+  def compare_time ctime, etime
+    if etime.blank? || ctime.day == etime.day && ctime < etime 
+      true
+    else
+      ctime.day == etime.day && ctime > etime ? false : true
+    end
+  end 
+  
+  def adjust_time val, tz_offset, usr
+    offset = tz_offset - usr.localGMToffset if tz_offset
+    tm = offset ? val.advance(:hours => (0 - offset).to_i) : val
+    tm
+  end  
+  
+  # determines date range to build schedule view
+  def self.get_date_range(*args)
+    return [] unless args[0]
+    args[1] ? edate = args[1].to_date : edate = args[0].first.end_date
+    drange = (Date.today..edate).collect { |x| x }
+  end
+  
+  def get_dates(val)
+    drange = (val.start_date..val.end_date).collect { |x| x }
+  end  
+  
+  def goneBy? usr
+    eventenddate.to_date < Date.today && compare_time(adjust_time(Time.now, endGMToffset, usr), eventendtime)
+  end
+
+  def time_left?(usr)
+    eventenddate.to_date > Date.today ? true : !goneBy?(usr)
+  end
+
+  def trkr_event?(uid, usr)
+    (usr.private_trackers | usr.private_trackeds).detect {|x| x.ssid == uid }
+  end
+
+  def current?
+    eventstartdate >= DateTime.now 
+  end
+  
+  def holiday?
+    event_type == 'h' 
+  end
+  
+  def memorance?
+    event_type == 'm' 
+  end
+  
+  def observance?
+    life_observance? || memorance? || holiday?
+  end
+      
+  def is_session?
+    (%w(es se sm session).detect { |x| x == event_type }) 
+  end 
+
+  # determine correct observances to display on schedule
+  def view_obs?
+    location.blank? ? true : !(location =~ /^.*\b(United States|USA)\b.*$/i).nil?
+  end
+    
+  def self.get_appointments usr, elist
+    elist.select {|event| event.appt? && event.time_left?(usr)}
+  end
+  
+  def self.get_log_events usr, elist
+    elist.select {|event| event.logistical? && event.time_left?(usr)}
+  end
+  
+  def self.get_past_events elist
+    elist.reject {|event| chk_user_events(get_current_events(elist), event)}
+  end
+
+  def self.get_current_events elist
+    elist.select {|event| event.eventstartdate.to_date >= Date.today || event.eventenddate.to_date >= Date.today}
+  end  
+  
+  def self.get_observances elist
+    elist.select {|e| e.observance? && e.view_obs? }
+  end  
+
+  def self.get_user_events usr, elist
+    elist.select {|e| e.cid == usr.ssid && !e.observance? && !e.logistical? && !e.appt? && e.time_left?(usr)}
+  end
+    
+  def self.user_events? 
+    @user_events.count > 0 || @trkd
+  end
+  
+  def self.appointments? usr
+    appointments(usr).count > 0
+  end
+
+  def self.subscriptions? sdt, usr
+    subscriptions(sdt, usr).count > 0 rescue nil
+  end
+  
+  def self.observances? 
+    observances.count > 0 rescue nil
+  end
+  
+  def self.logistics? usr
+    logistics(usr).count > 0 rescue nil
+  end
+    
+  def subscribed?(usr)
+    slist = usr.subscriptions rescue nil
+    slist.blank? ? false : slist.detect {|u| u.channelID == ssid && u.status.downcase == 'active' }
+  end  
+  
+  # checks if user has already added an event to their schedule so that it's not added twice for the same date/time 
+  def self.chk_user_events(elist, event)
+    if elist
+      elist.detect {|x| (x.eventstartdate == event.eventstartdate && x.eventstarttime == event.eventstarttime && x.event_name == event.event_name) || (x.eventid == event.eventid && x.eventstartdate == event.eventstartdate)}
+    end
+  end
+
+  # used to reset the start date for events ranging multiple days when creating daily schedule of upcoming events
+  def set_start_date(sdt, *args)
+    if eventenddate.to_date >= sdt.to_date && eventstartdate.to_date <= sdt.to_date
+      self.eventstartdate = sdt
+      self
+    else
+      args[0] ? self : nil
+    end 
+  end 
+    
+  # used to build each day's schedule of events
+  def self.build_schedule edt, elist, usr
+    events = []
+    get_date_range(elist, edt).each do |edate|
+      events << get_event_list(usr, edate, elist)
+    end
+    events.flatten 1
+  end
+  
+  def self.build_subscriptions edt, elist, usr
+    events = []
+    get_date_range(elist, edt).each do |edate|
+      events << get_subscriptions(edate, elist, usr)
+    end
+    events.flatten 1    
+  end
+  
+  def self.build_upcoming_events(usr, sdt, elist, edt, loc)
+    events = []
+    get_date_range(elist, edt).each do |edate|
+      events << get_upcoming_events(usr, sdt, elist, edt, loc)
+    end
+    events.flatten 1
+  end
+  
+  def self.list_events(usr, elist, start_date)
+    elist.select {|event| event.start_date == start_date && event.time_left?(usr)}
+    elist = parse_list elist, usr, start_date 
+  end  
+  
+  def self.parse_list elist, usr, dt, *args
+    elist.map! {|e| e.set_start_date(dt, args)}.compact! 
+    elist = elist.select { |e| e.time_left?(usr) } 
+    elist   
+  end
+  
+  def self.get_event_list(usr, dt, elist)
+    slist = get_trkr_schedule(usr, user_events, dt).select {|e| e && (e.cid == usr.ssid || e.trkr_event?(e.cid, usr)) && 
+        e.start_date <= dt && e.end_date >= dt}.sort_by {|x| x.eventstarttime}
+    slist = parse_list slist, usr, dt          
+  end  
+
+  def self.get_upcoming_events(usr, sdt, elist, edt, loc)
+    nblist = get_local_events(loc, edt)
+    nblist.reject {|e| e.observance? || e.start_date > sdt || e.end_date < sdt || e.cid == usr.ssid || chk_user_events(user_events, e) || 
+        e.is_session? || !e.time_left?(usr) || chk_user_events(@subscriptions, e)}.map {|e| e.set_start_date(sdt) }
+  end
+  
+  def self.get_subscriptions *args
+    sdt = args[0]
+    elist = args[1].select {|e| e.subscribed?(args[2]) && !chk_user_events(user_events, e) && !e.is_session? && e.time_left?(args[2]) }
+    elist.map! {|e| e.set_start_date(sdt)}.compact! if sdt
+    elist
+  end
+     
+  # adds event owner to the event text display for shared events
+  def self.set_event_text(fname, dt)
+    self.event_name += ' (' + fname + ')' if eventstartdate.to_date == dt
+    self   
+  end
+   
+  def shared? 
+    @trkd = allowPrivCircle == 'yes' ? true : false rescue nil
+  end 
+  
+  def self.get_trkr_schedule(usr, elist, dt)
+    (usr.private_trackers | usr.private_trackeds).each do |pt|
+      elist = elist | pt.private_events(dt).map {|e| e.set_event_text(pt.first_name, dt) if e.shared? }
+    end
+    elist
+  end    
 end

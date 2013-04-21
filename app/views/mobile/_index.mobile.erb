@@ -1,34 +1,32 @@
 <ul data-role="listview" class="mainPg">
-	<% if observances? %>
+  <% cache(:fragment => 'observances', :expires_in => 30.minutes) do %>
+	<% if Event.observances? %>
 		<li data-role="list-divider" class="center-wrapper">Observances & Milestones</li>
-		<div class="center-wrapper"><%= render :partial => 'mobile/oblist', :collection => get_events('Observances'), :as => :event, :locals => {:edate => Date.today} %></div>			
+		<div class="center-wrapper"><%= render :partial => 'mobile/oblist', :collection => get_db_events('Observances'), :as => :event, :locals => {:edate => Date.today} %></div>			
 	<% end %>
-	<% if logistics? %>
+  <% end %>
+  <% cache(:fragment => 'schedule', :expires_in => 30.minutes) do %>
+	<% if Event.logistics?(@user) %>
 		<li data-role="list-divider" class="center-wrapper">Logistical</li>
-		<%= render :partial => 'mobile/event_list', :collection => get_events('Logistics'), :as => :event, :locals => {:edate => Date.today} %>
+		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Logistics'), :as => :event, :locals => {:edate => Date.today} %>
 	<% end %>
-	<% if appointments? %>
+	<% if Event.appointments?(@user) %>
 		<li data-role="list-divider" class="center-wrapper">Appointments & Reminders</li>
-		<%= render :partial => 'mobile/event_list', :collection => get_events('Appointment'), :as => :event, :locals => {:edate => Date.today} %>
+		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Appointment'), :as => :event, :locals => {:edate => Date.today} %>
 	<% end %>
-
-	<% [['Scheduled Activities','Schedule'],['Suggested Opportunities','Suggested']].each do |etype| %>
-		<li data-role="list-divider" class="center-wrapper"><%= etype[0] %></li>
-		<% if etype[1] == 'Schedule' %>
-			<% get_date_range(@events, @enddate).each do |edate| %>
-				<%= render :partial => 'mobile/event_list', :collection => get_event_list(edate), :as => :event, :locals => {:edate => edate} %>
-			<% end %>
-			<% unless user_events? %>
-				<div class="stitle center-wrapper"><h6><%= 'No activities scheduled.'  %></h6></div>
-			<% end %>
-		<% elsif etype[1] == 'Suggested' %>
-			<% unless subscriptions? %>
-				<%= render :partial => 'mobile/event_list', :collection => build_list(@nearby_events, @enddate), :as => :event, :locals => {:edate => Date.today} %>	
-			<% else %>
-                <% get_date_range(@events, @enddate).each do |edate| %>
-                       <%= render :partial => 'mobile/event_list', :collection => get_events(etype[1], edate), :as => :event, :locals => {:edate => edate} %>	
-                <% end %>
-			<% end %>	
-		<% end %>
-    <% end %>
+	<% unless Event.user_events? %>
+		<div class="stitle center-wrapper"><h6><%= 'No activities scheduled.'  %></h6></div>
+	<% else %>
+		<li data-role="list-divider" class="center-wrapper">Scheduled Activities</li>
+		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Scheduled'), :as => :event, :locals => {:edate => Date.today} %>
+	<% end %>
+  <% end %>
+  <% cache(:fragment => 'suggested', :expires_in => 30.minutes) do %>
+	<li data-role="list-divider" class="center-wrapper">Suggested Opportunities</li>
+	<% unless Event.subscriptions?(@enddate, @user) %>
+		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Near'), :as => :event, :locals => {:edate => @enddate} %>	
+	<% else %>
+        <%= render :partial => 'mobile/event_list', :collection => get_db_events('Suggested'), :as => :event, :locals => {:edate => @enddate} %>	
+	<% end %>	
+  <% end %>
 </ul>

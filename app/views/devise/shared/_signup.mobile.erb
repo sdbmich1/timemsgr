@@ -1,5 +1,5 @@
   	<div id="mform">
-    <%= form_for(resource, resource.with_host_profile, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= form_for([resource_name, resource.with_host_profile], :url => registration_path(resource_name)) do |f| %>
  		<%= devise_error_messages! %> 	
  			<table>
  				<%= render :partial =>'mobile/user_name_email', :locals=>{:f=>f} %>

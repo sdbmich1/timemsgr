@@ -14,8 +14,8 @@ class EventsController < ApplicationController
 	end
 	
 	def index
-    @events = Event.find_events @enddate, @user, Date.today, limit, offset
-    @nearby_events = @user.nearby_events location, @enddate
+    @events = Event.find_events @enddate, @user, location, Date.today, limit, offset unless fragment_exist?(:fragment => 'schedule')
+#    @nearby_events = @user.nearby_events location, @enddate
   end
   
   def notify
@@ -31,7 +31,11 @@ class EventsController < ApplicationController
   end
 	
  	protected
- 	
+
+  def mobile_index?
+    mobile_device? && action_name == 'index'
+  end
+   	
  	def page_layout 
     mobile_device? ? action_name == 'show' ? 'showitem' : 'events' : action_name == 'show' ? 'showevent' : "events"
   end    

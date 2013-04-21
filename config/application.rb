@@ -11,7 +11,7 @@ module Timemsgr
 
     # Activate observers that should always be running.
     config.active_record.observers = :user_observer, :affiliation_observer, :notification_observer, :event_observer, 
-          :relationship_observer, :reminder_observer, :host_profile_observer, :transaction_observer
+          :relationship_observer, :reminder_observer, :host_profile_observer, :transaction_observer, :event_sweeper
     
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]

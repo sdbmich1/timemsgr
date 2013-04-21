@@ -1,7 +1,7 @@
 	<div class="span-2"><%= 'Date:' %></div>
-	<div class="<%= mobile_device? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %><br /></div>	
+	<div class="<%= mobile_device? ? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>"><%= get_start_date(event.eventstartdate, event.eventenddate, "Show") %><br /></div>	
 	<div class="span-2"><%= 'Time:'%></div>
-	<div class="<%= mobile_device? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>">
+	<div class="<%= mobile_device? ? '' : buyFlg ? 'span-10 last' : 'span-18 last' %>">
 	  <% if holiday?(event.event_type) %>
 		<%= "All Day" %>
 	  <% else %>

@@ -63,7 +63,7 @@ class UserObserver < ActiveRecord::Observer
     if oauth_user
       oauth_user.interests.each do |interest| 
         int = Interest.find_or_add_interest interest.name
-        UserInterest.create :user_id=>user.id, :interest_id=>int.id
+        UserInterest.create :user_id=>user.id, :interest_id=>int.id rescue nil
         
         # find correct channel based on location
         BuildUserSubscriptions.new(interest.name, user).create
@@ -89,7 +89,10 @@ class UserObserver < ActiveRecord::Observer
   end
   
   def check_promo_code user   
-    hp_promo = HostProfile.find_promo_code user.promo_code, user.ssid      
-    hp_promo.map { |hp| hp.local_channels.map {|channel| Subscription.create(:user_id=>user.id, :channelID => channel.channelID, :contentsourceID => user.ssid)} }              
+    if user
+      hp_promo = HostProfile.find_promo_code user.promo_code, user.ssid      
+      hp_promo.map { |hp| hp.local_channels.map {|channel| Subscription.create(:user_id=>user.id, :channelID => channel.channelID, 
+          :contentsourceID => user.ssid)} }
+    end                    
   end
 end

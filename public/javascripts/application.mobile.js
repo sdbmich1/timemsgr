@@ -100,7 +100,7 @@ $(document).ready(function() {
 	$('.evsearch').toggle();
 	if ($('.evsearch').is(':visible')) {
 		if ($('.evloc').is(':visible')) {
-		   $(".home-pg, .nearby-pg, .channelList").css('margin-top', '70px'); 
+		   $(".home-pg, .nearby-pg, .channelList").css('margin-top', '66px'); 
 		  }
 		else {
 		   $(".home-pg, .nearby-pg, .channelList").css('margin-top', '35px'); 
@@ -108,7 +108,7 @@ $(document).ready(function() {
 	}
 	else {
    		if ($('.evloc').is(':visible')) { 
-		  $(".home-pg").css('margin-top', '35px'); }
+		  $(".home-pg").css('margin-top', '31px'); }
 		else {
 		  $(".home-pg, .nearby-pg, .channelList").css('margin-top', 0);		
 		}	
@@ -120,9 +120,9 @@ $(document).ready(function() {
 	$('.evloc').toggle();
 	if ($('.evloc').is(':visible')) {
 		if ($('.evsearch').is(':visible')) { 
-		  $(".home-pg").css('margin-top', '70px'); }
+		  $(".home-pg").css('margin-top', '66px'); }
 		else {
-		  $(".home-pg").css('margin-top', '35px'); 	
+		  $(".home-pg").css('margin-top', '31px'); 	
 		}
 	}
 	else {

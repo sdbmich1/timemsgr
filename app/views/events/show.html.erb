@@ -1,3 +1,5 @@
-<%= set_title(@event.event_name) %>
+<% if @event %>
+  <%= set_title(@event.event_name) %>
+<% end %>
 <%= set_form_type("shared/show_event") %>
 <%= render 'shared/form' %>

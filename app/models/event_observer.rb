@@ -16,10 +16,7 @@ class EventObserver < ActiveRecord::Observer
     else
       ProcessReoccurrence.new.set_frequency(model) unless once?(model)
     end
-    
-    # clear cache
-    Event.delete_cached
-    
+        
     # send notice as needed
     process_notice(model, 'new') unless model.class.to_s == 'ScheduledEvent'
   end

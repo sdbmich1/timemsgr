@@ -1,7 +1,12 @@
   <div data-role="navbar">
   	<ul>
 		<li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
-		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li>    
-		<li id="home_footer"><%= link_to 'Event', major_event_url(@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
+		<li><%= link_to 'Menu', home_user_path, "data-icon"=>"gear" %></li> 
+		<% if major_event?(@event.event_type) %>
+			<li id="home_footer"><%= link_to 'Event', major_event_url(@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
+		<% else %>
+			<li id="home_footer"><%= link_to 'Event', event_url(@event, :etype=>@event.event_type, :eid=>@event.eventid, :sdt=>@event.eventstartdate), :id=>'cal', "data-icon"=>"custom" %></li>
+		<% end %>
+   
 	</ul>
   </div>

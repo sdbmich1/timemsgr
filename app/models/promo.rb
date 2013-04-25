@@ -1,5 +1,6 @@
 class Promo < KitsCentralModel
   set_primary_key 'ID'
+  acts_as_mappable
 
   has_many :pictures, :as => :imageable, :dependent => :destroy
   has_many :promo_codes, :as => :promoable, :dependent => :destroy

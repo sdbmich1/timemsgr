@@ -32,7 +32,7 @@ Timemsgr::Application.routes.draw do
   resources :interests, :categories, :authentications, :associates, :host_profiles, :rsvps, :local_channels, :maps, :import_events
     
   # controllers for event related content
-  resources :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks
+  resources :event_sessions, :subscriptions, :notifications, :event_notices, :beta_feedbacks, :promos
   resources :presenters, :calendars, :exhibitors, :sponsors, :only => [:show, :index]
     
   resources :local_subscriptions, :only => [:create, :new]

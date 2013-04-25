@@ -1,0 +1,10 @@
+
+<h3 class="center-wrapper"><%= promo.promo_title.html_safe %></h3>
+<label>Date: </label><span class="item-detail"><%= get_start_date(promo.promostartdate, promo.promoenddate, "Show") %></span><br />	
+<label>Time: </label>
+ 
+<span class="item-detail">
+	<%= " #{chk_offset(promo.promostarttime, @user.localGMToffset, promo.promoid)} " if promo.promostarttime %>
+	<%= " - #{chk_offset(promo.promoendtime, @user.localGMToffset, promo.promoid)}" if promo.promoendtime %>
+	<%= "TBD" unless promo.promostarttime || promo.promoendtime %>
+</span><br /> 

@@ -1,0 +1,9 @@
+<% unless subscription.local_channel.blank? %>
+    <tr>
+      <td><%= subscription.local_channel.channel_name %></td>
+      <td><%= truncate(subscription.local_channel.descr, :length=>80, :omission=>"...") %></td>
+	  <td><%= link_to "Unsubscribe", subscription_url(:id=>get_subscription(subscription.local_channel.subscriptions, subscription.local_channel.channelID), :user_id=>@user, 
+	  	:channel_id =>subscription.local_channel.channelID), :id=>'unsub_btn', :method=>:put, :confirm => 'Unsubscribe from this channel?' %>
+	</td>
+    </tr>
+<% end %>

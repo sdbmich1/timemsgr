@@ -39,7 +39,7 @@ Timemsgr::Application.configure do
   config.active_support.deprecation = :notify
   
   # added for memcached
-  config.cache_store = :dalli_store #, '127.0.0.1', '127.0.0.1:11211', { :namespace => 'dev' }
+  config.cache_store = :dalli_store #, '127.0.0.1', '127.0.0.1:11211', { :namespace => 'koncierge' }
       
   # exception notification
   config.middleware.use ExceptionNotifier,

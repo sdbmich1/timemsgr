@@ -1,0 +1,21 @@
+<%= render :partial => 'mobile/index_form', :locals => {:title => promo.promo_name} %>
+<%= content_for :content do %>
+
+  <div class="event-image center-wrapper">
+	<div class="event-image center-wrapper">
+	  <%= render :partial => 'mobile/show_photo', :locals => {:model => promo, :vtype => 'show-pic', :file_name => 'schedule1.jpg', :psize=>'80x80' }%>
+  	</div>
+  </div>
+
+  <%= render :partial => 'mobile/show_promo_details', :locals => {:promo => promo} %>
+  <%= render :partial => 'mobile/show_promo_location', :locals => {:promo => promo} %> 
+  <%= render :partial => 'mobile/show_promo_info', :locals => {:model => promo} %> 
+  
+  <% if any_prices?(promo) %>
+	<%= render :partial => 'mobile/show_promo_fees', :locals => {:promo => promo} %> 
+  <% end %>
+<% end %>
+
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/show_promo_footer', :locals => {:promo => promo} %> 
+<% end %>

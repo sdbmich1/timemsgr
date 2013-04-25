@@ -1,0 +1,18 @@
+<% if any_prices?(promo)%>
+  <ul data-role="listview" data-dividertheme="a">
+		<li data-role="list-divider">Prices</li>
+  </ul>
+  <% [['MemberFee', 'Member:'], ['NonMemberFee', 'General:'], ['AffiliateFee', 'Affiliate:'],
+      ['SpouseFee', 'Spouse:'], ['AtDoorFee', 'At Door:'], ['GroupFee', 'Group:']].each do |fld| %>
+        <% if price_exists?(promo, fld[0] ) %>
+   			<label><%= "#{fld[1]}" %></label>
+  			<span class="item-detail"><%= number_to_currency(promo.send(fld[0])) %></span><br />
+        <% end %>
+  <% end %>
+  <% (1..6).each do |i| %>
+    <% if price_exists?(promo, 'Other' + i.to_s + 'Fee' ) %>
+        <label><%= promo.send('Other' + i.to_s + 'Title') + ':' %></label>
+        <span class="item-detail"><%= number_to_currency(promo.send('Other' + i.to_s + 'Fee')) %></span><br />
+    <% end %>
+  <% end %>
+<% end %>	

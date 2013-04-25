@@ -14,8 +14,13 @@ class EventsController < ApplicationController
 	end
 	
 	def index
-    @events = Event.find_events @enddate, @user, location, Date.today, limit, offset unless fragment_exist?(:fragment => 'schedule')
-#    @nearby_events = @user.nearby_events location, @enddate
+    @events = Event.find_events @enddate, @user, location, Date.today, limit, offset #unless fragment_exist?(:fragment => 'schedule')
+    @nearby_events = @user.nearby_events location, @enddate unless mobile_device?
+    respond_to do |format|
+      format.html {}
+      format.mobile {}
+      format.js { render :js => "window.location.href = '#{home_path}'" }
+    end
   end
   
   def notify
@@ -37,7 +42,7 @@ class EventsController < ApplicationController
   end
    	
  	def page_layout 
-    mobile_device? ? action_name == 'show' ? 'showitem' : 'events' : action_name == 'show' ? 'showevent' : "events"
+    action_name == 'show' ? mobile_device? ? 'showitem' : 'showevent' : "events"
   end    
   
   def chk_notices

@@ -3,8 +3,15 @@
 <%= content_for :content do -%>
 	<div class="pg-title">
 		<center><h3 class="grp-hdr">My Subscriptions</h3></center><hr />
-		<div id="sub-list"><%= render 'subscriptions' %></div>
+		<table>
+  			<tr><th>Name</th><th>Description</th><th></th></tr>
+			<div id="sub-list"><%= render @subscriptions %></div>
+		</table>	
 	</div>
+	
+	<div class="nav-right">
+  		<%= will_paginate @subscriptions, :param_name => 'subscription_page' %>
+	</div> 	
 <% end -%>
 
 <%= content_for :footer do %>

@@ -335,6 +335,7 @@ module EventsHelper
     when !(args[0] =~ /Appointment/i).nil?; Event.appointments @user
     when !(args[0] =~ /Suggested/i).nil?; Event.subscriptions @enddate, @user
     when !(args[0] =~ /Logistic/i).nil?; Event.logistics @user
+    when !(args[0] =~ /Promo/i).nil?; Promo.get_promos @user, args[1]
     else Event.get_user_events
     end    
   end   
@@ -481,12 +482,9 @@ module EventsHelper
   end
   
   def get_lnglat(event)
-    if event.longitude && event.latitude
-      [event.latitude, event.longitude]
-    else 
-      addr = Schedule.get_offset event.location_details || event.location
-      [addr[:lat], addr[:lng]] rescue nil 
-    end 
+    result = [event.latitude, event.longitude] if event.longitude && event.latitude rescue nil
+    result = Schedule.getLatLng event.location_details || event.location unless result
+    result
   end
   
   def build_lnglat_ary elist

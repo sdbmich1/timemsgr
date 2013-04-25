@@ -1,0 +1,23 @@
+<div class='ev-loc' data-loc="<%= promo.location %>"></div>
+  <div data-role="navbar">
+	  <ul>
+	    <li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
+
+		<% if promo.end_date >= Date.today %>
+			<li><%= link_to "Share", new_notification_url(:id=>promo, :etype=>promo.promo_type, :eid=>promo.promoid, :sdate=>promo.promostartdate), "data-icon"=>"custom", :id => "notify" %> </li>
+		<% end %>
+		
+		<% if any_prices?(promo) %>
+		 	<li><%= link_to 'Buy', new_transaction_url(:id=>promo, :etype=>promo.promo_type, :eid=>promo.promoid, :sdt=>promo.promostartdate), "data-icon"=>"custom", :id => "buy" %></li>
+		<% end %>
+						
+	  	<% unless (promo.location =~ /http/i).nil? %>
+	  		<li><%= link_to 'Website', promo.location, { :id=>'website','rel'=>'external', "data-icon"=>"custom"} %></li>
+		<% end %>
+		<% unless has_location?(promo) %>
+		 <li><%= link_to "Map", maps_url(:id=>promo, :etype=>promo.promo_type, :eid=>promo.promoid, :sdt=>promo.promostartdate, :loc=>map_loc(promo), :lnglat=>get_lnglat(promo), :title=>map_title(promo)), 
+		 		{ :id=>'map','rel'=>'external', "data-icon"=>"custom"} %></li> 	
+	  	<% end %>
+ 
+	  </ul>
+	</div>

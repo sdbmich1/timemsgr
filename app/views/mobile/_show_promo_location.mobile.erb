@@ -1,0 +1,2 @@
+<p><label><%= 'Where:' %></label> <% if showLocation?(promo) %>	<span class="item-detail"><%= promo.location %></span><br /><% end %><% unless promo.mapplacename.blank? %>	<span class="item-detail"><%= promo.mapplacename %></span><br /><% end %><% unless promo.mapstreet.blank? %>	<span class="item-detail"><%= promo.mapstreet %></span><br /><% end %>
+<% unless promo.mapcity.blank? %>	<span class="item-detail"><%= "#{promo.mapcity}, #{promo.mapstate} #{promo.mapzip}  " %></span><br /><% end %></p>

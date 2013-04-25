@@ -136,7 +136,7 @@
 /* major event image settings */
 .e-pic {width: 100%; height: auto; position:relative;}
 .c-pic {width: 50%; height: 30%; position:relative; margin-bottom: 10px;}
-.show-pic {width: 100%; height:200px; }
+.show-pic {width: 100%; height:150px; }
 
 /*   session list settings */
 .etime { position: absolute; top: 0.25em; left: 1.5em; width: 50px;

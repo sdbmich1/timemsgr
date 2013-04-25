@@ -30,6 +30,7 @@ Devise.setup do |config|
   config.email_regexp = /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
 
   # ==> Configuration for :timeoutable
+  config.remember_for = 2.weeks
   config.timeout_in = Rails.env.development? ? 120.minutes : 7.days
 
   # ==> Navigation configuration

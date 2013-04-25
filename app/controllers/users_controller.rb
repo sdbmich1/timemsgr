@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   layout :user_layout
   respond_to :html, :json, :xml, :js, :mobile
   include SetAssn
+  caches_action :home, :if => :home_mobile?
   
   def home
     redirect_to events_path unless mobile_device?
@@ -38,6 +39,10 @@ class UsersController < ApplicationController
     else 
       "users"
     end
+  end
+  
+  def home_mobile?
+    mobile_device?
   end
   
   def load_data

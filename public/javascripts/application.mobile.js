@@ -196,8 +196,26 @@ $(document).bind('pageinit', function() {
 
 $('[data-role="page"]').live('pageshow', function () {
   
+  // picture slider
+  $('.bxslider').bxSlider({
+  	minSlides: 4,
+    maxSlides: 4,
+    slideMargin:10,
+    pager: false,
+    mode: 'fade',
+    captions: true 
+  });	
+  
+  $(".bxslider div").each(function(){
+	var sLink = $(this).find('a').attr('href');
+	$(this).find('div').click(function(){
+	//window.location = sLink;
+	goToUrl(sLink);
+	});
+  });
+
   // full calendar display
-  if ( $('#calendar').length != 0 ) {
+  if ( $('#calendar').length != 0 ) {http://localhost:3000/system/photos/309/original/2241284-Hotel-Whitcomb-San-Francisco-Hotel-Exterior-16.jpg?1366671291
 	showCalendar(false, true, (3).months().ago(), (12).months().fromNow(), '');
   }
   

@@ -1,10 +1,10 @@
 class SubscriptionsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:create]   
+  before_filter :authenticate_user!, :except => [:create]  
+  before_filter :load_data, :only => [:create, :update] 
   layout :page_layout
   
   def create
-    @user ||= User.find(params[:user_id])
-    @channel = ThinkingSphinx.search params[:channel_id], :classes => [LocalChannel, Channel]
+    @user ||= User.find(params[:user_id])   
     @subscription = Subscription.new_member(@user, @channel)
     if @subscription.save
       redirect_to categories_url, :notice => "#{get_msg(@user, 'Subscription')}" 
@@ -18,7 +18,6 @@ class SubscriptionsController < ApplicationController
   
   def update
     @user ||= User.find(params[:user_id])
-    @channel = LocalChannel.find_by_channelID(params[:channel_id])
     @subscription = Subscription.unsubscribe(params[:user_id], params[:channel_id])
     if @subscription.save
       redirect_to subscriptions_url(:id=>@user), :notice => 'Successfully unsubscribed from channel ' + @channel.channel_name 
@@ -46,5 +45,9 @@ class SubscriptionsController < ApplicationController
   
   def page_layout 
     mobile_device? ? (%w(edit new).detect { |x| x == action_name}) ? 'form' : action_name == 'show' ? 'showitem' : 'list' : "showevent"
-  end    
+  end 
+  
+  def load_data
+    @channel = LocalChannel.find_by_channelID(params[:channel_id]) || Channel.find_by_channelID(params[:channel_id])
+  end   
 end

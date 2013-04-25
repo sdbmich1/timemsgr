@@ -3,3 +3,6 @@
 <%= content_for :content do %>
 	<%= render :partial => 'mobile/ticket_purchase', :locals=>{:event=>@event} %>
 <% end %>
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/show_event_footer', :locals => {:event => @event} %> 
+<% end %>

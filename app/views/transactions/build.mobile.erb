@@ -2,3 +2,6 @@
 <% content_for :content do %>
 	<%= render :partial => 'mobile/payment_form' %>
 <% end %>
+<%= content_for :footer do %>
+	<%= render :partial => 'mobile/show_event_footer', :locals => {:event => @event} %> 
+<% end %>

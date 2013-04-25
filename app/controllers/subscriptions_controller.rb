@@ -4,7 +4,7 @@ class SubscriptionsController < ApplicationController
   
   def create
     @user ||= User.find(params[:user_id])
-    @channel = LocalChannel.find_by_channelID(params[:channel_id])
+    @channel = ThinkingSphinx.search params[:channel_id], :classes => [LocalChannel, Channel]
     @subscription = Subscription.new_member(@user, @channel)
     if @subscription.save
       redirect_to categories_url, :notice => "#{get_msg(@user, 'Subscription')}" 

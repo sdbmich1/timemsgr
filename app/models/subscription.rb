@@ -24,7 +24,7 @@ class Subscription < KitsTsdModel
   end
   
   def self.new_member(usr, channel)
-    sub = Subscription.find_or_initialize_by_user_id_and_channelID(:user_id=>usr.id, :channelID => channel.channelID, :contentsourceID => usr.ssid )
+    sub = Subscription.find_or_initialize_by_user_id_and_channelID(:user_id=>usr.id, :channelID => channel[0].channelID, :contentsourceID => usr.ssid )
     sub.status = 'active'
     sub
   end

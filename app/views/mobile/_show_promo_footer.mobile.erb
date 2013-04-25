@@ -4,11 +4,11 @@
 	    <li><%= link_to 'Home', home_path, "data-icon"=>"home" %></li>
 
 		<% if promo.end_date >= Date.today %>
-			<li><%= link_to "Share", new_notification_url(:id=>promo, :etype=>promo.promo_type, :eid=>promo.promoid, :sdate=>promo.promostartdate), "data-icon"=>"custom", :id => "notify" %> </li>
+			<li><%= link_to "Share", '#', "data-icon"=>"custom", :id => "notify" %> </li>
 		<% end %>
 		
 		<% if any_prices?(promo) %>
-		 	<li><%= link_to 'Buy', new_transaction_url(:id=>promo, :etype=>promo.promo_type, :eid=>promo.promoid, :sdt=>promo.promostartdate), "data-icon"=>"custom", :id => "buy" %></li>
+		 	<li><%= link_to 'Buy', '#', "data-icon"=>"custom", :id => "buy" %></li>
 		<% end %>
 						
 	  	<% unless (promo.location =~ /http/i).nil? %>

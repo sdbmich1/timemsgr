@@ -70,6 +70,16 @@ class Promo < KitsCentralModel
     active.getquote.offset(rand(self.count)).first
   end
   
+  # check if pictures already exists
+  def any_pix?
+    pictures.detect { |x| x && !x.photo_file_name.nil? }
+  end
+  
+  def self.any_image_promos? usr, ptype
+    @promos = get_promos usr, ptype
+    @promos.detect {|p| p.any_pix? } rescue nil
+  end
+  
   def self.get_promos usr, ptype
     where('promoenddate >= ? and promo_type = ?', Date.today, ptype).select { |p| p.subscribed?(usr) } rescue nil 
   end

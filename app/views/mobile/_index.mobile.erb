@@ -13,17 +13,19 @@
 		<li data-role="list-divider" class="center-wrapper">Appointments & Reminders</li>
 		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Appointment'), :as => :event, :locals => {:edate => Date.today} %>
 	<% end %>
+	<li data-role="list-divider" class="center-wrapper">Scheduled Activities</li>
 	<% unless Event.user_events? %>
 		<div class="stitle center-wrapper"><h6><%= 'No activities scheduled.'  %></h6></div>
 	<% else %>
-		<li data-role="list-divider" class="center-wrapper">Scheduled Activities</li>
 		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Scheduled'), :as => :event, :locals => {:edate => Date.today} %>
 	<% end %>
   <% cache(:fragment => 'suggested', :expires_in => 30.minutes) do %>
 	<li data-role="list-divider" class="center-wrapper">Suggested Opportunities</li>
-	<div class="bxslider">
+	<% if Promo.any_image_promos? @user, 'channel' %>
+	  <div class="bxslider">
 		<%= render :partial => 'mobile/promo_image_content', :collection => get_db_events('Promo', 'channel'), :as => :promo %>	
-	</div>
+	  </div>
+	<% end %>
 	<% unless Event.subscriptions?(@enddate, @user) %>
 		<%= render :partial => 'mobile/event_list', :collection => get_db_events('Near'), :as => :event, :locals => {:edate => @enddate} %>	
 	<% else %>

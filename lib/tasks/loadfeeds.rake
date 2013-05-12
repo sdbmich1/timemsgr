@@ -20,6 +20,18 @@ namespace :loader do
     load_news_feeds RAILS_ROOT + '/lib/feeds/NYDailyNewsFeed020612.txt', 'New York', -5
   end 
   
+  desc "Load database with data from australia data feeds"
+  task :process_aussie_feeds => :environment do  
+    p 'Loading Sydney Feed...'  
+    load_aussie_feeds RAILS_ROOT + '/lib/feeds/Sydney051113.txt', 'Sydney', 10
+    p 'Loading Perth Feed...'  
+    load_aussie_feeds RAILS_ROOT + '/lib/feeds/Perth051113.txt', 'Perth', 8
+    p 'Loading Melbourne Feed...'  
+    load_aussie_feeds RAILS_ROOT + '/lib/feeds/Melbourne051113.txt', 'Melbourne', 10
+    p 'Loading Brisbane Feed...'  
+    load_aussie_feeds RAILS_ROOT + '/lib/feeds/Brisbane051113.txt', 'Brisbane', 10
+  end  
+  
   task :process_sf_feeds => :environment do
     p 'Loading SF Chronicle Feed...'  
     load_news_feeds RAILS_ROOT + '/lib/feeds/SFChronicleFeed020612.txt', 'San Francisco', -8
@@ -81,6 +93,11 @@ namespace :loader do
   task :process_golf_feeds => :environment do
     load_golf_feeds    
   end  
+end
+
+def load_aussie_feeds *args
+  feed = ImportAuFeed.new
+  feed.read_feeds(*args)
 end
 
 def load_news_feeds(*args)

@@ -103,7 +103,7 @@ class LocalChannel < KitsSubModel
   def self.parse_ary
     [['Sculpture|Art|Painting|Exhibit|Gallery|Artist|Artwork|Museum|Curated|Arts|Crafts', 'Galleries'], 
      ['Preschool|Teen|Children|Kids|Kindergarten|Elementary', 'Youth'], ['Elementary','Elementary'],
-     ['Dance|Concert|Band|Performance|Music|Ball|Jazz|Salsa|DJ|Ballroom|CD|Blues|Reggae|Rehearsal|Rock|Pop|Noise|Country Music|Quartet|Trio|Quintet', 'Music'],  
+     ['Dance|Concert|Band|Performance|Music|Ball|Jazz|Salsa|DJ|Ballroom|CD|Blues|Reggae|Tour|Rehearsal|Rock|Pop|Noise|Country Music|Quartet|Trio|Quintet', 'Music'],  
      ['Parade|March|Walk', 'Parade'], ['Comedy|Funny|Comedian|Improv|Laugh', 'Comedy'],
      ['Culinary|Food|Wine|Cooking|Taste|Brunch|Dinner|Chocolate|Chef|Kitchen|Farmers|Barbeque|Tasting|Fine Dining|Lunch|Dining|Coffee|Dine|Potluck|Winery|Feed|Feast|Beer', 'Food'],  
      ['Bebop|Big Band|Jazz|Quintet|Quartet|Octet|Trio|Sextet', 'Jazz'], ['Blues', 'Blues'], ['Bluegrass|Country Music|Country', 'Country Music'], ['Private School|High School', 'High School'], 
@@ -118,13 +118,13 @@ class LocalChannel < KitsSubModel
      ['Book|Reading|Literature|Stories|Author|Storytime|Story', 'Book'],['Senior', 'Senior'], 
      ['Career|Job|Job Fair|Hiring|Employer|Employee|Employment','Job'],
      ['Dating|Romance|Love|Hookup|Sex|Mating', 'Dating'],
-     ['Business|Conferences|Seminars|Meetings|Trade Missions', 'Business'],
+     ['Business|Conferences|Seminars|Meetings|Trade Missions|Strategy|Management', 'Business'],
      ['Orchestra|Piano|Violin|Cello|Musical|Recital|Cello|Symphony|Concerto|Pops', 'Classical'],
-     ['Cloud|Mobile|Technology|Software|Hardware|Server|Engineering|Social Media|SaaS|Enterprise|IaaS', 'Technology'],
-     ['Tennis|WTA|ATP', 'Tennis'],['NFL|Football','NFL'], ['Boxing|WBC|WBA|Fight|', 'Boxing'], ['Cricket', 'Cricket'], ['WWF|Wrestling', 'Wrestling'],
+     ['Cloud|Mobile|Technology|Software|Hardware|Server|Engineering|Social Media|SaaS|Enterprise|IaaS|Web|', 'Technology'],
+     ['Tennis|WTA|ATP', 'Tennis'],['NFL|Football','NFL'], ['Boxing|WBC|WBA|Fight|', 'Boxing'], ['Cricket', 'Cricket'], ['WWF|Wrestling', 'Wrestling'], ['Rugby', 'Rugby'],
      ['NBA|Basketball', 'NBA'], ['NHL|Hockey', 'NHL'], ['MLB|Baseball', 'MLB'], ['MMA|Fighting', 'MMA'], ['PGA|Golf', 'PGA'], ["Women's Golf|LPGA|Golf", 'LPGA'],
      ["WNBA|Women's Basketball", 'WNBA'],['MLS|Soccer|World Cup', 'Soccer'], ['NASCAR|Formula One|CART|Indy Car|Auto Racing', 'Auto Racing'], 
-     ['Pro Sports', 'NFL'],['Pro Sports','NBA'], ['Pro Sports','MLB'], ['Pro Sports','NHL'], ['Pro Sports','MLS'], ['Pro Sports','WNBA'], ['Pro Sports', 'NASCAR'],
+     ['Pro Sports', 'NFL'],['Pro Sports','NBA'], ['Pro Sports','MLB'], ['Pro Sports','NHL'], ['Pro Sports','MLS'], ['Pro Sports','WNBA'], ['Pro Sports', 'NASCAR'], ['Pro Sports', 'Rugby'],
      ['College Football|College Baseball|College Hockey|College Golf|College Tennis|College Basketball|College Soccer|Softball|College Wrestling|Gymnastics|Track|Lacrosse|Water Polo|Rowing|Swimming|Fencing', 'College Sports'],
      ['Startup|Entrepreneur|Venture Capital|Fund Raising|Founder', 'Startup'], 
      ['Marathon|Race|5K|10K|Track Meet', 'Amateur Sports'], ['Gay|Lesbian|LGBT|Transgender|Bisexual|Bi-sexual|Queer', 'Gay'], 
@@ -155,7 +155,7 @@ class LocalChannel < KitsSubModel
         channel << found_channel unless found_channel.blank? 
       end
     end 
-#    channel << get_channel('Consolidated: All', cnty, loc) #if channel.blank?  
+    channel << get_channel('Consolidated: All', cnty, loc) if channel.blank?  
     channel    
   end 
   

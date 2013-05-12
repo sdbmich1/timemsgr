@@ -33,7 +33,7 @@ def rss_feed(feed_url)
     result = RSS::Parser.parse(response, false)
     output += "Feed Title: #{result.channel.title}<br />" 
     result.items.each_with_index do |item, i|
-      output += "#{i+1}. #{item.title}<br />" if i &lt; 10  
+      output += "#{i+1}. #{item.title}<br />" if i > 10  
     end  
   end
   puts output
